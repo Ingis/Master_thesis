@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[paper=a4paper,dvips,top=3cm,left=3cm,right=3cm, foot=1cm,bottom=3cm]{geometry}
+\usepackage{picinpar}
+\usepackage{graphicx} %Graphics package for \includegraphics
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig} %Enables wrapping of text around figures and tables
+\usepackage{subfig}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{SIunits}%SI unit symbol package
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{array, calc}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{verbatim} %Enables \begin{comment}...
+
+\usepackage{fancyvrb}
+
+\tolerance = 5000 % LaTeX er normalt streng når det gjelder linjebrytingen.
+\hbadness = \tolerance % Vi vil være litt mildere, særlig fordi norsk har så
+\pretolerance = 2000 % mange lange sammensatte ord.
+
+
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+
+%\newenvironment{packed_enum}{
+%\newenvironment{enumerate}{
+%\begin{enumerate}
+  \setlength{\itemsep}{10cm}
+  \setlength{\parskip}{18pt}
+  \setlength{\parsep}{10pt}
+%}{\end{enumerate}}
+
+
+\usepackage{nomencl}
+\makenomenclature
+\renewcommand{\nomname}{Abbreviations}
+
+\begin{document}
+
+%Forside
+\thispagestyle{empty}
+\begin{center}        
+  \vspace{5mm}        
+  \huge
+  \textbf{RCU2 testing and design} \\
+  \vspace{50mm}
+  \Large
+  {\bf{\textsl{Inge Nikolai Torsvik}}} \\
+  %\textsl{Eksperimentalfysikk med prosjektoppgave} \\
+  \vspace{20mm}
+  %{\bf{\textsl{Oppgave 12}}} \\
+  \vspace{5mm}
+  %{\large \textsl {(Bachelor i Fysikk)}}\\
+  \vspace{10mm}
+  \centerline{\includegraphics[height=4cm,width=4cm]{uiblogo.pdf}}
+  \Large
+  \textsl{Master Thesis} \\
+  \vspace{50mm}
+  \large
+  \textsl{Department of Physics and Technology} \\
+  \textsl{University of Bergen} \\
+  \vspace{10mm}
+  \large
+  \textsl{November 2013} \\
+
+\end{center}
+
+\newpage
+\blankpage
+%\thispagestyle{empty}
+
+
+\newpage
+\setcounter{page}{1}
+%\pagenumbering{roman}
+\section{Abstract}
+
+\newpage
+\section{Contents}
+
+\newpage
+\section{Introduction}
+
+\newpage
+\section{Testing at Oslo Cyclotron Lab(OCL)}
+\subsection{About OCL}
+OCL was opened in 1978, the cyclotron was made by Scanditronix AB from Sweden.
+This is the only accelerator in Norway for ionized atoms in basic research.
+The cyclotron can accelerate protons,$^3He$ and $^4He$, 
+with energies and intensities as seen in the table \ref{design requirements} bellow.
+There is vacuum inside the cyclotron and the pipes that leads to the test area
+so that you should not suffer energy loss from collision with air molecules.
+A drawing of the lab can be seen bellow in figure \ref{OCL}. 
+The laboratory is divided between the inner experimental hall and the outer experimental hall.
+As you can see the cyclotron is put in the inner hall,
+and a beam is sent through pipes to the outer hall.
+with some magnet you are able to regulate the beam,
+so that you are able to get the beam to your experimental area.
+There are also several cups put on the pipeline, that you are able to block the beam if you want.
+These can be used to stop the beam during an experiment,
+so you are able to go into the experimental area and do changes on your setup.
+When the beam is on, you are not allowed to enter the inner experimental area.
+
+\begin{figure}[h]
+\centering
+\centerline{\includegraphics[height=7cm,width=8cm]{OCL.png}}
+\caption{Out-lay of the OCL}
+\label{OCL}
+\end{figure}
+
+
+\begin{table}[h]
+ \centering
+\begin{tabular}{|l|l|l|}\hline
+Ionized beam particle type & Energy(${\mega\electronvolt}$) & Intensity(A)  \\ \hline \hline
+Proton & 2-35 & 100 \\ \hline
+Deuteron & 4-18 & 100 \\ \hline
+$^3He$ &  6-47 & 50 \\ \hline 
+$^4He$  & 8-35 & 50 \\ \hline
+\end{tabular}
+\caption{Ionized beam particle data table}
+\label{design requirements}
+\end{table}
+
+\subsection{Experiment setup and equipment}
+
+The experiment setup was placed in the outer experimental hall in "experimental area 2". The setup that was used as well as the equipment used can be found in the figure and table bellow:
+The equipment was kept in close to the same height around 140-150cm. Beam exit was in a height of 141.5cm.
+
+  \vspace{5mm}
+  
+\begin{figure}[h]
+\centering
+  \centerline{\includegraphics[width=0.5\textwidth]{experiment_setup.jpg}}
+  \caption{Experimental setup seen from above}
+  \label{experiment_setup}
+\end{figure}%
+
+  \vspace{5mm}   
+  
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{experiment_area.jpg}
+  \caption{Picture of the experimental area}
+  \label{experiment_area}
+\end{figure}
+
+
+\newpage
+\begin{table}[h]
+ \centering
+\begin{tabular}{|l|p{12cm}|}\hline
+Equipment & Explanation  \\ \hline \hline
+Scintillator & A plastic scintillator with photomultiplier, that was used to measure relative radiation. We had two of these, one that was placed right under DUT and one that was placed 75cm away from DUT. We only used one during the experiment.   \\ \hline
+High voltage regulator & Voltage for the photomultiplier. 800V was used  \\ \hline
+8 test boards &  TPS51200, MIC69302WU, SN74AVCB16245, SN74AVC2T245, QS3VH257, SY89831U, ADN2814 and MAX3748 \\ \hline 
+SRAM-board  & A PCB board with 4 SRAM cells, that was used to characterise the beam and to measure scintillator counts \\ \hline
+Computer  & A VPN connection was set on a computer inside the experimental hall, so we where able to control the experiment outside the experimental hall. The computer was running LabView to control the experiment, data was also saved on the computer\\ \hline
+USB DAQ  & Used to get analog and digital connection to the test boards and send data to the computer. \\ \hline
+Radiation film  & A film that reacts when radiated with protons. Used to identify the beam. \\ \hline
+Counting controller  & a device that counts rising or falling edges \\ \hline
+leveled laser  & This was used to pinpoint the center of the beam.\\ \hline
+XY-controller  & Connected to the computer so we can do minor changes to the placement of the test boards outside the experimental area\\ \hline
+\end{tabular}
+\caption{Equipment used in the experiment}
+\label{equipment}
+\end{table}
+
+\subsection{Measurement equipment}
+The SRAM board consist of several SRAM chips and a flash based FPGA. A known pattern is written to the SRAM chips, and this pattern are constantly checked with the FPGA. When a SRAM chip is exposed to radiation a SEU can occur. If a error occur a puls is sent to a counter, and the correct value is written to the SRAM.
+
+The method of detecting an Single Event Upset (SEU) in a SRAM is rather straight
+forward, as can be seen in the flow diagram of figure 4.6. There is an initial startup
+phase where a known pattern is written to the all the addresses in the SRAM. When
+the startup phase is done, the value from the first address is read back and compared
+to a known value by xoring the known value with the read. This will result in a vector
+containing a 1 for every upset. The correct value is then written back to the address and
+the system moves on to the next address.
+
+
+\end{document}
