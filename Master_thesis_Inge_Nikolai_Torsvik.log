@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  4 DEC 2013 13:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  5 DEC 2013 09:09
 entering extended mode
 **Master_thesis_Inge_Nikolai_Torsvik.tex
-
-("C:\Users\Inge Nikolai\Documents\Master oppgave stuff\Master Thesis\Master_the
-sis_Inge_Nikolai_Torsvik.tex"
+("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -321,9 +319,7 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \@nomenclaturefile=\write4
 
 Writing nomenclature file Master_thesis_Inge_Nikolai_Torsvik.nlo
-
-("C:\Users\Inge Nikolai\Documents\Master oppgave stuff\Master Thesis\Master_the
-sis_Inge_Nikolai_Torsvik.aux")
+("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
@@ -403,39 +399,37 @@ Package pdftex.def Info: uiblogo.pdf used on input line 68.
  [1
 Non-PDF special ignored!
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Inge Nikolai/Doc
-uments/Master oppgave stuff/Master Thesis/uiblogo.pdf>] [1] [1] [2] [3] <OCL.pn
-g, id=28, 638.385pt x 536.0025pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Inge Nikolai/Mas
+ter-thesis/uiblogo.pdf>] [1] [1] [2] [3]
+<OCL.png, id=28, 638.385pt x 536.0025pt>
 File: OCL.png Graphic file (type png)
  <use OCL.png>
-Package pdftex.def Info: OCL.png used on input line 119.
+Package pdftex.def Info: OCL.png used on input line 116.
 (pdftex.def)             Requested size: 227.61696pt x 199.1684pt.
-
-[4 <C:/Users/Inge Nikolai/Documents/Master oppgave stuff/Master Thesis/OCL.png>
-] <experiment_setup.jpg, id=36, 395.22656pt x 207.02344pt>
+ [4 <C:/Users/Inge Nikolai/Master-thesis/OCL.png>]
+<experiment_setup.jpg, id=37, 395.22656pt x 207.02344pt>
 File: experiment_setup.jpg Graphic file (type jpg)
 
 <use experiment_setup.jpg>
-Package pdftex.def Info: experiment_setup.jpg used on input line 147.
+Package pdftex.def Info: experiment_setup.jpg used on input line 144.
 (pdftex.def)             Requested size: 213.39568pt x 111.77834pt.
- <experiment_area.jpg, id=37, 3661.68pt x 2746.26pt>
+ <experiment_area.jpg, id=38, 3661.68pt x 2746.26pt>
 File: experiment_area.jpg Graphic file (type jpg)
 
 <use experiment_area.jpg>
-Package pdftex.def Info: experiment_area.jpg used on input line 156.
+Package pdftex.def Info: experiment_area.jpg used on input line 153.
 (pdftex.def)             Requested size: 426.79135pt x 320.06656pt.
- [5 <C:/Users/Inge Nikolai/Documents/Master oppgave stuff/Master Thesis/experim
-ent_setup.jpg> <C:/Users/Inge Nikolai/Documents/Master oppgave stuff/Master The
-sis/experiment_area.jpg>]
-Overfull \hbox (55.05162pt too wide) in paragraph at lines 165--179
+ [5 <C:/Users/Inge Nikolai/Master-thesis/experiment_setup.jpg> <C:/Users/Inge N
+ikolai/Master-thesis/experiment_area.jpg>]
+Overfull \hbox (55.05162pt too wide) in paragraph at lines 162--176
  [][] 
  []
 
-[6] <SRAM_flowchart.png, id=45, 256.70906pt x 567.62062pt>
+[6] <SRAM_flowchart.png, id=46, 256.70906pt x 567.62062pt>
 File: SRAM_flowchart.png Graphic file (type png)
 
 <use SRAM_flowchart.png>
-Package pdftex.def Info: SRAM_flowchart.png used on input line 203.
+Package pdftex.def Info: SRAM_flowchart.png used on input line 200.
 (pdftex.def)             Requested size: 113.81017pt x 227.62451pt.
 
 
@@ -446,7 +440,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.209 ...hniques on record. In Geiger and Marsden’
+l.206 ...hniques on record. In Geiger and Marsden’
                                                   s famous scattering experi...
 
 You need to provide a definition with \DeclareInputText 
@@ -460,47 +454,46 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.209 ...rticles off Gold nuclei, the scattered a’
+l.206 ...rticles off Gold nuclei, the scattered a’
                                                   s were observed via the sc...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-<scintillator.png, id=46, 415.7934pt x 259.6902pt>
+<scintillator.png, id=47, 415.7934pt x 259.6902pt>
 File: scintillator.png Graphic file (type png)
  <use scintillator.png>
-Package pdftex.def Info: scintillator.png used on input line 213.
+Package pdftex.def Info: scintillator.png used on input line 210.
 (pdftex.def)             Requested size: 426.79135pt x 266.56456pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7 <C:/Users/Inge Nikolai/Documents/Master oppgave stuff/Master Thesis/SRAM_flo
-wchart.png>] [8 <C:/Users/Inge Nikolai/Documents/Master oppgave stuff/Master Th
-esis/scintillator.png>]
-("C:\Users\Inge Nikolai\Documents\Master oppgave stuff\Master Thesis\Master_the
-sis_Inge_Nikolai_Torsvik.aux") ) 
+[7 <C:/Users/Inge Nikolai/Master-thesis/SRAM_flowchart.png>] [8 <C:/Users/Inge 
+Nikolai/Master-thesis/scintillator.png>] [9]
+("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux") 
+) 
 Here is how much of TeX's memory you used:
  4818 strings out of 493921
- 71018 string characters out of 3144856
+ 70801 string characters out of 3144856
  140841 words of memory out of 3000000
  8040 multiletter control sequences out of 15000+200000
  11086 words of font info for 39 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,11n,38p,598b,281s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmbxsl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsl12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (10 pages, 5594243 byt
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (11 pages, 5600507 byt
 es).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

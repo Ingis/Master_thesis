@@ -95,24 +95,21 @@
 \section{Introduction}
 
 \newpage
-\section{Testing at Oslo Cyclotron Lab(OCL)}
+\section{Testing at Oslo Cyclotron Laboratory(OCL)}
 \subsection{About OCL}
-OCL was opened in 1978, the cyclotron was made by Scanditronix AB from Sweden.
-This is the only accelerator in Norway for ionized atoms in basic research.
-The cyclotron can accelerate protons,$^3He$ and $^4He$, 
+Oslo cyclotron Laboratory is located at the Department of physics at the University of Oslo, and was opened in 1978. The cyclotron is of the type MC-35 and was made by Scanditronix AB from Sweden.
+This is the only accelerator in Norway for ionized atoms used in basic research.
+The cyclotron can accelerate protons, Deuteron, $^3He$ and $^4He$, 
 with energies and intensities as seen in the table \ref{design requirements} bellow.
+A drawing of the lab can be seen bellow in figure \ref{OCL}. 
+The laboratory is divided in tree the control room, the inner experimental hall and the outer experimental hall.
+The cyclotron is placed in the inner hall, and a beam is sent through pipes to the outer hall.
 There is vacuum inside the cyclotron and the pipes that leads to the test area
 so that you should not suffer energy loss from collision with air molecules.
-A drawing of the lab can be seen bellow in figure \ref{OCL}. 
-The laboratory is divided between the inner experimental hall and the outer experimental hall.
-As you can see the cyclotron is put in the inner hall,
-and a beam is sent through pipes to the outer hall.
-with some magnet you are able to regulate the beam,
-so that you are able to get the beam to your experimental area.
-There are also several cups put on the pipeline, that you are able to block the beam if you want.
-These can be used to stop the beam during an experiment,
-so you are able to go into the experimental area and do changes on your setup.
-When the beam is on, you are not allowed to enter the inner experimental area.
+With magnet you are able to regulate the beam, so that you are able to get the beam to your desired pipe exit.
+There are also several cups put on the pipeline, that you are able to block the beam.
+These can be used to stop the beam during an experiment, so you are able to go into the experimental area and do changes on your setup.
+When the cyclotron is running and the beam is on, you are not allowed to enter the inner experimental area.
 
 \begin{figure}[h]
 \centering
@@ -125,7 +122,7 @@ When the beam is on, you are not allowed to enter the inner experimental area.
 \begin{table}[h]
  \centering
 \begin{tabular}{|l|l|l|}\hline
-Ionized beam particle type & Energy(${\mega\electronvolt}$) & Intensity(A)  \\ \hline \hline
+Ionized beam particle type & Energy(${\mega\electronvolt}$) & Intensity($\micro\ampere$)  \\ \hline \hline
 Proton & 2-35 & 100 \\ \hline
 Deuteron & 4-18 & 100 \\ \hline
 $^3He$ &  6-47 & 50 \\ \hline 
@@ -196,7 +193,7 @@ The correct value is then written back to the address and the system moves on to
 A checkerboard pattern, a pattern of alternating ones and zeros, is used when writing
 to the SRAM. To check for stuck bits, the bit pattern in the whole address space is inverted after each read. 
 The cross section for SEU and particles is known through earlier experiment with the SRAM-board,
-and is found to be $\unit{1.14\e{-6}}{\centi\square\meter\per}$
+and is found to be $\unit{1.14\e{-6}}{\centi\square\meter}$
 
 \begin{figure}[h]
   \centering
@@ -215,7 +212,31 @@ The detection of ionizing radiation by the scintillation light produced in certa
   \label{scintillator}
 \end{figure}
 
+\newpage
+
 \subsection{Preparation and characterization of the beam}
-Before we could start testing the test boards, we had to prepare the beam. The beam had to be set up by the lab personnel before we could do anything. When the beam was up and running we could control the intensity as we wanted 
+Before we could start testing the test boards, the cyclotron had to be made ready for a proton beam and the magnet controlling the direction had to be put in the right position to get the beam out in experiment area 2. This was done by the experienced lab personnel. 
+
+\subsubsection{purpose of tests}
+The purpose of testing these board is to see if they are able to survive in a highly radiated area.
+Every IC that has been tested, are IC's that are going to be used in creation of the new RCU2 board, that is going to be placed in ALICE at CERN.
+
+
+\subsubsection{Beam setup}
+When the beam was set, we could start the characterization of the beam.
+The first thing to do is to get an understanding of the beam,
+too see that it is centered and that it hits around the area that we expect.
+This was done by using radiation films that turns black when exposed to radiation. 
+We put one of these right in front of the beam exit and one in front of DUT-area to see how the beam looks like at the two places.
+This gave us a hunch of where the beam goes. A more precise calibration was done by the use of the SRAM board and the scintillator. 
+By measuring the relation between scintillator counts on the scintillator which was in a locked position and SEU on the SRAM that was connected to a XY-controller(which made the SRAM freely to move), we were able to find a more precise position of the beam center by seeing which position gives most SEU compared to scintillator counts.
+
+This had to be done everyday at startup before we could start tests, because the beam are never the same two days at a row.
+When the beam center is found and everything is looks fine, we could start the testing. We were able to control the intensity of the beam freely inside the limitation of the beam (for protons that is up to 100$\micro\ampere$). This way we could control the dose of radiation we was giving to the test boards. The beam intensity on our experiment area could be measured with a Faraday Cup(FC), by putting this in front of the beam, but this had to be removed when we were doing tests, since it will block the beam. 
+
+
+\section{Results and calculations from beam test at OCL}
+
+
 
 \end{document}
