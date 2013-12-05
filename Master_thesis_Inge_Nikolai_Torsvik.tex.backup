@@ -177,7 +177,7 @@ XY-controller  & Connected to the computer so we can do minor changes to the pla
 \label{equipment}
 \end{table}
 
-\subsection{Measurement equipment}
+\subsection{Measurement equipment and test boards}
 \subsubsection{SRAM}
 The SRAM board consist of several SRAM chips and a flash based FPGA and some connections and supporting electronics. 
 %A known pattern is written to the SRAM chips, and this pattern are constantly checked with the FPGA. 
@@ -193,7 +193,10 @@ The correct value is then written back to the address and the system moves on to
 A checkerboard pattern, a pattern of alternating ones and zeros, is used when writing
 to the SRAM. To check for stuck bits, the bit pattern in the whole address space is inverted after each read. 
 The cross section for SEU and particles is known through earlier experiment with the SRAM-board,
-and is found to be $\unit{1.14\e{-6}}{\centi\square\meter}$
+and is found to be $\unit{1.14\e{-6}}{\centi\square\meter}$.
+The FPGA on the SRAM PCB is designed with RS485 two-way communication which makes it possible to edit firmware as well as sending data out. 
+Through the experiment the SRAM PCB was connected with RS485 to a `en box som arild hadde` that could be connected to a computer. On the computer we run a LabVIEW program, that made us able to monitor data, as well as doing some settings. 
+The SRAM board also had an input for scintillator counts, so we could monitor scintillator counts by the use of this board.
 
 \begin{figure}[h]
   \centering
@@ -214,6 +217,33 @@ The detection of ionizing radiation by the scintillation light produced in certa
 
 \newpage
 
+\subsubsection{The test boards}
+TPS51200 -
+A Sink/Source DDR termination regulator. Used to power DDR RAMs. We are going to use this for 0.75V DDR3 RAM.
+\newline
+MIC69302WU -
+This is a high current low voltage regulator. Is going to be used to produce a 1.2V voltage.
+\newline
+SN74AVCB16245 -
+This is a 16-bit noninverting bus transceiver, with configurable voltage transceiver and 3-state outputs.
+\newline
+SN74AVC2T245 -
+This is a dual-bit noninverting bus transceiver ,with configurable voltage transceiver and 3-state outputs
+\newline
+QS3VH257 -
+This is a Quad 2:1 multiplexer/demultiplexer with high bandwidth bus switch
+\newline
+SY89831U -
+This is a high speed, 2$\giga\hertz$ differential LVPECL 1:4 fanout buffer optimized for ulta-low skew applications
+\newline
+ADN2814 -
+This i a clock and data recovery IC with integrated Limiting amplifier. works in rate of 10Mb/s to 675 Mb/s.
+\newline
+MAX3748 -
+This is a limiting amplifier. works in rate of 155Mb/s to 4.25Gb/s.
+
+\newpage
+
 \subsection{Preparation and characterization of the beam}
 Before we could start testing the test boards, the cyclotron had to be made ready for a proton beam and the magnet controlling the direction had to be put in the right position to get the beam out in experiment area 2. This was done by the experienced lab personnel. 
 
@@ -231,11 +261,19 @@ We put one of these right in front of the beam exit and one in front of DUT-area
 This gave us a hunch of where the beam goes. A more precise calibration was done by the use of the SRAM board and the scintillator. 
 By measuring the relation between scintillator counts on the scintillator which was in a locked position and SEU on the SRAM that was connected to a XY-controller(which made the SRAM freely to move), we were able to find a more precise position of the beam center by seeing which position gives most SEU compared to scintillator counts.
 
-This had to be done everyday at startup before we could start tests, because the beam are never the same two days at a row.
-When the beam center is found and everything is looks fine, we could start the testing. We were able to control the intensity of the beam freely inside the limitation of the beam (for protons that is up to 100$\micro\ampere$). This way we could control the dose of radiation we was giving to the test boards. The beam intensity on our experiment area could be measured with a Faraday Cup(FC), by putting this in front of the beam, but this had to be removed when we were doing tests, since it will block the beam. 
+This had to be done everyday at startup before we could start the tests.
+When the beam center is found and everything looks fine, the laser was placed in a position so the laser points to where we have found the center of the beam to be. After that we could switch out the SRAM board with the PCB that we were going to test. We were able to control the intensity of the beam freely from the control room inside the limitation of the beam (for protons that is up to 100$\micro\ampere$). This way we could control the dose of radiation we were giving to the test boards. The beam intensity could be measured with a Faraday Cup(FC), by putting it in front of the beam. But the FC had to be removed when we were doing tests, since it will block the beam.
 
+\subsubsection{The test procedure}
+Before the test day I had made simple test program in LabVIEW for each PCB that we were going to test.
+Each PCB had a mark on the back indicating the center of the IC.
+The PCB picked out for testing was placed in so that the laser pinpoint this mark, then the IC should be in the center of the beam.
+We were running 3 labVIEW programs through the experiment, one for controlling the XY-controller,
+one for SRAM PCB(for scintillator counts) and one program for each of the test boards.
+The SRAM and test board programs were constantly saving data on the disk.
 
 \section{Results and calculations from beam test at OCL}
+The radiation was done in 5 days divided in two periodes 13.11-15.11 and 28.11-29.11. There had been made two version of most of the boards, the exception is TPS51200, ADN2814 and MAX3748 which I only made one version of.
 
 
 
