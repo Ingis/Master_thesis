@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  10 DEC 2013 14:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  12 DEC 2013 16:58
 entering extended mode
 **Master_thesis_Inge_Nikolai_Torsvik.tex
 ("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.tex"
@@ -317,6 +317,14 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count125
 \@thisrulewidth=\dimen166
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count126
+\float@exts=\toks34
+\float@box=\box42
+\@float@everytoks=\toks35
+\@floatcapt=\box43
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mh\mathtools.sty"
 Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
 
@@ -325,7 +333,7 @@ Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count126
+\g_MT_multlinerow_int=\count127
 \l_MT_multwidth_dim=\dimen167
 \origjot=\skip57
 \l_MT_shortvdotswithinadjustabove_dim=\dimen168
@@ -338,7 +346,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\threeparttable\threeparttable.sty
 "
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box42
+\@tempboxb=\box44
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\standalone\standalone.sty"
 Package: standalone 2012/09/15 v1.1b Package to include TeX sub-files with prea
 mbles
@@ -351,9 +359,9 @@ Package ifluatex Info: LuaTeX not detected.
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-\XKV@toks=\toks34
-\XKV@tempa@toks=\toks35
-\XKV@depth=\count127
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+\XKV@depth=\count128
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\currfile\currfile.sty"
@@ -376,7 +384,7 @@ Package etexcmds Info: Could not find \expanded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\filehook\filehook.sty"
 Package: filehook 2011/10/12 v0.5d Hooks for input files
 )
-\c@currfiledepth=\count128
+\c@currfiledepth=\count129
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\gincltex\gincltex.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\svn-prov\svn-prov.sty"
@@ -396,7 +404,7 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box43
+\collectedbox=\box45
 )
 \tc@llx=\dimen174
 \tc@lly=\dimen175
@@ -414,16 +422,16 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count129
+\c@checkoddpage=\count130
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box44
-\sift@deathcycles=\count130
+\@vwid@box=\box46
+\sift@deathcycles=\count131
 \@vwid@loff=\dimen182
 \@vwid@roff=\dimen183
 ))
-\gincltex@box=\box45
+\gincltex@box=\box47
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\filemod\filemod-expmin.sty"
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
@@ -432,23 +440,26 @@ Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
 Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
+Package: placeins 2005/04/18  v 2.2
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count131
+\FV@CodeLineNo=\count132
 \FV@InFile=\read2
-\FV@TabBox=\box46
-\c@FancyVerbLine=\count132
-\FV@StepNumber=\count133
+\FV@TabBox=\box48
+\c@FancyVerbLine=\count133
+\FV@StepNumber=\count134
 \FV@OutFile=\write3
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\afterpage.sty"
 Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
-\AP@output=\toks36
-\AP@partial=\box47
-\AP@footins=\box48
+\AP@output=\toks38
+\AP@partial=\box49
+\AP@footins=\box50
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\nomencl\nomencl.sty"
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
@@ -459,35 +470,26 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \@nomenclaturefile=\write4
 
 Writing nomenclature file Master_thesis_Inge_Nikolai_Torsvik.nlo
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux"
+("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 59.
 
-LaTeX Warning: Label `tab:addlabel' multiply defined.
-
-
-LaTeX Warning: Label `equipment' multiply defined.
-
-
-LaTeX Warning: Label `equipment' multiply defined.
-
-)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 57.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    ... okay on input line 59.
 
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -524,27 +526,28 @@ LaTeX Font Info:    ... okay on input line 57.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count134
+\scratchcounter=\count135
 \scratchdimen=\dimen186
-\scratchbox=\box49
-\nofMPsegments=\count135
-\nofMParguments=\count136
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count137
+\scratchbox=\box51
+\nofMPsegments=\count136
+\nofMParguments=\count137
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count138
 \MPscratchDim=\dimen187
-\MPnumerator=\count138
-\makeMPintoPDFobject=\count139
-\everyMPtoPDFconversion=\toks38
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
+\everyMPtoPDFconversion=\toks40
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
  <uiblogo.pdf, id=1, 1988.42876pt x 1968.35374pt>
 File: uiblogo.pdf Graphic file (type pdf)
  <use uiblogo.pdf>
-Package pdftex.def Info: uiblogo.pdf used on input line 74.
+Package pdftex.def Info: uiblogo.pdf used on input line 76.
 (pdftex.def)             Requested size: 113.80887pt x 113.80118pt.
  [1
 Non-PDF special ignored!
@@ -554,32 +557,32 @@ ter-thesis/uiblogo.pdf>] [1] [1] [2] [3]
 <OCL.png, id=28, 638.385pt x 536.0025pt>
 File: OCL.png Graphic file (type png)
  <use OCL.png>
-Package pdftex.def Info: OCL.png used on input line 122.
+Package pdftex.def Info: OCL.png used on input line 124.
 (pdftex.def)             Requested size: 227.61696pt x 199.1684pt.
  [4 <C:/Users/Inge Nikolai/Master-thesis/OCL.png>]
 <experiment_setup.jpg, id=37, 395.22656pt x 207.02344pt>
 File: experiment_setup.jpg Graphic file (type jpg)
 
 <use experiment_setup.jpg>
-Package pdftex.def Info: experiment_setup.jpg used on input line 150.
+Package pdftex.def Info: experiment_setup.jpg used on input line 152.
 (pdftex.def)             Requested size: 213.39568pt x 111.77834pt.
  <experiment_area.jpg, id=38, 3661.68pt x 2746.26pt>
 File: experiment_area.jpg Graphic file (type jpg)
 
 <use experiment_area.jpg>
-Package pdftex.def Info: experiment_area.jpg used on input line 159.
+Package pdftex.def Info: experiment_area.jpg used on input line 161.
 (pdftex.def)             Requested size: 426.79135pt x 320.06656pt.
  [5 <C:/Users/Inge Nikolai/Master-thesis/experiment_setup.jpg> <C:/Users/Inge N
 ikolai/Master-thesis/experiment_area.jpg>]
-Overfull \hbox (55.05162pt too wide) in paragraph at lines 168--182
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\OT1/cmr/m/n/12 TPS51200, MIC69302WU, SN74AVCB16245,
  []
 
 [6] <SRAM_flowchart.png, id=46, 256.70906pt x 567.62062pt>
 File: SRAM_flowchart.png Graphic file (type png)
 
 <use SRAM_flowchart.png>
-Package pdftex.def Info: SRAM_flowchart.png used on input line 209.
+Package pdftex.def Info: SRAM_flowchart.png used on input line 211.
 (pdftex.def)             Requested size: 113.81017pt x 227.62451pt.
 
 
@@ -590,7 +593,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 ...hniques on record. In Geiger and Marsden’
+l.217 ...hniques on record. In Geiger and Marsden’
                                                   s famous scattering experi...
 
 You need to provide a definition with \DeclareInputText 
@@ -604,7 +607,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 ...rticles off Gold nuclei, the scattered a’
+l.217 ...rticles off Gold nuclei, the scattered a’
                                                   s were observed via the sc...
 
 You need to provide a definition with \DeclareInputText 
@@ -613,59 +616,175 @@ or \DeclareInputMath before using this key.
 <scintillator.png, id=47, 415.7934pt x 259.6902pt>
 File: scintillator.png Graphic file (type png)
  <use scintillator.png>
-Package pdftex.def Info: scintillator.png used on input line 219.
+Package pdftex.def Info: scintillator.png used on input line 221.
 (pdftex.def)             Requested size: 426.79135pt x 266.56456pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [7 <C:/Users/Inge Nikolai/Master-thesis/SRAM_flowchart.png>] [8 <C:/Users/Inge 
-Nikolai/Master-thesis/scintillator.png>] [9]
-Overfull \hbox (121.14197pt too wide) in paragraph at lines 282--284
-\OT1/cmr/m/n/12 time are $\OML/cmm/m/it/12 TPS\OT1/cmr/m/n/12 51200[]\OML/cmm/m
-/it/12 ; MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[]; SN\OT1/cmr/m/n/12 74\OM
-L/cmm/m/it/12 AVCB\OT1/cmr/m/n/12 16245[]\OML/cmm/m/it/12 ; SN\OT1/cmr/m/n/12 7
-4\OML/cmm/m/it/12 AVC\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 245[]\O
-ML/cmm/m/it/12 ; QS\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 VH\OT1/cmr/m/n/12 257[]\OM
-L/cmm/m/it/12 andSY\OT1/cmr/m/n/12 89831\OML/cmm/m/it/12 U[]$
- []
+Nikolai/Master-thesis/scintillator.png>] [9] [10] [11]
+<flux_all_test1.jpg, id=67, 1928.20375pt x 967.615pt>
+File: flux_all_test1.jpg Graphic file (type jpg)
+ <use flux_all_test1.jpg>
+Package pdftex.def Info: flux_all_test1.jpg used on input line 384.
+(pdftex.def)             Requested size: 426.79135pt x 214.16048pt.
 
+<Flux_vs_time_all.jpg, id=68, 1928.20375pt x 967.615pt>
+File: Flux_vs_time_all.jpg Graphic file (type jpg)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+<use Flux_vs_time_all.jpg>
+Package pdftex.def Info: Flux_vs_time_all.jpg used on input line 391.
+(pdftex.def)             Requested size: 426.79135pt x 214.16048pt.
+ [12] [13 <C:/Users/Inge Nikolai/Master-thesis/flux_all_test1.jpg> <C:/Users/In
+ge Nikolai/Master-thesis/Flux_vs_time_all.jpg>]
+<current_voltage_tps.jpg, id=75, 563.10374pt x 421.575pt>
+File: current_voltage_tps.jpg Graphic file (type jpg)
 
+<use current_voltage_tps.jpg>
+Package pdftex.def Info: current_voltage_tps.jpg used on input line 439.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+ [14 <C:/Users/Inge Nikolai/Master-thesis/current_voltage_tps.jpg>] <current_vo
+ltage_mic.jpg, id=80, 563.10374pt x 421.575pt>
+File: current_voltage_mic.jpg Graphic file (type jpg)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+<use current_voltage_mic.jpg>
+Package pdftex.def Info: current_voltage_mic.jpg used on input line 453.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
 
+<current_volt_dose_MIC.jpg, id=81, 563.10374pt x 421.575pt>
+File: current_volt_dose_MIC.jpg Graphic file (type jpg)
+
+<use current_volt_dose_MIC.jpg>
+Package pdftex.def Info: current_volt_dose_MIC.jpg used on input line 459.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+
+<current_4245.jpg, id=82, 563.10374pt x 421.575pt>
+File: current_4245.jpg Graphic file (type jpg)
+ <use current_4245.jpg>
+Package pdftex.def Info: current_4245.jpg used on input line 475.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+
+<current_dose_42452.jpg, id=83, 563.10374pt x 421.575pt>
+File: current_dose_42452.jpg Graphic file (type jpg)
+
+<use current_dose_42452.jpg>
+Package pdftex.def Info: current_dose_42452.jpg used on input line 481.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+ [15 <C:/Users/Inge Nikolai/Master-thesis/current_voltage_mic.jpg> <C:/Users/In
+ge Nikolai/Master-thesis/current_volt_dose_MIC.jpg>] <current_t245.jpg, id=87, 
+563.10374pt x 421.575pt>
+File: current_t245.jpg Graphic file (type jpg)
+ <use current_t245.jpg>
+Package pdftex.def Info: current_t245.jpg used on input line 498.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+
+<current_dose_t2452.jpg, id=88, 563.10374pt x 421.575pt>
+File: current_dose_t2452.jpg Graphic file (type jpg)
+
+<use current_dose_t2452.jpg>
+Package pdftex.def Info: current_dose_t2452.jpg used on input line 504.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+ <current_q.jpg, id=89, 563.10374pt x 421.575pt>
+File: current_q.jpg Graphic file (type jpg)
+
+<use current_q.jpg>
+Package pdftex.def Info: current_q.jpg used on input line 520.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+ <current_dose_q2.jpg, id=90, 563.10374pt x 421.575pt>
+File: current_dose_q2.jpg Graphic file (type jpg)
+
+<use current_dose_q2.jpg>
+Package pdftex.def Info: current_dose_q2.jpg used on input line 526.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+ [16 <C:/Users/Inge Nikolai/Master-thesis/current_4245.jpg> <C:/Users/Inge Niko
+lai/Master-thesis/current_dose_42452.jpg> <C:/Users/Inge Nikolai/Master-thesis/
+current_t245.jpg> <C:/Users/Inge Nikolai/Master-thesis/current_dose_t2452.jpg>]
+ <current_sy.jpg, id=94, 563.10374pt x 421.575pt>
+File: current_sy.jpg Graphic file (type jpg)
+
+<use current_sy.jpg>
+Package pdftex.def Info: current_sy.jpg used on input line 541.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+ <current_dose_SY2.jpg, id=95, 563.10374pt x 421.575pt>
+File: current_dose_SY2.jpg Graphic file (type jpg)
+
+<use current_dose_SY2.jpg>
+Package pdftex.def Info: current_dose_SY2.jpg used on input line 547.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+ [17 <C:/Users/Inge Nikolai/Master-thesis/current_q.jpg> <C:/Users/Inge Nikolai
+/Master-thesis/current_dose_q2.jpg> <C:/Users/Inge Nikolai/Master-thesis/curren
+t_sy.jpg> <C:/Users/Inge Nikolai/Master-thesis/current_dose_SY2.jpg>] <current_
+dose_ADN_t1.jpg, id=100, 563.10374pt x 421.575pt>
+File: current_dose_ADN_t1.jpg Graphic file (type jpg)
+
+<use current_dose_ADN_t1.jpg>
+Package pdftex.def Info: current_dose_ADN_t1.jpg used on input line 568.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+
+<current_dose_ADN_t2.jpg, id=101, 563.10374pt x 421.575pt>
+File: current_dose_ADN_t2.jpg Graphic file (type jpg)
+
+<use current_dose_ADN_t2.jpg>
+Package pdftex.def Info: current_dose_ADN_t2.jpg used on input line 574.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+
+<error_dose_ADN_t1.jpg, id=102, 563.10374pt x 421.575pt>
+File: error_dose_ADN_t1.jpg Graphic file (type jpg)
+
+<use error_dose_ADN_t1.jpg>
+Package pdftex.def Info: error_dose_ADN_t1.jpg used on input line 585.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+
+<error_dose_ADN_t2.jpg, id=103, 563.10374pt x 421.575pt>
+File: error_dose_ADN_t2.jpg Graphic file (type jpg)
+
+<use error_dose_ADN_t2.jpg>
+Package pdftex.def Info: error_dose_ADN_t2.jpg used on input line 591.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+ [18 <C:/Users/Inge Nikolai/Master-thesis/current_dose_ADN_t1.jpg> <C:/Users/In
+ge Nikolai/Master-thesis/current_dose_ADN_t2.jpg>]
+<current_dose_MAX.jpg, id=107, 563.10374pt x 421.575pt>
+File: current_dose_MAX.jpg Graphic file (type jpg)
+
+<use current_dose_MAX.jpg>
+Package pdftex.def Info: current_dose_MAX.jpg used on input line 607.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+
+<error_dose_MAX.jpg, id=108, 563.10374pt x 421.575pt>
+File: error_dose_MAX.jpg Graphic file (type jpg)
+ <use error_dose_MAX.jpg>
+Package pdftex.def Info: error_dose_MAX.jpg used on input line 613.
+(pdftex.def)             Requested size: 192.0548pt x 143.78389pt.
+
+[19 <C:/Users/Inge Nikolai/Master-thesis/error_dose_ADN_t1.jpg> <C:/Users/Inge 
+Nikolai/Master-thesis/error_dose_ADN_t2.jpg> <C:/Users/Inge Nikolai/Master-thes
+is/current_dose_MAX.jpg> <C:/Users/Inge Nikolai/Master-thesis/error_dose_MAX.jp
+g>]
 No file Master_thesis_Inge_Nikolai_Torsvik.bbl.
-[10] [11] [12]
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux")
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[20] [21]
+("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux") 
+) 
 Here is how much of TeX's memory you used:
- 6824 strings out of 493921
- 104941 string characters out of 3144856
- 193675 words of memory out of 3000000
- 9957 multiletter control sequences out of 15000+200000
+ 7034 strings out of 493921
+ 108923 string characters out of 3144856
+ 189549 words of memory out of 3000000
+ 10140 multiletter control sequences out of 15000+200000
  11086 words of font info for 39 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 51i,11n,73p,724b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (14 pages, 5637600 byt
+ 51i,11n,73p,765b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (23 pages, 6300918 byt
 es).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -18,10 +18,12 @@
 \usepackage{verbatim} %Enables \begin{comment}...
 \usepackage{cite}
 \usepackage{booktabs}
+\usepackage{float}
 \usepackage{mathtools}
 \usepackage{threeparttable}
 \usepackage{standalone}
 \usepackage{booktabs, dcolumn}
+\usepackage{placeins}
 
 \usepackage{fancyvrb}
 
@@ -117,7 +119,7 @@ There are also several cups put on the pipeline, that you are able to block the 
 These can be used to stop the beam during an experiment, so you are able to go into the experimental area and do changes on your setup.
 When the cyclotron is running and the beam is on, you are not allowed to enter the inner experimental area.
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
 \centering
 \centerline{\includegraphics[height=7cm,width=8cm]{OCL.png}}
 \caption{Out-lay of the OCL}
@@ -125,7 +127,7 @@ When the cyclotron is running and the beam is on, you are not allowed to enter t
 \end{figure}
 
 
-\begin{table}[h]
+\begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|l|l|}\hline
 Ionized beam particle type & Energy(${\mega\electronvolt}$) & Intensity($\micro\ampere$)  \\ \hline \hline
@@ -145,7 +147,7 @@ The equipment was kept in close to the same height around 140-150cm. Beam exit w
 
   \vspace{5mm}
   
-\begin{figure}[h]
+\begin{figure}[!htbp]
 \centering
   \centerline{\includegraphics[width=0.5\textwidth]{experiment_setup.jpg}}
   \caption{Experimental setup seen from above}
@@ -154,7 +156,7 @@ The equipment was kept in close to the same height around 140-150cm. Beam exit w
 
   \vspace{5mm}   
   
-\begin{figure}[h]
+\begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{experiment_area.jpg}
   \caption{Picture of the experimental area}
@@ -163,9 +165,9 @@ The equipment was kept in close to the same height around 140-150cm. Beam exit w
 
 
 \newpage
-\begin{table}[h]
+\begin{table}[!htbp]
  \centering
-\begin{tabular}{|l|p{12cm}|}\hline
+\begin{tabular}{|l|p{10cm}|}\hline
 Equipment & Explanation  \\ \hline \hline
 Scintillator & A plastic scintillator with photomultiplier, that was used to measure relative radiation. We had two of these, one that was placed right under DUT and one that was placed 75cm away from DUT. We only used one during the experiment.   \\ \hline
 High voltage regulator & Voltage for the photomultiplier. 800V was used  \\ \hline
@@ -204,7 +206,7 @@ The FPGA on the SRAM PCB is designed with RS485 two-way communication which make
 Through the experiment the SRAM PCB was connected with RS485 to a `en box som arild hadde` that could be connected to a computer. On the computer we run a LabVIEW program, that made us able to monitor data, as well as doing some settings. 
 The SRAM board also had an input for scintillator counts, so we could monitor scintillator counts by the use of this board.
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
   \centering
   \includegraphics[height=8cm, width=4cm]{SRAM_flowchart.png}
   \caption{Flowchart for SEU detection}
@@ -214,7 +216,7 @@ The SRAM board also had an input for scintillator counts, so we could monitor sc
 \subsubsection{Scintillator}
 The detection of ionizing radiation by the scintillation light produced in certain materials is one of the oldest techniques on record. In Geiger and Marsden’s famous scattering experiment of a-particles off Gold nuclei, the scattered a’s were observed via the scintillation light they produced when they hit a ZnS-screen. ZnS produced light flashes, called scintillation light, when hit by an $\alpha$. The scintillation process remains one of the most useful methods available for the detection and spectroscopy of a wide assortment of radiation.
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{scintillator.png}
   \caption{Concept drawing of scintillator}
@@ -243,10 +245,10 @@ SY89831U -
 This is a high speed, 2$\giga\hertz$ differential LVPECL 1:4 fanout buffer optimized for ulta-low skew applications
 \newline
 ADN2814 -
-This i a clock and data recovery IC with integrated Limiting amplifier. works in rate of 10Mb/s to 675 Mb/s.
+This i a clock and data recovery IC with integrated Limiting amplifier. works in rate of 10Mb/s to 675 Mb/s. Is going to be used to give out LVDS signal of a optic Manchester signal. 
 \newline
 MAX3748 -
-This is a limiting amplifier. works in rate of 155Mb/s to 4.25Gb/s.
+This is a limiting amplifier. works in rate of 155Mb/s to 4.25Gb/s. Is going to be used to give out LVDS signal of a optic Manchester signal. 
 
 \newpage
 
@@ -259,6 +261,7 @@ Every IC that has been tested, are IC's that are going to be used in creation of
 
 
 \subsubsection{Beam setup}
+  \label{beam_setup}
 When the beam was set, we could start the characterization of the beam.
 The first thing to do is to get an understanding of the beam,
 too see that it is centered and that it hits around the area that we expect.
@@ -280,41 +283,29 @@ The SRAM and test board programs were constantly saving data on the disk.
 
 \section{Results and calculations from beam test at OCL}
 The radiation was done in 5 days divided in two periods 13.11-15.11 and 28.11-29.11. I have made two version of most of the boards, the exception is ADN2814 and MAX3748 which I only made one version of.
-The boards that where tested the first time are $TPS51200_1, MIC69302WU_1, SN74AVCB16245_1, SN74AVC2T245_1, QS3VH257_1 and SY89831U_1$ tested in that order. The first time at OCL we where given an beam of 28MeV, but the second time, the lab personnel manage only to produce a beam of 25MeV.
+The boards that where tested the first time are $TPS51200_1, MIC69302WU_1, SN74AVCB16245_1, SN74AVC2T245_1,$
+$QS3VH257_1$ and $SY89831U_1$ tested in that order. The first time at OCL we where given an beam of 28MeV, but the second time, the lab personnel manage only to produce a beam of 25MeV.
+When the beam gets out through the beam exit the energy will be reduced by crashing with air particles(~21keV per cm), so at DUT area the beam was approx ~25MeV and ~22MeV.
 
-\subsection{Calculation of dose}
-After we have run a test. We have the time and relativistic scintillator counts. But after a calibration we know the relation between scitillator counts and SEU on the SRAM. And Cross section of the SRAM is known. By using this data we can calculate the fluence at DUT. By the use a program called FLUKA. That is a simulation program that could be used to simulate protons in air. We put in a proton beam of 28MeV and enter our position for DUT. Then the Fluka simulation results give us how many protons we will find at DUT area for each proton coming out of the beam exit, and what dose each proton produce at DUT area.
+\subsection{Calibration process}
+As explained in chapter $\ref{beam_setup}$, we had to start with finding the center of the beam. In table $\ref{test_15.11}$ you can see the results from our calibration 15.11.2013. We see that position x = -2,5 and y = -1 gives highest relation between SEU on the SRAM and SC. We run a total of 4 tests in that position and the average value gives us 0,0948.
+This value was used to calculate from SC to SEU, since there is a known cros section(CS) from SEU to fluence. The CS is given in equation \ref{CS}.
 
-A complete result of the tests can be found in one of the appendix.
+\begin{equation}
+scint_conv = SEU(SRAM) * SC = 0,0948
+\label{scint_conv}
+\end{equation}
 
-% Table generated by Excel2LaTeX from sheet 'Sheet1'
-\begin{table}[htbp]
-  \centering
-    \begin{tabular}{|r|r|r|r|r|r|} \hline
-    Calibration test nr.: & x     & y     & Scint rel & sram3 & SRAM/SC \\ \hline \hline
-    1     & 0     & 0     & 23813 & 1971  & 8,28E-02 \\ \hline
-    2     & 0     & -0,5  & 37930 & 3867  & 1,02E-01 \\ \hline
-    3     & 0     & -1    & 27527 & 2817  & 1,02E-01 \\ \hline
-    4     & 0     & -1,5  & 34413 & 3360  & 9,76E-02 \\ \hline
-    5     & 0     & -2    & 32713 & 2763  & 8,45E-02 \\ \hline
-    6     & 0,5   & 0     & 38753 & 2709  & 6,99E-02 \\ \hline
-    7     & -0,5  & 0     & 23420 & 2483  & 1,06E-01 \\ \hline
-    8     & -1    & 0     & 20611 & 2232  & 1,08E-01 \\ \hline	
-    9     & -1,5  & 0     & 21014 & 2410  & 1,15E-01 \\ \hline
-    10    & -1,5  & 0     & 20676 & 2260  & 1,09E-01 \\ \hline
-    11    & -2    & 0     & 35787 & 3776  & 1,06E-01 \\ \hline
-    12    & -2,5  & 0     & 27847 & 2512  & 9,02E-02 \\ \hline
-    \end{tabular}%
-      \caption{Calibration tests 14.11.2013}
-  \label{tab:addlabel}%
-\end{table}%
-
+\begin{equation}
+CS = 1,14e-6
+\label{CS}
+\end{equation}
 
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
     \begin{tabular}{|r|r|r|r|r|r|}\hline
-    Calibration test nr.: & x     & y     & Scint rel & sram3 & SRAM/SC \\ \hline \hline
+    Calibration test nr.: & x     & y     & Scint rel & SEU(SRAM) & SEU(SRAM)/SC \\ \hline \hline
     1     & -0,8  & -1    & 27798 & 1463  & 5,26E-02 \\ \hline
     2     & -1,3  & -1    & 17721 & 1239  & 6,99E-02 \\ \hline
     3     & -1,8  & -1    & 12904 & 1203  & 9,32E-02 \\ \hline
@@ -331,11 +322,78 @@ A complete result of the tests can be found in one of the appendix.
     14    & -2,5  & -1    & 57229 & 5250  & 9,17E-02 \\ \hline
     \end{tabular}%
       \caption{Calibration tests 15.11.2013}
-
-  \label{tab:addlabel}%
+  \label{test_15.11}%
 \end{table}%
 
-\begin{table}[h]
+\subsection{Calculation of dose}
+After a beam test had been run, we knew the exposed time and scintillator counts(SC). From the calibration we knew the relation between scintillator counts and SEU on the SRAM, and cross section(CS)(the probability that an incoming particle will induce an SEU) of the SRAM is also known. 
+We start by calculating SEU from the factor given in equation $\ref{scint_conv}$. Then we calculate the fluence at DUT as seen in equation $\ref{FluenceDUT}$, and by this we can calculate the flux, see equation $\ref{flux}$.
+To calculate the dose from here we need to know some more factors. We run a simulation on a program called FLUKA. This program is used to simulate particles in different environment. We simulated a proton beam of 28MeV and 25MeV, and inserted the distance from BE. We where given the results as seen in table $\ref{FLUKA_15}$.
+Then we had enough information to calculate the dose. As seen from equation $\ref{FluenceBE}$ we are able to find the Fluence at BE. And from there we can calculate the the dose at DUT, see equation \ref{DoseDUT}.
+
+
+% Table generated by Excel2LaTeX from sheet 'Fluka'
+\begin{table}[!htbp]
+  \centering
+    \begin{tabular}{|l|l|} \hline
+    Fluka simulation results 28MeV &  \\\hline\hline
+    Dose/primary particle at DUT[Gy] & 4,08E-10 \\\hline
+    Primary particles at Beam exit & 1 \\\hline
+    Primary particles at DUT & 0,1331 \\\hline
+    Beam intensity reduction  at DUT & 7,513148009 \\\hline
+    \end{tabular}%
+      \caption{FLUKA simulation with 28MeV proton beam}
+  \label{FLUKA_15}%
+\end{table}%
+
+
+\begin{equation}
+FluenceDUT = \frac{SEU}{CS}
+\label{FluenceDUT}
+\end{equation}
+
+\begin{equation}
+Flux = \frac{Fluence}{time}
+\label{flux}
+\end{equation}
+
+\begin{equation}
+FluenceBE = \frac{fluenceDUT}{primary_particlesDUT}
+\label{FluenceBE}
+\end{equation}
+
+\begin{equation}
+DoseDUT[Gy] = FluenceBE * \frac{Dose}{primary particle at DUT}
+\label{DoseDUT}
+\end{equation}
+
+\begin{equation}
+1 Rad = 100 Gy
+\label{Gy_to_Rad}
+\end{equation}
+
+\subsection{test results}
+The tests was controlled and monitored through a LabVIEW program for each of the different IC. ADN2814 and MAX3748 there was also needed a SF2 board, to configure and monitor the input signal. A complete result of the tests can be found in one of the appendix.
+The point of this test was to see that these IC's would survive in a radiated area, as where they are supposed to be used at CERN.
+In table \ref{dose_15.11} and \ref{dose_28.11} you can see how long each IC has been exposed, the dose they has been received and if an error occurred.
+
+Bellow in figure $\ref{flux_all1}$ and $\ref{flux_all2}$you can see graphs of flux vs time for the different test boards. The reason for that graph don't go as linear, is that the beam sometimes fell out and that we increased the intensities when we saw that thing went a little slow.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{flux_all_test1.jpg}
+  \caption{flux for each component radiated 15.11.2013}
+  \label{flux_all1}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{Flux_vs_time_all.jpg}
+  \caption{flux for each component radiated 15.11.2013}
+  \label{flux_all2}
+\end{figure}
+
+\begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|l|l|l|}\hline
 Device & Exposed time[s] & Dose[Rad] & Error \\ \hline \hline
@@ -347,10 +405,10 @@ $QS3VH257_1$ & 795  & 52800 & No \\ \hline
 $SY89831_1$ & 1251 & 93500 & No \\ \hline
 \end{tabular}
 \caption{Tests at OCL 15.nov 2013}
-\label{equipment}
+\label{dose_15.11}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|l|l|l|}\hline
 Device & Exposed time[s] & Dose[Rad] &  \\ \hline \hline
@@ -366,8 +424,277 @@ $SY89831U_2$ & 921  & 165800 & No \\ \hline
 \multicolumn{4}{l}{\textsuperscript{*}\footnotesize{The board wouldn't work at test time}}
 \end{tabular}
 \caption{Tests at OCL 27-28.nov 2013}
-\label{equipment}
+\label{dose_28.11}
 \end{table}
+
+
+\subsubsection{TPS51200}
+This was the first board that was tested. To measure the current going into the board, we added a 220Ohm resistor on the input, and measured over this resistor to calculate the current.
+A 3v3 voltage was supplied from the DAQs analog outputs. The output voltage was also monitored, through a analog input on the DAQ-box.
+The intensity was a little low on this test. To make the testing process faster the intensity was increased during the next test.
+The IC worked after a dose of 40kRad, but we could see a little increase in current after a dose of 25kRad. The output voltage is close to stable, a few mV up and down, but not noteworthy.
+Two circuit of this type was tested, but only one worked when we was at OCL, when we was going to test.
+
+\begin{figure}[!htbp]
+  \includegraphics[width=.45\textwidth]{current_voltage_tps.jpg}
+  \caption{TPS51200 - Current/Voltage vs Dose}
+  \label{TPS51200_1}
+\end{figure}
+
+\subsubsection{MIC69302WU}
+The first board was tested 15.11.13 and the second board was tested 28.11.13. During the test of the first board we increased the intensity of the beam quite allot, that can be seen from the flux graph, figure \ref{flux_all1}.
+The current was measured, by adding a 220Ohm resistor on the input, and measure the voltage over the resistor to calculate the current. This chip had an unexpected reaction to radiation. You can see from both of the graphs that the current is decreasing and voltage is increasing, normally we would expect the opposite, or at least that the current would increase.
+It start quite early to decrease in current, but as you can see it also stabilize after a while. The output voltage is mostly stable, there were a increase of ~2\% on both the tests.
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_voltage_mic.jpg}
+  \caption{MIC69302WU board1}
+  \label{MIC69302WU_1}
+  \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_volt_dose_MIC.jpg}
+  \caption{MIC69302WU board2}
+  \label{MIC69302WU_2}
+  \end{subfigure}
+ \caption{MIC69302WU - Current/Voltage vs Dose}
+\end{figure}
+
+\subsubsection{SN74AVCB16245}
+It can be seen that the characteristics on the two test board are different, the reason for this is maybe because of different output load. The reason for the ``jumps`` in current is because the output is constantly changing from on to off, with a gap of 4 seconds.
+This chips is not effected by radiation before a dose of approx 40kRad. That is more than enough for the purposes we are going to use this for.
+The current was measured in the same way as the two previously circuits, a 220Ohm resistor was placed in series with power supply, and voltage over the resistor was measured and used to calculate current. To make sure that the circuit didn't drag current through the input on the chip, we used a pMOS transistor, that was connected to supply pin on Drain, to ground on Source and Gate to a digital output from the DAQ. That way the current has to come from the power supply input, and not from the digital output of the DAQ. The outputs was measured by digital inputs.
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_4245.jpg}
+  \caption{SN74AVCB16245 board1}
+  \label{SN74AVCB16245_1}
+  \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_dose_42452.jpg}
+  \caption{SN74AVCB16245 board2}
+  \label{SN74AVCB16245_2}
+  \end{subfigure}
+ \caption{SN74AVC2T245 - Current vs Dose}
+\end{figure}
+
+\subsubsection{SN74AVC2T245}
+This chip is almost the same as the SN74AVCB16245. A 220Ohm resistor was used at the input to measure current, and a digital output from the DAQ was used to put the input high and low.
+Something went wrong on the first test. After 740s and a dose of 98Rad the chips output was stuck at 1. The reason for this is unknown, I fear that this might be defected before we started the test, since it gives a totally different characteristics than test board nr2.
+The input was switching from high to low every 4 second. If we look at the test results from board 2. the current goes unchanged up to 40kRad, and that is more than enough.
+%her må eg sjekke board1 etter eg har fått den tilbake, og se om den faktisk fungere. Kan hende at denne har vært ødelagt før vi begynte.
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_t245.jpg}
+  \caption{SN74AVC2T245 board1}
+  \label{SN74AVC2T245_1}
+  \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_dose_t2452.jpg}
+  \caption{SN74AVC2T245 board2}
+  \label{SN74AVC2T245_2}
+  \end{subfigure}
+ \caption{SN74AVC2T245 - Current vs Dose}
+\end{figure}
+
+\subsubsection{QS3VH257}
+This was also tested by putting a 220Ohm resistor in series with the power supply, in the way explained earlier. For the Select input a analog output signal from the DAQ was used. The input signals was set by digital outputs from the DAQ. The outputs was measured by digital inputs on the DAQ.
+Both of the boards worked fine through the tests. Here the select input was changed every 4 second and the inputs was changed every 18second.
+We see that we have small increase in current before 30kRad, after that it increases quite allot. We couldn't see any errors on the output during the experiment, but it should probably not be exposed to more than 30kRad.
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_q.jpg}
+  \caption{QS3VH257 board1}
+  \label{QS3VH257_1}
+  \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_dose_q2.jpg}
+  \caption{QS3VH257 board2}
+  \label{QS3VH257_2}
+  \end{subfigure}
+ \caption{QS3VH257 - Current vs Dose}
+\end{figure}
+
+\subsubsection{SY89831}
+This is a buffer used to make 1 clock to 4 clocks. This chip required a high current to work, and since the labVIEW DAQ box only delivers 5mA on the analog outputs, I had to use the 5V output on the DAQ that could deliver up to 200mA. But I also needed to have a 3v3 power supply, this was solved by using a modified MIC69302WU cip to supply this IC. To measure the current, I had to use 20hm resistor to make sure that I didn't had a voltage drop, because of the high current consumption.voltage over this 20Ohm was measured to get current.
+To test that the chip worked as it should, two analog outputs from the DAQ was used to make a DC differential input. This was measured by digital inputs on a DAQ to see that i goes high and low according to the input.
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_sy.jpg}
+  \caption{SY89831 board1}
+  \label{SY89831_1}
+  \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_dose_SY2.jpg}
+  \caption{SY89831 board2}
+  \label{SY89831_2}
+  \end{subfigure}
+ \caption{SY89831 - Current vs Dose}
+\end{figure}
+
+\subsubsection{ADN2814}
+This IC is a little special and was hard to get a good test on. This is a clock and data return circuit, with a limiting amplifier.
+The SF2 board was used to code a clock and data into a differential Manchester signal, that was sent into the IC. Out of the IC we get a clock and a limited Manchester coded data signal. The Mancheseter coded data signal was decoded on the Igloo FPGA on SF2 board, so that we get out a clock and data. The data was tested by delaying the original data through a few D-latches, so that the original and returned data was close to alike. Then we could compare the original data with the one from the chip through a XOR-function, to see if they was alike. This function was triggered by a 80Mhz clock from the SF2 board. If an they are not alike when the clock rises, the a 1 was added to a counter, and sent through the UART.
+The way the clock was tested was a little harder process since the clock was so fast(160Mhz).
+The way this was solved, was by adding a third clock that was $90\,^{\circ}$ of from the two others, when this goes high I called on the XOR-function, to see if the two other clocks is the same. if they are alike, nothing happens, if they are not the program adds 1 to a counter, which constantly writes its current value to a UART.
+The problem here is that for each time the SF2 board was programed the clock was slightly different, that made either the clock of sync or the data of sync, so that the code didn't work as it should.
+This circuit also requires allot of current, therefor the same solution as for SY89831 was used, using MIC69302WU as a power supply and measure the current on the Micrell chip.
+The current didn't change before a dose of 200kRad had been received, but we got a clock error at a dose of ~11kRad, and a data error after a dose of ~8kRad. How good this test really is, could be discussed, since we don't have any data on the clock and data, other than that it the XOR-function failed, what really failed, and how much is impossible to know. It could be a slightly delay on a clock or the data, or maybe the clock just disappeared for a moment. There could also be a problem with the clocks on the SF2 board.
+
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_dose_ADN_t1.jpg}
+  \caption{ADN2814 test1}
+  \label{ADN2814_1}
+  \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_dose_ADN_t2.jpg}
+  \caption{ADN2814 test2}
+  \label{ADN2814_2}
+  \end{subfigure}
+ \caption{ADN2814 - Current vs Dose}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{error_dose_ADN_t1.jpg}
+  \caption{ADN2814 error1}
+  \label{ADN2814_1}
+  \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{error_dose_ADN_t2.jpg}
+  \caption{ADN2814 error2}
+  \label{ADN2814_2}
+  \end{subfigure}
+ \caption{ADN2814 - Relative errors vs Dose}
+\end{figure}
+
+\subsubsection{MAX3748}
+This circuit has the same purpose as ADN2814, but this is only return limited Manchester coded signal. The data was decoded on the SF2 board, by the use of the igloo FPGA, that gives out the original data and clock.
+The decoding process return clock and data, but since they are related to each other, a error on the clock would mean an error at the data. So by measuring data, we can be sure that there are no clock errors as well. 
+The process for testing if the data into the chip was the same as the data coming out, was the same as for the ADN2814 circuit. 
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{current_dose_MAX.jpg}
+  \caption{Current vs Dose}
+  \label{MAX3748}
+  \end{subfigure}
+  \begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{error_dose_MAX.jpg}
+  \caption{Errors vs Dose}
+  \label{MAX3748_error}
+  \end{subfigure}
+ \caption{MAX3748}
+\end{figure}
+
+
+The total dose of 10 years in ALICE-experiment is estimated to be 0.6kRad. IF a IC survives more than 10 times that, we can be quite sure that it will survive the radiation it will receive at CERN.
+
+\newpage
+
+\section{Appendix}
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}
+  \centering
+    \begin{tabular}{|l|l|l|l|l|l|} \hline
+    Calibration test nr.: & x     & y     & Scint rel & SEU(SRAM) & SEU(SRAM)/SC \\ \hline \hline
+    1     & 0     & 0     & 23813 & 1971  & 8,28E-02 \\ \hline
+    2     & 0     & -0,5  & 37930 & 3867  & 1,02E-01 \\ \hline
+    3     & 0     & -1    & 27527 & 2817  & 1,02E-01 \\ \hline
+    4     & 0     & -1,5  & 34413 & 3360  & 9,76E-02 \\ \hline
+    5     & 0     & -2    & 32713 & 2763  & 8,45E-02 \\ \hline
+    6     & 0,5   & 0     & 38753 & 2709  & 6,99E-02 \\ \hline
+    7     & -0,5  & 0     & 23420 & 2483  & 1,06E-01 \\ \hline
+    8     & -1    & 0     & 20611 & 2232  & 1,08E-01 \\ \hline	
+    9     & -1,5  & 0     & 21014 & 2410  & 1,15E-01 \\ \hline
+    10    & -1,5  & 0     & 20676 & 2260  & 1,09E-01 \\ \hline
+    11    & -2    & 0     & 35787 & 3776  & 1,06E-01 \\ \hline
+    12    & -2,5  & 0     & 27847 & 2512  & 9,02E-02 \\ \hline
+    \end{tabular}%
+      \caption{Calibration tests 14.11.2013}
+      \label{test_14.11}
+\end{table}%
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}
+  \centering
+    \begin{tabular}{|l|l|l|l|l|l|}\hline
+    Calibration test nr.: & x     & y     & Scint rel & SEU(SRAM) & SEU(SRAM)/SC \\ \hline \hline
+    1     & -0,8  & -1    & 27798 & 1463  & 5,26E-02 \\ \hline
+    2     & -1,3  & -1    & 17721 & 1239  & 6,99E-02 \\ \hline
+    3     & -1,8  & -1    & 12904 & 1203  & 9,32E-02 \\ \hline
+    4     & -2,3  & -1    & 13361 & 1276  & 9,55E-02 \\ \hline
+    5     & -2,8  & -1    & 12786 & 1238  & 9,68E-02 \\ \hline
+    6     & -3,3  & -1    & 12342 & 1156  & 9,37E-02 \\ \hline
+    7     & -2,5  & -1    & 11696 & 1223  & 1,05E-01 \\ \hline
+    8     & -2,5  & -1,5  & 11027 & 1075  & 9,75E-02 \\ \hline
+    9     & -2,5  & -2    & 11835 & 1063  & 8,98E-02 \\ \hline
+    10    & -2,5  & -0,5  & 15593 & 1540  & 9,88E-02 \\ \hline
+    11    & -2,5  & 0     & 12620 & 1034  & 8,19E-02 \\ \hline
+    12    & -2,5  & -1    & 65280 & 5999  & 9,19E-02 \\ \hline
+    13    & -2,5  & -1    & 52752 & 4803  & 9,10E-02 \\ \hline
+    14    & -2,5  & -1    & 57229 & 5250  & 9,17E-02 \\ \hline
+    \end{tabular}%
+      \caption{Calibration tests 15.11.2013}
+\end{table}%
+
+% Table generated by Excel2LaTeX from sheet 'Fluka'
+\begin{table}
+  \centering
+    \begin{tabular}{|l|l|} \hline
+    Fluka simulation results 28MeV &  \\\hline\hline
+    Dose/primary particle at DUT[Gy] & 4,08E-10 \\\hline
+    Primary particles at Beam exit & 1 \\\hline
+    Primary particles at DUT & 0,1331 \\\hline
+    Beam intensity reduction  at DUT & 7,513148009 \\\hline
+    \end{tabular}%
+      \caption{FLUKA simulation with 28MeV proton beam}
+\end{table}%
+
+% Table generated by Excel2LaTeX from sheet 'Fluka'
+\begin{table}
+  \centering
+    \begin{tabular}{|l|l|}\hline
+    Fluka simulation results 25MeV &  \\\hline\hline
+    $\frac{Dose}{primary particle at DUT}$[Gy] & 2,94E-10 \\\hline
+    Primary particles at Beam exit & 1 \\\hline
+    Primary particles at DUT & 8,57E-02 \\\hline
+    Beam intensity reduction  at DUT & 11,6713352 \\\hline
+    \end{tabular}%
+    \caption{FLUKA simulation with 25MeV proton beam}
+  \label{FLUKA_28}%
+\end{table}%
 
 \bibliography{mybib}{}
 \bibliographystyle{plain}
