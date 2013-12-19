@@ -1,0 +1,30 @@
+\ifglsentryexists{ocl}{}%
+{%
+\gls@defglossaryentry{ocl}%
+{%
+name={OCL},%
+sort={OCL},%
+type={main},%
+first={Oslo Cyclotron Laboratory (OCL)},%
+firstplural={Oslo Cyclotron Laboratorys(OCLs)},%
+text={OCL},%
+plural={OCLs},%
+description={Oslo Cyclotron Laboratory},%
+descriptionplural={Oslo Cyclotron Laboratory\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Oslo Cyclotron Laboratory},%
+longplural={Oslo Cyclotron Laboratorys},%
+short={OCL},%
+shortplural={OCLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
