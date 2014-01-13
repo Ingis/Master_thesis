@@ -1,0 +1,33 @@
+\section{Acronyms}
+  \begin{acronym}[acronyms]
+\acro{CERN}{European Council for Nuclear Research}
+\acro{OCL}[OCL]{Oslo Cyclotron Laboratory}
+\acro{UiB}[UiB]{University in Bergen}
+\acro{DUT}[DUT]{Device Under Test}
+\acro{UiO}[UiO]{University of Oslo}
+\acro{RCU}[RCU]{Readout Control Unit}
+\acro{RCU2}[RCU2]{Readout Control Unit 2}
+\acro{ALICE}{A Large Ion Collider Experiment}
+\acro{LHC}{Large Hadron Collider}
+\acro{FEE}{Front End Electronic}
+\acro{FEC}{Front End Card}
+\acro{RAM}[RAM]{Random Access Memory}
+\acro{FPGA}[FPGA]{Field Programmable Gate Array}
+\acro{SEE}{Single Even Effect}
+\acro{SEU}{Single Event Upset}
+\acro{IC}{Integrated Circuit}
+\acro{PCB}{Printed Circuit Board}
+\acro{LVDS}{Low-Voltage Differential Signaling}
+\acro{NI}{National Instruments}
+\acro{DAQ}{data acquisition}
+\acro{SPI}{Serial Peripheral Interface}
+\acro{SF2}{SmartFusion2}
+\acro{CML}{Current-Mode Logic}
+\acro{TTC}{Timing, Trigger and Control}
+\acro{LVPECL}{Low Voltage Positive Emitter Coupled Logic}
+\acro{PM-tube}{PhotoMultiplier Tube}
+
+
+
+
+\end{acronym}

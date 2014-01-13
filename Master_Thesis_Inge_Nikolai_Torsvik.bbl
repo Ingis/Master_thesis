@@ -1,8 +1,27 @@
 \begin{thebibliography}{1}
 
+\bibitem{GranlundOlsson}
+Thomas Granlund and Nils Olsson.
+\newblock {\em A Comparative Study Between Proton and Neutron Induced SEU in
+  SRAMs, 53(4)}.
+\newblock 2006.
+
+\bibitem{roed}
+Ketil Røed.
+\newblock {\em Single Event Upsets in SRAM FPGA based readout electronics for
+  Time Projection Chamber in the ALICE experiment}.
+\newblock University of Bergen, Norway, 2009.
+
 \bibitem{rad_phys}
 Tor~F. Thorsteinsen.
 \newblock {\em Kompendium i Strålingsfysikk - FYS231/233}.
 \newblock University of Bergen, Bergen, 1995.
+
+\bibitem{georgios}
+Georgios~Karolos Tsiledakis.
+\newblock {\em Scale Dependence of Mean Transverse Momentum Fluctuations at Top
+  SPS Energy measured by the CERES experiment and studies of gas properties for
+  the ALICE experiment. PhD thesis}.
+\newblock Technische Universitat Darmstadt, Darmstadt, 2006.
 
 \end{thebibliography}
