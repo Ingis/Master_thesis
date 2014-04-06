@@ -22,3 +22,53 @@
  year      =  "1995",
  address   = "Bergen",
 }
+
+@Book{GranlundOlsson,
+ author    = "Thomas Granlund and Nils Olsson",
+ title     = "A Comparative Study Between Proton and Neutron Induced SEU in SRAMs, 53(4)",
+ IEEE 	   = "TRANSACTIONS ON NUCLEAR SCIENCE",
+ year      =  "2006",
+}
+
+@Book{georgios,
+ author    = "Georgios Karolos Tsiledakis",
+ title     = "Scale Dependence of Mean Transverse Momentum Fluctuations at Top SPS Energy measured by the CERES experiment and studies of gas properties for the ALICE experiment. PhD thesis",
+ publisher = "Technische Universitat Darmstadt",
+ address   = "Darmstadt",
+ year      =  "2006",
+}
+
+@phdthesis{roed,
+ author    = "Ketil Røed",
+ title     = "Single Event Upsets in SRAM FPGA based readout electronics for Time Projection Chamber in the ALICE experiment",
+ publisher = "University of Bergen",
+ address   = "Norway",
+ year      =  "2009",
+}
+@mastersthesis{arild_master,
+ author    = "Arild Velure",
+ title     = "Design, implementation and testing of SRAM based neutron detectors",
+ publisher = "University of Bergen",
+ address   = "Norway",
+ year      =  "2011",
+}
+@Book{Weste_harris,
+ author    = "Neil H. E. Weste, David M. Harris",
+ title     = "CMOS VLSI Design - A Circuit and System Perspective",
+ publisher = "Addison-Wesley",
+ edition   = "4 edition",
+ year      = "2011",
+}
+@Book{knoll,
+ author    = "Glenn F. Knoll",
+ title     = "Radiation Detector and Measurement",
+ publisher = "John Wiley & Sons",
+ edition   = "3 edition",
+ year      = "2000",
+}
+@Book{knoll,
+ author    = "V.V. Balashov",
+ title     = "Interaction of particles and Radiation with Matter",
+ publisher = "Springel-Verlag",
+ year      = "1997",
+}

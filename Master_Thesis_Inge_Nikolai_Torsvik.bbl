@@ -1,16 +1,31 @@
 \begin{thebibliography}{1}
 
+\bibitem{balashov}
+V.V. Balashov.
+\newblock {\em Interaction of particles and Radiation with Matter}.
+\newblock Springel-Verlag, 1997.
+
 \bibitem{GranlundOlsson}
 Thomas Granlund and Nils Olsson.
 \newblock {\em A Comparative Study Between Proton and Neutron Induced SEU in
   SRAMs, 53(4)}.
 \newblock 2006.
 
+\bibitem{knoll}
+Glenn~F. Knoll.
+\newblock {\em Radiation Detector and Measurement}.
+\newblock John Wiley and Sons, 3 edition edition, 2000.
+
+\bibitem{Weste_harris}
+David M.~Harris Neil H. E.~Weste.
+\newblock {\em CMOS VLSI Design - A Circuit and System Perspective}.
+\newblock Addison-Wesley, 4 edition edition, 2011.
+
 \bibitem{roed}
 Ketil Røed.
 \newblock {\em Single Event Upsets in SRAM FPGA based readout electronics for
   Time Projection Chamber in the ALICE experiment}.
-\newblock University of Bergen, Norway, 2009.
+\newblock PhD thesis, Norway, 2009.
 
 \bibitem{rad_phys}
 Tor~F. Thorsteinsen.
@@ -23,5 +38,10 @@ Georgios~Karolos Tsiledakis.
   SPS Energy measured by the CERES experiment and studies of gas properties for
   the ALICE experiment. PhD thesis}.
 \newblock Technische Universitat Darmstadt, Darmstadt, 2006.
+
+\bibitem{arild_master}
+Arild Velure.
+\newblock Design, implementation and testing of sram based neutron detectors.
+\newblock Master's thesis, Norway, 2011.
 
 \end{thebibliography}
