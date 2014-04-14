@@ -26,10 +26,10 @@
 \usepackage{placeins}
 \usepackage{inputenc} 
 \usepackage{placeins}
-
 \usepackage{fancyvrb}
-
-
+\usepackage[printonlyused]{acronym}
+\usepackage{amsmath}
+\numberwithin{figure}{section}
 
 \tolerance = 5000 % LaTeX er normalt streng når det gjelder linjebrytingen.
 \hbadness = \tolerance % Vi vil være litt mildere, særlig fordi norsk har så
@@ -61,7 +61,6 @@
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 
 
-\usepackage[printonlyused]{acronym}
 \usepackage{hyperref}
 
 \begin{document}
@@ -80,7 +79,7 @@
   \vspace{5mm}
   %{\large \textsl {(Bachelor i Fysikk)}}\\
   \vspace{10mm}
-  \centerline{\includegraphics[height=4cm,width=4cm]{uiblogo.pdf}}
+  \centerline{\includegraphics[height=4cm,width=4cm]{uglo.png}}
   \Large
   \textsl{Master Thesis} \\
   \vspace{50mm}
@@ -101,10 +100,10 @@
 \newpage
 \setcounter{page}{1}
 %\pagenumbering{roman}
-\section{Abstract}
+\section*{Abstract}
 
 \newpage
-\section{Contents}
+\section*{Contents}
 
 \newpage
 
@@ -123,7 +122,7 @@ Everything that are going to be used at CERN has to be made sure that it can sur
 
 \subsection{How to test}
 \label{how_to_test}
-The radiation in the \ac{LHC} is dominated by high energetic neutrons and protons, mostly neutrons with a estimated fluence of $(0,6-1,1)\times 10^{11}$ $neutrons/cm^2$. Therefore it would be preferable to test our electronics with a neutron beam, but since there are few labs who can produce a neutron beam compared to proton beam most of the electronics is only tested at OCL with a proton beam.
+The radiation in the \ac{LHC} is dominated by high energetic neutrons and protons, mostly neutrons with a estimated fluence of $(0,6-1,1)\times 10^{11}$ $neutrons/cm^2$. Therefore it would be preferable to test our electronics with a neutron beam, but since there are few labs who can produce a neutron beam compared to proton beam most of the electronics is only tested at \ac{OCL} with a proton beam.
 There has been done experiment that compares SEU induced by neutrons and protons \cite{GranlundOlsson}, and the result shows that it is possible to use a proton beam instead of proton beam with small deviations. By comparing a Proton beam with a neutron beam of 21MeV we see that we get 10-25\% less SEU cross section for a proton beam compared to a neutron beam.
 If we increase the energy to 88MeV then we get close to none deviations. 
 
@@ -147,11 +146,41 @@ I also made two more test board for two IC that was added to the design at a lat
 
 \newpage
 
+\section{ALICE experiment}
+Since 1954 physicists at \ac{CERN} have studied the nucleus and its structure to find the fundamental structure of the universe.
+\ac{CERN} is the world largest research center for nuclear and particle physics, and has a total of 21 member state.
+One of the biggest attractions at \ac{CERN} is the \acf{LHC}, that is a circular particle accelerator placed in a 27 km long tunnel around 100 meter beneath ground level.
+This is the last accelerator in a chain of up to 7, where the particles gradually accelerate to higher and higher energies,
+up to their maximum energy of 4 TeV and speed up to the speed of light.
+There are four main detectors placed in the \ac{LHC} tunnel, where \ac{ALICE} is one of them.
+When the particles has reached a high enough energy level, accelerated particles from opposite direction are made to collide at the center of each detector.
+
+\subsection{TPC and Front End Electronics FEE}
+The \ac{ALICE} detector is a heavy ion detector. It is designed to study the quark-qluon plasma\footnotemark[1] which will be generated when heavy ions colliding.
+The \ac{ALICE} detector consist of several sub-detectors, where \acf{TPC} is the main detector. Its function are tracking particles, measure the charged particles
+momentum and particle identi?cation. A drawing of the \ac{ALICE} detector can be seen in figure \ref{ALICE_layout}. 
+
+\subsubsection{Front End Card FEC}
+
+\subsubsection{Readout Control Unit RCU}
+
+\subsubsection{RCU2}
+
+
+
+\footnotetext[1]{All ordinary matter in today’s universe is made up of atoms.
+Each atom contains a nucleus composed of protons and neutrons (except hydrogen, which has no neutrons), surrounded by a cloud of electrons.
+Protons and neutrons are in turn made of quarks bound together by other particles called gluons.
+No quark has ever been observed in isolation: the quarks, as well as the gluons, seem to be bound permanently together and confined inside composite particles, such as protons and neutrons.
+}
+
+\newpage
+
 \section{Radiation and Radiation effect on Semiconductor devices}
 Radiation and radiation effects are a known challenge when designing electronics which are going to be used at CERN.
 There is therefore of highest importance to know about these effect, how they effect the electronics, how much damage they can cause and how we can protect and prevent the radiation effect to do damage.
 
-Everything in this chapter is based on these references \cite{rad_phys}, \cite{Weste_harris}, \cite{knoll} and \cite{balashov} if not otherwise stated.
+Everything in this chapter is based on these references \cite{rad_phys}, \cite{Weste_harris}, \cite{knoll}, \cite{Baumann} and \cite{balashov} if not otherwise stated.
 
 \subsection{Interaction of Radiation With Matter}
 Radiation is defined as a process which energy in the form of energetic particles or electromagnetic waves is transmitted through a medium or space.
@@ -243,6 +272,13 @@ Therefore heavier particles will experience larger energy loss in a material the
 In figure \ref{energy_loss} we can see specific energy loss for different particles in air.
 We can see that the value of $\frac{dE}{dx}$ for different types of particles approaches a near-constant broad minimum value at energies above several hundred $\mega\electronvolt$, where their velocity approaches the velocity of light.
 
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{energy_loss.png}
+  \caption{Variation of the specific energy loss in air versus energy of the charge particles shown}
+  \label{energy_loss}
+\end{figure}
+\FloatBarrier
 At low particles energies, where charge exchange between the particles and absorber becomes important, the Bethe Bloch formula begins to fail.
 That is because the positively charged particles will then tend to pick up electrons from the absorber, which effectively reduce its charge and consequently linear energy loss, and will at the end become a neutral atom.
 
@@ -283,15 +319,113 @@ There are three main process a photon may react with matters, they are:
 
 \subsection{Radiation Effects on Semiconductor Devices}
 Semiconductor devices planned to used in a radiation environment are likely to be effected by the radiation in some way.
-If not taking seriously into account, the radiation effects may damage or even destroy the electronics.
-Therefore there is if highest importance to know about how irradiation can effect the electronics.
-We normally divide radiation effects in two groups that is $\emph{Singel Events effects}$ and $\emph{accumulative effects}$.
+If not taking properly into account, the radiation effects may damage or even destroy the electronics.
+Therefore there is if highest importance to know about how irradiation can effect the semiconductor devices.
+We normally divide radiation effects in two groups that is $\emph{Singel Events effects}$ and $\emph{Accumulative Effects}$.
 
 \subsubsection{Single Events Effects SEE}
+Single Event Effects are due to the energy deposited by one single particle in the electronic device.
+Therefore, they can happen in an moment, and their probability is expressed in terms of cross-section \cite{website:Faccio}.
+This effects has been an increasing problem as the manufacture process are getting smaller and smaller, making circuits more weak for radiation.
+In the next sections we will look into three \acp{SEE}, that is \acf{SEL}, \acf{SET} and \acf{SEU}.
 
-\paragraph{Single Event Upset SEU}
+\paragraph{Single Event Latchup SEL} $\newline$
+A \acf{SEL} is phenomena where a low resistance path between power and ground is formed, normally resulting in burned traces, which means reduced performance or destruction of the chip.
+Therefore it is of highest importance to know about this effect, to know how to counter or to protect from latches in design phase. 
+In a \ac{CMOS} process a \ac{SEL} can occur when a ionized particle penetrate the silicon in a transistor causing a charge to to turn ON the parasitic bipolar transistors formed by the substrate, well, and the diffusion.
+This will result in a low resistance path between power and ground, and a high current will flow.
+If a \ac{SEL} has occurred power to the chip needs to be turned off immediately, before the high current flowing from power to ground will burn interconnections, and permanently set the chip out of function. 
+
+How a lathcup may occur can be understood by looking at a \ac{CMOS} inverter, see figure \ref{CMOS_inverter}.
+From figure \ref{CMOS_inverter}(a) you can see a resistor formed in the well and substrate, and a parasitic bipolar npn-transistor and pnp-transistor formed in the inverter.
+An equivalent circuit can be seen in figure \ref{CMOS_inverter}(b).
+Originally both of the bipolar transistors are turned off, and no current flows through the transistors.
+A latchup can be triggered if a ionizing particle flows into the substrate creating a transient current that can set $V_sub$ high, causing npn-transistor to turn ON.
+If the npn-transistor turns ON, then current will flow trough $R_well$ causing $V_well$ to go low, and setting pnp-transistor ON.
+When the pnp-transistor turns ON current will flow through $R_sub$, causing $V_sub$ to rise, and we have created a positive feedback, causing high current to flow from power to ground.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{CMOS_inverter.png}
+  \caption{(a) A CMOS inverter with parasitic bipolar transistors (b) A model of the parasitic circuit}
+  \label{CMOS_inverter}
+\end{figure}
+
+\paragraph{Single Event Transient SET} $\newline$
+\acf{SET} is a transient pulse of current in a logical path of a circuit.
+A \ac{SET} is caused by an ionizing particle leaving a transient current close or on a sensitive circuit node.
+This current can cause a change of value on that node for a short time, and if this value is clocked in on a register or latch,
+then we will have a unwanted change of value and that is called a \ac{SEU}.
+If this value is not clocked out or saved in some way, the current peak will just flat out, and nothing will happen.
+A way to detect \ac{SET} could be to make a shift register made up of a known number of register and a known input data.
+By checking the output and compare with the known value, you can detect if a \ac{SET} has occurred.
+
+\paragraph{Single Event Upset SEU} $\newline$
+\acf{SEU} is change of state in a logical element, caused by radiation. This phenomena can often be seen in memory cells or registers, where data is stored.
+A \ac{SEU} is a "Soft error", which means that it is a non-destructive type of error. By resetting or overwriting after an \ac{SEU} has occurred, the error will disappear.
+
+For better understanding of \ac{SEU} we can look at a six transistor SRAM cell, see figure \ref{SRAM_Cell}. If we say that Q = '1' and Q\_b = '0', so there is a value '1' written to the cell.
+Then a high energetic neutron strikes into the drain of transistor D\_2 and hits a silicon atom. This cause shattering of the atom into charged fragments (ions) that travels through the substrate.
+These ions leaves a trail of electron-hole pairs, see figure \ref{charge_generation}(a).
+When the resultant ionization track traverses or comes close to the depletion region,
+carriers (electrons) are rapidly collected by the electric field creating a large current transient at that node (\ac{SET}), causing voltage increase at the node Q\_b.
+If this voltage is high enough it will open transistor D1, and close transistor P1, causing Q to go towards '1' which again causing P2 to close and D2 to open up causes Q\_b to be discharged through D2, and set to '0'.
+Then the SRAM cell has changed value from '1' to '0', and we have a \ac{SEU}.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{SRAM_Cell.png}
+  \caption{Six transistor SRAM Cell}
+  \label{SRAM_Cell}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{charge_generation.png}
+  \caption{(a) Electron hole pairs generated (b) Carrier are drawn towards the depletion region causing a current jump (c) Additional charge is collected on a more long time scale (hundreds of nanoseconds) \cite{Baumann}}
+  \label{charge_generation}
+\end{figure}
+
+\subsubsection{Accumulative Effects}
+Accumulative effects are energy deposition caused by radiation for the whole lifespan of a circuit \cite{website:Faccio} and \cite{Oldham}.
+Accumulative effects are measured by the functionality of a device, and power consumption. 
+Some circuits are weak for accumulative effects, and will stop working only after a small dose of radiation,
+but others device may not even have any effect after a severe dose of radiation. When a chip stops working, we say that it has reached its tolerance level.
+When we talk about accumulative effects we normally divide into two groups, that is displacement damage, which is a non-ionizing effect,
+and \ac{TID} which is a ionizing effect.
+
+
+\paragraph{Total Ionization Dose TID} $\newline$
+\acf{TID} is measurement of the dose, that is the energy, deposited in a circuit by radiation in the form of ionization energy.
+The unit used are Gray (\gray) or rad. The relation between those two can be seen in equation \ref{gray_rad}.
+
+\begin{equation}
+1 \gray = 100 \rad
+\label{gray_rad}
+\end{equation}
+
+The heart of \ac{TID} effects is the energy deposition in the silicon dioxide.
+When ionizing particles penetrates into a transistor, electron-hole pairs will be created.
+Most of the pairs will recombine shortly after they are generated, but some do not completely recombine because of the electric field.
+Electrons, with high mobility, can easily leave the oxide, but holes are lower mobility and can be trapped in their point of generation in the oxide.
+The trapped holes cause a negative threshold voltage shift in the MOS transistor, and if enough holes are trapped, it can result in a transistor which is permanently ON.
+This phenomena can be seen in figure \ref{TID_in_MOS}.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{TID_in_MOS.png}
+  \caption{Layout of a MOS transistor. (A) shows normal operation and (B) shows the transistor after irradiation.}
+  \label{TID_in_MOS}
+\end{figure}
+
+\paragraph{Displacement Damage} $\newline$
+Displacement Damage is a non-ionizing effect mostly induced by low energetic particles colliding with and breaking atoms out of the initial lattice structure of a material.
+This can affect the functionality of the device. CMOS circuits are normally considered immune to this effect. 
+Displacement damage is not measured in any unit, but it is expressed in terms of the particle fluence, in particles/$\centi\meter^2$.
 
 \subsubsection{the TPC radiation environment}
+%Section about what our electronics will receive at CERN
+
 
 \section{The test boards and preparations for testing}
 
@@ -314,7 +448,7 @@ To supply and measure everything on the test boards, \acf{DAQ} devices from Nati
 The \ac{DAQ} devices we used are called USB-6009, USB-6008 and USB-6501. USB-6009 was used as the main one, and the other were used when needed more digital or analog inputs or outputs.
 USB-6009 has 8 single-ended analog input (AI) channels, 2 analog output (AO) channels and 12 digital input/output (DIO) channels, and also a 2.5 V and 5.0 V signal.
 The analog outputs has a limit of 5 $\milli\ampere$, but some of the \ac{IC}s that was tested required more than that. For these cases the 5 V signal was used, that can deliver current up to 200 $\milli\ampere$.
-More information on the DAQs can be seen in the datasheets in appendix \ref{datasheets}.
+More information on the DAQs can be seen in the reference \cite{website:DAQ}.
 
 \subsubsection{TPS51200}
 \label{TPS_explanation}

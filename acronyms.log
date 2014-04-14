@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  3 APR 2014 14:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  7 APR 2014 14:58
 entering extended mode
 **acronyms.tex
 ("C:\Users\Inge Nikolai\Master-thesis\acronyms.tex"
@@ -588,6 +588,96 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
 l.18 \acro
+          {SET}{Single Event Transient}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no S in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+! Undefined control sequence.
+l.19 \acro
+          {SEL}{Single Event Latchup}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no S in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no p in font nullfont!
+! Undefined control sequence.
+l.20 \acro
+          {MBU}{Multiple Bit Upset}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no M in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+! Undefined control sequence.
+l.21 \acro
           {IC}{Integrated Circuit}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -615,7 +705,7 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
-l.19 \acro
+l.22 \acro
           {PCB}{Printed Circuit Board}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -646,7 +736,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no d in font nullfont!
 ! Undefined control sequence.
-l.20 \acro
+l.23 \acro
           {LVDS}{Low-Voltage Differential Signaling}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -691,7 +781,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 ! Undefined control sequence.
-l.21 \acro
+l.24 \acro
           {NI}{National Instruments}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -721,7 +811,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Undefined control sequence.
-l.22 \acro
+l.25 \acro
           {DAQ}{data acquisition}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -748,7 +838,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.23 \acro
+l.26 \acro
           {SPI}{Serial Peripheral Interface}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -785,7 +875,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.24 \acro
+l.27 \acro
           {SF2}{SmartFusion2}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -809,7 +899,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no 2 in font nullfont!
 ! Undefined control sequence.
-l.25 \acro
+l.28 \acro
           {CML}{Current-Mode Logic}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -838,7 +928,7 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no c in font nullfont!
 ! Undefined control sequence.
-l.26 \acro
+l.29 \acro
           {TTC}{Timing, Trigger and Control}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -874,7 +964,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no l in font nullfont!
 ! Undefined control sequence.
-l.27 \acro
+l.30 \acro
           {LVPECL}{Low Voltage Positive Emitter Coupled Logic}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -926,7 +1016,7 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no c in font nullfont!
 ! Undefined control sequence.
-l.28 \acro
+l.31 \acro
           {RAM}{Random access memory}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -956,7 +1046,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.29 \acro
+l.32 \acro
           {SRAM}{static RAM}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -978,7 +1068,7 @@ Missing character: There is no R in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no M in font nullfont!
 ! Undefined control sequence.
-l.30 \acro
+l.33 \acro
           {PM-tube}{PhotoMultiplier Tube}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1013,7 +1103,7 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.31 \acro
+l.34 \acro
           {TID}{Total Ionizing Dose}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1042,7 +1132,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.32 \acro
+l.35 \acro
           {JTAG}{Joint Test Action Group}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1075,7 +1165,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no p in font nullfont!
 ! Undefined control sequence.
-l.33 \acro
+l.36 \acro
           {UART}{Universal Asynchronous Receiver/Transmitter}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1129,7 +1219,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 ! Undefined control sequence.
-l.34 \acro
+l.37 \acro
           {VHDL}{VHSIC Hardware Description Language}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1174,7 +1264,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.35 \acro
+l.38 \acro
           {CHSIC}{Very High Scale Integrated Circuit}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1218,7 +1308,7 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
-l.36 \acro
+l.39 \acro
           {CPU}{Central Processing Unit}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1251,7 +1341,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
-l.37 \acro
+l.40 \acro
           {MCU}{Microcontroller Unit}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1282,7 +1372,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
-l.38 \acro
+l.41 \acro
           {ADC}{Analog to Digital Converter}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1318,7 +1408,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 ! Undefined control sequence.
-l.39 \acro
+l.42 \acro
           {LET}{Linear Energy Transfer}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1350,7 +1440,7 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 ! Undefined control sequence.
-l.40 \acro
+l.43 \acro
           {SOC}{System On a Chip}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1374,8 +1464,59 @@ Missing character: There is no C in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no p in font nullfont!
+! Undefined control sequence.
+l.44 \acro
+          {CMOS}{Complementary Metal–Oxide–Semiconductor}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--41
+Missing character: There is no C in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no – in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no – in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--45
 []
  []
 
@@ -1386,7 +1527,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.44 \end{acronym}
+l.47 \end{acronym}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,

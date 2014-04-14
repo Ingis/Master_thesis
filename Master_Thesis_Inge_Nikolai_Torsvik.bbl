@@ -1,9 +1,26 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{balashov}
 V.V. Balashov.
 \newblock {\em Interaction of particles and Radiation with Matter}.
 \newblock Springel-Verlag, 1997.
+
+\bibitem{Baumann}
+R.C. Baumann.
+\newblock Radiation-induced soft errors in advanced semiconductor technologies.
+\newblock {\em Device and Materials Reliability, IEEE Transactions on},
+  5(3):305--316, Sept 2005.
+
+\bibitem{website:DAQ}
+National~Instruments Corporation.
+\newblock User guide and specifications ni usb-6008/6009, April 2014.
+\newblock \url{http://www.ni.com/pdf/manuals/371303m.pdf}.
+
+\bibitem{website:Faccio}
+F.~Faccio.
+\newblock Radiation effects in the electronics for cms.
+\newblock
+  \url{http://lhcb-elec.web.cern.ch/lhcb-elec/papers/radiation_tutorial.pdf}.
 
 \bibitem{GranlundOlsson}
 Thomas Granlund and Nils Olsson.
@@ -32,6 +49,11 @@ Tor~F. Thorsteinsen.
 \newblock {\em Kompendium i Strålingsfysikk - FYS231/233}.
 \newblock University of Bergen, Bergen, 1995.
 
+\bibitem{Oldham}
+F.B~McLean T.R~Oldham.
+\newblock Total ionizing dose effects in mos oxides and devices.
+\newblock {\em IEEE TRANSACTIONS ON NUCLEAR SCIENCE}, 2003.
+
 \bibitem{georgios}
 Georgios~Karolos Tsiledakis.
 \newblock {\em Scale Dependence of Mean Transverse Momentum Fluctuations at Top
@@ -42,6 +64,6 @@ Georgios~Karolos Tsiledakis.
 \bibitem{arild_master}
 Arild Velure.
 \newblock Design, implementation and testing of sram based neutron detectors.
-\newblock Master's thesis, Norway, 2011.
+\newblock Master's thesis, Norway.
 
 \end{thebibliography}

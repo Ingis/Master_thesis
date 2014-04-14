@@ -4,7 +4,7 @@
     title     = "Design of Analog Integrated Circuits and Systems",
     address  = "McGraw-Hill",
     edition  = "5 edition",
-    year      = "1994",
+    year      = "1994"
 }
 
 @book{Grayhurst,
@@ -12,7 +12,7 @@
     title     = "Analysis and Design of Analog Integrated Circuits",
     address  = "Wiley",
     edition  = "5 edition",
-    year      = "2010",
+    year      = "2010"
 }
 
 @Book{rad_phys,
@@ -20,14 +20,14 @@
  title     = "Kompendium i Strålingsfysikk - FYS231/233",
  publisher = "University of Bergen",
  year      =  "1995",
- address   = "Bergen",
+ address   = "Bergen"
 }
 
 @Book{GranlundOlsson,
  author    = "Thomas Granlund and Nils Olsson",
  title     = "A Comparative Study Between Proton and Neutron Induced SEU in SRAMs, 53(4)",
  IEEE 	   = "TRANSACTIONS ON NUCLEAR SCIENCE",
- year      =  "2006",
+ year      =  "2006"
 }
 
 @Book{georgios,
@@ -35,7 +35,7 @@
  title     = "Scale Dependence of Mean Transverse Momentum Fluctuations at Top SPS Energy measured by the CERES experiment and studies of gas properties for the ALICE experiment. PhD thesis",
  publisher = "Technische Universitat Darmstadt",
  address   = "Darmstadt",
- year      =  "2006",
+ year      =  "2006"
 }
 
 @phdthesis{roed,
@@ -43,32 +43,117 @@
  title     = "Single Event Upsets in SRAM FPGA based readout electronics for Time Projection Chamber in the ALICE experiment",
  publisher = "University of Bergen",
  address   = "Norway",
- year      =  "2009",
+ year      =  "2009"
 }
+
 @mastersthesis{arild_master,
  author    = "Arild Velure",
  title     = "Design, implementation and testing of SRAM based neutron detectors",
  publisher = "University of Bergen",
- address   = "Norway",
- year      =  "2011",
+ address   = "Norway"
 }
+
 @Book{Weste_harris,
  author    = "Neil H. E. Weste, David M. Harris",
  title     = "CMOS VLSI Design - A Circuit and System Perspective",
  publisher = "Addison-Wesley",
  edition   = "4 edition",
- year      = "2011",
+ year      = "2011"
 }
+
 @Book{knoll,
  author    = "Glenn F. Knoll",
  title     = "Radiation Detector and Measurement",
- publisher = "John Wiley & Sons",
+ publisher = "John Wiley and Sons",
  edition   = "3 edition",
- year      = "2000",
+ year      = "2000"
 }
-@Book{knoll,
+
+@Book{balashov,
  author    = "V.V. Balashov",
  title     = "Interaction of particles and Radiation with Matter",
  publisher = "Springel-Verlag",
- year      = "1997",
+ year      = "1997"
 }
+
+@misc{website:DAQ,
+      author = "National Instruments Corporation",
+      title = "USER GUIDE AND SPECIFICATIONS NI USB-6008/6009",
+      Month = "April",
+      year = "2014",
+      note = "\url{http://www.ni.com/pdf/manuals/371303m.pdf}"
+}
+
+@misc{website:NASA,
+      author = "NASA",
+      title = "Single Event Effect Criticality Analysis",
+      Month = "February",
+      year = "1996",
+      note = "\url{http://radhome.gsfc.nasa.gov/radhome/papers/seeca1.htm}"
+}
+
+@misc{website:Faccio,
+      author = "F. Faccio",
+      title = "Radiation effects in the electronics for CMS",
+      note = "\url{http://lhcb-elec.web.cern.ch/lhcb-elec/papers/radiation_tutorial.pdf}"
+}
+
+@Article{Baumann, 
+author = "Baumann, R.C.", 
+journal = "Device and Materials Reliability, IEEE Transactions on", 
+title = "Radiation-induced soft errors in advanced semiconductor technologies", 
+year = "2005", 
+month = "Sept", 
+volume = "5", 
+number = "3", 
+pages = "305-316", 
+keywords = "alpha-particle effects;failure analysis;integrated circuit reliability;radiation hardening (electronics);semiconductor device reliability;semiconductor technology;commercial electronic components;failure modes;logic components;memory components;radiation effects;radiation induced charge;radiation mechanisms;reliability mechanisms;semiconductor technologies;soft error sensitivity;soft errors;technology scaling;Circuits;Computer errors;Control systems;Error correction;Field programmable gate arrays;Paper technology;Radiation effects;Registers;Single event upset;Space technology;Radiation effects;reliability;single-event effects;soft errors", 
+doi = "10.1109/TDMR.2005.853449", 
+ISSN = "1530-4388"
+}
+
+@Article{Oldham,
+author = "T.R Oldham, F.B McLean",
+journal = "IEEE TRANSACTIONS ON NUCLEAR SCIENCE",
+title = "Total ionizing dose effects in MOS oxides and devices",
+year = "2003",
+doi = "10.1109/TNS.2003.812927 ",
+ISSN = "2622-2629"
+}
+
+
+@article{RCU2,
+Author = {Alme, J. and Alt, T. and Bratrud, L. and Christiansen, P. and Costa, F.
+   and David, E. and Gunji, T. and Kiss, T. and Langoy, R. and Lien, J. and
+   Lippmann, C. and Oskarsson, A. and Rehman, A. Ur and Roed, K. and
+   Rohrich, D. and Tarantola, A. and Torgersen, C. and Torsvik, I. Nikolai
+   and Ullaland, K. and Velure, A. and Yang, S. and Zhao, C. and
+   Appelshaeuser, H. and Osterman, L. and ALICE TPC Collaboration},
+Title = {{RCU2-The ALICE TPC readout electronics consolidation for Run2}},
+Journal = {{JOURNAL OF INSTRUMENTATION}},
+Year = {{2013}},
+Volume = {{8}},
+Month = {{DEC}},
+Note = {{Topical Workshop on Electronics for Particle Physics, Perugia, ITALY,
+   SEP 23-27, 2013}},
+DOI = {{10.1088/1748-0221/8/12/C12032}},
+Article-Number = {{C12032}},
+ISSN = {{1748-0221}},
+Unique-ID = {{ISI:000329910500032}},
+}
+
+
+@article{ ISI:000258875900009,
+Author = {Aamodt, K. and Quintana, A. Abrahantes and Achenbach, R. and Acounis, S.
+   and Adamova, D. and Adler, C. and the rest of theALICE Collaboration},
+Title = {{The ALICE experiment at the CERN LHC}},
+Journal = {{JOURNAL OF INSTRUMENTATION}},
+Year = {{2008}},
+Volume = {{3}},
+Month = {{AUG}},
+DOI = {{10.1088/1748-0221/3/08/S08002}},
+Article-Number = {{S08002}},
+ISSN = {{1748-0221}},
+Unique-ID = {{ISI:000258875900009}},
+}
+
