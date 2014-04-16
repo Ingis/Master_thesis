@@ -149,24 +149,65 @@ I also made two more test board for two IC that was added to the design at a lat
 \section{ALICE experiment}
 Since 1954 physicists at \ac{CERN} have studied the nucleus and its structure to find the fundamental structure of the universe.
 \ac{CERN} is the world largest research center for nuclear and particle physics, and has a total of 21 member state.
-One of the biggest attractions at \ac{CERN} is the \acf{LHC}, that is a circular particle accelerator placed in a 27 km long tunnel around 100 meter beneath ground level.
-This is the last accelerator in a chain of up to 7, where the particles gradually accelerate to higher and higher energies,
-up to their maximum energy of 4 TeV and speed up to the speed of light.
-There are four main detectors placed in the \ac{LHC} tunnel, where \ac{ALICE} is one of them.
-When the particles has reached a high enough energy level, accelerated particles form opposite direction are made to collide at the center of each detector.
+One of the biggest and newest invention at \ac{CERN} is the \acf{LHC}, that is a circular particle accelerator placed in a 27 km long tunnel around 100 meter beneath ground level.
+This is the last accelerator in a chain of up to 7 (depending on the particle), where the particles gradually accelerate to higher and higher energies,
+up to their maximum energy of 4 TeV and speed up to the speed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide.
 
-\subsection{TPC and Front End Electronics FEE}
-The \ac{ALICE} detector is a heavy ion detector. It is designed to study the quark-qluon plasma\footnotemark[1] which will be generated when heavy ions colliding.
-The \ac{ALICE} detector consist of several sub-detectors, where \acf{TPC} is the main detector.
+There are four main detectors placed in the \ac{LHC} tunnel, where \ac{ALICE} is one of them. See figure \ref{ALICE_layout}.
+The \ac{ALICE} detector is a heavy ion detector. Its main purpose is to study a state of matter called quark-qluon plasma\footnotemark[1] which will be generated when heavy ions collides.
+Under a collision a temperature 100 000 times higher than the temperature of the sun is generated.
+There is then high enough energy to split the protons and neutrons, and achieve a plasma of unbound quarks and gluons, and that is called quark-gluon plasma.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{ALICE_layout.jpg}
+  \caption{Layout of the ALICE experiment \cite{website:aliceinfo}}
+  \label{ALICE_layout}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{The Time Projection Chamber TPC}
+The ALICE detector comprises several sub-detectors, of which one is the Time Projection
+Chamber (TPC) where \acf{TPC} is the main tracking detector placed in the inner circle of \ac{ALICE}.
+The function of \ac{TPC} are tracking particles, measure the charged particles momentum and identification of particles.
+A drawing \ac{TPC} can be seen in figure \ref{TPC_layout}.
+The \ac{TPC} detector has a cylindrical shape, with a inner radius of 85 cm and outer radius of 250 cm, and has an overall length of 510 cm.
+The detector is made of a large cylindrical field cage, filled with 90 $m^3$ of 90\% Ne gas and 10\% $CO^2$ gas.
+The cage is divided into 18 sectors, which again is divided into 6 readout partitions. 
+There is a total of 560 000 pads located on the readout chambers at the \ac{TPC} end caps
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{TPC_layout.png}
+  \caption{Layout of the TPC \cite{website:aliceinfo}}
+  \label{TPC_layout}
+\end{figure}
+
+\subsubsection{Front End Card FEC}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{FEC_blockdiagram.png}
+  \caption{Layout of the ALICE experiment \cite{website:aliceinfo}}
+  \label{FEC_blockdiagram}
+\end{figure}
+
+\subsubsection{Readout Control Unit RCU}
+
+\subsubsection{RCU2}
 
 
-\footnotetext[1]{All ordinary matter in today’s universe is made up of atoms.
+\footnotetext[1]{All ordinary matter in today's universe is made up of atoms.
 Each atom contains a nucleus composed of protons and neutrons (except hydrogen, which has no neutrons), surrounded by a cloud of electrons.
 Protons and neutrons are in turn made of quarks bound together by other particles called gluons.
 No quark has ever been observed in isolation: the quarks, as well as the gluons, seem to be bound permanently together and confined inside composite particles, such as protons and neutrons.
 }
 
+\FloatBarrier
 \newpage
+
+
 
 \section{Radiation and Radiation effect on Semiconductor devices}
 Radiation and radiation effects are a known challenge when designing electronics which are going to be used at CERN.
@@ -416,6 +457,8 @@ This can affect the functionality of the device. CMOS circuits are normally cons
 Displacement damage is not measured in any unit, but it is expressed in terms of the particle fluence, in particles/$\centi\meter^2$.
 
 \subsubsection{the TPC radiation environment}
+%Section about what our electronics will receive at CERN
+
 
 \section{The test boards and preparations for testing}
 

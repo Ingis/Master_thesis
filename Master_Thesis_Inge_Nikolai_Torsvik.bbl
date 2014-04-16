@@ -16,6 +16,11 @@ National~Instruments Corporation.
 \newblock User guide and specifications ni usb-6008/6009, April 2014.
 \newblock \url{http://www.ni.com/pdf/manuals/371303m.pdf}.
 
+\bibitem{website:aliceinfo}
+F.~Faccio.
+\newblock Alice information site.
+\newblock \url{http://aliceinfo.cern.ch/}.
+
 \bibitem{website:Faccio}
 F.~Faccio.
 \newblock Radiation effects in the electronics for cms.
