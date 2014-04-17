@@ -60,10 +60,12 @@
 
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 
-
 \usepackage{hyperref}
 
+
 \begin{document}
+ 
+
 %Forside
 \thispagestyle{empty}
 \begin{center}        
@@ -200,11 +202,14 @@ In short the task of the \ac{FEE} is to read out charge received at the readout 
 \end{figure}
 
 \subsubsection{Front End Card FEC}
-A single readout channel is comprised of three basic functional units, see block diagram of
-figure 3.39: i) a charge sensitive amplifier/shaper (PASA); ii) a 10-bit 25MHz low-power ADC;
-and iii) a digital circuit that contains a shortening filter for the tail cancellation, baseline subtraction
-and zero-suppression circuits, and a multiple-event buffer. A front-end card (FEC) contains 128
-channels.
+The 560 000 pads deliver a current signal with a rise time of less than 1 ns, and a long tail due to the motion of the positive ions.
+The amplitude, is slightly different for the different pad sizes, but has a typical value of around 7 ?A.
+A current signal detected by one of the pads, is sent into the \acf{FEC}, which is comprised of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
+The first unit is a charge sensitive amplifier/shaper called PASA, the second unit is a 10-bit 25MHz low-power \ac{ADC}.
+The last unit is a digital circuit that contains a shortening filter for the tail cancellation, baseline subtraction
+and zero-suppression unit, and a multiple-event buffer. The \ac{ADC} and the digital unit constitute the ALTRO chip.
+Each \acf{FEC} has 128 channels which are connected to the readout pads. An example picture of a \ac{FEC} can be seen in figure \ref{FEC}
+
 
 
 \begin{figure}[!htbp]
@@ -212,6 +217,13 @@ channels.
   \includegraphics[width=\textwidth]{FEC_blockdiagram.png}
   \caption{Layout of the ALICE experiment \cite{website:aliceinfo}}
   \label{FEC_blockdiagram}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{FEC.png}
+  \caption{Layout of the ALICE experiment \cite{website:aliceinfo}}
+  \label{FEC}
 \end{figure}
 
 \subsubsection{Readout Control Unit RCU}
