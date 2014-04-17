@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{balashov}
+V.V. Balashov.
+\newblock {\em Interaction of particles and Radiation with Matter}.
+\newblock Springel-Verlag, 1997.
+
+\bibitem{Baumann}
+R.C. Baumann.
+\newblock Radiation-induced soft errors in advanced semiconductor technologies.
+\newblock {\em Device and Materials Reliability, IEEE Transactions on},
+  5(3):305--316, Sept 2005.
+
+\bibitem{website:DAQ}
+National~Instruments Corporation.
+\newblock User guide and specifications ni usb-6008/6009, April 2014.
+\newblock \url{http://www.ni.com/pdf/manuals/371303m.pdf}.
+
+\bibitem{website:aliceinfo}
+F.~Faccio.
+\newblock Alice information site.
+\newblock \url{http://aliceinfo.cern.ch/}.
+
+\bibitem{website:Faccio}
+F.~Faccio.
+\newblock Radiation effects in the electronics for cms.
+\newblock
+  \url{http://lhcb-elec.web.cern.ch/lhcb-elec/papers/radiation_tutorial.pdf}.
+
+\bibitem{GranlundOlsson}
+Thomas Granlund and Nils Olsson.
+\newblock {\em A Comparative Study Between Proton and Neutron Induced SEU in
+  SRAMs, 53(4)}.
+\newblock 2006.
+
+\bibitem{knoll}
+Glenn~F. Knoll.
+\newblock {\em Radiation Detector and Measurement}.
+\newblock John Wiley and Sons, 3 edition edition, 2000.
+
+\bibitem{Weste_harris}
+David M.~Harris Neil H. E.~Weste.
+\newblock {\em CMOS VLSI Design - A Circuit and System Perspective}.
+\newblock Addison-Wesley, 4 edition edition, 2011.
+
+\bibitem{roed}
+Ketil Røed.
+\newblock {\em Single Event Upsets in SRAM FPGA based readout electronics for
+  Time Projection Chamber in the ALICE experiment}.
+\newblock PhD thesis, Norway, 2009.
+
+\bibitem{rad_phys}
+Tor~F. Thorsteinsen.
+\newblock {\em Kompendium i Strålingsfysikk - FYS231/233}.
+\newblock University of Bergen, Bergen, 1995.
+
+\bibitem{Oldham}
+F.B~McLean T.R~Oldham.
+\newblock Total ionizing dose effects in mos oxides and devices.
+\newblock {\em IEEE TRANSACTIONS ON NUCLEAR SCIENCE}, 2003.
+
+\bibitem{georgios}
+Georgios~Karolos Tsiledakis.
+\newblock {\em Scale Dependence of Mean Transverse Momentum Fluctuations at Top
+  SPS Energy measured by the CERES experiment and studies of gas properties for
+  the ALICE experiment. PhD thesis}.
+\newblock Technische Universitat Darmstadt, Darmstadt, 2006.
+
+\bibitem{arild_master}
+Arild Velure.
+\newblock Design, implementation and testing of sram based neutron detectors.
+\newblock Master's thesis, Norway.
+
+\end{thebibliography}

@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Master_thesis_Inge_Nikolai_Torsvik.aux
+A level-1 auxiliary file: acronyms.aux
+The style file: plain.bst
+Database file #1: Master_Thesis_Inge_Nikolai_Torsvik.bib
+I was expecting an "="---line 215 of file Master_Thesis_Inge_Nikolai_Torsvik.bib
+ : Research 
+ :          Areas = {{Physics; Instruments \& Instrumentation (provided by Thomson Reuters)}},
+I'm skipping whatever remains of this entry
+Warning--empty publisher in GranlundOlsson
+Warning--empty school in roed
+Warning--empty school in arild_master
+Warning--empty year in arild_master
+You've used 13 entries,
+            2118 wiz_defined-function locations,
+            569 strings with 5775 characters,
+and the built_in function-call counts, 2882 in all, are:
+= -- 267
+> -- 97
+< -- 0
++ -- 42
+- -- 28
+* -- 135
+:= -- 514
+add.period$ -- 39
+call.type$ -- 13
+change.case$ -- 48
+chr.to.int$ -- 0
+cite$ -- 17
+duplicate$ -- 131
+empty$ -- 271
+format.name$ -- 28
+if$ -- 599
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 14
+newline$ -- 68
+num.names$ -- 26
+pop$ -- 91
+preamble$ -- 1
+purify$ -- 40
+quote$ -- 0
+skip$ -- 80
+stack$ -- 0
+substring$ -- 87
+swap$ -- 12
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 40
+warning$ -- 4
+while$ -- 27
+width$ -- 15
+write$ -- 135
+(There was 1 error message)
