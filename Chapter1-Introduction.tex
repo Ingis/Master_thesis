@@ -1,0 +1,34 @@
+\begin{section}
+
+\section{Introduction}
+At \acf{CERN} in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to a energy of 7 $\tera \electronvolt$ per proton, and then crash with a other particles with same energy. This experiment is done by connecting several accelerators with higher and higher energies together, the largest one is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
+To detect what is happening to the particles when crashed, there has been build several detectors that is placed in the tunnel. One of these is called the \acf{ALICE} detector. The \ac{ALICE} detector is using electronics to measure and detect what is happening under a crash.
+
+The Physics and research group at the \acf{UiB} has been working with \ac{CERN} on the \ac{ALICE} project since it started.
+One of the main boards used in the \ac{ALICE} detector is the \acf{RCU}. Now there has been decided that a new \ac{RCU} board shall be made, that is called \ac{RCU2}.
+Everything that are going to be used at \ac{CERN} has to be made sure that it can survive in the radiation level that can occur there. Therefore every \acf{IC} planned to be used for the design of the \ac{RCU2} board has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{ALICE} detector.
+
+\subsection{How to test}
+\label{how_to_test}
+The radiation in the \ac{LHC} is dominated by high energetic neutrons and protons, mostly neutrons with a estimated fluence of $(0,6-1,1)\times 10^{11}$ $neutrons/cm^2$. Therefore it would be preferable to test our electronics with a neutron beam, but since there are few labs who can produce a neutron beam compared to proton beam most of the electronics is only tested at \ac{OCL} with a proton beam.
+There has been done experiment that compares SEU induced by neutrons and protons \cite{GranlundOlsson}, and the result shows that it is possible to use a proton beam instead of proton beam with small deviations. By comparing a Proton beam with a neutron beam of 21MeV we see that we get 10-25\% less SEU cross section for a proton beam compared to a neutron beam.
+If we increase the energy to 88MeV then we get close to none deviations. 
+
+The tests that are done through this thesis are so called dose-tests. That is irradiation up to a level where an error can clearly be seen or when a high enough dose has been reached without detecting errors.
+Current consumption and the outputs of the \ac{IC} are monitored through the whole irradiation process.
+The dose that we could expect at \ac{CERN} for a 10 year period in the ALICE detector is estimated to be approximately 0.6 kRad from Pb-Pb collisions that will be run 1 month a year and a little higher for p-p collisions that will be run 10 months a year \cite{georgios} and \cite{roed}.
+Therefore we could expect a dose of 1-2 $\kilo$Rad during the time it will be used at CERN.
+If a \ac{IC} survives more than 5 times of what we would expect at \ac{CERN}, we could say that it pass the test, that means if it survives more than 5-10 kRad, the device is approved to used in the \ac{RCU2} design.
+
+\subsection{About this work}
+When I started working with my thesis in the autumn of 2013 the schematic layout for the \ac{RCU2} was basically finished, and most of the component was decided, but not everyone had been tested.
+So what I have been working on in my thesis are thinking and planing how to test the different \ac{IC}.
+In most of the cases I designed a simple test \ac{PCB} which I connected to \acf{DAQ} board from \ac{NI}. By the use of this \ac{DAQ} the functionality of the \ac{IC} was tested and current consumption was monitored.
+For the more advanced \ac{IC} like the \ac{SF2}\acf{SOC}\ac{FPGA}, I used a starter-kit when designing the test. To measure the low current going into the \ac{SF2} chip I also made a current measurement \ac{PCB} for that purpose.
+I started my thesis work with making test boards for 8 different \ac{IC}s. These consist of; power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer and buffer.
+For every each of the different test board that was made I also made labVIEW programs, to control and monitor the tests.
+After these test board was made working and had been tested, I started working on designing test for the \ac{SF2} \ac{SOC} \ac{FPGA}.
+The tests was made on a \ac{SF2}-starter kit, but with the \ac{RCU2} in mind, so that when the hardware for the \ac{RCU} comes, it will be easy to implement the test on that.
+I also made two more test board for two IC that was added to the design at a late stage. That was a comparator and a Current Shunt Monitor.
+
+\end{section}

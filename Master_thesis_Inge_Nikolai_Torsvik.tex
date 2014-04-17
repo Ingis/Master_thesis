@@ -11,24 +11,19 @@
 \usepackage{multirow}
 \usepackage{SIunits}%SI unit symbol package
 \usepackage{amsmath}
-\usepackage{array}
 \usepackage{array, calc}
 \usepackage{tabularx}
 \usepackage{setspace}
 \usepackage{verbatim} %Enables \begin{comment}...
 \usepackage{cite}
-\usepackage{booktabs}
 \usepackage{float}
 \usepackage{mathtools}
 \usepackage{threeparttable}
 \usepackage{standalone}
 \usepackage{booktabs, dcolumn}
 \usepackage{placeins}
-\usepackage{inputenc} 
-\usepackage{placeins}
 \usepackage{fancyvrb}
 \usepackage[printonlyused]{acronym}
-\usepackage{amsmath}
 \numberwithin{figure}{section}
 
 \tolerance = 5000 % LaTeX er normalt streng når det gjelder linjebrytingen.
@@ -100,8 +95,7 @@
 
 
 \newpage
-\setcounter{page}{1}
-%\pagenumbering{roman}
+\pagenumbering{Roman}
 \section*{Abstract}
 
 \newpage
@@ -114,6 +108,7 @@
 \FloatBarrier
 
 \newpage
+\setcounter{page}{1}\pagenumbering{arabic}
 \section{Introduction}
 At \acf{CERN} in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to a energy of 7 $\tera \electronvolt$ per proton, and then crash with a other particles with same energy. This experiment is done by connecting several accelerators with higher and higher energies together, the largest one is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
 To detect what is happening to the particles when crashed, there has been build several detectors that is placed in the tunnel. One of these is called the \acf{ALICE} detector. The \ac{ALICE} detector is using electronics to measure and detect what is happening under a crash.
@@ -227,6 +222,9 @@ Each \acf{FEC} has 128 channels which are connected to the readout pads. An exam
 \end{figure}
 
 \subsubsection{Readout Control Unit RCU}
+The \acf{RCU} consist of a the motherboard, the \ac{DCS} board and the ac{SIU} board.
+Most of the \ac{RCU} functions is controlled by the main FPGA, which is a Xilinx Virtex-II Pro FPGA.
+this \ac{FPGA} is in charge of data readout from the \ac{TPC} 
 
 \subsubsection{RCU2}
 
