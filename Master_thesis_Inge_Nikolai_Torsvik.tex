@@ -95,7 +95,9 @@
 
 
 \newpage
+\setcounter{page}{1}
 \pagenumbering{Roman}
+
 \section*{Abstract}
 
 \newpage
@@ -108,7 +110,9 @@
 \FloatBarrier
 
 \newpage
-\setcounter{page}{1}\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
 \section{Introduction}
 At \acf{CERN} in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to a energy of 7 $\tera \electronvolt$ per proton, and then crash with a other particles with same energy. This experiment is done by connecting several accelerators with higher and higher energies together, the largest one is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
 To detect what is happening to the particles when crashed, there has been build several detectors that is placed in the tunnel. One of these is called the \acf{ALICE} detector. The \ac{ALICE} detector is using electronics to measure and detect what is happening under a crash.
@@ -197,13 +201,14 @@ In short the task of the \ac{FEE} is to read out charge received at the readout 
 \end{figure}
 
 \subsubsection{Front End Card FEC}
-The 560 000 pads deliver a current signal with a rise time of less than 1 ns, and a long tail due to the motion of the positive ions.
-The amplitude, is slightly different for the different pad sizes, but has a typical value of around 7 ?A.
-A current signal detected by one of the pads, is sent into the \acf{FEC}, which is comprised of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
+When on of the pads get hit by a ionized particle, it sends ut a current signal with a rise time of less than 1 ns and a little slower falltime due to the motion of the positive ions.
+The amplitude is slightly different for the different pad sizes, but has a typical value of around 7 $\micro\ampere$.
+A current signal detected by one of the pads, is sent into the \acf{FEC}, which consist of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
 The first unit is a charge sensitive amplifier/shaper called PASA, the second unit is a 10-bit 25MHz low-power \ac{ADC}.
-The last unit is a digital circuit that contains a shortening filter for the tail cancellation, baseline subtraction
-and zero-suppression unit, and a multiple-event buffer. The \ac{ADC} and the digital unit constitute the ALTRO chip.
-Each \acf{FEC} has 128 channels which are connected to the readout pads. An example picture of a \ac{FEC} can be seen in figure \ref{FEC}
+The last unit is a digital circuit that perform the baseline subtraction, tail cancellation, zero-suppression \footnotemark[2], formatting and buffering.
+The \ac{ADC} and the digital unit constitute the ALTRO chip. There are 16 PASA chips and 16 ALTRO chips on the \ac{FEC},
+the PASA chip is connected to 16 readout pads each, which gives a total of 128 readout pads for one \ac{RCU}.
+An picture of the \ac{FEC} can be seen in figure \ref{FEC}.
 
 
 
@@ -221,8 +226,11 @@ Each \acf{FEC} has 128 channels which are connected to the readout pads. An exam
   \label{FEC}
 \end{figure}
 
+\footnotetext[2]{Zero Compressions means that signal bellow a given threshold will be filtered away.}
+
 \subsubsection{Readout Control Unit RCU}
-The \acf{RCU} consist of a the motherboard, the \ac{DCS} board and the ac{SIU} board.
+One row of \acp{FEC} (18 to 25 pieces) is controlled by a \acf{RCU}.
+The \acf{RCU} consist of a the motherboard, the DCS board and the SIU board.
 Most of the \ac{RCU} functions is controlled by the main FPGA, which is a Xilinx Virtex-II Pro FPGA.
 this \ac{FPGA} is in charge of data readout from the \ac{TPC} 
 
