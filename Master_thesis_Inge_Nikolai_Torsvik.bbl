@@ -33,6 +33,15 @@ Thomas Granlund and Nils Olsson.
   SRAMs, 53(4)}.
 \newblock 2006.
 
+\bibitem{Carmen}
+C.G. Gutierrez, R.~Campagnolo, A.~Junique, L.~Musa, J.~Alme, J.~Lien,
+  B.~Pommersche, M.~Richter, K.~Roed, D.~Rohrich, K.~Ullaland, and T.~Alt.
+\newblock {The ALICE TPC readout control unit}.
+\newblock In {\em {2005 IEEE Nuclear Science Symposium Conference Record (IEEE
+  Cat. No.05CH37692C)}}, pages {575--9}, {2006} {2006}.
+\newblock {2005 IEEE Nuclear Science Symposium Conference Record, 23-29 Oct.
+  2005, Fajardo, Puerto Rico}.
+
 \bibitem{knoll}
 Glenn~F. Knoll.
 \newblock {\em Radiation Detector and Measurement}.

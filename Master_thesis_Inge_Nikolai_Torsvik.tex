@@ -57,7 +57,6 @@
 
 \usepackage{hyperref}
 
-
 \begin{document}
  
 
@@ -129,7 +128,7 @@ If we increase the energy to 88MeV then we get close to none deviations.
 
 The tests that are done through this thesis are so called dose-tests. That is irradiation up to a level where an error can clearly be seen or when a high enough dose has been reached without detecting errors.
 Current consumption and the outputs of the \ac{IC} are monitored through the whole irradiation process.
-The dose that we could expect at \ac{CERN} for a 10 year period in the ALICE detector is estimated to be approximately 0.6 kRad from Pb-Pb collisions that will be run 1 month a year and a little higher for p-p collisions that will be run 10 months a year \cite{georgios} and \cite{roed}.
+The dose that we could expect for a 10 year period in the ALICE detector is estimated to be approximately 0.6 kRad from Pb-Pb collisions that will be run 1 month a year and a little higher for p-p collisions that will be run 10 months a year \cite{georgios} and \cite{roed}.
 Therefore we could expect a dose of 1-2 $\kilo$Rad during the time it will be used at CERN.
 If a \ac{IC} survives more than 5 times of what we would expect at \ac{CERN}, we could say that it pass the test, that means if it survives more than 5-10 kRad, the device is approved to used in the \ac{RCU2} design.
 
@@ -138,10 +137,10 @@ If a \ac{IC} survives more than 5 times of what we would expect at \ac{CERN}, we
 When I started working with my thesis in the autumn of 2013 the schematic layout for the \ac{RCU2} was basically finished, and most of the component was decided, but not everyone had been tested.
 So what I have been working on in my thesis are thinking and planing how to test the different \ac{IC}.
 In most of the cases I designed a simple test \ac{PCB} which I connected to \acf{DAQ} board from \ac{NI}. By the use of this \ac{DAQ} the functionality of the \ac{IC} was tested and current consumption was monitored.
-For the more advanced \ac{IC} like the \ac{SF2}\acf{SOC}\ac{FPGA}, I used a starter-kit when designing the test. To measure the low current going into the \ac{SF2} chip I also made a current measurement \ac{PCB} for that purpose.
+For the more advanced \ac{IC} like the \ac{SF2}\acf{SoC}\ac{FPGA}, I used a starter-kit when designing the test. To measure the low current going into the \ac{SF2} chip I also made a current measurement \ac{PCB} for that purpose.
 I started my thesis work with making test boards for 8 different \ac{IC}s. These consist of; power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer and buffer.
 For every each of the different test board that was made I also made labVIEW programs, to control and monitor the tests.
-After these test board was made working and had been tested, I started working on designing test for the \ac{SF2} \ac{SOC} \ac{FPGA}.
+After these test board was made working and had been tested, I started working on designing test for the \ac{SF2} \ac{SoC} \ac{FPGA}.
 The tests was made on a \ac{SF2}-starter kit, but with the \ac{RCU2} in mind, so that when the hardware for the \ac{RCU} comes, it will be easy to implement the test on that.
 I also made two more test board for two IC that was added to the design at a late stage. That was a comparator and a Current Shunt Monitor.
 
@@ -159,12 +158,18 @@ The \ac{ALICE} detector is a heavy ion detector. Its main purpose is to study a 
 Under a collision a temperature 100 000 times higher than the temperature of the sun is generated.
 There is then high enough energy to split the protons and neutrons, and achieve a plasma of unbound quarks and gluons, and that is called quark-gluon plasma.
 
+\footnotetext[1]{All ordinary matter in today's universe is made up of atoms.
+Each atom contains a nucleus composed of protons and neutrons (except hydrogen, which has no neutrons), surrounded by a cloud of electrons.
+Protons and neutrons are in turn made of quarks bound together by other particles called gluons.
+No quark has ever been observed in isolation: the quarks, as well as the gluons, seem to be bound permanently together and confined inside composite particles, such as protons and neutrons.
+}
+
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{ALICE_layout.jpg}
   \caption{Layout of the ALICE experiment \cite{website:aliceinfo}}
   \label{ALICE_layout}
-\end{figure}
+\end{figure}CERN
 
 \FloatBarrier
 
@@ -190,7 +195,7 @@ the inner chambers, 6 $\times$ 10 $\milli\meter^2$ and 6 $\times$ 15$\milli\mete
 \subsection{The TPC Front End electronics FEE}
 Each of the total 36 sections are also divided into 6 readout partitions, that is 2 in the inner chamber and 4 in the outer chamber. 
 Each of the readout partitions are controlled by a \acf{RCU} which is connected to 18 to 25 \acf{FEC}. See figure \ref{TPC_Sections}
-There are a total of 216 \ac{RCU} connected to a total of 4356 \ac{RCU} which is connected to all of the 560 000 readout pads, and all together this sums up the \acf{FEE}.
+There are a total of 216 \ac{RCU} connected to a total of 4356 \ac{FEC} which is connected to all of the 560 000 readout pads, and all together this sums up the \acf{FEE}.
 In short the task of the \ac{FEE} is to read out charge received at the readout pads, process it and send useful data to a computer.
 
 \begin{figure}[!htbp]
@@ -201,15 +206,14 @@ In short the task of the \ac{FEE} is to read out charge received at the readout 
 \end{figure}
 
 \subsubsection{Front End Card FEC}
-When on of the pads get hit by a ionized particle, it sends ut a current signal with a rise time of less than 1 ns and a little slower falltime due to the motion of the positive ions.
+When one of the pads receives a charge after a collision has occurred, it sends out a current signal with a rise time of less than 1 ns followed by a long tail due to the motion of the positive ions.
 The amplitude is slightly different for the different pad sizes, but has a typical value of around 7 $\micro\ampere$.
-A current signal detected by one of the pads, is sent into the \acf{FEC}, which consist of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
+A current signal given by one of the pads, is sent into the \acf{FEC} which consist of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
 The first unit is a charge sensitive amplifier/shaper called PASA, the second unit is a 10-bit 25MHz low-power \ac{ADC}.
 The last unit is a digital circuit that perform the baseline subtraction, tail cancellation, zero-suppression \footnotemark[2], formatting and buffering.
-The \ac{ADC} and the digital unit constitute the ALTRO chip. There are 16 PASA chips and 16 ALTRO chips on the \ac{FEC},
-the PASA chip is connected to 16 readout pads each, which gives a total of 128 readout pads for one \ac{RCU}.
+The \ac{ADC} and the digital unit together constitute the so ALTRO chip. There are 16 PASA chips and 16 ALTRO chips on the \ac{FEC},
+the PASA chip is connected to 16 readout pads each, which gives a total of 128 readout pads for one \ac{FEC}.
 An picture of the \ac{FEC} can be seen in figure \ref{FEC}.
-
 
 
 \begin{figure}[!htbp]
@@ -222,26 +226,71 @@ An picture of the \ac{FEC} can be seen in figure \ref{FEC}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{FEC.png}
-  \caption{Layout of the ALICE experiment \cite{website:aliceinfo}}
+  \caption{Layout of the ALICE experiment \cite{Carmen}}
   \label{FEC}
 \end{figure}
 
 \footnotetext[2]{Zero Compressions means that signal bellow a given threshold will be filtered away.}
 
 \subsubsection{Readout Control Unit RCU}
-One row of \acp{FEC} (18 to 25 pieces) is controlled by a \acf{RCU}.
-The \acf{RCU} consist of a the motherboard, the DCS board and the SIU board.
-Most of the \ac{RCU} functions is controlled by the main FPGA, which is a Xilinx Virtex-II Pro FPGA.
-this \ac{FPGA} is in charge of data readout from the \ac{TPC} 
+One \acf{RCU} is connected to one row of \acp{FEC} (up to 25 pieces), through a backplane\footnotemark[3], see figure \ref{TPC_Sections}.
+The \ac{RCU} task is to control all of the \acf{FEE} all the way from the readout pads through the \acp{FEC}, and out to a \acf{DAQ} System.
+The \ac{RCU} consist of three separated boards which are the Motherboard board, and the \acf{DCS} board and a \acf{SIU} board, which are attached to the Motherboard.
+Most of the \ac{RCU} functions is controlled by the main \ac{FPGA}, which is a Xilinx Virtex-II Pro \ac{FPGA}.
+This \ac{FPGA} is controlling the hole readout process of the \ac{TPC} detector.
+It is also responsible of moving data from the \acp{FEC} to the \acf{SIU} board,
+where data is transmitted via a optical link to the Data Acquisition system,
+where data is stored and are accessible for the engineers.
+
+The Xilinx Virtex-II Pro is a \ac{SRAM} based \ac{FPGA}. \ac{SRAM} cells is especially vulnerable for \acf{SEU}, see section \ref{SEU_Section}.
+Therefore a flash based \ac{FPGA}, Actel ProASIC is used to monitor the SRAM memory and reprogram/reconfigure if an error occurs.
+
+The \ac{DCS} board is basically a embedded computer running Linux.
+This board is connected through a Ethernet ling to a computer on the outside of the ALICE detector.
+Through this Ethernet link we are able to upgrade and reprogram the \acp{FPGA} of the \ac{RCU}.
+So even though the hardware is inaccessible after it has been mounted in the \ac{TPC},
+the \ac{SIU} board gives us some kind of flexibility.
+In addition, it has an optical interface receiving the clock and trigger information from the Timing, Trigger and Control, also called TTC.
+
+
+\footnotetext[3]{A backplane is a PCB board, that connects all of the Front End Cards to the Readout Control Unit.
+This is used instead of cables to get a more stability, and to keep things in place}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{RCU.png}
+  \caption{Layout of the ALICE experiment \cite{Carmen}}
+  \label{RCU}
+\end{figure}
 
 \subsubsection{RCU2}
+\paragraph{Why upgrade RCU} $\newline$
+LHC is currently shut down for maintenance and preparation for even higher energies.
+This period, called Long Shutdown 1 (LS1), lasts until end of 2014.
+The present \ac{TPC} readout electronics will be a limiting factor with the foreseen readout rate for the next run period, called Run2.
+The bus between \ac{RCU} and FECs are not able to read all data for high occupancy events, like Pb-Pb collisions.  
+In addition stability issues related to \ac{SEU} on the \ac{SRAM} based \ac{FPGA} have been observed with the present setup.
+9\% of the run time had to be stopped because of errors occurred in the \ac{TPC} readout electronics.
 
+\paragraph{The new Readout Control Unit, the RCU2}
+The main motivation for the \ac{RCU2} was to develop a solution that gives the needed performance improvement,
+and at the same time was feasible within the limited time-frame.
+Therefore some of the old infrastructure has to be reused, like cables for Ethernet, Trigger and power and the cooling envelops.
+Since the infrastructure is basically the same, the placement of connectors and the size of the new \ac{RCU} should be the same as the old one. 
 
-\footnotetext[1]{All ordinary matter in today's universe is made up of atoms.
-Each atom contains a nucleus composed of protons and neutrons (except hydrogen, which has no neutrons), surrounded by a cloud of electrons.
-Protons and neutrons are in turn made of quarks bound together by other particles called gluons.
-No quark has ever been observed in isolation: the quarks, as well as the gluons, seem to be bound permanently together and confined inside composite particles, such as protons and neutrons.
-}
+The main difference between the \ac{RCU2} and \ac{RCU}1 is that the main \ac{FPGA}, the Xilinx Virtex-II Pro,
+has been replaced by a Microsemi \acf{SF2} \acf{SoC} \ac{FPGA} M2S050-FG896. This is a flash-based FPGA which has
+\ac{SEU} immune configuration memory, as well as several other radiation tolerance measures implemented.
+It also comes with a Microcontroller Subsystem which is based on a hardcore ARM Cortex-M3 microcontroller.
+A Linux system is build on this Microcontroller Subsystem, which resulting in that we didn't need the \acf{DCS} board anymore.
+The ProASIC was also not need for reconfiguration anymore, but was kept for radiation monitoring,
+this part of the RCU2 is called RadMon, and consist of a ProASIC and SRAM cips.
+Another issue encountered in the design was that a chip called TTCrx chip that was used as handling the clock and trigger signal on RCU1 was out of stuck and obsolete.
+This will be replaced by a optical receiver and a limiting amplifier which has been tested in this thesis, see section \ref{limiting_amp}.
+
+One of the limiting with the old setup was that the bus between \ac{RCU} and FECs was to slow.
+This was fixed by dividing the readout into 4 sections instead of 2, which effectively doubled the readout speed.
+Therefore all of the backplanes had to be replaced with new ones.
 
 \FloatBarrier
 \newpage
@@ -433,6 +482,7 @@ A way to detect \ac{SET} could be to make a shift register made up of a known nu
 By checking the output and compare with the known value, you can detect if a \ac{SET} has occurred.
 
 \paragraph{Single Event Upset SEU} $\newline$
+\label{SEU_Section}
 \acf{SEU} is change of state in a logical element, caused by radiation. This phenomena can often be seen in memory cells or registers, where data is stored.
 A \ac{SEU} is a "Soft error", which means that it is a non-destructive type of error. By resetting or overwriting after an \ac{SEU} has occurred, the error will disappear.
 
@@ -496,8 +546,11 @@ This can affect the functionality of the device. CMOS circuits are normally cons
 Displacement damage is not measured in any unit, but it is expressed in terms of the particle fluence, in particles/$\centi\meter^2$.
 
 \subsubsection{the TPC radiation environment}
+The radiation environment at in \ac{LHC} is dominated by high energetic neutrons and protons.
 %Section about what our electronics will receive at CERN
 
+\FloatBarrier
+\newpage
 
 \section{The test boards and preparations for testing}
 
@@ -631,6 +684,7 @@ So we had to use the modified version of the MIC69302WU \ac{PCB}, that will supp
 \FloatBarrier
 
 \subsubsection{ADN2814 and MAX3748}
+\label{limiting_amp}
 These two boards are used for the same purpose, and the one of them that performs best will be chosen to be used on the \ac{RCU2}.
 ADN2814 is a clock and data recovery IC with integrated limiting amplifier. Works in rate of 10 Mb/s to 675 Mb/s. Gives out a \acf{LVDS} clock and data signal.
 MAX3748 is a limiting amplifier. Works in rate of 155 Mb/s to 4.25 Gb/s. Gives out a \acf{CML} data output signal.
