@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{ALICE}
+K.~Aamodt, A.~Abrahantes Quintana, R.~Achenbach, S.~Acounis, D.~Adamova,
+  C.~Adler, and the rest of~the ALICE~Collaboration.
+\newblock {The ALICE experiment at the CERN LHC}.
+\newblock {\em {JOURNAL OF INSTRUMENTATION}}, {3}, {AUG} {2008}.
+
 \bibitem{balashov}
 V.V. Balashov.
 \newblock {\em Interaction of particles and Radiation with Matter}.
@@ -32,15 +38,6 @@ Thomas Granlund and Nils Olsson.
 \newblock {\em A Comparative Study Between Proton and Neutron Induced SEU in
   SRAMs, 53(4)}.
 \newblock 2006.
-
-\bibitem{Carmen}
-C.G. Gutierrez, R.~Campagnolo, A.~Junique, L.~Musa, J.~Alme, J.~Lien,
-  B.~Pommersche, M.~Richter, K.~Roed, D.~Rohrich, K.~Ullaland, and T.~Alt.
-\newblock {The ALICE TPC readout control unit}.
-\newblock In {\em {2005 IEEE Nuclear Science Symposium Conference Record (IEEE
-  Cat. No.05CH37692C)}}, pages {575--9}, {2006} {2006}.
-\newblock {2005 IEEE Nuclear Science Symposium Conference Record, 23-29 Oct.
-  2005, Fajardo, Puerto Rico}.
 
 \bibitem{knoll}
 Glenn~F. Knoll.

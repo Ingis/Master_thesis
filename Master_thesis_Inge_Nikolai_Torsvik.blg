@@ -14,43 +14,43 @@ Warning--empty school in arild_master
 Warning--empty year in arild_master
 You've used 14 entries,
             2118 wiz_defined-function locations,
-            578 strings with 6211 characters,
-and the built_in function-call counts, 3664 in all, are:
-= -- 336
-> -- 160
-< -- 1
-+ -- 67
-- -- 52
-* -- 201
-:= -- 637
-add.period$ -- 43
+            577 strings with 6007 characters,
+and the built_in function-call counts, 3283 in all, are:
+= -- 301
+> -- 135
+< -- 0
++ -- 57
+- -- 42
+* -- 171
+:= -- 590
+add.period$ -- 42
 call.type$ -- 14
-change.case$ -- 63
+change.case$ -- 58
 chr.to.int$ -- 0
 cite$ -- 18
-duplicate$ -- 156
-empty$ -- 313
-format.name$ -- 52
-if$ -- 763
+duplicate$ -- 141
+empty$ -- 288
+format.name$ -- 42
+if$ -- 673
 int.to.chr$ -- 0
 int.to.str$ -- 14
 missing$ -- 15
-newline$ -- 74
+newline$ -- 73
 num.names$ -- 28
-pop$ -- 108
+pop$ -- 99
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 49
 quote$ -- 0
-skip$ -- 103
+skip$ -- 88
 stack$ -- 0
-substring$ -- 122
-swap$ -- 25
-text.length$ -- 1
+substring$ -- 92
+swap$ -- 13
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 44
 warning$ -- 4
-while$ -- 31
+while$ -- 29
 width$ -- 16
-write$ -- 148
+write$ -- 146
 (There was 1 error message)

@@ -101,7 +101,7 @@
 
 \newpage
 \section*{Contents}
-
+\tableofcontents
 \newpage
 
 \FloatBarrier
@@ -113,49 +113,45 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-At \acf{CERN} in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to a energy of 7 $\tera \electronvolt$ per proton, and then crash with a other particles with same energy. This experiment is done by connecting several accelerators with higher and higher energies together, the largest one is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
-To detect what is happening to the particles when crashed, there has been build several detectors that is placed in the tunnel. One of these is called the \acf{ALICE} detector. The \ac{ALICE} detector is using electronics to measure and detect what is happening under a crash.
-
-The Physics and research group at the \acf{UiB} has been working with \ac{CERN} on the \ac{ALICE} project since it started.
-One of the main boards used in the \ac{ALICE} detector is the \acf{RCU}. Now there has been decided that a new \ac{RCU} board shall be made, that is called \ac{RCU2}.
-Everything that are going to be used at \ac{CERN} has to be made sure that it can survive in the radiation level that can occur there. Therefore every \acf{IC} planned to be used for the design of the \ac{RCU2} board has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{ALICE} detector.
+At \acf{CERN} in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to a energy of 4 $\tera \electronvolt$ per proton, and then crash with a other particle with same energy. This experiment is done by connecting several accelerators with higher and higher energies together to accelerate particles. The largest one is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
+To detect what is happening to the particles when crashed, there has been built several detectors that is placed in the tunnel. One of these is called \acf{ALICE}.
+The \ac{ALICE} detector is built to study a matter known as Quark-gluons plasma \cite{ALICE}, which will be generated under collisions of heavy ions.
+The detector consist of several sub-detector with different functionality. \ac{TPC} is one of these, and is the main tracking detector placed in the inner circle of \ac{ALICE}, see section \ref{ALICE_experiment}. Under a collision high energetic neutrons and protons will be generated, and will also pose a risk to the electronics used.
+It is therefore of highest importance to test everything that are planed to be used in the experiment for radiation. A replacement of electronics after installed in the detector is normally impossible under a run period, which can last up to several years.
+ 
+One of the main boards used in the \ac{TPC} detector is the \acf{RCU}. Now there has been decided that a new \ac{RCU} board shall be made, namely the \ac{RCU2}.
+Everything that are going to be used in the \ac{LHC} tunnel has to be made sure that it can survive the radiation level that are there.
+Therefore every \acf{IC} planned to be used for the design of the \ac{RCU2} board has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{TPC} detector.
 
 \subsection{How to test}
 \label{how_to_test}
-The radiation in the \ac{LHC} is dominated by high energetic neutrons and protons, mostly neutrons with a estimated fluence of $(0,6-1,1)\times 10^{11}$ $neutrons/cm^2$. Therefore it would be preferable to test our electronics with a neutron beam, but since there are few labs who can produce a neutron beam compared to proton beam most of the electronics is only tested at \ac{OCL} with a proton beam.
-There has been done experiment that compares SEU induced by neutrons and protons \cite{GranlundOlsson}, and the result shows that it is possible to use a proton beam instead of proton beam with small deviations. By comparing a Proton beam with a neutron beam of 21MeV we see that we get 10-25\% less SEU cross section for a proton beam compared to a neutron beam.
-If we increase the energy to 88MeV then we get close to none deviations. 
-
-The tests that are done through this thesis are so called dose-tests. That is irradiation up to a level where an error can clearly be seen or when a high enough dose has been reached without detecting errors.
-Current consumption and the outputs of the \ac{IC} are monitored through the whole irradiation process.
-The dose that we could expect for a 10 year period in the ALICE detector is estimated to be approximately 0.6 kRad from Pb-Pb collisions that will be run 1 month a year and a little higher for p-p collisions that will be run 10 months a year \cite{georgios} and \cite{roed}.
-Therefore we could expect a dose of 1-2 $\kilo$Rad during the time it will be used at CERN.
-If a \ac{IC} survives more than 5 times of what we would expect at \ac{CERN}, we could say that it pass the test, that means if it survives more than 5-10 kRad, the device is approved to used in the \ac{RCU2} design.
-
+The radiation tests done through this thesis is mainly \ac{TID} test.
+That is irradiation up to a level where an error can clearly be seen or when a high enough dose has been reached without detecting errors, see section \ref{TID} for more information.
+But there has also been done tests for \ac{SEE}, like \acf{SEU}, \acf{SET} and \acf{SEL} on a Microsemi \ac{SF2} \ac{SoC} \ac{FPGA}.
 
 \subsection{About this work}
-When I started working with my thesis in the autumn of 2013 the schematic layout for the \ac{RCU2} was basically finished, and most of the component was decided, but not everyone had been tested.
-So what I have been working on in my thesis are thinking and planing how to test the different \ac{IC}.
-In most of the cases I designed a simple test \ac{PCB} which I connected to \acf{DAQ} board from \ac{NI}. By the use of this \ac{DAQ} the functionality of the \ac{IC} was tested and current consumption was monitored.
-For the more advanced \ac{IC} like the \ac{SF2}\acf{SoC}\ac{FPGA}, I used a starter-kit when designing the test. To measure the low current going into the \ac{SF2} chip I also made a current measurement \ac{PCB} for that purpose.
-I started my thesis work with making test boards for 8 different \ac{IC}s. These consist of; power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer and buffer.
-For every each of the different test board that was made I also made labVIEW programs, to control and monitor the tests.
-After these test board was made working and had been tested, I started working on designing test for the \ac{SF2} \ac{SoC} \ac{FPGA}.
-The tests was made on a \ac{SF2}-starter kit, but with the \ac{RCU2} in mind, so that when the hardware for the \ac{RCU} comes, it will be easy to implement the test on that.
-I also made two more test board for two IC that was added to the design at a late stage. That was a comparator and a Current Shunt Monitor.
+When I started working with my thesis in the autumn of 2013 the schematic layout for the \ac{RCU2} was basically finished,
+and most of the component was decided, but not all of the component had been tested.
+My work through this thesis has been planing how to test different circuits, designing test setup and executing the tests.
+For most of the circuits, I designed a \ac{PCB} with only the necessary to make the circuit work and to be able to test it.
+By the use of \acf{DAQ} boards from National Instruments, the \ac{PCB} was connected to a computer where inputs was controlled and the outputs and current consumption was measured through a labVIEW program. 
+For the more advanced \ac{IC} like the \ac{SF2}, I used a starter-kit when designing the test, and wrote test code in VHDL and C.
+I also made a \acf{PCB} for measuring current and control a power regulator on the \ac{SF2} starter-kit.
+The circuits I have tested consist of: SoC FPGA, power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer and buffer, comparator and Current Shunt Monitor.
+Every test board I made was radiation tested in \ac{OCL} at the University of Oslo, the \ac{SF2} chip was also radiation tested in \ac{TSL} in Uppsala in Sweden.
 
 \newpage
 
 \section{ALICE experiment}
+\label{ALICE_experiment}
 Since 1954 physicists at \ac{CERN} have studied the nucleus and its structure to find the fundamental structure of the universe.
 \ac{CERN} is the world largest research center for nuclear and particle physics, and has a total of 21 member state.
 One of the biggest and newest invention at \ac{CERN} is the \acf{LHC}, that is a circular particle accelerator placed in a 27 km long tunnel around 100 meter beneath ground level.
 This is the last accelerator in a chain of up to 7 (depending on which particle to accelerate), where the particles gradually accelerate to higher and higher energies,
-up to their maximum energy of 4 TeV and speed up to the speed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide.
+up to their maximum energy of 4 TeV and speed up to the speed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide inside 4 different experiment areas, where one of these is called \acf{ALICE}. See figure \ref{ALICE_layout}.
 
-There are four main detectors placed in the \ac{LHC} tunnel, where \ac{ALICE} is one of them. See figure \ref{ALICE_layout}.
 The \ac{ALICE} detector is a heavy ion detector. Its main purpose is to study a state of matter called quark-qluon plasma\footnotemark[1] which will be generated when heavy ions collides.
-Under a collision a temperature 100 000 times higher than the temperature of the sun is generated.
+Under a such collision a temperature 100 000 times higher than the temperature of the sun is generated.
 There is then high enough energy to split the protons and neutrons, and achieve a plasma of unbound quarks and gluons, and that is called quark-gluon plasma.
 
 \footnotetext[1]{All ordinary matter in today's universe is made up of atoms.
@@ -174,9 +170,9 @@ No quark has ever been observed in isolation: the quarks, as well as the gluons,
 \FloatBarrier
 
 \subsection{The Time Projection Chamber TPC}
-The ALICE detector comprises several sub-detectors, of which one is the \acf{TPC}.\ac{TPC} is the main tracking detector placed in the inner circle of \ac{ALICE}.
+The ALICE detector comprises of several sub-detectors, where one of these is the \acf{TPC}.\ac{TPC} is the main tracking detector placed in the inner circle of \ac{ALICE}.
 The function of \ac{TPC} are tracking particles, measure the charged particles momentum and identification of particles.
-A drawing \ac{TPC} can be seen in figure \ref{TPC_layout}.
+A drawing of the \ac{TPC} can be seen in figure \ref{TPC_layout}.
 The \ac{TPC} detector has a cylindrical shape, with a inner radius of 85 cm and outer radius of 250 cm, and has an overall length of 510 cm.
 The detector is made up of a large cylindrical field cage, filled with 88 $m^3$ of 90\% Ne gas and 10\% $CO^2$ gas.
 A high voltage electrode is placed in the center of the detector. When a charged particle is generated inside the detector,
@@ -200,7 +196,7 @@ In short the task of the \ac{FEE} is to read out charge received at the readout 
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{TPC_Sections.png}
+  \includegraphics[width=0.5\textwidth]{TPC_Sections.png}
   \caption{A TPC sector. Showing how FEC is placed \cite{roed}}
   \label{TPC_Sections}
 \end{figure}
@@ -211,27 +207,27 @@ The amplitude is slightly different for the different pad sizes, but has a typic
 A current signal given by one of the pads, is sent into the \acf{FEC} which consist of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
 The first unit is a charge sensitive amplifier/shaper called PASA, the second unit is a 10-bit 25MHz low-power \ac{ADC}.
 The last unit is a digital circuit that perform the baseline subtraction, tail cancellation, zero-suppression \footnotemark[2], formatting and buffering.
-The \ac{ADC} and the digital unit together constitute the so ALTRO chip. There are 16 PASA chips and 16 ALTRO chips on the \ac{FEC},
-the PASA chip is connected to 16 readout pads each, which gives a total of 128 readout pads for one \ac{FEC}.
+The \ac{ADC} and the digital unit together constitute the so called ALTRO chip. There are 16 PASA chips and 16 ALTRO chips on the \ac{FEC},
+the PASA chip is connected to 16 readout pads each, which gives a total of 128 readout pads for each \ac{FEC}.
 An picture of the \ac{FEC} can be seen in figure \ref{FEC}.
 
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{FEC_blockdiagram.png}
-  \caption{Layout of the ALICE experiment \cite{website:aliceinfo}}
+  \caption{Block diagram of the Front End Card\cite{website:aliceinfo}}
   \label{FEC_blockdiagram}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{FEC.png}
-  \caption{Layout of the ALICE experiment \cite{Carmen}}
+  \includegraphics[width=0.7\textwidth]{FEC.png}
+  \caption{Top side of the Front End Card \cite{roed}}
   \label{FEC}
 \end{figure}
 
 \footnotetext[2]{Zero Compressions means that signal bellow a given threshold will be filtered away.}
-
+\FloatBarrier
 \subsubsection{Readout Control Unit RCU}
 One \acf{RCU} is connected to one row of \acp{FEC} (up to 25 pieces), through a backplane\footnotemark[3], see figure \ref{TPC_Sections}.
 The \ac{RCU} task is to control all of the \acf{FEE} all the way from the readout pads through the \acp{FEC}, and out to a \acf{DAQ} System.
@@ -246,7 +242,7 @@ The Xilinx Virtex-II Pro is a \ac{SRAM} based \ac{FPGA}. \ac{SRAM} cells is espe
 Therefore a flash based \ac{FPGA}, Actel ProASIC is used to monitor the SRAM memory and reprogram/reconfigure if an error occurs.
 
 The \ac{DCS} board is basically a embedded computer running Linux.
-This board is connected through a Ethernet ling to a computer on the outside of the ALICE detector.
+This board is connected through a Ethernet link to a computer on the outside of the ALICE detector.
 Through this Ethernet link we are able to upgrade and reprogram the \acp{FPGA} of the \ac{RCU}.
 So even though the hardware is inaccessible after it has been mounted in the \ac{TPC},
 the \ac{SIU} board gives us some kind of flexibility.
@@ -254,12 +250,12 @@ In addition, it has an optical interface receiving the clock and trigger informa
 
 
 \footnotetext[3]{A backplane is a PCB board, that connects all of the Front End Cards to the Readout Control Unit.
-This is used instead of cables to get a more stability, and to keep things in place}
+This is used instead of cables to get a more stability, and to keep things in place.}
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{RCU.png}
-  \caption{Layout of the ALICE experiment \cite{Carmen}}
+  \includegraphics[width=0.7\textwidth]{RCU.png}
+  \caption{The Readout Control Unit top side and bottom side \cite{roed}}
   \label{RCU}
 \end{figure}
 
@@ -272,29 +268,28 @@ The bus between \ac{RCU} and FECs are not able to read all data for high occupan
 In addition stability issues related to \ac{SEU} on the \ac{SRAM} based \ac{FPGA} have been observed with the present setup.
 9\% of the run time had to be stopped because of errors occurred in the \ac{TPC} readout electronics.
 
-\paragraph{The new Readout Control Unit, the RCU2}
+\paragraph{The new Readout Control Unit, the RCU2} $\newline$
 The main motivation for the \ac{RCU2} was to develop a solution that gives the needed performance improvement,
 and at the same time was feasible within the limited time-frame.
 Therefore some of the old infrastructure has to be reused, like cables for Ethernet, Trigger and power and the cooling envelops.
-Since the infrastructure is basically the same, the placement of connectors and the size of the new \ac{RCU} should be the same as the old one. 
+Since the infrastructure is basically the same, the size and placement of connector on the new \ac{RCU} is the same as for the old one. 
 
 The main difference between the \ac{RCU2} and \ac{RCU}1 is that the main \ac{FPGA}, the Xilinx Virtex-II Pro,
 has been replaced by a Microsemi \acf{SF2} \acf{SoC} \ac{FPGA} M2S050-FG896. This is a flash-based FPGA which has
 \ac{SEU} immune configuration memory, as well as several other radiation tolerance measures implemented.
 It also comes with a Microcontroller Subsystem which is based on a hardcore ARM Cortex-M3 microcontroller.
-A Linux system is build on this Microcontroller Subsystem, which resulting in that we didn't need the \acf{DCS} board anymore.
-The ProASIC was also not need for reconfiguration anymore, but was kept for radiation monitoring,
-this part of the RCU2 is called RadMon, and consist of a ProASIC and SRAM cips.
-Another issue encountered in the design was that a chip called TTCrx chip that was used as handling the clock and trigger signal on RCU1 was out of stuck and obsolete.
+A Linux system is built on this Microcontroller Subsystem, which result in that we didn't need the \acf{DCS} board anymore.
+The ProASIC was also not need as a  reconfiguration FPGA anymore, but will still be used as a radiation monitor,
+this part of the RCU2 is now called RadMon, and consist of a ProASIC and SRAM chips.
+Another issue encountered in the design was that a chip called TTCrx chip that was used for handling the clock and trigger signal on RCU1 was out of stuck and obsolete.
 This will be replaced by a optical receiver and a limiting amplifier which has been tested in this thesis, see section \ref{limiting_amp}.
 
-One of the limiting with the old setup was that the bus between \ac{RCU} and FECs was to slow.
+One of the limits with the old setup was that the bus between \ac{RCU} and FECs was to slow.
 This was fixed by dividing the readout into 4 sections instead of 2, which effectively doubled the readout speed.
 Therefore all of the backplanes had to be replaced with new ones.
 
 \FloatBarrier
 \newpage
-
 
 
 \section{Radiation and Radiation effect on Semiconductor devices}
@@ -314,7 +309,7 @@ Charged radiation consist of charged particles like protons(p), alpha($\alpha$) 
 Neutral radiation consist of neutrally charge particles like neutrons(n) and photons from gamma($\gamma$) and X-rays. 
 Particles who interact with a material will deposit some or all of its energy in the interaction, and can either interact with atoms, electrons, nucleus or the particles inside a nuclei.
 How much energy is deposited and which of these a particle will interact with is depended on the energy, mass, the charge of the particle and what material it interacts with.
-One of the main difference between charged particle and neutral particle is the charged particles will be effected by the Coulomb force,
+One of the main difference between charged particle and neutral particle is that charged particles will be effected by the Coulomb force,
 that is the attraction or repulsion of particles or objects because of their electric charge.
 In the next sections we will look more closely on how a charged particle and neutral particle interact with matters.
 %It is common to distinguish between Ionizing and non-ionizing radiation.
@@ -323,7 +318,7 @@ In the next sections we will look more closely on how a charged particle and neu
 
 \subsection{Charge particle and their Interaction with Matters}
 When a charged particle with high speed is passing through a material it will experience multiple elastic and inelastic collisions with the atoms in the material, resulting in slowing down or stopping the particle.
-When a particle collide with a atom there are several process that can contribute to the loss of energy of the particle. They are:
+When a particle collide with a atom there are several process that can contribute to the loss of energy. They are:
 
 \begin{itemize}
   \item Inelastic scattering towards atomic electrons \hfill
@@ -344,7 +339,7 @@ When a particle collide with a atom there are several process that can contribut
   \end{itemize}
   \item Other processes \hfill
   \begin{itemize}
-  \item Bremsstrahlung and Cerenkovstråling
+  \item Bremsstrahlung and Cherenkov radiation
   \end{itemize}
 \end{itemize}
 
@@ -384,7 +379,7 @@ Another way of looking at stopping power, is by looking at energy loss as functi
 Here $\xi$ = $\rho$x and $\rho$ is the density of the material. The extension for specific stopping power is normally given as $[\frac{\mega\electronvolt\centi\meter^2}{\gram}]$
 
 \begin{equation}
-S = - \frac{dE}{\xi x}
+S = - \frac{dE}{d\xi} = - \frac{1}{\rho} \frac{dE}{dx} = - \frac{n_A Z_A Z^2 e^4}{4 \pi \epsilon_0^2 m_e \upsilon^2}\Bigg[\ln\Big(\frac{2 m_e \upsilon^2}{\overline{I}}\Big)-\ln\Big(1-\frac{\upsilon^2}{c^2}\Big)-\frac{\upsilon^2}{c^2}\Bigg]
 \label{sstopping_power}
 \end{equation}
 
@@ -395,7 +390,7 @@ We can see that the value of $\frac{dE}{dx}$ for different types of particles ap
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{energy_loss.png}
+  \includegraphics[width=0.5\textwidth]{energy_loss.png}
   \caption{Variation of the specific energy loss in air versus energy of the charge particles shown}
   \label{energy_loss}
 \end{figure}
@@ -403,11 +398,12 @@ We can see that the value of $\frac{dE}{dx}$ for different types of particles ap
 At low particles energies, where charge exchange between the particles and absorber becomes important, the Bethe Bloch formula begins to fail.
 That is because the positively charged particles will then tend to pick up electrons from the absorber, which effectively reduce its charge and consequently linear energy loss, and will at the end become a neutral atom.
 
-\subsubsection{\acf{LET}}
-When it comes to radiation protection \acf{LET} is often used instead of stopping power. \ac{LET} is energy that is deposited in a local volume.
+\subsubsection{Linear Energy Transfer LET}
+\acf{LET} is closely related to stopping power of a particle, but instead of fucusing on energy loss of the particle, \ac{LET} focuses on the energy that is deposited in a local volume.
 For low energies, \ac{LET} is often said to be equal stopping power, even though the particle energy that turn into photons may escape the local area.
-For higher energies, small particles like ionized electrons can escape the local volume. The local volume is defined by the ones that looks at the energy loss, and can be everything from part of a molecule and a hole organ.
-An alternate definition of LET are as you can see in equation \ref{LET}
+For higher energies, small particles like ionized electrons can escape the local volume. The local volume is defined by yourself,
+and can be everything from part of a molecule to a hole organ.
+One alternate definition of LET can be seen in equation \ref{LET}
 
 \begin{equation}
 L_\Delta= \bigg(- \frac{dE}{\xi x}\bigg)_\Delta
@@ -430,7 +426,7 @@ The secondary process of neutrons can largely ionizing.
 \subsubsection{Photons}
 Photons may appear from gamma rays or X-rays. Photons has as neutrons no charge, and are therefore not effected by the coulomb force, additionally photons has no rest mass and travel in constant speed of light.
 The energy of a photon is given in the formula $E=hf$ where f is the frequency of the particle and h is the Planck`s constant.
-There are three main process a photon may react with matters, they are:
+There are three main process where a photon may react with matters, they are:
 
 \begin{itemize}
   \item Photo electric effects \hfill
@@ -441,7 +437,7 @@ There are three main process a photon may react with matters, they are:
 \subsection{Radiation Effects on Semiconductor Devices}
 Semiconductor devices planned to used in a radiation environment are likely to be effected by the radiation in some way.
 If not taking properly into account, the radiation effects may damage or even destroy the electronics.
-Therefore there is if highest importance to know about how irradiation can effect the semiconductor devices.
+Therefore there is of highest importance to know about how irradiation can effect the semiconductor devices.
 We normally divide radiation effects in two groups that is $\emph{Singel Events effects}$ and $\emph{Accumulative Effects}$.
 
 \subsubsection{Single Events Effects SEE}
@@ -455,10 +451,10 @@ A \acf{SEL} is phenomena where a low resistance path between power and ground is
 Therefore it is of highest importance to know about this effect, to know how to counter or to protect from latches in design phase. 
 In a \ac{CMOS} process a \ac{SEL} can occur when a ionized particle penetrate the silicon in a transistor causing a charge to to turn ON the parasitic bipolar transistors formed by the substrate, well, and the diffusion.
 This will result in a low resistance path between power and ground, and a high current will flow.
-If a \ac{SEL} has occurred power to the chip needs to be turned off immediately, before the high current flowing from power to ground will burn interconnections, and permanently set the chip out of function. 
+If a \ac{SEL} has occurred, power to the chip needs to be turned off immediately, before the high current flowing from power to ground will burn interconnections and permanently set the chip out of function. 
 
 How a lathcup may occur can be understood by looking at a \ac{CMOS} inverter, see figure \ref{CMOS_inverter}.
-From figure \ref{CMOS_inverter}(a) you can see a resistor formed in the well and substrate, and a parasitic bipolar npn-transistor and pnp-transistor formed in the inverter.
+From figure \ref{CMOS_inverter}(a) you can see a resistor formed in the well and substrate, and a parasitic bipolar npn-transistor and pnp-transistor formed inside the inverter.
 An equivalent circuit can be seen in figure \ref{CMOS_inverter}(b).
 Originally both of the bipolar transistors are turned off, and no current flows through the transistors.
 A latchup can be triggered if a ionizing particle flows into the substrate creating a transient current that can set $V_sub$ high, causing npn-transistor to turn ON.
@@ -486,17 +482,17 @@ By checking the output and compare with the known value, you can detect if a \ac
 \acf{SEU} is change of state in a logical element, caused by radiation. This phenomena can often be seen in memory cells or registers, where data is stored.
 A \ac{SEU} is a "Soft error", which means that it is a non-destructive type of error. By resetting or overwriting after an \ac{SEU} has occurred, the error will disappear.
 
-For better understanding of \ac{SEU} we can look at a six transistor SRAM cell, see figure \ref{SRAM_Cell}. If we say that Q = '1' and Q\_b = '0', so there is a value '1' written to the cell.
+For better understanding of \ac{SEU} we can look at a six transistor SRAM cell, see figure \ref{SRAM_Cell}. If we say that Q = '0' and Q\_b = '1', so there is a value '0' written to the cell.
 Then a high energetic neutron strikes into the drain of transistor D\_2 and hits a silicon atom. This cause shattering of the atom into charged fragments (ions) that travels through the substrate.
 These ions leaves a trail of electron-hole pairs, see figure \ref{charge_generation}(a).
 When the resultant ionization track traverses or comes close to the depletion region,
-carriers (electrons) are rapidly collected by the electric field creating a large current transient at that node (\ac{SET}), causing voltage increase at the node Q\_b.
-If this voltage is high enough it will open transistor D1, and close transistor P1, causing Q to go towards '1' which again causing P2 to close and D2 to open up causes Q\_b to be discharged through D2, and set to '0'.
-Then the SRAM cell has changed value from '1' to '0', and we have a \ac{SEU}.
+carriers (electrons) are rapidly collected by the electric field creating a large current transient (\ac{SET}) at that node, causing voltage drop at the node Q\_b.
+If this voltage drop is high enough, transistor P1 will be opened up, and transistor D1 will be closed, causing Q to go towards '1' which again causing P2 to close and D2 to open up causes Q\_b to be discharged through D2, and set to '0'.
+Then the SRAM cell has changed value from '0' to '1', and we have a \ac{SEU}.
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.5\textwidth]{SRAM_Cell.png}
+  \includegraphics[width=0.75\textwidth]{SRAM_Cell.png}
   \caption{Six transistor SRAM Cell}
   \label{SRAM_Cell}
 \end{figure}
@@ -508,6 +504,8 @@ Then the SRAM cell has changed value from '1' to '0', and we have a \ac{SEU}.
   \label{charge_generation}
 \end{figure}
 
+\FloatBarrier
+
 \subsubsection{Accumulative Effects}
 Accumulative effects are energy deposition caused by radiation for the whole lifespan of a circuit \cite{website:Faccio} and \cite{Oldham}.
 Accumulative effects are measured by the functionality of a device, and power consumption. 
@@ -518,6 +516,7 @@ and \ac{TID} which is a ionizing effect.
 
 
 \paragraph{Total Ionization Dose TID} $\newline$
+\label{TID}
 \acf{TID} is measurement of the dose, that is the energy, deposited in a circuit by radiation in the form of ionization energy.
 The unit used are Gray (\gray) or rad. The relation between those two can be seen in equation \ref{gray_rad}.
 
@@ -545,17 +544,27 @@ Displacement Damage is a non-ionizing effect mostly induced by low energetic par
 This can affect the functionality of the device. CMOS circuits are normally considered immune to this effect. 
 Displacement damage is not measured in any unit, but it is expressed in terms of the particle fluence, in particles/$\centi\meter^2$.
 
-\subsubsection{the TPC radiation environment}
-The radiation environment at in \ac{LHC} is dominated by high energetic neutrons and protons.
+\subsubsection{The TPC radiation environment}
+The radiation in the \ac{LHC} is dominated by high energetic neutrons and protons, mostly neutrons with a estimated fluence of $(0,6-1,1)\times 10^{11}$ $neutrons/cm^2$.
+Therefore it would be preferable to test our electronics with a neutron beam, but since there are few labs who can produce a neutron beam compared to proton beam most of the electronics is only tested at \ac{OCL} with a proton beam.
+There has been done experiment that compares SEU induced by neutrons and protons \cite{GranlundOlsson}, and the result shows that it is possible to use a proton beam instead of proton beam with small deviations.
+By comparing a Proton beam with a neutron beam of 21MeV we see that we get 10-25\% less \ac{SEU} cross section for a proton beam compared to a neutron beam.
+If we increase the energy to 88MeV then we get close to none deviations. 
+
+The dose that we could expect for a 10 year period in the ALICE detector is estimated to be approximately 0.6 kRad from Pb-Pb collisions that will be run 1 month a year and a little higher for p-p collisions that will be run 10 months a year \cite{georgios} and \cite{roed}.
+Therefore we could expect a dose of 1-2 $\kilo$Rad during the time it will be used at CERN.
 %Section about what our electronics will receive at CERN
 
 \FloatBarrier
 \newpage
 
-\section{The test boards and preparations for testing}
+\section{The test circuits and preparations for testing}
 
-\subsection{The \ac{IC} which where tested}
-The \ac{IC}s that was going to be tested as mentioned in the previous section consist of power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator, current shunt monitor and FPGA.
+\subsection{The circuits which where tested}
+The circuits that was tested through this thesis are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210, TLV3011 and SF2 M2S050-FG896. What each of these are, and how these was tested will be discussed in the following sections.
+
+To test each of these circuits a simple \acf{PCB} with only a circuit and the necessary electronics was made.
+
 
 We wanted to have at least two \ac{PCB} for each of the \ac{IC} that was going to be tested, to have more test data on each of the \ac{IC}.
 But we started to make one PCB for all of the \ac{IC}, something like a prototype, to see that the design was working.
@@ -582,7 +591,7 @@ This is a power regulator, special designed for DDR RAMs. Can be used for DDR, D
 The PCB was designed after a recommended setup for DDR3 application from the datasheet. Input voltage was set to 3.3 V.
 Voltage over resistor R1 (See figure \ref{TPS51200_sch}) was measured and used to calculate current consumption. Output voltage was also monitored.
 
-\begin{figure}[!htbp]
+\begin{figure}[!htbp]65
   \centering
   \includegraphics[width=\textwidth]{TPS51200_sch.png}
   \caption{Schematic for the TPS51200 test board}

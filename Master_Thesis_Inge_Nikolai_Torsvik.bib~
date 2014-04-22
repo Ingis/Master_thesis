@@ -174,7 +174,7 @@ Unique-ID = {{ISI:000248251400079}},
 }
 
 
-@inproceedings{ Carmen,
+@inproceedings{Carmen,
 Publication-Type = {{J}},
 Type = {{Conference Paper}},
 Title = {{The ALICE TPC readout control unit}},
