@@ -728,10 +728,22 @@ Both works for our specific use, therefore we will see from the test results whi
 \subsubsection{INA210}
 INA210 is a so called Current-Shunt Monitor, that is a \ac{IC} that is used to amplify small current signal into higher voltage signal. This is done by sending the signal that you want to measure current of, over a small resistor, typical smaller than 1 Ohm. Then a voltage will be formed over this resistor and will be amplified through the \ac{IC}. This \ac{IC} comes in a family of 5 with different amplifications, the one we are using has an amplification of 200 V/V.
 
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{INA210_sch.png}
+  \caption{Schematic for the MAX3748 test board}
+  \label{INA210_sch}
+\end{figure}
 
 \subsubsection{TLV3011}
-This is a comparator with built in voltage reference of 1.242 V. It supports low supply voltage from 1.8 V to 5.5 V, and has a open-drain output with fast response time. A 10 kOhm resistor is needed as pull-up on the output.
+This is a comparator with a built in voltage reference of 1.242 V. It supports low supply voltage from 1.8 V to 5.5 V, and has a open-drain output with fast response time. A 10 kOhm resistor is needed as pull-up on the output.
 
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{TLV3011_sch.png}
+  \caption{Schematic for the MAX3748 test board}
+  \label{TLV3011_sch}
+\end{figure}
 
 \begin{figure}[!htbp]
   \centering
@@ -754,6 +766,34 @@ This is a comparator with built in voltage reference of 1.242 V. It supports low
   \label{PCB_board3}
 \end{figure}
 
+\subsubsection{\acf{SF2}}
+\acf{SF2} \ac{SoC} \ac{FPGA} integrate a flash-based\footnote{Flash based FPGA means that configuration registers is saved in flash memory cells instead of SRAM cells.
+Compared to SRAM-based FPGA, flash based FPGA is much more robust against radiation } \ac{FPGA},
+an ARM Cortex-M3 processor built in a \acf{MSS} and high-performance communication interfaces on a single chip. It is also said to have immune configuration memory, as well as several other radiation tolerance measures implemented. We are going to use the package M2S050-FG896, with a FPGA of 56 340 logic elements, 6 PLLs, 1314 kb RAM, 8 SERDES lanes, and 377 user I/O.
+
+There are four things that we wanted to test on the SF2 chip. That is the internal SRAM blocks, the logical element, the PLLs and \acf{SEL}.
+How these will will be tested will be discussed in the following sections
+
+\paragraph{SRAM testing}
+SRAM cells are as discussed in section \ref{SEU_Section}, sensitive for radiation. The SRAM cells isn't used for configuration on the SF2 chip, but still want to test how robust the SRAM cells are against radiation, so we can know how reliable these are if used.
+The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM block with a size of 1024 x 18 bits. Both micro SRAM blocks and large SRAM blocks are so called two port SRAM cells, which means that we can read and write at the same time.
+To test the SRAM, a known data must be written to the SRAM blocks, and afterwards it must 
+
+The way the SRAM memory was tested can be seen in block diagram in figure \ref{SRAM_test}. First all addresses are written to with a known value. Read address are always 1 higher than write address. At the same time as the last address is written to, the first address is read and compared with a known value, if any of the bit has been switched, it will be added to an Upset counter. And  
+
+The two limiting amplifiers (ADN2814 and MAX3748) required a more advance inputs, and therefore a \acf{SF2} starter kit are going to be used in addition to labVIEW.
+The \ac{SF2} board was used to code a clock and data signal into a differential Manchester signal and to decode the differential Manchester signal back to clock and data after it has gone through the IC.
+The \ac{SF2} was also used to compare the original signal with the signal coming out from the IC.
+A picture of the Smart Design can be seen in figure \ref{SF2}. This consist of IP-cells from Microsemi and some VHDL code that has been made.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=1.5\textwidth, angle =270]{vhdl_adn.png}
+  \caption{Smart Design for ADN2814}
+  \label{SF2}
+\end{figure}
+
+\FloatBarrier
 
 \subsubsection{Software}
 To monitor the outputs and control the inputs and the supply voltage, a simple labVIEW program was made for each of the different \ac{PCB}s.
@@ -766,21 +806,6 @@ In figure \ref{labVIEW} you can see an example of a labVIEW program used for SN7
   \includegraphics[width=\textwidth]{labVIEW.jpg}
   \caption{LabVIEW program for SN74AVC2T245}
   \label{labVIEW}
-\end{figure}
-
-\FloatBarrier
-
-\subsubsection{\acf{SF2}}
-The two limiting amplifiers (ADN2814 and MAX3748) required a more advance inputs, and therefore a \acf{SF2} starter kit are going to be used in addition to labVIEW.
-The \ac{SF2} board was used to code a clock and data signal into a differential Manchester signal and to decode the differential Manchester signal back to clock and data after it has gone through the IC.
-The \ac{SF2} was also used to compare the original signal with the signal coming out from the IC.
-A picture of the Smart Design can be seen in figure \ref{SF2}. This consist of IP-cells from Microsemi and some VHDL code that has been made.
-
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=1.5\textwidth, angle =270]{vhdl_adn.png}
-  \caption{Smart Design for ADN2814}
-  \label{SF2}
 \end{figure}
 
 \FloatBarrier

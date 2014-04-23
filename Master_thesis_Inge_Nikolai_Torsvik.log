@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.3)  23 APR 2014 13:56
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.3)  23 APR 2014 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -709,7 +709,7 @@ sed, duplicate ignored
 l.92 \blankpage
                 [1] [1] (./Master_thesis_Inge_Nikolai_Torsvik.toc [2]
 Package acronym Info: Label `acro:SF2' newly defined as it shall be overridden
-although it is yet undefined on input line 42.
+although it is yet undefined on input line 41.
 Package acronym Info: Label `acro:OCL' newly defined as it shall be overridden
 although it is yet undefined on input line 43.
  [3]
@@ -772,14 +772,14 @@ been already used, duplicate ignored
 l.142 
        [1
 
-] [2] <ALICE_layout.jpg, id=469, 772.8875pt x 407.5225pt>
+] [2] <ALICE_layout.jpg, id=470, 772.8875pt x 407.5225pt>
 File: ALICE_layout.jpg Graphic file (type jpg)
 
 <use ALICE_layout.jpg>
 Package pdftex.def Info: ALICE_layout.jpg used on input line 165.
 (pdftex.def)             Requested size: 426.79135pt x 225.0335pt.
  [3 <./ALICE_layout.jpg>]
-<TPC_layout.png, id=488, 847.66687pt x 378.66469pt>
+<TPC_layout.png, id=489, 847.66687pt x 378.66469pt>
 File: TPC_layout.png Graphic file (type png)
  <use TPC_layout.png>
 Package pdftex.def Info: TPC_layout.png used on input line 186.
@@ -789,7 +789,7 @@ although it is yet undefined on input line 193.
 Package acronym Info: Label `acro:FEE' newly defined as it shall be overridden
 although it is yet undefined on input line 194.
 
-<TPC_Sections.png, id=498, 758.835pt x 615.0478pt>
+<TPC_Sections.png, id=499, 758.835pt x 615.0478pt>
 File: TPC_Sections.png Graphic file (type png)
  <use TPC_Sections.png>
 Package pdftex.def Info: TPC_Sections.png used on input line 199.
@@ -798,13 +798,13 @@ Package acronym Info: Label `acro:ADC' newly defined as it shall be overridden
 although it is yet undefined on input line 208.
 
 [4 <./TPC_layout.png>]
-<FEC_blockdiagram.png, id=520, 773.13844pt x 375.65344pt>
+<FEC_blockdiagram.png, id=521, 773.13844pt x 375.65344pt>
 File: FEC_blockdiagram.png Graphic file (type png)
 
 <use FEC_blockdiagram.png>
 Package pdftex.def Info: FEC_blockdiagram.png used on input line 217.
 (pdftex.def)             Requested size: 426.79135pt x 207.37238pt.
- <FEC.png, id=523, 603.75563pt x 609.02531pt>
+ <FEC.png, id=524, 603.75563pt x 609.02531pt>
 File: FEC.png Graphic file (type png)
 
 <use FEC.png>
@@ -815,7 +815,7 @@ Package acronym Info: Label `acro:DCS' newly defined as it shall be overridden
 although it is yet undefined on input line 234.
 Package acronym Info: Label `acro:SIU' newly defined as it shall be overridden
 although it is yet undefined on input line 234.
-<RCU.png, id=567, 478.78876pt x 583.42969pt>
+<RCU.png, id=568, 478.78876pt x 583.42969pt>
 File: RCU.png Graphic file (type png)
  <use RCU.png>
 Package pdftex.def Info: RCU.png used on input line 257.
@@ -835,7 +835,7 @@ Overfull \hbox (17.00053pt too wide) in paragraph at lines 355--356
 er is the $[]$,
  []
 
-[11] <energy_loss.png, id=633, 516.42938pt x 573.64313pt>
+[11] <energy_loss.png, id=634, 516.42938pt x 573.64313pt>
 File: energy_loss.png Graphic file (type png)
 
 <use energy_loss.png>
@@ -849,59 +849,59 @@ Package acronym Info: Label `acro:CMOS' newly defined as it shall be overridden
 
 although it is yet undefined on input line 452.
 
-<CMOS_inverter.png, id=670, 931.22906pt x 328.22626pt>
+<CMOS_inverter.png, id=671, 931.22906pt x 328.22626pt>
 File: CMOS_inverter.png Graphic file (type png)
  <use CMOS_inverter.png>
 Package pdftex.def Info: CMOS_inverter.png used on input line 466.
 (pdftex.def)             Requested size: 426.79135pt x 150.42998pt.
 
-[15] <SRAM_Cell.png, id=694, 264.99pt x 166.37157pt>
+[15] <SRAM_Cell.png, id=695, 264.99pt x 166.37157pt>
 File: SRAM_Cell.png Graphic file (type png)
  <use SRAM_Cell.png>
 Package pdftex.def Info: SRAM_Cell.png used on input line 495.
 (pdftex.def)             Requested size: 320.0935pt x 200.98271pt.
 
-<charge_generation.png, id=695, 1017.8025pt x 392.96812pt>
+<charge_generation.png, id=696, 1017.8025pt x 392.96812pt>
 File: charge_generation.png Graphic file (type png)
 
 <use charge_generation.png>
 Package pdftex.def Info: charge_generation.png used on input line 502.
 (pdftex.def)             Requested size: 426.79135pt x 164.78165pt.
  [16 <./CMOS_inverter.png>] [17 <./SRAM_Cell.png> <./charge_generation.png>] <T
-ID_in_MOS.png, id=716, 798.73407pt x 366.61969pt>
+ID_in_MOS.png, id=717, 798.73407pt x 366.61969pt>
 File: TID_in_MOS.png Graphic file (type png)
 
 <use TID_in_MOS.png>
 Package pdftex.def Info: TID_in_MOS.png used on input line 537.
 (pdftex.def)             Requested size: 213.39568pt x 97.94812pt.
  [18 <./TID_in_MOS.png>] [19] [20]
-<TPS51200_sch.png, id=775, 855.94781pt x 310.15875pt>
+<TPS51200_sch.png, id=776, 855.94781pt x 310.15875pt>
 File: TPS51200_sch.png Graphic file (type png)
  <use TPS51200_sch.png>
 Package pdftex.def Info: TPS51200_sch.png used on input line 598.
 (pdftex.def)             Requested size: 426.79135pt x 154.64832pt.
 
-[21 <./TPS51200_sch.png>] <MIC_sch.png, id=796, 700.86844pt x 276.28218pt>
+[21 <./TPS51200_sch.png>] <MIC_sch.png, id=797, 700.86844pt x 276.28218pt>
 File: MIC_sch.png Graphic file (type png)
 
 <use MIC_sch.png>
 Package pdftex.def Info: MIC_sch.png used on input line 624.
 (pdftex.def)             Requested size: 426.79135pt x 168.24521pt.
- <SN74AVCB164245_sch.png, id=800, 604.50844pt x 533.74406pt>
+ <SN74AVCB164245_sch.png, id=801, 604.50844pt x 533.74406pt>
 File: SN74AVCB164245_sch.png Graphic file (type png)
 
 <use SN74AVCB164245_sch.png>
 Package pdftex.def Info: SN74AVCB164245_sch.png used on input line 645.
 (pdftex.def)             Requested size: 426.79135pt x 376.82713pt.
  [22 <./MIC_sch.png>] [23 <./SN74AVCB164245_sch.png>] <SN74AVC2T245_sch.png, id
-=814, 694.84593pt x 509.65407pt>
+=815, 694.84593pt x 509.65407pt>
 File: SN74AVC2T245_sch.png Graphic file (type png)
 
 <use SN74AVC2T245_sch.png>
 Package pdftex.def Info: SN74AVC2T245_sch.png used on input line 662.
 (pdftex.def)             Requested size: 426.79135pt x 313.03488pt.
 
-<QS3VH257_sch.png, id=817, 737.00343pt x 437.38406pt>
+<QS3VH257_sch.png, id=818, 737.00343pt x 437.38406pt>
 File: QS3VH257_sch.png Graphic file (type png)
  <use QS3VH257_sch.png>
 Package pdftex.def Info: QS3VH257_sch.png used on input line 677.
@@ -912,7 +912,7 @@ Package acronym Info: Label `acro:LVPECL' newly defined as it shall be overridd
 en
 although it is yet undefined on input line 684.
 
-<SY89831U_sch.png, id=827, 730.22812pt x 564.60938pt>
+<SY89831U_sch.png, id=828, 730.22812pt x 564.60938pt>
 File: SY89831U_sch.png Graphic file (type png)
  <use SY89831U_sch.png>
 Package pdftex.def Info: SY89831U_sch.png used on input line 696.
@@ -925,108 +925,120 @@ although it is yet undefined on input line 705.
 Package acronym Info: Label `acro:CML' newly defined as it shall be overridden
 although it is yet undefined on input line 706.
 
-<MAX3748_sch.png, id=846, 712.16063pt x 304.88907pt>
+<MAX3748_sch.png, id=847, 712.16063pt x 304.88907pt>
 File: MAX3748_sch.png Graphic file (type png)
  <use MAX3748_sch.png>
 Package pdftex.def Info: MAX3748_sch.png used on input line 715.
 (pdftex.def)             Requested size: 426.79135pt x 182.71619pt.
 
-<ADN2814_sch.png, id=847, 743.02594pt x 356.83313pt>
+<ADN2814_sch.png, id=848, 743.02594pt x 356.83313pt>
 File: ADN2814_sch.png Graphic file (type png)
  <use ADN2814_sch.png>
 Package pdftex.def Info: ADN2814_sch.png used on input line 722.
 (pdftex.def)             Requested size: 426.79135pt x 204.9651pt.
 
-[27 <./MAX3748_sch.png>] <PCB_board1.png, id=858, 592.46344pt x 407.27156pt>
+[27 <./MAX3748_sch.png>] <INA210_sch.png, id=859, 1002.74625pt x 466.74374pt>
+File: INA210_sch.png Graphic file (type png)
+
+<use INA210_sch.png>
+Package pdftex.def Info: INA210_sch.png used on input line 733.
+(pdftex.def)             Requested size: 426.79135pt x 198.65903pt.
+ [28 <./ADN2814_sch.png> <./INA210_sch.png>]
+<TLV3011_sch.png, id=867, 924.45375pt x 358.33875pt>
+File: TLV3011_sch.png Graphic file (type png)
+ <use TLV3011_sch.png>
+Package pdftex.def Info: TLV3011_sch.png used on input line 743.
+(pdftex.def)             Requested size: 426.79135pt x 165.4338pt.
+
+<PCB_board1.png, id=868, 592.46344pt x 407.27156pt>
 File: PCB_board1.png Graphic file (type png)
-
-<use PCB_board1.png>
-Package pdftex.def Info: PCB_board1.png used on input line 738.
+ <use PCB_board1.png>
+Package pdftex.def Info: PCB_board1.png used on input line 750.
 (pdftex.def)             Requested size: 426.79135pt x 293.39687pt.
- <PCB_board2.png, id=859, 715.92468pt x 407.27156pt>
+
+<PCB_board2.png, id=869, 715.92468pt x 407.27156pt>
 File: PCB_board2.png Graphic file (type png)
-
-<use PCB_board2.png>
-Package pdftex.def Info: PCB_board2.png used on input line 745.
+ <use PCB_board2.png>
+Package pdftex.def Info: PCB_board2.png used on input line 757.
 (pdftex.def)             Requested size: 426.79135pt x 242.79256pt.
- <PCB_board3.png, id=860, 480.29437pt x 407.27156pt>
+
+<PCB_board3.png, id=870, 480.29437pt x 407.27156pt>
 File: PCB_board3.png Graphic file (type png)
-
-<use PCB_board3.png>
-Package pdftex.def Info: PCB_board3.png used on input line 752.
+ <use PCB_board3.png>
+Package pdftex.def Info: PCB_board3.png used on input line 764.
 (pdftex.def)             Requested size: 426.79135pt x 361.91124pt.
- <labVIEW.jpg, id=865, 800.9925pt x 446.41782pt>
-File: labVIEW.jpg Graphic file (type jpg)
+Package acronym Info: Label `acro:MSS' newly defined as it shall be overridden
+although it is yet undefined on input line 772.
 
-<use labVIEW.jpg>
-Package pdftex.def Info: labVIEW.jpg used on input line 766.
-(pdftex.def)             Requested size: 426.79135pt x 237.8673pt.
- [28 <./ADN2814_sch.png>] [29 <./PCB_board1.png> <./PCB_board2.png>] [30 <./PCB
-_board3.png>]
-<vhdl_adn.png, id=889, 1382.91656pt x 604.50844pt>
+[29 <./TLV3011_sch.png> <./PCB_board1.png>]
+<vhdl_adn.png, id=890, 1382.91656pt x 604.50844pt>
 File: vhdl_adn.png Graphic file (type png)
  <use vhdl_adn.png>
-Package pdftex.def Info: vhdl_adn.png used on input line 781.
+Package pdftex.def Info: vhdl_adn.png used on input line 785.
 (pdftex.def)             Requested size: 640.18703pt x 279.84827pt.
- [31 <./labVIEW.jpg>] [32 <./vhdl_adn.png>] <OCL.png, id=903, 638.385pt x 536.0
-025pt>
+ [30 <./PCB_board2.png>] [31 <./PCB_board3.png>] [32 <./vhdl_adn.png>]
+<labVIEW.jpg, id=910, 800.9925pt x 446.41782pt>
+File: labVIEW.jpg Graphic file (type jpg)
+ <use labVIEW.jpg>
+Package pdftex.def Info: labVIEW.jpg used on input line 800.
+(pdftex.def)             Requested size: 426.79135pt x 237.8673pt.
+ [33 <./labVIEW.jpg>] <OCL.png, id=923, 638.385pt x 536.0025pt>
 File: OCL.png Graphic file (type png)
-
-<use OCL.png>
-Package pdftex.def Info: OCL.png used on input line 806.
+ <use OCL.png>
+Package pdftex.def Info: OCL.png used on input line 825.
 (pdftex.def)             Requested size: 227.61696pt x 199.1684pt.
- [33 <./OCL.png>]
-<experiment_setup.jpg, id=911, 395.22656pt x 207.02344pt>
+
+<experiment_setup.jpg, id=924, 395.22656pt x 207.02344pt>
 File: experiment_setup.jpg Graphic file (type jpg)
 
 <use experiment_setup.jpg>
-Package pdftex.def Info: experiment_setup.jpg used on input line 834.
+Package pdftex.def Info: experiment_setup.jpg used on input line 853.
 (pdftex.def)             Requested size: 213.39568pt x 111.77834pt.
 
-<experiment_area.jpg, id=912, 3661.68pt x 2746.26pt>
+<experiment_area.jpg, id=925, 3661.68pt x 2746.26pt>
 File: experiment_area.jpg Graphic file (type jpg)
  <use experiment_area.jpg>
-Package pdftex.def Info: experiment_area.jpg used on input line 843.
+Package pdftex.def Info: experiment_area.jpg used on input line 862.
 (pdftex.def)             Requested size: 426.79135pt x 320.06656pt.
 
-[34 <./experiment_setup.jpg> <./experiment_area.jpg>]
+[34 <./OCL.png>] [35 <./experiment_setup.jpg> <./experiment_area.jpg>]
 Package acronym Info: Label `acro:DUT' newly defined as it shall be overridden
-although it is yet undefined on input line 854.
+although it is yet undefined on input line 873.
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--856
+Underfull \hbox (badness 10000) in paragraph at lines 875--875
 []|\OT1/cmr/m/n/12 TPS51200, MIC69302WU, SN74AVCB164245,
  []
 
-[35] <SRAM_flowchart.png, id=948, 256.70906pt x 567.62062pt>
+[36] <SRAM_flowchart.png, id=965, 256.70906pt x 567.62062pt>
 File: SRAM_flowchart.png Graphic file (type png)
 
 <use SRAM_flowchart.png>
-Package pdftex.def Info: SRAM_flowchart.png used on input line 895.
+Package pdftex.def Info: SRAM_flowchart.png used on input line 914.
 (pdftex.def)             Requested size: 113.81017pt x 227.62451pt.
- <SRAM_labview.png, id=953, 986.18437pt x 610.53094pt>
+ <SRAM_labview.png, id=970, 986.18437pt x 610.53094pt>
 File: SRAM_labview.png Graphic file (type png)
 
 <use SRAM_labview.png>
-Package pdftex.def Info: SRAM_labview.png used on input line 904.
+Package pdftex.def Info: SRAM_labview.png used on input line 923.
 (pdftex.def)             Requested size: 426.79135pt x 264.21869pt.
- [36 <./SRAM_flowchart.png>]
+ [37 <./SRAM_flowchart.png>]
 Package acronym Info: Label `acro:PM-tube' newly defined as it shall be overrid
 den
-although it is yet undefined on input line 914.
- [37 <./SRAM_labview.png>]
-<XY_front.jpg, id=972, 3661.68pt x 2746.26pt>
+although it is yet undefined on input line 933.
+ [38 <./SRAM_labview.png>]
+<XY_front.jpg, id=989, 3661.68pt x 2746.26pt>
 File: XY_front.jpg Graphic file (type jpg)
  <use XY_front.jpg>
-Package pdftex.def Info: XY_front.jpg used on input line 927.
+Package pdftex.def Info: XY_front.jpg used on input line 946.
 (pdftex.def)             Requested size: 209.1301pt x 156.80663pt.
 
-<XY_back.jpg, id=973, 3661.68pt x 2746.26pt>
+<XY_back.jpg, id=990, 3661.68pt x 2746.26pt>
 File: XY_back.jpg Graphic file (type jpg)
  <use XY_back.jpg>
-Package pdftex.def Info: XY_back.jpg used on input line 932.
+Package pdftex.def Info: XY_back.jpg used on input line 951.
 (pdftex.def)             Requested size: 209.1301pt x 156.80663pt.
- [38 <./XY_front.jpg> <./XY_back.jpg>] [39] [40]
-Overfull \hbox (61.0887pt too wide) in paragraph at lines 967--972
+ [39 <./XY_front.jpg> <./XY_back.jpg>] [40] [41]
+Overfull \hbox (61.0887pt too wide) in paragraph at lines 986--991
 \OT1/cmr/m/n/12 tested the first time are: $\OML/cmm/m/it/12 TPS\OT1/cmr/m/n/12
  51200[]\OML/cmm/m/it/12 ; MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[]; SN\OT
 1/cmr/m/n/12 74\OML/cmm/m/it/12 AVCB\OT1/cmr/m/n/12 164245[]\OML/cmm/m/it/12 ; 
@@ -1035,7 +1047,7 @@ SN\OT1/cmr/m/n/12 74\OML/cmm/m/it/12 AVC\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 T\OT1
  []
 
 
-Overfull \hbox (191.72568pt too wide) in paragraph at lines 967--972
+Overfull \hbox (191.72568pt too wide) in paragraph at lines 986--991
 \OML/cmm/m/it/12 ADN\OT1/cmr/m/n/12 2814\OML/cmm/m/it/12 ; MAX\OT1/cmr/m/n/12 3
 748\OML/cmm/m/it/12 ; SY\OT1/cmr/m/n/12 89831\OML/cmm/m/it/12 U[]; TPS\OT1/cmr/
 m/n/12 51200[]\OML/cmm/m/it/12 ; MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[];
@@ -1045,159 +1057,159 @@ m/n/12 51200[]\OML/cmm/m/it/12 ; MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[];
 H\OT1/cmr/m/n/12 257[]$.
  []
 
-[41] <flux_all_test1.jpg, id=1025, 1172.12906pt x 641.39626pt>
+[42] <flux_all_test1.jpg, id=1043, 1172.12906pt x 641.39626pt>
 File: flux_all_test1.jpg Graphic file (type jpg)
 
 <use flux_all_test1.jpg>
-Package pdftex.def Info: flux_all_test1.jpg used on input line 1049.
+Package pdftex.def Info: flux_all_test1.jpg used on input line 1068.
 (pdftex.def)             Requested size: 426.79135pt x 233.53514pt.
 
-<Flux_vs_time_all.jpg, id=1026, 1172.88188pt x 644.4075pt>
+<Flux_vs_time_all.jpg, id=1044, 1172.88188pt x 644.4075pt>
 File: Flux_vs_time_all.jpg Graphic file (type jpg)
 
 <use Flux_vs_time_all.jpg>
-Package pdftex.def Info: Flux_vs_time_all.jpg used on input line 1056.
+Package pdftex.def Info: Flux_vs_time_all.jpg used on input line 1075.
 (pdftex.def)             Requested size: 426.79135pt x 234.48407pt.
- [42] [43 <./flux_all_test1.jpg> <./Flux_vs_time_all.jpg>] <current_voltage_tps
-.jpg, id=1042, 563.10374pt x 421.575pt>
+ [43] [44 <./flux_all_test1.jpg> <./Flux_vs_time_all.jpg>] <current_voltage_tps
+.jpg, id=1059, 563.10374pt x 421.575pt>
 File: current_voltage_tps.jpg Graphic file (type jpg)
 
 <use current_voltage_tps.jpg>
-Package pdftex.def Info: current_voltage_tps.jpg used on input line 1075.
+Package pdftex.def Info: current_voltage_tps.jpg used on input line 1094.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_voltage_mic.jpg, id=1046, 563.10374pt x 421.575pt>
+<current_voltage_mic.jpg, id=1063, 563.10374pt x 421.575pt>
 File: current_voltage_mic.jpg Graphic file (type jpg)
 
 <use current_voltage_mic.jpg>
-Package pdftex.def Info: current_voltage_mic.jpg used on input line 1092.
+Package pdftex.def Info: current_voltage_mic.jpg used on input line 1111.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_volt_dose_MIC.jpg, id=1047, 563.10374pt x 421.575pt>
+<current_volt_dose_MIC.jpg, id=1064, 563.10374pt x 421.575pt>
 File: current_volt_dose_MIC.jpg Graphic file (type jpg)
 
 <use current_volt_dose_MIC.jpg>
-Package pdftex.def Info: current_volt_dose_MIC.jpg used on input line 1098.
+Package pdftex.def Info: current_volt_dose_MIC.jpg used on input line 1117.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [44 <./current_voltage_tps.jpg>]
-<current_4245.jpg, id=1054, 563.10374pt x 421.575pt>
+ [45 <./current_voltage_tps.jpg>]
+<current_4245.jpg, id=1071, 563.10374pt x 421.575pt>
 File: current_4245.jpg Graphic file (type jpg)
  <use current_4245.jpg>
-Package pdftex.def Info: current_4245.jpg used on input line 1117.
+Package pdftex.def Info: current_4245.jpg used on input line 1136.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_dose_42452.jpg, id=1055, 563.10374pt x 421.575pt>
+<current_dose_42452.jpg, id=1072, 563.10374pt x 421.575pt>
 File: current_dose_42452.jpg Graphic file (type jpg)
 
 <use current_dose_42452.jpg>
-Package pdftex.def Info: current_dose_42452.jpg used on input line 1123.
+Package pdftex.def Info: current_dose_42452.jpg used on input line 1142.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [45 <./current_voltage_mic.jpg> <./current_volt_dose_MIC.jpg> <./current_4245.
+ [46 <./current_voltage_mic.jpg> <./current_volt_dose_MIC.jpg> <./current_4245.
 jpg> <./current_dose_42452.jpg>]
-<current_t245.jpg, id=1061, 563.10374pt x 421.575pt>
+<current_t245.jpg, id=1079, 563.10374pt x 421.575pt>
 File: current_t245.jpg Graphic file (type jpg)
  <use current_t245.jpg>
-Package pdftex.def Info: current_t245.jpg used on input line 1142.
+Package pdftex.def Info: current_t245.jpg used on input line 1161.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_dose_t2452.jpg, id=1062, 563.10374pt x 421.575pt>
+<current_dose_t2452.jpg, id=1080, 563.10374pt x 421.575pt>
 File: current_dose_t2452.jpg Graphic file (type jpg)
 
 <use current_dose_t2452.jpg>
-Package pdftex.def Info: current_dose_t2452.jpg used on input line 1148.
+Package pdftex.def Info: current_dose_t2452.jpg used on input line 1167.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- <current_q.jpg, id=1063, 563.10374pt x 421.575pt>
+ <current_q.jpg, id=1081, 563.10374pt x 421.575pt>
 File: current_q.jpg Graphic file (type jpg)
 
 <use current_q.jpg>
-Package pdftex.def Info: current_q.jpg used on input line 1167.
+Package pdftex.def Info: current_q.jpg used on input line 1186.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- <current_dose_q2.jpg, id=1064, 563.10374pt x 421.575pt>
+ <current_dose_q2.jpg, id=1082, 563.10374pt x 421.575pt>
 File: current_dose_q2.jpg Graphic file (type jpg)
 
 <use current_dose_q2.jpg>
-Package pdftex.def Info: current_dose_q2.jpg used on input line 1173.
+Package pdftex.def Info: current_dose_q2.jpg used on input line 1192.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [46 <./current_t245.jpg> <./current_dose_t2452.jpg> <./current_q.jpg> <./curre
+ [47 <./current_t245.jpg> <./current_dose_t2452.jpg> <./current_q.jpg> <./curre
 nt_dose_q2.jpg>]
-<current_sy.jpg, id=1074, 563.10374pt x 421.575pt>
+<current_sy.jpg, id=1091, 563.10374pt x 421.575pt>
 File: current_sy.jpg Graphic file (type jpg)
  <use current_sy.jpg>
-Package pdftex.def Info: current_sy.jpg used on input line 1192.
+Package pdftex.def Info: current_sy.jpg used on input line 1211.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_dose_SY2.jpg, id=1075, 563.10374pt x 421.575pt>
+<current_dose_SY2.jpg, id=1092, 563.10374pt x 421.575pt>
 File: current_dose_SY2.jpg Graphic file (type jpg)
 
 <use current_dose_SY2.jpg>
-Package pdftex.def Info: current_dose_SY2.jpg used on input line 1198.
+Package pdftex.def Info: current_dose_SY2.jpg used on input line 1217.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 Package acronym Info: Label `acro:UART' newly defined as it shall be overridden
 
-although it is yet undefined on input line 1212.
- [47 <./current_sy.jpg> <./current_dose_SY2.jpg>]
-<current_dose_ADN_t1.jpg, id=1086, 563.10374pt x 421.575pt>
+although it is yet undefined on input line 1231.
+ [48 <./current_sy.jpg> <./current_dose_SY2.jpg>]
+<current_dose_ADN_t1.jpg, id=1103, 563.10374pt x 421.575pt>
 File: current_dose_ADN_t1.jpg Graphic file (type jpg)
 
 <use current_dose_ADN_t1.jpg>
-Package pdftex.def Info: current_dose_ADN_t1.jpg used on input line 1223.
+Package pdftex.def Info: current_dose_ADN_t1.jpg used on input line 1242.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_dose_ADN_t2.jpg, id=1087, 563.10374pt x 421.575pt>
+<current_dose_ADN_t2.jpg, id=1104, 563.10374pt x 421.575pt>
 File: current_dose_ADN_t2.jpg Graphic file (type jpg)
 
 <use current_dose_ADN_t2.jpg>
-Package pdftex.def Info: current_dose_ADN_t2.jpg used on input line 1229.
+Package pdftex.def Info: current_dose_ADN_t2.jpg used on input line 1248.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<error_dose_ADN_t1.jpg, id=1088, 563.10374pt x 421.575pt>
+<error_dose_ADN_t1.jpg, id=1105, 563.10374pt x 421.575pt>
 File: error_dose_ADN_t1.jpg Graphic file (type jpg)
 
 <use error_dose_ADN_t1.jpg>
-Package pdftex.def Info: error_dose_ADN_t1.jpg used on input line 1240.
+Package pdftex.def Info: error_dose_ADN_t1.jpg used on input line 1259.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<error_dose_ADN_t2.jpg, id=1089, 563.10374pt x 421.575pt>
+<error_dose_ADN_t2.jpg, id=1106, 563.10374pt x 421.575pt>
 File: error_dose_ADN_t2.jpg Graphic file (type jpg)
 
 <use error_dose_ADN_t2.jpg>
-Package pdftex.def Info: error_dose_ADN_t2.jpg used on input line 1246.
+Package pdftex.def Info: error_dose_ADN_t2.jpg used on input line 1265.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [48 <./current_dose_ADN_t1.jpg> <./current_dose_ADN_t2.jpg> <./error_dose_ADN_
+ [49 <./current_dose_ADN_t1.jpg> <./current_dose_ADN_t2.jpg> <./error_dose_ADN_
 t1.jpg> <./error_dose_ADN_t2.jpg>]
-<current_dose_MAX.jpg, id=1097, 563.10374pt x 421.575pt>
+<current_dose_MAX.jpg, id=1114, 563.10374pt x 421.575pt>
 File: current_dose_MAX.jpg Graphic file (type jpg)
 
 <use current_dose_MAX.jpg>
-Package pdftex.def Info: current_dose_MAX.jpg used on input line 1265.
+Package pdftex.def Info: current_dose_MAX.jpg used on input line 1284.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<error_dose_MAX.jpg, id=1098, 563.10374pt x 421.575pt>
+<error_dose_MAX.jpg, id=1115, 563.10374pt x 421.575pt>
 File: error_dose_MAX.jpg Graphic file (type jpg)
 
 <use error_dose_MAX.jpg>
-Package pdftex.def Info: error_dose_MAX.jpg used on input line 1271.
+Package pdftex.def Info: error_dose_MAX.jpg used on input line 1290.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [49 <./current_dose_MAX.jpg> <./error_dose_MAX.jpg>]
-[50] [51] [52] [53] [54] (./Master_thesis_Inge_Nikolai_Torsvik.bbl [55])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1433.
+ [50 <./current_dose_MAX.jpg> <./error_dose_MAX.jpg>]
+[51] [52] [53] [54] [55] (./Master_thesis_Inge_Nikolai_Torsvik.bbl [56])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1452.
 
-[56]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1433.
+[57]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1452.
  (./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1433.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1433.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1452.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1452.
 
 Package rerunfilecheck Info: File `Master_thesis_Inge_Nikolai_Torsvik.out' has 
 not changed.
-(rerunfilecheck)             Checksum: 8BBD7619E1078026DF6764AB1E7E8228;4498.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1433.
+(rerunfilecheck)             Checksum: D97C0F2815F563977137571F054E99A8;4498.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1452.
  ) 
 Here is how much of TeX's memory you used:
- 11551 strings out of 495059
- 175175 string characters out of 3182031
- 289045 words of memory out of 3000000
- 14169 multiletter control sequences out of 15000+200000
+ 11576 strings out of 495059
+ 175516 string characters out of 3182031
+ 289271 words of memory out of 3000000
+ 14186 multiletter control sequences out of 15000+200000
  13900 words of font info for 49 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  51i,11n,74p,800b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1219,11 +1231,11 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (65 pages, 21316422 by
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (66 pages, 21335124 by
 tes).
 PDF statistics:
- 1289 PDF objects out of 1440 (max. 8388607)
- 1129 compressed objects within 12 object streams
- 283 named destinations out of 1000 (max. 500000)
- 744 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1308 PDF objects out of 1440 (max. 8388607)
+ 1145 compressed objects within 12 object streams
+ 289 named destinations out of 1000 (max. 500000)
+ 754 words of extra memory for PDF output out of 10000 (max. 10000000)
 

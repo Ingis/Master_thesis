@@ -37,32 +37,32 @@
 \contentsline {subsubsection}{\numberline {4.1.6}SY89831U}{25}{subsubsection.4.1.6}
 \contentsline {subsubsection}{\numberline {4.1.7}ADN2814 and MAX3748}{27}{subsubsection.4.1.7}
 \contentsline {subsubsection}{\numberline {4.1.8}INA210}{28}{subsubsection.4.1.8}
-\contentsline {subsubsection}{\numberline {4.1.9}TLV3011}{28}{subsubsection.4.1.9}
-\contentsline {subsubsection}{\numberline {4.1.10}Software}{28}{subsubsection.4.1.10}
-\contentsline {subsubsection}{\numberline {4.1.11}\acf {SF2}}{31}{subsubsection.4.1.11}
+\contentsline {subsubsection}{\numberline {4.1.9}TLV3011}{29}{subsubsection.4.1.9}
+\contentsline {subsubsection}{\numberline {4.1.10}\acf {SF2}}{30}{subsubsection.4.1.10}
+\contentsline {subsubsection}{\numberline {4.1.11}Software}{33}{subsubsection.4.1.11}
 \contentsline {section}{\numberline {5}Testing at \acf {OCL}}{33}{section.5}
 \contentsline {subsection}{\numberline {5.1}About \ac {OCL}}{33}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Experiment setup and equipment}{34}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Measurement equipment and test boards}{35}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}\ac {SRAM} board}{35}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}Scintillator counter}{37}{subsubsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.3}X-Y-positioning system}{38}{subsubsection.5.3.3}
-\contentsline {subsection}{\numberline {5.4}Preparation and characterization of the beam}{39}{subsection.5.4}
-\contentsline {subsubsection}{\numberline {5.4.1}Purpose of tests}{39}{subsubsection.5.4.1}
-\contentsline {subsubsection}{\numberline {5.4.2}Beam setup}{39}{subsubsection.5.4.2}
-\contentsline {section}{\numberline {6}Results and calculations from beam test at OCL}{41}{section.6}
-\contentsline {subsection}{\numberline {6.1}Calibration process}{41}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Test results}{41}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}TPS51200}{44}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}MIC69302WU}{44}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}SN74AVCB164245}{45}{subsubsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.4}SN74AVC2T245}{45}{subsubsection.6.2.4}
-\contentsline {subsubsection}{\numberline {6.2.5}QS3VH257}{46}{subsubsection.6.2.5}
-\contentsline {subsubsection}{\numberline {6.2.6}SY89831}{47}{subsubsection.6.2.6}
-\contentsline {subsubsection}{\numberline {6.2.7}ADN2814}{47}{subsubsection.6.2.7}
-\contentsline {subsubsection}{\numberline {6.2.8}MAX3748}{49}{subsubsection.6.2.8}
-\contentsline {subsection}{\numberline {6.3}Calculation of dose}{50}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Discussion of the result}{51}{subsection.6.4}
-\contentsline {section}{\numberline {7}Conclusion}{52}{section.7}
-\contentsline {section}{\numberline {8}Appendix}{53}{section.8}
-\contentsline {subsection}{\numberline {8.1}datasheets}{53}{subsection.8.1}
+\contentsline {subsection}{\numberline {5.3}Measurement equipment and test boards}{36}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}\ac {SRAM} board}{36}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Scintillator counter}{38}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3}X-Y-positioning system}{39}{subsubsection.5.3.3}
+\contentsline {subsection}{\numberline {5.4}Preparation and characterization of the beam}{40}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Purpose of tests}{40}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}Beam setup}{40}{subsubsection.5.4.2}
+\contentsline {section}{\numberline {6}Results and calculations from beam test at OCL}{42}{section.6}
+\contentsline {subsection}{\numberline {6.1}Calibration process}{42}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Test results}{42}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}TPS51200}{45}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}MIC69302WU}{45}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}SN74AVCB164245}{46}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.4}SN74AVC2T245}{46}{subsubsection.6.2.4}
+\contentsline {subsubsection}{\numberline {6.2.5}QS3VH257}{47}{subsubsection.6.2.5}
+\contentsline {subsubsection}{\numberline {6.2.6}SY89831}{48}{subsubsection.6.2.6}
+\contentsline {subsubsection}{\numberline {6.2.7}ADN2814}{48}{subsubsection.6.2.7}
+\contentsline {subsubsection}{\numberline {6.2.8}MAX3748}{50}{subsubsection.6.2.8}
+\contentsline {subsection}{\numberline {6.3}Calculation of dose}{51}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Discussion of the result}{52}{subsection.6.4}
+\contentsline {section}{\numberline {7}Conclusion}{53}{section.7}
+\contentsline {section}{\numberline {8}Appendix}{54}{section.8}
+\contentsline {subsection}{\numberline {8.1}datasheets}{54}{subsection.8.1}

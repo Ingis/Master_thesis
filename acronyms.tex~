@@ -21,7 +21,7 @@
 \acro{PCB}{Printed Circuit Board}
 \acro{LVDS}{Low-Voltage Differential Signaling}
 \acro{NI}{National Instruments}
-\acro{DAQ}{data acquisition}
+\acro{DAQ}{Data Acquisition}
 \acro{SPI}{Serial Peripheral Interface}
 \acro{SF2}{SmartFusion2}
 \acro{CML}{Current-Mode Logic}
@@ -49,4 +49,5 @@
 \acro{DDL}{Detect Data Link}
 \acro{RadMon}{Radiation Monitor}
 \acro{TSL}{The Svedberg Laboratory}
+\acro{MSS}{Microcontroller SubSystem}
 \end{acronym}
