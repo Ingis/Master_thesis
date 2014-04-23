@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{ALICE}
+K.~Aamodt, A.~Abrahantes Quintana, R.~Achenbach, S.~Acounis, D.~Adamova,
+  C.~Adler, and the rest of~the ALICE~Collaboration.
+\newblock {The ALICE experiment at the CERN LHC}.
+\newblock {\em {JOURNAL OF INSTRUMENTATION}}, {3}, {AUG} {2008}.
+
 \bibitem{balashov}
 V.V. Balashov.
 \newblock {\em Interaction of particles and Radiation with Matter}.
