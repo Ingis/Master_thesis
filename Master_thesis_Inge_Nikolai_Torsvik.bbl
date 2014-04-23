@@ -39,6 +39,11 @@ Thomas Granlund and Nils Olsson.
   SRAMs, 53(4)}.
 \newblock 2006.
 
+\bibitem{website:TPS51200}
+Texas Instruments.
+\newblock Tps51200 - sink/source ddr termination regulator, February 2008.
+\newblock \url{http://www.ti.com/lit/ds/slus812/slus812.pdf}.
+
 \bibitem{knoll}
 Glenn~F. Knoll.
 \newblock {\em Radiation Detector and Measurement}.
@@ -49,11 +54,22 @@ David M.~Harris Neil H. E.~Weste.
 \newblock {\em CMOS VLSI Design - A Circuit and System Perspective}.
 \newblock Addison-Wesley, 4 edition edition, 2011.
 
-\bibitem{roed}
+\bibitem{roed_master}
+Ketil Røed.
+\newblock Irradiation tests of altera sram-based fpgas.
+\newblock Master's thesis, Norway, 2004.
+
+\bibitem{roed_doctor}
 Ketil Røed.
 \newblock {\em Single Event Upsets in SRAM FPGA based readout electronics for
-  Time Projection Chamber in the ALICE experiment}.
+  the Time Projection Chamber in the ALICE experiment}.
 \newblock PhD thesis, Norway, 2009.
+
+\bibitem{bjorn_master}
+Bjørn~Halvor Straume.
+\newblock Strålingstester og utvikling av bestrålingsposedyre for alice
+  tpc-elektronikken.
+\newblock Master's thesis, Norway.
 
 \bibitem{rad_phys}
 Tor~F. Thorsteinsen.

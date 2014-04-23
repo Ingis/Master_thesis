@@ -197,7 +197,7 @@ In short the task of the \ac{FEE} is to read out charge received at the readout 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{TPC_Sections.png}
-  \caption{A TPC sector. Showing how FEC is placed \cite{roed}}
+  \caption{A TPC sector. Showing how FEC is placed \cite{roed_doctor}}
   \label{TPC_Sections}
 \end{figure}
 
@@ -222,7 +222,7 @@ An picture of the \ac{FEC} can be seen in figure \ref{FEC}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{FEC.png}
-  \caption{Top side of the Front End Card \cite{roed}}
+  \caption{Top side of the Front End Card \cite{roed_doctor}}
   \label{FEC}
 \end{figure}
 
@@ -255,7 +255,7 @@ This is used instead of cables to get a more stability, and to keep things in pl
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{RCU.png}
-  \caption{The Readout Control Unit top side and bottom side \cite{roed}}
+  \caption{The Readout Control Unit top side and bottom side \cite{roed_doctor}}
   \label{RCU}
 \end{figure}
 
@@ -551,47 +551,49 @@ There has been done experiment that compares SEU induced by neutrons and protons
 By comparing a Proton beam with a neutron beam of 21MeV we see that we get 10-25\% less \ac{SEU} cross section for a proton beam compared to a neutron beam.
 If we increase the energy to 88MeV then we get close to none deviations. 
 
-The dose that we could expect for a 10 year period in the ALICE detector is estimated to be approximately 0.6 kRad from Pb-Pb collisions that will be run 1 month a year and a little higher for p-p collisions that will be run 10 months a year \cite{georgios} and \cite{roed}.
+The dose that we could expect for a 10 year period in the ALICE detector is estimated to be approximately 0.6 kRad from Pb-Pb collisions that will be run 1 month a year and a little higher for p-p collisions that will be run 10 months a year \cite{georgios} and \cite{roed_doctor}.
 Therefore we could expect a dose of 1-2 $\kilo$Rad during the time it will be used at CERN.
 %Section about what our electronics will receive at CERN
 
 \FloatBarrier
 \newpage
 
-\section{The test circuits and preparations for testing}
+\section{The Test Chips and Preparations for Testing}
+Testing \acfp{IC} is a thing that has been done before when it comes to the design of electronics that are going to be installed in the \ac{LHC} at CERN.
+Much of the work presented in this thesis is based on experience from previous thesis \cite{bjorn_master} \cite{roed_doctor} \cite{roed_master} \cite{arild_master}.
 
-\subsection{The circuits which where tested}
-The circuits that was tested through this thesis are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210, TLV3011 and SF2 SoC FPGA M2S050-FG896. What each of these are, and how these was tested will be discussed in the following sections.
+\subsection{The Integrated Circuits Which Where Tested}
+The \ac{IC} that was tested through this thesis are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210, TLV3011 and SF2 M2S050-FG896.
+What each of these are, and how these was tested will be discussed in the following sections.
 
-To test each of these circuits a simple \acf{PCB} with only a circuit and the necessary electronics was made.
+For each of the different \ac{IC}, except for SF2, a \acf{PCB} was made with only the necessary electronics to make it work and to be able to test the functionality of the \ac{IC}.
+Connectors (1-2) was placed on the \acp{PCB} and connected to \acf{DAQ} boards from National Instruments. These gave us the possibility to control the inputs of each \ac{IC} and monitor the outputs.
+A small resistor was placed in serial with the power input, so we would be able to measure the voltage over this resistor to get current.
 
-
-We wanted to have at least two \ac{PCB} for each of the \ac{IC} that was going to be tested, to have more test data on each of the \ac{IC}.
-But we started to make one PCB for all of the \ac{IC}, something like a prototype, to see that the design was working.
-If they worked at first try, a new \ac{PCB} was made, so that we had two test boards of each kind.
-But some of these didn't work, and had to be modified.
-This was often fixed with just adding capacitors and resistors on the \ac{PCB} or cutting routes or adding wires.
-When the prototype was made working a new design and PCB was made from the experienced gained from the prototype.
-Therefore some difference may exist between the first boards and the second boards.
+We wanted to have two \ac{PCB} for each of the \ac{IC} that was going to be tested to have more test data on each \ac{IC},
+and to be sure that the error we would see wasn't just a coincidence.
+There may be some difference between two boards made for the same chip, that is because the first board made may have some modification on the \ac{PCB}, to make it work. When the second board was made, error or mis functions was fixed at \ac{PCB} level. So that modification wasn't needed.
 The second version was tested first, in case we didn't have time to test both of the versions.
-Later in this thesis the second board that was made are marked with $_1$ and the first board was marked with $_2$, that is because this was tested first.
+Later in this thesis the second board that was made are marked with $_1$ and the first board was marked with $_2$.
 Two of the \ac{IC}s (ADN2814 and MAX3748) was only made one version of, since we didn't have any spare \ac{IC} at the time to make a new \ac{PCB}.
 All of the test \ac{PCB}s had a mark on the back indicating the center of the \ac{IC}, this was used to pinpoint the center during the tests.
 
 To supply and measure everything on the test boards, \acf{DAQ} devices from National Instruments were used.
 The \ac{DAQ} devices we used are called USB-6009, USB-6008 and USB-6501. USB-6009 was used as the main one, and the other were used when needed more digital or analog inputs or outputs.
 USB-6009 has 8 single-ended analog input (AI) channels, 2 analog output (AO) channels and 12 digital input/output (DIO) channels, and also a 2.5 V and 5.0 V signal.
-The analog outputs has a limit of 5 $\milli\ampere$, but some of the \ac{IC}s that was tested required more than that. For these cases the 5 V signal was used, that can deliver current up to 200 $\milli\ampere$.
+The analog outputs has a limit of 5 $\milli\ampere$, but some of the \acp{IC} that was tested required more than that. For these cases the 5 V signal was used, that can deliver current up to 200 $\milli\ampere$.
 More information on the DAQs can be seen in the reference \cite{website:DAQ}.
 
 \subsubsection{TPS51200}
 \label{TPS_explanation}
-This is a power regulator, special designed for DDR RAMs. Can be used for DDR, DDR2, DDR3 and DDR4 applications. On the \ac{RCU2}, this is going to be used to supply a DDR3 RAM with 0.75 V.
+This is a adjustable power regulator from Texas Instruments. It is special designed for DDR RAMs, it can be used for DDR, DDR2, DDR3 and DDR4 applications.
+% On the \ac{RCU2}, this is going to be used to supply a DDR3 RAM with 0.75 V.
 
-The PCB was designed after a recommended setup for DDR3 application from the datasheet. Input voltage was set to 3.3 V.
+In figure \ref{TPS51200_sch} you can see a schematic layout of the \ac{PCB} board for the TPS51200.
+The PCB was designed after a recommended setup for DDR3 application from the datasheet \cite{website:TPS51200}. Input voltage was set to 3.3 V.
 Voltage over resistor R1 (See figure \ref{TPS51200_sch}) was measured and used to calculate current consumption. Output voltage was also monitored.
 
-\begin{figure}[!htbp]65
+\begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{TPS51200_sch.png}
   \caption{Schematic for the TPS51200 test board}
@@ -601,13 +603,14 @@ Voltage over resistor R1 (See figure \ref{TPS51200_sch}) was measured and used t
 
 \subsubsection{MIC69302WU}
 \label{MIC_explanation}
-This is a ultra low dropout power regulator. On the \ac{RCU2} this is going to be used to regulate a 3.3 V signal to 1.2 V and power everything that requires 1.2 V on the board.
+This is a ultra low dropout\footnote{Low dropout means that voltage on the output can be close up to the input. For MIC69302WU low dropout means that $V_{IN}$ - $V_{OUT}$ can be as low as 500 $\milli\volt$} adjustable power regulator from Micrel Incorporation. It is in a family of high current, low voltage regulators, and can deliver a current of up to 3 A.
+% On the \ac{RCU2} this is going to be used to regulate a 3.3 V signal to 1.2 V and power everything that requires 1.2 V on the board.
 
-This has been designed as a adjustable regulator. That means that by changing R1 and R2(see figure \ref{MIC_sch}) you can adjust the output voltage, see equation \ref{Vout}. For the two test boards we had a input voltage of 3.3 V.
+This is a adjustable regulator. That means that by changing R1 and R2(see figure \ref{MIC_sch}) you can adjust the output voltage, see equation \ref{Vout}. For the two test boards we had a input voltage of 3.3 V.
 Voltage over resistor R?(See figure \ref{MIC_sch}) was measured and used to calculate current consumption. Output voltage was also monitored.
 We used 10k $\ohm$ for both R1 and R2 which gave us 1 V on the output.
 
-A different PCB was also made with this \ac{IC}. This was used to to supply 3.3V to the PCB that requires more than 5 mA which is the maximum the analog outputs the \ac{DAQ} form NI can deliver.
+A third \ac{PCB} was made with this \ac{IC}. This was used to to supply 3.3V to the PCB that requires more than 5 mA which is the maximum the analog outputs the \ac{DAQ} form National Instruments can deliver.
 This was design with resistor values of R? = 20 $\ohm$, R1 = 5.6k $\ohm$ and R2 = 1k $\ohm$, which gives us 3.3 V output.
 This \ac{PCB} was used to supply SY89831U, ADN2814 and MAX3748
 
@@ -626,15 +629,16 @@ Vout = 0.5 \times (\frac{R1}{R2}+1)
 
 \subsubsection{SN74AVCB164245}
 This is a 16-bit noninverting bus transceiver, with configurable voltage. Used for level shifting for digital signals.
-An application example could be to convert a 16-bit digital signal that goes from 0 V to 1.5 V to a 16-bit signal that goes from 0 V to 3.3 V.
-The input and output high value can be set to anything between 1.4 and 3.6 V, the low value is set to 0 V. On the \ac{RCU2} this is going to be used as a bus transceiver with 1.5 V in and 3.3 V out. 
+An application example could be to convert a 16-bit digital signal that with high value of 1.5 V to a 16-bit signal with high value of 3.3 V.
+The input and output high value can be set to anything between 1.4 and 3.6 V, the low value is set to 0 V.
+% On the \ac{RCU2} this is going to be used as a bus transceiver with 1.5 V signal in and 3.3 V signal out.
 
-For the test board the supply voltages(VCCA and VCCB, see figure \ref{SN74AVCB164245_sch}) was set to 3.3 V, to make it more simple to test.
-Voltage over resistor R1(See figure \ref{SN74AVCB164245_sch}) was measured and used to calculate current consumption.
+For the test board the supply voltages(VCCA and VCCB, see figure \ref{SN74AVCB164245_sch}) was both set to 3.3 V to make it more simple to test.
+Voltage over resistor R1 (See figure \ref{SN74AVCB164245_sch}) was measured and used to calculate current consumption.
 To make sure that the circuit didn't drag current through the inputs on the chip we used a pMOS transistor that was connected as seen in figure \ref{SN74AVCB164245_sch}.
 This made the current for the inputs come from the supply pin, and not from the digital signal IN. The outputs was measured digitally.
-The first version of this board didn't work. The output didn't change according to the input. We found out that this was because there were no load on the outputs.
-So a output resistor was added to each of the outputs to make a load, and then it worked. 	
+% The first version of this board didn't work. The output didn't change according to the input. We found out that this was because there were no load on the outputs.
+% So a output resistor was added to each of the outputs to make a load, and then it worked. 	
 
 \begin{figure}[!htbp]
   \centering
@@ -646,11 +650,12 @@ So a output resistor was added to each of the outputs to make a load, and then i
 
 \subsubsection{SN74AVC2T245}
 This is a dual-bit noninverting bus transceiver, with configurable voltage. It has the same function as SN74AVCB164245, but this only has two inputs.
-On the RCU2 board, this is planned to be used to convert a 2.5V \acf{SPI} signals to a 3.3V \ac{SPI} signals.
+% On the RCU2 board, this is planned to be used to convert a 2.5V \acf{SPI} signals to a 3.3V \ac{SPI} signals.
 
-As for SN74AVCB164245 a 3.3 V supply was was used for both VCCA and VCCB, see figure \ref{SN74AVC2T245_sch}. Voltage over resistor R1(See figure \ref{SN74AVC2T245_sch}) was measured and used to calculate current consumption.
+As for SN74AVCB164245 a 3.3 V supply was was used for both VCCA and VCCB, see figure \ref{SN74AVC2T245_sch}.
+Voltage over resistor R1(See figure \ref{SN74AVC2T245_sch}) was measured and used to calculate current consumption.
 The output signals was monitored digitally.
-The first version made was missing output load, and wouldn't work. By adding a resistor as load, it started working.
+% The first version made was missing output load, and wouldn't work. By adding a resistor as load, it started working.
 
 \begin{figure}[!htbp]
   \centering
@@ -661,7 +666,8 @@ The first version made was missing output load, and wouldn't work. By adding a r
 \FloatBarrier
 
 \subsubsection{QS3VH257}
-This is a Quad 2 to 1 multiplexer/demultiplexer with high bandwidth bus switch. On the \ac{RCU2} this is going to be used to switch between two \acf{JTAG} connection.
+This \ac{IC} consist of four 2 to 1 multiplexer/demultiplexer. It has high bandwidth, up to 500 Mhz, low ON resistance and high OFF resistance.
+% On the \ac{RCU2} this is going to be used to switch between two \acf{JTAG} connection.
 
 Supply voltage was set to 3.3 V. Voltage over resistor R1(See figure \ref{SN74AVC2T245_sch}) was measured and used to calculate current consumption.
 For the Select input a analog output signal was used. The input signals was set digitally, and the outputs was measured digitally.
@@ -675,7 +681,8 @@ For the Select input a analog output signal was used. The input signals was set 
 \FloatBarrier
 
 \subsubsection{SY89831U}
-This is a high speed, 2$\giga\hertz$ differential \ac{LVPECL} 1 to 4 fanout buffer optimized for ultra-low skew applications. Used on the \ac{RCU2} to produce 4 clock signal out of 1.
+This is a high speed, 2$\giga\hertz$ differential \ac{LVPECL} 1 to 4 fanout buffer optimized for ultra-low skew applications.
+% Used on the \ac{RCU2} to produce 4 clock signal out of 1.
 
 The input signal to this \ac{IC} is differential. The DAQ device we were using doesn't have a differential output signal, so here we had to use a little trick to make it work.
 We used two single-ended output signal that was set to the opposite of the other, and every 100 $\milli\second$ the values switch, so that when IN+ was 3.3 V IN- was 0 V, and when IN+ was 0 V IN- was 3.3 V.
@@ -700,7 +707,7 @@ MAX3748 is a limiting amplifier. Works in rate of 155 Mb/s to 4.25 Gb/s. Gives o
 
 These \ac{IC}s are going to be used to make a stable \ac{LVDS} or \ac{CML} signal from an optical transceiver.
 The signal from the optical transceiver is a Manchester coded signal consisting of data and clock.
-There are a few differences between the two \ac{IC}s. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock return function as ADN2814 has.
+There are a few differences between the two \ac{IC}s. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock return function as as ADN2814 has.
 Both works for our specific use, therefore we will see from the test results which one will be used.
 
 \begin{figure}[!htbp]
@@ -717,6 +724,15 @@ Both works for our specific use, therefore we will see from the test results whi
   \label{ADN2814_sch}
 \end{figure}
 \FloatBarrier
+
+\subsubsection{INA210}
+INA210 is a so called Current-Shunt Monitor, that is a \ac{IC} that is used to amplify small current signal into higher voltage signal. This is done by sending the signal that you want to measure current of, over a small resistor, typical smaller than 1 Ohm. Then a voltage will be formed over this resistor and will be amplified through the \ac{IC}. This \ac{IC} comes in a family of 5 with different amplifications, the one we are using has an amplification of 200 V/V.
+
+
+\subsubsection{TLV3011}
+This is a comperator with built in voltage reference of 1.242 V. 
+
+
 
 \begin{figure}[!htbp]
   \centering
@@ -743,6 +759,7 @@ Both works for our specific use, therefore we will see from the test results whi
 \subsubsection{Software}
 To monitor the outputs and control the inputs and the supply voltage, a simple labVIEW program was made for each of the different \ac{PCB}s.
 In these program time from start, current consumption and the status of the output signal (or the output voltage for the regulators) can be measured and monitored.
+Data is constantly saved to disk.
 In figure \ref{labVIEW} you can see an example of a labVIEW program used for SN74AVC2T245.
 
 \begin{figure}[!htbp]
@@ -751,6 +768,8 @@ In figure \ref{labVIEW} you can see an example of a labVIEW program used for SN7
   \caption{LabVIEW program for SN74AVC2T245}
   \label{labVIEW}
 \end{figure}
+
+\FloatBarrier
 
 \subsubsection{\acf{SF2}}
 The two limiting amplifiers (ADN2814 and MAX3748) required a more advance inputs, and therefore a \acf{SF2} starter kit are going to be used in addition to labVIEW.

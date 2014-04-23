@@ -4,53 +4,66 @@ The top-level auxiliary file: Master_thesis_Inge_Nikolai_Torsvik.aux
 A level-1 auxiliary file: acronyms.aux
 The style file: plain.bst
 Database file #1: Master_Thesis_Inge_Nikolai_Torsvik.bib
-I was expecting an "="---line 215 of file Master_Thesis_Inge_Nikolai_Torsvik.bib
+I was expecting a `,' or a `}'---line 63 of file Master_Thesis_Inge_Nikolai_Torsvik.bib
+ :  
+ :  year      =  "20011"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 71 of file Master_Thesis_Inge_Nikolai_Torsvik.bib
+ :   
+ :   year      =  "2006"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 249 of file Master_Thesis_Inge_Nikolai_Torsvik.bib
  : Research 
  :          Areas = {{Physics; Instruments \& Instrumentation (provided by Thomson Reuters)}},
 I'm skipping whatever remains of this entry
 Warning--empty publisher in GranlundOlsson
-Warning--empty school in roed
+Warning--empty school in roed_master
+Warning--empty school in roed_doctor
+Warning--empty school in bjorn_master
+Warning--empty year in bjorn_master
 Warning--empty school in arild_master
 Warning--empty year in arild_master
-You've used 14 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            577 strings with 6007 characters,
-and the built_in function-call counts, 3283 in all, are:
-= -- 301
-> -- 135
+            589 strings with 6339 characters,
+and the built_in function-call counts, 3890 in all, are:
+= -- 361
+> -- 156
 < -- 0
-+ -- 57
-- -- 42
-* -- 171
-:= -- 590
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 58
++ -- 66
+- -- 48
+* -- 201
+:= -- 703
+add.period$ -- 51
+call.type$ -- 17
+change.case$ -- 70
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 141
-empty$ -- 288
-format.name$ -- 42
-if$ -- 673
+cite$ -- 24
+duplicate$ -- 164
+empty$ -- 338
+format.name$ -- 48
+if$ -- 793
 int.to.chr$ -- 0
-int.to.str$ -- 14
+int.to.str$ -- 17
 missing$ -- 15
-newline$ -- 73
-num.names$ -- 28
-pop$ -- 99
+newline$ -- 88
+num.names$ -- 34
+pop$ -- 116
 preamble$ -- 1
-purify$ -- 49
+purify$ -- 58
 quote$ -- 0
-skip$ -- 88
+skip$ -- 106
 stack$ -- 0
-substring$ -- 92
-swap$ -- 13
+substring$ -- 107
+swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
-warning$ -- 4
-while$ -- 29
-width$ -- 16
-write$ -- 146
-(There was 1 error message)
+type$ -- 56
+warning$ -- 7
+while$ -- 35
+width$ -- 19
+write$ -- 177
+(There were 3 error messages)
