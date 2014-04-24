@@ -296,7 +296,7 @@ Therefore all of the backplanes had to be replaced with new ones.
 Radiation and radiation effects are a known challenge when designing electronics which are going to be used at CERN.
 There is therefore of highest importance to know about these effect, how they effect the electronics, how much damage they can cause and how we can protect and prevent the radiation effect to do damage.
 
-Everything in this chapter is based on these references \cite{rad_phys}, \cite{Weste_harris}, \cite{knoll}, \cite{Baumann} and \cite{balashov} if not otherwise stated.
+Everything in this chapter is based on these references \cite{rad_phys}, \cite{CMOS}, \cite{knoll}, \cite{Baumann} and \cite{balashov} if not otherwise stated.
 
 \subsection{Interaction of Radiation With Matter}
 Radiation is defined as a process which energy in the form of energetic particles or electromagnetic waves is transmitted through a medium or space.
@@ -469,10 +469,11 @@ When the pnp-transistor turns ON current will flow through $R_sub$, causing $V_s
 \end{figure}
 
 \paragraph{Single Event Transient SET} $\newline$
+\label{SET}
 \acf{SET} is a transient pulse of current in a logical path of a circuit.
 A \ac{SET} is caused by an ionizing particle leaving a transient current close or on a sensitive circuit node.
-This current can cause a change of value on that node for a short time, and if this value is clocked in on a register or latch,
-then we will have a unwanted change of value and that is called a \ac{SEU}.
+This current can cause a change of value on that node for a short time, and if this value is clocked in on a register,
+we will have a unwanted change of value and that is called a \ac{SEU}.
 If this value is not clocked out or saved in some way, the current peak will just flat out, and nothing will happen.
 A way to detect \ac{SET} could be to make a shift register made up of a known number of register and a known input data.
 By checking the output and compare with the known value, you can detect if a \ac{SET} has occurred.
@@ -710,6 +711,11 @@ The signal from the optical transceiver is a Manchester coded signal consisting 
 There are a few differences between the two \ac{IC}s. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock return function as as ADN2814 has.
 Both works for our specific use, therefore we will see from the test results which one will be used.
 
+The two limiting amplifiers (ADN2814 and MAX3748) required a more advance inputs, and therefore a \acf{SF2} starter kit are going to be used in addition to labVIEW.
+The \ac{SF2} board was used to code a clock and data signal into a differential Manchester signal and to decode the differential Manchester signal back to clock and data after it has gone through the IC.
+The \ac{SF2} was also used to compare the original signal with the signal coming out from the IC.
+A picture of the Smart Design can be seen in figure \ref{SF2}. This consist of IP-cells from Microsemi and some VHDL code that has been made.
+
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{MAX3748_sch.png}
@@ -766,6 +772,8 @@ This is a comparator with a built in voltage reference of 1.242 V. It supports l
   \label{PCB_board3}
 \end{figure}
 
+\FloatBarrier
+
 \subsubsection{SmartFusion2}
 \acf{SF2} \ac{SoC} \ac{FPGA} integrate a flash-based \ac{FPGA}\footnote{Flash based FPGA means that configuration registers is saved in flash memory cells.
 Compared to SRAM-based FPGA, flash based FPGA is much more robust against radiation.},
@@ -776,26 +784,60 @@ We are going to use the package M2S050-FG896, with a FPGA of 56 340 logic elemen
 There are four things that we wanted to test on the SF2 chip. That is the internal SRAM blocks, the logical element, the PLLs and \acf{SEL} for the hole IC.
 How these will will be tested will be discussed in the following sections
 
-\paragraph{SRAM testing}
+\paragraph{SRAM testing}$\newline$
 SRAM cells are as discussed in section \ref{SEU_Section}, sensitive for radiation. The SRAM memory aren't used for configuration register, as it was for the Xilinx FPGA on RCU1, and are therefore not as critical.
 But we still want to test how robust the SRAM cells are against radiation, so we can know how reliable these are if used.
 The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM block with a size of 1024 x 18 bits.
 Both micro SRAM blocks and large SRAM blocks are so called two port SRAM, which means that we can read and write at the same time.
 
-The way the SRAM memory was tested is divided into 3 state, this can be seen in block diagram in figure \ref{SRAM_flow_chart}.
-The first state is a reset state, where all values are set to its nominal value. That means all counter is set to 0, write address is set to 0, read address 1, and write data is set to 1010...1010. Read address is always set be one higher then read address. The next state is a initial state where all addresses are written to. Write data is switched opposite every address increment, so the written data is switched between 1010...1010 and 0101...0101 every other address. When the last bit is written to, the first bit is read. The last state is a state were data is constantly written, read and compared. The written data is always opposite of the previous value written to that address.
+The way the SRAM memory was tested is divided into 3 state in a state machine, this can be seen in block diagram in figure \ref{SRAM_flow_chart}.
+The first state is a reset state, where all values are set to its nominal value.
+That means all counter is set to 0, write address is set to 0, read address 1, and write data is set to 1010...1010.
+Read address is always set be one higher then read address.
+
+The next state is a initial state where all addresses are written to. Write data is switched opposite every address increment, so the written data is switched between 1010...1010 and 0101...0101 every other address. When the last bit is written to, the first bit is read. 
+
+The last state is a state where all of the addresses are written, read and compared through an endless loop. The written data is always opposite of the previous value written to that address. The state machine will stay in this state until a reset is pushed.
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=1.5\textwidth, angle =270]{SRAM_flow_chart.png}
+  \includegraphics[width=0.5\textwidth]{SRAM_flow_chart.png}
   \caption{Flow chart for test procedure of SRAM}
   \label{SRAM_flow_chart}
 \end{figure}
 
-The two limiting amplifiers (ADN2814 and MAX3748) required a more advance inputs, and therefore a \acf{SF2} starter kit are going to be used in addition to labVIEW.
-The \ac{SF2} board was used to code a clock and data signal into a differential Manchester signal and to decode the differential Manchester signal back to clock and data after it has gone through the IC.
-The \ac{SF2} was also used to compare the original signal with the signal coming out from the IC.
-A picture of the Smart Design can be seen in figure \ref{SF2}. This consist of IP-cells from Microsemi and some VHDL code that has been made.
+\FloatBarrier
+
+\paragraph{Test of the Logical element} $\newline$
+A logical element consist of a 4 input Look-Up Table\footnotemark[4] and a separate flip-flop which can be used independently from the Look-Up Table.
+That means that we have 56 340 flip-flops and 56 340 Look-Up Tables available for our design.
+When a logical element is exposed to radiation, a \ac{SET} can occur all over the chip.
+If this happens in the logical element or in the interconnections between logical element, the transient current will normally just be there for a small amount of time, and then it will flat out, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or another node that may lead to a change of value at the input, and the input is then clocked out to the output, we would have a unwanted bit change or a so called \ac{SEU}.
+
+% Where combinatoric logic circuits are circuits where the outputs are a function only independent on the present inputs, typical combinatoric functions are $AND, OR, XOR$ etc \cite{CMOS}.
+% Sequential logic is a type of logic where the output depends not only on the present value of its input signal but also on the past history of its inputs. This type of logic is again divided into asynchronous and synchronous logic. Asynchronous sequential logic the state of the output can change at any time in response to changing inputs. In synchronous logic the state of the output changes only at discrete times in response to a clock signal
+
+The way we tested the logical element is based on \cite{Berg}, which has done a study on how to test \acp{FPGA} in a good manner.
+A good overview of the design can be seen in figure \ref{Shift_register_design}.
+The idea is to make a long serial chain of flip-flops, otherwise referred to as a shift-register, where a transient can be picked up and make a \ac{SEU}.
+By adding a even number of inverters in between each flip-flop we increase the area where an transient can occur, without changing the logic.
+A known pattern is added to the input of the shift-register, this can be change depending on how advanced you want to be, but typical and easy pattern could be even other '1' and '0'.
+To be able to operate at high speed, we are using something called \ac{WSR}, which takes out the last n-bit of the shift register, and sends it out in parallel, with a frequency n times lower then original frequency. To test check the output for errors, the \ac{WSR} bits will be sent through the I/O-pins to another SF2 starter kit, hereafter referred to as the monitoring board, where data is checked by comparing with a known pattern.
+To be able to synchronize the two board, a reset signal and shift enable signal will be sent from the monitoring board to the test board, and a \ac{WSR} enable signal will be sent from the test board to the monitoring board.
+
+For our tests we made 4 shift-register chains, with 4 inverters in between each flip-flop and where each of the shift-register had a 4-bit \ac{WSR} output. The length of the shift-registers was set to 2000.  
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{Shift_register_design.png}
+  \caption{Flow chart for test procedure of SRAM}
+  \label{Shift_register_design}
+\end{figure}
+
+\footnotetext[4]{An n-bit Look-Up Table can encode any n-bit Boolean function by modeling such functions as truth tables}
+
+\paragraph{Single Event Latchup and PLL} $\newline$
+
 
 \begin{figure}[!htbp]
   \centering

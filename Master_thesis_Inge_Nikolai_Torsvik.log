@@ -1,21 +1,15 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  24 APR 2014 08:35
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.3)  24 APR 2014 16:09
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **Master_thesis_Inge_Nikolai_Torsvik.tex
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.tex"
+(./Master_thesis_Inge_Nikolai_Torsvik.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -30,30 +24,30 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count87
@@ -68,9 +62,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks17
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\picinpar\picinpar.sty"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/picinpar/picinpar.sty
 Pictures in Paragraphs. Version 1.2a, July 13, 1993
 \br=\count90
 \bl=\count91
@@ -112,27 +105,27 @@ Pictures in Paragraphs. Version 1.2a, July 13, 1993
 \waslice=\box36
 \wbslice=\box37
 \fslice=\box38
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count100
@@ -140,95 +133,94 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen123
 \Gin@req@width=\dimen124
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2013/02/03 v3.3-65 Customizing captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2013/02/03 v1.5-62 caption3 kernel (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen125
 \captionmargin@=\dimen126
 \captionwidth=\dimen127
-\caption@tempdima=\dimen128
-\caption@indent=\dimen129
-\caption@parindent=\dimen130
-\caption@hangindent=\dimen131
+\caption@indent=\dimen128
+\caption@parindent=\dimen129
+\caption@hangindent=\dimen130
 )
 \c@ContinuedFloat=\count101
 Package caption Info: picinpar package is loaded.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count102
 \c@subtable=\count103
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
-\wrapoverhang=\dimen132
-\WF@size=\dimen133
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen131
+\WF@size=\dimen132
 \c@WF@wrappedlines=\count104
 \WF@box=\box39
 \WF@everypar=\toks23
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@KVtest=\count105
 \sf@farskip=\skip43
-\sf@captopadj=\dimen134
+\sf@captopadj=\dimen133
 \sf@capskip=\skip44
 \sf@nearskip=\skip45
 \sf@top=\skip46
 \sf@bottom=\skip47
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks24
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen135
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen134
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunits\SIunits.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/SIunits/SIunits.sty
 Package: SIunits 2007/12/02 v1.36 Support for the International System of units
  (MH)
 
 
 \@qskwidth=\skip48
 \symgreek=\mathgroup4
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks25
-\ex@=\dimen136
+\ex@=\dimen135
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunits\SIunits.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(/usr/share/texlive/texmf-dist/tex/latex/SIunits/SIunits.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen137
+\pmbraise@=\dimen136
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count106
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count107
 \leftroot@=\count108
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count109
 \DOTSCASE@=\count110
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box40
 \strutbox@=\box41
-\big@size=\dimen138
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count111
 \c@MaxMatrixCols=\count112
 \dotsspace@=\muskip10
@@ -239,33 +231,33 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \column@=\count116
 \maxfields@=\count117
 \andhelp@=\toks27
-\eqnshift@=\dimen139
-\alignsep@=\dimen140
-\tagshift@=\dimen141
-\tagwidth@=\dimen142
-\totwidth@=\dimen143
-\lineht@=\dimen144
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
 \@envbody=\toks28
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks29
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen145
-\extrarowheight=\dimen146
+\col@sep=\dimen144
+\extrarowheight=\dimen145
 \NC@list=\toks30
 \extratabsurround=\skip52
 \backup@length=\skip53
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count118
 \calc@Bcount=\count119
-\calc@Adimen=\dimen147
-\calc@Bdimen=\dimen148
+\calc@Adimen=\dimen146
+\calc@Bdimen=\dimen147
 \calc@Askip=\skip54
 \calc@Bskip=\skip55
 LaTeX Info: Redefining \setlength on input line 76.
@@ -273,31 +265,31 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count120
 \calc@Cskip=\skip56
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
-\TX@col@width=\dimen149
-\TX@old@table=\dimen150
-\TX@old@col=\dimen151
-\TX@target=\dimen152
-\TX@delta=\dimen153
+\TX@col@width=\dimen148
+\TX@old@table=\dimen149
+\TX@old@col=\dimen150
+\TX@target=\dimen151
+\TX@delta=\dimen152
 \TX@cols=\count121
 \TX@ftn=\toks31
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks32
 \verbatim@line=\toks33
 \verbatim@in@stream=\read1
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count122
 \float@exts=\toks34
@@ -305,145 +297,143 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks35
 \@floatcapt=\box43
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mh\mathtools.sty"
-Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\mh\mhsetup.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count123
-\l_MT_multwidth_dim=\dimen154
+\l_MT_multwidth_dim=\dimen153
 \origjot=\skip57
-\l_MT_shortvdotswithinadjustabove_dim=\dimen155
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen156
-\l_MT_above_intertext_sep=\dimen157
-\l_MT_below_intertext_sep=\dimen158
-\l_MT_above_shortintertext_sep=\dimen159
-\l_MT_below_shortintertext_sep=\dimen160
+\l_MT_shortvdotswithinadjustabove_dim=\dimen154
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen155
+\l_MT_above_intertext_dim=\dimen156
+\l_MT_below_intertext_dim=\dimen157
+\l_MT_above_shortintertext_dim=\dimen158
+\l_MT_below_shortintertext_dim=\dimen159
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\threeparttable\threeparttable.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box44
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\standalone\standalone.sty"
-Package: standalone 2012/09/15 v1.1b Package to include TeX sub-files with prea
+)
+(/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.sty
+Package: standalone 2012/05/20 v1.1a Package to include TeX sub-files with prea
 mbles
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
-Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks36
 \XKV@tempa@toks=\toks37
 \XKV@depth=\count124
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\currfile\currfile.sty"
-Package: currfile 2013/02/01 v0.7b Provides the file path elements of the curre
-nt input file
+(/usr/share/texlive/texmf-dist/tex/latex/currfile/currfile.sty
+Package: currfile 2012/05/15 v0.7 Provides the file path elements of the curren
+t input file
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\filehook\filehook.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
 Package: filehook 2011/10/12 v0.5d Hooks for input files
 )
 \c@currfiledepth=\count125
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\gincltex\gincltex.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\svn-prov\svn-prov.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/gincltex/gincltex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/svn-prov/svn-prov.sty
 Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
 )
 Package: gincltex 2011/09/04 v0.3 Include external LaTeX files like graphics
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box45
 )
-\tc@llx=\dimen161
-\tc@lly=\dimen162
-\tc@urx=\dimen163
-\tc@ury=\dimen164
+\tc@llx=\dimen160
+\tc@lly=\dimen161
+\tc@urx=\dimen162
+\tc@ury=\dimen163
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen165
-\adjbox@Height=\dimen166
-\adjbox@Depth=\dimen167
-\adjbox@Totalheight=\dimen168
+\adjbox@Width=\dimen164
+\adjbox@Height=\dimen165
+\adjbox@Depth=\dimen166
+\adjbox@Totalheight=\dimen167
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
 \c@checkoddpage=\count126
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box46
 \sift@deathcycles=\count127
-\@vwid@loff=\dimen169
-\@vwid@roff=\dimen170
+\@vwid@loff=\dimen168
+\@vwid@roff=\dimen169
 ))
 \gincltex@box=\box47
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\filemod\filemod-expmin.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/filemod/filemod-expmin.sty
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
  (expandable; minimal)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen171
-\lightrulewidth=\dimen172
-\cmidrulewidth=\dimen173
-\belowrulesep=\dimen174
-\belowbottomsep=\dimen175
-\aboverulesep=\dimen176
-\abovetopsep=\dimen177
-\cmidrulesep=\dimen178
-\cmidrulekern=\dimen179
-\defaultaddspace=\dimen180
+\heavyrulewidth=\dimen170
+\lightrulewidth=\dimen171
+\cmidrulewidth=\dimen172
+\belowrulesep=\dimen173
+\belowbottomsep=\dimen174
+\aboverulesep=\dimen175
+\abovetopsep=\dimen176
+\cmidrulesep=\dimen177
+\cmidrulekern=\dimen178
+\defaultaddspace=\dimen179
 \@cmidla=\count128
 \@cmidlb=\count129
-\@aboverulesep=\dimen181
-\@belowrulesep=\dimen182
+\@aboverulesep=\dimen180
+\@belowrulesep=\dimen181
 \@thisruleclass=\count130
 \@lastruleclass=\count131
-\@thisrulewidth=\dimen183
+\@thisrulewidth=\dimen182
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
@@ -455,47 +445,41 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \FV@StepNumber=\count134
 \FV@OutFile=\write3
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
-Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
+(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2010/09/08 v1.36 Support for acronyms (Tobias Oetiker)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
 Package: suffix 2006/07/15 1.5 Variant command support
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
-\@xs@message=\write4
-\integerpart=\count135
-\decimalpart=\count136
-)
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks38
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\afterpage.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@output=\toks39
 \AP@partial=\box49
 \AP@footins=\box50
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\nomencl\nomencl.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
-\nomlabelwidth=\dimen184
-\nom@tempdim=\dimen185
+\nomlabelwidth=\dimen183
+\nom@tempdim=\dimen184
 \nomitemsep=\skip58
 )
-\@nomenclaturefile=\write5
+\@nomenclaturefile=\write4
+\openout4 = `Master_thesis_Inge_Nikolai_Torsvik.nlo'.
+
 
 Writing nomenclature file Master_thesis_Inge_Nikolai_Torsvik.nlo
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
@@ -519,7 +503,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \AP@enddocument detected (standard20110627).
@@ -527,69 +511,66 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
-\@linkdim=\dimen186
-\Hy@linkcounter=\count137
-\Hy@pagecounter=\count138
+\@linkdim=\dimen185
+\Hy@linkcounter=\count135
+\Hy@pagecounter=\count136
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count139
+\Hy@SavedSpaceFactor=\count137
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count140
+Package hyperref Info: Bookmarks ON on input line 4300.
+\c@Hy@tempcnt=\count138
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen187
-\Fld@menulength=\count141
-\Field@Width=\dimen188
-\Fld@charsize=\dimen189
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count142
-\c@Item=\count143
-\c@Hfootnote=\count144
+LaTeX Info: Redefining \url on input line 4653.
+\Fld@menulength=\count139
+\Field@Width=\dimen186
+\Fld@charsize=\dimen187
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
+\Hy@abspage=\count140
+\c@Item=\count141
+\c@Hfootnote=\count142
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count145
-\c@bookmark@seq@number=\count146
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
+\Fld@listcount=\count143
+\c@bookmark@seq@number=\count144
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip59
 )
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux"
-("C:\Users\Inge Nikolai\Master-thesis\acronyms.aux"))
+(./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
+\openout1 = `Master_thesis_Inge_Nikolai_Torsvik.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
@@ -605,7 +586,7 @@ LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 60.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 60.
@@ -645,20 +626,34 @@ LaTeX Font Info:    ... okay on input line 60.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count147
-\scratchdimen=\dimen190
+\scratchcounter=\count145
+\scratchdimen=\dimen188
 \scratchbox=\box51
-\nofMPsegments=\count148
-\nofMParguments=\count149
+\nofMPsegments=\count146
+\nofMParguments=\count147
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count150
-\MPscratchDim=\dimen191
-\MPnumerator=\count151
-\makeMPintoPDFobject=\count152
+\MPscratchCnt=\count148
+\MPscratchDim=\dimen189
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
 \everyMPtoPDFconversion=\toks41
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
@@ -680,23 +675,25 @@ and I'll forget about whatever was undefined.
 
 \AtBeginShipoutBox=\box52
 Package hyperref Info: Link coloring OFF on input line 60.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count153
+\c@section@level=\count151
 )
 LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
 LaTeX Info: Redefining \nameref on input line 60.
 
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.out")
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.out")
-\@outlinefile=\write6
+(./Master_thesis_Inge_Nikolai_Torsvik.out)
+(./Master_thesis_Inge_Nikolai_Torsvik.out)
+\@outlinefile=\write5
+\openout5 = `Master_thesis_Inge_Nikolai_Torsvik.out'.
 
-<uglo.png, id=247, 71.14981pt x 71.14981pt>
+
+<uglo.png, id=249, 71.14981pt x 71.14981pt>
 File: uglo.png Graphic file (type png)
  <use uglo.png>
 Package pdftex.def Info: uglo.png used on input line 78.
@@ -704,27 +701,30 @@ Package pdftex.def Info: uglo.png used on input line 78.
  [1
 Non-PDF special ignored!
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Inge Nikolai/Mas
-ter-thesis/uglo.png>]pdfTeX warning (ext4): destination with the same identifie
-r (name{page.1}) has been already used, duplicate ignored
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./uglo.png>]pdfTeX warning
+ (ext4): destination with the same identifier (name{page.1}) has been already u
+sed, duplicate ignored
 <to be read again> 
                    \relax 
 l.92 \blankpage
-                [1] [1]
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.toc"
-[2]
+                [1] [1] (./Master_thesis_Inge_Nikolai_Torsvik.toc [2]
 Package acronym Info: Label `acro:OCL' newly defined as it shall be overridden
-although it is yet undefined on input line 44.
+although it is yet undefined on input line 46.
  [3]
 Package acronym Info: Label `acro:SRAM' newly defined as it shall be overridden
 
-although it is yet undefined on input line 48.
- [4])
-\tf@toc=\write7
- [5] ("C:\Users\Inge Nikolai\Master-thesis\acronyms.tex" [6
+although it is yet undefined on input line 50.
 
-])
-[7]
+[4])
+\tf@toc=\write6
+\openout6 = `Master_thesis_Inge_Nikolai_Torsvik.toc'.
+
+ [5]
+\openout2 = `acronyms.aux'.
+
+ (./acronyms.tex [6
+
+]) [7]
 Package acronym Info: Label `acro:CERN' newly defined as it shall be overridden
 
 although it is yet undefined on input line 116.
@@ -772,14 +772,14 @@ been already used, duplicate ignored
 l.142 
        [1
 
-] [2] <ALICE_layout.jpg, id=465, 772.8875pt x 407.5225pt>
+] [2] <ALICE_layout.jpg, id=470, 772.8875pt x 407.5225pt>
 File: ALICE_layout.jpg Graphic file (type jpg)
 
 <use ALICE_layout.jpg>
 Package pdftex.def Info: ALICE_layout.jpg used on input line 165.
 (pdftex.def)             Requested size: 426.79135pt x 225.0335pt.
- [3 <C:/Users/Inge Nikolai/Master-thesis/ALICE_layout.jpg>] <TPC_layout.png, id
-=484, 847.66687pt x 378.66469pt>
+ [3 <./ALICE_layout.jpg>]
+<TPC_layout.png, id=489, 847.66687pt x 378.66469pt>
 File: TPC_layout.png Graphic file (type png)
  <use TPC_layout.png>
 Package pdftex.def Info: TPC_layout.png used on input line 186.
@@ -789,7 +789,7 @@ although it is yet undefined on input line 193.
 Package acronym Info: Label `acro:FEE' newly defined as it shall be overridden
 although it is yet undefined on input line 194.
 
-<TPC_Sections.png, id=494, 758.835pt x 615.0478pt>
+<TPC_Sections.png, id=499, 758.835pt x 615.0478pt>
 File: TPC_Sections.png Graphic file (type png)
  <use TPC_Sections.png>
 Package pdftex.def Info: TPC_Sections.png used on input line 199.
@@ -797,37 +797,34 @@ Package pdftex.def Info: TPC_Sections.png used on input line 199.
 Package acronym Info: Label `acro:ADC' newly defined as it shall be overridden
 although it is yet undefined on input line 208.
 
-[4 <C:/Users/Inge Nikolai/Master-thesis/TPC_layout.png>]
-<FEC_blockdiagram.png, id=516, 773.13844pt x 375.65344pt>
+[4 <./TPC_layout.png>]
+<FEC_blockdiagram.png, id=521, 773.13844pt x 375.65344pt>
 File: FEC_blockdiagram.png Graphic file (type png)
 
 <use FEC_blockdiagram.png>
 Package pdftex.def Info: FEC_blockdiagram.png used on input line 217.
 (pdftex.def)             Requested size: 426.79135pt x 207.37238pt.
- <FEC.png, id=519, 603.75563pt x 609.02531pt>
+ <FEC.png, id=524, 603.75563pt x 609.02531pt>
 File: FEC.png Graphic file (type png)
 
 <use FEC.png>
 Package pdftex.def Info: FEC.png used on input line 224.
 (pdftex.def)             Requested size: 298.75264pt x 301.36159pt.
- [5 <C:/Users/Inge Nikolai/Master-thesis/TPC_Sections.png>]
-[6 <C:/Users/Inge Nikolai/Master-thesis/FEC_blockdiagram.png> <C:/Users/Inge Ni
-kolai/Master-thesis/FEC.png>]
+ [5 <./TPC_Sections.png>] [6 <./FEC_blockdiagram.png> <./FEC.png>]
 Package acronym Info: Label `acro:DCS' newly defined as it shall be overridden
 although it is yet undefined on input line 234.
 Package acronym Info: Label `acro:SIU' newly defined as it shall be overridden
 although it is yet undefined on input line 234.
- <RCU.png, id=563, 478.78876pt x 583.42969pt>
+<RCU.png, id=568, 478.78876pt x 583.42969pt>
 File: RCU.png Graphic file (type png)
-
-<use RCU.png>
+ <use RCU.png>
 Package pdftex.def Info: RCU.png used on input line 257.
 (pdftex.def)             Requested size: 298.75264pt x 364.04619pt.
- [7] [8 <C:/Users/Inge Nikolai/Master-thesis/RCU.png>] [9]
+ [7] [8 <./RCU.png>]
+[9]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 305.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -838,7 +835,7 @@ Overfull \hbox (17.00053pt too wide) in paragraph at lines 355--356
 er is the $[]$,
  []
 
-[11] <energy_loss.png, id=628, 516.42938pt x 573.64313pt>
+[11] <energy_loss.png, id=634, 516.42938pt x 573.64313pt>
 File: energy_loss.png Graphic file (type png)
 
 <use energy_loss.png>
@@ -847,221 +844,226 @@ Package pdftex.def Info: energy_loss.png used on input line 393.
  [12]
 Package acronym Info: Label `acro:LET' newly defined as it shall be overridden
 although it is yet undefined on input line 402.
- [13 <C:/Users/Inge Nikolai/Master-thesis/energy_loss.png>] [14]
+ [13 <./energy_loss.png>] [14]
 Package acronym Info: Label `acro:CMOS' newly defined as it shall be overridden
 
 although it is yet undefined on input line 452.
- <CMOS_inverter.png, id=665, 931.22906pt x 328.22626pt>
-File: CMOS_inverter.png Graphic file (type png)
 
-<use CMOS_inverter.png>
+<CMOS_inverter.png, id=671, 931.22906pt x 328.22626pt>
+File: CMOS_inverter.png Graphic file (type png)
+ <use CMOS_inverter.png>
 Package pdftex.def Info: CMOS_inverter.png used on input line 466.
 (pdftex.def)             Requested size: 426.79135pt x 150.42998pt.
- [15] <SRAM_Cell.png, id=688, 264.99pt x 166.37157pt>
-File: SRAM_Cell.png Graphic file (type png)
 
-<use SRAM_Cell.png>
-Package pdftex.def Info: SRAM_Cell.png used on input line 495.
+[15] <SRAM_Cell.png, id=695, 264.99pt x 166.37157pt>
+File: SRAM_Cell.png Graphic file (type png)
+ <use SRAM_Cell.png>
+Package pdftex.def Info: SRAM_Cell.png used on input line 496.
 (pdftex.def)             Requested size: 320.0935pt x 200.98271pt.
- <charge_generation.png, id=689, 1017.8025pt x 392.96812pt>
+
+<charge_generation.png, id=696, 1017.8025pt x 392.96812pt>
 File: charge_generation.png Graphic file (type png)
 
 <use charge_generation.png>
-Package pdftex.def Info: charge_generation.png used on input line 502.
+Package pdftex.def Info: charge_generation.png used on input line 503.
 (pdftex.def)             Requested size: 426.79135pt x 164.78165pt.
- [16 <C:/Users/Inge Nikolai/Master-thesis/CMOS_inverter.png>] [17 <C:/Users/Ing
-e Nikolai/Master-thesis/SRAM_Cell.png> <C:/Users/Inge Nikolai/Master-thesis/cha
-rge_generation.png>]
-<TID_in_MOS.png, id=710, 798.73407pt x 366.61969pt>
+ [16 <./CMOS_inverter.png>] [17 <./SRAM_Cell.png> <./charge_generation.png>] <T
+ID_in_MOS.png, id=717, 798.73407pt x 366.61969pt>
 File: TID_in_MOS.png Graphic file (type png)
- <use TID_in_MOS.png>
-Package pdftex.def Info: TID_in_MOS.png used on input line 537.
-(pdftex.def)             Requested size: 213.39568pt x 97.94812pt.
 
-[18 <C:/Users/Inge Nikolai/Master-thesis/TID_in_MOS.png>] [19] [20]
-<TPS51200_sch.png, id=769, 855.94781pt x 310.15875pt>
+<use TID_in_MOS.png>
+Package pdftex.def Info: TID_in_MOS.png used on input line 538.
+(pdftex.def)             Requested size: 213.39568pt x 97.94812pt.
+ [18 <./TID_in_MOS.png>] [19] [20]
+<TPS51200_sch.png, id=776, 855.94781pt x 310.15875pt>
 File: TPS51200_sch.png Graphic file (type png)
  <use TPS51200_sch.png>
-Package pdftex.def Info: TPS51200_sch.png used on input line 598.
+Package pdftex.def Info: TPS51200_sch.png used on input line 599.
 (pdftex.def)             Requested size: 426.79135pt x 154.64832pt.
 
-[21 <C:/Users/Inge Nikolai/Master-thesis/TPS51200_sch.png>]
-<MIC_sch.png, id=790, 700.86844pt x 276.28218pt>
+[21 <./TPS51200_sch.png>] <MIC_sch.png, id=797, 700.86844pt x 276.28218pt>
 File: MIC_sch.png Graphic file (type png)
- <use MIC_sch.png>
-Package pdftex.def Info: MIC_sch.png used on input line 624.
-(pdftex.def)             Requested size: 426.79135pt x 168.24521pt.
 
-<SN74AVCB164245_sch.png, id=794, 604.50844pt x 533.74406pt>
+<use MIC_sch.png>
+Package pdftex.def Info: MIC_sch.png used on input line 625.
+(pdftex.def)             Requested size: 426.79135pt x 168.24521pt.
+ <SN74AVCB164245_sch.png, id=801, 604.50844pt x 533.74406pt>
 File: SN74AVCB164245_sch.png Graphic file (type png)
 
 <use SN74AVCB164245_sch.png>
-Package pdftex.def Info: SN74AVCB164245_sch.png used on input line 645.
+Package pdftex.def Info: SN74AVCB164245_sch.png used on input line 646.
 (pdftex.def)             Requested size: 426.79135pt x 376.82713pt.
- [22 <C:/Users/Inge Nikolai/Master-thesis/MIC_sch.png>] [23 <C:/Users/Inge Niko
-lai/Master-thesis/SN74AVCB164245_sch.png>]
-<SN74AVC2T245_sch.png, id=807, 694.84593pt x 509.65407pt>
+ [22 <./MIC_sch.png>] [23 <./SN74AVCB164245_sch.png>] <SN74AVC2T245_sch.png, id
+=815, 694.84593pt x 509.65407pt>
 File: SN74AVC2T245_sch.png Graphic file (type png)
 
 <use SN74AVC2T245_sch.png>
-Package pdftex.def Info: SN74AVC2T245_sch.png used on input line 662.
+Package pdftex.def Info: SN74AVC2T245_sch.png used on input line 663.
 (pdftex.def)             Requested size: 426.79135pt x 313.03488pt.
 
-<QS3VH257_sch.png, id=810, 737.00343pt x 437.38406pt>
+<QS3VH257_sch.png, id=818, 737.00343pt x 437.38406pt>
 File: QS3VH257_sch.png Graphic file (type png)
  <use QS3VH257_sch.png>
-Package pdftex.def Info: QS3VH257_sch.png used on input line 677.
+Package pdftex.def Info: QS3VH257_sch.png used on input line 678.
 (pdftex.def)             Requested size: 426.79135pt x 253.28249pt.
 
-[24 <C:/Users/Inge Nikolai/Master-thesis/SN74AVC2T245_sch.png>]
+[24 <./SN74AVC2T245_sch.png>]
 Package acronym Info: Label `acro:LVPECL' newly defined as it shall be overridd
 en
-although it is yet undefined on input line 684.
+although it is yet undefined on input line 685.
 
-<SY89831U_sch.png, id=820, 730.22812pt x 564.60938pt>
+<SY89831U_sch.png, id=828, 730.22812pt x 564.60938pt>
 File: SY89831U_sch.png Graphic file (type png)
  <use SY89831U_sch.png>
-Package pdftex.def Info: SY89831U_sch.png used on input line 696.
+Package pdftex.def Info: SY89831U_sch.png used on input line 697.
 (pdftex.def)             Requested size: 426.79135pt x 329.9893pt.
 
-[25 <C:/Users/Inge Nikolai/Master-thesis/QS3VH257_sch.png>] [26 <C:/Users/Inge 
-Nikolai/Master-thesis/SY89831U_sch.png>]
+[25 <./QS3VH257_sch.png>] [26 <./SY89831U_sch.png>]
 Package acronym Info: Label `acro:LVDS' newly defined as it shall be overridden
 
-although it is yet undefined on input line 705.
-Package acronym Info: Label `acro:CML' newly defined as it shall be overridden
 although it is yet undefined on input line 706.
+Package acronym Info: Label `acro:CML' newly defined as it shall be overridden
+although it is yet undefined on input line 707.
 
-<MAX3748_sch.png, id=839, 712.16063pt x 304.88907pt>
+<MAX3748_sch.png, id=851, 712.16063pt x 304.88907pt>
 File: MAX3748_sch.png Graphic file (type png)
  <use MAX3748_sch.png>
-Package pdftex.def Info: MAX3748_sch.png used on input line 715.
+Package pdftex.def Info: MAX3748_sch.png used on input line 721.
 (pdftex.def)             Requested size: 426.79135pt x 182.71619pt.
 
-<ADN2814_sch.png, id=840, 743.02594pt x 356.83313pt>
+<ADN2814_sch.png, id=852, 743.02594pt x 356.83313pt>
 File: ADN2814_sch.png Graphic file (type png)
  <use ADN2814_sch.png>
-Package pdftex.def Info: ADN2814_sch.png used on input line 722.
+Package pdftex.def Info: ADN2814_sch.png used on input line 728.
 (pdftex.def)             Requested size: 426.79135pt x 204.9651pt.
 
-[27 <C:/Users/Inge Nikolai/Master-thesis/MAX3748_sch.png>]
-<INA210_sch.png, id=851, 1002.74625pt x 466.74374pt>
+[27 <./MAX3748_sch.png>] <INA210_sch.png, id=864, 1002.74625pt x 466.74374pt>
 File: INA210_sch.png Graphic file (type png)
- <use INA210_sch.png>
-Package pdftex.def Info: INA210_sch.png used on input line 733.
-(pdftex.def)             Requested size: 426.79135pt x 198.65903pt.
 
-[28 <C:/Users/Inge Nikolai/Master-thesis/ADN2814_sch.png> <C:/Users/Inge Nikola
-i/Master-thesis/INA210_sch.png>]
-<TLV3011_sch.png, id=859, 924.45375pt x 358.33875pt>
+<use INA210_sch.png>
+Package pdftex.def Info: INA210_sch.png used on input line 739.
+(pdftex.def)             Requested size: 426.79135pt x 198.65903pt.
+ [28 <./ADN2814_sch.png> <./INA210_sch.png>]
+<TLV3011_sch.png, id=872, 924.45375pt x 358.33875pt>
 File: TLV3011_sch.png Graphic file (type png)
  <use TLV3011_sch.png>
-Package pdftex.def Info: TLV3011_sch.png used on input line 743.
+Package pdftex.def Info: TLV3011_sch.png used on input line 749.
 (pdftex.def)             Requested size: 426.79135pt x 165.4338pt.
 
-<PCB_board1.png, id=860, 592.46344pt x 407.27156pt>
+<PCB_board1.png, id=873, 592.46344pt x 407.27156pt>
 File: PCB_board1.png Graphic file (type png)
  <use PCB_board1.png>
-Package pdftex.def Info: PCB_board1.png used on input line 750.
+Package pdftex.def Info: PCB_board1.png used on input line 756.
 (pdftex.def)             Requested size: 426.79135pt x 293.39687pt.
 
-<PCB_board2.png, id=861, 715.92468pt x 407.27156pt>
+<PCB_board2.png, id=874, 715.92468pt x 407.27156pt>
 File: PCB_board2.png Graphic file (type png)
  <use PCB_board2.png>
-Package pdftex.def Info: PCB_board2.png used on input line 757.
+Package pdftex.def Info: PCB_board2.png used on input line 763.
 (pdftex.def)             Requested size: 426.79135pt x 242.79256pt.
 
-<PCB_board3.png, id=862, 480.29437pt x 407.27156pt>
+<PCB_board3.png, id=875, 480.29437pt x 407.27156pt>
 File: PCB_board3.png Graphic file (type png)
  <use PCB_board3.png>
-Package pdftex.def Info: PCB_board3.png used on input line 764.
+Package pdftex.def Info: PCB_board3.png used on input line 770.
 (pdftex.def)             Requested size: 426.79135pt x 361.91124pt.
-Package acronym Info: Label `acro:MSS' newly defined as it shall be overridden
-although it is yet undefined on input line 772.
 
-[29 <C:/Users/Inge Nikolai/Master-thesis/TLV3011_sch.png> <C:/Users/Inge Nikola
-i/Master-thesis/PCB_board1.png>] [30 <C:/Users/Inge Nikolai/Master-thesis/PCB_b
-oard2.png>] [31 <C:/Users/Inge Nikolai/Master-thesis/PCB_board3.png>]
-<SRAM_flow_chart.png, id=895, 103.94835pt x 63.95895pt>
+[29 <./TLV3011_sch.png> <./PCB_board1.png>] [30 <./PCB_board2.png>] [31 <./PCB_
+board3.png>]
+Package acronym Info: Label `acro:MSS' newly defined as it shall be overridden
+although it is yet undefined on input line 780.
+ <SRAM_flow_chart.png, id=904, 290.64584pt x 249.21104pt>
 File: SRAM_flow_chart.png Graphic file (type png)
 
 <use SRAM_flow_chart.png>
-Package pdftex.def Info: SRAM_flow_chart.png used on input line 790.
-(pdftex.def)             Requested size: 640.18703pt x 393.9434pt.
- <vhdl_adn.png, id=900, 1382.91656pt x 604.50844pt>
-File: vhdl_adn.png Graphic file (type png)
+Package pdftex.def Info: SRAM_flow_chart.png used on input line 804.
+(pdftex.def)             Requested size: 213.39568pt x 182.97588pt.
+ [32
 
-<use vhdl_adn.png>
-Package pdftex.def Info: vhdl_adn.png used on input line 802.
+]
+Package acronym Info: Label `acro:WSR' newly defined as it shall be overridden
+although it is yet undefined on input line 823.
+ [33 <./SRAM_flow_chart.png>]
+<Shift_register_design.png, id=932, 1446.40375pt x 571.13374pt>
+File: Shift_register_design.png Graphic file (type png)
+
+<use Shift_register_design.png>
+Package pdftex.def Info: Shift_register_design.png used on input line 830.
+(pdftex.def)             Requested size: 426.79135pt x 168.52657pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 837--838
+
+ []
+
+<vhdl_adn.png, id=933, 1382.91656pt x 604.50844pt>
+File: vhdl_adn.png Graphic file (type png)
+ <use vhdl_adn.png>
+Package pdftex.def Info: vhdl_adn.png used on input line 842.
 (pdftex.def)             Requested size: 640.18703pt x 279.84827pt.
- [32] [33 <C:/Users/Inge Nikolai/Master-thesis/SRAM_flow_chart.png>] [34 <C:/Us
-ers/Inge Nikolai/Master-thesis/vhdl_adn.png>]
-<labVIEW.jpg, id=918, 800.9925pt x 446.41782pt>
+ [34 <./Shift_register_design.png>] [35 <./vhdl_adn.png>]
+<labVIEW.jpg, id=946, 800.9925pt x 446.41782pt>
 File: labVIEW.jpg Graphic file (type jpg)
  <use labVIEW.jpg>
-Package pdftex.def Info: labVIEW.jpg used on input line 817.
+Package pdftex.def Info: labVIEW.jpg used on input line 857.
 (pdftex.def)             Requested size: 426.79135pt x 237.8673pt.
- [35 <C:/Users/Inge Nikolai/Master-thesis/labVIEW.jpg>]
-<OCL.png, id=930, 638.385pt x 536.0025pt>
+ [36 <./labVIEW.jpg>] <OCL.png, id=958, 638.385pt x 536.0025pt>
 File: OCL.png Graphic file (type png)
  <use OCL.png>
-Package pdftex.def Info: OCL.png used on input line 842.
+Package pdftex.def Info: OCL.png used on input line 882.
 (pdftex.def)             Requested size: 227.61696pt x 199.1684pt.
 
-<experiment_setup.jpg, id=931, 395.22656pt x 207.02344pt>
+<experiment_setup.jpg, id=959, 395.22656pt x 207.02344pt>
 File: experiment_setup.jpg Graphic file (type jpg)
 
 <use experiment_setup.jpg>
-Package pdftex.def Info: experiment_setup.jpg used on input line 870.
+Package pdftex.def Info: experiment_setup.jpg used on input line 910.
 (pdftex.def)             Requested size: 213.39568pt x 111.77834pt.
 
-<experiment_area.jpg, id=932, 3661.68pt x 2746.26pt>
+<experiment_area.jpg, id=960, 3661.68pt x 2746.26pt>
 File: experiment_area.jpg Graphic file (type jpg)
  <use experiment_area.jpg>
-Package pdftex.def Info: experiment_area.jpg used on input line 879.
+Package pdftex.def Info: experiment_area.jpg used on input line 919.
 (pdftex.def)             Requested size: 426.79135pt x 320.06656pt.
 
-[36 <C:/Users/Inge Nikolai/Master-thesis/OCL.png>] [37 <C:/Users/Inge Nikolai/M
-aster-thesis/experiment_setup.jpg> <C:/Users/Inge Nikolai/Master-thesis/experim
-ent_area.jpg>]
+[37 <./OCL.png>] [38 <./experiment_setup.jpg> <./experiment_area.jpg>]
 Package acronym Info: Label `acro:DUT' newly defined as it shall be overridden
-although it is yet undefined on input line 890.
+although it is yet undefined on input line 930.
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--892
+Underfull \hbox (badness 10000) in paragraph at lines 932--932
 []|\OT1/cmr/m/n/12 TPS51200, MIC69302WU, SN74AVCB164245,
  []
 
-[38] <SRAM_flowchart.png, id=971, 256.70906pt x 567.62062pt>
+[39] <SRAM_flowchart.png, id=999, 256.70906pt x 567.62062pt>
 File: SRAM_flowchart.png Graphic file (type png)
 
 <use SRAM_flowchart.png>
-Package pdftex.def Info: SRAM_flowchart.png used on input line 931.
+Package pdftex.def Info: SRAM_flowchart.png used on input line 971.
 (pdftex.def)             Requested size: 113.81017pt x 227.62451pt.
- <SRAM_labview.png, id=976, 986.18437pt x 610.53094pt>
-File: SRAM_labview.png Graphic file (type png)
 
-<use SRAM_labview.png>
-Package pdftex.def Info: SRAM_labview.png used on input line 940.
+<SRAM_labview.png, id=1004, 986.18437pt x 610.53094pt>
+File: SRAM_labview.png Graphic file (type png)
+ <use SRAM_labview.png>
+Package pdftex.def Info: SRAM_labview.png used on input line 980.
 (pdftex.def)             Requested size: 426.79135pt x 264.21869pt.
- [39 <C:/Users/Inge Nikolai/Master-thesis/SRAM_flowchart.png>]
+
+[40 <./SRAM_flowchart.png>]
 Package acronym Info: Label `acro:PM-tube' newly defined as it shall be overrid
 den
-although it is yet undefined on input line 950.
- [40 <C:/Users/Inge Nikolai/Master-thesis/SRAM_labview.png>]
-<XY_front.jpg, id=996, 3661.68pt x 2746.26pt>
+although it is yet undefined on input line 990.
+ [41 <./SRAM_labview.png>]
+<XY_front.jpg, id=1024, 3661.68pt x 2746.26pt>
 File: XY_front.jpg Graphic file (type jpg)
  <use XY_front.jpg>
-Package pdftex.def Info: XY_front.jpg used on input line 963.
+Package pdftex.def Info: XY_front.jpg used on input line 1003.
 (pdftex.def)             Requested size: 209.1301pt x 156.80663pt.
 
-<XY_back.jpg, id=997, 3661.68pt x 2746.26pt>
+<XY_back.jpg, id=1025, 3661.68pt x 2746.26pt>
 File: XY_back.jpg Graphic file (type jpg)
  <use XY_back.jpg>
-Package pdftex.def Info: XY_back.jpg used on input line 968.
+Package pdftex.def Info: XY_back.jpg used on input line 1008.
 (pdftex.def)             Requested size: 209.1301pt x 156.80663pt.
- [41 <C:/Users/Inge Nikolai/Master-thesis/XY_front.jpg> <C:/Users/Inge Nikolai/
-Master-thesis/XY_back.jpg>] [42] [43]
-Overfull \hbox (61.0887pt too wide) in paragraph at lines 1003--1008
+ [42 <./XY_front.jpg> <./XY_back.jpg>] [43] [44]
+Overfull \hbox (61.0887pt too wide) in paragraph at lines 1043--1048
 \OT1/cmr/m/n/12 tested the first time are: $\OML/cmm/m/it/12 TPS\OT1/cmr/m/n/12
  51200[]\OML/cmm/m/it/12 ; MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[]; SN\OT
 1/cmr/m/n/12 74\OML/cmm/m/it/12 AVCB\OT1/cmr/m/n/12 164245[]\OML/cmm/m/it/12 ; 
@@ -1070,211 +1072,195 @@ SN\OT1/cmr/m/n/12 74\OML/cmm/m/it/12 AVC\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 T\OT1
  []
 
 
-Overfull \hbox (191.72568pt too wide) in paragraph at lines 1003--1008
-$\OML/cmm/m/it/12 ADN\OT1/cmr/m/n/12 2814\OML/cmm/m/it/12 ; MAX\OT1/cmr/m/n/12 
-3748\OML/cmm/m/it/12 ; SY\OT1/cmr/m/n/12 89831\OML/cmm/m/it/12 U[]; TPS\OT1/cmr
-/m/n/12 51200[]\OML/cmm/m/it/12 ; MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[]
-; SN\OT1/cmr/m/n/12 74\OML/cmm/m/it/12 AVCB\OT1/cmr/m/n/12 164245[]\OML/cmm/m/i
-t/12 ; SN\OT1/cmr/m/n/12 74\OML/cmm/m/it/12 AVC\OT1/cmr/m/n/12 2\OML/cmm/m/it/1
-2 T\OT1/cmr/m/n/12 245[]\OML/cmm/m/it/12 ; QS\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 
-VH\OT1/cmr/m/n/12 257[]$.
+Overfull \hbox (191.72568pt too wide) in paragraph at lines 1043--1048
+\OML/cmm/m/it/12 ADN\OT1/cmr/m/n/12 2814\OML/cmm/m/it/12 ; MAX\OT1/cmr/m/n/12 3
+748\OML/cmm/m/it/12 ; SY\OT1/cmr/m/n/12 89831\OML/cmm/m/it/12 U[]; TPS\OT1/cmr/
+m/n/12 51200[]\OML/cmm/m/it/12 ; MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[];
+ SN\OT1/cmr/m/n/12 74\OML/cmm/m/it/12 AVCB\OT1/cmr/m/n/12 164245[]\OML/cmm/m/it
+/12 ; SN\OT1/cmr/m/n/12 74\OML/cmm/m/it/12 AVC\OT1/cmr/m/n/12 2\OML/cmm/m/it/12
+ T\OT1/cmr/m/n/12 245[]\OML/cmm/m/it/12 ; QS\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 V
+H\OT1/cmr/m/n/12 257[]$.
  []
 
-[44] <flux_all_test1.jpg, id=1048, 1172.12906pt x 641.39626pt>
+[45] <flux_all_test1.jpg, id=1077, 1172.12906pt x 641.39626pt>
 File: flux_all_test1.jpg Graphic file (type jpg)
 
 <use flux_all_test1.jpg>
-Package pdftex.def Info: flux_all_test1.jpg used on input line 1085.
+Package pdftex.def Info: flux_all_test1.jpg used on input line 1125.
 (pdftex.def)             Requested size: 426.79135pt x 233.53514pt.
 
-<Flux_vs_time_all.jpg, id=1049, 1172.88188pt x 644.4075pt>
+<Flux_vs_time_all.jpg, id=1078, 1172.88188pt x 644.4075pt>
 File: Flux_vs_time_all.jpg Graphic file (type jpg)
 
 <use Flux_vs_time_all.jpg>
-Package pdftex.def Info: Flux_vs_time_all.jpg used on input line 1092.
+Package pdftex.def Info: Flux_vs_time_all.jpg used on input line 1132.
 (pdftex.def)             Requested size: 426.79135pt x 234.48407pt.
- [45] [46 <C:/Users/Inge Nikolai/Master-thesis/flux_all_test1.jpg> <C:/Users/In
-ge Nikolai/Master-thesis/Flux_vs_time_all.jpg>]
-<current_voltage_tps.jpg, id=1065, 563.10374pt x 421.575pt>
+ [46] [47 <./flux_all_test1.jpg> <./Flux_vs_time_all.jpg>] <current_voltage_tps
+.jpg, id=1094, 563.10374pt x 421.575pt>
 File: current_voltage_tps.jpg Graphic file (type jpg)
 
 <use current_voltage_tps.jpg>
-Package pdftex.def Info: current_voltage_tps.jpg used on input line 1111.
+Package pdftex.def Info: current_voltage_tps.jpg used on input line 1151.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_voltage_mic.jpg, id=1069, 563.10374pt x 421.575pt>
+<current_voltage_mic.jpg, id=1098, 563.10374pt x 421.575pt>
 File: current_voltage_mic.jpg Graphic file (type jpg)
 
 <use current_voltage_mic.jpg>
-Package pdftex.def Info: current_voltage_mic.jpg used on input line 1128.
+Package pdftex.def Info: current_voltage_mic.jpg used on input line 1168.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_volt_dose_MIC.jpg, id=1070, 563.10374pt x 421.575pt>
+<current_volt_dose_MIC.jpg, id=1099, 563.10374pt x 421.575pt>
 File: current_volt_dose_MIC.jpg Graphic file (type jpg)
 
 <use current_volt_dose_MIC.jpg>
-Package pdftex.def Info: current_volt_dose_MIC.jpg used on input line 1134.
+Package pdftex.def Info: current_volt_dose_MIC.jpg used on input line 1174.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [47 <C:/Users/Inge Nikolai/Master-thesis/current_voltage_tps.jpg>] <current_42
-45.jpg, id=1077, 563.10374pt x 421.575pt>
+ [48 <./current_voltage_tps.jpg>]
+<current_4245.jpg, id=1106, 563.10374pt x 421.575pt>
 File: current_4245.jpg Graphic file (type jpg)
-
-<use current_4245.jpg>
-Package pdftex.def Info: current_4245.jpg used on input line 1153.
+ <use current_4245.jpg>
+Package pdftex.def Info: current_4245.jpg used on input line 1193.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_dose_42452.jpg, id=1078, 563.10374pt x 421.575pt>
+<current_dose_42452.jpg, id=1107, 563.10374pt x 421.575pt>
 File: current_dose_42452.jpg Graphic file (type jpg)
 
 <use current_dose_42452.jpg>
-Package pdftex.def Info: current_dose_42452.jpg used on input line 1159.
+Package pdftex.def Info: current_dose_42452.jpg used on input line 1199.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [48 <C:/Users/Inge Nikolai/Master-thesis/current_voltage_mic.jpg> <C:/Users/In
-ge Nikolai/Master-thesis/current_volt_dose_MIC.jpg> <C:/Users/Inge Nikolai/Mast
-er-thesis/current_4245.jpg> <C:/Users/Inge Nikolai/Master-thesis/current_dose_4
-2452.jpg>]
-<current_t245.jpg, id=1084, 563.10374pt x 421.575pt>
+ [49 <./current_voltage_mic.jpg> <./current_volt_dose_MIC.jpg> <./current_4245.
+jpg> <./current_dose_42452.jpg>]
+<current_t245.jpg, id=1113, 563.10374pt x 421.575pt>
 File: current_t245.jpg Graphic file (type jpg)
  <use current_t245.jpg>
-Package pdftex.def Info: current_t245.jpg used on input line 1178.
+Package pdftex.def Info: current_t245.jpg used on input line 1218.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_dose_t2452.jpg, id=1085, 563.10374pt x 421.575pt>
+<current_dose_t2452.jpg, id=1114, 563.10374pt x 421.575pt>
 File: current_dose_t2452.jpg Graphic file (type jpg)
 
 <use current_dose_t2452.jpg>
-Package pdftex.def Info: current_dose_t2452.jpg used on input line 1184.
+Package pdftex.def Info: current_dose_t2452.jpg used on input line 1224.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- <current_q.jpg, id=1086, 563.10374pt x 421.575pt>
+ <current_q.jpg, id=1115, 563.10374pt x 421.575pt>
 File: current_q.jpg Graphic file (type jpg)
 
 <use current_q.jpg>
-Package pdftex.def Info: current_q.jpg used on input line 1203.
+Package pdftex.def Info: current_q.jpg used on input line 1243.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- <current_dose_q2.jpg, id=1087, 563.10374pt x 421.575pt>
+ <current_dose_q2.jpg, id=1116, 563.10374pt x 421.575pt>
 File: current_dose_q2.jpg Graphic file (type jpg)
 
 <use current_dose_q2.jpg>
-Package pdftex.def Info: current_dose_q2.jpg used on input line 1209.
+Package pdftex.def Info: current_dose_q2.jpg used on input line 1249.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [49 <C:/Users/Inge Nikolai/Master-thesis/current_t245.jpg> <C:/Users/Inge Niko
-lai/Master-thesis/current_dose_t2452.jpg> <C:/Users/Inge Nikolai/Master-thesis/
-current_q.jpg> <C:/Users/Inge Nikolai/Master-thesis/current_dose_q2.jpg>] <curr
-ent_sy.jpg, id=1096, 563.10374pt x 421.575pt>
+ [50 <./current_t245.jpg> <./current_dose_t2452.jpg> <./current_q.jpg> <./curre
+nt_dose_q2.jpg>]
+<current_sy.jpg, id=1125, 563.10374pt x 421.575pt>
 File: current_sy.jpg Graphic file (type jpg)
-
-<use current_sy.jpg>
-Package pdftex.def Info: current_sy.jpg used on input line 1228.
+ <use current_sy.jpg>
+Package pdftex.def Info: current_sy.jpg used on input line 1268.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- <current_dose_SY2.jpg, id=1097, 563.10374pt x 421.575pt>
+
+<current_dose_SY2.jpg, id=1126, 563.10374pt x 421.575pt>
 File: current_dose_SY2.jpg Graphic file (type jpg)
 
 <use current_dose_SY2.jpg>
-Package pdftex.def Info: current_dose_SY2.jpg used on input line 1234.
+Package pdftex.def Info: current_dose_SY2.jpg used on input line 1274.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 Package acronym Info: Label `acro:UART' newly defined as it shall be overridden
 
-although it is yet undefined on input line 1248.
- [50 <C:/Users/Inge Nikolai/Master-thesis/current_sy.jpg> <C:/Users/Inge Nikola
-i/Master-thesis/current_dose_SY2.jpg>]
-<current_dose_ADN_t1.jpg, id=1108, 563.10374pt x 421.575pt>
+although it is yet undefined on input line 1288.
+ [51 <./current_sy.jpg> <./current_dose_SY2.jpg>]
+<current_dose_ADN_t1.jpg, id=1137, 563.10374pt x 421.575pt>
 File: current_dose_ADN_t1.jpg Graphic file (type jpg)
 
 <use current_dose_ADN_t1.jpg>
-Package pdftex.def Info: current_dose_ADN_t1.jpg used on input line 1259.
+Package pdftex.def Info: current_dose_ADN_t1.jpg used on input line 1299.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<current_dose_ADN_t2.jpg, id=1109, 563.10374pt x 421.575pt>
+<current_dose_ADN_t2.jpg, id=1138, 563.10374pt x 421.575pt>
 File: current_dose_ADN_t2.jpg Graphic file (type jpg)
 
 <use current_dose_ADN_t2.jpg>
-Package pdftex.def Info: current_dose_ADN_t2.jpg used on input line 1265.
+Package pdftex.def Info: current_dose_ADN_t2.jpg used on input line 1305.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<error_dose_ADN_t1.jpg, id=1110, 563.10374pt x 421.575pt>
+<error_dose_ADN_t1.jpg, id=1139, 563.10374pt x 421.575pt>
 File: error_dose_ADN_t1.jpg Graphic file (type jpg)
 
 <use error_dose_ADN_t1.jpg>
-Package pdftex.def Info: error_dose_ADN_t1.jpg used on input line 1276.
+Package pdftex.def Info: error_dose_ADN_t1.jpg used on input line 1316.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<error_dose_ADN_t2.jpg, id=1111, 563.10374pt x 421.575pt>
+<error_dose_ADN_t2.jpg, id=1140, 563.10374pt x 421.575pt>
 File: error_dose_ADN_t2.jpg Graphic file (type jpg)
 
 <use error_dose_ADN_t2.jpg>
-Package pdftex.def Info: error_dose_ADN_t2.jpg used on input line 1282.
+Package pdftex.def Info: error_dose_ADN_t2.jpg used on input line 1322.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [51 <C:/Users/Inge Nikolai/Master-thesis/current_dose_ADN_t1.jpg> <C:/Users/In
-ge Nikolai/Master-thesis/current_dose_ADN_t2.jpg> <C:/Users/Inge Nikolai/Master
--thesis/error_dose_ADN_t1.jpg> <C:/Users/Inge Nikolai/Master-thesis/error_dose_
-ADN_t2.jpg>]
-<current_dose_MAX.jpg, id=1119, 563.10374pt x 421.575pt>
+ [52 <./current_dose_ADN_t1.jpg> <./current_dose_ADN_t2.jpg> <./error_dose_ADN_
+t1.jpg> <./error_dose_ADN_t2.jpg>]
+<current_dose_MAX.jpg, id=1149, 563.10374pt x 421.575pt>
 File: current_dose_MAX.jpg Graphic file (type jpg)
 
 <use current_dose_MAX.jpg>
-Package pdftex.def Info: current_dose_MAX.jpg used on input line 1301.
+Package pdftex.def Info: current_dose_MAX.jpg used on input line 1341.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
 
-<error_dose_MAX.jpg, id=1120, 563.10374pt x 421.575pt>
+<error_dose_MAX.jpg, id=1150, 563.10374pt x 421.575pt>
 File: error_dose_MAX.jpg Graphic file (type jpg)
 
 <use error_dose_MAX.jpg>
-Package pdftex.def Info: error_dose_MAX.jpg used on input line 1307.
+Package pdftex.def Info: error_dose_MAX.jpg used on input line 1347.
 (pdftex.def)             Requested size: 209.1301pt x 156.56567pt.
- [52 <C:/Users/Inge Nikolai/Master-thesis/current_dose_MAX.jpg> <C:/Users/Inge 
-Nikolai/Master-thesis/error_dose_MAX.jpg>] [53]
-[54] [55] [56] [57]
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.bbl"
-[58])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1469.
- [59]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1469.
+ [53 <./current_dose_MAX.jpg> <./error_dose_MAX.jpg>]
+[54] [55] [56] [57] [58] (./Master_thesis_Inge_Nikolai_Torsvik.bbl [59])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1509.
 
-("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux"
-("C:\Users\Inge Nikolai\Master-thesis\acronyms.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1469.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1469.
+[60]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1509.
+ (./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1509.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1509.
 
 Package rerunfilecheck Info: File `Master_thesis_Inge_Nikolai_Torsvik.out' has 
 not changed.
-(rerunfilecheck)             Checksum: 3EAB2EC8F2C56318E06D8DDC0530FF09;4551.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1469.
+(rerunfilecheck)             Checksum: 0184A7F9C14F6645450285D4FDDE35C1;4490.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1509.
  ) 
 Here is how much of TeX's memory you used:
- 11894 strings out of 493921
- 181815 string characters out of 3144856
- 287628 words of memory out of 3000000
- 14608 multiletter control sequences out of 15000+200000
+ 11611 strings out of 495059
+ 176022 string characters out of 3182031
+ 289605 words of memory out of 3000000
+ 14207 multiletter control sequences out of 15000+200000
  13900 words of font info for 49 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 51i,11n,73p,800b,558s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (68 pages, 21492626 by
+ 14 hyphenation exceptions out of 8191
+ 51i,11n,74p,800b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (69 pages, 21557047 by
 tes).
 PDF statistics:
- 1310 PDF objects out of 1440 (max. 8388607)
- 294 named destinations out of 1000 (max. 500000)
- 759 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1345 PDF objects out of 1440 (max. 8388607)
+ 1177 compressed objects within 12 object streams
+ 301 named destinations out of 1000 (max. 500000)
+ 764 words of extra memory for PDF output out of 10000 (max. 10000000)
 

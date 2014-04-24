@@ -17,6 +17,12 @@ R.C. Baumann.
 \newblock {\em Device and Materials Reliability, IEEE Transactions on},
   5(3):305--316, Sept 2005.
 
+\bibitem{Berg}
+Melanie Berg.
+\newblock Field programmable gate array (fpga) single event effect (see)
+  radiation testing.
+\newblock February 2012.
+
 \bibitem{website:DAQ}
 National~Instruments Corporation.
 \newblock User guide and specifications ni usb-6008/6009, April 2014.
@@ -49,7 +55,7 @@ Glenn~F. Knoll.
 \newblock {\em Radiation Detector and Measurement}.
 \newblock John Wiley and Sons, 3 edition edition, 2000.
 
-\bibitem{Weste_harris}
+\bibitem{CMOS}
 David M.~Harris Neil H. E.~Weste.
 \newblock {\em CMOS VLSI Design - A Circuit and System Perspective}.
 \newblock Addison-Wesley, 4 edition edition, 2011.
