@@ -837,7 +837,10 @@ For our tests we made 4 shift-register chains, with 4 inverters in between each 
 \footnotetext[4]{An n-bit Look-Up Table can encode any n-bit Boolean function by modeling such functions as truth tables}
 
 \paragraph{Single Event Latchup and PLL} $\newline$
-
+A \acf{SET} is a short circuit between power and ground. If that happens on any spot on the chip, an increase in the supply current can be detected. So the way a \ac{SET} will be checked, is by constantly checking for increase in current consumption on the chip. A \ac{SET} will normally destroy a chip, if not counted by shutting power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See section \ref{current_measurement_board} for more information on the board.
+ 
+The PLLs on the SF2 has a lock signal which checks if the output of the PLL is in sync with the input. If it is in sync, the lock signal is high, if not, its low. 
+To check if we have a reliable clock signal, the lock signal was sent to a I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
 
 \begin{figure}[!htbp]
   \centering
@@ -847,6 +850,18 @@ For our tests we made 4 shift-register chains, with 4 inverters in between each 
 \end{figure}
 
 \FloatBarrier
+
+\subsubsection{Current measurement board}
+\label{current_measurement_board}
+To measure the current into the SmartFusion2 starter-kit, a \ac{PCB} was made with a microcontroller, serial to USB converter (FTDI chip), some debugging LEDs, power switch, and all the necessary electronics to make all this work together. The microcontroller used is a Texas Instruments MSP430AFE253, that is a 16-bit microcontroller with internal 24-bit \ac{ADC}.
+It has an internal frequency of up to 12 MHz, and support high frequency crystal up to 16 Mhz.
+Two types of serial communication interface are available, that is USART and SPI, which is selectable in software.
+Since the microcontroller only has a 16-bit architecture, only 16-bit of the \ac{ADC} is accessible at the time. The microcontroller has 3 differential \ac{ADC} inputs
+
+
+To measure current for the SF2 starter-kit a small resistor of 0.1 Ohm was placed in series with the supply signal on the starter-kit, one for the 1.2 V supply voltage, and one for the 3.3 V supply voltage. The voltage over this resistor was measured with the \ac{ADC}, and the \ac{ADC} data was sent over USART port to the serial to USB converter, and further to a computer. On the computer a labVIEW program was set up to receive data through the serial port, and when data is recieved, the \ac{ADC} value and the known resistor value is used to calculate the current. The current value is constantly saved and exposed for a viewer. The 24-bit \ac{ADC} on the MSP430 microcontroller has 3 differential inputs, which means voltage over three resistors can be measured.
+
+During a radiation test, the two 
 
 \subsubsection{Software}
 To monitor the outputs and control the inputs and the supply voltage, a simple labVIEW program was made for each of the different \ac{PCB}s.
