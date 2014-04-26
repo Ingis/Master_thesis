@@ -888,20 +888,27 @@ If the current on one of the supply voltages goes over a certain threshold, the 
 Under a radiation test, some equipment are needed. In the following sections some of the equipment used under a radiation test are presented.
 
 \subsubsection{Neutron dosimeter}$\newline$
-The Neutron dosimeter is a \ac{PCB} with a ProASIC FPGA and four 16 Mbit Cypress SRAM chips named CY62167DV30LL-55ZXI. These boards are made by Arild Velure, as part of his master thesis \cite{arild_master}. It is used as a radiation monitor by measuring SEU on the SRAM.
+The Neutron dosimeter boards are made by Arild Velure, as part of his master thesis \cite{arild_master}. It is a relative radiation monitor.
+By measuring \ac{SEU} on the SRAM, we are able to calculate the fluence\footnote{Fluence is the total number of particles that intersect a unit area in a specific time interval of interest, and has units of $particle/m^{-2}$ (number of particles per meter squared)} of the beam.
 
-The method of detecting an Single Event Upset (SEU) in a \ac{SRAM} is rather straight
+The Neutron dosimeter is a \ac{PCB} with a flash-based ProASIC FPGA, four 16 Mbit Cypress SRAM chips (CY62167DV30LL-55ZXI), connections and supporting electronics.
+The \ac{FPGA} is designed with RS485 two-way communication which makes it possible to edit firmware, send commands and get data out.
+Communication to a computer is done through a Opal Kelly XEM3001 board, which converts from RS485 to USB.
+A labVIEW program is following the board. Here we are able to reset data, do some basic settings, and monitor data.
+The program also saves data onto the disk.
+
+The approach for detecting an Single Event Upset (SEU) in the \ac{SRAM} is rather straight
 forward, as can be seen in the flow diagram of figure \ref{flowchart}. There is an initial startup
 phase where a known pattern is written to all the addresses in the \ac{SRAM}. When
 the startup phase is done, the value from the first address is read back and compared
-to a known value by XORing the known value with the one read. If they are not equal a SEU has occurred,
-and a the XOR-function will go high and a 1 will be added to a SEU counter.
+to the known value, and one or more of the bits are not equal a \ac{SEU} has occurred, and a counter will be incremented for each bit error.
 The correct value is then written back to the address and the system moves on to the next address.
   
-A checkerboard pattern, a pattern of alternating ones and zeros, is used when writing
+A checkerboard pattern of alternating ones and zeros, is used when writing
 to the \ac{SRAM}. To check for stuck bits, the bit pattern in the whole address space is inverted after each read. 
 
-From earlier experiment with the \ac{SRAM} chip \cite{arild_master}, the cross section(the probability that an incoming particle will induce an SEU) is known, and is found to be to be $\unit{1.14\e{-6}}{\centi\square\meter}$.
+Allot of experiment has been done with the Neutron dosimeter, and the cross section(the probability that a incoming particle will induce an SEU) is known, and is found to be to be $\unit{1.14\e{-6}}{\centi\square\meter}$ for protons.
+
 By counting number of SEU during an experiment, we can by dividing on the cross section find how many particles that hits the chip.
 The \ac{SRAM} board that we used consist of 4 \ac{SRAM} chips, a flash based \ac{FPGA}, connections and supporting electronics.
 The \ac{FPGA} on the \ac{SRAM} PCB is designed with RS485 two-way communication which makes it possible to edit firmware as well as sending data out. 
@@ -915,7 +922,7 @@ The \ac{SRAM} board also had an optical input for scintillator counts, so we cou
   \label{flowchart}
 \end{figure}
 
-In figure \ref{labview_SRAM} bellow you can see how the labVIEW program looked like. From here we can monitor SEU on all the 4 \ac{SRAM} cells, see scintillator counts, reset counters, see time from start as well as other things. \ac{SRAM}1-10 as you can see on the left side, is different \ac{SRAM}-board, the board we used was SRAM6.
+In figure \ref{labview_SRAM} bellow you can see how the labVIEW program looked like. From here we can monitor SEU on all the 4 \ac{SRAM} chips, see scintillator counts, reset counters, see time from start as well as other things. \ac{SRAM}1-10 as you can see on the left side, is different \ac{SRAM}-board, the board we used was SRAM6.
 
 \begin{figure}[!htbp]
   \centering
