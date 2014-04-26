@@ -559,11 +559,11 @@ Therefore we could expect a dose of 1-2 $\kilo$Rad during the time it will be us
 \FloatBarrier
 \newpage
 
-\section{The Test Chips and Preparations for Testing}
+\section{Preparations for Testing}
 Testing \acfp{IC} is a thing that has been done before when it comes to the design of electronics that are going to be installed in the \ac{LHC} at CERN.
 Much of the work presented in this thesis is based on experience from previous thesis \cite{bjorn_master} \cite{roed_doctor} \cite{roed_master} \cite{arild_master}.
 
-\subsection{The Integrated Circuits Which Where Tested}
+\subsection{The \acfp{IC} Which Where Tested}
 The \ac{IC} that was tested through this thesis are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210, TLV3011 and SF2 M2S050-FG896.
 What each of these are, and how these was tested will be discussed in the following sections.
 
@@ -711,10 +711,10 @@ The signal from the optical transceiver is a Manchester coded signal consisting 
 There are a few differences between the two \ac{IC}s. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock return function as as ADN2814 has.
 Both works for our specific use, therefore we will see from the test results which one will be used.
 
-The two limiting amplifiers (ADN2814 and MAX3748) required a more advance inputs, and therefore a \acf{SF2} starter kit are going to be used in addition to labVIEW.
-The \ac{SF2} board was used to code a clock and data signal into a differential Manchester signal and to decode the differential Manchester signal back to clock and data after it has gone through the IC.
+The two limiting amplifiers (ADN2814 and MAX3748) required a more advance input than the DAQ board could give us, and therefore a \acf{SF2} starter kit was used in addition to the DAQ.
+The \ac{SF2} board was used to code a clock and data signal into a differential Manchester signal and to decode the differential Manchester signal back to clock and data after it has gone through the \acp{IC}.
 The \ac{SF2} was also used to compare the original signal with the signal coming out from the IC.
-A picture of the Smart Design can be seen in figure \ref{SF2}. This consist of IP-cells from Microsemi and some VHDL code that has been made.
+
 
 \begin{figure}[!htbp]
   \centering
@@ -730,6 +730,13 @@ A picture of the Smart Design can be seen in figure \ref{SF2}. This consist of I
   \label{ADN2814_sch}
 \end{figure}
 \FloatBarrier
+
+% \begin{figure}[!htbp]
+%   \centering
+%   \includegraphics[width=1.5\textwidth, angle =270]{vhdl_adn.png}
+%   \caption{Smart Design for ADN2814}
+%   \label{SF2}
+% \end{figure}
 
 \subsubsection{INA210}
 INA210 is a so called Current-Shunt Monitor, that is a \ac{IC} that is used to amplify small current signal into higher voltage signal. This is done by sending the signal that you want to measure current of, over a small resistor, typical smaller than 1 Ohm. Then a voltage will be formed over this resistor and will be amplified through the \ac{IC}. This \ac{IC} comes in a family of 5 with different amplifications, the one we are using has an amplification of 200 V/V.
@@ -751,44 +758,63 @@ This is a comparator with a built in voltage reference of 1.242 V. It supports l
   \label{TLV3011_sch}
 \end{figure}
 
+\subsubsection{All the test boards}
+In figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you can see how the PCB boards looked like. 
+
+
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{PCB_board1.png}
+  \includegraphics[width=0.75\textwidth]{PCB_board1.png}
   \caption{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
   \label{PCB_board1}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{PCB_board2.png}
+  \includegraphics[width=0.75\textwidth]{PCB_board2.png}
   \caption{Picture of PCB boards, from left we have, SN74AVC2T245, QS3VH257 and SY89831U}
   \label{PCB_board2}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{PCB_board3.png}
+  \includegraphics[width=0.75\textwidth]{PCB_board3.png}
   \caption{Picture of PCB boards, from left we have, ADN2814, MAX3748. plus an example of a back side QS3VH257, you can see the mark at the top indicating the center of the \ac{IC}}
   \label{PCB_board3}
 \end{figure}
 
 \FloatBarrier
 
-\subsubsection{SmartFusion2}
-\acf{SF2} \ac{SoC} \ac{FPGA} integrate a flash-based \ac{FPGA}\footnote{Flash based FPGA means that configuration registers is saved in flash memory cells.
-Compared to SRAM-based FPGA, flash based FPGA is much more robust against radiation.},
+\subsection{Software}
+For each of the different test board that was made a simple labVIEW program was made, special designed to supply and monitor a specific \ac{IC} under radiation.
+In these program time from start, current consumption and the status of the output signal (or the output voltage for the regulators) can be measured and monitored.
+Data is constantly saved to disk.
+
+In figure \ref{labVIEW} you can see an example of a labVIEW program used for SN74AVC2T245.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{labVIEW.jpg}
+  \caption{LabVIEW program for SN74AVC2T245}
+  \label{labVIEW}
+\end{figure}
+
+\subsection{SmartFusion2}
+\acf{SF2} \ac{SoC} \ac{FPGA} integrate a flash-based \ac{FPGA}\footnote{Flash-based FPGA means that configuration registers is saved in flash memory cells.
+Compared to SRAM-based FPGA where configuration is saved in SRAM cells, flash-based FPGA is much more tolerant against radiation.},
 an ARM Cortex-M3 processor built in a \acf{MSS} and high-performance communication interfaces on a single chip.
 It is also said to have immune configuration memory, as well as several other radiation tolerance measures implemented.
-We are going to use the package M2S050-FG896, with a FPGA of 56 340 logic elements, 6 PLLs, 1314 kb RAM, 8 SERDES\footnote{Serializer/Deserializer (SERDES) convert data between serial data and parallel interfaces in both direction} lanes, and 377 user I/O.
+We are going to use the package M2S050-FG896, with a FPGA of 56 340 logic elements, 6 PLLs, 1314 kb SRAM, 8 SERDES\footnote{Serializer/Deserializer (SERDES) convert data between serial data and parallel interfaces in both direction} lanes, and 377 user I/O.
 
-There are four things that we wanted to test on the SF2 chip. That is the internal SRAM blocks, the logical element, the PLLs and \acf{SEL} for the hole IC.
-How these will will be tested will be discussed in the following sections
+Everything one the \ac{SF2} that are going to be used in the design has to be tested in some way, unless it has been tested before, or are proven to be radiation intolerant.
+There are four things that we tested. That is the internal SRAM blocks, the logical element, the PLLs and \acf{SEL}. How these will will be tested will be discussed in the following sections. Other functionality was also tested like Ethernet, SERDES and Clock and data recovery, etc., but will not be discussed in this thesis.
 
-\paragraph{SRAM testing}$\newline$
+
+\subsubsection{SRAM test}$\newline$
 SRAM cells are as discussed in section \ref{SEU_Section}, sensitive for radiation. The SRAM memory aren't used for configuration register, as it was for the Xilinx FPGA on RCU1, and are therefore not as critical.
 But we still want to test how robust the SRAM cells are against radiation, so we can know how reliable these are if used.
 The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM block with a size of 1024 x 18 bits.
-Both micro SRAM blocks and large SRAM blocks are so called two port SRAM, which means that we can read and write at the same time.
+Both micro SRAM blocks and large SRAM blocks are so called two port SRAM, which means that we can access two addresses at the same time.
 
 The way the SRAM memory was tested is divided into 3 state in a state machine, this can be seen in block diagram in figure \ref{SRAM_flow_chart}.
 The first state is a reset state, where all values are set to its nominal value.
@@ -797,7 +823,7 @@ Read address is always set be one higher then read address.
 
 The next state is a initial state where all addresses are written to. Write data is switched opposite every address increment, so the written data is switched between 1010...1010 and 0101...0101 every other address. When the last bit is written to, the first bit is read. 
 
-The last state is a state where all of the addresses are written, read and compared through an endless loop. The written data is always opposite of the previous value written to that address. The state machine will stay in this state until a reset is pushed.
+The last state is a state where all of the addresses are written, read and compared through an endless loop. The written data to an address is always set to be opposite of the previous value written to that address. The state machine will stay in this state until a reset is pushed.
 
 \begin{figure}[!htbp]
   \centering
@@ -808,11 +834,12 @@ The last state is a state where all of the addresses are written, read and compa
 
 \FloatBarrier
 
-\paragraph{Test of the Logical element} $\newline$
+\subsubsection{Test of the Logical element} $\newline$
 A logical element consist of a 4 input Look-Up Table\footnotemark[4] and a separate flip-flop which can be used independently from the Look-Up Table.
 That means that we have 56 340 flip-flops and 56 340 Look-Up Tables available for our design.
 When a logical element is exposed to radiation, a \ac{SET} can occur all over the chip.
-If this happens in the logical element or in the interconnections between logical element, the transient current will normally just be there for a small amount of time, and then it will flat out, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or another node that may lead to a change of value at the input, and the input is then clocked out to the output, we would have a unwanted bit change or a so called \ac{SEU}.
+If this happens in the logical element or in the interconnections between logical element, the transient current will normally just be there for a small amount of time, and then it will flat out, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or a node that may lead to a change of value at the input, and the input is then clocked out to the output, we would have a unwanted bit change or a so called \ac{SEU}.
+\footnotetext[4]{An n-bit Look-Up Table can encode any n-bit Boolean function by modeling such functions as truth tables}
 
 % Where combinatoric logic circuits are circuits where the outputs are a function only independent on the present inputs, typical combinatoric functions are $AND, OR, XOR$ etc \cite{CMOS}.
 % Sequential logic is a type of logic where the output depends not only on the present value of its input signal but also on the past history of its inputs. This type of logic is again divided into asynchronous and synchronous logic. Asynchronous sequential logic the state of the output can change at any time in response to changing inputs. In synchronous logic the state of the output changes only at discrete times in response to a clock signal
@@ -821,11 +848,12 @@ The way we tested the logical element is based on \cite{Berg}, which has done a 
 A good overview of the design can be seen in figure \ref{Shift_register_design}.
 The idea is to make a long serial chain of flip-flops, otherwise referred to as a shift-register, where a transient can be picked up and make a \ac{SEU}.
 By adding a even number of inverters in between each flip-flop we increase the area where an transient can occur, without changing the logic.
-A known pattern is added to the input of the shift-register, this can be change depending on how advanced you want to be, but typical and easy pattern could be even other '1' and '0'.
-To be able to operate at high speed, we are using something called \ac{WSR}, which takes out the last n-bit of the shift register, and sends it out in parallel, with a frequency n times lower then original frequency. To test check the output for errors, the \ac{WSR} bits will be sent through the I/O-pins to another SF2 starter kit, hereafter referred to as the monitoring board, where data is checked by comparing with a known pattern.
-To be able to synchronize the two board, a reset signal and shift enable signal will be sent from the monitoring board to the test board, and a \ac{WSR} enable signal will be sent from the test board to the monitoring board.
+A known pattern is added to the input of the shift-register, this can be change depending on how advanced you want to be, but typical pattern could be even other '1' and '0'.
+To be able to operate at high speed, we are using something called \ac{WSR}, which takes out the last n-bit of the shift register, and sends it out in parallel, with a frequency n times lower than the original frequency. To check the outputs for errors, the \ac{WSR} bits will be sent through the I/O-pins to another SF2 starter kit, hereafter referred to as the monitoring board, where data is checked for errors.
+To be able to synchronize the two board, a reset signal and shift enable signal will be sent from the monitoring board to the test board,
+and a \ac{WSR} enable signal will be sent from the test board to the monitoring board.
 
-For our tests we made 4 shift-register chains, with 4 inverters in between each flip-flop and where each of the shift-register had a 4-bit \ac{WSR} output. The length of the shift-registers was set to 2000.  
+For our tests we made 4 shift-register chains, with 4 inverters in between each flip-flop and where each of the shift-register had a 4-bit \ac{WSR} output. The length of the shift-registers were set to 2000.
 
 \begin{figure}[!htbp]
   \centering
@@ -834,136 +862,33 @@ For our tests we made 4 shift-register chains, with 4 inverters in between each 
   \label{Shift_register_design}
 \end{figure}
 
-\footnotetext[4]{An n-bit Look-Up Table can encode any n-bit Boolean function by modeling such functions as truth tables}
-
-\paragraph{Single Event Latchup and PLL} $\newline$
+\subsubsection{Single Event Latchup and PLL} $\newline$
 A \acf{SET} is a short circuit between power and ground. If that happens on any spot on the chip, an increase in the supply current can be detected. So the way a \ac{SET} will be checked, is by constantly checking for increase in current consumption on the chip. A \ac{SET} will normally destroy a chip, if not counted by shutting power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See section \ref{current_measurement_board} for more information on the board.
  
 The PLLs on the SF2 has a lock signal which checks if the output of the PLL is in sync with the input. If it is in sync, the lock signal is high, if not, its low. 
 To check if we have a reliable clock signal, the lock signal was sent to a I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=1.5\textwidth, angle =270]{vhdl_adn.png}
-  \caption{Smart Design for ADN2814}
-  \label{SF2}
-\end{figure}
 
 \FloatBarrier
 
 \subsubsection{Current measurement board}
 \label{current_measurement_board}
-To measure the current into the SmartFusion2 starter-kit, a \ac{PCB} was made with a microcontroller, serial to USB converter (FTDI chip), some debugging LEDs, power switch, and all the necessary electronics to make all this work together. The microcontroller used is a Texas Instruments MSP430AFE253, that is a 16-bit microcontroller with internal 24-bit \ac{ADC}.
+To measure the current into the SmartFusion2 starter-kit, a \ac{PCB} was made with a microcontroller, serial to USB converter (FTDI chip), some debugging LEDs, power switch, and all the necessary electronics to make all this work together. The microcontroller used is a Texas Instruments MSP430AFE253. That is a 16-bit microcontroller with internal 24-bit \ac{ADC}.
 It has an internal frequency of up to 12 MHz, and support high frequency crystal up to 16 Mhz.
 Two types of serial communication interface are available, that is USART and SPI, which is selectable in software.
-Since the microcontroller only has a 16-bit architecture, only 16-bit of the \ac{ADC} is accessible at the time. The microcontroller has 3 differential \ac{ADC} inputs
+Since the microcontroller only has a 16-bit architecture, only 16-bit of the \ac{ADC} is accessible at a time. The microcontroller has 3 differential \ac{ADC} inputs, which means voltage over three resistors can be measured.
 
 
-To measure current for the SF2 starter-kit a small resistor of 0.1 Ohm was placed in series with the supply signal on the starter-kit, one for the 1.2 V supply voltage, and one for the 3.3 V supply voltage. The voltage over this resistor was measured with the \ac{ADC}, and the \ac{ADC} data was sent over USART port to the serial to USB converter, and further to a computer. On the computer a labVIEW program was set up to receive data through the serial port, and when data is recieved, the \ac{ADC} value and the known resistor value is used to calculate the current. The current value is constantly saved and exposed for a viewer. The 24-bit \ac{ADC} on the MSP430 microcontroller has 3 differential inputs, which means voltage over three resistors can be measured.
+To measure current for the SF2 starter-kit a small shunt resistor of 0.1 Ohm was placed in series with the supply signal on the starter-kit, one for the 1.2 V supply voltage, and one for the 3.3 V supply voltage. The voltage over this resistor was measured with the \ac{ADC}, and the \ac{ADC} data was sent over USART port to the serial to USB converter, and further to a computer. On the computer a labVIEW program was set up to receive data through the serial port, and when data is received, the \ac{ADC} value and the known resistor value is used to calculate the current. The current value is constantly saved and exposed for a viewer.
 
-During a radiation test, the two 
+The 3.3 V regulator on the SF2-starter kit has a enable signal, where a pull-up resistor to 5 V is placed, one of the outputs on the microcontroller is connected to this pin.
+If the current on one of the supply voltages goes over a certain threshold, the bit on the microcontroller is set to go low, resulting in turning the 3.3 V regulator on the SF2-starter kit off. The 3.3 V is used to power all other regulators, so by turning this regulator off, the whole starter-kit is power less. 
 
-\subsubsection{Software}
-To monitor the outputs and control the inputs and the supply voltage, a simple labVIEW program was made for each of the different \ac{PCB}s.
-In these program time from start, current consumption and the status of the output signal (or the output voltage for the regulators) can be measured and monitored.
-Data is constantly saved to disk.
-In figure \ref{labVIEW} you can see an example of a labVIEW program used for SN74AVC2T245.
+\subsection{Equipment used for testing}
+Under a radiation test, some equipment are needed. In the following sections some of the equipment used under a radiation test are presented.
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{labVIEW.jpg}
-  \caption{LabVIEW program for SN74AVC2T245}
-  \label{labVIEW}
-\end{figure}
-
-\FloatBarrier
-
-\section{Testing at \acf{OCL}}
-
-\subsection{About \ac{OCL}}
-Oslo cyclotron Laboratory is located at the Department of physics at the University of Oslo, and was opened in 1978. The cyclotron is of the type MC-35 and was made by Scanditronix AB from Sweden.
-This is the only accelerator in Norway for ionized atoms used in basic research.
-The cyclotron can accelerate protons, deuteron, $^3He$ and $^4He$, 
-with energies and intensities as seen in the table \ref{design requirements} bellow.
-A drawing of the lab can be seen bellow in figure \ref{OCL_fig}. 
-The laboratory is divided in tree; the control room, the inner experimental hall and the outer experimental hall.
-The cyclotron is placed in the inner hall, and a beam is sent through pipes to the outer hall.
-There is vacuum inside the cyclotron and the pipes, so that you should not suffer energy loss from collision with air molecules.
-With magnet you are able to regulate the beam to your desired pipe exit.
-There are also several cups put on the pipeline which makes it possible to block the beam.
-These can be used to stop the beam during an experiment, so you are able to go into the experimental area and do changes on your setup.
-When the cyclotron is running and the beam is on, you are not allowed to enter the inner experimental area.
- 
-\begin{figure}[!htbp]
-\centering
-\centerline{\includegraphics[height=7cm,width=8cm]{OCL.png}}
-\caption{Out-lay of the OCL}
-\label{OCL_fig}
-\end{figure}
-
-
-\begin{table}[!htbp]
- \centering
-\begin{tabular}{|l|l|l|}\hline
-Ionized beam particle type & Energy(${\mega\electronvolt}$) & Intensity($\micro\ampere$)  \\ \hline \hline
-Proton & 2-35 & 100 \\ \hline
-Deuteron & 4-18 & 100 \\ \hline
-$^3He$ &  6-47 & 50 \\ \hline 
-$^4He$  & 8-35 & 50 \\ \hline
-\end{tabular}
-\caption{Ionized beam particle data table}
-\label{design requirements}
-\end{table}
-
-\subsection{Experiment setup and equipment}
-
-The experiment setup was placed in the outer experimental hall in experimental area 2. The experimental setup as well as the equipment used can be found in the figure and table bellow.
-The equipment was kept in close to the same height around 140-150cm (so that we wouldn't have to think about three dimensions). Beam exit was in a height of 141.5cm.
-
-  \vspace{5mm}
-  
-\begin{figure}[!htbp]
-\centering
-  \centerline{\includegraphics[width=0.5\textwidth]{experiment_setup.jpg}}
-  \caption{Experimental setup seen from above}
-  \label{experiment_setup}
-\end{figure}%
-
-  \vspace{5mm}   
-  
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{experiment_area.jpg}
-  \caption{Picture of the experimental area}
-  \label{experiment_area}
-\end{figure}
-
-
-\newpage
-\begin{table}[!htbp]
- \centering
-\begin{tabular}{|l|p{10cm}|}\hline
-Equipment & Explanation  \\ \hline \hline
-Scintillator & A plastic scintillator with photomultiplier. Was used to measure relative radiation. We had two of these, one that was placed right under \acf{DUT} and one that was placed 75cm away from \ac{DUT}. We only used the one 75cm away during the experiment.   \\ \hline
-High voltage regulator & Voltage for the photomultiplier. 800V was used  \\ \hline
-8 test boards &  TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831U, ADN2814 and MAX3748 \\ \hline 
-SRAM-board  & A PCB board with 4 \ac{SRAM} cells that was used to characterise the beam and to measure scintillator counts \\ \hline
-SF2 starter kit & A starter kit board with the Smart Fusion 2(SF2) chip.  \\ \hline
-Computer  & A VPN connection was set on a computer inside the experimental hall, so that we were able to control the experiment from the control room. The computer was running LabView to control the experiment. Data was also saved on the computer\\ \hline
-USB DAQ  & Data acquisition board form National Instruments(NI). Used to establish analog and digital connection to the test boards and send data to the computer. \\ \hline
-Radiation film  & A film that reacts when radiated with protons. Used to identify the beam. \\ \hline
-Counting controller  & A device that counts either rising or falling edges of a signal. \\ \hline
-leveled laser  & This was used to pinpoint the center of the beam.\\ \hline
-Mirror & Used to reflect the laser beam to the backside of the test boards.\\ \hline
-XY-controller  & Connected to the computer so we can change the position of the test boards from outside the experimental area\\ \hline
-\end{tabular}
-\caption{Equipment used in the experiment}
-\label{equipment}
-\end{table}
-
-\subsection{Measurement equipment and test boards}
-\subsubsection{\ac{SRAM} board}
-A \ac{SRAM} memory chip is very sensitive to \acf{SEE}, and can be used to measure relative radiation by constantly checking for \ac{SEU}.
+\subsubsection{Neutron dosimeter}$\newline$
+The Neutron dosimeter is a \ac{PCB} with a ProASIC FPGA and four 16 Mbit Cypress SRAM chips named CY62167DV30LL-55ZXI. These boards are made by Arild Velure, as part of his master thesis \cite{arild_master}. It is used as a radiation monitor by measuring SEU on the SRAM.
 
 The method of detecting an Single Event Upset (SEU) in a \ac{SRAM} is rather straight
 forward, as can be seen in the flow diagram of figure \ref{flowchart}. There is an initial startup
@@ -1030,13 +955,97 @@ This was used when doing the beam profile as discussed in chapter \ref{beam_setu
 \end{figure}
 \newpage
 
+
+\section{Testing at \acf{OCL}}
+
+\subsection{About \ac{OCL}}
+Oslo cyclotron Laboratory is located at the Department of physics at the University of Oslo, and was opened in 1978. The cyclotron is of the type MC-35 and was made by Scanditronix AB from Sweden.
+This is the only accelerator in Norway for ionized atoms used in basic research.
+The cyclotron can accelerate protons, deuteron, $^3He$ and $^4He$, 
+with energies and intensities as seen in the table \ref{design requirements} bellow.
+A drawing of the lab can be seen in figure \ref{OCL_fig}. 
+The laboratory is divided in tree; the control room, the inner experimental hall and the outer experimental hall.
+The cyclotron is placed in the inner hall, and a beam is sent through pipes to the outer hall.
+There is vacuum inside the cyclotron and the pipes, so that you should not suffer energy loss from collision with air molecules.
+With magnet you are able to regulate the beam to your desired pipe exit.
+There are also several cups put on the pipeline which makes it possible to block the beam.
+These can be used to stop the beam during an experiment, so you are able to go into the experimental area and do changes on your setup.
+When the cyclotron is running and the beam is on, you are not allowed to enter the inner experimental area.
+ 
+\begin{figure}[!htbp]
+\centering
+\centerline{\includegraphics[height=7cm,width=8cm]{OCL.png}}
+\caption{Out-lay of the OCL}
+\label{OCL_fig}
+\end{figure}
+
+
+\begin{table}[!htbp]
+ \centering
+\begin{tabular}{|l|l|l|}\hline
+Ionized beam particle type & Energy(${\mega\electronvolt}$) & Intensity($\micro\ampere$)  \\ \hline \hline
+Proton & 2-35 & 100 \\ \hline
+Deuteron & 4-18 & 100 \\ \hline
+$^3He$ &  6-47 & 50 \\ \hline 
+$^4He$  & 8-35 & 50 \\ \hline
+\end{tabular}
+\caption{Ionized beam particle data table}
+\label{design requirements}
+\end{table}
+
+\subsection{Experiment setup and equipment}
+
+The experiment setup was placed in the outer experimental hall in experimental area 2. The experimental setup as well as the equipment used can be found in the figure and table bellow.
+The equipment was kept in close to the same height around 140-150cm (so that we wouldn't have to think about three dimensions). Beam exit was in a height of 141.5cm.
+
+  \vspace{5mm}
+  
+\begin{figure}[!htbp]
+\centering
+  \centerline{\includegraphics[width=0.5\textwidth]{experiment_setup.jpg}}
+  \caption{Experimental setup seen from above}
+  \label{experiment_setup}
+\end{figure}%
+
+  \vspace{5mm}   
+  
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{experiment_area.jpg}
+  \caption{Picture of the experimental area}
+  \label{experiment_area}
+\end{figure}
+
+
+\newpage
+\begin{table}[!htbp]
+ \centering
+\begin{tabular}{|l|p{10cm}|}\hline
+Equipment & Explanation  \\ \hline \hline
+Scintillator & A plastic scintillator with photomultiplier. Was used to measure relative radiation. We had two of these, one that was placed right under \acf{DUT} and one that was placed 75cm away from \ac{DUT}. \\ \hline
+High voltage regulator & Voltage for the photomultiplier. 800V was used. \\ \hline
+The test boards &  TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831U, ADN2814, MAX3748, INA210 and TLV3011. \\ \hline 
+SRAM-board  & A PCB board with 4 \ac{SRAM} cells that was used to characterise the beam and to measure scintillator counts \\ \hline
+SF2 starter kit & A starter kit board with the Smart Fusion 2(SF2) chip.  \\ \hline
+Computer  & A VNC server was set up on a computer inside the experimental hall, this made us able to control the experiment from the control room. The computer was running all the necessary software to control the experiment. \\ \hline
+USB DAQ  & Data acquisition board form National Instruments(NI). Used to establish analog and digital connection to the test boards and send data to the computer. \\ \hline
+Radiation film  & A film that reacts when irradiated. Used to identify the beam. \\ \hline
+leveled laser  & Was used to pinpoint the center of the beam.\\ \hline
+Mirror & Used to reflect the laser beam to the backside of the test boards.\\ \hline
+XY-controller  & Connected to the computer so we can change the position of the test boards from outside the experimental area\\ \hline
+\end{tabular}
+\caption{Equipment used in the experiment}
+\label{equipment}
+\end{table}
+
+\subsection{Measurement equipment and test boards}
+
 \subsection{Preparation and characterization of the beam}
 Before we could start testing of the \ac{PCB}, the cyclotron had to be made ready for a proton beam and the magnet controlling the direction had to be put in the right position to get the beam out in experiment area 2.
 
 \subsubsection{Purpose of tests}
 The purpose of testing these board is to see if they are able to survive in a radiated area as we will find in the \ac{LHC}, see section \ref{how_to_test}.
 To make sure that we know the limit of the \ac{IC}s, the \ac{IC}s was irradiated until a error occurred, current consumption drastically increased or the \ac{IC} received a much higher dose than was required without error.
-Every \ac{IC} that has been tested, are ICs that are going to be used in creation of the new RCU2 board.
 
 \subsubsection{Beam setup}
   \label{beam_setup}
@@ -1053,6 +1062,12 @@ We were able to control the intensity(Current) of the beam freely from the contr
 We were running 3 labVIEW programs at all time through the experiment, one for controlling the XY-position system,
 one for the \ac{SRAM} board(to measure SEU and scintillator counts when calibrating and to get scintillator counts during the tests) and one program for each of the test boards.
 The \ac{SRAM} and test board programs were constantly saving data on the disk.
+
+\newpage
+
+\section{Testing at \acf{TSL}}
+
+\subsection{About TSL}
 
 \newpage
 
