@@ -21,7 +21,7 @@
 \acro{PCB}{Printed Circuit Board}
 \acro{LVDS}{Low-Voltage Differential Signaling}
 \acro{NI}{National Instruments}
-\acro{DAQ}{data acquisition}
+\acro{DAQ}{Data Acquisition}
 \acro{SPI}{Serial Peripheral Interface}
 \acro{SF2}{SmartFusion2}
 \acro{CML}{Current-Mode Logic}
@@ -44,8 +44,11 @@
 \acro{CMOS}{Complementary Metal Oxide Semiconductor}
 \acro{DCS}{Control System board}
 \acro{SIU}{Source Interface Unit}
-\acro{PASA}{charge Sensitive Amplifier/Shaper}
+\acro{PASA}{charge Sens itive Amplifier/Shaper}
 \acro{ALTRO}{Alice Tpc ReadOut}
 \acro{DDL}{Detect Data Link}
 \acro{RadMon}{Radiation Monitor}
+\acro{TSL}{The Svedberg Laboratory}
+\acro{MSS}{Microcontroller SubSystem}
+\acro{WSR}{Windowed Shift Register}
 \end{acronym}

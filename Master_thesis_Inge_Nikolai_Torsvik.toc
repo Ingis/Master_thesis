@@ -47,15 +47,15 @@
 \contentsline {subsubsection}{\numberline {4.3.4}Current measurement board}{35}{subsubsection.4.3.4}
 \contentsline {subsection}{\numberline {4.4}Equipment used for testing}{35}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}Neutron dosimeter}{35}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}Scintillator counter}{38}{subsubsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.3}X-Y-positioning system}{39}{subsubsection.4.4.3}
-\contentsline {section}{\numberline {5}Testing at \acf {OCL}}{40}{section.5}
-\contentsline {subsection}{\numberline {5.1}About \ac {OCL}}{40}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Experiment setup and equipment}{41}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Measurement equipment and test boards}{42}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Preparation and characterization of the beam}{42}{subsection.5.4}
-\contentsline {subsubsection}{\numberline {5.4.1}Purpose of tests}{43}{subsubsection.5.4.1}
-\contentsline {subsubsection}{\numberline {5.4.2}Beam setup}{43}{subsubsection.5.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2}Scintillator counter}{37}{subsubsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.3}X-Y-positioning system}{38}{subsubsection.4.4.3}
+\contentsline {section}{\numberline {5}Testing at \acf {OCL}}{39}{section.5}
+\contentsline {subsection}{\numberline {5.1}About \ac {OCL}}{39}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Experiment setup and equipment}{40}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Preparation and characterization of the beam}{41}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Purpose of tests}{41}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Beam setup}{42}{subsubsection.5.3.2}
+\contentsline {subsection}{\numberline {5.4}What was tested at OCL}{42}{subsection.5.4}
 \contentsline {section}{\numberline {6}Testing at \acf {TSL}}{44}{section.6}
 \contentsline {subsection}{\numberline {6.1}About TSL}{44}{subsection.6.1}
 \contentsline {section}{\numberline {7}Results and calculations from beam test at OCL}{45}{section.7}

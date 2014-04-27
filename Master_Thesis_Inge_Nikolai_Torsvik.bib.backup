@@ -71,7 +71,7 @@
   year      =  "2006"
 }
 
-@Book{Weste_harris,
+@Book{CMOS,
  author    = "Neil H. E. Weste, David M. Harris",
  title     = "CMOS VLSI Design - A Circuit and System Perspective",
  publisher = "Addison-Wesley",
@@ -155,6 +155,12 @@ doi = "10.1109/TNS.2003.812927 ",
 ISSN = "2622-2629"
 }
 
+@Article{Berg,
+author = "Melanie Berg",
+title = "Field Programmable Gate Array (FPGA) Single Event Effect (SEE) Radiation Testing",
+month = "February", 
+year = "2012",
+}
 
 @article{RCU2,
 Author = {Alme, J. and Alt, T. and Bratrud, L. and Christiansen, P. and Costa, F.

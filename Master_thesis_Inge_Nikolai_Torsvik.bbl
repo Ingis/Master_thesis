@@ -94,6 +94,11 @@ Georgios~Karolos Tsiledakis.
   the ALICE experiment. PhD thesis}.
 \newblock Technische Universitat Darmstadt, Darmstadt, 2006.
 
+\bibitem{website:TSL}
+Uppsala University.
+\newblock Information about tsl, April 2014.
+\newblock \url{http://www.tsl.uu.se/About_TSL/}.
+
 \bibitem{arild_master}
 Arild Velure.
 \newblock Design, implementation and testing of sram based neutron detectors.
