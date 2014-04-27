@@ -64,12 +64,12 @@
 \contentsline {subsection}{\numberline {7.1}Results from OCL}{45}{subsection.7.1}
 \contentsline {subsubsection}{\numberline {7.1.1}Calibration process}{45}{subsubsection.7.1.1}
 \contentsline {subsection}{\numberline {7.2}Test results}{45}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}TPS51200}{48}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.1}TPS51200}{49}{subsubsection.7.2.1}
 \contentsline {subsubsection}{\numberline {7.2.2}MIC69302WU}{49}{subsubsection.7.2.2}
 \contentsline {subsubsection}{\numberline {7.2.3}SN74AVCB164245}{50}{subsubsection.7.2.3}
 \contentsline {subsubsection}{\numberline {7.2.4}SN74AVC2T245}{50}{subsubsection.7.2.4}
 \contentsline {subsubsection}{\numberline {7.2.5}QS3VH257}{51}{subsubsection.7.2.5}
-\contentsline {subsubsection}{\numberline {7.2.6}SY89831}{51}{subsubsection.7.2.6}
+\contentsline {subsubsection}{\numberline {7.2.6}SY89831}{52}{subsubsection.7.2.6}
 \contentsline {subsubsection}{\numberline {7.2.7}ADN2814}{52}{subsubsection.7.2.7}
 \contentsline {subsubsection}{\numberline {7.2.8}MAX3748}{54}{subsubsection.7.2.8}
 \contentsline {subsection}{\numberline {7.3}Calculation of dose}{55}{subsection.7.3}

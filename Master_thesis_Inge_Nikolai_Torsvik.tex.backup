@@ -1089,16 +1089,19 @@ The result is presented after type, so if two \ac{PCB} that the two boards of th
 \subsection{Results from OCL}
 \subsubsection{Calibration process}
 As explained in chapter $\ref{beam_setup}$, we had to start by finding the center of the beam.
-We started by inserting a film in front of the beam exit and \ac{DUT}, by seeing how the film turned black, we got a felling of where the center was. A example of a film from the beam exit and in front of the \ac{DUT} area can be seen in figure \ref{Radiation_film}.
+The laser was first placed in a position pointing a what thought to be center. 
+Then we placed a film in front of the beam exit and \ac{DUT} area.
+By seeing how the film looked like after irradiated, we got a felling of where the center was.
+A example of two films from the beam exit and \ac{DUT} area can be seen in figure \ref{Radiation_film}.
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{Radiation_film.png}
+  \includegraphics[width=0.5\textwidth]{Radiation_film.png}
   \caption{Example of radiation films after radiation, DUT area (top) and bream exit (button). Where the laser where pointing is marked with a dot.}
   \label{Radiation_film}
 \end{figure}
 
-Then we started out with the Neutron dosimeter, we started in a position thought to be around center, and called that position (x,y) = (0,0), and from the result from the film, we knew approximately how much we had to move to be in center.
+Now we had a feeling of where center is compared to where the laser was pointing. The Neutron dosimeter was placed with one of the SRAM chips at where the laser was pointing. This position was called position zero (x,y) = (0,0). From the result from the film, we knew approximately how much we had to move to be in center.
 In table $\ref{test_15.11}$ you can see the results from our calibration 15.11.2013. You can see that position x = -2,5 cm and y = -1 cm gives highest relation between SEU and scintillator counts.
 A total of 4 tests in that position was done and the average value gives us 0,0948.
 This value was used to calculate from scintillator counts to \ac{SEU}. Cross section, the probability that an incoming particle will induce an SEU is known for the \ac{SRAM} board. The cross section (CS) is given in equation \ref{CS}.
