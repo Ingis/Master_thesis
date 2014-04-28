@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Master_thesis_Inge_Nikolai_Torsvik.aux
 A level-1 auxiliary file: acronyms.aux
@@ -14,11 +14,12 @@ I was expecting a `,' or a `}'---line 71 of file Master_Thesis_Inge_Nikolai_Tors
  :   year      =  "2006"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 263 of file Master_Thesis_Inge_Nikolai_Torsvik.bib
+I was expecting an "="---line 270 of file Master_Thesis_Inge_Nikolai_Torsvik.bib
  : Research 
  :          Areas = {{Physics; Instruments \& Instrumentation (provided by Thomson Reuters)}},
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for ""
+Warning--to sort, need author or key in website:CERN_accelerators
 Warning--empty journal in Berg
 Warning--empty publisher in GranlundOlsson
 Warning--empty school in roed_master
@@ -27,45 +28,45 @@ Warning--empty school in bjorn_master
 Warning--empty year in bjorn_master
 Warning--empty school in arild_master
 Warning--empty year in arild_master
-You've used 19 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            599 strings with 6525 characters,
-and the built_in function-call counts, 4303 in all, are:
-= -- 399
-> -- 170
+            603 strings with 6629 characters,
+and the built_in function-call counts, 4460 in all, are:
+= -- 413
+> -- 171
 < -- 0
-+ -- 72
++ -- 73
 - -- 52
-* -- 219
-:= -- 775
-add.period$ -- 57
-call.type$ -- 19
-change.case$ -- 78
+* -- 224
+:= -- 791
+add.period$ -- 59
+call.type$ -- 20
+change.case$ -- 81
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 181
-empty$ -- 377
+cite$ -- 29
+duplicate$ -- 188
+empty$ -- 400
 format.name$ -- 52
-if$ -- 878
+if$ -- 917
 int.to.chr$ -- 0
-int.to.str$ -- 19
+int.to.str$ -- 20
 missing$ -- 16
-newline$ -- 98
+newline$ -- 102
 num.names$ -- 38
-pop$ -- 131
+pop$ -- 142
 preamble$ -- 1
-purify$ -- 64
+purify$ -- 66
 quote$ -- 0
-skip$ -- 120
+skip$ -- 126
 stack$ -- 0
-substring$ -- 117
-swap$ -- 15
+substring$ -- 122
+swap$ -- 16
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
-warning$ -- 8
+type$ -- 68
+warning$ -- 9
 while$ -- 39
-width$ -- 21
-write$ -- 196
+width$ -- 22
+write$ -- 203
 (There were 3 error messages)

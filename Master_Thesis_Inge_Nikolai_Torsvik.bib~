@@ -71,7 +71,7 @@
   year      =  "2006"
 }
 
-@Book{Weste_harris,
+@Book{CMOS,
  author    = "Neil H. E. Weste, David M. Harris",
  title     = "CMOS VLSI Design - A Circuit and System Perspective",
  publisher = "Addison-Wesley",
@@ -100,6 +100,14 @@
       Month = "April",
       year = "2014",
       note = "\url{http://www.ni.com/pdf/manuals/371303m.pdf}"
+}
+
+@misc{website:TSL,
+      author = "Uppsala University",
+      title = "Information about TSL",
+      Month = "April",
+      year = "2014",
+      note = "\url{http://www.tsl.uu.se/About_TSL/}"
 }
 
 @misc{website:TPS51200,

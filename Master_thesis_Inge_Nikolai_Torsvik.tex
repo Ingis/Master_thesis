@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 \usepackage[latin1]{inputenc}
 \usepackage[paper=a4paper,dvips,top=3cm,left=3cm,right=3cm, foot=1cm,bottom=3cm]{geometry}
 \usepackage{picinpar}
@@ -24,6 +24,8 @@
 \usepackage{placeins}
 \usepackage{fancyvrb}
 \usepackage[printonlyused]{acronym}
+\usepackage[titletoc]{appendix}
+
 \numberwithin{figure}{section}
 
 \tolerance = 5000 % LaTeX er normalt streng når det gjelder linjebrytingen.
@@ -48,17 +50,16 @@
 %}{\end{enumerate}}
 
 
-\usepackage{nomencl}
-\makenomenclature
-\renewcommand{\nomname}{Abbreviations}
+% \usepackage{nomencl}
+% \makenomenclature
+% \renewcommand{\nomname}{Abbreviations}
 
 
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 
 \usepackage{hyperref}
 
- \begin{document}
- 
+\begin{document}
 
 %Forside
 \thispagestyle{empty}
@@ -84,16 +85,13 @@
   \textsl{University of Bergen} \\
   \vspace{10mm}
   \large
-  \textsl{November 2013} \\
+  \textsl{June 2014} \\
 
 \end{center}
 
-\newpage
-\blankpage
 %\thispagestyle{empty}
 
 
-\newpage
 \setcounter{page}{1}
 \pagenumbering{Roman}
 
@@ -112,7 +110,7 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-\section{Introduction}
+\chapter{Introduction}
 At \acf{CERN} in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to a energy of 4 $\tera \electronvolt$ per proton, and then crash with a other particle with same energy. This experiment is done by connecting several accelerators with higher and higher energies together to accelerate particles. The largest one is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
 To detect what is happening to the particles when crashed, there has been built several detectors that is placed in the tunnel. One of these is called \acf{ALICE}.
 The \ac{ALICE} detector is built to study a matter known as Quark-gluons plasma \cite{ALICE}, which will be generated under collisions of heavy ions.
@@ -123,13 +121,13 @@ One of the main boards used in the \ac{TPC} detector is the \acf{RCU}. Now there
 Everything that are going to be used in the \ac{LHC} tunnel has to be made sure that it can survive the radiation level that are there.
 Therefore every \acf{IC} planned to be used for the design of the \ac{RCU2} board has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{TPC} detector.
 
-\subsection{How to test}
+\section{How to test}
 \label{how_to_test}
 The radiation tests done through this thesis is mainly \ac{TID} test.
 That is irradiation up to a level where an error can clearly be seen or when a high enough dose has been reached without detecting errors, see section \ref{TID} for more information.
 But there has also been done tests for \ac{SEE}, like \acf{SEU}, \acf{SET} and \acf{SEL} on a Microsemi \ac{SF2} \ac{SoC} \ac{FPGA}.
 
-\subsection{About this work}
+\section{About this work}
 When I started working with my thesis in the autumn of 2013 the schematic layout for the \ac{RCU2} was basically finished,
 and most of the component was decided, but not all of the component had been tested.
 My work through this thesis has been planing how to test different circuits, designing test setup and executing the tests.
@@ -142,13 +140,12 @@ Every test board I made was radiation tested in \ac{OCL} at the University of Os
 
 \newpage
 
-\section{ALICE experiment}
+\chapter{ALICE experiment}
 \label{ALICE_experiment}
 Since 1954 physicists at \ac{CERN} have studied the nucleus and its structure to find the fundamental structure of the universe.
 \ac{CERN} is the world largest research center for nuclear and particle physics, and has a total of 21 member state.
 One of the biggest and newest invention at \ac{CERN} is the \acf{LHC}, that is a circular particle accelerator placed in a 27 km long tunnel around 100 meter beneath ground level.
-This is the last accelerator in a chain of up to 7 (depending on which particle to accelerate), where the particles gradually accelerate to higher and higher energies,
-up to their maximum energy of 4 TeV and speed up to the speed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide inside 4 different experiment areas, where one of these is called \acf{ALICE}. See figure \ref{ALICE_layout}.
+This is the last accelerator in a chain of up to 7 (depending on which particle to accelerate), see picture \ref{CERN_accelerators}, where the particles gradually accelerate to higher and higher energies, up to their maximum energy of 4 TeV and speed up to the speed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide inside 4 different experiment areas, where one of these is called \acf{ALICE}. See figure \ref{ALICE_layout}.
 
 The \ac{ALICE} detector is a heavy ion detector. Its main purpose is to study a state of matter called quark-qluon plasma\footnotemark[1] which will be generated when heavy ions collides.
 Under a such collision a temperature 100 000 times higher than the temperature of the sun is generated.
@@ -162,14 +159,21 @@ No quark has ever been observed in isolation: the quarks, as well as the gluons,
 
 \begin{figure}[!htbp]
   \centering
+  \includegraphics[width=0.65\textwidth]{CERN_accelerators.jpg}
+  \caption{CERN accelerators \cite{website:CERN_accelerators}}
+  \label{CERN_accelerators}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
   \includegraphics[width=\textwidth]{ALICE_layout.jpg}
   \caption{Layout of the ALICE experiment \cite{website:aliceinfo}}
   \label{ALICE_layout}
-\end{figure}CERN
+\end{figure}
 
 \FloatBarrier
 
-\subsection{The Time Projection Chamber TPC}
+\section{The Time Projection Chamber TPC}
 The ALICE detector comprises of several sub-detectors, where one of these is the \acf{TPC}.\ac{TPC} is the main tracking detector placed in the inner circle of \ac{ALICE}.
 The function of \ac{TPC} are tracking particles, measure the charged particles momentum and identification of particles.
 A drawing of the \ac{TPC} can be seen in figure \ref{TPC_layout}.
@@ -188,7 +192,7 @@ the inner chambers, 6 $\times$ 10 $\milli\meter^2$ and 6 $\times$ 15$\milli\mete
   \label{TPC_layout}
 \end{figure}
 
-\subsection{The TPC Front End electronics FEE}
+\section{The TPC Front End electronics FEE}
 Each of the total 36 sections are also divided into 6 readout partitions, that is 2 in the inner chamber and 4 in the outer chamber. 
 Each of the readout partitions are controlled by a \acf{RCU} which is connected to 18 to 25 \acf{FEC}. See figure \ref{TPC_Sections}
 There are a total of 216 \ac{RCU} connected to a total of 4356 \ac{FEC} which is connected to all of the 560 000 readout pads, and all together this sums up the \acf{FEE}.
@@ -201,7 +205,7 @@ In short the task of the \ac{FEE} is to read out charge received at the readout 
   \label{TPC_Sections}
 \end{figure}
 
-\subsubsection{Front End Card FEC}
+\subsection{Front End Card FEC}
 When one of the pads receives a charge after a collision has occurred, it sends out a current signal with a rise time of less than 1 ns followed by a long tail due to the motion of the positive ions.
 The amplitude is slightly different for the different pad sizes, but has a typical value of around 7 $\micro\ampere$.
 A current signal given by one of the pads, is sent into the \acf{FEC} which consist of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
@@ -228,7 +232,7 @@ An picture of the \ac{FEC} can be seen in figure \ref{FEC}.
 
 \footnotetext[2]{Zero Compressions means that signal bellow a given threshold will be filtered away.}
 \FloatBarrier
-\subsubsection{Readout Control Unit RCU}
+\subsection{Readout Control Unit RCU}
 One \acf{RCU} is connected to one row of \acp{FEC} (up to 25 pieces), through a backplane\footnotemark[3], see figure \ref{TPC_Sections}.
 The \ac{RCU} task is to control all of the \acf{FEE} all the way from the readout pads through the \acp{FEC}, and out to a \acf{DAQ} System.
 The \ac{RCU} consist of three separated boards which are the Motherboard board, and the \acf{DCS} board and a \acf{SIU} board, which are attached to the Motherboard.
@@ -259,8 +263,8 @@ This is used instead of cables to get a more stability, and to keep things in pl
   \label{RCU}
 \end{figure}
 
-\subsubsection{RCU2}
-\paragraph{Why upgrade RCU} $\newline$
+\subsection{RCU2}
+\subsubsection{Why upgrade RCU} 
 LHC is currently shut down for maintenance and preparation for even higher energies.
 This period, called Long Shutdown 1 (LS1), lasts until end of 2014.
 The present \ac{TPC} readout electronics will be a limiting factor with the foreseen readout rate for the next run period, called Run2.
@@ -268,7 +272,7 @@ The bus between \ac{RCU} and FECs are not able to read all data for high occupan
 In addition stability issues related to \ac{SEU} on the \ac{SRAM} based \ac{FPGA} have been observed with the present setup.
 9\% of the run time had to be stopped because of errors occurred in the \ac{TPC} readout electronics.
 
-\paragraph{The new Readout Control Unit, the RCU2} $\newline$
+\subsubsection{The new Readout Control Unit, the RCU2} 
 The main motivation for the \ac{RCU2} was to develop a solution that gives the needed performance improvement,
 and at the same time was feasible within the limited time-frame.
 Therefore some of the old infrastructure has to be reused, like cables for Ethernet, Trigger and power and the cooling envelops.
@@ -292,13 +296,13 @@ Therefore all of the backplanes had to be replaced with new ones.
 \newpage
 
 
-\section{Radiation and Radiation effect on Semiconductor devices}
+\chapter{Radiation and Radiation effect on Semiconductor devices}
 Radiation and radiation effects are a known challenge when designing electronics which are going to be used at CERN.
 There is therefore of highest importance to know about these effect, how they effect the electronics, how much damage they can cause and how we can protect and prevent the radiation effect to do damage.
 
 Everything in this chapter is based on these references \cite{rad_phys}, \cite{CMOS}, \cite{knoll}, \cite{Baumann} and \cite{balashov} if not otherwise stated.
 
-\subsection{Interaction of Radiation With Matter}
+\section{Interaction of Radiation With Matter}
 Radiation is defined as a process which energy in the form of energetic particles or electromagnetic waves is transmitted through a medium or space.
 Radiation is normally divided into two categories, that is
 \begin{itemize}
@@ -316,7 +320,7 @@ In the next sections we will look more closely on how a charged particle and neu
 %Ionizing radiation consist of particles with high enough energies so that they can detach electrons from an atom or molecule and ionize them.
 %Non-ionizing radiation is than obviously radiation of particles with energies to low to ionize a atom or molecule.
 
-\subsection{Charge particle and their Interaction with Matters}
+\section{Charge particle and their Interaction with Matters}
 When a charged particle with high speed is passing through a material it will experience multiple elastic and inelastic collisions with the atoms in the material, resulting in slowing down or stopping the particle.
 When a particle collide with a atom there are several process that can contribute to the loss of energy. They are:
 
@@ -347,7 +351,7 @@ Which of these that contributes to most of the loss of energy is depended on the
 For example, for heavy charge particles(protons or heavier ions), inelastic collisions with the atomic electrons in a material will contribute to most to the energy loss of the particle.
 A common expression for these processes is called "stopping power".
 
-\subsubsection{Stopping Power}
+\subsection{Stopping Power}
 If we have a particle with a given energy passing into to a material, where $dE$ is the mean energy that the particle losses by traveling through a path segment, $dx$, of the material.
 Then $-\frac{dE}{dx}$ is the stopping power or also called the "rate" of energy loss for the particle.
 The stopping power depends on the type and energy of the radiation and on the properties of the material it passes.
@@ -374,7 +378,7 @@ $\overline{I}$ & Effective material ionization potential \\
 \label{bethe_bloch}
 \end{table}
 
-\subsubsection{Specific Stopping Power}
+\subsection{Specific Stopping Power}
 Another way of looking at stopping power, is by looking at energy loss as function of mass per area \ref{sstopping_power}.
 Here $\xi$ = $\rho$x and $\rho$ is the density of the material. The extension for specific stopping power is normally given as $[\frac{\mega\electronvolt\centi\meter^2}{\gram}]$
 
@@ -398,7 +402,7 @@ We can see that the value of $\frac{dE}{dx}$ for different types of particles ap
 At low particles energies, where charge exchange between the particles and absorber becomes important, the Bethe Bloch formula begins to fail.
 That is because the positively charged particles will then tend to pick up electrons from the absorber, which effectively reduce its charge and consequently linear energy loss, and will at the end become a neutral atom.
 
-\subsubsection{Linear Energy Transfer LET}
+\subsection{Linear Energy Transfer LET}
 \acf{LET} is closely related to stopping power of a particle, but instead of fucusing on energy loss of the particle, \ac{LET} focuses on the energy that is deposited in a local volume.
 For low energies, \ac{LET} is often said to be equal stopping power, even though the particle energy that turn into photons may escape the local area.
 For higher energies, small particles like ionized electrons can escape the local volume. The local volume is defined by yourself,
@@ -413,8 +417,8 @@ L_\Delta= \bigg(- \frac{dE}{\xi x}\bigg)_\Delta
 where $\Delta$ is the upper energy limit for the secondary electrons included in the calculations.
 If $\Delta$ is set to $\infty$, all secondary electrons are included in the calculations, making \ac{LET} the same as stopping power.
 
-\subsection{Neutral particle and their Interaction with Matter}
-\subsubsection{Neutrons}
+\section{Neutral particle and their Interaction with Matter}
+\subsection{Neutrons}
 Neutrons are subatomic structure that are present in most atomic nuclei.
 Neutrons carry no charge and can therefore not interact with matter by means of the coulomb force,
 which dominates the energy loss mechanisms for charged particles.
@@ -423,7 +427,7 @@ When neutrons undergo a interaction, it is with the nucleus of the absorbing mat
 This can result in total disappearance of the neutron resulting in one or more secondary radiations, or change of the direction of the neutron.  
 The secondary process of neutrons can largely ionizing.
 
-\subsubsection{Photons}
+\subsection{Photons}
 Photons may appear from gamma rays or X-rays. Photons has as neutrons no charge, and are therefore not effected by the coulomb force, additionally photons has no rest mass and travel in constant speed of light.
 The energy of a photon is given in the formula $E=hf$ where f is the frequency of the particle and h is the Planck`s constant.
 There are three main process where a photon may react with matters, they are:
@@ -434,19 +438,19 @@ There are three main process where a photon may react with matters, they are:
   \item Pair production \hfill
 \end{itemize}
 
-\subsection{Radiation Effects on Semiconductor Devices}
+\section{Radiation Effects on Semiconductor Devices}
 Semiconductor devices planned to used in a radiation environment are likely to be effected by the radiation in some way.
 If not taking properly into account, the radiation effects may damage or even destroy the electronics.
 Therefore there is of highest importance to know about how irradiation can effect the semiconductor devices.
 We normally divide radiation effects in two groups that is $\emph{Singel Events effects}$ and $\emph{Accumulative Effects}$.
 
-\subsubsection{Single Events Effects SEE}
+\subsection{Single Events Effects SEE}
 Single Event Effects are due to the energy deposited by one single particle in the electronic device.
 Therefore, they can happen in an moment, and their probability is expressed in terms of cross-section \cite{website:Faccio}.
 This effects has been an increasing problem as the manufacture process are getting smaller and smaller, making circuits more weak for radiation.
 In the next sections we will look into three \acp{SEE}, that is \acf{SEL}, \acf{SET} and \acf{SEU}.
 
-\paragraph{Single Event Latchup SEL} $\newline$
+\subsubsection{Single Event Latchup SEL} 
 A \acf{SEL} is phenomena where a low resistance path between power and ground is formed, normally resulting in burned traces, which means reduced performance or destruction of the chip.
 Therefore it is of highest importance to know about this effect, to know how to counter or to protect from latches in design phase. 
 In a \ac{CMOS} process a \ac{SEL} can occur when a ionized particle penetrate the silicon in a transistor causing a charge to to turn ON the parasitic bipolar transistors formed by the substrate, well, and the diffusion.
@@ -468,7 +472,7 @@ When the pnp-transistor turns ON current will flow through $R_sub$, causing $V_s
   \label{CMOS_inverter}
 \end{figure}
 
-\paragraph{Single Event Transient SET} $\newline$
+\subsubsection{Single Event Transient SET} 
 \label{SET}
 \acf{SET} is a transient pulse of current in a logical path of a circuit.
 A \ac{SET} is caused by an ionizing particle leaving a transient current close or on a sensitive circuit node.
@@ -478,7 +482,7 @@ If this value is not clocked out or saved in some way, the current peak will jus
 A way to detect \ac{SET} could be to make a shift register made up of a known number of register and a known input data.
 By checking the output and compare with the known value, you can detect if a \ac{SET} has occurred.
 
-\paragraph{Single Event Upset SEU} $\newline$
+\subsubsection{Single Event Upset SEU} 
 \label{SEU_Section}
 \acf{SEU} is change of state in a logical element, caused by radiation. This phenomena can often be seen in memory cells or registers, where data is stored.
 A \ac{SEU} is a "Soft error", which means that it is a non-destructive type of error. By resetting or overwriting after an \ac{SEU} has occurred, the error will disappear.
@@ -507,7 +511,7 @@ Then the SRAM cell has changed value from '0' to '1', and we have a \ac{SEU}.
 
 \FloatBarrier
 
-\subsubsection{Accumulative Effects}
+\subsection{Accumulative Effects}
 Accumulative effects are energy deposition caused by radiation for the whole lifespan of a circuit \cite{website:Faccio} and \cite{Oldham}.
 Accumulative effects are measured by the functionality of a device, and power consumption. 
 Some circuits are weak for accumulative effects, and will stop working only after a small dose of radiation,
@@ -516,7 +520,7 @@ When we talk about accumulative effects we normally divide into two groups, that
 and \ac{TID} which is a ionizing effect.
 
 
-\paragraph{Total Ionization Dose TID} $\newline$
+\subsubsection{Total Ionization Dose TID} 
 \label{TID}
 \acf{TID} is measurement of the dose, that is the energy, deposited in a circuit by radiation in the form of ionization energy.
 The unit used are Gray (\gray) or rad. The relation between those two can be seen in equation \ref{gray_rad}.
@@ -540,12 +544,12 @@ This phenomena can be seen in figure \ref{TID_in_MOS}.
   \label{TID_in_MOS}
 \end{figure}
 
-\paragraph{Displacement Damage} $\newline$
+\subsubsection{Displacement Damage} 
 Displacement Damage is a non-ionizing effect mostly induced by low energetic particles colliding with and breaking atoms out of the initial lattice structure of a material.
 This can affect the functionality of the device. CMOS circuits are normally considered immune to this effect. 
 Displacement damage is not measured in any unit, but it is expressed in terms of the particle fluence, in particles/$\centi\meter^2$.
 
-\subsubsection{The TPC radiation environment}
+\subsection{The TPC radiation environment}
 The radiation in the \ac{LHC} is dominated by high energetic neutrons and protons, mostly neutrons with a estimated fluence of $(0,6-1,1)\times 10^{11}$ $neutrons/cm^2$.
 Therefore it would be preferable to test our electronics with a neutron beam, but since there are few labs who can produce a neutron beam compared to proton beam most of the electronics is only tested at \ac{OCL} with a proton beam.
 There has been done experiment that compares SEU induced by neutrons and protons \cite{GranlundOlsson}, and the result shows that it is possible to use a proton beam instead of proton beam with small deviations.
@@ -559,11 +563,11 @@ Therefore we could expect a dose of 1-2 $\kilo$Rad during the time it will be us
 \FloatBarrier
 \newpage
 
-\section{Preparations for Testing}
+\chapter{Preparations for Testing}
 Testing \acfp{IC} is a thing that has been done before when it comes to the design of electronics that are going to be installed in the \ac{LHC} at CERN.
 Much of the work presented in this thesis is based on experience from previous thesis \cite{bjorn_master} \cite{roed_doctor} \cite{roed_master} \cite{arild_master}.
 
-\subsection{The \acfp{IC} Which Where Tested}
+\section{The \acfp{IC} Which Where Tested}
 The \ac{IC} that was tested through this thesis are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210, TLV3011 and SF2 M2S050-FG896.
 What each of these are, and how these was tested will be discussed in the following sections.
 
@@ -585,7 +589,7 @@ USB-6009 has 8 single-ended analog input (AI) channels, 2 analog output (AO) cha
 The analog outputs has a limit of 5 $\milli\ampere$, but some of the \acp{IC} that was tested required more than that. For these cases the 5 V signal was used, that can deliver current up to 200 $\milli\ampere$.
 More information on the DAQs can be seen in the reference \cite{website:DAQ}.
 
-\subsubsection{TPS51200}
+\subsection{TPS51200}
 \label{TPS_explanation}
 This is a adjustable power regulator from Texas Instruments. It is special designed for DDR RAMs, it can be used for DDR, DDR2, DDR3 and DDR4 applications.
 % On the \ac{RCU2}, this is going to be used to supply a DDR3 RAM with 0.75 V.
@@ -602,7 +606,7 @@ Voltage over resistor R1 (See figure \ref{TPS51200_sch}) was measured and used t
 \end{figure}
 \FloatBarrier
 
-\subsubsection{MIC69302WU}
+\subsection{MIC69302WU}
 \label{MIC_explanation}
 This is a ultra low dropout\footnote{Low dropout means that voltage on the output can be close up to the input. For MIC69302WU low dropout means that $V_{IN}$ - $V_{OUT}$ can be as low as 500 $\milli\volt$} adjustable power regulator from Micrel Incorporation. It is in a family of high current, low voltage regulators, and can deliver a current of up to 3 A.
 % On the \ac{RCU2} this is going to be used to regulate a 3.3 V signal to 1.2 V and power everything that requires 1.2 V on the board.
@@ -628,7 +632,7 @@ Vout = 0.5 \times (\frac{R1}{R2}+1)
 \end{figure}
 \FloatBarrier
 
-\subsubsection{SN74AVCB164245}
+\subsection{SN74AVCB164245}
 This is a 16-bit noninverting bus transceiver, with configurable voltage. Used for level shifting for digital signals.
 An application example could be to convert a 16-bit digital signal that with high value of 1.5 V to a 16-bit signal with high value of 3.3 V.
 The input and output high value can be set to anything between 1.4 and 3.6 V, the low value is set to 0 V.
@@ -649,7 +653,7 @@ This made the current for the inputs come from the supply pin, and not from the 
 \end{figure}
 \FloatBarrier
 
-\subsubsection{SN74AVC2T245}
+\subsection{SN74AVC2T245}
 This is a dual-bit noninverting bus transceiver, with configurable voltage. It has the same function as SN74AVCB164245, but this only has two inputs.
 % On the RCU2 board, this is planned to be used to convert a 2.5V \acf{SPI} signals to a 3.3V \ac{SPI} signals.
 
@@ -666,7 +670,7 @@ The output signals was monitored digitally.
 \end{figure}
 \FloatBarrier
 
-\subsubsection{QS3VH257}
+\subsection{QS3VH257}
 This \ac{IC} consist of four 2 to 1 multiplexer/demultiplexer. It has high bandwidth, up to 500 Mhz, low ON resistance and high OFF resistance.
 % On the \ac{RCU2} this is going to be used to switch between two \acf{JTAG} connection.
 
@@ -681,7 +685,7 @@ For the Select input a analog output signal was used. The input signals was set 
 \end{figure}
 \FloatBarrier
 
-\subsubsection{SY89831U}
+\subsection{SY89831U}
 This is a high speed, 2$\giga\hertz$ differential \ac{LVPECL} 1 to 4 fanout buffer optimized for ultra-low skew applications.
 % Used on the \ac{RCU2} to produce 4 clock signal out of 1.
 
@@ -700,7 +704,7 @@ So we had to use the modified version of the MIC69302WU \ac{PCB}, that will supp
 \end{figure}
 \FloatBarrier
 
-\subsubsection{ADN2814 and MAX3748}
+\subsection{ADN2814 and MAX3748}
 \label{limiting_amp}
 These two boards are used for the same purpose, and the one of them that performs best will be chosen to be used on the \ac{RCU2}.
 ADN2814 is a clock and data recovery IC with integrated limiting amplifier. Works in rate of 10 Mb/s to 675 Mb/s. Gives out a \acf{LVDS} clock and data signal.
@@ -738,7 +742,7 @@ The \ac{SF2} was also used to compare the original signal with the signal coming
 %   \label{SF2}
 % \end{figure}
 
-\subsubsection{INA210}
+\subsection{INA210}
 INA210 is a so called Current-Shunt Monitor, that is a \ac{IC} that is used to amplify small current signal into higher voltage signal. This is done by sending the signal that you want to measure current of, over a small resistor, typical smaller than 1 Ohm. Then a voltage will be formed over this resistor and will be amplified through the \ac{IC}. This \ac{IC} comes in a family of 5 with different amplifications, the one we are using has an amplification of 200 V/V.
 
 \begin{figure}[!htbp]
@@ -748,7 +752,7 @@ INA210 is a so called Current-Shunt Monitor, that is a \ac{IC} that is used to a
   \label{INA210_sch}
 \end{figure}
 
-\subsubsection{TLV3011}
+\subsection{TLV3011}
 This is a comparator with a built in voltage reference of 1.242 V. It supports low supply voltage from 1.8 V to 5.5 V, and has a open-drain output with fast response time. A 10 kOhm resistor is needed as pull-up on the output.
 
 \begin{figure}[!htbp]
@@ -758,7 +762,7 @@ This is a comparator with a built in voltage reference of 1.242 V. It supports l
   \label{TLV3011_sch}
 \end{figure}
 
-\subsubsection{All the test boards}
+\subsection{All the test boards}
 In figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you can see how the PCB boards looked like. 
 
 
@@ -785,8 +789,8 @@ In figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you can see ho
 
 \FloatBarrier
 
-\subsection{Software}
-For each of the different test board that was made a simple labVIEW program was made, special designed to supply and monitor a specific \ac{IC} under radiation.
+\section{Software}
+For each of the different test board, a simple labVIEW program was made, special designed to supply and monitor a specific \ac{IC} under radiation.
 In these program time from start, current consumption and the status of the output signal (or the output voltage for the regulators) can be measured and monitored.
 Data is constantly saved to disk.
 
@@ -799,7 +803,7 @@ In figure \ref{labVIEW} you can see an example of a labVIEW program used for SN7
   \label{labVIEW}
 \end{figure}
 
-\subsection{SmartFusion2}
+\section{SmartFusion2}
 \acf{SF2} \ac{SoC} \ac{FPGA} integrate a flash-based \ac{FPGA}\footnote{Flash-based FPGA means that configuration registers is saved in flash memory cells.
 Compared to SRAM-based FPGA where configuration is saved in SRAM cells, flash-based FPGA is much more tolerant against radiation.},
 an ARM Cortex-M3 processor built in a \acf{MSS} and high-performance communication interfaces on a single chip.
@@ -810,7 +814,7 @@ Everything one the \ac{SF2} that are going to be used in the design has to be te
 There are four things that we tested. That is the internal SRAM blocks, the logical element, the PLLs and \acf{SEL}. How these will will be tested will be discussed in the following sections. Other functionality was also tested like Ethernet, SERDES and Clock and data recovery, etc., but will not be discussed in this thesis.
 
 
-\subsubsection{SRAM test}$\newline$
+\subsection{SRAM test}
 SRAM cells are as discussed in section \ref{SEU_Section}, sensitive for radiation. The SRAM memory aren't used for configuration register, as it was for the Xilinx FPGA on RCU1, and are therefore not as critical.
 But we still want to test how robust the SRAM cells are against radiation, so we can know how reliable these are if used.
 The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM block with a size of 1024 x 18 bits.
@@ -823,7 +827,7 @@ Read address is always set be one higher then read address.
 
 The next state is a initial state where all addresses are written to. Write data is switched opposite every address increment, so the written data is switched between 1010...1010 and 0101...0101 every other address. When the last bit is written to, the first bit is read. 
 
-The last state is a state where all of the addresses are written, read and compared through an endless loop. The written data to an address is always set to be opposite of the previous value written to that address. The state machine will stay in this state until a reset is pushed.
+The last state is a state where all of the addresses are written, read and compared through a endless loop. The written data to a address is always set to be opposite of the previous value written to that address. The state machine will stay in this state until a reset is pushed.
 
 \begin{figure}[!htbp]
   \centering
@@ -832,9 +836,12 @@ The last state is a state where all of the addresses are written, read and compa
   \label{SRAM_flow_chart}
 \end{figure}
 
+The \ac{SEU} counter value for both the micro SRAM and the Large SRAM, as well as number of cycles through all addresses is saved in registers and sent to the \acf{MSS}.
+Here the data received are sent through one of the \ac{UART} serial port which is connected to one of the USB-port on the starter-kit. A labVIEW program are made to read out the \ac{SEU} and cycles values, and exhibited for the viewer, data is also saved to disk.
+
 \FloatBarrier
 
-\subsubsection{Test of the Logical element} $\newline$
+\subsection{Test of the Logical element} 
 A logical element consist of a 4 input Look-Up Table\footnotemark[4] and a separate flip-flop which can be used independently from the Look-Up Table.
 That means that we have 56 340 flip-flops and 56 340 Look-Up Tables available for our design.
 When a logical element is exposed to radiation, a \ac{SET} can occur all over the chip.
@@ -855,6 +862,9 @@ and a \ac{WSR} enable signal will be sent from the test board to the monitoring 
 
 For our tests we made 4 shift-register chains, with 4 inverters in between each flip-flop and where each of the shift-register had a 4-bit \ac{WSR} output. The length of the shift-registers were set to 2000.
 
+We wanted to be able to change the clock frequency without reprogramming the \ac{FPGA}, to see how the frequency effects the number of upset detected.
+The Clock Conditioning Circuit (CCC) used to produce the clock is configurable through a register, which can be accessed through the \ac{MSS}, so that the frequency can be changed without reprogramming the \ac{FPGA}.
+
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{Shift_register_design.png}
@@ -862,32 +872,42 @@ For our tests we made 4 shift-register chains, with 4 inverters in between each 
   \label{Shift_register_design}
 \end{figure}
 
-\subsubsection{Single Event Latchup and PLL} $\newline$
+\subsection{Single Event Latchup and PLL} 
 A \acf{SET} is a short circuit between power and ground. If that happens on any spot on the chip, an increase in the supply current can be detected. So the way a \ac{SET} will be checked, is by constantly checking for increase in current consumption on the chip. A \ac{SET} will normally destroy a chip, if not counted by shutting power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See section \ref{current_measurement_board} for more information on the board.
  
 The PLLs on the SF2 has a lock signal which checks if the output of the PLL is in sync with the input. If it is in sync, the lock signal is high, if not, its low. 
 To check if we have a reliable clock signal, the lock signal was sent to a I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
 
+\subsection{Configuration and Monitoring}
+All test was put in one project. 
 
-\FloatBarrier
+
+\subsubsection{MSS and labVIEW}
+
+x
+\subsubsection{Monitoring board}
+
 
 \subsubsection{Current measurement board}
+
+
 \label{current_measurement_board}
 To measure the current into the SmartFusion2 starter-kit, a \ac{PCB} was made with a microcontroller, serial to USB converter (FTDI chip), some debugging LEDs, power switch, and all the necessary electronics to make all this work together. The microcontroller used is a Texas Instruments MSP430AFE253. That is a 16-bit microcontroller with internal 24-bit \ac{ADC}.
 It has an internal frequency of up to 12 MHz, and support high frequency crystal up to 16 Mhz.
 Two types of serial communication interface are available, that is USART and SPI, which is selectable in software.
 Since the microcontroller only has a 16-bit architecture, only 16-bit of the \ac{ADC} is accessible at a time. The microcontroller has 3 differential \ac{ADC} inputs, which means voltage over three resistors can be measured.
 
-
 To measure current for the SF2 starter-kit a small shunt resistor of 0.1 Ohm was placed in series with the supply signal on the starter-kit, one for the 1.2 V supply voltage, and one for the 3.3 V supply voltage. The voltage over this resistor was measured with the \ac{ADC}, and the \ac{ADC} data was sent over USART port to the serial to USB converter, and further to a computer. On the computer a labVIEW program was set up to receive data through the serial port, and when data is received, the \ac{ADC} value and the known resistor value is used to calculate the current. The current value is constantly saved and exposed for a viewer.
 
 The 3.3 V regulator on the SF2-starter kit has a enable signal, where a pull-up resistor to 5 V is placed, one of the outputs on the microcontroller is connected to this pin.
 If the current on one of the supply voltages goes over a certain threshold, the bit on the microcontroller is set to go low, resulting in turning the 3.3 V regulator on the SF2-starter kit off. The 3.3 V is used to power all other regulators, so by turning this regulator off, the whole starter-kit is power less. 
 
-\subsection{Equipment used for testing}
+\FloatBarrier
+
+\section{Equipment used for testing}
 Under a radiation test, some equipment are needed. In the following sections some of the equipment used under a radiation test are presented.
 
-\subsubsection{Neutron dosimeter}$\newline$
+\subsection{Neutron dosimeter}
 The Neutron dosimeter boards are made by Arild Velure, as part of his master thesis \cite{arild_master}.
 It is a SRAM-based radiation detector. By checking SRAM chips for \ac{SEU}, we can find the fluence\footnote{Fluence is the total number of particles that intersect a unit area in a specific time interval of interest, and has units of $particle/\centi\square\meter$ (number of particles per meter squared)} of the beam.
 
@@ -924,14 +944,14 @@ The cross section (the probability that a incoming particle will induce an SEU) 
 
 \FloatBarrier
 
-\subsubsection{Scintillator counter}
+\subsection{Scintillator counter}
 A scintillator is a material that emits light when it is exposed to ionizing radiation \cite{rad_phys}.
 A scintillator can be used as a stand alone equipment, but then only to detect that there are radiation, by seeing that it lights up.
 To get a more accurate measurement, we will need a PhotoMultiplier Tube (PM-tube), which has the ability to concerts light pulses to current pulses by an electron avalanche process. The current pulses can be detected by a edge counter, which count every falling or rising edge of a signal.
 
 \newpage
 
-\subsubsection{X-Y-positioning system}
+\subsection{X-Y-positioning system}
 The X-Y-positioning system is a displacement system where things (for example a \ac{PCB}) can be mounted and be moved up, down and sideways in a small area controlled by a computer. Communication is done through a serial port and a labVIEW program is used to control the system.
 
 This was used when doing the beam profile as discussed in chapter \ref{beam_setup}. In figure \ref{xy-table} you can see a picture of the front and back of the X-Y-positioning system, with the Neutron dosimeter mounted.
@@ -954,9 +974,16 @@ This was used when doing the beam profile as discussed in chapter \ref{beam_setu
 \newpage
 
 
-\section{Testing at \acf{OCL}}
+\chapter{Irradiation test setup}
+Irradiation test for the RCU2 electronics which was discussed in the previous chapter, was executed at two facilities, that is \acf{OCL} and \acf{TSL}.
+This chapter will give a brief introduction to the two facilities, and explain how to prepare for beam test, how the setup looked like and how monitoring is done through a test.
 
-\subsection{About \ac{OCL}}
+\subsubsection{Purpose of tests}
+The purpose of testing the RCU2 electronics for radiation are to see if it are able to survive in a radiated area as we will find in the \ac{LHC}, see section \ref{how_to_test}.
+To make sure that we know the limit of the \ac{IC}s, the \ac{IC}s was irradiated until a error occurred, current consumption drastically increased or the \ac{IC} received a much higher dose than was required without error.
+
+\section{Irradiation on \ac{OCL}}
+\subsection{About OCL}
 Oslo cyclotron Laboratory is located at the Department of physics at the University of Oslo, and was opened in 1978. The cyclotron is of the type MC-35 and was made by Scanditronix AB from Sweden.
 This is the only accelerator in Norway for ionized particles used in basic research.
 The cyclotron can accelerate protons, deuteron, $^3He$ and $^4He$, 
@@ -1039,9 +1066,7 @@ XY-positioning system  & Connected to the computer so we can change the position
 \subsection{Preparation and characterization of the beam}
 Before we could start testing of the \ac{PCB}, the cyclotron had to be made ready for a proton beam and the magnet controlling the direction had to be put in the right position to get the beam out in experiment area 2.
 
-\subsubsection{Purpose of tests}
-The purpose of testing these board is to see if they are able to survive in a radiated area as we will find in the \ac{LHC}, see section \ref{how_to_test}.
-To make sure that we know the limit of the \ac{IC}s, the \ac{IC}s was irradiated until a error occurred, current consumption drastically increased or the \ac{IC} received a much higher dose than was required without error.
+
 
 \subsubsection{Beam setup}
   \label{beam_setup}
@@ -1072,22 +1097,24 @@ When the beam gets out through the beam exit the energy will be reduced by crash
 \section{Testing at \acf{TSL}}
 
 \subsection{About TSL}
-TSL is a facility located in the University of Uppsala in Sweden.
+TSL is a national research facility located at the University of Uppsala in Sweden.
 It is manly used for proton therapy by Uppsala Academic Hospital.
-Beam time not used for proton therapy will be devoted to commercial neutron and proton irradiation projects. \cite{website:TSL} 
+Beam time not used for proton therapy will be devoted to commercial neutron and proton irradiation projects. \cite{website:TSL}
+TSL provides neutron and proton beams, in the range 20-180 MeV
 
 \subsection{Beam setup procedure}
 
-\subsection{What was tested}
 
-\newpage
+\subsection{What was tested at \ac{TSL}}
 
-\section{Results and calculations from beam test at OCL and TSL}
+
+
+\chapter{Results from beam}
 In this chapter the result after radiation test at OCL and TSL is presented.
 The result is presented after type, so if two \ac{PCB} that the two boards of the same type is presented together. 
 
-\subsection{Results from OCL}
-\subsubsection{Calibration process}
+\section{Results from OCL}
+\subsection{Calibration process}
 As explained in chapter $\ref{beam_setup}$, we had to start by finding the center of the beam.
 The laser was first placed in a position pointing a what thought to be center. 
 Then we placed a film in front of the beam exit and \ac{DUT} area.
@@ -1135,7 +1162,7 @@ CS = 1,14e-6
 \label{CS}
 \end{equation}
 
-\subsection{Test results}
+\section{Test results}
 The tests was controlled and monitored through a LabVIEW program for each of the different IC. When testing ADN2814 and MAX3748 there was also needed a \ac{SF2} board to produce a input signal, and compare the input with the output signal. A complete result of the tests can be found in appendix \ref{appendix}.
 The point of this test was to see that these ICs would survive in a radiated area. The total dose of 10 years in the ALICE detector is estimated to be a 1-2 kRad, see section \ref{how_to_test}. If a \ac{IC} survives more than 10 times that, we can be quite sure that it will survive the radiation it will receive at CERN.
 In table \ref{dose_15.11} and \ref{dose_28.11} you can see how long each ICs has been exposed too radiation, the dose they have been received and if an error occurred.
@@ -1192,7 +1219,7 @@ In figure $\ref{flux_all1}$ and $\ref{flux_all2}$ you can see graphs of flux vs 
 
 \FloatBarrier
 
-\subsubsection{TPS51200}
+\subsection{TPS51200}
 This was the first board that was tested.
 The intensity was a little low on this test.
 To make the testing process faster the intensity was increased during the later experiments.
@@ -1209,7 +1236,7 @@ Two PCBs of this type was tested, but only one worked when we was at OCL to do t
 
 \FloatBarrier
 
-\subsubsection{MIC69302WU}
+\subsection{MIC69302WU}
 The first board was tested 15.11.13 and the second board was tested 28.11.13. During the test of the first board we increased the intensity of the beam quite allot, that can be seen from the flux graph, in figure \ref{flux_all1}.
 
 This \ac{IC} had an unexpected reaction to irradiation. You can see from both of the graphs that the current is decreasing and voltage is increasing, normally we would expect the opposite, or at least that the current would increase.
@@ -1235,7 +1262,7 @@ As seen from the graph in figure \ref{MIC69302WU_both} it starts quite early to 
 
 \FloatBarrier
 
-\subsubsection{SN74AVCB164245}
+\subsection{SN74AVCB164245}
 
 It can be seen that the characteristics on the two test board are different, the reason for this is maybe because of different output load. The reason for the ``jumps`` in current is because the output is constantly changing from on to off, with a gap of 4 seconds.
 This chips is not effected by radiation before a dose of approx 40kRad. That is more than enough for the purposes we are going to use this for.
@@ -1259,7 +1286,7 @@ This chips is not effected by radiation before a dose of approx 40kRad. That is 
 
 \FloatBarrier
 
-\subsubsection{SN74AVC2T245}
+\subsection{SN74AVC2T245}
 
 Something went wrong on the first test. After 740 s and a dose of 98 Rad the chips output was stuck at 1. The reason for this is unknown, I fear that this might be defected before we started the test, since it gives a totally different characteristics than test board nr 2.
 The input was switching from high to low every 4 second. If we look at the test results from board 2, the current goes unchanged up to 40 kRad, and that is more than enough.
@@ -1284,7 +1311,7 @@ The input was switching from high to low every 4 second. If we look at the test 
 
 \FloatBarrier
 
-\subsubsection{QS3VH257}
+\subsection{QS3VH257}
 The select input was changed every 4 second and the inputs(I0A, I0B, I0C, I0D, I1A, I1B, I1C and I1D) was inverted every 18 second.
 
 The two test boards worked fine through the tests.
@@ -1309,7 +1336,7 @@ We see that we have small increase in current before 30 kRad, after that it incr
 
 \FloatBarrier
 
-\subsubsection{SY89831}
+\subsection{SY89831}
 This \ac{IC} required a high current to work, and since the labVIEW DAQ device only delivers 5mA on the analog outputs, a combination of the modified MIC69302WU as described in section \ref{MIC_explanation} and the 5V output on the DAQ was used. This gave us a output of 3.3 V and a current limit of 200 mA. Here a 20$\ohm$ resistor was used to measure current instead of a 220 $\ohm$ resistor, this was to reduce the voltage drop over the resistor because of the high current consumption.
 
 A difference in characteristics can also be seen here. This may be because two different footprint for the PCB was used, and therefore some difference can be seen. We see a small increase in current on both of the boards, but not noteworthy, compared to how much current this IC is using.
@@ -1334,7 +1361,7 @@ A difference in characteristics can also be seen here. This may be because two d
 
 \FloatBarrier
 
-\subsubsection{ADN2814}
+\subsection{ADN2814}
 This \ac{IC} is a little special and was hard to get a good test on. This is a clock and data return circuit, with a limiting amplifier.
 The SF2 board was used to code a clock and data into a differential Manchester signal, that was sent into the IC. Out of the IC we get a LVDS clock and LVDS Manchester signal. The Manchester coded data signal was decoded on SF2 board, so that we get out a clock and data. The data was tested by delaying the original data through a few D-latches, so that the original and returned data was close to synced. Then we could compare the original data with the one from the \ac{IC} through a XOR-function. This function was triggered by a 80 Mhz clock from the \ac{SF2} board. If they aren't equal when the clock rises, a 1 will be added to a counter. The value of the counter was constantly sent through the UART of the SF2 board.
 
@@ -1382,7 +1409,7 @@ How good this test really is, could be discussed, since we don't have any data o
 
 \FloatBarrier
 
-\subsubsection{MAX3748}
+\subsection{MAX3748}
 This circuit has the same purpose as ADN2814, the difference is that this one only return the limited Manchester coded signal, and no clock. The process for testing the data is the same as for the ADN2814.
 The decoding process return clock and data, but since they are related to another, a error on the clock would mean an error at the data. So by measuring data, we can be sure that there are no clock errors as well. 
 
@@ -1409,7 +1436,7 @@ After a dose of over 400 kRad this chip still worked, and current consumption wa
 
 \newpage
 
-\subsection{Calculation of dose}
+\section{Calculation of dose}
 After a radiation test on one of the PCB, we knew the exposed time and scintillator counts. From the calibration we got the relation between scintillator counts and SEU on the \ac{SRAM}, and the cross section for the SRAM is known. 
 We start by calculating SEU from the conversion factor found in the calibration process, for 15.11.13 this was 0.0948 and for 28.11.13 this factor was 0.0473. Then we calculate the fluence at \ac{DUT} as seen in equation \ref{FluenceDUT}, and by this we can calculate the flux, see equation \ref{flux}.
 To calculate the dose from here we need to know some more factors. We run a simulation on a program called FLUKA. This program is used to simulate particles in different environment. We simulated a proton beam of 28MeV and 25MeV in air, and inserted the distance from BE(Bean exit). The results can be seen in table $\ref{FLUKA_15}$.
@@ -1457,7 +1484,7 @@ DoseDUT[Gy] = FluenceBE \times \frac{Dose}{primary particle at DUT}
 \end{equation}
 
 \newpage
-\subsection{Discussion of the result}
+\section{Discussion of the result}
 Most of the testing was done 15.nov and 28.nov. The other days was used to get familiar with the instruments and equipment that was being used, to prepare the setup and setting up the beam.
 There are almost impossible to get the same beam two days at a row. Each day of testing is therefore different from each other. Since the testing was conducted in two periodes and a total of 4 test days, there are allot of uncertainties regarding the beam.
 And that is also why we had to do calibration each day at start-up.
@@ -1471,16 +1498,17 @@ Having that in mind, I would say that every component tested would have a green 
 
 \newpage
 
-\section{Conclusion}
+\chapter{Conclusion}
 
 
-\newpage
+
 \FloatBarrier
 
-\section{Appendix}
+\begin{appendices}
+\chapter{Some Appendix}
 \label{appendix}
 
-\subsection{datasheets}
+\section{datasheets}
 \label{datasheets}
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}
@@ -1554,6 +1582,7 @@ Having that in mind, I would say that every component tested would have a green 
   \label{FLUKA_28}%
 \end{table}%
 
+\end{appendices}
 
 \FloatBarrier
 

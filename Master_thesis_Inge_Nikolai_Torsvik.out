@@ -1,72 +1,72 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{How to test}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{About this work}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{ALICE experiment}{}% 4
-\BOOKMARK [2][-]{subsection.2.1}{The Time Projection Chamber TPC}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.2}{The TPC Front End electronics FEE}{section.2}% 6
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Front End Card FEC}{subsection.2.2}% 7
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Readout Control Unit RCU}{subsection.2.2}% 8
-\BOOKMARK [3][-]{subsubsection.2.2.3}{RCU2}{subsection.2.2}% 9
-\BOOKMARK [1][-]{section.3}{Radiation and Radiation effect on Semiconductor devices}{}% 10
-\BOOKMARK [2][-]{subsection.3.1}{Interaction of Radiation With Matter}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.2}{Charge particle and their Interaction with Matters}{section.3}% 12
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Stopping Power}{subsection.3.2}% 13
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Specific Stopping Power}{subsection.3.2}% 14
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Linear Energy Transfer LET}{subsection.3.2}% 15
-\BOOKMARK [2][-]{subsection.3.3}{Neutral particle and their Interaction with Matter}{section.3}% 16
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Neutrons}{subsection.3.3}% 17
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Photons}{subsection.3.3}% 18
-\BOOKMARK [2][-]{subsection.3.4}{Radiation Effects on Semiconductor Devices}{section.3}% 19
-\BOOKMARK [3][-]{subsubsection.3.4.1}{Single Events Effects SEE}{subsection.3.4}% 20
-\BOOKMARK [3][-]{subsubsection.3.4.2}{Accumulative Effects}{subsection.3.4}% 21
-\BOOKMARK [3][-]{subsubsection.3.4.3}{The TPC radiation environment}{subsection.3.4}% 22
-\BOOKMARK [1][-]{section.4}{Preparations for Testing}{}% 23
-\BOOKMARK [2][-]{subsection.4.1}{The Integrated Circuits \(ICs\) Which Where Tested}{section.4}% 24
-\BOOKMARK [3][-]{subsubsection.4.1.1}{TPS51200}{subsection.4.1}% 25
-\BOOKMARK [3][-]{subsubsection.4.1.2}{MIC69302WU}{subsection.4.1}% 26
-\BOOKMARK [3][-]{subsubsection.4.1.3}{SN74AVCB164245}{subsection.4.1}% 27
-\BOOKMARK [3][-]{subsubsection.4.1.4}{SN74AVC2T245}{subsection.4.1}% 28
-\BOOKMARK [3][-]{subsubsection.4.1.5}{QS3VH257}{subsection.4.1}% 29
-\BOOKMARK [3][-]{subsubsection.4.1.6}{SY89831U}{subsection.4.1}% 30
-\BOOKMARK [3][-]{subsubsection.4.1.7}{ADN2814 and MAX3748}{subsection.4.1}% 31
-\BOOKMARK [3][-]{subsubsection.4.1.8}{INA210}{subsection.4.1}% 32
-\BOOKMARK [3][-]{subsubsection.4.1.9}{TLV3011}{subsection.4.1}% 33
-\BOOKMARK [3][-]{subsubsection.4.1.10}{All the test boards}{subsection.4.1}% 34
-\BOOKMARK [2][-]{subsection.4.2}{Software}{section.4}% 35
-\BOOKMARK [2][-]{subsection.4.3}{SmartFusion2}{section.4}% 36
-\BOOKMARK [3][-]{subsubsection.4.3.1}{SRAM test}{subsection.4.3}% 37
-\BOOKMARK [3][-]{subsubsection.4.3.2}{Test of the Logical element}{subsection.4.3}% 38
-\BOOKMARK [3][-]{subsubsection.4.3.3}{Single Event Latchup and PLL}{subsection.4.3}% 39
-\BOOKMARK [3][-]{subsubsection.4.3.4}{Current measurement board}{subsection.4.3}% 40
-\BOOKMARK [2][-]{subsection.4.4}{Equipment used for testing}{section.4}% 41
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Neutron dosimeter}{subsection.4.4}% 42
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Scintillator counter}{subsection.4.4}% 43
-\BOOKMARK [3][-]{subsubsection.4.4.3}{X-Y-positioning system}{subsection.4.4}% 44
-\BOOKMARK [1][-]{section.5}{Testing at Oslo Cyclotron Laboratory \(OCL\)}{}% 45
-\BOOKMARK [2][-]{subsection.5.1}{About OCL}{section.5}% 46
-\BOOKMARK [2][-]{subsection.5.2}{Experiment setup and equipment}{section.5}% 47
-\BOOKMARK [2][-]{subsection.5.3}{Preparation and characterization of the beam}{section.5}% 48
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Purpose of tests}{subsection.5.3}% 49
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Beam setup}{subsection.5.3}% 50
-\BOOKMARK [2][-]{subsection.5.4}{What was tested at OCL}{section.5}% 51
-\BOOKMARK [1][-]{section.6}{Testing at The Svedberg Laboratory \(TSL\)}{}% 52
-\BOOKMARK [2][-]{subsection.6.1}{About TSL}{section.6}% 53
-\BOOKMARK [2][-]{subsection.6.2}{Beam setup procedure}{section.6}% 54
-\BOOKMARK [2][-]{subsection.6.3}{What was tested}{section.6}% 55
-\BOOKMARK [1][-]{section.7}{Results and calculations from beam test at OCL and TSL}{}% 56
-\BOOKMARK [2][-]{subsection.7.1}{Results from OCL}{section.7}% 57
-\BOOKMARK [3][-]{subsubsection.7.1.1}{Calibration process}{subsection.7.1}% 58
-\BOOKMARK [2][-]{subsection.7.2}{Test results}{section.7}% 59
-\BOOKMARK [3][-]{subsubsection.7.2.1}{TPS51200}{subsection.7.2}% 60
-\BOOKMARK [3][-]{subsubsection.7.2.2}{MIC69302WU}{subsection.7.2}% 61
-\BOOKMARK [3][-]{subsubsection.7.2.3}{SN74AVCB164245}{subsection.7.2}% 62
-\BOOKMARK [3][-]{subsubsection.7.2.4}{SN74AVC2T245}{subsection.7.2}% 63
-\BOOKMARK [3][-]{subsubsection.7.2.5}{QS3VH257}{subsection.7.2}% 64
-\BOOKMARK [3][-]{subsubsection.7.2.6}{SY89831}{subsection.7.2}% 65
-\BOOKMARK [3][-]{subsubsection.7.2.7}{ADN2814}{subsection.7.2}% 66
-\BOOKMARK [3][-]{subsubsection.7.2.8}{MAX3748}{subsection.7.2}% 67
-\BOOKMARK [2][-]{subsection.7.3}{Calculation of dose}{section.7}% 68
-\BOOKMARK [2][-]{subsection.7.4}{Discussion of the result}{section.7}% 69
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 70
-\BOOKMARK [1][-]{section.9}{Appendix}{}% 71
-\BOOKMARK [2][-]{subsection.9.1}{datasheets}{section.9}% 72
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{How to test}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{About this work}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{ALICE experiment}{}% 4
+\BOOKMARK [1][-]{section.2.1}{The Time Projection Chamber TPC}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{The TPC Front End electronics FEE}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.1}{Front End Card FEC}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{Readout Control Unit RCU}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.3}{RCU2}{section.2.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Radiation and Radiation effect on Semiconductor devices}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Interaction of Radiation With Matter}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Charge particle and their Interaction with Matters}{chapter.3}% 12
+\BOOKMARK [2][-]{subsection.3.2.1}{Stopping Power}{section.3.2}% 13
+\BOOKMARK [2][-]{subsection.3.2.2}{Specific Stopping Power}{section.3.2}% 14
+\BOOKMARK [2][-]{subsection.3.2.3}{Linear Energy Transfer LET}{section.3.2}% 15
+\BOOKMARK [1][-]{section.3.3}{Neutral particle and their Interaction with Matter}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.3.1}{Neutrons}{section.3.3}% 17
+\BOOKMARK [2][-]{subsection.3.3.2}{Photons}{section.3.3}% 18
+\BOOKMARK [1][-]{section.3.4}{Radiation Effects on Semiconductor Devices}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.4.1}{Single Events Effects SEE}{section.3.4}% 20
+\BOOKMARK [2][-]{subsection.3.4.2}{Accumulative Effects}{section.3.4}% 21
+\BOOKMARK [2][-]{subsection.3.4.3}{The TPC radiation environment}{section.3.4}% 22
+\BOOKMARK [0][-]{chapter.4}{Preparations for Testing}{}% 23
+\BOOKMARK [1][-]{section.4.1}{The Integrated Circuits \(ICs\) Which Where Tested}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.1.1}{TPS51200}{section.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.1.2}{MIC69302WU}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.3}{SN74AVCB164245}{section.4.1}% 27
+\BOOKMARK [2][-]{subsection.4.1.4}{SN74AVC2T245}{section.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.1.5}{QS3VH257}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.6}{SY89831U}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.7}{ADN2814 and MAX3748}{section.4.1}% 31
+\BOOKMARK [2][-]{subsection.4.1.8}{INA210}{section.4.1}% 32
+\BOOKMARK [2][-]{subsection.4.1.9}{TLV3011}{section.4.1}% 33
+\BOOKMARK [2][-]{subsection.4.1.10}{All the test boards}{section.4.1}% 34
+\BOOKMARK [1][-]{section.4.2}{Software}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.3}{SmartFusion2}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.3.1}{SRAM test}{section.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.3.2}{Test of the Logical element}{section.4.3}% 38
+\BOOKMARK [2][-]{subsection.4.3.3}{Single Event Latchup and PLL}{section.4.3}% 39
+\BOOKMARK [2][-]{subsection.4.3.4}{The total test code}{section.4.3}% 40
+\BOOKMARK [2][-]{subsection.4.3.5}{Current measurement board}{section.4.3}% 41
+\BOOKMARK [1][-]{section.4.4}{Equipment used for testing}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.4.1}{Neutron dosimeter}{section.4.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.2}{Scintillator counter}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.3}{X-Y-positioning system}{section.4.4}% 45
+\BOOKMARK [0][-]{chapter.5}{Irradiation test setup}{}% 46
+\BOOKMARK [1][-]{section.5.1}{Irradiation on OCL}{chapter.5}% 47
+\BOOKMARK [2][-]{subsection.5.1.1}{About OCL}{section.5.1}% 48
+\BOOKMARK [2][-]{subsection.5.1.2}{Experiment setup and equipment}{section.5.1}% 49
+\BOOKMARK [2][-]{subsection.5.1.3}{Preparation and characterization of the beam}{section.5.1}% 50
+\BOOKMARK [2][-]{subsection.5.1.4}{What was tested at OCL}{section.5.1}% 51
+\BOOKMARK [1][-]{section.5.2}{Testing at The Svedberg Laboratory \(TSL\)}{chapter.5}% 52
+\BOOKMARK [2][-]{subsection.5.2.1}{About TSL}{section.5.2}% 53
+\BOOKMARK [2][-]{subsection.5.2.2}{Beam setup procedure}{section.5.2}% 54
+\BOOKMARK [2][-]{subsection.5.2.3}{What was tested at TSL}{section.5.2}% 55
+\BOOKMARK [0][-]{chapter.6}{Results from beam}{}% 56
+\BOOKMARK [1][-]{section.6.1}{Results from OCL}{chapter.6}% 57
+\BOOKMARK [2][-]{subsection.6.1.1}{Calibration process}{section.6.1}% 58
+\BOOKMARK [1][-]{section.6.2}{Test results}{chapter.6}% 59
+\BOOKMARK [2][-]{subsection.6.2.1}{TPS51200}{section.6.2}% 60
+\BOOKMARK [2][-]{subsection.6.2.2}{MIC69302WU}{section.6.2}% 61
+\BOOKMARK [2][-]{subsection.6.2.3}{SN74AVCB164245}{section.6.2}% 62
+\BOOKMARK [2][-]{subsection.6.2.4}{SN74AVC2T245}{section.6.2}% 63
+\BOOKMARK [2][-]{subsection.6.2.5}{QS3VH257}{section.6.2}% 64
+\BOOKMARK [2][-]{subsection.6.2.6}{SY89831}{section.6.2}% 65
+\BOOKMARK [2][-]{subsection.6.2.7}{ADN2814}{section.6.2}% 66
+\BOOKMARK [2][-]{subsection.6.2.8}{MAX3748}{section.6.2}% 67
+\BOOKMARK [1][-]{section.6.3}{Calculation of dose}{chapter.6}% 68
+\BOOKMARK [1][-]{section.6.4}{Discussion of the result}{chapter.6}% 69
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 70
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Some Appendix}{}% 71
+\BOOKMARK [1][-]{section.a.A.1}{datasheets}{Appendix.a.A}% 72
