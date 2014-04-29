@@ -567,17 +567,17 @@ Therefore we could expect a dose of 1-2 $\kilo$Rad during the time it will be us
 Testing \acfp{IC} is a thing that has been done before when it comes to the design of electronics that are going to be installed in the \ac{LHC} at CERN.
 Much of the work presented in this thesis is based on experience from previous thesis \cite{bjorn_master} \cite{roed_doctor} \cite{roed_master} \cite{arild_master}.
 
-\section{The \acfp{IC} Which Where Tested}
+\section{The \acfp{IC}}
 The \ac{IC} that was tested through this thesis are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210, TLV3011 and SF2 M2S050-FG896.
 What each of these are, and how these was tested will be discussed in the following sections.
 
-For each of the different \ac{IC}, except for SF2, a \acf{PCB} was made with only the necessary electronics to make it work and to be able to test the functionality of the \ac{IC}.
-Connectors (1-2) was placed on the \acp{PCB} and connected to \acf{DAQ} boards from National Instruments. These gave us the possibility to control the inputs of each \ac{IC} and monitor the outputs.
+For each of the different \ac{IC}, except SF2, a \acf{PCB} was made with only the necessary electronics to make it work and to be able to test the functionality of the \ac{IC}.
+one to two Connectors was placed on the different \acp{PCB} and connected to USB-\acf{DAQ} boards from National Instruments. These gave us the possibility to control the inputs of each \ac{IC} and monitor the outputs.
 A small resistor was placed in serial with the power input, so we would be able to measure the voltage over this resistor to get current.
 
 We wanted to have two \ac{PCB} for each of the \ac{IC} that was going to be tested to have more test data on each \ac{IC},
 and to be sure that the error we would see wasn't just a coincidence.
-There may be some difference between two boards made for the same chip, that is because the first board made may have some modification on the \ac{PCB}, to make it work. When the second board was made, error or mis functions was fixed at \ac{PCB} level. So that modification wasn't needed.
+There may be some difference between two boards made for the same chip, that is because the first board made may have some modification on the \ac{PCB}, to make it work. When the second board was made, error or mis functions was fixed in the design before a new board was made.
 The second version was tested first, in case we didn't have time to test both of the versions.
 Later in this thesis the second board that was made are marked with $_1$ and the first board was marked with $_2$.
 Two of the \ac{IC}s (ADN2814 and MAX3748) was only made one version of, since we didn't have any spare \ac{IC} at the time to make a new \ac{PCB}.
@@ -594,7 +594,7 @@ More information on the DAQs can be seen in the reference \cite{website:DAQ}.
 This is a adjustable power regulator from Texas Instruments. It is special designed for DDR RAMs, it can be used for DDR, DDR2, DDR3 and DDR4 applications.
 % On the \ac{RCU2}, this is going to be used to supply a DDR3 RAM with 0.75 V.
 
-In figure \ref{TPS51200_sch} you can see a schematic layout of the \ac{PCB} board for the TPS51200.
+In figure \ref{TPS51200_sch} you can see a schematic layout of the \ac{PCB} for TPS51200.
 The PCB was designed after a recommended setup for DDR3 application from the datasheet \cite{website:TPS51200}. Input voltage was set to 3.3 V.
 Voltage over resistor R1 (See figure \ref{TPS51200_sch}) was measured and used to calculate current consumption. Output voltage was also monitored.
 
@@ -610,10 +610,10 @@ Voltage over resistor R1 (See figure \ref{TPS51200_sch}) was measured and used t
 \label{MIC_explanation}
 This is a ultra low dropout\footnote{Low dropout means that voltage on the output can be close up to the input. For MIC69302WU low dropout means that $V_{IN}$ - $V_{OUT}$ can be as low as 500 $\milli\volt$} adjustable power regulator from Micrel Incorporation. It is in a family of high current, low voltage regulators, and can deliver a current of up to 3 A.
 % On the \ac{RCU2} this is going to be used to regulate a 3.3 V signal to 1.2 V and power everything that requires 1.2 V on the board.
-
-This is a adjustable regulator. That means that by changing R1 and R2(see figure \ref{MIC_sch}) you can adjust the output voltage, see equation \ref{Vout}. For the two test boards we had a input voltage of 3.3 V.
+It is a adjustable regulator, which means that by changing R1 and R2(see figure \ref{MIC_sch}) you can adjust the output voltage, see equation \ref{Vout}.
+For the two test boards that was made we used a input voltage of 3.3 V.
 Voltage over resistor R?(See figure \ref{MIC_sch}) was measured and used to calculate current consumption. Output voltage was also monitored.
-We used 10k $\ohm$ for both R1 and R2 which gave us 1 V on the output.
+We used 10 k$\ohm$ for both R1 and R2 which gave us 1 V on the output.
 
 A third \ac{PCB} was made with this \ac{IC}. This was used to to supply 3.3V to the PCB that requires more than 5 mA which is the maximum the analog outputs the \ac{DAQ} form National Instruments can deliver.
 This was design with resistor values of R? = 20 $\ohm$, R1 = 5.6k $\ohm$ and R2 = 1k $\ohm$, which gives us 3.3 V output.
@@ -634,8 +634,9 @@ Vout = 0.5 \times (\frac{R1}{R2}+1)
 
 \subsection{SN74AVCB164245}
 This is a 16-bit noninverting bus transceiver, with configurable voltage. Used for level shifting for digital signals.
-An application example could be to convert a 16-bit digital signal that with high value of 1.5 V to a 16-bit signal with high value of 3.3 V.
-The input and output high value can be set to anything between 1.4 and 3.6 V, the low value is set to 0 V.
+An application example could be to convert a 16-bit digital signal of 1.5 V to a 16-bit signal of 3.3 V.
+Direction of the signal is decided by DIR1 and DIR2
+The input and output high value can be set to anything between 1.4 and 3.6 V, the low value is set to be 0 V.
 % On the \ac{RCU2} this is going to be used as a bus transceiver with 1.5 V signal in and 3.3 V signal out.
 
 For the test board the supply voltages(VCCA and VCCB, see figure \ref{SN74AVCB164245_sch}) was both set to 3.3 V to make it more simple to test.
@@ -655,6 +656,8 @@ This made the current for the inputs come from the supply pin, and not from the 
 
 \subsection{SN74AVC2T245}
 This is a dual-bit noninverting bus transceiver, with configurable voltage. It has the same function as SN74AVCB164245, but this only has two inputs.
+The input and output high value can be set to anything between 1.4 and 3.6 V, the low value is set to be 0 V.
+Direction of the signal is decided by DIR1 and DIR2
 % On the RCU2 board, this is planned to be used to convert a 2.5V \acf{SPI} signals to a 3.3V \ac{SPI} signals.
 
 As for SN74AVCB164245 a 3.3 V supply was was used for both VCCA and VCCB, see figure \ref{SN74AVC2T245_sch}.
@@ -695,10 +698,11 @@ The outputs was measured by the analog inputs of DAQ USB-6501.
 
 This \ac{IC} requires a large current typically around 60 $\milli\ampere$, and we could therefore not use the analog outputs.
 So we had to use the modified version of the MIC69302WU \ac{PCB}, that will supply us with a 3.3 V signal up to a current of 200 $\milli\ampere$.
+Current consumption was measured over the input resistor of the MIC69302WU \ac{PCB}.
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{SY89831U_sch.png}
+  \includegraphics[width=0.8\textwidth]{SY89831U_sch.png}
   \caption{Schematic for the SY89831U test board}
   \label{SY89831U_sch}
 \end{figure}
@@ -722,14 +726,14 @@ The \ac{SF2} was also used to compare the original signal with the signal coming
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{MAX3748_sch.png}
+  \includegraphics[width=0.8\textwidth]{MAX3748_sch.png}
   \caption{Schematic for the MAX3748 test board}
   \label{MAX3748_sch}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{ADN2814_sch.png}
+  \includegraphics[width=0.8\textwidth]{ADN2814_sch.png}
   \caption{Schematic for the ADN2814 test board}
   \label{ADN2814_sch}
 \end{figure}
@@ -748,7 +752,7 @@ INA210 is a so called Current-Shunt Monitor, that is a \ac{IC} that is used to a
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{INA210_sch.png}
-  \caption{Schematic for the MAX3748 test board}
+  \caption{Schematic for the INA210 test board}
   \label{INA210_sch}
 \end{figure}
 
@@ -758,13 +762,12 @@ This is a comparator with a built in voltage reference of 1.242 V. It supports l
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{TLV3011_sch.png}
-  \caption{Schematic for the MAX3748 test board}
+  \caption{Schematic for the TLV3011 test board}
   \label{TLV3011_sch}
 \end{figure}
 
 \subsection{All the test boards}
-In figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you can see how the PCB boards looked like. 
-
+In figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} pictures of the different PCB boards.
 
 \begin{figure}[!htbp]
   \centering
@@ -806,18 +809,18 @@ In figure \ref{labVIEW} you can see an example of a labVIEW program used for SN7
 \section{SmartFusion2}
 \acf{SF2} \ac{SoC} \ac{FPGA} integrate a flash-based \ac{FPGA}\footnote{Flash-based FPGA means that configuration registers is saved in flash memory cells.
 Compared to SRAM-based FPGA where configuration is saved in SRAM cells, flash-based FPGA is much more tolerant against radiation.},
-an ARM Cortex-M3 processor built in a \acf{MSS} and high-performance communication interfaces on a single chip.
+a \acf{MSS}, which consist of a microcontroller, a ARM Cortex-M3 processor, PLLs, bus communication through APB and AHB bus, communication protocols like Ethernet, UART, SPI and $I^2C$, and much more.
 It is also said to have immune configuration memory, as well as several other radiation tolerance measures implemented.
 We are going to use the package M2S050-FG896, with a FPGA of 56 340 logic elements, 6 PLLs, 1314 kb SRAM, 8 SERDES\footnote{Serializer/Deserializer (SERDES) convert data between serial data and parallel interfaces in both direction} lanes, and 377 user I/O.
 
 Everything one the \ac{SF2} that are going to be used in the design has to be tested in some way, unless it has been tested before, or are proven to be radiation intolerant.
-There are four things that we tested. That is the internal SRAM blocks, the logical element, the PLLs and \acf{SEL}. How these will will be tested will be discussed in the following sections. Other functionality was also tested like Ethernet, SERDES and Clock and data recovery, etc., but will not be discussed in this thesis.
+There are four things that we tested. That is the internal SRAM blocks, the logical element, the PLLs and \acf{SEL}. How these will will be tested will be discussed in the following sections. Other functionality was also tested like Ethernet, SERDES and Clock and data recovery, etc., but these test will not be discussed in this thesis.
 
 
 \subsection{SRAM test}
 SRAM cells are as discussed in section \ref{SEU_Section}, sensitive for radiation. The SRAM memory aren't used for configuration register, as it was for the Xilinx FPGA on RCU1, and are therefore not as critical.
 But we still want to test how robust the SRAM cells are against radiation, so we can know how reliable these are if used.
-The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM block with a size of 1024 x 18 bits.
+The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM blocks with a size of 1024 x 18 bits.
 Both micro SRAM blocks and large SRAM blocks are so called two port SRAM, which means that we can access two addresses at the same time.
 
 The way the SRAM memory was tested is divided into 3 state in a state machine, this can be seen in block diagram in figure \ref{SRAM_flow_chart}.
@@ -827,7 +830,7 @@ Read address is always set be one higher then read address.
 
 The next state is a initial state where all addresses are written to. Write data is switched opposite every address increment, so the written data is switched between 1010...1010 and 0101...0101 every other address. When the last bit is written to, the first bit is read. 
 
-The last state is a state where all of the addresses are written, read and compared through a endless loop. The written data to a address is always set to be opposite of the previous value written to that address. The state machine will stay in this state until a reset is pushed.
+The last state is a state where all of the addresses are written, read and compared through a endless loop. The data written to a address is always opposite of the previous value omnn to that address, that is to prevent having stuck bits. The state machine will stay in this state until a reset is pushed.
 
 \begin{figure}[!htbp]
   \centering
@@ -837,15 +840,16 @@ The last state is a state where all of the addresses are written, read and compa
 \end{figure}
 
 The \ac{SEU} counter value for both the micro SRAM and the Large SRAM, as well as number of cycles through all addresses is saved in registers and sent to the \acf{MSS}.
-Here the data received are sent through one of the \ac{UART} serial port which is connected to one of the USB-port on the starter-kit. A labVIEW program are made to read out the \ac{SEU} and cycles values, and exhibited for the viewer, data is also saved to disk.
+How the data is monitored and checked is discussed in section \ref{MSS_and_labVIEW}.
 
 \FloatBarrier
 
 \subsection{Test of the Logical element} 
+\label{logic_Element}
 A logical element consist of a 4 input Look-Up Table\footnotemark[4] and a separate flip-flop which can be used independently from the Look-Up Table.
 That means that we have 56 340 flip-flops and 56 340 Look-Up Tables available for our design.
-When a logical element is exposed to radiation, a \ac{SET} can occur all over the chip.
-If this happens in the logical element or in the interconnections between logical element, the transient current will normally just be there for a small amount of time, and then it will flat out, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or a node that may lead to a change of value at the input, and the input is then clocked out to the output, we would have a unwanted bit change or a so called \ac{SEU}.
+When a logical element is exposed to radiation, a \acf{SET} can occur all over the chip.
+If this happens in the logical element or in the interconnections between logical element, the transient current will normally just be there for a small amount of time, and then it will flat out, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or a node that may lead to a change of value at the input, and the input is then clocked out to the output, we would have a unwanted bit change or a so called \acf{SEU}.
 \footnotetext[4]{An n-bit Look-Up Table can encode any n-bit Boolean function by modeling such functions as truth tables}
 
 % Where combinatoric logic circuits are circuits where the outputs are a function only independent on the present inputs, typical combinatoric functions are $AND, OR, XOR$ etc \cite{CMOS}.
@@ -860,10 +864,11 @@ To be able to operate at high speed, we are using something called \ac{WSR}, whi
 To be able to synchronize the two board, a reset signal and shift enable signal will be sent from the monitoring board to the test board,
 and a \ac{WSR} enable signal will be sent from the test board to the monitoring board.
 
-For our tests we made 4 shift-register chains, with 4 inverters in between each flip-flop and where each of the shift-register had a 4-bit \ac{WSR} output. The length of the shift-registers were set to 2000.
+We made generic of all the variables like number of shift-register chains, numbers inverters in between each flip-flop, numbers of bits taken out in the \ac{WSR} output and the length of the shift-registers. Typical value used is respectively 4,4,4 and 2000.
 
 We wanted to be able to change the clock frequency without reprogramming the \ac{FPGA}, to see how the frequency effects the number of upset detected.
-The Clock Conditioning Circuit (CCC) used to produce the clock is configurable through a register, which can be accessed through the \ac{MSS}, so that the frequency can be changed without reprogramming the \ac{FPGA}.
+Clock Conditioning Circuit (CCC) which consist of a PLL, multiplexers and divider circuit, are used to configure clock signals on the \ac{SF2}.
+The CCC can be configured through a register, so the frequency can be changed without reprogramming the \ac{FPGA}.
 
 \begin{figure}[!htbp]
   \centering
@@ -872,28 +877,43 @@ The Clock Conditioning Circuit (CCC) used to produce the clock is configurable t
   \label{Shift_register_design}
 \end{figure}
 
-\subsection{Single Event Latchup and PLL} 
+\subsection{Single Event Latchup and PLL}
 A \acf{SET} is a short circuit between power and ground. If that happens on any spot on the chip, an increase in the supply current can be detected. So the way a \ac{SET} will be checked, is by constantly checking for increase in current consumption on the chip. A \ac{SET} will normally destroy a chip, if not counted by shutting power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See section \ref{current_measurement_board} for more information on the board.
  
-The PLLs on the SF2 has a lock signal which checks if the output of the PLL is in sync with the input. If it is in sync, the lock signal is high, if not, its low. 
+The PLLs on the SF2 has a lock signal which goes high if the PLL is in sync with the input.
 To check if we have a reliable clock signal, the lock signal was sent to a I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
 
-\subsection{The total test code}
-All test was put in one project. 
-\FloatBarrier
+\subsection{Configuration and Monitoring}
+To avoid using too many starter-kit and to save time when we were going to test, we implemented all tests into a single project.
+The test board was communicating with a computer through a serial port, a current measurement board was connected with wires to measure current, and another starter-kit (monitoring board) was connected to the GPIO pins to be able to control and check the Logical element design.
+% So during a radiation test, we had two labVIEW programs running, one for measuring \ac{SEU} and cycles, as well as configure frequency, and another for constantly measuring current.
+More detail of the different test programs and boards used to test the SF2 is discussed in the following sections.
 
-\subsection{Current measurement board}
+\subsubsection{Microcontroller SubSystem and labVIEW}
+\label{MSS_and_labVIEW}
+The Microcontroller SubSystem is used to make a two way communication between the SF2 chip and a computer.
+On the SF2 starter-kits there is a serial communication from a USB-connector to a UART port on the \acp{SF2} microcontroller SubSystem.
+Values like the \ac{SEU} counter and cycle counter which is saved in register in the \ac{FPGA} are sent to the microcontroller SubSystem through APB bus.
+A C-code was written to the microcontroller, which in short sets up the UART communication and constantly sends \ac{SEU} counter and cycle counter values through through UART, and checks for received data. The received data is used to determine the frequency.
+On the computer a labVIEW program was written to receive the data, and show the newest values for a user. Through this program you are also able to select some specific frequencies, by use of pushbuttons in the program, by pushing a button a request to change frequency is sent to the microcontroller. When the microcontroller receives the request, it access the register controlling the \emph{Clock Conditioning Circuit}, and changes to the frequency, by accessing the clock divider.
+
+\subsubsection{Monitoring board}
+As said in section \ref{logic_Element} a second starter-kit, called monitoring board, was used to be able to monitor and control the \emph{Logical element test design}.
+On the monitoring board there is a linux system running. A VHDL code is built on the \ac{FPGA} which takes inn wsr data and wsr enable from the test board and sends out reset, shift enable and pattern. All of the output data is controlled and input data is monitored through APB bus to the linux system. The wsr enable signal tells us when a new data is sent from the test board, when this signal goes high, the wsr data signals is clocked in a register on the monitoring board. The wsr data is then compared with the correct value, and if an error has occurred, a counter will be incremented. The counter value is read in the Linux system.
+
+\subsubsection{Current measurement board}
 \label{current_measurement_board}
 To measure the current into the SmartFusion2 starter-kit, a \ac{PCB} was made with a microcontroller, serial to USB converter (FTDI chip), some debugging LEDs, power switch, and all the necessary electronics to make all this work together. The microcontroller used is a Texas Instruments MSP430AFE253. That is a 16-bit microcontroller with internal 24-bit \ac{ADC}.
 It has an internal frequency of up to 12 MHz, and support high frequency crystal up to 16 Mhz.
-Two types of serial communication interface are available, that is USART and SPI, which is selectable in software.
-Since the microcontroller only has a 16-bit architecture, only 16-bit of the \ac{ADC} is accessible at a time. The microcontroller has 3 differential \ac{ADC} inputs, which means voltage over three resistors can be measured.
+Two types of serial communication interface are available, that is USART and SPI.
+Since the microcontroller only has a 16-bit architecture, only 16-bit of the \ac{ADC} is accessible at a time. The microcontroller has 3 differential \ac{ADC} inputs, which means three different currents can be measured. A current is measured by adding a small resistor of known value in series of the signal you want to measure current of, and by measuring voltage over the resistor you can calculate the current, by using ohms law ($I = \frac{U}{R}$)
 
-
-To measure current for the SF2 starter-kit a small shunt resistor of 0.1 Ohm was placed in series with the supply signal on the starter-kit, one for the 1.2 V supply voltage, and one for the 3.3 V supply voltage. The voltage over this resistor was measured with the \ac{ADC}, and the \ac{ADC} data was sent over USART port to the serial to USB converter, and further to a computer. On the computer a labVIEW program was set up to receive data through the serial port, and when data is received, the \ac{ADC} value and the known resistor value is used to calculate the current. The current value is constantly saved and exposed for a viewer.
+To measure current for the SF2 starter-kit a small resistor of 0.1 Ohm was placed in series with the 1.2 V supply voltage, and a 0.16 Ohm resistor for the 3.3 V supply voltage. The voltage over these resistor was measured with the \ac{ADC}, and the \ac{ADC} data was sent over USART port to the serial to USB converter, and further to a computer. On the computer a labVIEW program was set up to receive data through the serial port, and when data is received, the \ac{ADC} value and the known resistor value is used to calculate the current. The current value is constantly saved and exposed for a viewer.
 
 The 3.3 V regulator on the SF2-starter kit has a enable signal, where a pull-up resistor to 5 V is placed, one of the outputs on the microcontroller is connected to this pin.
-If the current on one of the supply voltages goes over a certain threshold, the bit on the microcontroller is set to go low, resulting in turning the 3.3 V regulator on the SF2-starter kit off. The 3.3 V is used to power all other regulators, so by turning this regulator off, the whole starter-kit is power less. 
+If the current on one of the supply voltages goes over a certain threshold, the bit on the microcontroller is set to go low, resulting in turning the 3.3 V regulator on the SF2-starter kit off. The 3.3 V is used to power all other regulators, so by turning this regulator off, the whole starter-kit turns off.
+
+\FloatBarrier
 
 \section{Equipment used for testing}
 Under a radiation test, some equipment are needed. In the following sections some of the equipment used under a radiation test are presented.
@@ -903,7 +923,7 @@ The Neutron dosimeter boards are made by Arild Velure, as part of his master the
 It is a SRAM-based radiation detector. By checking SRAM chips for \ac{SEU}, we can find the fluence\footnote{Fluence is the total number of particles that intersect a unit area in a specific time interval of interest, and has units of $particle/\centi\square\meter$ (number of particles per meter squared)} of the beam.
 
 The Neutron dosimeter is a \ac{PCB} with a flash-based \ac{FPGA}, four 16 Mbit Cypress SRAM chips, connectors and supporting electronics.
-% The \ac{FPGA} is designed with RS485 two-way communication which makes it possible to edit firmware, send commands and get data out.
+% The \ac{FPGA} is designed witU h RS485 two-way communication which makes it possible to edit firmware, send commands and get data out.
 The board can be connected to a computer through a Opal Kelly XEM3001 board, which converts the RS485 signal from the \ac{FPGA} to USB.
 A labVIEW program has been built specially for this board. From this program we are able to reset data, do some basic settings, and monitor data. The program also constantly saves data onto the disk. The board also has an optical input for scintillator counts, so we could use this board as a scintillator counter as well.
 
