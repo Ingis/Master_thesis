@@ -924,7 +924,7 @@ It is a SRAM-based radiation detector. By checking SRAM chips for \ac{SEU}, we c
 
 The Neutron dosimeter is a \ac{PCB} with a flash-based \ac{FPGA}, four 16 Mbit Cypress SRAM chips, connectors and supporting electronics.
 % The \ac{FPGA} is designed witU h RS485 two-way communication which makes it possible to edit firmware, send commands and get data out.
-The board can be connected to a computer through a Opal Kelly XEM3001 board, which converts the RS485 signal from the \ac{FPGA} to USB.
+The board can be connected to a computer through a Opal Kelly XEM3001 board, which converts RS485 signal from the \ac{FPGA} to USB.
 A labVIEW program has been built specially for this board. From this program we are able to reset data, do some basic settings, and monitor data. The program also constantly saves data onto the disk. The board also has an optical input for scintillator counts, so we could use this board as a scintillator counter as well.
 
 In figure \ref{labview_SRAM} you can see how the labVIEW program looked like. From here we can monitor SEU on all the 4 \ac{SRAM} chips, see scintillator counts, reset counters, see time from start as well as other things. \ac{SRAM}1-10 as you can see on the left side, is different \ac{SRAM}-board, the board we used was SRAM6.
@@ -987,11 +987,11 @@ This was used when doing the beam profile as discussed in chapter \ref{beam_setu
 
 \chapter{Irradiation test setup}
 Irradiation test for the RCU2 electronics which was discussed in the previous chapter, was executed at two facilities, that is \acf{OCL} and \acf{TSL}.
-This chapter will give a brief introduction to the two facilities, and explain how to prepare for beam test, how the setup looked like and how monitoring is done through a test.
+This chapter will give a brief introduction to the two facilities, and explain how we prepared ourself for test and the setup used.
 
 \subsubsection{Purpose of tests}
-The purpose of testing the RCU2 electronics for radiation are to see if it are able to survive in a radiated area as we will find in the \ac{LHC}, see section \ref{how_to_test}.
-To make sure that we know the limit of the \ac{IC}s, the \ac{IC}s was irradiated until a error occurred, current consumption drastically increased or the \ac{IC} received a much higher dose than was required without error.
+The purpose of testing the RCU2 electronics for radiation is to see if the tested \ac{IC} are able to survive in a radiation hard environment as we will find in the \ac{TPC}, see section \ref{how_to_test}.
+To test the limit for each of the \acp{IC}, the \acp{IC} was irradiated until a error was detected, current consumption drastically increased or the \ac{IC} received a much higher dose than was required without error.
 
 \section{Irradiation on \ac{OCL}}
 \subsection{About OCL}
@@ -1061,8 +1061,8 @@ Equipment & Explanation  \\ \hline \hline
 Scintillator & A plastic scintillator with photomultiplier. Was used to measure relative radiation. We had two of these, one that was placed right under \acf{DUT} and one that was placed 75cm away from \ac{DUT}. \\ \hline
 High voltage regulator & Voltage for the photomultiplier. 800V was used. \\ \hline
 The test boards &  TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831U, ADN2814, MAX3748, INA210 and TLV3011. \\ \hline 
-SRAM-board  & A PCB board with 4 \ac{SRAM} cells that was used to characterise the beam and to measure scintillator counts \\ \hline
-SF2 starter kit & A starter kit board with the \acf{SF2} ac{SoC} \ac{FPGA}.  \\ \hline
+Neutron dosimeter  & A PCB board with 4 \ac{SRAM} cells that was used to characterise the beam and to measure scintillator counts \\ \hline
+SF2 starter kit & A starter kit board with the \acf{SF2} \ac{SoC} \ac{FPGA}.  \\ \hline
 Computer  & A VNC server was set up on a computer inside the experimental hall, this made us able to control the experiment from the control room. The computer was running all the necessary software to control and monitor the experiment. \\ \hline
 USB DAQ  & Data acquisition board form National Instruments(NI). Used to establish analog and digital connection to the test boards and send data to the computer. \\ \hline
 Radiation film  & A film that reacts when irradiated. Used to identify the beam. \\ \hline
