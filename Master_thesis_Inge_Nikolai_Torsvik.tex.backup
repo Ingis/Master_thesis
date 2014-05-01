@@ -410,7 +410,7 @@ and can be everything from part of a molecule to a hole organ.
 One alternate definition of LET can be seen in equation \ref{LET}
 
 \begin{equation}
-L_\Delta= \bigg(- \frac{dE}{\xi x}\bigg)_\Delta
+L_\Delta= \bigg(- \frac{dE}{dx}\bigg)_\Delta
 \label{LET}
 \end{equation}
 
@@ -1118,9 +1118,7 @@ TSL provides neutron and proton beams, in the range 20-180 MeV
 
 \subsection{What was tested at \ac{TSL}}
 
-
-
-\chapter{Results from beam}
+\chapter{Calculations and Results from Beam Test}
 In this chapter the result after radiation test at OCL and TSL is presented.
 The result is presented after type, so if two \ac{PCB} that the two boards of the same type is presented together. 
 
