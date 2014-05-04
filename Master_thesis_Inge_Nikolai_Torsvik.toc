@@ -42,41 +42,43 @@
 \contentsline {section}{\numberline {4.2}Software}{32}{section.4.2}
 \contentsline {section}{\numberline {4.3}SmartFusion2}{32}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}SRAM test}{33}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Test of the Logical element}{35}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Single Event Latchup and PLL}{36}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.2}Test of the Logical element}{34}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Single Event Latchup and PLL}{35}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}Configuration and Monitoring}{36}{subsection.4.3.4}
-\contentsline {subsubsection}{Microcontroller SubSystem and labVIEW}{37}{section*.72}
-\contentsline {subsubsection}{Monitoring board}{37}{section*.73}
+\contentsline {subsubsection}{Microcontroller SubSystem and labVIEW}{36}{section*.72}
+\contentsline {subsubsection}{Monitoring board}{36}{section*.73}
 \contentsline {subsubsection}{Current measurement board}{37}{section*.74}
-\contentsline {section}{\numberline {4.4}Equipment used for testing}{38}{section.4.4}
+\contentsline {section}{\numberline {4.4}Equipment used for testing}{37}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Neutron dosimeter}{38}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Scintillator counter}{40}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}X-Y-positioning system}{41}{subsection.4.4.3}
-\contentsline {chapter}{\numberline {5}Irradiation test setup}{42}{chapter.5}
-\contentsline {subsubsection}{Purpose of tests}{42}{section*.78}
-\contentsline {section}{\numberline {5.1}Irradiation on \ac {OCL}}{42}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}About OCL}{42}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Experiment setup and equipment}{43}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Preparation and characterization of the beam}{45}{subsection.5.1.3}
-\contentsline {subsubsection}{Beam setup}{45}{section*.85}
-\contentsline {subsection}{\numberline {5.1.4}What was tested at OCL}{46}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}Testing at \acf {TSL}}{47}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}About TSL}{47}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Beam setup procedure}{47}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}What was tested at \ac {TSL}}{47}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Results from beam}{48}{chapter.6}
-\contentsline {section}{\numberline {6.1}Results from OCL}{48}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Calibration process}{48}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Test results}{50}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}TPS51200}{52}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}MIC69302WU}{53}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}SN74AVCB164245}{54}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}SN74AVC2T245}{54}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}QS3VH257}{55}{subsection.6.2.5}
-\contentsline {subsection}{\numberline {6.2.6}SY89831}{55}{subsection.6.2.6}
-\contentsline {subsection}{\numberline {6.2.7}ADN2814}{56}{subsection.6.2.7}
-\contentsline {subsection}{\numberline {6.2.8}MAX3748}{58}{subsection.6.2.8}
-\contentsline {section}{\numberline {6.3}Calculation of dose}{59}{section.6.3}
+\contentsline {subsection}{\numberline {4.4.2}Scintillator counter}{39}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}X-Y-positioning system}{40}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {5}Irradiation test setup}{41}{chapter.5}
+\contentsline {subsubsection}{Purpose of tests}{41}{section*.78}
+\contentsline {section}{\numberline {5.1}Irradiation on \ac {OCL}}{41}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}About OCL}{41}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Experiment setup and equipment}{42}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Preparation and characterization of the beam}{44}{subsection.5.1.3}
+\contentsline {subsubsection}{Beam setup}{44}{section*.85}
+\contentsline {subsection}{\numberline {5.1.4}What was tested at OCL}{45}{subsection.5.1.4}
+\contentsline {section}{\numberline {5.2}Testing at \acf {TSL}}{46}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}About TSL}{46}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Beam setup procedure}{46}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}What was tested at \ac {TSL}}{46}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Calculations and Results from Beam Test}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Calculation of dose}{47}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Calculating dose using LET}{48}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Calculating dose using FLUKA simulations}{48}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Results from OCL}{49}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Calibration process}{49}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Test results}{51}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}TPS51200}{53}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}MIC69302WU}{54}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}SN74AVCB164245}{55}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}SN74AVC2T245}{55}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}QS3VH257}{56}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}SY89831}{56}{subsection.6.3.6}
+\contentsline {subsection}{\numberline {6.3.7}ADN2814}{57}{subsection.6.3.7}
+\contentsline {subsection}{\numberline {6.3.8}MAX3748}{59}{subsection.6.3.8}
 \contentsline {section}{\numberline {6.4}Discussion of the result}{60}{section.6.4}
 \contentsline {chapter}{\numberline {7}Conclusion}{61}{chapter.7}
 \contentsline {chapter}{Appendix \numberline {A}Some Appendix}{62}{Appendix.a.A}

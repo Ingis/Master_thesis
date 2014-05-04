@@ -4,6 +4,11 @@
 Cern accelerators.
 \newblock \url{http://cds.cern.ch/record/42384}.
 
+\bibitem{website:SF2_datasheet}
+Smartfusion2 product brief.
+\newblock
+  \url{http://www.microsemi.com/document-portal/doc_download/132721-smartfusion2-product-brief}.
+
 \bibitem{ALICE}
 K.~Aamodt, A.~Abrahantes Quintana, R.~Achenbach, S.~Acounis, D.~Adamova,
   C.~Adler, and the rest of~the ALICE~Collaboration.
