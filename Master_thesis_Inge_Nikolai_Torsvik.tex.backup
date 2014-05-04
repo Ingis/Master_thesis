@@ -1122,6 +1122,7 @@ TSL provides neutron and proton beams, in the range 20-180 MeV
 \subsection{What was tested at \ac{TSL}}
 
 \chapter{Calculations and Results from Beam Test}
+<<<<<<< HEAD
 This chapter will first explain how the data collected after a radiation test was used to calculate flux and dose, followed by a presentation of the result and at the end we will have a discussion.
 The result is presented after type, so that two \ac{PCB} with the same \ac{IC} are presented together.
 
@@ -1201,6 +1202,10 @@ DoseDUT[Gy] = FluenceBE \times \frac{Dose}{primary particle at DUT}
 \end{equation}
 
 
+=======
+In this chapter the result after radiation test at OCL and TSL is presented.
+The result is presented after type, so if two \ac{PCB} that the two boards of the same type is presented together. 
+>>>>>>> 68e3d56d2520aefe58b402aa4bf0db4add5ee407
 
 \section{Results from OCL}
 \subsection{Calibration process}
