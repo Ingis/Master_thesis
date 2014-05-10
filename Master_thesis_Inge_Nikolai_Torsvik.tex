@@ -1103,18 +1103,17 @@ We had beam time in three periods at OCL, that is 13.11.13-15.11.13, 28.11.13-29
 The boards that where tested the first time are: $TPS51200_1$, $MIC69302WU_1$, $SN74AVCB164245_1$, $SN74AVC2T245_1$, $QS3VH257_1$ and $SY89831U_1$, tested in that order.
 The second time, we started with the two limiting amplifier \ac{IC}, since those hadn't been tested before. So the order the \ac{PCB} was tested the second period was: $ADN2814$, $MAX3748$, $SY89831U_2$, $TPS51200_2$, $MIC69302WU_2$, $SN74AVCB164245_2$, $SN74AVC2T245_2$ and $QS3VH257_2$.
 The third time at OCl, the focus was mainly the SF2 chip, but $INA210_1, INA210_2, TLV3011_1 and TLV3011_2$ was also tested.
-The first time at \ac{OCL} we were given an beam of 28 MeV, but the second and third time the lab personnel manage only to produce a beam of 25 MeV.
-When the beam gets out through the beam exit the energy will be reduced by crashing with air particles(~21keV per cm) \cite{}, so at DUT area the beam was respectively approx ~25 MeV and ~22 MeV.
 
 \newpage
 
 \section{Testing at \acf{TSL}}
 
 \subsection{About TSL}
-TSL is a national research facility located at the University of Uppsala in Sweden.
-It is manly used for proton therapy by Uppsala Academic Hospital.
-Beam time not used for proton therapy will be devoted to commercial neutron and proton irradiation projects. \cite{website:TSL}
-TSL provides neutron and proton beams, in the range 20-180 MeV
+TSL is an accelerator facility belonging to University of Uppsala in Sweden. \cite{website:TSL}
+It is manly used for proton therapy of cancer patient by Uppsala University Hospital, but is also used for medical research and radiation testing for electronics systems.
+The heart of the installation is a Gustav Werner cyclotron that delivers beams of charged particles, from proton to highly charged xenon ions of energies up to 192 MeV.
+The experiment is executed in the so called \emph{Blue Hall}, where there is two extraction points, one used for protons, and one used for neutrons and heavier ions, see figure \ref{Blue_hall}.
+The cyclotron and the control is done from the control room.
 
 \subsection{Beam setup procedure}
 
@@ -1122,17 +1121,18 @@ TSL provides neutron and proton beams, in the range 20-180 MeV
 \subsection{What was tested at \ac{TSL}}
 
 \chapter{Calculations and Results from Beam Test}
-This chapter will first explain how the data collected after a radiation test was used to calculate flux and dose, followed by a presentation of the result and at the end we will have a discussion.
+This chapter will first explain how the data collected after a radiation test was used to calculate flux and dose, followed by a presentation of the result.
 The result is presented after type, so that two \ac{PCB} with the same \ac{IC} are presented together.
 
 After a radiation test on one of the PCB was done, the collected data consist of the exposed time, scintillator counts, current consumption and output data.
-From the calibration before beam test, we got the relation between scintillator counts and SEU on the Neutron dosimeter. And from earlier tests the cross section for a \ac{SEU} on the Neutron dosimeter board is known.
-These data is used calculate our way to the received dose for each of the different \ac{IC}. The next section will explain the calculation process.
+From the calibration before beam test, we got the relation between scintillator counts and SEU on the Neutron dosimeter. And from earlier tests the cross section for a \ac{SEU} on the Neutron dosimeter board is known. These data is used to calculate our way to the received dose for each of the different \ac{IC}. The next section will explain the calculation process.
 
+At \ac{TSL} there was a permanently beam monitoring setup, which means that we only had place the component that we wanted to test in the beam, and all data like flux and dose we got from the personnel working there. At \ac{OCL} however, we had to do monitor and calculate everything ourself. The next sections regarding dose calculation applies manly for testing at \ac{OCL}.
 
 \section{Calculation of dose}
-Two ways to calculate dose will be discussed in this section, that is manually using stopping power and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed afterwards.
+Two ways to calculate dose will be discussed in this section, that is manually using stopping power and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this chapter.
 
+\subsection{Definitions}
 Absorbed radiation dose has the unit of energy/mass and the SI-unit is gray (Gy), which is 1 Joule of energy absorbed in a kilogram of matter[J/Kg] \ref{Joule_kg}.
 Another unit which is often used when it comes to radiation of electronics is Rad, which is short for "Radiation absorbed dose".
 The relation between Rad and Gy can be seen in \ref{Gy_to_Rad}.
@@ -1147,18 +1147,26 @@ The relation between Rad and Gy can be seen in \ref{Gy_to_Rad}.
 \label{Gy_to_Rad}
 \end{equation}
 
-
-\subsection{Calculating dose using LET}
-When a particle enters a material, energy is deposited through ionization, and that is called \acf{LET}. To calculate the absorbed dose for a specific \ac{IC} after radiation, we have to first calculate the \ac{LET} to know the energy deposited in the \ac{IC}. But before we can do that we need to know the energy loss in air between beam exit and the test \ac{IC}. The first time at \ac{OCL} we got a 28 MeV proton beam, the two other times we only got a 25 MeV proton beam. By the use of the specific stopping power formula given in \ref{sstopping_power} we get respectively $17.516 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.201 \frac{\mega\electronvolt\centi\meter^2}{\gram}$. By multiplying with the density of air which is $\rho_{air}=0.001275 \frac{\gram}{\centi\meter^3}$ we get $22.333 \frac{\mega\electronvolt}{\centi\meter}$ and $24.481 \frac{\mega\electronvolt}{\centi\meter}$. Distance between beam exit and \ac{DUT} is $130.5 \centi\meter$, which gives us:
+The particle energy is normally expressed in electronvolt ($\electronvolt$) or Megaelectronvolt ($\mega\electronvolt$). One electronvolt is defined as the amount of kinetic energy gained by a single unbound electron when it accelerates through an electric potential of one Volt, thereof $\electronvolt$. Its value is electric charge, $e = 1.602 \times 10^{-19}$, multiplied with one Volt, which equals $1.602 \times 10^{-19}\joule$, or expressed for  $\mega\electronvolt$:
 
 \begin{equation}
-E_{proton} = 28 - (130.5 \centi\meter \times 22.333 \frac{\mega\electronvolt}{\centi\meter}) \approx 25 \mega\electronvolt
+1 \mega\electronvolt = 1.602 \times 10^{-13}\joule
+\label{MeV_to_joule}
+\end{equation}
+
+\subsection{Calculating dose using LET}
+When a particle enters a material, energy is deposited in that material through ionization, and that is called \acf{LET}, \ref{LET_section}. To calculate the absorbed dose for a specific \ac{IC} after radiation, we have to first calculate the \ac{LET} to know the energy deposited in the \ac{IC}. But first of all we have to know the energy when it hits the \ac{DUT}, since it will lose energy from beam exit to \ac{DUT}-spot.
+
+The first time at \ac{OCL} we got a 28 MeV proton beam, the two other times we got a 25 MeV proton beam, but we will also have some energy loss in air. By calculating the specific stopping power \ref{sstopping_power} in air, I used a program called \emph{Ionization loss}, we get respectively $17.516 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.201 \frac{\mega\electronvolt\centi\meter^2}{\gram}$. By multiplying with the density of air which is $\rho_{air}=0.001275 \frac{\gram}{\centi\meter^3}$ we get $22.333 \frac{\kilo\electronvolt}{\centi\meter}$ and $24.481 \frac{\kilo\electronvolt}{\centi\meter}$. Distance between beam exit and \ac{DUT}-spot is $130 \centi\meter$, which gives us:
+
+\begin{equation}
+E_{proton1} = 28 - (130 \centi\meter \times 22.333 \frac{\kilo\electronvolt}{\centi\meter}) \approx 25 \mega\electronvolt
 \label{Proton_energy1}
 \end{equation}
 
 \begin{equation}
-E_{proton} = 25 - (130.5 \centi\meter \times 24.481 \frac{\mega\electronvolt}{\centi\meter}) \approx 22 \mega\electronvolt
-\label{Proton_energy2}
+E_{proton} = 25 - (130 \centi\meter \times 24.481 \frac{\kilo\electronvolt}{\centi\meter}) \approx 22 \mega\electronvolt
+\label{Proton_energy2&3}
 \end{equation}
 
 Some approximations had to be done make the work easier. 
