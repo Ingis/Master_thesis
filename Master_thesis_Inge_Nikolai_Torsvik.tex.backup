@@ -1121,16 +1121,16 @@ The cyclotron and the control is done from the control room.
 \subsection{What was tested at \ac{TSL}}
 
 \chapter{Calculations and Results from Beam Test}
-This chapter will first explain how the data collected after a radiation test was used to calculate flux and dose, followed by a presentation of the result.
-The result is presented after type, so that two \ac{PCB} with the same \ac{IC} are presented together.
+This chapter will first explain how the collected data after a radiation test was used to calculate flux and dose, followed by a presentation of the irradiation results.
+The results is presented after type, so that two \ac{PCB} with the same \ac{IC} are presented together.
 
-After a radiation test on one of the PCB was done, the collected data consist of the exposed time, scintillator counts, current consumption and output data.
-From the calibration before beam test, we got the relation between scintillator counts and SEU on the Neutron dosimeter. And from earlier tests the cross section for a \ac{SEU} on the Neutron dosimeter board is known. These data is used to calculate our way to the received dose for each of the different \ac{IC}. The next section will explain the calculation process.
+After a irradiation test on a specific \ac{PCB}, the collected data consist of the exposed time, scintillator counts, current consumption and output data.
+From the calibration before radiation test, we got the relation between scintillator counts and \ac{SEU} on the Neutron dosimeter. From earlier tests with the neutron dosimeter the cross section for a incoming proton to induce a \ac{SEU} is known. These data is used to calculate our way to the received dose for each of the different \ac{IC}. The next section will explain the calculation process.
 
-At \ac{TSL} there was a permanently beam monitoring setup, which means that we only had place the component that we wanted to test in the beam, and all data like flux and dose we got from the personnel working there. At \ac{OCL} however, we had to do monitor and calculate everything ourself. The next sections regarding dose calculation applies manly for testing at \ac{OCL}.
+\ac{TSL} is a more facility which sells beam time for a living. So all data after a radiation was given to us, and we didn't need to do any beam monitoring ourself. We only needed to mount the test board that we wanted to test in test spot, and all data like fluence and dose where received from the facility. At \ac{OCL} however, we had to do the hole monitor process and calculate everything ourself, and required therefore much more time before and after radiation. The next sections will explain the calculation process after radiation at \ac{OCL}.
 
 \section{Calculation of dose}
-Two ways to calculate dose will be discussed in this section, that is manually using stopping power and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this chapter.
+Two ways to calculate dose will be discussed in this section, that is manually using energy loss and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this chapter.
 
 \subsection{Definitions}
 Absorbed radiation dose has the unit of energy/mass and the SI-unit is gray (Gy), which is 1 Joule of energy absorbed in a kilogram of matter[J/Kg] \ref{Joule_kg}.
@@ -1147,29 +1147,55 @@ The relation between Rad and Gy can be seen in \ref{Gy_to_Rad}.
 \label{Gy_to_Rad}
 \end{equation}
 
-The particle energy is normally expressed in electronvolt ($\electronvolt$) or Megaelectronvolt ($\mega\electronvolt$). One electronvolt is defined as the amount of kinetic energy gained by a single unbound electron when it accelerates through an electric potential of one Volt, thereof $\electronvolt$. Its value is electric charge, $e = 1.602 \times 10^{-19}$, multiplied with one Volt, which equals $1.602 \times 10^{-19}\joule$, or expressed for  $\mega\electronvolt$:
+The particle energy is normally expressed in electronvolt ($\electronvolt$) or Megaelectronvolt ($\mega\electronvolt$). One electronvolt is defined as the amount of kinetic energy gained by a single unbound electron when it accelerates through an electric potential of one Volt, thereof $\electronvolt$. Its value is $e = 1.602 \times 10^{-19} C$ which is the electric charge, multiplied with one Volt, which equals $1.602 \times 10^{-19}\electronvolt$ or $1.602 \times 10^{-19}\joule$.
 
 \begin{equation}
-1 \mega\electronvolt = 1.602 \times 10^{-13}\joule
+1 \mega\electronvolt = 1000 \electronvolt = 1000 \cdot 1.602 \times 10^{-19}\joule = 1.602 \times 10^{-13}\joule
 \label{MeV_to_joule}
 \end{equation}
 
 \subsection{Calculating dose using LET}
-When a particle enters a material, energy is deposited in that material through ionization, and that is called \acf{LET}, \ref{LET_section}. To calculate the absorbed dose for a specific \ac{IC} after radiation, we have to first calculate the \ac{LET} to know the energy deposited in the \ac{IC}.
+When using \ac{LET} to calculate the dose, we are looking at the total energy that is deposited in the \ac{IC}.
+As explained i section \ref{LET_section}, \ac{LET} is energy deposited in a material through ionization when a particle crosses the material. To calculate this energy, we need to know the thickness, density and area of the material, which particle that enters the material and its energy. \ac{LET} into a material is equal the energy loss of the particle that crosses the material, which means that we can use the bethe bloch formula that is expressed in equation \ref{stopping_power}. The energy loss of a particle is highly energy dependent, but for short distances it can be assumed to be constant without getting to much error.
 
-
-
-The first time at \ac{OCL} we got a 28 MeV proton beam, the two other times we got a 25 MeV proton beam, but we will also have some energy loss in air. By the use of the specific stopping power formula given in \ref{sstopping_power} we get respectively $17.516 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.201 \frac{\mega\electronvolt\centi\meter^2}{\gram}$. By multiplying with the density of air which is $\rho_{air}=0.001275 \frac{\gram}{\centi\meter^3}$ we get $22.333 \frac{\mega\electronvolt}{\centi\meter}$ and $24.481 \frac{\mega\electronvolt}{\centi\meter}$. Distance between beam exit and \ac{DUT} is $130.5 \centi\meter$, which gives us:
+Before we can calculate energy loss for proton particle in a material, we need to know the energy the protons has when it enters into the material. The first time at \ac{OCL} we got a proton beam with a energy of 28 MeV, the two other times we got a beam of 25 MeV. Since there is a distance between the beam exit and the \ac{DUT}, we have to calculate the energy loss in air. A program \cite{website:energyloss_calculator} was used to calculate the \emph{energy loss}, we get respectively $17.516 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.201 \frac{\mega\electronvolt\centi\meter^2}{\gram}$. By multiplying with the density of air which is $\rho_{air}=0.001275 \frac{\gram}{\centi\meter^3}$ we get $22.333 \frac{\kilo\electronvolt}{\centi\meter}$ and $24.481 \frac{\kilo\electronvolt}{\centi\meter}$. Distance between beam exit and \ac{DUT}-spot is $130 \centi\meter$, which gives us:
 
 \begin{equation}
-E_{proton1} = 28 - (130.5 \centi\meter \times 22.333 \frac{\mega\electronvolt}{\centi\meter}) \approx 25 \mega\electronvolt
+E_{proton1} = 28 - (130 \centi\meter \times 22.333 \frac{\kilo\electronvolt}{\centi\meter}) \approx 25 \mega\electronvolt
 \label{Proton_energy1}
 \end{equation}
 
 \begin{equation}
-E_{proton} = 25 - (130.5 \centi\meter \times 24.481 \frac{\mega\electronvolt}{\centi\meter}) \approx 22 \mega\electronvolt
+E_{proton2} = 25 - (130 \centi\meter \times 24.481 \frac{\kilo\electronvolt}{\centi\meter}) \approx 22 \mega\electronvolt
 \label{Proton_energy2&3}
 \end{equation}
+
+
+
+If we look at a single proton entering a \ac{IC} (which consist of mostly silicon), the energy deposited by the single proton can be expressed as,
+
+\begin{equation}
+\Delta E_{proton} = \frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si}
+\label{proton_energy_loss}
+\end{equation}
+
+where $\Delta x$ is the length segment a proton particle penetrates into the material, and $\rho_{Si}$ is the density of silicon.
+
+\begin{equation}
+\rho_{Si} = \frac{\gram}{\centi\meter^3}
+\label{silicon_density}
+\end{equation}
+
+To get the total energy deposited in the \ac{IC}, we have to multiply the energy of a single proton multiplied with the flux and the area of the \ac{IC}, then we have:
+
+\begin{equation}
+\Delta E_{total} = \Delta E_{proton} \cdot \Phi \cdot A = \frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A
+\label{total_energy_loss}
+\end{equation}
+
+
+
+
 
 Some approximations had to be done make the work easier. 
 
@@ -1643,6 +1669,6 @@ Having that in mind, I would say that every component tested would have a green 
 \FloatBarrier
 
 \newpage
-\bibliographystyle{plain}
-\bibliography{Master_Thesis_Inge_Nikolai_Torsvik}
+\bibliography{Master_Inge_bibtex}
+\bibliographystyle{ieeetr}
 \end{document}

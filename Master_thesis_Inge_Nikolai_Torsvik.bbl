@@ -1,116 +1,102 @@
 \begin{thebibliography}{10}
 
+\bibitem{ALICE}
+K.~Aamodt, A.~A. Quintana, R.~Achenbach, S.~Acounis, D.~Adamova, C.~Adler, and
+  the rest of~the ALICE~Collaboration, ``The alice experiment at the cern
+  lhc,'' {\em JOURNAL OF INSTRUMENTATION}, vol.~3, AUG 2008.
+
 \bibitem{website:CERN_accelerators}
-Cern accelerators.
+CERN, ``Cern accelerators.''
 \newblock \url{http://cds.cern.ch/record/42384}.
 
+\bibitem{website:aliceinfo}
+F.~Faccio, ``Alice information site.''
+\newblock \url{http://aliceinfo.cern.ch/}.
+
+\bibitem{roed_doctor}
+K.~Roeed, {\em Single Event Upsets in SRAM FPGA based readout electronics for
+  the Time Projection Chamber in the ALICE experiment}.
+\newblock PhD thesis, University of Bergen, Norway, 2009.
+
 \bibitem{website:SF2_datasheet}
-Smartfusion2 product brief.
+microsemi, ``Smartfusion2 product brief,'' 2014.
 \newblock
   \url{http://www.microsemi.com/document-portal/doc_download/132721-smartfusion2-product-brief}.
 
-\bibitem{ALICE}
-K.~Aamodt, A.~Abrahantes Quintana, R.~Achenbach, S.~Acounis, D.~Adamova,
-  C.~Adler, and the rest of~the ALICE~Collaboration.
-\newblock {The ALICE experiment at the CERN LHC}.
-\newblock {\em {JOURNAL OF INSTRUMENTATION}}, {3}, {AUG} {2008}.
+\bibitem{rad_phys}
+T.~F. Thorsteinsen, {\em Kompendium i Straalingsfysikk - FYS231/233}.
+\newblock Bergen: University of Bergen, 1995.
 
-\bibitem{balashov}
-V.V. Balashov.
-\newblock {\em Interaction of particles and Radiation with Matter}.
-\newblock Springel-Verlag, 1997.
+\bibitem{CMOS}
+D.~M.~H. Neil H. E.~Weste, {\em CMOS VLSI Design - A Circuit and System
+  Perspective}.
+\newblock Addison-Wesley, 4 edition~ed., 2011.
+
+\bibitem{knoll}
+G.~F. Knoll, {\em Radiation Detector and Measurement}.
+\newblock John Wiley and Sons, 3 edition~ed., 2000.
 
 \bibitem{Baumann}
-R.C. Baumann.
-\newblock Radiation-induced soft errors in advanced semiconductor technologies.
-\newblock {\em Device and Materials Reliability, IEEE Transactions on},
-  5(3):305--316, Sept 2005.
+R.~Baumann, ``Radiation-induced soft errors in advanced semiconductor
+  technologies,'' {\em Device and Materials Reliability, IEEE Transactions on},
+  vol.~5, pp.~305--316, Sept 2005.
 
-\bibitem{Berg}
-Melanie Berg.
-\newblock Field programmable gate array (fpga) single event effect (see)
-  radiation testing.
-\newblock February 2012.
-
-\bibitem{website:DAQ}
-National~Instruments Corporation.
-\newblock User guide and specifications ni usb-6008/6009, April 2014.
-\newblock \url{http://www.ni.com/pdf/manuals/371303m.pdf}.
-
-\bibitem{website:aliceinfo}
-F.~Faccio.
-\newblock Alice information site.
-\newblock \url{http://aliceinfo.cern.ch/}.
+\bibitem{balashov}
+V.~Balashov, {\em Interaction of particles and Radiation with Matter}.
+\newblock Springel-Verlag, 1997.
 
 \bibitem{website:Faccio}
-F.~Faccio.
-\newblock Radiation effects in the electronics for cms.
+F.~Faccio, ``Radiation effects in the electronics for cms.''
 \newblock
   \url{http://lhcb-elec.web.cern.ch/lhcb-elec/papers/radiation_tutorial.pdf}.
 
-\bibitem{GranlundOlsson}
-Thomas Granlund and Nils Olsson.
-\newblock {\em A Comparative Study Between Proton and Neutron Induced SEU in
-  SRAMs, 53(4)}.
-\newblock 2006.
-
-\bibitem{website:TPS51200}
-Texas Instruments.
-\newblock Tps51200 - sink/source ddr termination regulator, February 2008.
-\newblock \url{http://www.ti.com/lit/ds/slus812/slus812.pdf}.
-
-\bibitem{knoll}
-Glenn~F. Knoll.
-\newblock {\em Radiation Detector and Measurement}.
-\newblock John Wiley and Sons, 3 edition edition, 2000.
-
-\bibitem{CMOS}
-David M.~Harris Neil H. E.~Weste.
-\newblock {\em CMOS VLSI Design - A Circuit and System Perspective}.
-\newblock Addison-Wesley, 4 edition edition, 2011.
-
-\bibitem{roed_master}
-Ketil Røed.
-\newblock Irradiation tests of altera sram-based fpgas.
-\newblock Master's thesis, Norway, 2004.
-
-\bibitem{roed_doctor}
-Ketil Røed.
-\newblock {\em Single Event Upsets in SRAM FPGA based readout electronics for
-  the Time Projection Chamber in the ALICE experiment}.
-\newblock PhD thesis, Norway, 2009.
-
-\bibitem{bjorn_master}
-Bjørn~Halvor Straume.
-\newblock Strålingstester og utvikling av bestrålingsposedyre for alice
-  tpc-elektronikken.
-\newblock Master's thesis, Norway.
-
-\bibitem{rad_phys}
-Tor~F. Thorsteinsen.
-\newblock {\em Kompendium i Strålingsfysikk - FYS231/233}.
-\newblock University of Bergen, Bergen, 1995.
-
 \bibitem{Oldham}
-F.B~McLean T.R~Oldham.
-\newblock Total ionizing dose effects in mos oxides and devices.
-\newblock {\em IEEE TRANSACTIONS ON NUCLEAR SCIENCE}, 2003.
+F.~M. T.R~Oldham, ``Total ionizing dose effects in mos oxides and devices,''
+  {\em IEEE TRANSACTIONS ON NUCLEAR SCIENCE}, 2003.
+
+\bibitem{GranlundOlsson}
+T.~Granlund and N.~Olsson, ``A comparative study between proton and neutron
+  induced seu in srams,'' 2006.
 
 \bibitem{georgios}
-Georgios~Karolos Tsiledakis.
-\newblock {\em Scale Dependence of Mean Transverse Momentum Fluctuations at Top
-  SPS Energy measured by the CERES experiment and studies of gas properties for
-  the ALICE experiment. PhD thesis}.
-\newblock Technische Universitat Darmstadt, Darmstadt, 2006.
+G.~K. Tsiledakis, {\em Scale Dependence of Mean Transverse Momentum
+  Fluctuations at Top SPS Energy measured by the CERES experiment and studies
+  of gas properties for the ALICE experiment. PhD thesis}.
+\newblock Darmstadt: Technische Universitat Darmstadt, 2006.
 
-\bibitem{website:TSL}
-Uppsala University.
-\newblock Information about tsl, April 2014.
-\newblock \url{http://www.tsl.uu.se/About_TSL/}.
+\bibitem{bjorn_master}
+B.~H. Straume, ``Straalingstester og utvikling av bestraalingsposedyre for
+  alice tpc-elektronikken,'' Master's thesis, University of Bergen, Norway,
+  2006.
+
+\bibitem{roed_master}
+K.~Roeed, ``Irradiation tests of altera sram-based fpgas,'' Master's thesis,
+  University of Bergen, Norway, 2004.
 
 \bibitem{arild_master}
-Arild Velure.
-\newblock Design, implementation and testing of sram based neutron detectors.
-\newblock Master's thesis, Norway.
+A.~Velure, ``Design, implementation and testing of sram based neutron
+  detectors,'' Master's thesis, University of Bergen, Norway, 20011.
+
+\bibitem{website:DAQ}
+N.~I. Corporation, ``User guide and specifications ni usb-6008/6009,'' April
+  2014.
+\newblock \url{http://www.ni.com/pdf/manuals/371303m.pdf}.
+
+\bibitem{website:TPS51200}
+T.~Instruments, ``Tps51200 - sink/source ddr termination regulator,'' February
+  2008.
+\newblock \url{http://www.ti.com/lit/ds/slus812/slus812.pdf}.
+
+\bibitem{Berg}
+M.~Berg, ``Field programmable gate array (fpga) single event effect (see)
+  radiation testing,'' February 2012.
+
+\bibitem{website:TSL}
+U.~University, ``Information about tsl,'' April 2014.
+\newblock \url{http://www.tsl.uu.se/About_TSL/}.
+
+\bibitem{website:energyloss_calculator}
+S.~Meroli, ``Energy loss calculator,'' 2014.
+\newblock \url{http://meroli.web.cern.ch/meroli/EnergyLossCalculation.html}.
 
 \end{thebibliography}
