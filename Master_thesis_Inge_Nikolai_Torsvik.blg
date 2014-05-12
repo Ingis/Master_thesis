@@ -6,45 +6,45 @@ The style file: ieeetr.bst
 Database file #1: Master_Inge_bibtex.bib
 Warning--empty journal in GranlundOlsson
 Warning--empty journal in Berg
-You've used 22 entries,
+You've used 23 entries,
             1876 wiz_defined-function locations,
-            593 strings with 6394 characters,
-and the built_in function-call counts, 3221 in all, are:
-= -- 309
-> -- 111
+            602 strings with 6497 characters,
+and the built_in function-call counts, 3517 in all, are:
+= -- 342
+> -- 115
 < -- 0
-+ -- 51
-- -- 29
-* -- 164
-:= -- 508
-add.period$ -- 33
-call.type$ -- 22
-change.case$ -- 18
++ -- 53
+- -- 30
+* -- 184
+:= -- 546
+add.period$ -- 34
+call.type$ -- 23
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 152
-empty$ -- 381
-format.name$ -- 29
-if$ -- 785
+cite$ -- 25
+duplicate$ -- 168
+empty$ -- 409
+format.name$ -- 30
+if$ -- 861
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 15
-newline$ -- 83
-num.names$ -- 22
-pop$ -- 109
+int.to.str$ -- 23
+missing$ -- 16
+newline$ -- 86
+num.names$ -- 23
+pop$ -- 110
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 58
+skip$ -- 73
 stack$ -- 0
-substring$ -- 28
-swap$ -- 17
+substring$ -- 56
+swap$ -- 26
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 24
-width$ -- 24
-write$ -- 200
+while$ -- 27
+width$ -- 25
+write$ -- 210
 (There were 2 warnings)

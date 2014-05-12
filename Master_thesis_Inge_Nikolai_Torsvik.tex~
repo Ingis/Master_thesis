@@ -111,32 +111,35 @@
 \pagenumbering{arabic}
 
 \chapter{Introduction}
-At \acf{CERN} in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to a energy of 4 $\tera \electronvolt$ per proton, and then crash with other particles with same energy. This experiment is done by connecting several accelerators with higher and higher energies together to accelerate particles. The last accelerator in the chain is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
-Particles are accelerated in both direction in the LHC. When the particles has reached high enough energy, particles from opposite direction are made to crash at 4 experiment areas, one of these is called \acf{ALICE}.
-The \ac{ALICE} detector is built to study a matter known as Quark-gluons plasma \cite{ALICE}, which will be generated under collisions of heavy ions.
-The detector consist of several sub-detector with different functionality. \ac{TPC} is one of these, and is the main tracking detector placed in the inner circle of \ac{ALICE}, see section \ref{ALICE_experiment}. Under a collision high energetic neutrons and protons will be generated, and will also pose a risk to the electronics used.
-It is therefore of highest importance to test everything that are planed to be used in the experiment for radiation. A replacement of electronics after installed in the detector is normally impossible under a run period, which can last up to several years.
+At CERN (European Council for Nuclear Research) in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to a energy of 4 $\tera \electronvolt$ per proton, and then collide with other particles on the same energy level. The largest accelerator is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
+Particles are accelerated in both direction in the LHC. When the particles has reached high enough energy, particles from opposite direction are made to crash at 4 experiment areas, one of these is called ALICE (A Large Ion Collider Experiment).
+\ac{ALICE} is built to study a matter known as Quark-gluons plasma \cite{ALICE}, which will be generated under collisions of heavy ions.
+ALICE consist of several sub-detector with different functionality. \ac{TPC} is one of these, and is the main tracking detector placed closes to the beam-line, see section \ref{ALICE_experiment}. Under a collision high particles will be generated, and will also pose a risk to the electronics used.
+It is therefore of highest importance to test everything that are planed to be used in the experiment for radiation.
  
-One of the main boards used in the \ac{TPC} detector is the \acf{RCU}. Now there has been decided that a new \ac{RCU} board shall be made, namely the \ac{RCU2}.
-Everything that are going to be used in the \ac{LHC} tunnel has to be made sure that it can survive the radiation level that are there.
-Therefore every \acf{IC} planned to be used for the design of the \ac{RCU2} board has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{TPC} detector.
+One of the main boards used in the \ac{TPC} detector is the \acf{RCU}. Now there has been decided that a new \ac{RCU} shall be made, namely the RCU2.
+Because of the radiation level in the LHC, every active component used in the design of the RCU2 has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{TPC} detector.
 
 \section{How to test}
 \label{how_to_test}
-The radiation tests done through this thesis is mainly \ac{TID} test.
-That is irradiation up to a level where an error can clearly be seen or when a high enough dose has been reached without detecting errors, see section \ref{TID} for more information.
-But there has also been done tests for \ac{SEE}, like \acf{SEU}, \acf{SET} and \acf{SEL} on a Microsemi \ac{SF2} \ac{SoC} \ac{FPGA}.
+The radiation tests done through this work is mainly test for accumulative effects.
+Accumulative effects are effects caused by the total radiation of a component, and are measured by the functionality and power consumption of the component, see section \ref{accumulative_sec} for more information.
+
+Previous research has been done on the radiation level in ALICE \cite{Safarik} and \cite{georgios}, and are used to decide if the tested components can be used or not.
+
+Test for \acp{SEE} like \acf{SEU}, \acf{SET} and \acf{SEL} on a Microsemi \ac{SF2} \ac{SoC} \ac{FPGA} have also been performed.
 
 \section{About this work}
-When I started working with my thesis in the autumn of 2013 the schematic layout for the \ac{RCU2} was basically finished,
-and most of the component was decided, but not all of the component had been tested.
-My work through this thesis has been planing how to test different \ac{IC}, designing test setup and executing the tests.
-For most of the \ac{IC} which has been tested throughout this thesis, a simple \ac{PCB} was made with only the necessary to make the \ac{IC} work and to be able to test it.
-By the use of \acf{DAQ} boards from National Instruments, the \ac{PCB} was connected to a computer where inputs was controlled and the outputs and current consumption was measured through a labVIEW program. 
-The \ac{RCU2} main \ac{FPGA} has also been tested. That is a Microsemi \ac{SF2} \ac{SoC} \ac{FPGA}. A \ac{SF2} starter-kit was used when designing test for this \ac{IC}, and test code was written in VHDL and C.
-I also made a \ac{PCB} for measuring current and control a power regulator on the \ac{SF2} starter-kit.
+I started working on the RCU2-project in the autumn of 2013. Already before I started working, the design and the schematic layout for the RCU2 was basically finished. In the design process components that was already tested or are proven to be radiation hard was used when possible, but such components weren't always available. So my work in the project has been to do irradiation tests on components for the RCU2 design which didn't have any record of being radiation tested before.
+
 The \acp{IC} which I have tested consist of: SoC FPGA, power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator and Current Shunt Monitor.
-Every \ac{IC} was irradiation tested in \ac{OCL} at the University of Oslo, the \ac{SF2} chip was also irradiation tested in \ac{TSL} in Uppsala in Sweden.
+In order to investigate the radiation tolerance of these circuits, I had to first acquire good knowledge of radiation induced effect that may occur in such devices. I also needed to study these components to be able to find a reasonable test methodology. Further, I had to familiarize myself with CAD tools such as \emph{expedition PCB} and \emph{DXdesigner} and programming and developing environments like Libero and labVIEW in order to develop a sufficient hardware and software based test setup for the components.
+
+The RCU2's main FPGA the microsemi SF2, has been the main focus through this work. That is because this component will be hard to replace, and a functional failure on this one, may set the whole RCU2 out of function. The radiation effects that was tested on for SF2 are, SRAM blocks for SEU, logic elements for SEU and SET, and in general SEL. These effects can be read about in section \ref{SEE_section}.
+
+The irradiation test was executed in four periods, three times at \ac{OCL} with a proton beam of 28 MeV and 25 MeV where all components have been tested, and one time at \ac{TSL} with a proton beam of 180 MeV, where only the SF2 SoC FPGA was tested. A \ac{SF2} starter-kit was used when designing test for this \ac{IC}, and test code was written in VHDL and C. To be able to detect SEL the current on the FPGA had to be measured. Therefore a current measurement board was made for that task.
+
+To summarize, this work has been consisting of practical work like making \acp{PCB}, writing test code in VHDL, making labVIEW programs and making test codes in C. It has also consisting on getting the necessary knowledge of the components tested, learning to program in VHDL and C, as well as learning to use the tools and programs for the different tasks.
 
 \newpage
 
@@ -144,18 +147,17 @@ Every \ac{IC} was irradiation tested in \ac{OCL} at the University of Oslo, the 
 \label{ALICE_experiment}
 Since 1954 physicists at \ac{CERN} have studied the nucleus and its structure to find the fundamental structure of the universe.
 \ac{CERN} is the world largest research center for nuclear and particle physics, and has a total of 21 member state.
-One of the biggest and newest invention at \ac{CERN} is the \acf{LHC}, that is a circular particle accelerator placed in a 27 km long tunnel around 100 meter beneath ground level.
-This is the last accelerator in a chain of up to 7 (depending on which particle to accelerate), see picture \ref{CERN_accelerators}, where the particles gradually accelerate to higher and higher energies, up to their maximum energy of 4 TeV and speed close to the s peed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide inside 4 different experiment areas, where one of these is called \acf{ALICE}. See figure \ref{ALICE_layout}.
+One of the biggest attraction at \ac{CERN} is the \acf{LHC}, that is a circular particle accelerator placed in a 27 km long tunnel around 100 meter beneath ground level.
+This is the last accelerator in a chain of up to 7 (depending on which particle to accelerate), see picture \ref{CERN_accelerators}, where the particles gradually accelerate to higher and higher energies, up to their maximum energy of 4 TeV and speed close to the s peed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide inside 4 different experiment areas, where one of these is called \acf{ALICE}, see figure \ref{ALICE_layout}.
 
-The \ac{ALICE} detector is a heavy ion detector. Its main purpose is to study a state of matter called quark-qluon plasma\footnotemark which will be generated when heavy ions collides.
-Under such a collision a temperature 100 000 times higher than the temperature of the sun is generated.
+The \ac{ALICE} detector is a heavy ion detector. Its main purpose is to study a state of matter called quark-qluon plasma which will be generated when heavy ions collides.
+Under the collisions a temperature 100 000 times higher than the temperature of the sun is generated.
 There is then high enough energy to split the protons and neutrons, and achieve a plasma of unbound quarks and gluons, and that is called quark-gluon plasma.
 
-\footnotetext{All ordinary matter in today's universe is made up of atoms.
+All ordinary matter in today's universe is made up of atoms.
 Each atom contains a nucleus composed of protons and neutrons (except hydrogen, which has no neutrons), surrounded by a cloud of electrons.
 Protons and neutrons are in turn made of quarks bound together by other particles called gluons.
 No quark has ever been observed in isolation: the quarks, as well as the gluons, seem to be bound permanently together and confined inside composite particles, such as protons and neutrons.
-}
 
 \begin{figure}[!htbp]
   \centering
@@ -174,16 +176,15 @@ No quark has ever been observed in isolation: the quarks, as well as the gluons,
 \FloatBarrier
 
 \section{The Time Projection Chamber TPC}
-The ALICE detector comprises of several sub-detectors, where one of these is the \acf{TPC}. \ac{TPC} is the main tracking detector placed in the inner circle of \ac{ALICE}.
+The ALICE detector comprises several sub-detectors, where one of these is the \acf{TPC}. The \ac{TPC} is the main tracking detector of \ac{ALICE}.
 The function of \ac{TPC} are tracking particles, measure the charged particles momentum and identification of particles.
 A drawing of the \ac{TPC} can be seen in figure \ref{TPC_layout}.
 The \ac{TPC} detector has a cylindrical shape, with a inner radius of 85 cm and outer radius of 250 cm, and has an overall length of 510 cm.
 The detector is made up of a large cylindrical field cage, filled with 88 $m^3$ of 90\% Ne gas and 10\% $CO^2$ gas.
 A high voltage electrode is placed in the center of the detector, dividing the \ac{TPC} into two drift regions, and making a electric field between electrode and the two end plates.
-When a charged particle is generated inside the detector, the gas inside the cage will be ionized and make electrons drift in the electric field between the high voltage electrode and the two end plates.
+When a charged particle is generated inside the detector, the gas inside the cage will be ionized. The free electrons and the ions will then drift in the electric field between the high voltage electrode and the two end plates.
 At the end-plates we find the Readout Chamber which are divided into 18 trapezoidal sectors, where each sector is again divided into the inner and outer chamber.
-In the readout chamber, there are a total of 560 000 readout pads of three different sizes: 4 $\times$ 7,5 $\milli\meter^2$ in
-the inner chambers, 6 $\times$ 10 $\milli\meter^2$ and 6 $\times$ 15$\milli\meter^2$ in the outer chambers.
+In the readout chamber, there are a total of 560 000 readout pads.
 
 \begin{figure}[!htbp]
   \centering
@@ -193,10 +194,8 @@ the inner chambers, 6 $\times$ 10 $\milli\meter^2$ and 6 $\times$ 15$\milli\mete
 \end{figure}
 
 \section{The TPC Front End electronics FEE}
-Each of the total 36 sections (2 x 18) are also divided into 6 readout partitions, that is 2 in the inner chamber and 4 in the outer chamber. 
-Each of the readout partitions are controlled by a \acf{RCU} which is connected to 18 to 25 \acf{FEC}. See figure \ref{TPC_Sections}
-There are a total of 216 \ac{RCU} connected to a total of 4356 \ac{FEC} which is connected to all of the 560 000 readout pads, and all together this sums up the \acf{FEE}.
-In short the task of the \ac{FEE} is to read out charge received at the readout pads, process it and send useful data to a computer.
+Each of the 36 sections (2 x 18) are also divided into 6 readout partitions, that is 2 in the inner chamber and 4 in the outer chamber. 
+There are a total of 216 \ac{RCU} connected to a total of 4356 \ac{FEC} which is connected to all of the 560 000 readout pads, and all together this sums up the \acf{FEE}, see figure \ref{TPC_Sections}. In short, the task of the \ac{FEE} is to read out the charge received at the readout pads, process it and send useful data to a computer.
 
 \begin{figure}[!htbp]
   \centering
@@ -206,14 +205,11 @@ In short the task of the \ac{FEE} is to read out charge received at the readout 
 \end{figure}
 
 \subsection{Front End Card FEC}
-When one of the pads receives a charge after a collision has occurred, it sends out a current signal with a rise time of less than 1 ns followed by a long tail due to the motion of the positive ions.
-The amplitude is slightly different for the different pad sizes, but has a typical value of around 7 $\micro\ampere$.
 A current signal given by one of the pads, is sent into a \acf{FEC} which consist of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
-The first unit is a charge sensitive amplifier/shaper called PASA, the second unit is a 10-bit 25MHz low-power \ac{ADC}.
+The first unit is a charge sensitive amplifier/shaper called PASA, the second unit is a 10-bit 10 MHz low-power \ac{ADC}.
 The last unit is a digital circuit that perform the baseline subtraction, tail cancellation, zero-suppression\footnotemark, formatting and buffering.
 The \ac{ADC} and the digital unit together constitute the so called ALTRO chip. There are 16 PASA chips and 16 ALTRO chips on the \ac{FEC},
 the PASA chip is connected to 16 readout pads each, which gives a total of 128 readout pads for each \ac{FEC}.
-An picture of the \ac{FEC} can be seen in figure \ref{FEC}.
 
 
 \begin{figure}[!htbp]
@@ -223,34 +219,34 @@ An picture of the \ac{FEC} can be seen in figure \ref{FEC}.
   \label{FEC_blockdiagram}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=0.7\textwidth]{FEC.png}
-  \caption{Top side of the Front End Card \cite{roed_doctor}}
-  \label{FEC}
-\end{figure}
+% \begin{figure}[!htbp]
+%   \centering
+%   \includegraphics[width=0.7\textwidth]{FEC.png}
+%   \caption{Top side of the Front End Card \cite{roed_doctor}}
+%   \label{FEC}
+% \end{figure}
 
 \footnotetext{Zero Compressions means that signal bellow a given threshold will be filtered away.}
 \FloatBarrier
 \subsection{Readout Control Unit RCU}
 One \acf{RCU} is connected to one row of \acp{FEC} (up to 25 pieces), through a backplane\footnotemark, see figure \ref{TPC_Sections}.
 The \ac{RCU} task is to control all of the \acf{FEE} all the way from the readout pads through the \acp{FEC}, and out to a \acf{DAQ} System.
-The \ac{RCU} consist of three separated boards which are the Motherboard board, and the \acf{DCS} board and a \acf{SIU} board, which are attached to the Motherboard.
-Most of the \ac{RCU} functions is controlled by the main \ac{FPGA}, which is a Xilinx Virtex-II Pro \ac{FPGA}.
-This \ac{FPGA} is controlling the hole readout process of the \ac{TPC} detector.
-It is also responsible of moving data from the \acp{FEC} to the \acf{SIU} board,
+The \ac{RCU} consist of three separated boards which are the Motherboard board, the \acf{DCS} board and the \acf{SIU} board.
+Most of the \ac{RCU} functions is controlled by the Xilinx Virtex-II Pro \ac{FPGA}.
+This \ac{FPGA} are controlling the readout process of the \ac{TPC} detector.
+It is also responsible for moving data from the \acp{FEC} to the \acf{SIU} board,
 where data is transmitted via a optical link to the Data Acquisition system,
-where data is stored and are accessible for the engineers.
+where data is stored and is made accessible for analysis.
 
-The Xilinx Virtex-II Pro is a \ac{SRAM} based \ac{FPGA}. \ac{SRAM} cells is especially vulnerable for \acf{SEU}, see section \ref{SEU_Section}.
+The Xilinx Virtex-II Pro is a \ac{SRAM} based \ac{FPGA}. \ac{SRAM} cells are vulnerable for \acfp{SEU}, see section \ref{SEU_Section}.
 Therefore a flash based \ac{FPGA}, Actel ProASIC is used to monitor the SRAM memory and reprogram/reconfigure if an error occurs.
 
-The \ac{DCS} board is basically a embedded computer running Linux.
+The \ac{DCS} board is basically an embedded computer running Linux.
 This board is connected through a Ethernet link to a computer on the outside of the ALICE detector.
-Through this Ethernet link we are able to upgrade and reprogram the \acp{FPGA} of the \ac{RCU}.
+Through it, we are even able to upgrade and reprogram the \acp{FPGA} of the \ac{RCU}.
 So even though the hardware is inaccessible after it has been mounted in the \ac{TPC},
-the \ac{SIU} board gives us some kind of flexibility.
-In addition, it has an optical interface receiving the clock and trigger information from the Timing, Trigger and Control, also called TTC.
+the \acp{SIU} boards gives some kind of flexibility.
+In addition, it has an optical interface, receiving the clock and trigger information from the Timing, Trigger and Control system, also called TTC.
 
 
 \footnotetext{A backplane is a PCB board, that connects Front End Cards to a Readout Control Unit.
@@ -267,30 +263,29 @@ This is used instead of cables to get a more stability, and to keep things in pl
 \subsubsection{Why upgrade RCU} 
 LHC is currently shut down for maintenance and preparation for even higher energies.
 This period, called Long Shutdown 1 (LS1), lasts until end of 2014.
-The present \ac{TPC} readout electronics will be a limiting factor with the foreseen readout rate for the next run period, called Run2.
-The bus between \ac{RCU} and FECs are not able to read all data for high occupancy events, like Pb-Pb collisions.  
+The present \ac{TPC} readout electronics will be a limiting factor with the foreseen readout rate for the next run period (run2).
+The bus between \ac{RCU} and FECs is not able to read all data for high occupancy events, like Pb-Pb collisions.  
 In addition stability issues related to \ac{SEU} on the \ac{SRAM} based \ac{FPGA} have been observed with the present setup.
-9\% of the run time had to be stopped because of errors occurred in the \ac{TPC} readout electronics.
+9 \% of the run time had to be stopped because of errors in the \ac{TPC} readout electronics.
 
 \subsubsection{The new Readout Control Unit, the RCU2} 
-The main challenge with making the \ac{RCU2} was to develop a solution that gives the needed performance improvement,
+The main challenge with making the RCU2 was to develop a solution that gives the needed performance improvement,
 and at the same time was feasible within the limited time-frame.
 Therefore some of the old infrastructure has to be reused, like cables for Ethernet, Trigger and power and the cooling envelops.
-Since the infrastructure is basically the same, the size and placement of connector on \ac{RCU2} is the same as for the old one. 
 
-The main difference between the \ac{RCU2} and \ac{RCU}1 is that the main \ac{FPGA}, the Xilinx Virtex-II Pro,
+The main difference between the RCU2 and \ac{RCU}1 is that the main \ac{FPGA}, the Xilinx Virtex-II Pro,
 has been replaced by a Microsemi \acf{SF2} \acf{SoC} \ac{FPGA} M2S050-FG896. This is a flash-based\footnote{Flash-based FPGA means that configuration registers is saved in flash memory cells. Compared to SRAM-based FPGA where configuration is saved in SRAM cells, flash-based FPGA is much more tolerant against radiation.}
 FPGA which has \ac{SEU} immune configuration memory, as well as several other radiation tolerance measures implemented \cite{website:SF2_datasheet}.
 It also comes with a Microcontroller Subsystem which is based on a hardcore ARM Cortex-M3 microcontroller.
-A Linux system is built on this Microcontroller Subsystem, which result in that we didn't need the \acf{DCS} board anymore.
+On Microcontroller Subsystem we are able to build a Linux system, which replace the functionality of the \acf{DCS}-card.
 The ProASIC was also not need as a  reconfiguration FPGA anymore, but will still be used as a radiation monitor,
 this part of the RCU2 is now called RadMon, and consist of a ProASIC and SRAM chips.
-Another issue encountered in the design was that a chip called TTCrx chip that was used for handling the clock and trigger signal on RCU1 was out of stuck and obsolete.
-This will be replaced by a optical receiver and a limiting amplifier which has been tested in this thesis, see section \ref{limiting_amp}.
+Another issue encountered in the design was that the TTCrx chip that was used for handling the clock and trigger signal on RCU1 was out of stuck and obsolete.
+This is being replaced by a optical receiver and a limiting amplifier. The limiting amplifier has been tested in this thesis, see section \ref{limiting_amp}.
 
 One of the limits with the old setup was that the bus between \ac{RCU} and FECs was to slow.
 This was fixed by dividing the readout into 4 sections instead of 2, which effectively doubled the readout speed.
-Therefore all of the backplanes had to be replaced with new ones.
+Therefore all of the backplanes had to be redesigned and replaced.
 
 \FloatBarrier
 \newpage
@@ -300,18 +295,15 @@ Therefore all of the backplanes had to be replaced with new ones.
 Radiation and radiation effects are a known challenge when designing electronics which are going to be used at CERN.
 There is therefore of highest importance to know about these effect, how they effect the electronics, how much damage they can cause and how we can protect and prevent the radiation effect to do damage.
 
-Everything in this chapter is based on these references \cite{rad_phys}, \cite{CMOS}, \cite{knoll}, \cite{Baumann} and \cite{balashov} if not otherwise stated.
+This chapter is based on references \cite{rad_phys}, \cite{CMOS}, \cite{knoll}, \cite{Baumann} and \cite{balashov} if not otherwise stated.
 
 \section{Interaction of Radiation With Matter}
 Radiation is defined as a process which energy in the form of energetic particles or electromagnetic waves is transmitted through a medium or space.
-Radiation is normally divided into two categories, that is
-\begin{itemize}
-  \item Charged radiation
-  \item Neutral radiation
-\end{itemize}
+Radiation is normally divided into two categories, that is \emph{Charged radiation} and \emph{Neutral radiation}.
+
 Charged radiation consist of charged particles like protons(p), alpha($\alpha$) and beta($\beta$) particles and heavier ions.
-Neutral radiation consist of neutrally charge particles like neutrons(n) and photons from gamma($\gamma$) and X-rays. 
-Particles who interact with a material will deposit some or all of its energy in the interaction, and can either interact with atoms, electrons, nucleus or the particles inside a nuclei.
+Neutral radiation consist of neutral particles like neutrons(n) and photons from gamma($\gamma$) and X-rays. 
+Particles which interact with a material will deposit some or all of its energy in the interaction, and can either interact with atoms, electrons, nucleus or the particles inside a nuclei.
 How much energy is deposited and which of these a particle will interact with is depended on the energy, mass, the charge of the particle and what material it interacts with.
 One of the main difference between charged particle and neutral particle is that charged particles will be effected by the Coulomb force,
 that is the attraction or repulsion of particles or objects because of their electric charge.
@@ -384,11 +376,12 @@ Another way of looking at stopping power, is by looking at energy loss as functi
 Here $\xi$ = $\rho$x and $\rho$ is the density of the material. The extension for specific stopping power is normally given as $[\frac{\mega\electronvolt\centi\meter^2}{\gram}]$
 
 \begin{equation}
-S = - \frac{dE}{d\xi} = - \frac{1}{\rho} \frac{dE}{dx} = - \frac{n_A Z_A Z^2 e^4}{4 \pi \epsilon_0^2 m_e \upsilon^2}\Bigg[\ln\Big(\frac{2 m_e \upsilon^2}{\overline{I}}\Big)-\ln\Big(1-\frac{\upsilon^2}{c^2}\Big)-\frac{\upsilon^2}{c^2}\Bigg]
+S = - \frac{dE}{d\xi} = - \frac{1}{\rho} \frac{dE}{dx} 
+% = - \frac{n_A Z_A Z^2 e^4}{4 \pi \epsilon_0^2 m_e \upsilon^2}\Bigg[\ln\Big(\frac{2 m_e \upsilon^2}{\overline{I}}\Big)-\ln\Big(1-\frac{\upsilon^2}{c^2}\Big)-\frac{\upsilon^2}{c^2}\Bigg]
 \label{sstopping_power}
 \end{equation}
 
-From this formula we see that if considering different particles with the same velocity, then the only factor that changes are $Z^2$.
+From this formula we see that if we are considering two different particles with the same velocity, the only factor that changes is $Z^2$.
 Therefore heavier particles will experience larger energy loss in a material then lighter ones.
 In figure \ref{energy_loss} we can see specific energy loss for different particles in air.
 We can see that the value of $\frac{dE}{dx}$ for different types of particles approaches a near-constant broad minimum value at energies above several hundred $\mega\electronvolt$, where their velocity approaches the velocity of light.
@@ -405,8 +398,8 @@ That is because the positively charged particles will then tend to pick up elect
 
 \subsection{Linear Energy Transfer LET}
 \label{LET_section}
-\acf{LET} is closely related to stopping power of a particle, but instead of fucusing on energy loss of the particle, \ac{LET} focuses on the energy that is deposited in a local volume.
-For low energies, \ac{LET} is often said to be equal stopping power, even though the particle energy that turn into photons may escape the local area.
+\acf{LET} is closely related to stopping power of a particle, but instead of focusing on energy loss of the particle, \ac{LET} focuses on the energy that is deposited in a local volume.
+For low energies, \ac{LET} is often said to be equal to the stopping power, even though the particle energy that turn into photons may escape the local area.
 For higher energies, small particles like ionized electrons can escape the local volume. The local volume is defined by yourself,
 and can be everything from part of a molecule to a hole organ.
 One alternate definition of LET can be seen in equation \ref{LET}
@@ -447,6 +440,7 @@ Therefore there is of highest importance to know about how irradiation can effec
 We normally divide radiation effects in two groups that is $\emph{Singel Events effects}$ and $\emph{Accumulative Effects}$.
 
 \subsection{Single Events Effects SEE}
+\label{SEE_section}
 Single Event Effects are due to the energy deposited by one single particle in the electronic device.
 Therefore, they can happen in an moment, and their probability is expressed in terms of cross-section \cite{website:Faccio}.
 This effects has been an increasing problem as the manufacture process are getting smaller and smaller, making circuits more weak for radiation.
@@ -514,6 +508,7 @@ Then the SRAM cell has changed value from '0' to '1', and we have a \ac{SEU}.
 \FloatBarrier
 
 \subsection{Accumulative Effects}
+\label{accumulative_sec}
 Accumulative effects are energy deposition caused by radiation for the whole lifespan of a circuit \cite{website:Faccio} and \cite{Oldham}.
 Accumulative effects are measured by the functionality of a device, and power consumption. 
 Some circuits are weak for accumulative effects, and will stop working only after a small dose of radiation,
@@ -594,7 +589,7 @@ More information on the DAQs can be seen in the reference \cite{website:DAQ}.
 \subsection{TPS51200}
 \label{TPS_explanation}
 This is a adjustable power regulator from Texas Instruments. It is special designed for DDR RAMs, it can be used for DDR, DDR2, DDR3 and DDR4 applications.
-% On the \ac{RCU2}, this is going to be used to supply a DDR3 RAM with 0.75 V.
+% On the RCU2, this is going to be used to supply a DDR3 RAM with 0.75 V.
 
 In figure \ref{TPS51200_sch} you can see a schematic layout of the \ac{PCB} for TPS51200.
 The PCB was designed after a recommended setup for DDR3 application from the datasheet \cite{website:TPS51200}. Input voltage was set to 3.3 V.
@@ -611,7 +606,7 @@ Voltage over resistor R1 (See figure \ref{TPS51200_sch}) was measured and used t
 \subsection{MIC69302WU}
 \label{MIC_explanation}
 This is a ultra low dropout\footnote{Low dropout means that voltage on the output can be close up to the input. For MIC69302WU low dropout means that $V_{IN}$ - $V_{OUT}$ can be as low as 500 $\milli\volt$} adjustable power regulator from Micrel Incorporation. It is in a family of high current, low voltage regulators, and can deliver a current of up to 3 A.
-% On the \ac{RCU2} this is going to be used to regulate a 3.3 V signal to 1.2 V and power everything that requires 1.2 V on the board.
+% On the RCU2 this is going to be used to regulate a 3.3 V signal to 1.2 V and power everything that requires 1.2 V on the board.
 It is a adjustable regulator, which means that by changing R1 and R2(see figure \ref{MIC_sch}) you can adjust the output voltage, see equation \ref{Vout}.
 For the two test boards that was made we used a input voltage of 3.3 V.
 Voltage over resistor R?(See figure \ref{MIC_sch}) was measured and used to calculate current consumption. Output voltage was also monitored.
@@ -639,7 +634,7 @@ This is a 16-bit noninverting bus transceiver, with configurable voltage. Used f
 An application example could be to convert a 16-bit digital signal of 1.5 V to a 16-bit signal of 3.3 V.
 Direction of the signal is decided by DIR1 and DIR2
 The input and output high value can be set to anything between 1.4 and 3.6 V, the low value is set to be 0 V.
-% On the \ac{RCU2} this is going to be used as a bus transceiver with 1.5 V signal in and 3.3 V signal out.
+% On the RCU2 this is going to be used as a bus transceiver with 1.5 V signal in and 3.3 V signal out.
 
 For the test board the supply voltages(VCCA and VCCB, see figure \ref{SN74AVCB164245_sch}) was both set to 3.3 V to make it more simple to test.
 Voltage over resistor R1 (See figure \ref{SN74AVCB164245_sch}) was measured and used to calculate current consumption.
@@ -677,7 +672,7 @@ The output signals was monitored digitally.
 
 \subsection{QS3VH257}
 This \ac{IC} consist of four 2 to 1 multiplexer/demultiplexer. It has high bandwidth, up to 500 Mhz, low ON resistance and high OFF resistance.
-% On the \ac{RCU2} this is going to be used to switch between two \acf{JTAG} connection.
+% On the RCU2 this is going to be used to switch between two \acf{JTAG} connection.
 
 Supply voltage was set to 3.3 V. Voltage over resistor R1(See figure \ref{SN74AVC2T245_sch}) was measured and used to calculate current consumption.
 For the Select input a analog output signal was used. The input signals was set digitally, and the outputs was measured digitally.
@@ -692,7 +687,7 @@ For the Select input a analog output signal was used. The input signals was set 
 
 \subsection{SY89831U}
 This is a high speed, 2$\giga\hertz$ differential \ac{LVPECL} 1 to 4 fanout buffer optimized for ultra-low skew applications.
-% Used on the \ac{RCU2} to produce 4 clock signal out of 1.
+% Used on the RCU2 to produce 4 clock signal out of 1.
 
 The input signal to this \ac{IC} is differential. The DAQ device we were using doesn't have a differential output signal, so here we had to use a little trick to make it work.
 We used two single-ended output signal that was set to the opposite of the other, and every 100 $\milli\second$ the values switch, so that when IN+ was 3.3 V IN- was 0 V, and when IN+ was 0 V IN- was 3.3 V.
@@ -712,7 +707,7 @@ Current consumption was measured over the input resistor of the MIC69302WU \ac{P
 
 \subsection{ADN2814 and MAX3748}
 \label{limiting_amp}
-These two boards are used for the same purpose, and the one of them that performs best will be chosen to be used on the \ac{RCU2}.
+These two boards are used for the same purpose, and the one of them that performs best will be chosen to be used on the RCU2.
 ADN2814 is a clock and data recovery IC with integrated limiting amplifier. Works in rate of 10 Mb/s to 675 Mb/s. Gives out a \acf{LVDS} clock and data signal.
 MAX3748 is a limiting amplifier. Works in rate of 155 Mb/s to 4.25 Gb/s. Gives out a \acf{CML} data output signal.
 
@@ -921,11 +916,11 @@ Schematic, PCB layout and instructions on how to use this board can be found in 
 \section{Equipment used for testing}
 Under a radiation test, some equipment are needed. In the following sections some of the equipment used under a radiation test are presented.
 
-\subsection{Neutron dosimeter}
-The Neutron dosimeter boards are made by Arild Velure, as part of his master thesis \cite{arild_master}.
+\subsection{SRAM detector}
+The SRAM detector boards are made by Arild Velure, as part of his master thesis \cite{arild_master}.
 It is a SRAM-based radiation detector. By checking SRAM chips for \ac{SEU}, we can find the fluence\footnote{Fluence is the total number of particles that intersect a unit area in a specific time interval of interest, and has units of $particle/\centi\square\meter$ (number of particles per meter squared)} of the beam.
 
-The Neutron dosimeter is a \ac{PCB} with a flash-based \ac{FPGA}, four 16 Mbit Cypress SRAM chips, connectors and supporting electronics.
+The SRAM detector is a \ac{PCB} with a flash-based \ac{FPGA}, four 16 Mbit Cypress SRAM chips, connectors and supporting electronics.
 % The \ac{FPGA} is designed witU h RS485 two-way communication which makes it possible to edit firmware, send commands and get data out.
 The board can be connected to a computer through a Opal Kelly XEM3001 board, which converts RS485 signal from the \ac{FPGA} to USB.
 A labVIEW program has been built specially for this board. From this program we are able to reset data, do some basic settings, and monitor data. The program also constantly saves data onto the disk. The board also has an optical input for scintillator counts, so we could use this board as a scintillator counter as well.
@@ -968,7 +963,7 @@ To get a more accurate measurement, we will need a PhotoMultiplier Tube (PM-tube
 \subsection{X-Y-positioning system}
 The X-Y-positioning system is a displacement system where things (for example a \ac{PCB}) can be mounted and be moved up, down and sideways in a small area controlled by a computer. Communication is done through a serial port and a labVIEW program is used to control the system.
 
-This was used when doing the beam profile as discussed in chapter \ref{beam_setup}. In figure \ref{xy-table} you can see a picture of the front and back of the X-Y-positioning system, with the Neutron dosimeter mounted.
+This was used when doing the beam profile as discussed in chapter \ref{beam_setup}. In figure \ref{xy-table} you can see a picture of the front and back of the X-Y-positioning system, with the SRAM detector mounted.
 
 \begin{figure}[!htbp]
 \centering
@@ -1064,7 +1059,7 @@ Equipment & Explanation  \\ \hline \hline
 Scintillator & A plastic scintillator with photomultiplier. Was used to measure relative radiation. We had two of these, one that was placed right under \acf{DUT} and one that was placed 75cm away from \ac{DUT}. \\ \hline
 High voltage regulator & Voltage for the photomultiplier. 800V was used. \\ \hline
 The test boards &  TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831U, ADN2814, MAX3748, INA210 and TLV3011. \\ \hline 
-Neutron dosimeter  & A PCB board with 4 \ac{SRAM} cells that was used to characterise the beam and to measure scintillator counts \\ \hline
+SRAM detector  & A PCB board with 4 \ac{SRAM} cells that was used to characterise the beam and to measure scintillator counts \\ \hline
 SF2 starter kit & A starter kit board with the \acf{SF2} \ac{SoC} \ac{FPGA}.  \\ \hline
 Computer  & A VNC server was set up on a computer inside the experimental hall, this made us able to control the experiment from the control room. The computer was running all the necessary software to control and monitor the experiment. \\ \hline
 USB DAQ  & Data acquisition board form National Instruments(NI). Used to establish analog and digital connection to the test boards and send data to the computer. \\ \hline
@@ -1088,7 +1083,7 @@ When we were ready to start the beam test, we had to start with characterization
 The first thing to do is to get an understanding of the beam, and see that it hits around the area that we expect.
 This was done by using radiation films that turns black when exposed to radiation. 
 One of these was placed right in front of the beam exit and one in front of \acf{DUT} area. This was done to see how the beam spread out, and to get a feeling of where the beam center was.
-A more precise calibration was done by the use of the Neutron dosimeter and the scintillator. 
+A more precise calibration was done by the use of the SRAM detector and the scintillator. 
 By measuring the relation between scintillator counts on the scintillator which was in a locked position and SEU on the \ac{SRAM} that was connected to the XY-position system (which made the \ac{SRAM} freely to move), we were able to find a more precise position of the beam center by seeing which position gave us highest SEU counts compared to scintillator counts.
 When the beam center is found and everything works as it should, the laser was placed in a position so that the laser beam points to where we had found center of the beam to be. After that we could replace the \ac{SRAM} board with the PCB that we were going to test. This had to be done every day at startup, before we could start the actual tests.
 
@@ -1101,8 +1096,8 @@ The \ac{SRAM} and test board programs were constantly saving data on the disk.
 \subsection{What was tested at OCL}
 We had beam time in three periods at OCL, that is 13.11.13-15.11.13, 28.11.13-29.11.13 and 25.03.14-28.03.14.
 The boards that where tested the first time are: $TPS51200_1$, $MIC69302WU_1$, $SN74AVCB164245_1$, $SN74AVC2T245_1$, $QS3VH257_1$ and $SY89831U_1$, tested in that order.
-The second time, we started with the two limiting amplifier \ac{IC}, since those hadn't been tested before. So the order the \ac{PCB} was tested the second period was: $ADN2814$, $MAX3748$, $SY89831U_2$, $TPS51200_2$, $MIC69302WU_2$, $SN74AVCB164245_2$, $SN74AVC2T245_2$ and $QS3VH257_2$.
-The third time at OCl, the focus was mainly the SF2 chip, but $INA210_1, INA210_2, TLV3011_1 and TLV3011_2$ was also tested.
+The second time, we started with two limiting amplifier \ac{IC}, since these hadn't been tested before. So the order the \ac{PCB} was tested the second period was: $ADN2814$, $MAX3748$, $SY89831U_2$, $TPS51200_2$, $MIC69302WU_2$, $SN74AVCB164245_2$, $SN74AVC2T245_2$ and $QS3VH257_2$.
+The third time at OCl, the focus was mainly the \ac{SF2} \ac{SoC} \ac{FPGA}, but $INA210_1, INA210_2, TLV3011_1 and TLV3011_2$ was also tested.
 
 \newpage
 
@@ -1124,8 +1119,8 @@ The cyclotron and the control is done from the control room.
 \emph{This chapter will explain how the collected data after a radiation test at \ac{OCL} was used to calculate flux and dose.
 And results from both irradiation tests at \ac{OCL} and \ac{TSL} will be presented.}
 
-After a irradiation test at \ac{OCL} on a specific \ac{PCB}, the collected data consist of the exposed time, scintillator counts, current consumption and output data.
-From the calibration before radiation test, we got the relation between scintillator counts and \ac{SEU} on the Neutron dosimeter. From earlier tests with the neutron dosimeter the cross section for a incoming proton to induce a \ac{SEU} is known. These data is used to calculate our way to the received dose for each of the different \ac{IC}. The next section will explain the calculation process.
+After a irradiation test at \ac{OCL}, the collected data consist of the exposed time, scintillator counts, current consumption and output data of the \ac{DUT}.
+From the calibration before radiation test, we got the relation between scintillator counts and \ac{SEU} on the SRAM detector. From earlier tests with the SRAM detector the cross section for a incoming proton to induce a \ac{SEU} is known. These data is used to calculate our way to the received dose for each of the different \ac{IC}. The next section will explain the calculation process.
 
 % \ac{TSL} is a more facility which sells beam time for a living. So all data after a radiation was given to us, and we didn't need to do any beam monitoring ourself. We only needed to mount the test board that we wanted to test in test spot, and all data like fluence and dose where received from the facility. At \ac{OCL} however, we had to do the hole monitor process and calculate everything ourself, and required therefore much more time before and after radiation. The next sections will explain the calculation process after radiation at \ac{OCL}.
 
@@ -1133,6 +1128,7 @@ From the calibration before radiation test, we got the relation between scintill
 Two ways to calculate dose will be discussed in this section, that is manually using energy loss and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this chapter.
 
 \subsection{Definitions}
+\label{difinitions}
 Absorbed radiation dose has the unit of energy/mass and the SI-unit is gray (Gy), which is 1 Joule of energy absorbed in a kilogram of matter[J/Kg] \ref{Joule_kg}.
 Another unit which is often used when it comes to radiation of electronics is Rad, which is short for "Radiation absorbed dose".
 The relation between Rad and Gy can be seen in \ref{Gy_to_Rad}.
@@ -1143,86 +1139,115 @@ The relation between Rad and Gy can be seen in \ref{Gy_to_Rad}.
 \end{equation}
 
 \begin{equation}
-1 Rad = 100 Gy = 0.01 \frac{\joule}{\kilogram}
+1 Rad = \frac{Gy}{100} = 0.01 \frac{\joule}{\kilogram}
 \label{Gy_to_Rad}
 \end{equation}
 
 The particle energy is normally expressed in electronvolt ($\electronvolt$) or Megaelectronvolt ($\mega\electronvolt$). One electronvolt is defined as the amount of kinetic energy gained by a single unbound electron when it accelerates through an electric potential of one Volt, thereof $\electronvolt$. Its value is $e = 1.602 \times 10^{-19} C$ which is the electric charge, multiplied with one Volt, which equals $1.602 \times 10^{-19}\electronvolt$ or $1.602 \times 10^{-19}\joule$.
 
 \begin{equation}
-1 \mega\electronvolt = 1000 \electronvolt = 1000 \cdot 1.602 \times 10^{-19}\joule = 1.602 \times 10^{-13}\joule
+1 \mega\electronvolt = 10^{6} \electronvolt = 10^{6} \cdot 1.602 \times 10^{-19}\joule = 1.602 \times 10^{-13}\joule
 \label{MeV_to_joule}
 \end{equation}
 
 \subsection{Calculating dose using LET}
-When using \ac{LET} to calculate the dose, we are looking at the total energy that is deposited in a \ac{IC}.
+% When using \ac{LET} to calculate the dose, we are looking at the total energy that is deposited in a \ac{IC}.
 As explained i section \ref{LET_section}, \ac{LET} is energy deposited in a material through ionization when a particle crosses the material.
 % To calculate this energy, we need to know the thickness, density and area of the material, which particle that enters the material and its energy.
-\ac{LET} into a material is equal the energy loss of the particle that crosses the material, which means that we can use the bethe bloch formula that is expressed in equation \ref{stopping_power}. The energy loss of a particle is highly energy dependent, but for short distances it can be assumed to be constant without getting to much error.
+\ac{LET} is equal the energy loss a particle suffer by crossing a material, which means that we can use the bethe bloch formula that is expressed in equation \ref{stopping_power}.
+By looking at the total \ac{LET} to a \ac{IC}, we are able to calculate our way to the dose.
+The energy loss of a particle is highly energy dependent, but for short distances it can be assumed to be constant without getting too much error.
 
 Two energies was used when exposing circuits at \ac{OCL}, The first time we had a proton beam with a energy of 28 MeV, the two other times we had a beam of 25 MeV.
-The \ac{DUT} was placed 130cm away from beam exit, we will therefore have some energy loss in the air between the beam-exit and \ac{DUT}. A program \cite{website:energyloss_calculator} was used to calculate the \emph{energy loss} for a 28 $\mega\electronvolt$ and a 25 $\mega\electronvolt$ proton beam in air, we get respectively $17.516 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.201 \frac{\mega\electronvolt\centi\meter^2}{\gram}$. By multiplying with the density of air which is $\rho_{air}=0.001275 \frac{\gram}{\centi\meter^3}$ we get $22.333 \frac{\kilo\electronvolt}{\centi\meter}$ and $24.481 \frac{\kilo\electronvolt}{\centi\meter}$. This means that the energy of the protons when it hits the test \ac{IC} is:
+The \ac{DUT} was placed 130cm away from beam exit, we will therefore have some energy loss in the air between beam-exit and \ac{DUT}. A energy loss calculator program \cite{website:energyloss_calculator} was used to calculate the \emph{energy loss} for a 28 $\mega\electronvolt$ and a 25 $\mega\electronvolt$ proton beam in air, we get respectively $17.516 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.201 \frac{\mega\electronvolt\centi\meter^2}{\gram}$. By multiplying with the density of air which is $\rho_{air}=0.001275 \frac{\gram}{\centi\meter^3}$, we get $22.3 \frac{\kilo\electronvolt}{\centi\meter}$ and $24.5 \frac{\kilo\electronvolt}{\centi\meter}$. This means that the energy of the protons when they crash into \ac{DUT} are:
 
 \begin{equation}
-E_{proton1} = 28 - (130 \centi\meter \times 22.333 \frac{\kilo\electronvolt}{\centi\meter}) \approx 25 \mega\electronvolt
+E_{proton1} = 28 - (130 \centi\meter \times 22.3 \frac{\kilo\electronvolt}{\centi\meter}) \approx 25 \mega\electronvolt
 \label{Proton_energy1}
 \end{equation}
 
 \begin{equation}
-E_{proton2} = 25 - (130 \centi\meter \times 24.481 \frac{\kilo\electronvolt}{\centi\meter}) \approx 22 \mega\electronvolt
+E_{proton2} = 25 - (130 \centi\meter \times 24.5 \frac{\kilo\electronvolt}{\centi\meter}) \approx 22 \mega\electronvolt
 \label{Proton_energy2&3}
 \end{equation}
 
-
-
-If we look at a single proton entering a \ac{IC} (which consist of mostly silicon), the energy deposited by the single proton can be expressed as,
+By using the same energy loss calculator we get that the energy loss in silicon (which a \ac{IC} mostly consist of), we get:
 
 \begin{equation}
-\Delta E_{proton} = \frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si}
+-\frac{dE}{dx} (25 MeV) =  17.1 \frac{\mega\electronvolt\centi\meter^2}{\gram}
+\label{energy_loss_25}
+\end{equation}
+
+\begin{equation}
+-\frac{dE}{dx} (22 MeV) =  18.9 \frac{\mega\electronvolt\centi\meter^2}{\gram}
+\label{energy_loss_22}
+\end{equation}
+
+If we look at a single proton entering a silicon material, the energy deposited by that single proton can be expressed as,
+
+\begin{equation}
+\Delta E_{proton} = -\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si}
 \label{proton_energy_loss}
 \end{equation}
 
 where $\Delta x$ is the length segment a proton particle penetrates into the material, and $\rho_{Si}$ is the density of silicon.
 
 \begin{equation}
-\rho_{Si} = \frac{\gram}{\centi\meter^3}
+\rho_{Si} = 2.33 \frac{\gram}{\centi\meter^3}
 \label{silicon_density}
 \end{equation}
 
-To get the total energy deposited in the \ac{IC}, we have to multiply the energy of a single proton multiplied with the flux and the area of the \ac{IC}, then we have:
+To get the total energy deposited in the \ac{IC}, we have to multiply the energy of a single proton multiplied with the fluence, which is the total flux over a given time,  and the area of the \ac{IC}, then we have:
 
+% Flux = \Phi
 \begin{equation}
-\Delta E_{total} = \Delta E_{proton} \cdot \Phi \cdot A = \frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A
+\Delta E_{total} = \Delta E_{proton} \cdot \Phi \cdot A = -\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot fluence \cdot A
 \label{total_energy_loss}
 \end{equation}
 
+Now we know the total energy loss for a proton beam. And can start calculating the dose. Dose is energy per mass, as said in section \ref{difinitions}. That means that the absorbed Dose in silicon can be expressed as,
 
+\begin{equation}
+Dose(Si) = \frac{-\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A}{m_{Si}}
+\label{Dose(si)}
+\end{equation}
 
+where $m_{Si}$ is the mass of silicon.
 
+$m_{Si}$ can be expressed in terms of silicon density, see equation \ref{silicon_density}, multiplied with the volume ($V_{Si}$), which is Area ($A_{Si}$) times thickness ($d_{Si}$). Assuming that the protons enters the silicon in a straight line, the path segment $\Delta x$ is equal the thickness, which then gives us,
 
-Some approximations had to be done make the work easier. 
+\begin{equation}
+Dose(Si) = \frac{ -\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A}{\rho_{Si} \cdot A_{Si} \cdot d_{Si}} = -\frac{dE}{dx} \cdot fluence = [\frac{MeV}{g}]
+\label{Dose_silicon}
+\end{equation}
+
+To get the dose in Rad instead of $\frac{MeV}{g}$, we have to multiply with the converting factor given in equation \ref{MeV_to_joule}, which gives us the dose in Gray. To get the dose in Rad we divide by 100. This gives us:
+
+\begin{equation}
+Dose[Rad(Si)] = \frac{1.602 \times 10^{-13} \cdot -\frac{dE}{dx} \cdot fluence}{100}
+\label{Dose_rad}
+\end{equation}
 
 \subsection{Calculating dose using FLUKA simulations}
-
-We start by calculating SEU from the conversion factor found in the calibration process, for 15.11.13 this was 0.0948 and for 28.11.13 this factor was 0.0473. Then we calculate the fluence at \ac{DUT} as seen in equation \ref{FluenceDUT}, and by this we can calculate the flux, see equation \ref{flux}.
-To calculate the dose from here we need to know some more factors. We run a simulation on a program called FLUKA. This program is used to simulate particles in different environment. We simulated a proton beam of 28MeV and 25MeV in air, and inserted the distance from BE(Bean exit). The results can be seen in table $\ref{FLUKA_15}$.
-Then we had enough information to calculate the dose. As seen from equation \ref{FluenceBE} we are able to find the Fluence at BE. And from there we can calculate the dose at \ac{DUT}, see equation \ref{DoseDUT}.
-
+The program Fluka can be used to simulate particles with a user given energy in whatever material you want. We simulated a proton beam with energy of 28 MeV and 25 MeV in air, and set our \ac{DUT}-position to 130 $\centi\meter$ away from beam exit. The results can be seen in table \ref{FLUKA_simulations}.
 
 % Table generated by Excel2LaTeX from sheet 'Fluka'
 \begin{table}[!htbp]
   \centering
-    \begin{tabular}{|l|l|} \hline
-    Fluka simulation results 28MeV &  \\\hline\hline
-    Dose/primary particle at DUT[Gy] & 4,08E-10 \\\hline
-    Primary particles at Beam exit & 1 \\\hline
-    Primary particles at DUT & 0,1331 \\\hline
-    Beam intensity reduction  at DUT & 7,513148009 \\\hline
+    \begin{tabular}{|l|l|l|} \hline
+    Energy at beam exit & 28 MeV & 25 MeV  \\\hline\hline
+    Dose/primary particle at DUT[Gy] & 4.08E-10 & 2.94E-10 \\\hline
+    Primary particles at Beam exit & 1 & 1 \\\hline
+    Primary particles at DUT & 0.1331 & 8.57E-2 \\\hline
+    Beam intensity reduction at DUT & 7.51 & 11.67\\\hline
     \end{tabular}%
       \caption{FLUKA simulation with 28MeV proton beam}
-  \label{FLUKA_15}%
+  \label{FLUKA_simulations}%
 \end{table}%
 
+As said in the introduction to this chapter, the known values after a radiation test are, exposed time, scintillator counts, current consumption, output data of the \ac{DUT} and cross section from the SRAM detector.
+
+The procedure to calculate the dose are first to find the proton fluence, by first converting from scintillator counts to \ac{SEU} by multiplying with the converting factor found as explained in the beam setup, see chapter \ref{beam_setup} and appendix \ref{Beam_profile} for the results. Since the cross section is known for the SRAM detector, we are able to calculate our way to the fluence and flux, see equation \ref{FluenceDUT} and \ref{flux}.
 
 \begin{equation}
 FluenceDUT = \frac{SEU}{CS}
@@ -1234,6 +1259,8 @@ Flux = \frac{Fluence}{time}
 \label{flux}
 \end{equation}
 
+Now we can take use of the Fluka simulation results. The simulation results tells us how many protons will hit \ac{DUT} when one proton will be sent out from the beam exit, and what dose this will give the \ac{DUT}. By using the calculated Fluence on DUT value, found in equation \ref{FluenceDUT}, and dividing on \emph{primary particles at \ac{DUT}} from the simulation results, we find the Fluence at beam exit, see equation \ref{FluenceBE}. Then we can use \emph{dose per primary particle at DUT} from the result and multiply with the Fluence at beam exit point, which gives us the dose in gray for the \ac{DUT}, see equation \ref{DoseDUT}. By dividing on 100 we get the dose in Rad.
+
 \begin{equation}
 FluenceBE = \frac{fluenceDUT}{primary_particlesDUT}
 \label{FluenceBE}
@@ -1244,7 +1271,44 @@ DoseDUT[Gy] = FluenceBE \times \frac{Dose}{primary particle at DUT}
 \label{DoseDUT}
 \end{equation}
 
+\subsection{Comparison of LET and Fluka}
+To compare LET calculations with FLuka simulation we need an example to look at.
+If we look at the test result from radiation of MAX3748:
 
+\begin{table}[!htbp]
+  \centering
+    \begin{tabular}{|l|l|} \hline
+    time 			& 2472 \\\hline
+    proton energy Beam exit  	& 25 MeV \\\hline
+    scintillator counts 	& 3109238 \\\hline
+    scintillator counts to SEU SRAM & 0.473 \\\hline   
+    Cross section 		& 1.14E-6 \\\hline
+
+    
+    \end{tabular}%
+      \caption{Results after radiation of MAX3748}
+  \label{MAX3748_results}%
+\end{table}%
+
+\subsubsection{Calculations using LET}
+The first thing to do is calculate energy when entering the integrated circuit 130 cm away from beam exit. This is found in equation \ref{proton1} to be 22 Mev.
+LET or energy loss for a 22 MeV proton particle in silicon, is calculated in equation \ref{energy_loss_2}, which gives us 17.1 MeV.
+
+By multiplying the scintillator count value with the scintillator conversion value, we get SEU on SRAM to be = 485041. By dividing SEU on cross section we get the fluence at DUT.
+
+\begin{equation}
+FluenceDUT = \frac{485041}{1.14E-6} = 4.25E11
+\label{FluenceDUT_MAX3748}
+\end{equation}
+
+By using equation \ref{Dose_rad} we get the total dose in Rad to be,
+
+\begin{equation}
+Dose[Rad(Si)] = \frac{1.602 \times 10^{-13} \cdot -\frac{dE}{dx} \cdot fluence}{100}
+\label{Dose_rad}
+\end{equation}
+
+\subsubsection{Calculations using Fluka simulations}
 
 \section{Results from OCL}
 \subsection{Calibration process}
@@ -1261,10 +1325,10 @@ A example of two films from the beam exit and \ac{DUT} area can be seen in figur
   \label{Radiation_film}
 \end{figure}
 
-Now we had a feeling of where center is compared to where the laser was pointing. The Neutron dosimeter was placed with one of the SRAM chips at where the laser was pointing. This position was called position zero (x,y) = (0,0). From irradiated films, we knew approximately how much we had to move to be in center of the beam.
+Now we had a feeling of where center is compared to where the laser was pointing. The SRAM detector was placed with one of the SRAM chips at where the laser was pointing. This position was called position zero (x,y) = (0,0). From irradiated films, we knew approximately how much we had to move to be in center of the beam.
 In table $\ref{test_15.11}$ you can see the results from our calibration 15.11.2013. You can see that position x = -2,5 cm and y = -1 cm gives highest relation between SEU and scintillator counts.
 A total of 4 tests in that position was done and the average value gives us 0,0948.
-When we irradiated the different \acp{PCB}, we didn't have SEU dat, but we had scintillator counts, the relation value was used to redo the scintillator count value onto \ac{SEU}. The cross section, the probability that an incoming particle will induce an SEU is known for the neutron dosimeter. The cross section (CS) is given in equation \ref{CS}. From this we could find the fluence of the beam.
+When we irradiated the different \acp{PCB}, we didn't have SEU dat, but we had scintillator counts, the relation value was used to redo the scintillator count value onto \ac{SEU}. The cross section, the probability that an incoming particle will induce an SEU is known for the SRAM detector. The cross section (CS) is given in equation \ref{CS}. From this we could find the fluence of the beam.
 
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[!htbp]
@@ -1593,8 +1657,8 @@ Having that in mind, I would say that every component tested would have a green 
 \chapter{Some Appendix}
 \label{appendix}
 
-\section{datasheets}
-\label{datasheets}
+\section{Beam setup data}
+\label{Beam_profile}
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}
   \centering
@@ -1640,32 +1704,7 @@ Having that in mind, I would say that every component tested would have a green 
       \caption{Calibration tests 15.11.2013}
 \end{table}%
 
-% Table generated by Excel2LaTeX from sheet 'Fluka'
-\begin{table}
-  \centering
-    \begin{tabular}{|l|l|} \hline
-    Fluka simulation results 28MeV &  \\\hline\hline
-    Dose/primary particle at DUT[Gy] & 4,08E-10 \\\hline
-    Primary particles at Beam exit & 1 \\\hline
-    Primary particles at DUT & 0,1331 \\\hline
-    Beam intensity reduction  at DUT & 7,513148009 \\\hline
-    \end{tabular}%
-      \caption{FLUKA simulation with 28MeV proton beam}
-\end{table}%
 
-% Table generated by Excel2LaTeX from sheet 'Fluka'
-\begin{table}
-  \centering
-    \begin{tabular}{|l|l|}\hline
-    Fluka simulation results 25MeV &  \\\hline\hline
-    $\frac{Dose}{primary particle at DUT}$[Gy] & 2,94E-10 \\\hline
-    Primary particles at Beam exit & 1 \\\hline
-    Primary particles at DUT & 8,57E-02 \\\hline
-    Beam intensity reduction  at DUT & 11,6713352 \\\hline
-    \end{tabular}%
-    \caption{FLUKA simulation with 25MeV proton beam}
-  \label{FLUKA_28}%
-\end{table}%
 
 \end{appendices}
 
