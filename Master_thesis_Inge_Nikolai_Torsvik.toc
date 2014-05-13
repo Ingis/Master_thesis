@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {4.1.7}ADN2814 and MAX3748}{27}{subsection.4.1.7}
 \contentsline {subsection}{\numberline {4.1.8}INA210}{29}{subsection.4.1.8}
 \contentsline {subsection}{\numberline {4.1.9}TLV3011}{29}{subsection.4.1.9}
-\contentsline {subsection}{\numberline {4.1.10}All the test boards}{29}{subsection.4.1.10}
+\contentsline {subsection}{\numberline {4.1.10}All the test boards}{30}{subsection.4.1.10}
 \contentsline {section}{\numberline {4.2}Software}{32}{section.4.2}
 \contentsline {section}{\numberline {4.3}SmartFusion2}{32}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}SRAM test}{33}{subsection.4.3.1}
@@ -63,27 +63,28 @@
 \contentsline {section}{\numberline {5.2}Testing at \acf {TSL}}{46}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}About TSL}{46}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Beam setup procedure}{46}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}What was tested at \ac {TSL}}{46}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Calculations and Results from Beam Test}{47}{chapter.6}
-\contentsline {section}{\numberline {6.1}Calculation of dose}{47}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Definitions}{48}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Calculating dose using LET}{48}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Calculating dose using FLUKA simulations}{50}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Comparison of LET and Fluka}{51}{subsection.6.1.4}
-\contentsline {subsubsection}{Calculations using LET}{52}{section*.86}
-\contentsline {subsubsection}{Calculations using Fluka simulations}{52}{section*.87}
-\contentsline {section}{\numberline {6.2}Results from OCL}{52}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Calibration process}{52}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}Test results}{54}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}TPS51200}{56}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}MIC69302WU}{57}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}SN74AVCB164245}{58}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}SN74AVC2T245}{58}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}QS3VH257}{59}{subsection.6.3.5}
-\contentsline {subsection}{\numberline {6.3.6}SY89831}{59}{subsection.6.3.6}
-\contentsline {subsection}{\numberline {6.3.7}ADN2814}{60}{subsection.6.3.7}
-\contentsline {subsection}{\numberline {6.3.8}MAX3748}{62}{subsection.6.3.8}
-\contentsline {section}{\numberline {6.4}Discussion of the result}{63}{section.6.4}
-\contentsline {chapter}{\numberline {7}Conclusion}{64}{chapter.7}
-\contentsline {chapter}{Appendix \numberline {A}Some Appendix}{65}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Beam setup data}{65}{section.a.A.1}
+\contentsline {subsection}{\numberline {5.2.3}What was tested at \ac {TSL}}{47}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Calculations and Results from Beam Test}{48}{chapter.6}
+\contentsline {section}{\numberline {6.1}Calculation of dose}{48}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Definitions}{49}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Calculating dose using LET}{49}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Calculating dose using FLUKA simulations}{51}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Comparison of LET and FLUKA}{52}{subsection.6.1.4}
+\contentsline {subsubsection}{Calculations using LET}{53}{section*.88}
+\contentsline {subsubsection}{Calculations using FLUKA simulations}{53}{section*.89}
+\contentsline {subsubsection}{Discussion}{54}{section*.90}
+\contentsline {section}{\numberline {6.2}Results from OCL}{54}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Calibration process}{54}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Test results}{56}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}TPS51200}{58}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}MIC69302WU}{59}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}SN74AVCB164245}{60}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}SN74AVC2T245}{60}{subsection.6.2.6}
+\contentsline {subsection}{\numberline {6.2.7}QS3VH257}{61}{subsection.6.2.7}
+\contentsline {subsection}{\numberline {6.2.8}SY89831}{61}{subsection.6.2.8}
+\contentsline {subsection}{\numberline {6.2.9}ADN2814}{62}{subsection.6.2.9}
+\contentsline {subsection}{\numberline {6.2.10}MAX3748}{64}{subsection.6.2.10}
+\contentsline {section}{\numberline {6.3}Discussion of the result}{65}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusion}{66}{chapter.7}
+\contentsline {chapter}{Appendix \numberline {A}Some Appendix}{67}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Beam setup data}{67}{section.a.A.1}
