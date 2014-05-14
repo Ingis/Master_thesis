@@ -1,6 +1,0 @@
-\documentclass[a4paper,10pt]{book}
-\usepackage[utf8x]{inputenc}
-
-\begin{document}
-This is a test just to see that it works!
-\end{document}
