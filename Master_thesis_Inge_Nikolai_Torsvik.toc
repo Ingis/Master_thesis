@@ -28,37 +28,38 @@
 \contentsline {subsubsection}{Displacement Damage}{19}{section*.48}
 \contentsline {subsection}{\numberline {3.4.3}The TPC radiation environment}{19}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}Preparations for Testing}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}The \acfp {IC}}{21}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}TPS51200}{22}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}MIC69302WU}{23}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}SN74AVCB164245}{23}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}SN74AVC2T245}{24}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}QS3VH257}{25}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}SY89831U}{26}{subsection.4.1.6}
-\contentsline {subsection}{\numberline {4.1.7}ADN2814 and MAX3748}{27}{subsection.4.1.7}
-\contentsline {subsection}{\numberline {4.1.8}INA210}{29}{subsection.4.1.8}
-\contentsline {subsection}{\numberline {4.1.9}TLV3011}{29}{subsection.4.1.9}
-\contentsline {subsection}{\numberline {4.1.10}All the test boards}{30}{subsection.4.1.10}
-\contentsline {section}{\numberline {4.2}Software}{32}{section.4.2}
-\contentsline {section}{\numberline {4.3}SmartFusion2}{32}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}SRAM test}{33}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Test of the Logical element}{34}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Single Event Latchup and PLL}{35}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Configuration and Monitoring}{36}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.1}Test methodology}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Tested Components}{22}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}TPS51200}{22}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}MIC69302WU}{23}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}SN74AVCB164245}{24}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}SN74AVC2T245}{26}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}QS3VH257}{26}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}SY89831U}{27}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}ADN2814 and MAX3748}{28}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.8}INA210}{29}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.9}TLV3011}{30}{subsection.4.2.9}
+\contentsline {subsection}{\numberline {4.2.10}All the test boards}{31}{subsection.4.2.10}
+\contentsline {section}{\numberline {4.3}Software}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}SmartFusion2}{32}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}SRAM test}{33}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Test of the Logical element}{34}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Single Event Latchup and PLL}{35}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Configuration and Monitoring}{36}{subsection.4.4.4}
 \contentsline {subsubsection}{Microcontroller SubSystem and labVIEW}{36}{section*.70}
-\contentsline {subsubsection}{Monitoring board}{36}{section*.71}
+\contentsline {subsubsection}{Monitoring board}{37}{section*.71}
 \contentsline {subsubsection}{Current measurement board}{37}{section*.72}
-\contentsline {section}{\numberline {4.4}Equipment used for testing}{37}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}SRAM detector}{38}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Scintillator counter}{39}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}X-Y-positioning system}{40}{subsection.4.4.3}
-\contentsline {chapter}{\numberline {5}Irradiation test setup}{41}{chapter.5}
-\contentsline {subsubsection}{Purpose of tests}{41}{section*.76}
-\contentsline {section}{\numberline {5.1}Irradiation on \ac {OCL}}{41}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}About OCL}{41}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Experiment setup and equipment}{42}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Preparation and characterization of the beam}{43}{subsection.5.1.3}
-\contentsline {subsubsection}{Beam setup}{43}{section*.83}
+\contentsline {section}{\numberline {4.5}Equipment used for testing}{38}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}SRAM detector}{38}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Scintillator counter}{40}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}X-Y-positioning system}{41}{subsection.4.5.3}
+\contentsline {chapter}{\numberline {5}Irradiation test setup}{42}{chapter.5}
+\contentsline {subsubsection}{Purpose of tests}{42}{section*.76}
+\contentsline {section}{\numberline {5.1}Irradiation on \ac {OCL}}{42}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}About OCL}{42}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Experiment setup and equipment}{43}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Preparation and characterization of the beam}{45}{subsection.5.1.3}
+\contentsline {subsubsection}{Beam setup}{45}{section*.83}
 \contentsline {subsection}{\numberline {5.1.4}What was tested at OCL}{46}{subsection.5.1.4}
 \contentsline {section}{\numberline {5.2}Testing at \acf {TSL}}{47}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}About TSL}{47}{subsection.5.2.1}
@@ -76,15 +77,15 @@
 \contentsline {section}{\numberline {6.2}Results from OCL}{55}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Calibration process}{55}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Test results}{57}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}TPS51200}{57}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}MIC69302WU}{58}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}SN74AVCB164245}{59}{subsection.6.2.5}
-\contentsline {subsection}{\numberline {6.2.6}SN74AVC2T245}{59}{subsection.6.2.6}
-\contentsline {subsection}{\numberline {6.2.7}QS3VH257}{60}{subsection.6.2.7}
-\contentsline {subsection}{\numberline {6.2.8}SY89831}{60}{subsection.6.2.8}
-\contentsline {subsection}{\numberline {6.2.9}ADN2814}{61}{subsection.6.2.9}
-\contentsline {subsection}{\numberline {6.2.10}MAX3748}{63}{subsection.6.2.10}
-\contentsline {subsection}{\numberline {6.2.11}Summary of the results}{63}{subsection.6.2.11}
+\contentsline {subsubsection}{TPS51200}{57}{section*.93}
+\contentsline {subsubsection}{MIC69302WU}{58}{section*.95}
+\contentsline {subsubsection}{SN74AVCB164245}{59}{section*.97}
+\contentsline {subsubsection}{SN74AVC2T245}{59}{section*.99}
+\contentsline {subsubsection}{QS3VH257}{60}{section*.101}
+\contentsline {subsubsection}{SY89831}{60}{section*.103}
+\contentsline {subsubsection}{ADN2814}{61}{section*.105}
+\contentsline {subsubsection}{MAX3748}{62}{section*.109}
+\contentsline {subsubsection}{Summary of the results}{63}{section*.111}
 \contentsline {section}{\numberline {6.3}Discussion of the result}{67}{section.6.3}
 \contentsline {chapter}{\numberline {7}Conclusion}{68}{chapter.7}
 \contentsline {chapter}{Appendix \numberline {A}Some Appendix}{69}{Appendix.a.A}
