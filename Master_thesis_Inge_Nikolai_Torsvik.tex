@@ -1408,64 +1408,8 @@ CS = 1,14e-6
 \end{equation}
 
 \subsection{Test results}
-I this section the result from radiation irradiation at \ac{OCL} will be presented and discussed. Every \ac{IC} will be presented for them self.
-In table \ref{dose_15.11} and \ref{dose_28.11} you can see how long each \acp{IC} has been exposed too radiation, the dose they have been received and if an error occurred.
-% The tests was controlled and monitored through a LabVIEW program. When testing ADN2814 and MAX3748 there was also needed a \ac{SF2} starter-kit to produce a Manchester coded signal, to be able to test these properly.
-% The point of these tests was to check if the \acp{IC} which where tested would survive in a radiated hard environment we will find in the \ac{TPC}. The total dose of 10 years in the ALICE detector is estimated to be around 1-2 kRad, see section \ref{how_to_test}. If a \ac{IC} survives more than 5 times value, we can be quite sure that it will survive the radiation it will receive at CERN.
-% This signal was sent out from the starter-kit and into the two \ac{IC} and the output from these \acp{IC} was sent back again and compare with the input signal. 
-%A complete result of the tests can be found in appendix \ref{appendix}.
-
-\begin{table}[!htbp]
- \centering
-\begin{tabular}{|l|l|l|l|}\hline
-Device & Exposed time[s] & Dose[Rad] & Error \\ \hline \hline
-$TPS51200$ & 2065 & 41800 & No \\ \hline
-$MIC69302WU_1$ & 2240 & 164000 & No \\ \hline
-$SN74AVCB164245_1$ & 967  & 65200 & No \\ \hline
-$SN74AVC2T245_1$ & 860  & 4600 & Yes \\ \hline
-$QS3VH257_1$ & 795  & 52800 & No \\ \hline
-$SY89831_1$ & 1251 & 93500 & No \\ \hline
-\end{tabular}
-\caption{Tests at OCL 15.nov 2013}
-\label{dose_15.11}
-\end{table}
-
-\begin{table}[!htbp]
- \centering
-\begin{tabular}{|l|l|l|l|}\hline
-Device & Exposed time[s] & Dose[Rad] &  \\ \hline \hline
-$ADN2814/_run1$ & 1273 & 20200 & Yes \\ \hline
-$ADN2814/_run2$ & 2286 & 324900 & Yes \\ \hline
-$MAX3748$ & 2384 & 442200 & No \\ \hline
-$TPS51200_2$ & -\textsuperscript{*} & -* & -* \\ \hline
-$MIC69302WU_2$ & 1385 & 383800 & No \\ \hline
-$SN74AVCB164245_2$ & 526  & 201400 & No \\ \hline
-$SN74AVC2T245_2$ & 478  & 161600 & No \\ \hline
-$QS3VH257_2$ & 264  & 110300 & No \\ \hline
-$SY89831U_2$ & 921  & 165800 & No \\ \hline
-\multicolumn{4}{l}{\textsuperscript{*}\footnotesize{The board wouldn't work at test time}}
-\end{tabular}
-\caption{Tests at OCL 27-28.nov 2013}
-\label{dose_28.11}
-\end{table}
-
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/flux_vs_time_1}
-  \caption{flux for each component radiated 15.11.2013}
-  \label{flux_all1}
-\end{figure}
-
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/flux_vs_time_2}
-  \caption{flux for each component radiated 15.11.2013}
-  \label{flux_all2}
-\end{figure}
-\newpage
-In figure $\ref{flux_all1}$ and $\ref{flux_all2}$ you can see graphs of flux vs time for the different test boards. The reason the graphs don't go as linear as one would expect, is that the beam sometimes stopped and had to restarted, and that we increased and decreased the intensities as we wanted.
-
-\FloatBarrier
+In this section the result from irradiation at \ac{OCL} will be presented and discussed.
+Test of all the PCB boards will be presented first, followed of discussion on SF2 test. The result is presented after type, meaning that two PCb boards with the same \ac{IC} will be presented together.
 
 \subsection{TPS51200}
 This was the first board that was tested.
@@ -1673,6 +1617,65 @@ After a dose of over 400 kRad this chip still worked, and current consumption wa
 
 \FloatBarrier
 
+\subsection{Summary of the results}
+
+In table \ref{dose_15.11} and \ref{dose_28.11} you can see how long each \acp{IC} has been exposed too radiation, the dose they have been received and if an error occurred.
+% The tests was controlled and monitored through a LabVIEW program. When testing ADN2814 and MAX3748 there was also needed a \ac{SF2} starter-kit to produce a Manchester coded signal, to be able to test these properly.
+% The point of these tests was to check if the \acp{IC} which where tested would survive in a radiated hard environment we will find in the \ac{TPC}. The total dose of 10 years in the ALICE detector is estimated to be around 1-2 kRad, see section \ref{how_to_test}. If a \ac{IC} survives more than 5 times value, we can be quite sure that it will survive the radiation it will receive at CERN.
+% This signal was sent out from the starter-kit and into the two \ac{IC} and the output from these \acp{IC} was sent back again and compare with the input signal. 
+%A complete result of the tests can be found in appendix \ref{appendix}.
+
+\begin{table}[!htbp]
+ \centering
+\begin{tabular}{|l|l|l|l|}\hline
+Device & Exposed time[s] & Dose[Rad] & Error \\ \hline \hline
+$TPS51200$ & 2065 & 41800 & No \\ \hline
+$MIC69302WU_1$ & 2240 & 164000 & No \\ \hline
+$SN74AVCB164245_1$ & 967  & 65200 & No \\ \hline
+$SN74AVC2T245_1$ & 860  & 4600 & Yes \\ \hline
+$QS3VH257_1$ & 795  & 52800 & No \\ \hline
+$SY89831_1$ & 1251 & 93500 & No \\ \hline
+\end{tabular}
+\caption{Tests at OCL 15.nov 2013}
+\label{dose_15.11}
+\end{table}
+
+\begin{table}[!htbp]
+ \centering
+\begin{tabular}{|l|l|l|l|}\hline
+Device & Exposed time[s] & Dose[Rad] &  \\ \hline \hline
+$ADN2814/_run1$ & 1273 & 20200 & Yes \\ \hline
+$ADN2814/_run2$ & 2286 & 324900 & Yes \\ \hline
+$MAX3748$ & 2384 & 442200 & No \\ \hline
+$TPS51200_2$ & -\textsuperscript{*} & -* & -* \\ \hline
+$MIC69302WU_2$ & 1385 & 383800 & No \\ \hline
+$SN74AVCB164245_2$ & 526  & 201400 & No \\ \hline
+$SN74AVC2T245_2$ & 478  & 161600 & No \\ \hline
+$QS3VH257_2$ & 264  & 110300 & No \\ \hline
+$SY89831U_2$ & 921  & 165800 & No \\ \hline
+\multicolumn{4}{l}{\textsuperscript{*}\footnotesize{The board wouldn't work at test time}}
+\end{tabular}
+\caption{Tests at OCL 27-28.nov 2013}
+\label{dose_28.11}
+\end{table}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/flux_vs_time_1}
+  \caption{flux for each component radiated 15.11.2013}
+  \label{flux_all1}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/flux_vs_time_2}
+  \caption{flux for each component radiated 15.11.2013}
+  \label{flux_all2}
+\end{figure}
+
+In figure $\ref{flux_all1}$ and $\ref{flux_all2}$ you can see graphs of flux vs time for the different test boards. The reason the graphs don't go as linear as one would expect, is that the beam sometimes stopped and had to restarted, and that we increased and decreased the intensities as we wanted.
+
+\FloatBarrier
 
 \newpage
 \section{Discussion of the result}
