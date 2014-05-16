@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {3.4.2}Accumulative Effects}{18}{subsection.3.4.2}
 \contentsline {subsubsection}{Total Ionization Dose TID}{19}{section*.46}
 \contentsline {subsubsection}{Displacement Damage}{19}{section*.48}
-\contentsline {subsection}{\numberline {3.4.3}The TPC radiation environment}{19}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}The TPC radiation environment}{20}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}Preparations for Testing}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Test methodology}{21}{section.4.1}
 \contentsline {section}{\numberline {4.2}The Tested Components}{22}{section.4.2}
@@ -37,56 +37,63 @@
 \contentsline {subsection}{\numberline {4.2.5}QS3VH257}{26}{subsection.4.2.5}
 \contentsline {subsection}{\numberline {4.2.6}SY89831U}{27}{subsection.4.2.6}
 \contentsline {subsection}{\numberline {4.2.7}ADN2814 and MAX3748}{28}{subsection.4.2.7}
-\contentsline {subsection}{\numberline {4.2.8}INA210}{29}{subsection.4.2.8}
-\contentsline {subsection}{\numberline {4.2.9}TLV3011}{30}{subsection.4.2.9}
-\contentsline {subsection}{\numberline {4.2.10}All the test boards}{31}{subsection.4.2.10}
-\contentsline {section}{\numberline {4.3}Software}{32}{section.4.3}
-\contentsline {section}{\numberline {4.4}SmartFusion2}{32}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}SRAM test}{33}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Test of the Logical element}{34}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Single Event Latchup and PLL}{35}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Configuration and Monitoring}{36}{subsection.4.4.4}
-\contentsline {subsubsection}{Microcontroller SubSystem and labVIEW}{36}{section*.70}
-\contentsline {subsubsection}{Monitoring board}{37}{section*.71}
-\contentsline {subsubsection}{Current measurement board}{37}{section*.72}
-\contentsline {section}{\numberline {4.5}Equipment used for testing}{38}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}SRAM detector}{38}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Scintillator counter}{40}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}X-Y-positioning system}{41}{subsection.4.5.3}
-\contentsline {chapter}{\numberline {5}Irradiation test setup}{42}{chapter.5}
-\contentsline {subsubsection}{Purpose of tests}{42}{section*.76}
-\contentsline {section}{\numberline {5.1}Irradiation on \ac {OCL}}{42}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}About OCL}{42}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Experiment setup and equipment}{43}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Preparation and characterization of the beam}{45}{subsection.5.1.3}
-\contentsline {subsubsection}{Beam setup}{45}{section*.83}
-\contentsline {subsection}{\numberline {5.1.4}What was tested at OCL}{46}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}Testing at \acf {TSL}}{47}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}About TSL}{47}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Beam setup procedure}{47}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}What was tested at \ac {TSL}}{48}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Calculations and Results from Beam Test}{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}Calculation of dose}{49}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Definitions}{50}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Calculating dose using LET}{50}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Calculating dose using FLUKA simulations}{52}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Comparison of LET and FLUKA}{53}{subsection.6.1.4}
-\contentsline {subsubsection}{Calculations using LET}{54}{section*.88}
-\contentsline {subsubsection}{Calculations using FLUKA simulations}{54}{section*.89}
-\contentsline {subsubsection}{Discussion}{55}{section*.90}
-\contentsline {section}{\numberline {6.2}Results from OCL}{55}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Calibration process}{55}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Test results}{57}{subsection.6.2.2}
-\contentsline {subsubsection}{TPS51200}{57}{section*.93}
-\contentsline {subsubsection}{MIC69302WU}{58}{section*.95}
-\contentsline {subsubsection}{SN74AVCB164245}{59}{section*.97}
-\contentsline {subsubsection}{SN74AVC2T245}{59}{section*.99}
-\contentsline {subsubsection}{QS3VH257}{60}{section*.101}
-\contentsline {subsubsection}{SY89831}{60}{section*.103}
-\contentsline {subsubsection}{ADN2814}{61}{section*.105}
-\contentsline {subsubsection}{MAX3748}{62}{section*.109}
-\contentsline {subsubsection}{Summary of the results}{63}{section*.111}
-\contentsline {section}{\numberline {6.3}Discussion of the result}{67}{section.6.3}
+\contentsline {subsection}{\numberline {4.2.8}INA210}{31}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.9}TLV3011}{31}{subsection.4.2.9}
+\contentsline {subsection}{\numberline {4.2.10}All the test boards}{32}{subsection.4.2.10}
+\contentsline {section}{\numberline {4.3}Software}{34}{section.4.3}
+\contentsline {section}{\numberline {4.4}SmartFusion2}{34}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}SRAM test}{35}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Test of the Logical element}{36}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Single Event Latchup and PLL}{37}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Configuration and Monitoring}{38}{subsection.4.4.4}
+\contentsline {subsubsection}{Microcontroller SubSystem and labVIEW}{38}{section*.70}
+\contentsline {subsubsection}{Monitoring board}{38}{section*.71}
+\contentsline {subsubsection}{Current measurement board}{39}{section*.72}
+\contentsline {section}{\numberline {4.5}Equipment used for testing}{39}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}SRAM detector}{40}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Scintillator counter}{41}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}X-Y-positioning system}{42}{subsection.4.5.3}
+\contentsline {chapter}{\numberline {5}Irradiation test setup}{43}{chapter.5}
+\contentsline {subsubsection}{Purpose of tests}{43}{section*.76}
+\contentsline {section}{\numberline {5.1}Irradiation on \ac {OCL}}{43}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}About OCL}{43}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Experiment setup and equipment}{44}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Preparation and characterization of the beam}{46}{subsection.5.1.3}
+\contentsline {subsubsection}{Beam setup}{46}{section*.83}
+\contentsline {subsection}{\numberline {5.1.4}What was tested at OCL}{47}{subsection.5.1.4}
+\contentsline {section}{\numberline {5.2}Irradiation at \acf {TSL}}{48}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}About TSL}{48}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Beam setup procedure}{48}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}What was tested at \ac {TSL}}{49}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Calculations and Results from Beam Test}{50}{chapter.6}
+\contentsline {section}{\numberline {6.1}Calculation of dose}{50}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Definitions}{51}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Calculating dose using LET}{51}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Calculating dose using FLUKA simulations}{53}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Comparison of LET and FLUKA}{54}{subsection.6.1.4}
+\contentsline {subsubsection}{Calculations using LET}{55}{section*.88}
+\contentsline {subsubsection}{Calculations using FLUKA simulations}{55}{section*.89}
+\contentsline {subsubsection}{Discussion}{56}{section*.90}
+\contentsline {section}{\numberline {6.2}Results from OCL}{56}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Calibration process}{56}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Test results PCB boards}{58}{subsection.6.2.2}
+\contentsline {subsubsection}{TPS51200}{58}{section*.93}
+\contentsline {subsubsection}{MIC69302WU}{59}{section*.95}
+\contentsline {subsubsection}{SN74AVCB164245}{60}{section*.97}
+\contentsline {subsubsection}{SN74AVC2T245}{60}{section*.99}
+\contentsline {subsubsection}{QS3VH257}{61}{section*.101}
+\contentsline {subsubsection}{SY89831}{61}{section*.103}
+\contentsline {subsubsection}{ADN2814}{62}{section*.105}
+\contentsline {subsubsection}{MAX3748}{63}{section*.108}
+\contentsline {subsubsection}{Summary of the results}{63}{section*.110}
+\contentsline {subsubsection}{Discussion of the result}{65}{section*.114}
+\contentsline {subsection}{\numberline {6.2.3}Test results SF2}{66}{subsection.6.2.3}
+\contentsline {subsubsection}{SRAM}{66}{section*.115}
+\contentsline {subsubsection}{Logic element}{67}{section*.118}
+\contentsline {subsubsection}{PLL and Latchup}{67}{section*.119}
+\contentsline {subsubsection}{Discussion on the results}{67}{section*.120}
+\contentsline {section}{\numberline {6.3}Results from TSL}{67}{section.6.3}
 \contentsline {chapter}{\numberline {7}Conclusion}{68}{chapter.7}
 \contentsline {chapter}{Appendix \numberline {A}Some Appendix}{69}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Beam setup data}{69}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Radiation results}{69}{section.a.A.2}

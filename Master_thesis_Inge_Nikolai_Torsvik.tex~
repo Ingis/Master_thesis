@@ -530,9 +530,11 @@ The unit used are Gray (\gray) or rad. The relation between those two can be see
 The heart of \ac{TID} effects is the energy deposition in the silicon dioxide.
 When ionizing particles penetrates into a transistor, electron-hole pairs will be created.
 Most of the pairs will recombine shortly after they are generated, but some do not completely recombine because of the electric field.
-Electrons, with high mobility, can easily leave the oxide, but holes are lower mobility and can be trapped in their point of generation in the oxide.
+Electrons, with high mobility, can easily leave the oxide, but holes have lower mobility and can be trapped in their point of generation in the oxide.
 The trapped holes cause a negative threshold voltage shift in the MOS transistor, and if enough holes are trapped, it can result in a transistor which is permanently ON.
 This phenomena can be seen in figure \ref{TID_in_MOS}.
+
+A effect of the total ionized dose in a CMOS circuits, could be increase in current. This could be due to threshold change in the transistors. For example if look at an inverter. A inverter consist of only a PMOS and a NMOS, if threshold decreases, time where both transistors are on will increase, leading to increase of current. A other reason for current increase are current leakage between drain and source because of the trapped holes.
 
 \begin{figure}[!htbp]
   \centering
@@ -568,29 +570,30 @@ Much of the work presented in this thesis is based on experience from previous t
 The \ac{IC} that was tested through this thesis are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210, TLV3011 and SF2 M2S050-FG896.
 What each of these are, and how these was tested will be discussed in the following sections.
 
-For each of the different \ac{IC}, except SF2, a \acf{PCB} was made with only the necessary electronics to make it work and to be able to test the functionality of the \ac{IC}.
-one to two Connectors was placed on the different \acp{PCB} and connected to USB-\acf{DAQ} boards from National Instruments. These gave us the possibility to control the inputs of each \ac{IC} and monitor the outputs.
-A small resistor was placed in serial with the power input, so we would be able to measure the voltage over this resistor to get current.
+For each of the different \ac{IC}, except SF2, a simple \acf{PCB} was made as a platform to be able to send in input data and take out the outputs.
+one or two connectors was placed on the different \acp{PCB} and connected to USB-DAQ (Data Acquisition) boards from National Instruments. These gave us the possibility to control the inputs of each \ac{IC} and monitor the outputs.
+A small resistor was placed in series with the power input. By measuring volage drop over this resistor we could calculate the current using \emph{Ohms law} (I = U/R).
 
-We wanted to have two \ac{PCB} for each of the \ac{IC} that was going to be tested to have more test data on each \ac{IC},
-and to be sure that the error we would see wasn't just a coincidence.
+We wanted to have two \ac{PCB} for each of the \ac{IC} that were going to be tested. That was to have more test data on each \ac{IC}, and as a precaution if one of the boards wouldn't work.
+
+
 There may be some difference between two boards made for the same chip, that is because the first board made may have some modification on the \ac{PCB}, to make it work. When the second board was made, error or mis functions was fixed in the design before a new board was made.
 The second version was tested first, in case we didn't have time to test both of the versions.
-Later in this thesis the second board that was made are marked with $_1$ and the first board was marked with $_2$.
+Later in this thesis the second boards that were made are marked with $_1$ and the first boards were marked with $_2$.
 Two of the \ac{IC}s (ADN2814 and MAX3748) was only made one version of, since we didn't have any spare \ac{IC} at the time to make a new \ac{PCB}.
-All of the test \ac{PCB}s had a mark on the back indicating the center of the \ac{IC}, this was used to pinpoint the center during the tests.
+All of the test \acp{PCB} had a mark on the back indicating the center of the \ac{IC}, this was used to pinpoint the center during the tests.
 
 To supply and measure everything on the test boards, \acf{DAQ} devices from National Instruments were used.
 The \ac{DAQ} devices we used are called USB-6009, USB-6008 and USB-6501. USB-6009 was used as the main one, and the other were used when needed more digital or analog inputs or outputs.
-USB-6009 has 8 single-ended analog input (AI) channels, 2 analog output (AO) channels and 12 digital input/output (DIO) channels, and also a 2.5 V and 5.0 V signal.
-The analog outputs has a limit of 5 $\milli\ampere$, but some of the \acp{IC} that was tested required more than that. For these cases the 5 V signal was used, that can deliver current up to 200 $\milli\ampere$.
+USB-6009 has 8 single-ended analog input (AI) channels, 2 analog output (AO) channels and 12 digital input/output (DIO) channels, and also a 2.5 V reference and 5.0 V output.
+The analog outputs has a limit of 5 $\milli\ampere$, but some of the \acp{IC} that were tested required more than that. For these cases the 5 V output, that can deliver current up to 200 $\milli\ampere$, and a voltage regulator to 3.3 V was used, see section \ref{MIC_explanation}.
 More information on the DAQs can be seen in the reference \cite{website:DAQ}.
 
 \section{The Tested Components}
 \subsection{TPS51200}
 \label{TPS_explanation}
 This is a adjustable power regulator from Texas Instruments. It is special designed for DDR RAMs, it can be used for DDR, DDR2, DDR3 and DDR4 applications.
-% On the RCU2, this is going to be used to supply a DDR3 RAM with 0.75 V.
+On the RCU2, this is going to be used to supply a DDR3 RAM with 0.75 V.
 
 In figure \ref{TPS51200_sch} you can see a schematic layout of the \ac{PCB} for TPS51200.
 The PCB was designed after a recommended setup for DDR3 application from the datasheet \cite{website:TPS51200}. Input voltage was set to 3.3 V.
@@ -607,8 +610,9 @@ Voltage over resistor R1 (See figure \ref{TPS51200_sch}) was measured and used t
 \subsection{MIC69302WU}
 \label{MIC_explanation}
 This is a ultra low dropout\footnote{Low dropout means that voltage on the output can be close up to the input. For MIC69302WU low dropout means that $V_{IN}$ - $V_{OUT}$ can be as low as 500 $\milli\volt$} adjustable power regulator from Micrel Incorporation. It is in a family of high current, low voltage regulators, and can deliver a current of up to 3 A.
-% On the RCU2 this is going to be used to regulate a 3.3 V signal to 1.2 V and power everything that requires 1.2 V on the board.
-It is a adjustable regulator, which means that by changing R1 and R2(see figure \ref{MIC_sch}) you can adjust the output voltage, see equation \ref{Vout}.
+On the RCU2 this is going to be used to regulate a 3.3 V signal to 1.2 V and power everything that requires 1.2 V on the board.
+
+This is a adjustable regulator, which means that by changing R1 and R2(see figure \ref{MIC_sch}) you can adjust the output voltage, see equation \ref{Vout}.
 For the two test boards that was made we used a input voltage of 3.3 V.
 Voltage over resistor R?(See figure \ref{MIC_sch}) was measured and used to calculate current consumption. Output voltage was also monitored.
 We used 10 k$\ohm$ for both R1 and R2 which gave us 1 V on the output.
@@ -715,12 +719,17 @@ MAX3748 is a limiting amplifier. Works in rate of 155 Mb/s to 4.25 Gb/s. Gives o
 On the RCU2, these boards are supposed to be used to make a stable signal out of a not so stable signal coming from a optical receiver. The signal which is sent into the receiver is a Manchester-decoded signal consisting of clock and data. The clock signal are going to be used as a global clock signal for all of the RCU2s, so that all of the RCU2 are synchronized.
 The data signal is a trigger signal which in short tells the RCU2 when it is going to do a measurement and when to send data out.
 
-There are a few differences between the two \acp{IC}. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock and data recovery function as as ADN2814 has. For MAX3748, we will need to do the clock and data recovery function in the main SF2 FPGA, using some of the FPGA logic.
-But both works for our specific use.
+There are a few differences between the two \acp{IC}. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock and data recovery function as as ADN2814 has. For MAX3748, we will need to do the clock and data recovery function in the main SF2 FPGA, using some of the FPGA logic. The clock and data recovery function in ADN2814, is actually clock recovery and data re-timing, that means that the output data is actually the same as input data, except that it is in LVDS format. This means that we have to use FPGA logic to recover data, but since we have the clock signal, it is easier to decode and extract the data signal.
 
-To be able to make a good test for these two, we needed to use a SF2 starter-kit. The SF2 starter-kit was used to make a Manchester-coded signal, which was sent from the starter-kit with wires to a \acp{PCB} with the ADN2814 or MAX3748. The output data from the component are sent back, where the Manchester-coded signal will be decoded and compared with the original clock and data (Clock and data recovery function on ADN2814 was not used). To compare the input and output clock and data, an internal clock from the FPGA, which is 90$\degree$ phase shifted from the incoming and outgoing clock signal to the \ac{PCB}, was used to trigger a XOR function which will go high if the two compared signal are not equal, incrementing a counter.
+To be able to make a good test for these two, we used a SF2 starter-kit. The SF2 FPGA on the starter-kit were used to encode a clock and data signal into a differential Manchester signal that where transmitted to the two circuits. The manchester signal was used as a input for the two circuits, and a LVDS clock and Machester signal was sent back from the ADN chip, and a CML Manchester signal were sent back from the MAX-chip to the starter-kit. The Manchester signal coming back had to be decoded back to clock and data, this was done in the SF2 FPGA. To be able to check if the returning data is equal the original, the original data signal had to be delayed, since sending data out, through a IC and back contribute to some delay. The original data was delayed by sending it through a few D-latches, until the two data signals had the same phase. Then we could start comparing, this were done through a XOR-function, triggered by a 80 Mhz clock. Every time the XOR function goes high, that is when the compared data is not equal, a counter will be incremented.
 
-Sending data out from the SF2 and back resulted in some delay, to sync the outgoing and incoming data, latches and double inverters (buffers) were used on the outgoing clock and data to make them equal in phase. 
+The recovered clock from the ADN chip are 160 Mhz, which is a fairly high frequency. To be able to compare two clocks of 160 Mhz, we introduced a third clock signal of 160 Mhz, with a phase shift of 90 $\degree$ from the two others. This clock signal was used to trigger a XOR-function checking the two clock signals. If they are unequal a counter will be incremented. 
+
+The counter values were accessed by the internal microcontroller on the SF2 chip. From the microcontroller the counter values were constantly transmitted out through a UART-port, which is connected to the USB-plug on the kit. The USB-plug is connected to a computer where a labVIEW program was running ready to receive data. The received data is exhibited for a viewer, and data is saved in a text file. The labVIEW program also monitors the current consumption of the \ac{IC}. 
+
+Both of these components required allot of current to function correctly, so the modified MIC69302WU in combination with the 5 V on the USB-DAQ was used. This gave us a supply voltage of 3.3 V and a current limit of 200 mA.
+
+The decoding process of the mancheseter signal returned both clock and data, but since these are related, only data was checked.
 
 \begin{figure}[!htbp]
   \centering
@@ -1098,14 +1107,14 @@ one for the \ac{SRAM} board(to measure SEU and scintillator counts when calibrat
 The \ac{SRAM} and test board programs were constantly saving data on the disk.
 
 \subsection{What was tested at OCL}
-We had beam time in three periods at OCL, that is 13.11.13-15.11.13, 28.11.13-29.11.13 and 25.03.14-28.03.14.
+We had beam time in three periods at OCL, that is $13.11.13-15.11.13, 28.11.13-29.11.13 and 08.04.14-11.04.14$.
 The boards that where tested the first time are: $TPS51200_1$, $MIC69302WU_1$, $SN74AVCB164245_1$, $SN74AVC2T245_1$, $QS3VH257_1$ and $SY89831U_1$, tested in that order.
 The second time, we started with two limiting amplifier \ac{IC}, since these hadn't been tested before. So the order the \ac{PCB} was tested the second period was: $ADN2814$, $MAX3748$, $SY89831U_2$, $TPS51200_2$, $MIC69302WU_2$, $SN74AVCB164245_2$, $SN74AVC2T245_2$ and $QS3VH257_2$.
 The third time at OCl, the focus was mainly the \ac{SF2} \ac{SoC} \ac{FPGA}, but $INA210_1, INA210_2, TLV3011_1 and TLV3011_2$ was also tested.
 
 \newpage
 
-\section{Testing at \acf{TSL}}
+\section{Irradiation at \acf{TSL}}
 The main difference between \ac{OCL} and TSL, is that TSL are able to produce beam of much higher energies. The setback with TSL is that it is quite expensive to rent, but then again, the test process is much easier, and there are more people there that can help us if needed. \ac{OCL} has been rented for free.
 
 \subsection{About TSL}
@@ -1408,12 +1417,14 @@ CS = 1,14e-6
 \label{CS}
 \end{equation}
 
-\subsection{Test results}
+\subsection{Test results PCB boards}
 In this section the result from irradiation test at \ac{OCL} will be presented and discussed.
-Test of all the PCB boards will be presented first, followed of discussion the test on SF2. The result is presented after type, meaning that two PCB boards containing the same \ac{IC} will be presented together. The purpose of these test has been to check for radiation tolerance. The focus has therefore been to check the output data/voltage and current compared with the received dose. Flux versus time for the different tests can be seen in the summery of this section \ref{flux_all1},\ref{flux_all2} and \ref{flux_all3}
+Test of all the PCBs will be presented first, followed by a discussion on SF2 test. The result is presented after type, meaning that two PCBs containing the same \ac{IC} will be presented together. The purpose of these test has been to check for radiation tolerance. The focus has therefore been to check the output data/voltage and current compared with the received dose. Flux versus time for the different tests can be seen in the summery of this section \ref{flux_all1},\ref{flux_all2} and \ref{flux_all3}
+
+An overview of the test can be found at the end of this section, with the total exposed time, the total irradiated dose and error status. Flux graph from all of the test can also be found.
 
 \subsubsection{TPS51200}
-This was the first board that was irradiation tested, we started therefore out with a very low intensity, to be sure that everything worked as it should.
+This was the first component that was radiation tested, we started therefore out with a very low intensity, to be sure that everything worked as it should.
 The intensity was increased for the later tests. Two PCBs of this type was supposed to be tested, but only one of these worked when we were at OCL.
 
 In figure \ref{TPS51200_1} you can see the input current and output voltage versus the received dose in kRad. The total exposed dose for this board is 42.8 kRad, and it still worked as it should, with only small increase in current. Normally we would irradiate until we would see some more irradiation effects, but since no errors occurred until 40 kRad, it was no point in exposing anymore.
@@ -1428,9 +1439,9 @@ In figure \ref{TPS51200_1} you can see the input current and output voltage vers
 \FloatBarrier
 
 \subsubsection{MIC69302WU}
-Two boards was tested. The first board was tested 15.11.13 and the second board was tested 28.11.13. During the test of the first board we increased the intensity of the beam quite drastically at the end of the irradiation, this can be seen from the flux graph, in figure \ref{flux_all1}.
+During the test of the first board we increased the intensity of the beam quite drastically at the end of the irradiation, this can be seen from the flux graph, in figure \ref{flux_all1}.
 
-This \ac{IC} had an unexpected reaction to irradiation. You can see from both of the graphs that the current is decreasing and voltage is increasing, normally we would expect the opposite, or at least that the current would increase.
+This \ac{IC} had an unexpected reaction to irradiation. You can see from both of the graphs that the current is decreasing and voltage is increasing, normally we would expect the opposite, or at least that the current would increase, see section \ref{TID}.
 As seen from the graph in figure \ref{MIC69302WU_both} it starts quite early to decrease in current, but it also stabilize after a while. The output voltage is mostly stable, there were a increase of ~2\% on both of the tests, and that with a dose of 150 and 350 kRad.
 
 \begin{figure}[!htbp]
@@ -1454,7 +1465,7 @@ As seen from the graph in figure \ref{MIC69302WU_both} it starts quite early to 
 \FloatBarrier
 
 \subsubsection{SN74AVCB164245}
-Two boards was tested, one of these 15.11.13 and the second 28.11.13. For both of the test no error were detected on the output data. Current versus dose can be seen in the graphs in figure \ref{SN74AVCB164245_1} and \ref{SN74AVCB164245_2}. The second board were exposed to a much higher dose, therefore we can see much more effects on the current for this board. The reason for the ``jumps`` in current is because the output is constantly changing from on to off, with a gap of 4 seconds.
+For both of the test no error were detected on the output data. Current versus dose can be seen in the graphs in figure \ref{SN74AVCB164245_1} and \ref{SN74AVCB164245_2}. The second board were exposed to a much higher dose, therefore we can see much more effects on the current for this board. The reason for the ``jumps`` in current is because the output is constantly changing from on to off, with a gap of 4 seconds.
 Not any effects are detected before a radiation dose of approx 40kRad.
 
 \begin{figure}[!htbp]
@@ -1477,9 +1488,8 @@ Not any effects are detected before a radiation dose of approx 40kRad.
 \FloatBarrier
 
 \subsubsection{SN74AVC2T245}
-Here also two board were tested.
-On the first radiation test of this board something didn't worked as it should. After 740 s and a dose of 98 Rad the chips output was stuck at '1'. The reason for this is unknown, I fear that this might be defected before we started the radiation test, since it gives a totally different current characteristics than test board nr. 2.
-The input was switching from high to low every 4 second explaining the constantly change in current. If we look at the test results from board 2, the current goes unchanged up to 40 kRad.
+On the first radiation test of this board something didn't worked as it should. After 740 s and a dose of 98 Rad the chips output was stuck at '1'. The reason for this is unknown, I fear that the \ac{IC} was defected before we started the radiation test, since it gives a totally different current characteristics than test board nr. 2.
+The input was switching from high to low every 4 second explaining the constantly change in current. If we look at the test results from board 2, the current goes unchanged up to 40 kRad, and no errors were detected at all.
 %her må eg sjekke board1 etter eg har fått den tilbake, og se om den faktisk fungere. Kan hende at denne har vært ødelagt før vi begynte.
 
 \begin{figure}[!htbp]
@@ -1502,7 +1512,7 @@ The input was switching from high to low every 4 second explaining the constantl
 \FloatBarrier
 
 \subsubsection{QS3VH257}
-Two boards was tested, one of these 15.11.13 and the second 28.11.13. No errors on the output data was detected through the whole irradiation test. The current graphs can be seen in figure \ref{QS3VH257_1} and \ref{QS3VH257_2}.
+For both of the boards no errors on the output data were detected through the whole irradiation test. The current graphs can be seen in figure \ref{QS3VH257_1} and \ref{QS3VH257_2}.
 We see a small increase in current before 30 kRad, after that it starting increasing in a more rapid speed.
 
 \begin{figure}[!htbp]
@@ -1525,7 +1535,6 @@ We see a small increase in current before 30 kRad, after that it starting increa
 \FloatBarrier
 
 \subsubsection{SY89831}
-Two boards was tested, one of these 15.11.13 and the second 28.11.13.
 For test of these board we required to use the modified MIC69302WU as described in section \ref{MIC_explanation}, because of the high current consumption.
 The output data was correct through both of the tests, the current characterization can be seen in \ref{SY89831_1} and \ref{SY89831_2}.
 This board is quite temperature dependent, a small increase in temperature, can increase or decrease current by hundreds of $\micro\ampere$. The small increase in current we can see on both of the boards, may also be temperature difference. It is nevertheless very small.
@@ -1551,23 +1560,15 @@ This board is quite temperature dependent, a small increase in temperature, can 
 \FloatBarrier
 
 \subsubsection{ADN2814}
-This \ac{IC} is a little special and was hard to get a good test on. This is a clock and data return circuit, with a limiting amplifier.
-The SF2 board was used to code a clock and data into a differential Manchester signal, that was sent into the IC. Out of the IC we get a LVDS clock and LVDS Manchester signal. The Manchester coded data signal was decoded on SF2 board, so that we get out a clock and data. The data was tested by delaying the original data through a few D-latches, so that the original and returned data was close to synced. Then we could compare the original data with the one from the \ac{IC} through a XOR-function.
-This function was triggered by a 80 Mhz clock from the \ac{SF2} board. If they aren't equal when the clock rises, a 1 will be added to a counter. The value of the counter was constantly sent through the UART of the SF2 board.
+As mentioned in \ref{limiting_amp}, we needed a SF2 starter-kit and the modified MIC69302WU board with a 3.3 V output voltage to test and supply this \ac{IC}.
 
-The way the clock was tested was a little harder process since the clock was so fast (160 Mhz).
-This was solved, was by adding a third clock with the same frequency (160 Mhz) that was $90\,^{\circ}$ of from the two others, when this goes high I called on the XOR-function, to see if the two other clocks are the same. if they are alike, nothing happens, if they are not the program adds 1 to a counter, which constantly writes its current value to a \acf{UART}.
-The problem here is that for each time the \ac{SF2} board was programed the clock was slightly different, that made either the clock out of sync or the data out of sync, so the code didn't always work as it should.
-This circuit also requires allot of current, therefore the same solution as for SY89831 was used, using MIC69302WU as a power supply and measure the current on that PCB.
-
-The current didn't change before a dose of 200 kRad had been received, but we got a clock error at a dose of $ \sim $11 kRad, and a data error after a dose of $ \sim $8 kRad.
-How good this test really is, could be discussed, since we don't have any data on the clock and data, other than that the XOR-function failed. What really failed, and how much is impossible to know. It could be a slightly delay on a clock or the data, or maybe the clock just disappeared for a moment.
+The current didn't change before a dose of 200 kRad had been received, but we got a clock error at a dose of $\approx$ 11 kRad, and a data error after a dose of $\approx$ 8 kRad, see figure \ref{ADN2814_curr} and \ref{ADN2814_tot}.
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.49\textwidth]{figures/current_vs_dose_adn}
-   \label{ADN2814}
   \caption{ADN2814 - Current vs Dose}
+  \label{ADN2814_curr}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -1585,15 +1586,15 @@ How good this test really is, could be discussed, since we don't have any data o
   \label{ADN2814_2e}
   \end{subfigure}
  \caption{ADN2814 - Relative errors vs Dose}
+ \label{ADN2814_tot}
 \end{figure}
 
 \FloatBarrier
 
 \subsubsection{MAX3748}
-This circuit has the same purpose as ADN2814, the difference is that this one only return the limited Manchester coded signal, and no clock. The process for testing the data is the same as for the ADN2814.
-The decoding process return clock and data, but since they are related to another, a error on the clock would mean an error at the data. So by measuring data, we can be sure that there are no clock errors as well. 
+Also here the solution using SF2 and the modified MIC69302WU board was used to test and supply this \ac{IC}.
 
-After a dose of over 400 kRad this chip still worked, and current consumption was stable through the hole irradiation process.
+After a dose of over 400 kRad no error were detected on the data signal, and current consumption was stable through the hole irradiation process.
 
 \begin{figure}[!htbp]
 \centering
@@ -1616,7 +1617,7 @@ After a dose of over 400 kRad this chip still worked, and current consumption wa
 
 \subsubsection{Summary of the results}
 
-In table \ref{dose_15.11} and \ref{dose_28.11} you can see how long each \acp{IC} has been exposed too radiation, the dose they have been received and if an error occurred.
+In table \ref{dose_15.11} and \ref{dose_28.11} you can see how long each \acp{IC} has been exposed too radiation, the dose they have been received and if an error occurred during the irradiation. A returning effect from radiation was that current consumption started increasing with the received dose, the exception was MIC69302WU which actually decreased and to then stabilized after a while, which I have really no good explanation for. Some of the test didn't go as expected, like $TPS51200_2$ and $SN74AVC2T245_1$, and that is why we tried to at least have two boards which was tested. So that if one of them didn't work, we would at least have a test on that component that will give us some useful results. And that is what we also expected from what what we knew about accumulative effects. 
 % The tests was controlled and monitored through a LabVIEW program. When testing ADN2814 and MAX3748 there was also needed a \ac{SF2} starter-kit to produce a Manchester coded signal, to be able to test these properly.
 % The point of these tests was to check if the \acp{IC} which where tested would survive in a radiated hard environment we will find in the \ac{TPC}. The total dose of 10 years in the ALICE detector is estimated to be around 1-2 kRad, see section \ref{how_to_test}. If a \ac{IC} survives more than 5 times value, we can be quite sure that it will survive the radiation it will receive at CERN.
 % This signal was sent out from the starter-kit and into the two \ac{IC} and the output from these \acp{IC} was sent back again and compare with the input signal. 
@@ -1640,7 +1641,7 @@ $SY89831_1$ & 1251 & 93500 & No \\ \hline
 \begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|l|l|l|}\hline
-Device & Exposed time[s] & Dose[Rad] &  \\ \hline \hline
+Device & Exposed time[s] & Dose[Rad] & Error \\ \hline \hline
 $ADN2814\_run1$ & 1273 & 20200 & Yes \\ \hline
 $ADN2814\_run2$ & 2286 & 324900 & Yes \\ \hline
 $MAX3748$ & 2384 & 442200 & No \\ \hline
@@ -1656,38 +1657,84 @@ $SY89831U_2$ & 921  & 165800 & No \\ \hline
 \label{dose_28.11}
 \end{table}
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/flux_vs_time_1}
-  \caption{flux for each component radiated 15.11.2013}
-  \label{flux_all1}
-\end{figure}
+\begin{table}[!htbp]
+ \centering
+\begin{tabular}{|l|l|l|l|}\hline
+Device & Exposed time[s] & Dose[Rad] & Error \\ \hline \hline
+$INA210_1$ & 1084 & 220,9 & No \\ \hline
+$INA210_2$ & 1661 & 174,9 & No \\ \hline
+$TLV3011_1$ & 742 & 120,1 & No \\ \hline
+$TLV3011_2$ & 1074 & 149.1 & No \\ \hline
+\end{tabular}
+\caption{Tests at OCL 08-11.April 2014}
+\label{dose_10.04}
+\end{table}
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/flux_vs_time_2}
-  \caption{flux for each component radiated 15.11.2013}
-  \label{flux_all2}
-\end{figure}
-
-In figure $\ref{flux_all1}$ and $\ref{flux_all2}$ you can see graphs of flux vs time for the different test boards. The reason the graphs don't go as linear as one would expect, is that the beam sometimes stopped and had to restarted, and that we increased and decreased the intensities as we wanted.
 
 \FloatBarrier
 
 \newpage
-\section{Discussion of the result}
-Most of the testing was done 15.nov and 28.nov. The other days was used to get familiar with the instruments and equipment that was being used, to prepare the setup and setting up the beam.
-There are almost impossible to get the same beam two days at a row. Each day of testing is therefore different from each other. Since the testing was conducted in two periodes and a total of 4 test days, there are allot of uncertainties regarding the beam.
-And that is also why we had to do calibration each day at start-up.
+\subsubsection{Discussion of the result}
+We had access to OCL in three periods; 13.11.13-15.11.13, 28.11.13-29.11.13 and 08.04.14-11.04.14, but most of the testing was done 15.11.13, 28.11.13 and 11.04.14. The other days was used to get familiar with the instruments and equipment that was being used, to prepare the setup and setting up the beam.
 
-When we were going to measure the intensity at the beam exit, we placed a Faraday cup in front of the beam, and connected it to a amperemeter on the control panel, but since the current is so small, the measuring instrument will be affected by air currents, and there are also allot of uncertainties in the instruments. Therefore we only used the Faraday cup and the amperemeter, to get a rough estimate of the actual intensity.
+There are almost impossible to get the same beam two days at a row. Each day of testing is therefore different from each other. And that is also why we had to do calibration each day at start-up.
 
-The are also some uncertainties regarding the DAQ device form NI. When measuring digital signal, we don't know if it goes from 0 V to 3.3 V as we would expect. Maybe in reality the low voltage is actually 0.4 V and high voltage is actually 2.8 V. If this is the case, it could be a problem with using this in our design.
+The interesting thing when determining if a \ac{IC} tolerant towards radiation is the dose. In run2, it has been calculated that the total dose in the TPC is 1-2 kRad. This is the absolute limit a \ac{IC} have to survive, and a safe margin on at least 3 times should be used. We also have to take account that when radiating at OCL, we have been using proton beam on less than 30 MeV, in the TPC detector in ALICE, we can receive protons and neutrons in the energy level of higher than 1 GeV, which may cause other effects that we have seen in our test at OCL. It is therefore important to have a good margin on the dose.
 
-As said before in \ref{beam_setup}, if a component survives 10 times more than what it will receive in a period of 10 years in ALICE, that is 1-2 kRad, than it can be used in the design of RCU2.
-Having that in mind, I would say that every component tested would have a green flag even though we had some errors when testing SN74AVC2T245 and ADN2814. Since the result after testing board two of SN74AVC2T245 was positive we can assume that something was wrong with the first board. When it comes to ADN2814, it would be nice to have more time in the lab to test this even more, since the test done gave us so unclear results. If a better test would be made, I'm sure that this would perform much better.
+% When testing two boards of the same type, and on of these fails 
+For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals were only measured digitally by a USB-DAQ, that means that we really don't know if the voltage level shifted because of the received dose. The input low level is from -0.3 V to 0.8 V and the input high level is from 2.0 to 5.8, which means that we could actually have a large swing on the output, without being detected. But then again, changes on the output can normally be referred back to current consumption, as we see on both TPS51200 and MIC69302WU, and we didn't see any increase in current before a dose of 30-40 kRad.
 
+
+% In tables \ref{dose_15.11}, \ref{dose_28.11} and \ref{dose_10.04} 
+% When we were going to measure the intensity at the beam exit, we placed a Faraday cup in front of the beam, and connected it to a amperemeter on the control panel, but since the current is so small, the measuring instrument will be affected by air currents, and there are also allot of uncertainties in the instruments. Therefore we only used the Faraday cup and the amperemeter, to get a rough estimate of the actual intensity.
 \newpage
+
+\subsection{Test results SF2}
+In this subsection the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts which where tested will be presented for them self, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off some times during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup. We did a repower of the board, and the current went back to a normal level, so we continued the test until a dose of 45 kRad when the current increased one more time, but this time it was permanently, even a week after radiation, the current was still high, so the chip was destroyed.
+
+\subsubsection{SRAM}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/lsram_dose_sf2_1}
+  \caption{SEU on Large SRAM versus Dose in kRad}
+  \label{LSRAM_test1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/usram_dose_sf2_1}
+  \caption{SEU on micro SRAM versus Dose in kRad}
+  \label{USRAM_test1}
+  \end{subfigure}
+ \caption{LSRAM and µSRAM test results before shutdown}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/lsram_dose_sf2_2}
+  \caption{SEU on Large SRAM versus Dose in kRad}
+  \label{LSRAM_test2}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/usram_dose_sf2_2}
+  \caption{SEU on micro SRAM versus Dose in kRad}
+  \label{USRAM_test2}
+  \end{subfigure}
+ \caption{LSRAM and µSRAM test results after shutdown}
+\end{figure}
+
+\subsubsection{Logic element}
+
+\subsubsection{PLL and Latchup}
+
+\subsubsection{Discussion on the results}
+
+\section{Results from TSL}
 
 \chapter{Conclusion}
 
@@ -1746,6 +1793,29 @@ Having that in mind, I would say that every component tested would have a green 
       \caption{Calibration tests 15.11.2013}
 \end{table}%
 
+\section{Radiation results}
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/flux_vs_time_1}
+  \caption{flux for each component radiated 15.11.2013}
+  \label{flux_all1}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/flux_vs_time_2}
+  \caption{flux for each component radiated 28.11.2013}
+  \label{flux_all2}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/flux_all_3}
+  \caption{flux for each component radiated 09.04.2014}
+  \label{flux_all3}
+\end{figure}
+
+In figure $\ref{flux_all1}$, $\ref{flux_all2}$ and \ref{flux_all3} you can see graphs of flux vs time for the different test boards. The reason the graphs don't go as linear as one would expect, is that the beam sometimes stopped and had to restarted, and that we increased and decreased the intensities as we wanted.
 
 
 \end{appendices}
