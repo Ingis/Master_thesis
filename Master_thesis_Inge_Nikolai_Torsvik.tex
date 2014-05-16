@@ -721,7 +721,8 @@ The data signal is a trigger signal which in short tells the RCU2 when it is goi
 
 There are a few differences between the two \acp{IC}. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock and data recovery function as as ADN2814 has. For MAX3748, we will need to do the clock and data recovery function in the main SF2 FPGA, using some of the FPGA logic. The clock and data recovery function in ADN2814, is actually clock recovery and data re-timing, that means that the output data is actually the same as input data, except that it is in LVDS format. This means that we have to use FPGA logic to recover data, but since we have the clock signal, it is easier to decode and extract the data signal.
 
-To be able to make a good test for these two, we used a SF2 starter-kit. The SF2 FPGA on the starter-kit were used to encode a clock and data signal into a differential Manchester signal that where transmitted to the two circuits. The manchester signal was used as a input for the two circuits, and a LVDS clock and Machester signal was sent back from the ADN chip, and a CML Manchester signal were sent back from the MAX-chip to the starter-kit. The Manchester signal coming back had to be decoded back to clock and data, this was done in the SF2 FPGA. To be able to check if the returning data is equal the original, the original data signal had to be delayed, since sending data out, through a IC and back contribute to some delay. The original data was delayed by sending it through a few D-latches, until the two data signals had the same phase. Then we could start comparing, this were done through a XOR-function, triggered by a 80 Mhz clock. Every time the XOR function goes high, that is when the compared data is not equal, a counter will be incremented.
+To be able to make a good test for these two, we used a SF2 starter-kit. The SF2 FPGA on the starter-kit were used to encode a clock and data signal into a differential Manchester signal that where transmitted to the two circuits. The manchester signal was used as a input for the two circuits, and a LVDS clock and Machester signal was sent back from the ADN chip, and a CML Manchester signal were sent back from the MAX-chip to the starter-kit. The Manchester signal coming back had to be decoded back to clock and data, this was done in the SF2 FPGA. To be able to check if the returning data is equal the original, the original data signal had to be delayed, since sending data out, through a IC and back contribute to some delay. The original data was delayed by sending it through a few D-latches, until the two data signals had the same phase. Then we could start comparing, this were done through a XOR-function, triggered by a 80 Mhz clock. Every time the XOR function goes high, that is when the compared data is 
+not equal, a counter will be incremented.
 
 The recovered clock from the ADN chip are 160 Mhz, which is a fairly high frequency. To be able to compare two clocks of 160 Mhz, we introduced a third clock signal of 160 Mhz, with a phase shift of 90 $\degree$ from the two others. This clock signal was used to trigger a XOR-function checking the two clock signals. If they are unequal a counter will be incremented. 
 
@@ -1119,7 +1120,7 @@ The main difference between \ac{OCL} and TSL, is that TSL are able to produce be
 
 \subsection{About TSL}
 TSL is an accelerator facility belonging to University of Uppsala in Sweden, \cite{website:TSL}.
-It is manly used for proton therapy of cancer patient by Uppsala University Hospital, but is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be delivered are everything from protons to highly charged xenon ions. There is several extraction points from the cyclotron, which of these that are open can be controlled from the control room. The experiment area for electronics testing, is the the \emph{blue hall}, here there are two extraction points, one used for protons, and one used for neutrons and heavier ions, see figure \ref{Blue_hall}.
+It is manly used for proton therapy on cancer patient by Uppsala University Hospital, but is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be produced are everything from protons to highly charged xenon ions. There is several extraction points from the cyclotron, which of these that are open can be controlled from the control room. The experiment area for electronics testing, is the the \emph{blue hall}, here there are two user areas, one used for protons, and one used for neutrons and heavier ions, see figure \ref{Blue_hall}.
 
 \begin{figure}[!htbp]
   \centering
@@ -1129,9 +1130,8 @@ It is manly used for proton therapy of cancer patient by Uppsala University Hosp
 \end{figure}
 
 \subsection{Beam setup procedure}
-At TSL we didn't have to get a beam characterization as we did at \ac{OCL}. In the Blue hall there is a permanently setup with detectors and a well defined beam line. We only needed to place our test equipment in the blue hall at a given beam point, and start the test. The center of the beam was found by lasers places in looked positions around the hall, one for horizontal direction and one for vertical direction. The head of the laser was movable, so we could point the laser beams towards our test board. A computer which was remotely controlled through network connection was placed in the hall.
-This computer was used as a connection point to our test boards. We sat in a room called counting room, where we were able to switch the beam on and off as we desired. There were also a machine in the counting room, which was connected to detectors in the blue hall telling us the fluence (number of protons per $\centi\meter²$ in total) of the beam. The fluence can be used to calculate the dose. The energy of the 
-proton beam we had was 180 MeV.
+At TSL we didn't have to get a beam characterization as we did at \ac{OCL}. In the Blue hall there is a permanently setup with detectors and a well defined beam line. We only needed to place our test equipment in the blue hall at a given extraction point, and start the test. The center of the beam was found by lasers places in looked positions around the hall, one for horizontal direction and one for vertical direction. The head of the laser was movable, so we could point the laser beams towards our test board. A computer which was remotely controlled through network connection was placed in the hall.
+This computer was used as a connection point to our test boards. We sat in a room called \emph{countingroom}, where we were able to switch the beam on and off as we desired. There were also a machine in the countingroom, which was connected to detectors in the blue hall telling us the fluence (number of protons per $\centi\meter²$ in total) of the beam. The fluence can be used to calculate the dose. The energy of the proton beam we got was 180 MeV.
 
 \begin{figure}[!htbp]
   \centering
@@ -1141,12 +1141,14 @@ proton beam we had was 180 MeV.
 \end{figure}
 
 \subsection{What was tested at \ac{TSL}}
-The main thing that was tested was the SF2 SoC FPGA, we also tested some optical receiver and a detector data link used to send data out of the RCU2.
+A week before we arrived at TSL, we got the first two prototypes of the RCU2. That means that we had a limited time to make test code for all of the different parts of the board. 
+
+The focus of the visit to TSL was the SF2 SoC FPGA, but we also tested a optical receiver and a detector data link used to send data out of the RCU2.
 We brought with us two RCU2s and a total of 7 starter-kits, where 3 of these was with a smaller package, M2S050-FG484, and the rest was engineering samples versions of M2S050-FG896, which is the one used on RCU2.
-For the test discussed in section \ref{SF2_section} we only used the SF2 starter-kits, since it was only internal test. Two of the starter-kits with the smaller package was tested M2S050-FG484, and one with engineering sample M2S050ES-T-FG896. The RCU2 boards was also irradiation tested, but then other stuff like SERDES (DDL), trigger, clock and data recovery (CDR) and PLL was tested, which will not be discussed throughly in this work. Current was measured on both the SF2 starter-kits and RCU2 boards when they were irradiated to check for latchups.
+For the test discussed in section \ref{SF2_section}, we only used the SF2 starter-kits to test, since the test only involves internal parts of the SF2 SoC FPGA. Two of the starter-kits with the smaller package was tested M2S050-FG484, and one with engineering sample M2S050ES-T-FG896. When the RCU2 cards was irradiation, things like SERDES (DDL), trigger, clock and data recovery (CDR) and PLL was tested, which will not be discussed throughly in this work. Current was measured on both the SF2 starter-kits and RCU2 boards when they were irradiated to check for latchups.
 
 
-\chapter{Calculations and Results from Beam Test}
+\chapter{Calculations and Results from Radiation Tests}
 \emph{This chapter will explain how the collected data after a radiation test at \ac{OCL} was used to calculate flux and dose.
 And results from both irradiation tests at \ac{OCL} and \ac{TSL} will be presented.}
 
@@ -1690,10 +1692,12 @@ For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals wer
 \newpage
 
 \subsection{Test results SF2}
-In this subsection the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts which where tested will be presented for them self, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off some times during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup. We did a repower of the board, and the current went back to a normal level, so we continued the test until a dose of 45 kRad when the current increased one more time, but this time it was permanently, even a week after radiation, the current was still high, so the chip was destroyed.
+In this subsection the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts which where tested will be presented for them self, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off some times during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup. We did a re-power of the board, and the current went back to a normal level, so we continued the test until a dose of 45 kRad when the current increased one more time, but this time it was permanently, even a week after radiation, the current was still high.
+
+We had some problems with the \acf{MSS}, which stopped working in periods. What we had to is to restart the MSS, but then we had a short period of lost data, this can be seen as fall in the \ac{SEU} and cycle counter and small fall in current \ref{SRAM_test1}. This was mostly discovered fast, and the MSS was restarted.
 
 \subsubsection{SRAM}
-
+The purpose of the SRAM test is to see how reliable the SRAM memory is. In figure \ref{SRAM_test1} you can see current vs dose for the internal Large SRAM and the internal micro SRAM. 
 \begin{figure}[!htbp]
 \centering
   \begin{subfigure}{.49\textwidth}
@@ -1726,6 +1730,7 @@ In this subsection the results from radiation test on the SF2 M2S050ES chip will
   \label{USRAM_test2}
   \end{subfigure}
  \caption{Large SRAM and micro SRAM test results after shutdown}
+ \label{SRAM_test1}
 \end{figure}
 
 \subsubsection{Logic element}
