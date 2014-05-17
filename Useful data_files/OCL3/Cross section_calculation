@@ -1,0 +1,4 @@
+	USRAM	LSRAM	Tid	fluence		dose
+start	28	1132	2160	5.0026e-10	17.2
+stop	42	1645	3047	6.994E-10	24.0
+tot	70	2453	4806	1.11e-11	37.9	

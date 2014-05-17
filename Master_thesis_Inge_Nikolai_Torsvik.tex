@@ -59,7 +59,7 @@
 
 \usepackage{hyperref}
 
-\begin{document}
+ \begin{document}
 
 %Forside
 \thispagestyle{empty}
@@ -1155,7 +1155,7 @@ And results from both irradiation tests at \ac{OCL} and \ac{TSL} will be present
 After a irradiation test at \ac{OCL}, the collected data consist of the exposed time, scintillator counts, current consumption and output data of the \ac{DUT}.
 From the calibration before radiation test, we got the relation between scintillator counts and \ac{SEU} on the SRAM detector. From earlier tests with the SRAM detector the cross section for a incoming proton to induce a \ac{SEU} is known. These data is used to calculate our way to the received dose for each of the different \ac{IC}. The next section will explain the calculation process.
 
-% \ac{TSL} is a more facility which sells beam time for a living. So all data after a radiation was given to us, and we didn't need to do any beam monitoring ourself. We only needed to mount the test board that we wanted to test in test spot, and all data like fluence and dose where received from the facility. At \ac{OCL} however, we had to do the hole monitor process and calculate everything ourself, and required therefore much more time before and after radiation. The next sections will explain the calculation process after radiation at \ac{OCL}.
+% \ac{TSL} is a facility which sells beam time for a living. So all data after a radiation was given to us, and we didn't need to do any beam monitoring ourself. We only needed to mount the test board that we wanted to test in test spot, and all data like fluence and dose where received from the facility. At \ac{OCL} however, we had to do the hole monitor process and calculate everything ourself, and required therefore much more time before and after radiation. The next sections will explain the calculation process after radiation at \ac{OCL}.
 
 \section{Calculation of dose}
 Two ways to calculate dose will be discussed in this section, that is manually using energy loss and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this section.
@@ -1692,12 +1692,12 @@ For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals wer
 \newpage
 
 \subsection{Test results SF2}
-In this subsection the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts which where tested will be presented for them self, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off some times during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup. We did a re-power of the board, and the current went back to a normal level, so we continued the test until a dose of 45 kRad when the current increased one more time, but this time it was permanently, even a week after radiation, the current was still high.
-
-We had some problems with the \acf{MSS}, which stopped working in periods. What we had to is to restart the MSS, but then we had a short period of lost data, this can be seen as fall in the \ac{SEU} and cycle counter and small fall in current \ref{SRAM_test1}. This was mostly discovered fast, and the MSS was restarted.
-
+In this subsection the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts which where tested will be presented for them self, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off some times during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup. We did a power cycle of the board, and the current went back to a normal level. The test result presented are divided into before and after the power shut down, hereafter called run1 and run2. The shift register design, made for testing of the logical element, see section \ref{logic_Element}, where only run after the power shutdown. After a dose of $\approx$ 8 kRad after the shut down, the current increased again. We tried to another power cycle, but this time it was permanently. The total dose after radiation was $\approx$ 45 kRad.
+\FloatBarrier
 \subsubsection{SRAM}
-The purpose of the SRAM test is to see how reliable the SRAM memory is. In figure \ref{SRAM_test1} you can see current vs dose for the internal Large SRAM and the internal micro SRAM. 
+The purpose of the SRAM test is to see how reliable the SRAM memory is. In figure \ref{SRAM_test1} and \ref{SRAM_test2} you can Single event upset on large SRAM and micro SRAM versus dose. During the test, we had some problems with the \acf{MSS}, which stopped working in periods.
+This was fixed by restarting the MSS, but then we had a short period of lost data. This can be seen as drops in the \acp{SEU} and cycles counter, and small fall in current, see appendix \ref{radiation_results}.
+
 \begin{figure}[!htbp]
 \centering
   \begin{subfigure}{.49\textwidth}
@@ -1713,6 +1713,7 @@ The purpose of the SRAM test is to see how reliable the SRAM memory is. In figur
   \label{USRAM_test1}
   \end{subfigure}
  \caption{LSRAM and micro SRAM test results before shutdown}
+  \label{SRAM_test1}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -1730,17 +1731,124 @@ The purpose of the SRAM test is to see how reliable the SRAM memory is. In figur
   \label{USRAM_test2}
   \end{subfigure}
  \caption{Large SRAM and micro SRAM test results after shutdown}
- \label{SRAM_test1}
+ \label{SRAM_test2}
 \end{figure}
 
+Slightly after a dose of 35 kRad, we can see a gap where we have no increase in upset on neither of the large SRAM or the micro SRAM. The flux is stable and the cycles counter is not changing as well in that period, see appendix \ref{radiation_results}. This suggest that something is not working in the FPGA. I would think that clock signal is gone, maybe because on of the PLL stop. We got two PLLs errors in that period, supporting that theory, see \ref{PLL_error1}
+
+We can see that for run1, the SEUs on the large SRAM is increasing quite linear, this means that a cross section can be found. The SEUs on the micro SRAM get a stepwise increase in SEUs, which doesn't look so linear. There is much fewer memory bits in the micro SRAM compared to the large SRAM, in total there are NUMBER times more large SRAM bits than micro SRAM.
+To get a more precise calculation on cross section for the micro SRAM, we should have runned with a much higher intensity.
+
+To get as much precise calculation as possible for the cross section, we should check over the period which is most linear, and without any kinds of error, since we can't be 100\% sure what happens when an error occurs.
+
+Therefore the cross section for the large SRAM are being calculated from the period in between 17 and 24 kRad on run1. The corresponding fluence for the start and endpoint is respectively $5.0026E-10$ and $6.994E-10$, and the total \acp{SEU} for that period are 513. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us,
+
+% After the shutdown we gets errors with a more rapid speed, and it is therefore harder to take use of the collected data.
+
+\begin{equation}
+ CS_{LSRAM} = \frac{SEUs}{FluenceDUT} = \frac{513}{1.99e{10}}=0,000000026= 2.6*10-8 
+ \label{Cross_section}
+\end{equation}
+
+Cross section for micro SRAM in the same period, is 
+
+\begin{equation}
+ CS_{uSRAM} = \frac{SEUs}{FluenceDUT} = \frac{14}{1.99e{10}}=0,000000026= 7.0*10-10 
+\end{equation}
+
+If we look at cross section per bit we get:
+
+\begin{equation}
+ CS_{LSRAM} = \frac{2.6*10-8}{} =
+\end{equation}
+
+\begin{equation}
+ CS_{uSRAM} = \frac{7.0*10-10}{} =
+\end{equation}
+
+% Cross section for the whole period before the latchup was also calculated for reference. 
+% 
+% \begin{equation}
+%  CS_{tot} = \frac{2453}{1.11e-{11}}=0,000000022 = 2.2*10-8
+% \end{equation}
+\FloatBarrier
 \subsubsection{Logic element}
+For run1 we didn't manage to turn on the shift register design, because of some errors in the test code. This was solved before run2.
 
+On run two, we ran 4 shift register chains with shift register length of 2000, with 4 inverters in between each register and 4 windowed shift register. The frequency used was 40 Mhz. In table \ref{SR_table}, the results from run2 can be seen.
+
+We detected 5 shift register errors in total over a dose of 8 kRad. That was something like we would expected, but we couldn't distinguish between upset or transient on the tracks, since we only got to run on one frequency. And then the whole point with this test didn't get tested. But we got at least a feeling on how often we would see an error on the shift register with the settings used.
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}\hline
+SEU in the shift registers & Exposed time[s] & Dose[kRad] \\ \hline \hline
+1 & 320 & 2,95  \\ \hline
+2 & 357 &  3,53\\ \hline
+3 & 358 & 3,54 \\ \hline
+4 & 417 & 4,46  \\ \hline
+5 & 620 & 7,81  \\ \hline
+\textsuperscript{*} & 620 & 7,28  \\ \hline
+\multicolumn{3}{l}{\textsuperscript{*}\footnotesize{Lots of shift register errors followed after this}}
+\end{tabular}
+\caption{Shift register errors in run2}
+\label{SR_table}
+\end{table}
+
+\FloatBarrier
 \subsubsection{PLL and Latchup}
+Graphs of current versus dose can be found in appendix \ref{radiation_results}. We received much less latchups then expected. From Microsemi, we have heard roomers of a problem with micro latchup in the Cortex SRAM memory, which would increase current with a 50-100 mA, but wasn't destructive. We didn't detect any micro latchups during our test, but we got two rather big latchup, which doubled the current.
 
+The first lock loss on the PLL occurred quite early in our test, already after a dose of 0,7 kRad. We got a total of 23 PLL lock loss.
+
+\begin{table}[!htbp]
+\parbox{.45\linewidth}{
+ \centering
+\begin{tabular}{|l|l|l|}\hline
+PLL lock loss & Exposed time[s] & Dose[kRad] \\ \hline \hline
+1 & 88 & 0,7  \\ \hline
+2 & 166 & 1,3 \\ \hline
+3 & 304 & 2,3 \\ \hline
+4 & 473 & 3,6  \\ \hline
+5 & 523 & 4,0  \\ \hline
+6 & 663 & 5,0 \\ \hline
+7 & 2363 & 18,7 \\ \hline
+8 & 2440 & 19,3  \\ \hline
+9 & 2720 & 21,5  \\ \hline
+10 & 2938 & 23,1 \\ \hline
+11 & 2938 & 23,1 \\ \hline
+12 & 3306 & 26,0  \\ \hline
+13 & 3600 & 28,4  \\ \hline
+14 & 3633 & 28,6 \\ \hline
+15 & 4125 & 32,6 \\ \hline
+16 & 4575 & 36,1  \\ \hline
+17 & 4546 & 36,1  \\ \hline
+18 & 4624 & 36,5 \\ \hline
+\end{tabular}
+\caption{Time and dose for the PLL errors run1}
+\label{PLL_error1}
+}
+\hfill
+\parbox{.45\linewidth}{
+ \centering
+\begin{tabular}{|l|l|l|}\hline
+PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
+1 & 301 & 2,68  \\ \hline
+2 & 372 &  3,76\\ \hline
+3 & 541 & 5,50 \\ \hline
+4 & 576 & 7,08  \\ \hline
+5 & 589 & 7,28  \\ \hline
+\end{tabular}
+\caption{Time and dose for the PLL errors run2}
+\label{PLL_error2}
+}
+\end{table}
+\FloatBarrier
 \subsubsection{Discussion on the results}
 
+\FloatBarrier
 \section{Results from TSL}
-
+\FloatBarrier
 \chapter{Conclusion}
 
 
@@ -1799,6 +1907,7 @@ The purpose of the SRAM test is to see how reliable the SRAM memory is. In figur
 \end{table}%
 
 \section{Radiation results}
+\label{radiation_results}
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{figures/flux_vs_time_1}

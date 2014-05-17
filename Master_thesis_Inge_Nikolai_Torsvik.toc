@@ -89,11 +89,11 @@
 \contentsline {subsubsection}{Discussion of the result}{65}{section*.114}
 \contentsline {subsection}{\numberline {6.2.3}Test results SF2}{66}{subsection.6.2.3}
 \contentsline {subsubsection}{SRAM}{66}{section*.115}
-\contentsline {subsubsection}{Logic element}{67}{section*.118}
-\contentsline {subsubsection}{PLL and Latchup}{67}{section*.119}
-\contentsline {subsubsection}{Discussion on the results}{67}{section*.120}
-\contentsline {section}{\numberline {6.3}Results from TSL}{67}{section.6.3}
-\contentsline {chapter}{\numberline {7}Conclusion}{68}{chapter.7}
-\contentsline {chapter}{Appendix \numberline {A}Some Appendix}{69}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Beam setup data}{69}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Radiation results}{69}{section.a.A.2}
+\contentsline {subsubsection}{Logic element}{68}{section*.118}
+\contentsline {subsubsection}{PLL and Latchup}{69}{section*.120}
+\contentsline {subsubsection}{Discussion on the results}{69}{section*.122}
+\contentsline {section}{\numberline {6.3}Results from TSL}{69}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusion}{70}{chapter.7}
+\contentsline {chapter}{Appendix \numberline {A}Some Appendix}{71}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Beam setup data}{71}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Radiation results}{71}{section.a.A.2}
