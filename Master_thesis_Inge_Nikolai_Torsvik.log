@@ -1,11 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.25)  17 MAY 2014 19:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.2.11)  18 MAY 2014 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Master_thesis_Inge_Nikolai_Torsvik.tex
 (./Master_thesis_Inge_Nikolai_Torsvik.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
+hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
+ czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
+n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
+reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
+ sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
+n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
+speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
+lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
+celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, lo
+aded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -134,30 +144,28 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@width=\dimen124
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen125
 \captionmargin@=\dimen126
 \captionwidth=\dimen127
-\caption@tempdima=\dimen128
-\caption@indent=\dimen129
-\caption@parindent=\dimen130
-\caption@hangindent=\dimen131
+\caption@indent=\dimen128
+\caption@parindent=\dimen129
+\caption@hangindent=\dimen130
 )
 \c@ContinuedFloat=\count102
 Package caption Info: picinpar package is loaded.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count103
 \c@subtable=\count104
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen132
-\WF@size=\dimen133
+\wrapoverhang=\dimen131
+\WF@size=\dimen132
 \c@WF@wrappedlines=\count105
 \WF@box=\box39
 \WF@everypar=\toks23
@@ -167,7 +175,7 @@ Package: wrapfig 2003/01/31  v 3.6
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@KVtest=\count106
 \sf@farskip=\skip43
-\sf@captopadj=\dimen134
+\sf@captopadj=\dimen133
 \sf@capskip=\skip44
 \sf@nearskip=\skip45
 \sf@top=\skip46
@@ -178,7 +186,7 @@ Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks24
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen135
+\bigstrutjot=\dimen134
 )
 (/usr/share/texlive/texmf-dist/tex/latex/SIunits/SIunits.sty
 Package: SIunits 2007/12/02 v1.36 Support for the International System of units
@@ -193,36 +201,36 @@ Package: amstext 2000/06/29 v2.01
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks25
-\ex@=\dimen136
+\ex@=\dimen135
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/SIunits/SIunits.cfg))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen137
+\pmbraise@=\dimen136
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count107
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count108
 \leftroot@=\count109
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count110
 \DOTSCASE@=\count111
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box40
 \strutbox@=\box41
-\big@size=\dimen138
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count112
 \c@MaxMatrixCols=\count113
 \dotsspace@=\muskip10
@@ -233,23 +241,23 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \column@=\count117
 \maxfields@=\count118
 \andhelp@=\toks27
-\eqnshift@=\dimen139
-\alignsep@=\dimen140
-\tagshift@=\dimen141
-\tagwidth@=\dimen142
-\totwidth@=\dimen143
-\lineht@=\dimen144
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
 \@envbody=\toks28
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks29
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen145
-\extrarowheight=\dimen146
+\col@sep=\dimen144
+\extrarowheight=\dimen145
 \NC@list=\toks30
 \extratabsurround=\skip52
 \backup@length=\skip53
@@ -258,8 +266,8 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count119
 \calc@Bcount=\count120
-\calc@Adimen=\dimen147
-\calc@Bdimen=\dimen148
+\calc@Adimen=\dimen146
+\calc@Bdimen=\dimen147
 \calc@Askip=\skip54
 \calc@Bskip=\skip55
 LaTeX Info: Redefining \setlength on input line 76.
@@ -269,11 +277,11 @@ LaTeX Info: Redefining \addtolength on input line 77.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
-\TX@col@width=\dimen149
-\TX@old@table=\dimen150
-\TX@old@col=\dimen151
-\TX@target=\dimen152
-\TX@delta=\dimen153
+\TX@col@width=\dimen148
+\TX@old@table=\dimen149
+\TX@old@col=\dimen150
+\TX@target=\dimen151
+\TX@delta=\dimen152
 \TX@cols=\count122
 \TX@ftn=\toks31
 )
@@ -300,29 +308,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box43
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
-Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count124
-\l_MT_multwidth_dim=\dimen154
+\l_MT_multwidth_dim=\dimen153
 \origjot=\skip57
-\l_MT_shortvdotswithinadjustabove_dim=\dimen155
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen156
-\l_MT_above_intertext_sep=\dimen157
-\l_MT_below_intertext_sep=\dimen158
-\l_MT_above_shortintertext_sep=\dimen159
-\l_MT_below_shortintertext_sep=\dimen160
+\l_MT_shortvdotswithinadjustabove_dim=\dimen154
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen155
+\l_MT_above_intertext_dim=\dimen156
+\l_MT_below_intertext_dim=\dimen157
+\l_MT_above_shortintertext_dim=\dimen158
+\l_MT_below_shortintertext_dim=\dimen159
 )
 (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box44
 )
 (/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.sty
-Package: standalone 2012/09/15 v1.1b Package to include TeX sub-files with prea
+Package: standalone 2012/05/20 v1.1a Package to include TeX sub-files with prea
 mbles
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -330,17 +336,17 @@ Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks36
 \XKV@tempa@toks=\toks37
 \XKV@depth=\count125
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/currfile/currfile.sty
-Package: currfile 2013/02/01 v0.7b Provides the file path elements of the curre
-nt input file
+Package: currfile 2012/05/15 v0.7 Provides the file path elements of the curren
+t input file
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
@@ -380,19 +386,19 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box45
 )
-\tc@llx=\dimen161
-\tc@lly=\dimen162
-\tc@urx=\dimen163
-\tc@ury=\dimen164
+\tc@llx=\dimen160
+\tc@lly=\dimen161
+\tc@urx=\dimen162
+\tc@ury=\dimen163
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen165
-\adjbox@Height=\dimen166
-\adjbox@Depth=\dimen167
-\adjbox@Totalheight=\dimen168
+\adjbox@Width=\dimen164
+\adjbox@Height=\dimen165
+\adjbox@Depth=\dimen166
+\adjbox@Totalheight=\dimen167
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
@@ -402,8 +408,8 @@ Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box46
 \sift@deathcycles=\count128
-\@vwid@loff=\dimen169
-\@vwid@roff=\dimen170
+\@vwid@loff=\dimen168
+\@vwid@roff=\dimen169
 ))
 \gincltex@box=\box47
 )
@@ -413,23 +419,23 @@ Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen171
-\lightrulewidth=\dimen172
-\cmidrulewidth=\dimen173
-\belowrulesep=\dimen174
-\belowbottomsep=\dimen175
-\aboverulesep=\dimen176
-\abovetopsep=\dimen177
-\cmidrulesep=\dimen178
-\cmidrulekern=\dimen179
-\defaultaddspace=\dimen180
+\heavyrulewidth=\dimen170
+\lightrulewidth=\dimen171
+\cmidrulewidth=\dimen172
+\belowrulesep=\dimen173
+\belowbottomsep=\dimen174
+\aboverulesep=\dimen175
+\abovetopsep=\dimen176
+\cmidrulesep=\dimen177
+\cmidrulekern=\dimen178
+\defaultaddspace=\dimen179
 \@cmidla=\count129
 \@cmidlb=\count130
-\@aboverulesep=\dimen181
-\@belowrulesep=\dimen182
+\@aboverulesep=\dimen180
+\@belowrulesep=\dimen181
 \@thisruleclass=\count131
 \@lastruleclass=\count132
-\@thisrulewidth=\dimen183
+\@thisrulewidth=\dimen182
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
@@ -450,26 +456,18 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \FV@OutFile=\write3
 )
 (/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
-Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
+Package: acronym 2010/09/08 v1.36 Support for acronyms (Tobias Oetiker)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
 Package: suffix 2006/07/15 1.5 Variant command support
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\@xs@message=\write4
-\integerpart=\count136
-\decimalpart=\count137
-)
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks38
 )
 (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count138
-\c@@ppsavesec=\count139
-\c@@ppsaveapp=\count140
+\c@@pps=\count136
+\c@@ppsavesec=\count137
+\c@@ppsaveapp=\count138
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
@@ -478,7 +476,7 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@footins=\box50
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
@@ -518,59 +516,55 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
-\@linkdim=\dimen184
-\Hy@linkcounter=\count141
-\Hy@pagecounter=\count142
+\@linkdim=\dimen183
+\Hy@linkcounter=\count139
+\Hy@pagecounter=\count140
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count143
+\Hy@SavedSpaceFactor=\count141
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count144
+Package hyperref Info: Bookmarks ON on input line 4300.
+\c@Hy@tempcnt=\count142
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen185
-\Fld@menulength=\count145
-\Field@Width=\dimen186
-\Fld@charsize=\dimen187
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count146
-\c@Item=\count147
-\c@Hfootnote=\count148
+LaTeX Info: Redefining \url on input line 4653.
+\Fld@menulength=\count143
+\Field@Width=\dimen184
+\Fld@charsize=\dimen185
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
+\Hy@abspage=\count144
+\c@Item=\count145
+\c@Hfootnote=\count146
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count149
-\c@bookmark@seq@number=\count150
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
+\Fld@listcount=\count147
+\c@bookmark@seq@number=\count148
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -639,16 +633,16 @@ LaTeX Font Info:    ... okay on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
-\scratchdimen=\dimen188
+\scratchcounter=\count149
+\scratchdimen=\dimen186
 \scratchbox=\box51
-\nofMPsegments=\count152
-\nofMParguments=\count153
+\nofMPsegments=\count150
+\nofMParguments=\count151
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count154
-\MPscratchDim=\dimen189
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
+\MPscratchCnt=\count152
+\MPscratchDim=\dimen187
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
 \everyMPtoPDFconversion=\toks41
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -687,12 +681,12 @@ and I'll forget about whatever was undefined.
 \AtBeginShipoutBox=\box52
 Package hyperref Info: Link coloring OFF on input line 62.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count157
+\c@section@level=\count155
 )
 LaTeX Info: Redefining \ref on input line 62.
 LaTeX Info: Redefining \pageref on input line 62.
@@ -700,11 +694,11 @@ LaTeX Info: Redefining \nameref on input line 62.
 
 (./Master_thesis_Inge_Nikolai_Torsvik.out)
 (./Master_thesis_Inge_Nikolai_Torsvik.out)
-\@outlinefile=\write5
-\openout5 = `Master_thesis_Inge_Nikolai_Torsvik.out'.
+\@outlinefile=\write4
+\openout4 = `Master_thesis_Inge_Nikolai_Torsvik.out'.
 
 
-<figures/uglo.png, id=285, 71.14981pt x 71.14981pt>
+<figures/uglo.png, id=293, 71.14981pt x 71.14981pt>
 File: figures/uglo.png Graphic file (type png)
  <use figures/uglo.png>
 Package pdftex.def Info: figures/uglo.png used on input line 79.
@@ -723,8 +717,8 @@ although it is yet undefined on input line 58.
 Package acronym Info: Label `acro:TSL' newly defined as it shall be overridden
 although it is yet undefined on input line 64.
  [6])
-\tf@toc=\write6
-\openout6 = `Master_thesis_Inge_Nikolai_Torsvik.toc'.
+\tf@toc=\write5
+\openout5 = `Master_thesis_Inge_Nikolai_Torsvik.toc'.
 
  [7]
 \openout2 = `acronyms.aux'.
@@ -771,14 +765,14 @@ Chapter 2.
 Package acronym Info: Label `acro:CERN' newly defined as it shall be overridden
 
 although it is yet undefined on input line 148.
-<figures/CERN_accelerators.jpg, id=506, 511.9125pt x 677.02937pt>
+<figures/CERN_accelerators.jpg, id=516, 511.9125pt x 677.02937pt>
 File: figures/CERN_accelerators.jpg Graphic file (type jpg)
 
 <use figures/CERN_accelerators.jpg>
 Package pdftex.def Info: figures/CERN_accelerators.jpg used on input line 164.
 (pdftex.def)             Requested size: 277.41176pt x 366.89207pt.
 
-<figures/ALICE_layout.jpg, id=509, 772.8875pt x 407.5225pt>
+<figures/ALICE_layout.jpg, id=519, 772.8875pt x 407.5225pt>
 File: figures/ALICE_layout.jpg Graphic file (type jpg)
 
 <use figures/ALICE_layout.jpg>
@@ -787,7 +781,7 @@ Package pdftex.def Info: figures/ALICE_layout.jpg used on input line 171.
  [4
 
 ] [5 <./figures/CERN_accelerators.jpg> <./figures/ALICE_layout.jpg>]
-<figures/TPC_layout.png, id=534, 847.66687pt x 378.66469pt>
+<figures/TPC_layout.png, id=544, 847.66687pt x 378.66469pt>
 File: figures/TPC_layout.png Graphic file (type png)
 
 <use figures/TPC_layout.png>
@@ -798,7 +792,7 @@ although it is yet undefined on input line 198.
 Package acronym Info: Label `acro:FEE' newly defined as it shall be overridden
 although it is yet undefined on input line 198.
 
-<figures/TPC_Sections.png, id=542, 758.835pt x 615.0478pt>
+<figures/TPC_Sections.png, id=552, 758.835pt x 615.0478pt>
 File: figures/TPC_Sections.png Graphic file (type png)
 
 <use figures/TPC_Sections.png>
@@ -807,7 +801,7 @@ Package pdftex.def Info: figures/TPC_Sections.png used on input line 202.
 Package acronym Info: Label `acro:ADC' newly defined as it shall be overridden
 although it is yet undefined on input line 209.
  [6 <./figures/TPC_layout.png>]
-<figures/FEC_blockdiagram.png, id=562, 773.13844pt x 375.65344pt>
+<figures/FEC_blockdiagram.png, id=572, 773.13844pt x 375.65344pt>
 File: figures/FEC_blockdiagram.png Graphic file (type png)
 
 <use figures/FEC_blockdiagram.png>
@@ -823,7 +817,7 @@ although it is yet undefined on input line 234.
 Package acronym Info: Label `acro:SRAM' newly defined as it shall be overridden
 
 although it is yet undefined on input line 241.
- <figures/RCU.png, id=603, 478.78876pt x 583.42969pt>
+ <figures/RCU.png, id=613, 478.78876pt x 583.42969pt>
 File: figures/RCU.png Graphic file (type png)
 
 <use figures/RCU.png>
@@ -847,7 +841,7 @@ Overfull \hbox (17.00053pt too wide) in paragraph at lines 352--353
 er is the $[]$,
  []
 
-<figures/energy_loss.png, id=670, 516.42938pt x 573.64313pt>
+<figures/energy_loss.png, id=680, 516.42938pt x 573.64313pt>
 File: figures/energy_loss.png Graphic file (type png)
 
 <use figures/energy_loss.png>
@@ -861,21 +855,21 @@ Package acronym Info: Label `acro:CMOS' newly defined as it shall be overridden
 
 although it is yet undefined on input line 452.
 
-<figures/CMOS_inverter.png, id=710, 931.22906pt x 328.22626pt>
+<figures/CMOS_inverter.png, id=721, 931.22906pt x 328.22626pt>
 File: figures/CMOS_inverter.png Graphic file (type png)
 
 <use figures/CMOS_inverter.png>
 Package pdftex.def Info: figures/CMOS_inverter.png used on input line 466.
 (pdftex.def)             Requested size: 426.79135pt x 150.42998pt.
  [16] [17 <./figures/CMOS_inverter.png>]
-<figures/SRAM_Cell.png, id=741, 264.99pt x 166.37157pt>
+<figures/SRAM_Cell.png, id=751, 264.99pt x 166.37157pt>
 File: figures/SRAM_Cell.png Graphic file (type png)
 
 <use figures/SRAM_Cell.png>
 Package pdftex.def Info: figures/SRAM_Cell.png used on input line 496.
 (pdftex.def)             Requested size: 320.0935pt x 200.98271pt.
 
-<figures/charge_generation.png, id=742, 1017.8025pt x 392.96812pt>
+<figures/charge_generation.png, id=752, 1017.8025pt x 392.96812pt>
 File: figures/charge_generation.png Graphic file (type png)
 
 <use figures/charge_generation.png>
@@ -884,7 +878,7 @@ Package pdftex.def Info: figures/charge_generation.png used on input line 503.
 Package acronym Info: Label `acro:TID' newly defined as it shall be overridden
 although it is yet undefined on input line 517.
  [18 <./figures/SRAM_Cell.png> <./figures/charge_generation.png>]
-<figures/TID_in_MOS.png, id=758, 798.73407pt x 366.61969pt>
+<figures/TID_in_MOS.png, id=768, 798.73407pt x 366.61969pt>
 File: figures/TID_in_MOS.png Graphic file (type png)
 
 <use figures/TID_in_MOS.png>
@@ -894,21 +888,21 @@ Package pdftex.def Info: figures/TID_in_MOS.png used on input line 541.
 Chapter 4.
 [21
 
-] <figures/TPS51200_sch.png, id=814, 855.94781pt x 310.15875pt>
+] <figures/TPS51200_sch.png, id=824, 855.94781pt x 310.15875pt>
 File: figures/TPS51200_sch.png Graphic file (type png)
 
 <use figures/TPS51200_sch.png>
 Package pdftex.def Info: figures/TPS51200_sch.png used on input line 604.
 (pdftex.def)             Requested size: 426.79135pt x 154.64832pt.
  [22]
-<figures/MIC_sch.png, id=832, 700.86844pt x 276.28218pt>
+<figures/MIC_sch.png, id=842, 700.86844pt x 276.28218pt>
 File: figures/MIC_sch.png Graphic file (type png)
 
 <use figures/MIC_sch.png>
 Package pdftex.def Info: figures/MIC_sch.png used on input line 631.
 (pdftex.def)             Requested size: 426.79135pt x 168.24521pt.
  [23 <./figures/TPS51200_sch.png>]
-<figures/SN74AVCB164245_sch.png, id=845, 604.50844pt x 533.74406pt>
+<figures/SN74AVCB164245_sch.png, id=855, 604.50844pt x 533.74406pt>
 File: figures/SN74AVCB164245_sch.png Graphic file (type png)
 
 <use figures/SN74AVCB164245_sch.png>
@@ -916,14 +910,14 @@ Package pdftex.def Info: figures/SN74AVCB164245_sch.png used on input line 653.
 
 (pdftex.def)             Requested size: 426.79135pt x 376.82713pt.
  [24 <./figures/MIC_sch.png>] [25 <./figures/SN74AVCB164245_sch.png>]
-<figures/SN74AVC2T245_sch.png, id=857, 694.84593pt x 509.65407pt>
+<figures/SN74AVC2T245_sch.png, id=867, 694.84593pt x 509.65407pt>
 File: figures/SN74AVC2T245_sch.png Graphic file (type png)
 
 <use figures/SN74AVC2T245_sch.png>
 Package pdftex.def Info: figures/SN74AVC2T245_sch.png used on input line 672.
 (pdftex.def)             Requested size: 426.79135pt x 313.03488pt.
 
-<figures/QS3VH257_sch.png, id=860, 737.00343pt x 437.38406pt>
+<figures/QS3VH257_sch.png, id=870, 737.00343pt x 437.38406pt>
 File: figures/QS3VH257_sch.png Graphic file (type png)
 
 <use figures/QS3VH257_sch.png>
@@ -934,7 +928,7 @@ Package acronym Info: Label `acro:LVPECL' newly defined as it shall be overridd
 en
 although it is yet undefined on input line 694.
 
-<figures/SY89831U_sch.png, id=871, 730.22812pt x 564.60938pt>
+<figures/SY89831U_sch.png, id=881, 730.22812pt x 564.60938pt>
 File: figures/SY89831U_sch.png Graphic file (type png)
 
 <use figures/SY89831U_sch.png>
@@ -947,49 +941,49 @@ although it is yet undefined on input line 716.
 Package acronym Info: Label `acro:CML' newly defined as it shall be overridden
 although it is yet undefined on input line 717.
  [28 <./figures/SY89831U_sch.png>]
-<figures/MAX3748_sch.png, id=890, 712.16063pt x 304.88907pt>
+<figures/MAX3748_sch.png, id=900, 712.16063pt x 304.88907pt>
 File: figures/MAX3748_sch.png Graphic file (type png)
 
 <use figures/MAX3748_sch.png>
 Package pdftex.def Info: figures/MAX3748_sch.png used on input line 737.
 (pdftex.def)             Requested size: 341.43437pt x 146.17296pt.
 
-<figures/ADN2814_sch.png, id=891, 743.02594pt x 356.83313pt>
+<figures/ADN2814_sch.png, id=901, 743.02594pt x 356.83313pt>
 File: figures/ADN2814_sch.png Graphic file (type png)
 
 <use figures/ADN2814_sch.png>
 Package pdftex.def Info: figures/ADN2814_sch.png used on input line 744.
 (pdftex.def)             Requested size: 341.43437pt x 163.97643pt.
  [29] [30 <./figures/MAX3748_sch.png> <./figures/ADN2814_sch.png>] <figures/INA
-210_sch.png, id=906, 1002.74625pt x 466.74374pt>
+210_sch.png, id=916, 1002.74625pt x 466.74374pt>
 File: figures/INA210_sch.png Graphic file (type png)
 
 <use figures/INA210_sch.png>
 Package pdftex.def Info: figures/INA210_sch.png used on input line 762.
 (pdftex.def)             Requested size: 426.79135pt x 198.65903pt.
 
-<figures/TLV3011_sch.png, id=907, 924.45375pt x 358.33875pt>
+<figures/TLV3011_sch.png, id=917, 924.45375pt x 358.33875pt>
 File: figures/TLV3011_sch.png Graphic file (type png)
 
 <use figures/TLV3011_sch.png>
 Package pdftex.def Info: figures/TLV3011_sch.png used on input line 772.
 (pdftex.def)             Requested size: 426.79135pt x 165.4338pt.
  [31 <./figures/INA210_sch.png>]
-<figures/PCB_board1.png, id=916, 592.46344pt x 407.27156pt>
+<figures/PCB_board1.png, id=926, 592.46344pt x 407.27156pt>
 File: figures/PCB_board1.png Graphic file (type png)
 
 <use figures/PCB_board1.png>
 Package pdftex.def Info: figures/PCB_board1.png used on input line 784.
 (pdftex.def)             Requested size: 320.0935pt x 220.04765pt.
 
-<figures/PCB_board2.png, id=917, 715.92468pt x 407.27156pt>
+<figures/PCB_board2.png, id=927, 715.92468pt x 407.27156pt>
 File: figures/PCB_board2.png Graphic file (type png)
 
 <use figures/PCB_board2.png>
 Package pdftex.def Info: figures/PCB_board2.png used on input line 791.
 (pdftex.def)             Requested size: 320.0935pt x 182.09596pt.
 
-<figures/PCB_board3.png, id=918, 480.29437pt x 407.27156pt>
+<figures/PCB_board3.png, id=928, 480.29437pt x 407.27156pt>
 File: figures/PCB_board3.png Graphic file (type png)
 
 <use figures/PCB_board3.png>
@@ -997,7 +991,7 @@ Package pdftex.def Info: figures/PCB_board3.png used on input line 798.
 (pdftex.def)             Requested size: 320.0935pt x 271.42876pt.
  [32 <./figures/TLV3011_sch.png> <./figures/PCB_board1.png>] [33 <./figures/PCB
 _board2.png> <./figures/PCB_board3.png>]
-<figures/labVIEW.jpg, id=935, 800.9925pt x 446.41782pt>
+<figures/labVIEW.jpg, id=946, 800.9925pt x 446.41782pt>
 File: figures/labVIEW.jpg Graphic file (type jpg)
 
 <use figures/labVIEW.jpg>
@@ -1006,7 +1000,7 @@ Package pdftex.def Info: figures/labVIEW.jpg used on input line 814.
 Package acronym Info: Label `acro:MSS' newly defined as it shall be overridden
 although it is yet undefined on input line 822.
  [34 <./figures/labVIEW.jpg>]
-<figures/SRAM_flow_chart.png, id=955, 290.64584pt x 249.21104pt>
+<figures/SRAM_flow_chart.png, id=965, 290.64584pt x 249.21104pt>
 File: figures/SRAM_flow_chart.png Graphic file (type png)
 
 <use figures/SRAM_flow_chart.png>
@@ -1016,7 +1010,7 @@ Package pdftex.def Info: figures/SRAM_flow_chart.png used on input line 847.
 Package acronym Info: Label `acro:WSR' newly defined as it shall be overridden
 although it is yet undefined on input line 873.
  [36 <./figures/SRAM_flow_chart.png>]
-<figures/Shift_register_design.png, id=985, 1446.40375pt x 571.13374pt>
+<figures/Shift_register_design.png, id=995, 1446.40375pt x 571.13374pt>
 File: figures/Shift_register_design.png Graphic file (type png)
 
 <use figures/Shift_register_design.png>
@@ -1024,28 +1018,28 @@ Package pdftex.def Info: figures/Shift_register_design.png used on input line 8
 85.
 (pdftex.def)             Requested size: 426.79135pt x 168.52657pt.
  [37 <./figures/Shift_register_design.png>] [38] [39] <figures/SRAM_labview.png
-, id=1028, 986.18437pt x 610.53094pt>
+, id=1038, 986.18437pt x 610.53094pt>
 File: figures/SRAM_labview.png Graphic file (type png)
 
 <use figures/SRAM_labview.png>
 Package pdftex.def Info: figures/SRAM_labview.png used on input line 946.
 (pdftex.def)             Requested size: 426.79135pt x 264.21869pt.
  [40 <./figures/SRAM_labview.png>]
-<figures/SRAM_flowchart.png, id=1044, 256.70906pt x 567.62062pt>
+<figures/SRAM_flowchart.png, id=1055, 256.70906pt x 567.62062pt>
 File: figures/SRAM_flowchart.png Graphic file (type png)
 
 <use figures/SRAM_flowchart.png>
 Package pdftex.def Info: figures/SRAM_flowchart.png used on input line 961.
 (pdftex.def)             Requested size: 113.81017pt x 227.62451pt.
  [41 <./figures/SRAM_flowchart.png>]
-<figures/XY_front.jpg, id=1056, 3661.68pt x 2746.26pt>
+<figures/XY_front.jpg, id=1066, 3661.68pt x 2746.26pt>
 File: figures/XY_front.jpg Graphic file (type jpg)
 
 <use figures/XY_front.jpg>
 Package pdftex.def Info: figures/XY_front.jpg used on input line 986.
 (pdftex.def)             Requested size: 209.1301pt x 156.80663pt.
 
-<figures/XY_back.jpg, id=1057, 3661.68pt x 2746.26pt>
+<figures/XY_back.jpg, id=1067, 3661.68pt x 2746.26pt>
 File: figures/XY_back.jpg Graphic file (type jpg)
 
 <use figures/XY_back.jpg>
@@ -1055,20 +1049,20 @@ Package pdftex.def Info: figures/XY_back.jpg used on input line 991.
 Chapter 5.
 [43
 
-] <figures/OCL.png, id=1082, 638.385pt x 536.0025pt>
+] <figures/OCL.png, id=1092, 638.385pt x 536.0025pt>
 File: figures/OCL.png Graphic file (type png)
  <use figures/OCL.png>
 Package pdftex.def Info: figures/OCL.png used on input line 1025.
 (pdftex.def)             Requested size: 227.61696pt x 199.1684pt.
 
-<figures/experiment_setup.jpg, id=1083, 395.22656pt x 207.02344pt>
+<figures/experiment_setup.jpg, id=1093, 395.22656pt x 207.02344pt>
 File: figures/experiment_setup.jpg Graphic file (type jpg)
 
 <use figures/experiment_setup.jpg>
 Package pdftex.def Info: figures/experiment_setup.jpg used on input line 1053.
 (pdftex.def)             Requested size: 213.39568pt x 111.77834pt.
 
-<figures/experiment_area.jpg, id=1084, 3661.68pt x 2746.26pt>
+<figures/experiment_area.jpg, id=1094, 3661.68pt x 2746.26pt>
 File: figures/experiment_area.jpg Graphic file (type jpg)
 
 <use figures/experiment_area.jpg>
@@ -1083,14 +1077,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
 []|\OT1/cmr/m/n/12 TPS51200, MIC69302WU, SN74AVCB164245,
  []
 
-[46] [47] <figures/Blue_hall.png, id=1131, 1025.8325pt x 653.44125pt>
+[46] [47] <figures/Blue_hall.png, id=1140, 1025.8325pt x 653.44125pt>
 File: figures/Blue_hall.png Graphic file (type png)
 
 <use figures/Blue_hall.png>
 Package pdftex.def Info: figures/Blue_hall.png used on input line 1127.
 (pdftex.def)             Requested size: 213.39568pt x 135.92055pt.
  [48 <./figures/Blue_hall.png>]
-<figures/TSL_setup.png, id=1140, 2601.72pt x 1943.26pt>
+<figures/TSL_setup.png, id=1149, 2601.72pt x 1943.26pt>
 File: figures/TSL_setup.png Graphic file (type png)
 
 <use figures/TSL_setup.png>
@@ -1101,242 +1095,271 @@ Chapter 6.
 [50
 
 ] [51] [52] [53] [54] [55] [56]
-<figures/Radiation_film.png, id=1266, 411.03563pt x 619.56468pt>
+<figures/Radiation_film.png, id=1275, 411.03563pt x 619.56468pt>
 File: figures/Radiation_film.png Graphic file (type png)
 
 <use figures/Radiation_film.png>
 Package pdftex.def Info: figures/Radiation_film.png used on input line 1383.
 (pdftex.def)             Requested size: 213.39568pt x 321.65552pt.
- [57 <./figures/Radiation_film.png>] [58]
-<figures/current_volt_vs_dose_tps.png, id=1298, 422.32782pt x 316.18124pt>
+ [57 <./figures/Radiation_film.png>]
+<figures/current_volt_vs_dose_tps.png, id=1294, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_tps.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_tps.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_tps.png used on input lin
-e 1436.
+e 1437.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
-
-<figures/current_volt_vs_dose_mic1.png, id=1303, 422.32782pt x 316.18124pt>
+ [58]
+<figures/current_volt_vs_dose_mic1.png, id=1306, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_mic1.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_mic1.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_mic1.png used on input li
-ne 1453.
+ne 1454.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/current_volt_vs_dose_mic2.png, id=1304, 422.32782pt x 316.18124pt>
+<figures/current_volt_vs_dose_mic2.png, id=1307, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_mic2.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_mic2.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_mic2.png used on input li
-ne 1459.
+ne 1460.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
  [59 <./figures/current_volt_vs_dose_tps.png (PNG copy)> <./figures/current_vol
 t_vs_dose_mic1.png (PNG copy)> <./figures/current_volt_vs_dose_mic2.png (PNG co
 py)>]
-<figures/current_vs_dose_4245_1.png, id=1313, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_4245_1.png, id=1317, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_4245_1.png Graphic file (type png)
 
 <use figures/current_vs_dose_4245_1.png>
 Package pdftex.def Info: figures/current_vs_dose_4245_1.png used on input line 
-1477.
+1478.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/current_vs_dose_4245_2.png, id=1314, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_4245_2.png, id=1318, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_4245_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_4245_2.png>
 Package pdftex.def Info: figures/current_vs_dose_4245_2.png used on input line 
-1483.
+1484.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/current_vs_dose_t245_1.png, id=1316, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_t245_1.png, id=1320, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_t245_1.png Graphic file (type png)
 
 <use figures/current_vs_dose_t245_1.png>
 Package pdftex.def Info: figures/current_vs_dose_t245_1.png used on input line 
-1501.
+1502.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/current_vs_dose_t245_2.png, id=1317, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_t245_2.png, id=1321, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_t245_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_t245_2.png>
 Package pdftex.def Info: figures/current_vs_dose_t245_2.png used on input line 
-1507.
+1508.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
  [60 <./figures/current_vs_dose_4245_1.png (PNG copy)> <./figures/current_vs_do
 se_4245_2.png (PNG copy)>]
-<figures/current_vs_dose_q1.png, id=1327, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_q1.png, id=1331, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_q1.png Graphic file (type png)
 
 <use figures/current_vs_dose_q1.png>
-Package pdftex.def Info: figures/current_vs_dose_q1.png used on input line 1524
+Package pdftex.def Info: figures/current_vs_dose_q1.png used on input line 1525
 .
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/current_vs_dose_q2.png, id=1328, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_q2.png, id=1332, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_q2.png Graphic file (type png)
 
 <use figures/current_vs_dose_q2.png>
-Package pdftex.def Info: figures/current_vs_dose_q2.png used on input line 1530
+Package pdftex.def Info: figures/current_vs_dose_q2.png used on input line 1531
 .
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
  [61 <./figures/current_vs_dose_t245_1.png (PNG copy)> <./figures/current_vs_do
 se_t245_2.png (PNG copy)> <./figures/current_vs_dose_q1.png (PNG copy)> <./figu
 res/current_vs_dose_q2.png (PNG copy)>]
-<figures/current_vs_dose_sy1.png, id=1341, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_sy1.png, id=1345, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_sy1.png Graphic file (type png)
 
 <use figures/current_vs_dose_sy1.png>
-Package pdftex.def Info: figures/current_vs_dose_sy1.png used on input line 154
-9.
+Package pdftex.def Info: figures/current_vs_dose_sy1.png used on input line 155
+0.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/current_vs_dose_sy2.png, id=1342, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_sy2.png, id=1346, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_sy2.png Graphic file (type png)
 
 <use figures/current_vs_dose_sy2.png>
 Package pdftex.def Info: figures/current_vs_dose_sy2.png used on input line 155
-5.
+6.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/current_vs_dose_adn.png, id=1347, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_adn.png, id=1351, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_adn.png Graphic file (type png)
 
 <use figures/current_vs_dose_adn.png>
 Package pdftex.def Info: figures/current_vs_dose_adn.png used on input line 157
-1.
+2.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/dataerror_vs_dose_adn.png, id=1348, 422.32782pt x 316.18124pt>
+<figures/dataerror_vs_dose_adn.png, id=1352, 422.32782pt x 316.18124pt>
 File: figures/dataerror_vs_dose_adn.png Graphic file (type png)
 
 <use figures/dataerror_vs_dose_adn.png>
 Package pdftex.def Info: figures/dataerror_vs_dose_adn.png used on input line 1
-580.
+581.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/clockerror_vs_dose_adn.png, id=1349, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_dose_adn.png, id=1353, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_dose_adn.png Graphic file (type png)
 
 <use figures/clockerror_vs_dose_adn.png>
 Package pdftex.def Info: figures/clockerror_vs_dose_adn.png used on input line 
-1586.
+1587.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
  [62 <./figures/current_vs_dose_sy1.png (PNG copy)> <./figures/current_vs_dose_
 sy2.png (PNG copy)> <./figures/current_vs_dose_adn.png (PNG copy)>]
-<figures/current_vs_dose_max.png, id=1358, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_max.png, id=1362, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_max.png Graphic file (type png)
 
 <use figures/current_vs_dose_max.png>
 Package pdftex.def Info: figures/current_vs_dose_max.png used on input line 160
-5.
+6.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/clockerror_vs_dose_max.png, id=1359, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_dose_max.png, id=1363, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_dose_max.png Graphic file (type png)
 
 <use figures/clockerror_vs_dose_max.png>
 Package pdftex.def Info: figures/clockerror_vs_dose_max.png used on input line 
-1611.
+1612.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
  [63 <./figures/dataerror_vs_dose_adn.png (PNG copy)> <./figures/clockerror_vs_
 dose_adn.png (PNG copy)> <./figures/current_vs_dose_max.png (PNG copy)> <./figu
 res/clockerror_vs_dose_max.png (PNG copy)>] [64] [65]
-<figures/lsram_dose_sf2_1.png, id=1391, 422.32782pt x 316.18124pt>
+<figures/lsram_dose_sf2_1.png, id=1396, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_1.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_1.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_1.png used on input line 1705.
+Package pdftex.def Info: figures/lsram_dose_sf2_1.png used on input line 1706.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/usram_dose_sf2_1.png, id=1392, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_1.png, id=1397, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_1.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_1.png>
-Package pdftex.def Info: figures/usram_dose_sf2_1.png used on input line 1711.
+Package pdftex.def Info: figures/usram_dose_sf2_1.png used on input line 1712.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/lsram_dose_sf2_2.png, id=1393, 422.32782pt x 316.18124pt>
+<figures/lsram_dose_sf2_2.png, id=1398, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_2.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_2.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_2.png used on input line 1723.
+Package pdftex.def Info: figures/lsram_dose_sf2_2.png used on input line 1724.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
-<figures/usram_dose_sf2_2.png, id=1394, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_2.png, id=1399, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_2.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_2.png>
-Package pdftex.def Info: figures/usram_dose_sf2_2.png used on input line 1729.
+Package pdftex.def Info: figures/usram_dose_sf2_2.png used on input line 1730.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
  [66 <./figures/lsram_dose_sf2_1.png (PNG copy)> <./figures/usram_dose_sf2_1.pn
 g (PNG copy)>] [67 <./figures/lsram_dose_sf2_2.png (PNG copy)> <./figures/usram
 _dose_sf2_2.png (PNG copy)>] [68]
-Overfull \hbox (54.74588pt too wide) in paragraph at lines 1830--1830
+Overfull \hbox (54.74588pt too wide) in paragraph at lines 1829--1829
  [][] 
  []
 
 
-Overfull \hbox (41.2988pt too wide) in paragraph at lines 1844--1844
+Overfull \hbox (41.2988pt too wide) in paragraph at lines 1843--1843
  [][] 
  []
 
-[69]
+[69] <figures/lsram_dose_sf2_3.png, id=1439, 422.32782pt x 316.18124pt>
+File: figures/lsram_dose_sf2_3.png Graphic file (type png)
+
+<use figures/lsram_dose_sf2_3.png>
+Package pdftex.def Info: figures/lsram_dose_sf2_3.png used on input line 1871.
+(pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
+
+<figures/usram_dose_sf2_3.png, id=1440, 422.32782pt x 316.18124pt>
+File: figures/usram_dose_sf2_3.png Graphic file (type png)
+
+<use figures/usram_dose_sf2_3.png>
+Package pdftex.def Info: figures/usram_dose_sf2_3.png used on input line 1877.
+(pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
+ [70]
+<figures/lsram_dose_sf2_4.png, id=1448, 422.32782pt x 316.18124pt>
+File: figures/lsram_dose_sf2_4.png Graphic file (type png)
+
+<use figures/lsram_dose_sf2_4.png>
+Package pdftex.def Info: figures/lsram_dose_sf2_4.png used on input line 1889.
+(pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
+
+<figures/usram_dose_sf2_4.png, id=1449, 422.32782pt x 316.18124pt>
+File: figures/usram_dose_sf2_4.png Graphic file (type png)
+
+<use figures/usram_dose_sf2_4.png>
+Package pdftex.def Info: figures/usram_dose_sf2_4.png used on input line 1895.
+(pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
+ [71 <./figures/lsram_dose_sf2_3.png (PNG copy)> <./figures/usram_dose_sf2_3.pn
+g (PNG copy)> <./figures/lsram_dose_sf2_4.png (PNG copy)> <./figures/usram_dose
+_sf2_4.png (PNG copy)>]
 Chapter 7.
-[70
+[72
 
 ]
 Appendix A.
-<figures/flux_vs_time_1.png, id=1439, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_1.png, id=1467, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_1.png Graphic file (type png)
 
 <use figures/flux_vs_time_1.png>
-Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 1913.
+Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 1976.
 (pdftex.def)             Requested size: 426.79135pt x 319.53351pt.
 
-<figures/flux_vs_time_2.png, id=1440, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_2.png, id=1468, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_2.png Graphic file (type png)
 
 <use figures/flux_vs_time_2.png>
-Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 1920.
+Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 1983.
 (pdftex.def)             Requested size: 426.79135pt x 319.53351pt.
 
-<figures/flux_all_3.png, id=1441, 422.32782pt x 316.18124pt>
+<figures/flux_all_3.png, id=1469, 422.32782pt x 316.18124pt>
 File: figures/flux_all_3.png Graphic file (type png)
 
 <use figures/flux_all_3.png>
-Package pdftex.def Info: figures/flux_all_3.png used on input line 1927.
+Package pdftex.def Info: figures/flux_all_3.png used on input line 1990.
 (pdftex.def)             Requested size: 426.79135pt x 319.53351pt.
- [71
+ [73
 
-] [72] [73 <./figures/flux_vs_time_1.png (PNG copy)>] [74 <./figures/flux_vs_ti
-me_2.png (PNG copy)>] [75 <./figures/flux_all_3.png (PNG copy)>] (./Master_thes
-is_Inge_Nikolai_Torsvik.bbl [76
+] [74] [75 <./figures/flux_vs_time_1.png (PNG copy)>] [76 <./figures/flux_vs_ti
+me_2.png (PNG copy)>] [77 <./figures/flux_all_3.png (PNG copy)>] (./Master_thes
+is_Inge_Nikolai_Torsvik.bbl [78
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1942.
- [77]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1942.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2005.
+ [79]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2005.
 
 (./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1942.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1942.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2005.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2005.
 
 Package rerunfilecheck Info: File `Master_thesis_Inge_Nikolai_Torsvik.out' has 
 not changed.
-(rerunfilecheck)             Checksum: B040165DDD66B571C07E5C326C617F1D;4979.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1942.
+(rerunfilecheck)             Checksum: C4D723BD69A8C6EFDEEE13186BB837AA;5122.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2005.
  ) 
 Here is how much of TeX's memory you used:
- 12269 strings out of 495028
- 188720 string characters out of 6181497
- 296867 words of memory out of 5000000
- 14802 multiletter control sequences out of 15000+600000
- 13900 words of font info for 49 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 51i,12n,82p,1064b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 11888 strings out of 493493
+ 183027 string characters out of 3143797
+ 294463 words of memory out of 3000000
+ 14511 multiletter control sequences out of 15000+200000
+ 13900 words of font info for 49 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 51i,12n,81p,1064b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
@@ -1355,11 +1378,11 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (86 pages, 34142300 by
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (88 pages, 34163803 by
 tes).
 PDF statistics:
- 1635 PDF objects out of 1728 (max. 8388607)
- 1440 compressed objects within 15 object streams
- 377 named destinations out of 1000 (max. 500000)
- 866 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1667 PDF objects out of 1728 (max. 8388607)
+ 1466 compressed objects within 15 object streams
+ 387 named destinations out of 1000 (max. 500000)
+ 902 words of extra memory for PDF output out of 10000 (max. 10000000)
 

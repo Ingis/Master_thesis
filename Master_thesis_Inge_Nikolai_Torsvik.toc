@@ -91,9 +91,15 @@
 \contentsline {subsubsection}{SRAM}{66}{section*.115}
 \contentsline {subsubsection}{Logic element}{68}{section*.118}
 \contentsline {subsubsection}{PLL and Latchup}{69}{section*.120}
-\contentsline {subsubsection}{Discussion on the results}{69}{section*.122}
-\contentsline {section}{\numberline {6.3}Results from TSL}{69}{section.6.3}
-\contentsline {chapter}{\numberline {7}Conclusion}{70}{chapter.7}
-\contentsline {chapter}{Appendix \numberline {A}Some Appendix}{71}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Beam setup data}{71}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Radiation results}{71}{section.a.A.2}
+\contentsline {subsubsection}{Discussion on the results}{70}{section*.122}
+\contentsline {section}{\numberline {6.3}Results from TSL}{70}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}SF2 radiation test}{70}{subsection.6.3.1}
+\contentsline {subsubsection}{PLL and latchup}{70}{section*.123}
+\contentsline {subsubsection}{SRAM}{71}{section*.124}
+\contentsline {subsubsection}{Logic element}{71}{section*.127}
+\contentsline {subsubsection}{Programming limit test}{71}{section*.128}
+\contentsline {subsection}{\numberline {6.3.2}Other test at TSL}{71}{subsection.6.3.2}
+\contentsline {chapter}{\numberline {7}Conclusion}{72}{chapter.7}
+\contentsline {chapter}{Appendix \numberline {A}Some Appendix}{73}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Beam setup data}{73}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Radiation results}{73}{section.a.A.2}

@@ -1116,11 +1116,11 @@ The third time at OCl, the focus was mainly the \ac{SF2} \ac{SoC} \ac{FPGA}, but
 \newpage
 
 \section{Irradiation at \acf{TSL}}
-The main difference between \ac{OCL} and TSL, is that TSL are able to produce beam of much higher energies. The setback with TSL is that it is quite expensive to rent, but then again, the test process is much easier, and there are more people there that can help us if needed. \ac{OCL} has been rented for free.
+The main difference between \ac{OCL} and TSL, is that TSL are able to produce beam of much higher energies. TSL is a much more professional facility in the way, that there are more people working there ready to help, and we don't need any calibration before we can start radiation test. We can simply show up and expose what we want to expose, and data like fluence and exposed time, are given to use, making it easy for us to calculate the dose and flux. 
 
 \subsection{About TSL}
 TSL is an accelerator facility belonging to University of Uppsala in Sweden, \cite{website:TSL}.
-It is manly used for proton therapy on cancer patient by Uppsala University Hospital, but is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be produced are everything from protons to highly charged xenon ions. There is several extraction points from the cyclotron, which of these that are open can be controlled from the control room. The experiment area for electronics testing, is the the \emph{blue hall}, here there are two user areas, one used for protons, and one used for neutrons and heavier ions, see figure \ref{Blue_hall}.
+It is manly used for proton therapy on cancer patient by Uppsala University Hospital, but is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be produced are everything from protons to highly charged xenon ions. There is several extraction points from the cyclotron, which is controlled from the \emph{control room}. The experiment area for electronics testing, is the the \emph{blue hall}, here there are two user areas, one for protons, and one for neutrons and heavier ions, see figure \ref{Blue_hall}.
 
 \begin{figure}[!htbp]
   \centering
@@ -1131,7 +1131,7 @@ It is manly used for proton therapy on cancer patient by Uppsala University Hosp
 
 \subsection{Beam setup procedure}
 At TSL we didn't have to get a beam characterization as we did at \ac{OCL}. In the Blue hall there is a permanently setup with detectors and a well defined beam line. We only needed to place our test equipment in the blue hall at a given extraction point, and start the test. The center of the beam was found by lasers places in looked positions around the hall, one for horizontal direction and one for vertical direction. The head of the laser was movable, so we could point the laser beams towards our test board. A computer which was remotely controlled through network connection was placed in the hall.
-This computer was used as a connection point to our test boards. We sat in a room called \emph{countingroom}, where we were able to switch the beam on and off as we desired. There were also a machine in the countingroom, which was connected to detectors in the blue hall telling us the fluence (number of protons per $\centi\meter²$ in total) of the beam. The fluence can be used to calculate the dose. The energy of the proton beam we got was 180 MeV.
+This computer was used as a connection point to our test boards. We sat in a room called \emph{countingroom}, where we could turn the beam on and off as we desired. There were also a machine in the countingroom, which was connected to detectors in the blue hall telling us the fluence (number of protons per $\centi\meter²$ in total) and exposed time. The fluence can be used to calculate the flux and dose. The energy of the proton beam we got was 180 MeV.
 
 \begin{figure}[!htbp]
   \centering
@@ -1143,9 +1143,9 @@ This computer was used as a connection point to our test boards. We sat in a roo
 \subsection{What was tested at \ac{TSL}}
 A week before we arrived at TSL, we got the first two prototypes of the RCU2. That means that we had a limited time to make test code for all of the different parts of the board. 
 
-The focus of the visit to TSL was the SF2 SoC FPGA, but we also tested a optical receiver and a detector data link used to send data out of the RCU2.
+The focus of the visit to TSL was the SF2 SoC FPGA, but we also tested a optical receiver and a data link which are supposed to be used to send data out from the RCU2.
 We brought with us two RCU2s and a total of 7 starter-kits, where 3 of these was with a smaller package, M2S050-FG484, and the rest was engineering samples versions of M2S050-FG896, which is the one used on RCU2.
-For the test discussed in section \ref{SF2_section}, we only used the SF2 starter-kits to test, since the test only involves internal parts of the SF2 SoC FPGA. Two of the starter-kits with the smaller package was tested M2S050-FG484, and one with engineering sample M2S050ES-T-FG896. When the RCU2 cards was irradiation, things like SERDES (DDL), trigger, clock and data recovery (CDR) and PLL was tested, which will not be discussed throughly in this work. Current was measured on both the SF2 starter-kits and RCU2 boards when they were irradiated to check for latchups.
+For the test discussed in section \ref{SF2_section}, we only used the SF2 starter-kits to test, since the test only involves internal parts of the SF2 SoC FPGA. Two of the starter-kits with the smaller package was tested M2S050-FG484, and one with engineering sample M2S050ES-T-FG896. When the RCU2 cards was irradiation, things like SERDES (data link), trigger, clock and data recovery (CDR) and PLL was tested, which will not be discussed throughly in this work, but a short summary will be given. Current was measured on both the SF2 starter-kits and RCU2 boards when they were irradiated to check for latchups.
 
 
 \chapter{Calculations and Results from Radiation Tests}
@@ -1421,12 +1421,13 @@ CS = 1,14e-6
 
 \subsection{Test results PCB boards}
 In this section the result from irradiation test at \ac{OCL} will be presented and discussed.
-Test of all the PCBs will be presented first, followed by a discussion on SF2 test. The result is presented after type, meaning that two PCBs containing the same \ac{IC} will be presented together. The purpose of these test has been to check for radiation tolerance. The focus has therefore been to check the output data/voltage and current compared with the received dose. Flux versus time for the different tests can be seen in the summery of this section \ref{flux_all1},\ref{flux_all2} and \ref{flux_all3}
+Test of all the PCBs will be presented first, followed by a presentation of the SF2 test. The result is presented after type, meaning that two PCBs containing the same \ac{IC} will be presented together. The purpose of these test has been to check for radiation tolerance. The focus has therefore been to check the output data/voltage and current compared with the received dose. 
+% Flux versus time for the different tests can be seen in the summery of this section \ref{flux_all1},\ref{flux_all2} and \ref{flux_all3}
 
-An overview of the test can be found at the end of this section, with the total exposed time, the total irradiated dose and error status. Flux graph from all of the test can also be found.
+An overview of the test can be found at the end of this section, with the total exposed time, the total irradiated dose and error status.
 
 \subsubsection{TPS51200}
-This was the first component that was radiation tested, we started therefore out with a very low intensity, to be sure that everything worked as it should.
+This was the first component that was tested for radiation, we started therefore out with a very low intensity, to be sure that everything worked as it should.
 The intensity was increased for the later tests. Two PCBs of this type was supposed to be tested, but only one of these worked when we were at OCL.
 
 In figure \ref{TPS51200_1} you can see the input current and output voltage versus the received dose in kRad. The total exposed dose for this board is 42.8 kRad, and it still worked as it should, with only small increase in current. Normally we would irradiate until we would see some more irradiation effects, but since no errors occurred until 40 kRad, it was no point in exposing anymore.
@@ -1736,12 +1737,10 @@ This was fixed by restarting the MSS, but then we had a short period of lost dat
 
 Slightly after a dose of 35 kRad, we can see a gap where we have no increase in upset on neither of the large SRAM or the micro SRAM. The flux is stable and the cycles counter is not changing as well in that period, see appendix \ref{radiation_results}. This suggest that something is not working in the FPGA. I would think that clock signal is gone, maybe because on of the PLL stop. We got two PLLs errors in that period, supporting that theory, see \ref{PLL_error1}
 
-We can see that for run1, the SEUs on the large SRAM is increasing quite linear, this means that a cross section can be found. The SEUs on the micro SRAM get a stepwise increase in SEUs, which doesn't look so linear. There is much fewer memory bits in the micro SRAM compared to the large SRAM, in total there are NUMBER times more large SRAM bits than micro SRAM.
+We can see that for run1, the SEUs on the large SRAM is increasing quite linear, this means that a cross section can be found. The SEUs on the micro SRAM get a stepwise increase in SEUs, which doesn't look so linear. There is much fewer memory bits in the micro SRAM compared to the large SRAM, in total there are 9,5 times more large SRAM bits than micro SRAM.
 To get a more precise calculation on cross section for the micro SRAM, we should have runned with a much higher intensity.
 
-To get as much precise calculation as possible for the cross section, we should check over the period which is most linear, and without any kinds of error, since we can't be 100\% sure what happens when an error occurs.
-
-Therefore the cross section for the large SRAM are being calculated from the period in between 17 and 24 kRad on run1. The corresponding fluence for the start and endpoint is respectively $5.0026E-10$ and $6.994E-10$, and the total \acp{SEU} for that period are 513. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us,
+To get as much precise calculation as possible for the cross section, we should check over the period which is most linear. Therefore the cross section for the large SRAM are being calculated from the period in between 17 and 24 kRad on run1. The corresponding fluence for the start and endpoint is respectively $5.0026E-10$ and $6.994E-10$, and the total \acp{SEU} for that period are 513. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us,
 
 % After the shutdown we gets errors with a more rapid speed, and it is therefore harder to take use of the collected data.
 
@@ -1756,39 +1755,39 @@ Cross section for micro SRAM in the same period, is
  CS_{uSRAM} = \frac{SEUs}{FluenceDUT} = \frac{14}{1.99e{10}}=0,000000026= 7.0*10-10 
 \end{equation}
 
-If we look at cross section per bit we get:
+A maybe more intressting term to look at, is cross section per bit. We used a total of $16384*38 = 622592$ large SRAM bit and $2048*32 = 65536$ micro SRAM bit. This gives us,
 
 \begin{equation}
- CS_{LSRAM} = \frac{2.6*10-8}{} =
+ CS_{LSRAM} = \frac{2.6*10^{-8}}{622592} = 4.18 *10^{-14}
 \end{equation}
 
 \begin{equation}
- CS_{uSRAM} = \frac{7.0*10-10}{} =
+ CS_{uSRAM} = \frac{7.0*10^{-10}}{65536} = 1.07 *10^-{14}
 \end{equation}
 
-% Cross section for the whole period before the latchup was also calculated for reference. 
+% Cross section for run1 was also calculated for reference. 
 % 
 % \begin{equation}
-%  CS_{tot} = \frac{2453}{1.11e-{11}}=0,000000022 = 2.2*10-8
+%  CS_{tot} = \frac{2453}{1.11*10^{-11}}=0,000000022 = 2.2*10-8
 % \end{equation}
 \FloatBarrier
 \subsubsection{Logic element}
 For run1 we didn't manage to turn on the shift register design, because of some errors in the test code. This was solved before run2.
 
-On run two, we ran 4 shift register chains with shift register length of 2000, with 4 inverters in between each register and 4 windowed shift register. The frequency used was 40 Mhz. In table \ref{SR_table}, the results from run2 can be seen.
+On run two, we ran 4 shift register chains with shift register length of 2000, with 4 inverters in between each register and 4 windowed shift register. The frequency used was 40 Mhz. In table \ref{SR_table}, you find the results from run2.
 
-We detected 5 shift register errors in total over a dose of 8 kRad. That was something like we would expected, but we couldn't distinguish between upset or transient on the tracks, since we only got to run on one frequency. And then the whole point with this test didn't get tested. But we got at least a feeling on how often we would see an error on the shift register with the settings used.
+We detected 5 shift register errors in total over a dose of 8 kRad. That was something like we would expected. But one of the point with this test, were to see if we could distinguish between upset or transient on the tracks, by changing on the frequency. Now we only run on a 40Mhz, meaning we can't say anything if it was upset in registers, or transient on the track we see. But we got at least a feeling on how often we would see an error on the shift register with the settings used.
 
 \begin{table}
 \centering
 \begin{tabular}{|l|l|l|}\hline
 SEU in the shift registers & Exposed time[s] & Dose[kRad] \\ \hline \hline
-1 & 320 & 2,95  \\ \hline
-2 & 357 &  3,53\\ \hline
-3 & 358 & 3,54 \\ \hline
-4 & 417 & 4,46  \\ \hline
-5 & 620 & 7,81  \\ \hline
-\textsuperscript{*} & 620 & 7,28  \\ \hline
+1 & 320 & 2.95  \\ \hline
+2 & 357 &  3.53\\ \hline
+3 & 358 & 3.54 \\ \hline
+4 & 417 & 4.46  \\ \hline
+5 & 620 & 7.81  \\ \hline
+\textsuperscript{*} & 620 & 7.28  \\ \hline
 \multicolumn{3}{l}{\textsuperscript{*}\footnotesize{Lots of shift register errors followed after this}}
 \end{tabular}
 \caption{Shift register errors in run2}
@@ -1797,33 +1796,33 @@ SEU in the shift registers & Exposed time[s] & Dose[kRad] \\ \hline \hline
 
 \FloatBarrier
 \subsubsection{PLL and Latchup}
-Graphs of current versus dose can be found in appendix \ref{radiation_results}. We received much less latchups then expected. From Microsemi, we have heard roomers of a problem with micro latchup in the Cortex SRAM memory, which would increase current with a 50-100 mA, but wasn't destructive. We didn't detect any micro latchups during our test, but we got two rather big latchup, which doubled the current.
+Graphs of current versus dose can be found in appendix \ref{radiation_results}. We received much less latchups then expected. From Microsemi, we had heard roomers of a problem with micro latchup in the Cortex SRAM memory, which would increase current with a 50-100 mA, but wasn't destructive. We didn't detect any micro latchups during our test, but we got two rather big latchup, which more than doubled the current, from around 270 $\milli\ampere$ to around 730 $\milli\ampere$ on the 1.2 V power source during run1 and in run2 we went from 400 $\milli\ampere$ to around 850 $\milli\ampere$ on the 1.2 V power source.  The nominal current for run2 was a little higher since the shift register design was also running.
 
-The first lock loss on the PLL occurred quite early in our test, already after a dose of 0,7 kRad. We got a total of 23 PLL lock loss.
+In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. A noticeable things is that the first lock loss already occurred after a dose of 0,7 kRad. The The PLL that was monitored was driven by another PLL. Thus, assuming that if the first PLL looses its lock signal and thus clock, the second PLL will also loose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 loss per PLL. 
 
 \begin{table}[!htbp]
 \parbox{.45\linewidth}{
  \centering
 \begin{tabular}{|l|l|l|}\hline
 PLL lock loss & Exposed time[s] & Dose[kRad] \\ \hline \hline
-1 & 88 & 0,7  \\ \hline
-2 & 166 & 1,3 \\ \hline
-3 & 304 & 2,3 \\ \hline
-4 & 473 & 3,6  \\ \hline
-5 & 523 & 4,0  \\ \hline
-6 & 663 & 5,0 \\ \hline
-7 & 2363 & 18,7 \\ \hline
-8 & 2440 & 19,3  \\ \hline
-9 & 2720 & 21,5  \\ \hline
-10 & 2938 & 23,1 \\ \hline
-11 & 2938 & 23,1 \\ \hline
-12 & 3306 & 26,0  \\ \hline
-13 & 3600 & 28,4  \\ \hline
-14 & 3633 & 28,6 \\ \hline
-15 & 4125 & 32,6 \\ \hline
-16 & 4575 & 36,1  \\ \hline
-17 & 4546 & 36,1  \\ \hline
-18 & 4624 & 36,5 \\ \hline
+1 & 88 & 0.7  \\ \hline
+2 & 166 & 1.3 \\ \hline
+3 & 304 & 2.3 \\ \hline
+4 & 473 & 3.6  \\ \hline
+5 & 523 & 4.0  \\ \hline
+6 & 663 & 5.0 \\ \hline
+7 & 2363 & 18.7 \\ \hline
+8 & 2440 & 19.3  \\ \hline
+9 & 2720 & 21.5  \\ \hline
+10 & 2938 & 23.1 \\ \hline
+11 & 2938 & 23.1 \\ \hline
+12 & 3306 & 26.0  \\ \hline
+13 & 3600 & 28.4  \\ \hline
+14 & 3633 & 28.6 \\ \hline
+15 & 4125 & 32.6 \\ \hline
+16 & 4575 & 36.1  \\ \hline
+17 & 4546 & 36.1  \\ \hline
+18 & 4624 & 36.5 \\ \hline
 \end{tabular}
 \caption{Time and dose for the PLL errors run1}
 \label{PLL_error1}
@@ -1833,11 +1832,11 @@ PLL lock loss & Exposed time[s] & Dose[kRad] \\ \hline \hline
  \centering
 \begin{tabular}{|l|l|l|}\hline
 PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
-1 & 301 & 2,68  \\ \hline
-2 & 372 &  3,76\\ \hline
-3 & 541 & 5,50 \\ \hline
-4 & 576 & 7,08  \\ \hline
-5 & 589 & 7,28  \\ \hline
+1 & 301 & 2.68  \\ \hline
+2 & 372 &  3.76\\ \hline
+3 & 541 & 5.50 \\ \hline
+4 & 576 & 7.08  \\ \hline
+5 & 589 & 7.28  \\ \hline
 \end{tabular}
 \caption{Time and dose for the PLL errors run2}
 \label{PLL_error2}
@@ -1846,8 +1845,72 @@ PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
 \FloatBarrier
 \subsubsection{Discussion on the results}
 
+
+
 \FloatBarrier
 \section{Results from TSL}
+In this section the results form the irradiation test at TSL will be presented. The focus has been on the SF2 test, but other other test will also be presented and discussed.
+
+A total of two RCU2s and 3 SF2 starter-kit were exposed to radiation. When we radiatied the RCU2, we tested SERDES communication, Clock and data recovery, latchup and trigger interface.
+
+\subsection{SF2 radiation test}
+Two starter kit with the SF2 M2S050-FG484 were tested, and one starter-kit with the SF2 M2S050ES-FG896 (engineering sample). The SF2 M2S050-FG484 is the same Soc FPGA which we are going to use on the RCU2, only with smaller package. Therefore we preferred testing our code on these instead of the engineering sample version, which may have some early design errors. The things that were tested on the starter-kits with smaller package are SRAM, PLL, Logic element and latchup, as discussed in section \ref{SF2_section}. When testing the M2S050ES-FG896, the focus was only to see for how long we could program the device with increasing dose.
+
+Some improvements has been done to the the test since radiation at OCL. We have added two more PLL lock signals signal to monitor, which didn't got measured in \ac{OCL}. And we found a more effective way to measure current. We used a ....... , which is a ADC with $I_2C$ communication protocol and an internal voltage reference. The SF2 have $I_2C$ communication protocol, which means that we could use the monitoring board to control and receive data from the ADC-chip. So we didn't need the current measurement board anymore, making the setup, a little easier. The monitoring board were also connected to the enable pin of the 3.3 V voltage regulator on the test board, making it possible to turn on and off the test board at will. 
+
+\subsubsection{PLL and latchup}
+To measure current 
+
+\subsubsection{SRAM}
+In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the results from radiation of the two SF2 M2S050-FG484. 
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/lsram_dose_sf2_3}
+  \caption{SEU on Large SRAM versus Dose in kRad}
+  \label{LSRAM_starter-kit1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/usram_dose_sf2_3}
+  \caption{SEU on micro SRAM versus Dose in kRad}
+  \label{USRAM_starter-kit1}
+  \end{subfigure}
+ \caption{Large SRAM and micro SRAM test results after shutdown}
+ \label{SRAM_starter-kit1}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/lsram_dose_sf2_4}
+  \caption{SEU on Large SRAM versus Dose in kRad}
+  \label{LSRAM_starter-kit2}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/usram_dose_sf2_4}
+  \caption{SEU on micro SRAM versus Dose in kRad}
+  \label{USRAM_starter-kit2}
+  \end{subfigure}
+ \caption{Large SRAM and micro SRAM test results after shutdown}
+ \label{SRAM_starter-kit2}
+\end{figure}
+
+
+
+\subsubsection{Logic element}
+
+
+\subsubsection{Programming limit test}
+
+
+\subsection{Other test at TSL}
+
+WE will also here 
 \FloatBarrier
 \chapter{Conclusion}
 
@@ -1866,18 +1929,18 @@ PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
   \centering
     \begin{tabular}{|l|l|l|l|l|l|} \hline
     Calibration test nr.: & x     & y     & Scint rel & SEU(\ac{SRAM}) & SEU(\ac{SRAM})/sc \\ \hline \hline
-    1     & 0     & 0     & 23813 & 1971  & 8,28E-02 \\ \hline
-    2     & 0     & -0,5  & 37930 & 3867  & 1,02E-01 \\ \hline
-    3     & 0     & -1    & 27527 & 2817  & 1,02E-01 \\ \hline
-    4     & 0     & -1,5  & 34413 & 3360  & 9,76E-02 \\ \hline
-    5     & 0     & -2    & 32713 & 2763  & 8,45E-02 \\ \hline
-    6     & 0,5   & 0     & 38753 & 2709  & 6,99E-02 \\ \hline
-    7     & -0,5  & 0     & 23420 & 2483  & 1,06E-01 \\ \hline
-    8     & -1    & 0     & 20611 & 2232  & 1,08E-01 \\ \hline	
-    9     & -1,5  & 0     & 21014 & 2410  & 1,15E-01 \\ \hline
-    10    & -1,5  & 0     & 20676 & 2260  & 1,09E-01 \\ \hline
-    11    & -2    & 0     & 35787 & 3776  & 1,06E-01 \\ \hline
-    12    & -2,5  & 0     & 27847 & 2512  & 9,02E-02 \\ \hline
+    1     & 0     & 0     & 23813 & 1971  & 8.28E-02 \\ \hline
+    2     & 0     & -0.5  & 37930 & 3867  & 1.02E-01 \\ \hline
+    3     & 0     & -1    & 27527 & 2817  & 1.02E-01 \\ \hline
+    4     & 0     & -1.5  & 34413 & 3360  & 9.76E-02 \\ \hline
+    5     & 0     & -2    & 32713 & 2763  & 8.45E-02 \\ \hline
+    6     & 0.5   & 0     & 38753 & 2709  & 6.99E-02 \\ \hline
+    7     & -0.5  & 0     & 23420 & 2483  & 1.06E-01 \\ \hline
+    8     & -1    & 0     & 20611 & 2232  & 1.08E-01 \\ \hline	
+    9     & -1.5  & 0     & 21014 & 2410  & 1.15E-01 \\ \hline
+    10    & -1.5  & 0     & 20676 & 2260  & 1.09E-01 \\ \hline
+    11    & -2    & 0     & 35787 & 3776  & 1.06E-01 \\ \hline
+    12    & -2.5  & 0     & 27847 & 2512  & 9.02E-02 \\ \hline
     \end{tabular}%
       \caption{Calibration tests 14.11.2013}
       \label{test_14.11}
@@ -1888,20 +1951,20 @@ PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
   \centering
     \begin{tabular}{|l|l|l|l|l|l|}\hline
     Calibration test nr.: & x     & y     & Scint rel & SEU(\ac{SRAM}) & SEU(\ac{SRAM})/ sc \\ \hline \hline
-    1     & -0,8  & -1    & 27798 & 1463  & 5,26E-02 \\ \hline
-    2     & -1,3  & -1    & 17721 & 1239  & 6,99E-02 \\ \hline
-    3     & -1,8  & -1    & 12904 & 1203  & 9,32E-02 \\ \hline
-    4     & -2,3  & -1    & 13361 & 1276  & 9,55E-02 \\ \hline
-    5     & -2,8  & -1    & 12786 & 1238  & 9,68E-02 \\ \hline
-    6     & -3,3  & -1    & 12342 & 1156  & 9,37E-02 \\ \hline
-    7     & -2,5  & -1    & 11696 & 1223  & 1,05E-01 \\ \hline
-    8     & -2,5  & -1,5  & 11027 & 1075  & 9,75E-02 \\ \hline
-    9     & -2,5  & -2    & 11835 & 1063  & 8,98E-02 \\ \hline
-    10    & -2,5  & -0,5  & 15593 & 1540  & 9,88E-02 \\ \hline
-    11    & -2,5  & 0     & 12620 & 1034  & 8,19E-02 \\ \hline
-    12    & -2,5  & -1    & 65280 & 5999  & 9,19E-02 \\ \hline
-    13    & -2,5  & -1    & 52752 & 4803  & 9,10E-02 \\ \hline
-    14    & -2,5  & -1    & 57229 & 5250  & 9,17E-02 \\ \hline
+    1     & -0.8  & -1    & 27798 & 1463  & 5.26E-02 \\ \hline
+    2     & -1.3  & -1    & 17721 & 1239  & 6.99E-02 \\ \hline
+    3     & -1.8  & -1    & 12904 & 1203  & 9.32E-02 \\ \hline
+    4     & -2.3  & -1    & 13361 & 1276  & 9.55E-02 \\ \hline
+    5     & -2.8  & -1    & 12786 & 1238  & 9.68E-02 \\ \hline
+    6     & -3.3  & -1    & 12342 & 1156  & 9.37E-02 \\ \hline
+    7     & -2.5  & -1    & 11696 & 1223  & 1.05E-01 \\ \hline
+    8     & -2.5  & -1.5  & 11027 & 1075  & 9.75E-02 \\ \hline
+    9     & -2.5  & -2    & 11835 & 1063  & 8.98E-02 \\ \hline
+    10    & -2.5  & -0.5  & 15593 & 1540  & 9.88E-02 \\ \hline
+    11    & -2.5  & 0     & 12620 & 1034  & 8.19E-02 \\ \hline
+    12    & -2.5  & -1    & 65280 & 5999  & 9.19E-02 \\ \hline
+    13    & -2.5  & -1    & 52752 & 4803  & 9.10E-02 \\ \hline
+    14    & -2.5  & -1    & 57229 & 5250  & 9.17E-02 \\ \hline
     \end{tabular}%
       \caption{Calibration tests 15.11.2013}
 \end{table}%
