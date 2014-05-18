@@ -1796,12 +1796,11 @@ SEU in the shift registers & Exposed time[s] & Dose[kRad] \\ \hline \hline
 
 \FloatBarrier
 \subsubsection{PLL and Latchup}
-Graphs of current versus dose can be found in appendix \ref{radiation_results}. We received much less latchups then expected. From Microsemi, we had heard roomers of a problem with micro latchup in the Cortex SRAM memory, which would increase current with a 50-100 mA, but wasn't destructive. We didn't detect any micro latchups during our test, but we got two rather big latchup, which more than doubled the current, from around 270 $\milli\ampere$ to around 730 $\milli\ampere$ on the 1.2 V power source during run1 and in run2 we went from 400 $\milli\ampere$ to around 850 $\milli\ampere$ on the 1.2 V power source.  The nominal current for run2 was a little higher since the shift register design was also running.
+Graphs of current versus dose can be found in appendix \ref{radiation_results}. We got two SEL, which more than doubled the current for the 1.2 V source, from around 270 $\milli\ampere$ to around 730 $\milli\ampere$ on run1 and in run2 we went from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
 
-In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. A noticeable things is that the first lock loss already occurred after a dose of 0,7 kRad. The The PLL that was monitored was driven by another PLL. Thus, assuming that if the first PLL looses its lock signal and thus clock, the second PLL will also loose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 loss per PLL. 
+In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. A noticeable things is that the first lock loss already occurred after a dose of 0,7 kRad. The The PLL that was monitored was driven by another PLL. Thus, assuming that if the first PLL looses its lock signal and thus clock, the second PLL will also loose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 loss per PLL over a dose of 45 kRad. This gives us a cross section for
 
 \begin{table}[!htbp]
-\parbox{.45\linewidth}{
  \centering
 \begin{tabular}{|l|l|l|}\hline
 PLL lock loss & Exposed time[s] & Dose[kRad] \\ \hline \hline
@@ -1827,8 +1826,10 @@ PLL lock loss & Exposed time[s] & Dose[kRad] \\ \hline \hline
 \caption{Time and dose for the PLL errors run1}
 \label{PLL_error1}
 }
-\hfill
-\parbox{.45\linewidth}{
+\end{table}
+
+
+\begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|l|l|}\hline
 PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
@@ -1843,9 +1844,12 @@ PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
 }
 \end{table}
 \FloatBarrier
+
 \subsubsection{Discussion on the results}
+The SRAM test gave us around the expected numbers of SEUs. We should have tried to run the test without going through the MSS. If we had tried to send data directly out from the FPGA, we would get rid of all the probelem with the MSS which stoppet working all the time.
+We had also quite many PLL errors which could be a rather big problem when the RCU2 will be mounted in the TPC. If the clock is not working, we would have a period where we don't have any data collection. And it is when there is much radiation, we want to collect data.
 
-
+We didn't detect any current increase before a dose of 37 kRad, which is a really good result. The shift register design didn't gave us the result we wanted. We wanted to see if we detect any difference between SEUs detected/dose with different frequencies, to be able to distinguish between between SET and SEU in the register.
 
 \FloatBarrier
 \section{Results from TSL}
@@ -1854,12 +1858,12 @@ In this section the results form the irradiation test at TSL will be presented. 
 A total of two RCU2s and 3 SF2 starter-kit were exposed to radiation. When we radiatied the RCU2, we tested SERDES communication, Clock and data recovery, latchup and trigger interface.
 
 \subsection{SF2 radiation test}
-Two starter kit with the SF2 M2S050-FG484 were tested, and one starter-kit with the SF2 M2S050ES-FG896 (engineering sample). The SF2 M2S050-FG484 is the same Soc FPGA which we are going to use on the RCU2, only with smaller package. Therefore we preferred testing our code on these instead of the engineering sample version, which may have some early design errors. The things that were tested on the starter-kits with smaller package are SRAM, PLL, Logic element and latchup, as discussed in section \ref{SF2_section}. When testing the M2S050ES-FG896, the focus was only to see for how long we could program the device with increasing dose.
+Two starter kit with SF2 M2S050-FG484 were tested, and one starter-kit with SF2 M2S050ES-FG896 (engineering sample). The SF2 M2S050-FG484 is the same Soc FPGA which we are going to use on the RCU2, only with smaller package. Therefore we preferred testing our code on these instead of the engineering sample, which may have some early design errors. The things that were tested on the starter-kits with the smaller package are SRAM, PLL, Logic element and latchup, as discussed in section \ref{SF2_section}. When testing the M2S050ES-FG896, the focus was only to see for how long we could program the device with increasing dose.
 
-Some improvements has been done to the the test since radiation at OCL. We have added  we monitor three PLL lock signals, one for the MSS PLL and two 
+Some improvements has been done to the the test since the radiation at OCL. We have added two more PLL lock signals to monitor. And we found a more effective way to measure current. We used a ....... , which is a ADC with $I_2C$ communication protocol. The SF2 have $I_2C$ communication protocol, which means that we could use the monitoring board to control and receive data from the ADC-chip. So we didn't need the current measurement board anymore, making the setup, a little easier. The monitoring board were also connected to the enable pin of the 3.3 V voltage regulator on the test board, making it possible to turn on and off the test board at will. 
 
 \subsubsection{PLL and latchup}
-To measure current 
+
 
 \subsubsection{SRAM}
 In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the results from radiation of the two SF2 M2S050-FG484. 
