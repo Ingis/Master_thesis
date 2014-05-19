@@ -57,7 +57,7 @@
 
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 
  \begin{document}
 
@@ -103,6 +103,7 @@
 \newpage
 
 \FloatBarrier
+\section*{Acronyms}
 \include{acronyms}
 \FloatBarrier
 
@@ -828,6 +829,7 @@ There are four things that we tested. That is the internal SRAM blocks, the logi
 
 
 \subsection{SRAM test}
+\label{SRAM_section}
 SRAM cells are as discussed in section \ref{SEU_Section}, sensitive for radiation.
 It is important to know how well these work in high radiation areas, so we can know how reliable these are when used.
 The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM blocks with a size of 1024 x 18 bits.
@@ -1685,19 +1687,18 @@ There are almost impossible to get the same beam two days at a row. Each day of 
 The interesting thing when determining if a \ac{IC} tolerant towards radiation is the dose. In run2, it has been calculated that the total dose in the TPC is 1-2 kRad. This is the absolute limit a \ac{IC} have to survive, and a safe margin on at least 3 times should be used. We also have to take account that when radiating at OCL, we have been using proton beam on less than 30 MeV, in the TPC detector in ALICE, we can receive protons and neutrons in the energy level of higher than 1 GeV, which may cause other effects that we have seen in our test at OCL. It is therefore important to have a good margin on the dose.
 
 % When testing two boards of the same type, and on of these fails 
-For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals were only measured digitally by a USB-DAQ, that means that we really don't know if the voltage level shifted because of the received dose. The input low level is from -0.3 V to 0.8 V and the input high level is from 2.0 to 5.8, which means that we could actually have a large swing on the output, without being detected. But then again, changes on the output can normally be referred back to current consumption, as we see on both TPS51200 and MIC69302WU, and we didn't see any increase in current before a dose of 30-40 kRad.
-
+For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals were only measured digitally by a USB-DAQ, that means that we really don't know if the voltage level shifted because of the received dose. The USB-DAQ which were used, has a input low level from -0.3 V to 0.8 V and the input high level from 2.0 to 5.8, which means that we could actually have a large swing on the output, without being detected. But then again, changes on the output can normally be referred back to current consumption, as we see on both TPS51200 and MIC69302WU, and we didn't see any increase in current before a dose of 30-40 kRad.
 
 % In tables \ref{dose_15.11}, \ref{dose_28.11} and \ref{dose_10.04} 
 % When we were going to measure the intensity at the beam exit, we placed a Faraday cup in front of the beam, and connected it to a amperemeter on the control panel, but since the current is so small, the measuring instrument will be affected by air currents, and there are also allot of uncertainties in the instruments. Therefore we only used the Faraday cup and the amperemeter, to get a rough estimate of the actual intensity.
 \newpage
 
 \subsection{Test results SF2}
-In this subsection the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts which where tested will be presented for them self, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off some times during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup. We did a power cycle of the board, and the current went back to a normal level. The test result presented are divided into before and after the power shut down, hereafter called run1 and run2. The shift register design, made for testing of the logical element, see section \ref{logic_Element}, where only run after the power shutdown. After a dose of $\approx$ 8 kRad after the shut down, the current increased again. We tried to another power cycle, but this time it was permanently. The total dose after radiation was $\approx$ 45 kRad.
+In this subsection the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts of SF2 which where tested will be presented for them self, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off and on some times during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup. We did a power cycle of the board, and the current went back to a normal level. The test result presented are divided into before and after the power cycle, hereafter called run1 and run2. The shift register design, made for testing of the logical element, see section \ref{logic_Element}, where only run after the power shutdown. After a dose of $\approx$ 8 kRad after the shut down, the current increased again. We tried another power cycle, but this time it was permanently. The total dose after radiation was $\approx$ 45 kRad.
+
 \FloatBarrier
 \subsubsection{SRAM}
-The purpose of the SRAM test is to see how reliable the SRAM memory is. In figure \ref{SRAM_test1} and \ref{SRAM_test2} you can Single event upset on large SRAM and micro SRAM versus dose. During the test, we had some problems with the \acf{MSS}, which stopped working in periods.
-This was fixed by restarting the MSS, but then we had a short period of lost data. This can be seen as drops in the \acp{SEU} and cycles counter, and small fall in current, see appendix \ref{radiation_results}.
+The purpose of the SRAM test is to see how reliable the SRAM memory is, and to fin a cross section. In figure \ref{SRAM_test1} and \ref{SRAM_test2} you can \acp{SEU} on large SRAM and micro SRAM versus dose. During the test, we had some problems with the \acf{MSS}, which stopped working in periods. The \acf{MSS} was running in debug mode, which made it possible to restart the MSS as we wanted. If the MSS stopped working, a restart brought the communication up and running again, but then we had a short period of lost data. This can be seen as drops in the \acp{SEU} and cycles counter, and small fall in current, see appendix \ref{radiation_results}.
 
 \begin{figure}[!htbp]
 \centering
@@ -1735,34 +1736,34 @@ This was fixed by restarting the MSS, but then we had a short period of lost dat
  \label{SRAM_test2}
 \end{figure}
 
-Slightly after a dose of 35 kRad, we can see a gap where we have no increase in upset on neither of the large SRAM or the micro SRAM. The flux is stable and the cycles counter is not changing as well in that period, see appendix \ref{radiation_results}. This suggest that something is not working in the FPGA. I would think that clock signal is gone, maybe because on of the PLL stop. We got two PLLs errors in that period, supporting that theory, see \ref{PLL_error1}
+Slightly after a dose of 35 kRad, we can see a gap where we have no increase in upset on neither of the large SRAM or the micro SRAM. The flux is stable and the cycles counter is not changing as well, in that period, see appendix \ref{radiation_results}. This suggest that something is not working in the FPGA. I would think that clock signal is gone, maybe because on of the PLL stop. We got two PLLs errors in that period, supporting that theory, see \ref{PLL_error1}
 
 We can see that for run1, the SEUs on the large SRAM is increasing quite linear, this means that a cross section can be found. The SEUs on the micro SRAM get a stepwise increase in SEUs, which doesn't look so linear. There is much fewer memory bits in the micro SRAM compared to the large SRAM, in total there are 9,5 times more large SRAM bits than micro SRAM.
-To get a more precise calculation on cross section for the micro SRAM, we should have runned with a much higher intensity.
+To get a more precise calculation on cross section for the micro SRAM, we should have run with a much higher intensity.
 
-To get as much precise calculation as possible for the cross section, we should check over the period which is most linear. Therefore the cross section for the large SRAM are being calculated from the period in between 17 and 24 kRad on run1. The corresponding fluence for the start and endpoint is respectively $5.0026E-10$ and $6.994E-10$, and the total \acp{SEU} for that period are 513. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us,
+To get as much precise calculation as possible for the cross section, we should check over the period which is most linear, and with without errors. Therefore the cross section for the large SRAM are being calculated from the period in between 17 and 24 kRad on run1. The corresponding fluence for the start and endpoint is respectively $5.0026E-10$ and $6.994E-10$, and the total \acp{SEU} for that period are 513. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us,
 
 % After the shutdown we gets errors with a more rapid speed, and it is therefore harder to take use of the collected data.
 
 \begin{equation}
- CS_{LSRAM} = \frac{SEUs}{FluenceDUT} = \frac{513}{1.99e{10}}=0,000000026= 2.6*10-8 
+ CS_{LSRAM} = \frac{SEUs}{FluenceDUT} = \frac{513}{1.99\cdot10^{10}}== 2.6*10-8 
  \label{Cross_section}
 \end{equation}
 
-Cross section for micro SRAM in the same period, is 
+To calculate the cross section from the micro SRAM, we preferable should have had more SEU before calculating the data, so to calculate the cross section we will look of the whole period of run1, to get more statistics. The cross section is then: 
 
 \begin{equation}
- CS_{uSRAM} = \frac{SEUs}{FluenceDUT} = \frac{14}{1.99e{10}}=0,000000026= 7.0*10-10 
+ CS_{uSRAM} = \frac{SEUs}{FluenceDUT} = \frac{70}{1.11\cdot10^{11}}= 6.31*10-10 
 \end{equation}
 
-A maybe more intressting term to look at, is cross section per bit. We used a total of $16384*38 = 622592$ large SRAM bit and $2048*32 = 65536$ micro SRAM bit. This gives us,
+A maybe more interesting term to look at, is cross section per bit. We used a total of $16384*38 = 622592$ bit on the large SRAM and $2048*32 = 65536$ bit on the micro SRAM. This gives us,
 
 \begin{equation}
  CS_{LSRAM} = \frac{2.6*10^{-8}}{622592} = 4.18 *10^{-14}
 \end{equation}
 
 \begin{equation}
- CS_{uSRAM} = \frac{7.0*10^{-10}}{65536} = 1.07 *10^-{14}
+ CS_{uSRAM} = \frac{6.31*10^{-10}}{65536} = 9.62 *10^-{15}
 \end{equation}
 
 % Cross section for run1 was also calculated for reference. 
@@ -1776,7 +1777,7 @@ For run1 we didn't manage to turn on the shift register design, because of some 
 
 On run two, we ran 4 shift register chains with shift register length of 2000, with 4 inverters in between each register and 4 windowed shift register. The frequency used was 40 Mhz. In table \ref{SR_table}, you find the results from run2.
 
-We detected 5 shift register errors in total over a dose of 8 kRad. That was something like we would expected. But one of the point with this test, were to see if we could distinguish between upset or transient on the tracks, by changing on the frequency. Now we only run on a 40Mhz, meaning we can't say anything if it was upset in registers, or transient on the track we see. But we got at least a feeling on how often we would see an error on the shift register with the settings used.
+We detected 5 shift register errors in total over a dose of 8 kRad and the first shift register error occurred after a dose of 2.95 kRad. That was something like we would expected, but one of the point with this test, were to see if we could distinguish between upset or transient on the tracks by changing on the frequency. Now we only run on a 40Mhz, meaning we can't say anything if the error we see is a upset in the registers, or transient on the track. We got at least a feeling on how often we would see an error on the shift register with the settings used. 
 
 \begin{table}
 \centering
@@ -1796,12 +1797,11 @@ SEU in the shift registers & Exposed time[s] & Dose[kRad] \\ \hline \hline
 
 \FloatBarrier
 \subsubsection{PLL and Latchup}
-Graphs of current versus dose can be found in appendix \ref{radiation_results}. We received much less latchups then expected. From Microsemi, we had heard roomers of a problem with micro latchup in the Cortex SRAM memory, which would increase current with a 50-100 mA, but wasn't destructive. We didn't detect any micro latchups during our test, but we got two rather big latchup, which more than doubled the current, from around 270 $\milli\ampere$ to around 730 $\milli\ampere$ on the 1.2 V power source during run1 and in run2 we went from 400 $\milli\ampere$ to around 850 $\milli\ampere$ on the 1.2 V power source.  The nominal current for run2 was a little higher since the shift register design was also running.
+Graphs of current versus dose can be found in appendix \ref{radiation_results}. We got two SEL, which more than doubled the current for the 1.2 V source, from around 270 $\milli\ampere$ to around 730 $\milli\ampere$ on run1 and in run2 we went from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
 
-In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. A noticeable things is that the first lock loss already occurred after a dose of 0,7 kRad. The The PLL that was monitored was driven by another PLL. Thus, assuming that if the first PLL looses its lock signal and thus clock, the second PLL will also loose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 loss per PLL. 
+In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. The The PLL that was monitored was driven by another PLL. Thus, assuming that if the first PLL looses its lock signal and thus clock, the second PLL will also loose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 loss per PLL over a dose of 45 kRad. A noticeable things is that the first lock loss already occurred after a dose of 0,7 kRad.
 
 \begin{table}[!htbp]
-\parbox{.45\linewidth}{
  \centering
 \begin{tabular}{|l|l|l|}\hline
 PLL lock loss & Exposed time[s] & Dose[kRad] \\ \hline \hline
@@ -1826,9 +1826,10 @@ PLL lock loss & Exposed time[s] & Dose[kRad] \\ \hline \hline
 \end{tabular}
 \caption{Time and dose for the PLL errors run1}
 \label{PLL_error1}
-}
-\hfill
-\parbox{.45\linewidth}{
+\end{table}
+
+
+\begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|l|l|}\hline
 PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
@@ -1840,29 +1841,55 @@ PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
 \end{tabular}
 \caption{Time and dose for the PLL errors run2}
 \label{PLL_error2}
-}
 \end{table}
 \FloatBarrier
+
 \subsubsection{Discussion on the results}
+The SRAM test gave us around the expected numbers of SEUs. We should have tried to run the test without going through the MSS. If we had tried to send data directly out from the FPGA, we would get rid of all the probelem with the MSS which stoppet working all the time.
+We had also quite many PLL errors which could be a rather big problem when the RCU2 will be mounted in the TPC. If the clock is not working, we would have a period where we don't have any data collection. And it is when there is much radiation, we want to collect data.
 
+We didn't detect any current increase before a dose of 37 kRad, which is a really good result. The shift register design didn't gave us the result we wanted. We wanted to see if we detect any difference between SEUs detected/dose with different frequencies, to be able to distinguish between between SET and SEU in the register.
 
+All in all the first radiation test of the SF2 did go quite good. We had some PLL errors, but we had a feeling that this would be a problem, so it wasn't any surprise. A way to counter this PLL problem, could maybe be to use PLLs in parallel, so that if one of them falls out, the other steps in.  
 
 \FloatBarrier
 \section{Results from TSL}
-In this section the results form the irradiation test at TSL will be presented. The focus has been on the SF2 test, but other other test will also be presented and discussed.
+In this section the results form the irradiation test at TSL will be presented. The focus has been on the SF2 test, but other test will also be presented and discussed.
 
-A total of two RCU2s and 3 SF2 starter-kit were exposed to radiation. When we radiatied the RCU2, we tested SERDES communication, Clock and data recovery, latchup and trigger interface.
+A total of two RCU2s and three SF2 starter-kit were exposed to radiation. When we radiatied the RCU2, we tested SERDES communication, Clock and data recovery, latchup and trigger interface. When testing the SF2 starter-kits, the focus were mainly the test mention in section \ref{SF2_section}.
 
 \subsection{SF2 radiation test}
-Two starter kit with the SF2 M2S050-FG484 were tested, and one starter-kit with the SF2 M2S050ES-FG896 (engineering sample). The SF2 M2S050-FG484 is the same Soc FPGA which we are going to use on the RCU2, only with smaller package. Therefore we preferred testing our code on these instead of the engineering sample version, which may have some early design errors. The things that were tested on the starter-kits with smaller package are SRAM, PLL, Logic element and latchup, as discussed in section \ref{SF2_section}. When testing the M2S050ES-FG896, the focus was only to see for how long we could program the device with increasing dose.
+Two starter kit with SF2 M2S050-FG484 were tested, and one starter-kit with SF2 M2S050ES-FG896 (engineering sample). The SF2 M2S050-FG484 is the same Soc FPGA which we are going to use on the RCU2, only with smaller package. Therefore we preferred testing on these instead of the engineering sample versions, which may have some early design errors. The things that were tested on the starter-kits with the smaller package are SRAM, PLL, Logic element and latchup, as discussed in section \ref{SF2_section}. When testing the M2S050ES-FG896, the focus was only to see for how long we could program the device with increasing dose.
 
-Some improvements has been done to the the test since radiation at OCL. We have added two more PLL lock signals signal to monitor, which didn't got measured in \ac{OCL}. And we found a more effective way to measure current. We used a ....... , which is a ADC with internal voltage reference which can be communicated with through $I_2C$. This way we removed the current measurement board from the test, making the setup, a little easier. The monitoring board were also connnected to the enable pin of the 3.3 V voltage regulator on the te
+Some improvements has been done to the the test since the radiation at OCL. We have added two more PLL lock signals to monitor, and we have found a more effective way to measure current.
+Instead of using the current measurement board as described in section \ref{current_measurement_board}, we used a small PCB with severals INA226, which is a ADC with $I_2C$ communication protocol. The SF2 has $I^2C$ communication protocol, which means that we could use the monitoring board to control and receive data from the ADC-chip. By using this method we also got the voltage on each of the different power source that was measured. The monitoring board were also connected to the enable pin of the 3.3 V voltage regulator on the test board, making it possible to turn on and off the starter-kit under test at will. Every tenth of a second the status of data was written to a console and to a file, which made it possible to monitor as the tests where running, and look at the data afterwards.
+
+Also instead of running the Microcontroller subsystem in debug mode, as we did in OCL, we were running in release mode. This means that the MSS was running whenever we got power on the kit.
 
 \subsubsection{PLL and latchup}
-To measure current 
+Through the PLL monitoring we got a total of 176 PLL loss through the first test and 205 PLL loss from the second test, whenever we lost lock on PLL1 we also got a loss on PLL2, since this PLL is using the clock from PLL1 as source, therefore these hasn't been taken into account in the total lock loss. The distribution over the three PLLs lock signals can be seen in table \ref{PLL_loss}.
+
+\begin{table}
+ \centering
+ \begin{tabular}{|l|l|l|}  \hline 
+ Device & Starter-kit1 & Starter-kit2  \\\hline\hline
+ Nr. of re-power & 62 & 95  \\\hline
+ PLL1 loss & 22 & 3  \\\hline
+ PLL2 loss & 116 & 136  \\\hline
+ PLL3 loss & 60 & 69 \\\hline
+ \end{tabular}
+ \caption{Overview of restart of power and PLL lock loss}
+ \label{PLL_loss}
+\end{table}
+
+The first PLL loss occurred after a dose of 0,043 kRad for the first test and after 1.332 kRad on the second, which is a fairly low dose. This means that PLLs could be a problem for the SF2 design. If possible, we should try and not use PLLs, or have some kind of redundancy, when using these. 
+
+We discovered on the first test, that the 0.1 $\ohm$ and 0.16 $\ohm$ resistors which was used, respectively on the 1.2 V and 3.3 V power source, where actually to high, since the maximum voltage the ADC could measure are 81.92 $\milli\volt$. When a latchup occurred the ADC was maxed, meaning we only knew that the voltage is above 81.9 V (current above 819 $\milli\ampere$, but not how much above. Therefore both of these resistors where replaced with a resistor of 0.025 $\ohm$ on the second starter-kit test.
+
+As for the test in OCL, we also got some drops in current. Always when the current drops the measured voltage for the 1.2 V power source would also drop, typically down to around 850 $\milli\volt$ (the 3.3 V power source is stable though). When this happens the communication through the serial port also fails, which is understandable since the power source has dropped 300 $\milli\volt$ bellow the specification for the \ac{IC}. Normally when we see a decrease in voltage, we see an increase in current or opposite, but in this case both drops. The only explanation for this are that the voltage drops first, causing processes in the SF2 to shut down, which results in decrease in current. The regulator controlling the 1.2 V power signal is placed right next to the SF2 chip, and it is therefore very exposed to radiation, and i would think that the regulator is the problem for this effect. (The regulator has not been tested for radiation before, because we are not using it in the RCU2 design). By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off and on, since this is power by the 3.3 V signal, the voltage and current goes back to what they were on startup. This was done manually done through the monitoring board, where we had made a function which turns the regulators off and on after 3 seconds. This function was used when we detected a latchup or a decrease in current/voltage. In total we had to restart the board because of latchup or decrease in current, 61 times on first test and 95 times on test2. 
 
 \subsubsection{SRAM}
-In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the results from radiation of the two SF2 M2S050-FG484. 
+In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the results from the SRAM test after radiation of the two SF2 M2S050-FG484. In \ref{SRAM_starter-kit2} we can see a regularly drops downto 0 in the counter values, that are loss of communication with the SF2, probably caused by voltage drop or latchup as discussed in the previous subsection, we have the same phenomena for the first test as well, only the values didn't drop to 0, this can be seen as short flatness on the counter curve. A re-power of the board made the counters start again. This means that we have periods where we didn't get to measure the counter values, when the FPGA gets power again, the counter values are overwritten through the start up sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, this gives us allot of uncertainties when calculating cross section.
 
 \begin{figure}[!htbp]
 \centering
@@ -1900,7 +1927,20 @@ In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the re
  \label{SRAM_starter-kit2}
 \end{figure}
 
+We could also here find the cross section. But since we have so many drop outs, because of latchup, current drops and power cycles, we have a noteworthy amount of lost data. This means that the actually cross section would probably be a little higher then the calculated values. As we did when calculating cross section after the result from OCL, we want to find a period which are as linear and error free as possible. Therefore we calculated the cross section in between 7.8 kRad to 14.3 kRad for test1 and 4.2 to to 18.5 on test2 for the large SRAM. Since we had so few SEUs on the micro SRAM for test1, we increased the statistics by checking from 0 to 14.8 kRad, even though this gave us more down time due to errors. For the micro SRAM on test2 we checked for the same period as for the large SRAM in between 4.2 kRad and 18.5 kRad. 
 
+
+This gives us a cross section of:
+
+\begin{equation}
+ CS_{LSRAM} = \frac{SEUs}{FluenceDUT} = \frac{5466}{9.90\cdot10^{10}}= 4.51\cdot10^{-8}
+ \label{Cross_section_sf2_tsl1}
+\end{equation}
+
+\begin{equation}
+ CS_{LSRAM} = \frac{SEUs}{FluenceDUT} = \frac{4175}{2.26\cdot10^{11}}= 1.85\cdot10^{-8}
+ \label{Cross_section_sf2_tsl2}
+\end{equation}
 
 \subsubsection{Logic element}
 
