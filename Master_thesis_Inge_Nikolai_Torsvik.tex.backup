@@ -59,7 +59,7 @@
 
 \usepackage[hidelinks]{hyperref}
 
- \begin{document}
+\begin{document}
 
 %Forside
 \thispagestyle{empty}
@@ -103,7 +103,6 @@
 \newpage
 
 \FloatBarrier
-\section*{Acronyms}
 \include{acronyms}
 \FloatBarrier
 
@@ -1736,35 +1735,61 @@ The purpose of the SRAM test is to see how reliable the SRAM memory is, and to f
  \label{SRAM_test2}
 \end{figure}
 
-Slightly after a dose of 35 kRad, we can see a gap where we have no increase in upset on neither of the large SRAM or the micro SRAM. The flux is stable and the cycles counter is not changing as well, in that period, see appendix \ref{radiation_results}. This suggest that something is not working in the FPGA. I would think that clock signal is gone, maybe because on of the PLL stop. We got two PLLs errors in that period, supporting that theory, see \ref{PLL_error1}
+Slightly after a dose of 35 kRad, we can see a gap where we have no increase in upset on neither of the large SRAM or the micro SRAM. The flux is stable and the cycles counter is not changing as well (see appendix \ref{radiation_results}). This suggest that something is not working in the FPGA. I would think that there is a problem with the clock signal, maybe because on of the PLL stop. We got two PLLs errors in that period, supporting that theory, see \ref{PLL_error1}
 
-We can see that for run1, the SEUs on the large SRAM is increasing quite linear, this means that a cross section can be found. The SEUs on the micro SRAM get a stepwise increase in SEUs, which doesn't look so linear. There is much fewer memory bits in the micro SRAM compared to the large SRAM, in total there are 9,5 times more large SRAM bits than micro SRAM.
-To get a more precise calculation on cross section for the micro SRAM, we should have run with a much higher intensity.
+We can see that for run1, the SEUs on the large SRAM is increasing quite linear, this means that a cross section can be found. The SEUs on the micro SRAM get a stepwise increase in SEUs, which doesn't look so linear. There is much fewer memory bits in the micro SRAM compared to the large SRAM, in total there are 9,5 times more large SRAM bits than micro SRAM bits. To get a more precise calculation on cross section for the micro SRAM, we should have run with a much higher intensity, or over a longer period, to get more statistics.
 
-To get as much precise calculation as possible for the cross section, we should check over the period which is most linear, and with without errors. Therefore the cross section for the large SRAM are being calculated from the period in between 17 and 24 kRad on run1. The corresponding fluence for the start and endpoint is respectively $5.0026E-10$ and $6.994E-10$, and the total \acp{SEU} for that period are 513. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us,
+To get as much precise calculation as possible for the cross section, we should check over the period which is most linear, and with without errors. Therefore the cross section for the large SRAM are being calculated from the period in between 17 and 24 kRad on run1. The corresponding fluence for the start and endpoint is respectively $5.0026E-10$ and $6.994E-10$, and the total \acp{SEU} for that period are 513. To calculate the cross section from the micro SRAM, we preferable would have more SEUs before calculating, but that isn't available. So to calculate the cross section for micro SRAM, we will look of the whole period, even though this might include some errors. This means that the total fluence and SEUs are respectively, $1.11\cdot10^{11}$ and 70. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us,
+
+\begin{equation}
+CS = \frac{SEUs}{FluenceDUT}
+\end{equation}
 
 % After the shutdown we gets errors with a more rapid speed, and it is therefore harder to take use of the collected data.
+\FloatBarrier
+\paragraph{uncertainties}
+A number of uncertainties are present in the measurement.
+
+\begin{itemize}
+  \item The uncertainty resulting from finding the ratio between the number of scintillator counts and the number of SEUs ($\sigma{ratio}$) in the calibration process of the SRAM detector was commonly about 10 \%.
+  \item The uncertainty introduced due to the nonlinear response ($\sigma{lin}$) of the scintillator to the intensity of the beam was estimated to 10 \% 
+  \item Since the number of SEUs detected are random in time and linearly dependent on the amount of incoming particles, the uncertainty can be given by Poisson distribution and is $\frac{1}{\sqrt{N_{SEU}}}$  \hfill
+  \item Uncertainties from errors ($\sigma{err}$) occurred during the run, is estimated to be abut 10 \%.
+  \item From the uncertainty of the position of the device at the extraction point we estimate 2 \% ($\sigma_{pos}$).
+\end{itemize}
+  
+This gives us a uncertainty on the cross section of:
 
 \begin{equation}
- CS_{LSRAM} = \frac{SEUs}{FluenceDUT} = \frac{513}{1.99\cdot10^{10}}== 2.6*10-8 
- \label{Cross_section}
+ \sigma_{CS} = \sqrt{\sigma_{ratio}²+\sigma_{lin}²+(\frac{1}{N_{SEU}})²+\sigma_{err}²+\sigma_{pos}²}
 \end{equation}
 
-To calculate the cross section from the micro SRAM, we preferable should have had more SEU before calculating the data, so to calculate the cross section we will look of the whole period of run1, to get more statistics. The cross section is then: 
+The calculated values for cross section per bit with uncertainty can be found in the table \ref{Cross_section_calc1}. The total number of bits in the SRAM are 622592 and in the micro SRAM there are 65536.
 
-\begin{equation}
- CS_{uSRAM} = \frac{SEUs}{FluenceDUT} = \frac{70}{1.11\cdot10^{11}}= 6.31*10-10 
-\end{equation}
+\begin{table}
+ \centering
+ \begin{tabular}{|l|l|l|l|}  \hline 
+ device & CS [$cm²$] & CS per bit [$cm²/bit$] & $\sigma_{CS} [cm²/bit]$ \\\hline\hline
+ Large SRAM & $2.6\cdot10^{-8}$ & $4.18\cdot10^{-14}$ & $7.29\cdot10^{-15}$ \\\hline
+ micro SRAM & $6.31\cdot10^{-10}$ & $9.62\cdot10^-{15}$ & $1.32\cdot10^{-15}$ \\\hline
+ \end{tabular}
+ \caption{Calculation of Cross section with uncertainty}
+ \label{Cross_section_calc1}
+\end{table}
 
-A maybe more interesting term to look at, is cross section per bit. We used a total of $16384*38 = 622592$ bit on the large SRAM and $2048*32 = 65536$ bit on the micro SRAM. This gives us,
-
-\begin{equation}
- CS_{LSRAM} = \frac{2.6*10^{-8}}{622592} = 4.18 *10^{-14}
-\end{equation}
-
-\begin{equation}
- CS_{uSRAM} = \frac{6.31*10^{-10}}{65536} = 9.62 *10^-{15}
-\end{equation}
+% \begin{equation}
+%  CS_{uSRAM} = \frac{SEUs}{FluenceDUT} = \frac{70}{1.11\cdot10^{11}}= 6.31\cdot10^{-10} 
+% \end{equation}
+% 
+% A maybe more interesting term to look at, is cross section per bit. We used a total of $16384*38 = 622592$ bit on the large SRAM and $2048*32 = 65536$ bit on the micro SRAM. This gives us,
+% 
+% \begin{equation}
+%  CS_{LSRAM} = \frac{2.6*10^{-8}}{622592} = 4.18 *10^{-14}
+% \end{equation}
+% 
+% \begin{equation}
+%  CS_{uSRAM} = \frac{6.31*10^{-10}}{65536} = 9.62 *10^-{15}
+% \end{equation}
 
 % Cross section for run1 was also calculated for reference. 
 % 
@@ -1845,8 +1870,8 @@ PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
 \FloatBarrier
 
 \subsubsection{Discussion on the results}
-The SRAM test gave us around the expected numbers of SEUs. We should have tried to run the test without going through the MSS. If we had tried to send data directly out from the FPGA, we would get rid of all the probelem with the MSS which stoppet working all the time.
-We had also quite many PLL errors which could be a rather big problem when the RCU2 will be mounted in the TPC. If the clock is not working, we would have a period where we don't have any data collection. And it is when there is much radiation, we want to collect data.
+The SRAM test gave us around the expected numbers of SEUs. We should have tried to run the test without going through the MSS. If we had tried to send data directly out from the FPGA, we would get rid of all the problems with the MSS which stopped working all the time.
+We had also quite many PLL errors which could be a rather big problem when the RCU2 will be mounted in the TPC. If the clock is not working, we would have a period where we don't have any data collection, and it is when there is much radiation we get the most interesting data.
 
 We didn't detect any current increase before a dose of 37 kRad, which is a really good result. The shift register design didn't gave us the result we wanted. We wanted to see if we detect any difference between SEUs detected/dose with different frequencies, to be able to distinguish between between SET and SEU in the register.
 
@@ -1873,12 +1898,12 @@ Through the PLL monitoring we got a total of 176 PLL loss through the first test
  \centering
  \begin{tabular}{|l|l|l|}  \hline 
  Device & Starter-kit1 & Starter-kit2  \\\hline\hline
- Nr. of re-power & 62 & 95  \\\hline
+ Nr. of power cycles & 62 & 95  \\\hline
  PLL1 loss & 22 & 3  \\\hline
  PLL2 loss & 116 & 136  \\\hline
  PLL3 loss & 60 & 69 \\\hline
  \end{tabular}
- \caption{Overview of restart of power and PLL lock loss}
+ \caption{Overview of power cycles and PLL lock loss}
  \label{PLL_loss}
 \end{table}
 
@@ -1886,10 +1911,11 @@ The first PLL loss occurred after a dose of 0,043 kRad for the first test and af
 
 We discovered on the first test, that the 0.1 $\ohm$ and 0.16 $\ohm$ resistors which was used, respectively on the 1.2 V and 3.3 V power source, where actually to high, since the maximum voltage the ADC could measure are 81.92 $\milli\volt$. When a latchup occurred the ADC was maxed, meaning we only knew that the voltage is above 81.9 V (current above 819 $\milli\ampere$, but not how much above. Therefore both of these resistors where replaced with a resistor of 0.025 $\ohm$ on the second starter-kit test.
 
-As for the test in OCL, we also got some drops in current. Always when the current drops the measured voltage for the 1.2 V power source would also drop, typically down to around 850 $\milli\volt$ (the 3.3 V power source is stable though). When this happens the communication through the serial port also fails, which is understandable since the power source has dropped 300 $\milli\volt$ bellow the specification for the \ac{IC}. Normally when we see a decrease in voltage, we see an increase in current or opposite, but in this case both drops. The only explanation for this are that the voltage drops first, causing processes in the SF2 to shut down, which results in decrease in current. The regulator controlling the 1.2 V power signal is placed right next to the SF2 chip, and it is therefore very exposed to radiation, and i would think that the regulator is the problem for this effect. (The regulator has not been tested for radiation before, because we are not using it in the RCU2 design). By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off and on, since this is power by the 3.3 V signal, the voltage and current goes back to what they were on startup. This was done manually done through the monitoring board, where we had made a function which turns the regulators off and on after 3 seconds. This function was used when we detected a latchup or a decrease in current/voltage. In total we had to restart the board because of latchup or decrease in current, 61 times on first test and 95 times on test2. 
+As for the test in OCL, we also got some drops in current. Always when the current drops the measured voltage for the 1.2 V power source would also drop, typically down to around 850 $\milli\volt$ (the 3.3 V power source is stable though). When this happens the communication through the serial port also fails, which is understandable since the power source has dropped 300 $\milli\volt$ bellow the specification for the \ac{IC}. Normally when we see a decrease in voltage, we see an increase in current or opposite, but in this case both drops. The only explanation for this are that the voltage drops first, causing processes in the SF2 to shut down, which results in decrease in current. The regulator controlling the 1.2 V power signal is placed right next to the SF2 chip, and it is therefore very exposed to radiation, and i would think that the regulator is the problem for this effect. (The regulator has not been tested for radiation before, because we are not using it in the RCU2 design).
+By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off and on, since this is powered by the 3.3 V signal, the voltage and current goes back to what they were on startup. This was done manually done through the monitoring board, where we had made a function which turns the regulators off and on again after 3 seconds. This function was used when we detected a latchup or a decrease in current/voltage. In total we had to restart the board because of latchup or decrease in current, 61 times on first test and 95 times on test2. 
 
 \subsubsection{SRAM}
-In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the results from the SRAM test after radiation of the two SF2 M2S050-FG484. In \ref{SRAM_starter-kit2} we can see a regularly drops downto 0 in the counter values, that are loss of communication with the SF2, probably caused by voltage drop or latchup as discussed in the previous subsection, we have the same phenomena for the first test as well, only the values didn't drop to 0, this can be seen as short flatness on the counter curve. A re-power of the board made the counters start again. This means that we have periods where we didn't get to measure the counter values, when the FPGA gets power again, the counter values are overwritten through the start up sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, this gives us allot of uncertainties when calculating cross section.
+In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the results from the SRAM test after radiation of the two SF2 M2S050-FG484. In \ref{SRAM_starter-kit2} we can see regularly drops down to 0 in the counter values, that are loss of communication with the SF2, probably caused by voltage drop or latchup as discussed in the previous subsection, we have the same phenomena for the first test as well, only the values didn't drop to 0, this can be seen as short flatness on the counter curve. A re-power of the board made the counters start again. This means that we have periods where we didn't get to measure the counter values, when the FPGA gets power again, the counter values are overwritten through the start up sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, this gives us allot of uncertainties when calculating cross section.
 
 \begin{figure}[!htbp]
 \centering
@@ -1927,30 +1953,124 @@ In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the re
  \label{SRAM_starter-kit2}
 \end{figure}
 
-We could also here find the cross section. But since we have so many drop outs, because of latchup, current drops and power cycles, we have a noteworthy amount of lost data. This means that the actually cross section would probably be a little higher then the calculated values. As we did when calculating cross section after the result from OCL, we want to find a period which are as linear and error free as possible. Therefore we calculated the cross section in between 7.8 kRad to 14 kRad for test1 and 4.2 to to 18.5 on test2 for the large SRAM. Since we had so few SEUs on the micro SRAM for test1, we increased the statistics by checking from 0 to 14.8 kRad, even though this gave us more down time due to errors. For the micro SRAM on test2 we checked for the same period as for the large SRAM in between 4.2 kRad and 18.5 kRad. 
+\paragraph{Cross section calculation} $\newline$
+As we did when calculating cross section after the result from OCL, we want to find a period which are as linear and error free as possible. Therefore we will calculate the cross section in between 7.8 kRad to 14.3 kRad for test1 and in between 4.2 kRad to 18.5 kRad on test2.
 
+To get as genuine value of the cross section as possible, we have to find the total fluence of when the test was working. That means that the fluence which was received when the test was stopped due to latchup, current drops and power cycles, has to be subtracted. By checking the log-files we have estimated time with no data to be 108 second in between 7.8 kRad and 14.3 kRad for test1 and the 342 in between 4.2 kRad and 18.5 kRad for test2. The flux in that period is known (see flux graph in appendix \ref{radiation_results}), which means that we can calculate the total fluence for the time without data collection. See table \ref{SRAM_data} for the calculated values.
 
-This gives us a cross section of:
+\begin{table}
+ \centering
+ \begin{tabular}{|l|l|l|l|l|l|}  \hline 
+ device & fluence start & fluence stop & fluence loss & total fluence & nr. of SEUs  \\\hline\hline
+ Large SRAM1 & $1.26\cdot10^{11}$ & $2.29\cdot10^{11}$ & $1.05\cdot10^{10}$ & $9.30\cdot10^{10}$ & 1874 \\\hline
+ micro SRAM1 & $1.26\cdot10^{11}$ & $2.29\cdot10^{11}$ & $1.05\cdot10^{10}$ & $9.30\cdot10^{10}$ & 77 \\\hline
+ Large SRAM2 & $6.70\cdot10^{11}$ & $2.92\cdot10^{11}$ & $3.26\cdot10^{10}$ & $1.92\cdot10^{11}$ & 3379 \\\hline
+ micro SRAM2 & $6.70\cdot10^{11}$ & $2.92\cdot10^{11}$ & $3.26\cdot10^{10}$ & $1.92\cdot10^{11}$ & 159 \\\hline
+ \end{tabular}
+ \caption{Fluence and SEUs overview for test 1 and 2}
+ \label{SRAM_data}
+\end{table}
+
+\FloatBarrier
+
+\paragraph{uncertainties}
+A number of uncertainties are present in the measurement
+
+\begin{itemize}
+  \item Since the number of SEUs detected are random in time and linearly dependent on the amount of incoming particles, the uncertainty can be given by Poisson distribution and is $\frac{1}{\sqrt{N_{SEU}}}$  \hfill
+  \item Uncertainties from data collection and estimates and assumption when doing calculation, like constant flux in periods. We estimate a uncertainty of 10 \% ($\sigma_{data}$).
+  \item From the uncertainty of the position of the device at the extraction point we estimate 2 \% ($\sigma_{pos}$).
+  \item For the fluence data given to us we will also have a little uncertainty, this is estimated to be about 2 \% ($\sigma_{flu}$).
+\end{itemize}
+  
+This gives us a uncertainty on the cross section of:
 
 \begin{equation}
- CS_{LSRAM} = \frac{SEUs}{FluenceDUT} = \frac{5466}{9.90\cdot10^{10}}= 4.51\cdot10^{-8}
- \label{Cross_section_sf2_tsl1}
+ \sigma_{CS} = \sqrt{(\frac{1}{N_{SEU}})²+\sigma_{data}²+\sigma_{pos}²+\sigma_{flu}²}
 \end{equation}
 
-\begin{equation}
- CS_{LSRAM} = \frac{SEUs}{FluenceDUT} = \frac{4175}{2.26\cdot10^{11}}= 1.85\cdot10^{-8}
- \label{Cross_section_sf2_tsl2}
-\end{equation}
+Then we can calculate the cross section per bit with uncertainty from the values in table \ref{SRAM_data}, knowing that we have 622592 bits in the large SRAM and 65536 bits in the micro SRAM.
+
+% \begin{equation}
+%  CS_{LSRAM1} = \frac{SEUs}{FluenceDUT} = \frac{1874}{9.30\cdot10^{10}}= 2.01\cdot10^{-8}
+%  \label{Cross_section_sf2_tsl1}
+% \end{equation}
+% 
+% \begin{equation}
+%  CS_{LSRAM2} = \frac{3379}{1.92\cdot10^{11}}= 1.76\cdot10^{-8}
+%  \label{Cross_section_sf2_tsl2}
+% \end{equation}
+% 
+% \begin{equation}
+%  CS_{uSRAM1} = \frac{77}{9.30\cdot10^{10}}= 8.28\cdot10^{-10}
+%  \label{Cross_section_sf2_tsl3}
+% \end{equation}
+% 
+% \begin{equation}
+%  CS_{uSRAM2} = \frac{159}{1.92\cdot10^{11}}= 8.28\cdot10^{-10}
+%  \label{Cross_section_sf2_tsl4}
+% \end{equation}
+
+\begin{table}
+ \centering
+ \begin{tabular}{|l|l|l|l|}  \hline 
+ device & CS [$cm²$] & CS per bit [$cm²/bit$] & $\sigma_{CS} [cm²/bit]$ \\\hline\hline
+ Large SRAM1 & $2.01\cdot10^{-8}$ & $3.22 *10^{-14}$ & $3.35\cdot10^{-15}$ \\\hline
+ Large SRAM2 & $1.76\cdot10^{-8}$ & $2.83 *10^{-14}$ & $2.94\cdot10^{-15}$ \\\hline
+ micro SRAM1 & $8.28\cdot10^{-10}$ & $1.26 *10^{-14}$ & $1.32\cdot10^{-15}$ \\\hline
+ micro SRAM2 & $8.28\cdot10^{-10}$ & $1.26 *10^{-14}$ & $1.31\cdot10^{-15}$ \\\hline
+ \end{tabular}
+ \caption{Calculation of Cross section with uncertainty}
+ \label{Cross_section_calc2}
+\end{table}
+
+
+% \begin{equation}
+%   CS_{LSRAM1} = \frac{2.01\cdot10^{-8}}{622592} = 3.22 *10^{-14}
+% \end{equation}
+% 
+% \begin{equation}
+%   CS_{LSRAM2} = \frac{1.76\cdot10^{-8}}{622592} = 2.83 *10^{-14}
+% \end{equation}
+% 
+% \begin{equation}
+%  CS_{uSRAM1} = \frac{8.28\cdot10^{-10}}{65536} = 1.26 *10^{-14}
+% \end{equation}
+% 
+% \begin{equation}
+%  CS_{uSRAM2} = \frac{8.28\cdot10^{-10}}{65536} = 1.26 *10^{-14}
+% \end{equation}
+
+
+  
+\FloatBarrier
 
 \subsubsection{Logic element}
+Through the test on the two starter-kit we run at 40, 80 and 160 Mhz. Which means that we should see some difference in upset detected by the shift register design.
+In table \ref{Shift_register_data} you can see a overview of all SEUs on the shift register design with a given frequency over a given time and dose.
+
+\begin{table}
+ \centering
+ \begin{tabular}
+  {|l|l|l|l|l|}  \hline 
+ Frequency & inverters in between & Received dose* & Shift register errors & SR errors/dose  \\\hline\hline
+ 40 Mhz & 4 & 8.52 & 51 & 5.99  \\\hline
+ 80 Mhz & 4 & 5.88 & 26 & 4.42 \\\hline
+ 40 Mhz & 0 & 4.18 & 19 & 4.54 \\\hline
+ 80 Mhz & 0 & 4.31 & 30 & 6.96 \\\hline
+ 160 Mhz & 0 & 9.78 & 32 & 3.27 \\\hline
+ \end{tabular}
+\caption{}
+\label{Shift_register_data}
+\end{table}
 
 
 \subsubsection{Programming limit test}
-
+The idea behind the programming limit test, was to see how far up in dose we could go before we couldn't program anymore. T
 
 \subsection{Other test at TSL}
 
-WE will also here 
+
 \FloatBarrier
 \chapter{Conclusion}
 
