@@ -93,16 +93,17 @@
 \contentsline {subsubsection}{Logic element}{68}{section*.121}
 \contentsline {subsubsection}{PLL and Latchup}{69}{section*.123}
 \contentsline {subsubsection}{Discussion on the results}{71}{section*.126}
-\contentsline {section}{\numberline {6.3}Results from TSL}{71}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}SF2 radiation test}{71}{subsection.6.3.1}
-\contentsline {subsubsection}{PLL and latchup}{72}{section*.127}
-\contentsline {subsubsection}{SRAM}{73}{section*.129}
-\contentsline {paragraph}{Cross section calculation}{73}{section*.132}
-\contentsline {paragraph}{uncertainties}{75}{section*.134}
-\contentsline {subsubsection}{Logic element}{76}{section*.136}
-\contentsline {subsubsection}{Programming limit test}{76}{section*.138}
-\contentsline {subsection}{\numberline {6.3.2}Other test at TSL}{76}{subsection.6.3.2}
-\contentsline {chapter}{\numberline {7}Conclusion}{77}{chapter.7}
-\contentsline {chapter}{Appendix \numberline {A}Some Appendix}{78}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Beam setup data}{78}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Radiation results}{78}{section.a.A.2}
+\contentsline {section}{\numberline {6.3}Results from TSL}{72}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}SF2 radiation test}{72}{subsection.6.3.1}
+\contentsline {subsubsection}{PLL and latchup}{73}{section*.127}
+\contentsline {subsubsection}{SRAM}{75}{section*.129}
+\contentsline {paragraph}{Cross section calculation}{75}{section*.132}
+\contentsline {paragraph}{uncertainties}{76}{section*.134}
+\contentsline {subsubsection}{Logic element}{77}{section*.136}
+\contentsline {subsubsection}{Programming limit test}{77}{section*.138}
+\contentsline {subsection}{\numberline {6.3.2}Other test at TSL}{78}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Discussion of the results}{78}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Conclusion}{79}{chapter.7}
+\contentsline {chapter}{Appendix \numberline {A}Some Appendix}{80}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Beam setup data}{80}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Radiation results}{80}{section.a.A.2}

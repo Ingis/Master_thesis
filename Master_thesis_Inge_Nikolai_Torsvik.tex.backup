@@ -1870,12 +1870,13 @@ PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
 \FloatBarrier
 
 \subsubsection{Discussion on the results}
-The SRAM test gave us around the expected numbers of SEUs. We should have tried to run the test without going through the MSS. If we had tried to send data directly out from the FPGA, we would get rid of all the problems with the MSS which stopped working all the time.
-We had also quite many PLL errors which could be a rather big problem when the RCU2 will be mounted in the TPC. If the clock is not working, we would have a period where we don't have any data collection, and it is when there is much radiation we get the most interesting data.
+The SRAM test gave us around the expected numbers of SEUs. We should have tried to run the test without going through the MSS. If we had tried to send data directly out from the FPGA, we would get rid of all the problems with the MSS.
+
+We had also quite many PLL errors which could be a rather big problem when the RCU2 will be mounted in the TPC. If the clock is not working, we would have a period where we don't have any data collection, and it is when there is most radiation we are most interested in the data.
 
 We didn't detect any current increase before a dose of 37 kRad, which is a really good result. The shift register design didn't gave us the result we wanted. We wanted to see if we detect any difference between SEUs detected/dose with different frequencies, to be able to distinguish between between SET and SEU in the register.
 
-All in all the first radiation test of the SF2 did go quite good. We had some PLL errors, but we had a feeling that this would be a problem, so it wasn't any surprise. A way to counter this PLL problem, could maybe be to use PLLs in parallel, so that if one of them falls out, the other steps in.  
+All in all the first radiation test of the SF2 did go quite good. We had some PLL errors, but we had a feeling that this would be a problem, so it wasn't any surprise. A way to counter this PLL problem, could maybe be to use PLLs in parallel, so that if one of them falls out, the other steps in. The cross section per bit for the SRAM were around the same magnitude as on other SRAM which has been tested \cite{arild_master} and \cite{roed_doctor}, which supports the results.  
 
 \FloatBarrier
 \section{Results from TSL}
@@ -1892,7 +1893,7 @@ Instead of using the current measurement board as described in section \ref{curr
 Also instead of running the Microcontroller subsystem in debug mode, as we did in OCL, we were running in release mode. This means that the MSS was running whenever we got power on the kit.
 
 \subsubsection{PLL and latchup}
-Through the PLL monitoring we got a total of 176 PLL loss through the first test and 205 PLL loss from the second test, whenever we lost lock on PLL1 we also got a loss on PLL2, since this PLL is using the clock from PLL1 as source, therefore these hasn't been taken into account in the total lock loss. The distribution over the three PLLs lock signals can be seen in table \ref{PLL_loss}.
+We monitored three PLL lock signal though the test. We got a total of 176 PLL lock loss through the first test and 205 PLL loss from the second test, whenever we lost lock on PLL1 we also got a loss on PLL2, since this PLL is using the clock from PLL1 as source, therefore these hasn't been taken into account in the total lock loss. The distribution over the three PLLs lock signals can be seen in table \ref{PLL_loss}.
 
 \begin{table}
  \centering
@@ -1907,9 +1908,42 @@ Through the PLL monitoring we got a total of 176 PLL loss through the first test
  \label{PLL_loss}
 \end{table}
 
-The first PLL loss occurred after a dose of 0,043 kRad for the first test and after 1.332 kRad on the second, which is a fairly low dose. This means that PLLs could be a problem for the SF2 design. If possible, we should try and not use PLLs, or have some kind of redundancy, when using these. 
+The first PLL loss occurred after a dose of 0,043 kRad for the first test and after 1.332 kRad on the second, which is a fairly low dose. This means that PLLs could be a problem for the SF2 design. If possible, we should try and not use PLLs, or have some kind of redundancy, when using these.
 
-We discovered on the first test, that the 0.1 $\ohm$ and 0.16 $\ohm$ resistors which was used, respectively on the 1.2 V and 3.3 V power source, where actually to high, since the maximum voltage the ADC could measure are 81.92 $\milli\volt$. When a latchup occurred the ADC was maxed, meaning we only knew that the voltage is above 81.9 V (current above 819 $\milli\ampere$, but not how much above. Therefore both of these resistors where replaced with a resistor of 0.025 $\ohm$ on the second starter-kit test.
+We can find a cross section for PLL lock loss. The total fluence for the two test are $2.39\cdot10^{11}$ and $2.93\cdot10^{11}$, which gives us a cross section per PLL to be 
+
+\begin{equation}
+ CS = \frac{\frac{PLL loss}{3}}{Fluence} = \frac{176}{2.39\cdot10^{11}} = 7.36 *10^{-10}
+\end{equation}
+
+\begin{equation}
+ CS = \frac{PLL loss}{Fluence} = \frac{205}{2.93\cdot10^{11}} = 7.00 *10^{-10}
+\end{equation}
+
+We will also have some uncertainty in the measurement,
+
+\begin{itemize}
+  \item Since the number of errors detected are random in time and linearly dependent on the amount of incoming particles, the uncertainty can be given by Poisson distribution and is $\frac{1}{\sqrt{N_{err}}}$  \hfill
+  \item Downtime due to power cycle of the board during a run, we estimate 5 \% ($\sigma_{pow}$) uncertainty.
+  \item From the uncertainty of the position of the device at the extraction point we estimate 2 \% ($\sigma_{pos}$).
+  \item For the fluence measurement will also have a little uncertainty, this is estimated to be about 2 \% ($\sigma_{flu}$).
+\end{itemize}
+
+\begin{equation}
+ \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})²+\sigma_{pow}²+\sigma_{pos}²+\sigma_{flu}²}
+\end{equation}
+
+this gives the cross section with uncertainty to be:
+
+\begin{equation}
+ CS  = 7.36 *10^{-10} ± 
+\end{equation}
+
+\begin{equation}
+ CS = 7.00 *10^{-10}
+\end{equation}
+
+We discovered on the first test, that the 0.1 $\ohm$ and 0.16 $\ohm$ resistors which was used, respectively on the 1.2 V and 3.3 V power source, where to high, since the maximum voltage the ADC could measure are 81.92 $\milli\volt$. When a latchup occurred the ADC was maxed, meaning we only knew that the voltage is above 81.9 V (current above 819 $\milli\ampere$, but not how much above. Therefore both of these resistors where replaced with a resistor of 0.025 $\ohm$ on the second starter-kit test.
 
 As for the test in OCL, we also got some drops in current. Always when the current drops the measured voltage for the 1.2 V power source would also drop, typically down to around 850 $\milli\volt$ (the 3.3 V power source is stable though). When this happens the communication through the serial port also fails, which is understandable since the power source has dropped 300 $\milli\volt$ bellow the specification for the \ac{IC}. Normally when we see a decrease in voltage, we see an increase in current or opposite, but in this case both drops. The only explanation for this are that the voltage drops first, causing processes in the SF2 to shut down, which results in decrease in current. The regulator controlling the 1.2 V power signal is placed right next to the SF2 chip, and it is therefore very exposed to radiation, and i would think that the regulator is the problem for this effect. (The regulator has not been tested for radiation before, because we are not using it in the RCU2 design).
 By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off and on, since this is powered by the 3.3 V signal, the voltage and current goes back to what they were on startup. This was done manually done through the monitoring board, where we had made a function which turns the regulators off and on again after 3 seconds. This function was used when we detected a latchup or a decrease in current/voltage. In total we had to restart the board because of latchup or decrease in current, 61 times on first test and 95 times on test2. 
@@ -2066,10 +2100,35 @@ In table \ref{Shift_register_data} you can see a overview of all SEUs on the shi
 
 
 \subsubsection{Programming limit test}
-The idea behind the programming limit test, was to see how far up in dose we could go before we couldn't program anymore. T
+The idea behind the programming limit test, was to see how far up in dose we could go before we couldn't program anymore. We were supposed to use the same test setup as used when testing the two other starter-kit, so we could have approximately the same current, and the ability to shut it down when needed. But when we where supposed to test this, things didn't seems to work, and we decided that we would just try and power cycle regularly. We tried to increased the dose of approx 1 kRad, for each time trying to program.
+
+We tried to program after a dose of 1.16 kRad, 2.45 kRad and 3.67 kRad. The two first time worked fine, but the last time it failed.
 
 \subsection{Other test at TSL}
+The other test at TSL includes SERDES, trigger and clock and data recovery and latchup detection under radiation of RCU2.
 
+When exposing the optical receiver, which receives the timing, trigger and clock signal, we saw PLL lock lossese all the time. This means that the current setup which are now being used is way to bad, and something needs to be done to fix this.
+
+Another discovery done through these test, is that by reducing the voltage on the 1.2 V power source, we saw a reduction in latchups, without any reduced functionality.
+
+The serdes test gave us good result, which means that the current setup is good enough.
+
+% As for the SF2 test on the starter-kits, we got allot of latchup, these has to be countered by taking a power cycle on the board. The same setup for the starter-kits where used, with the monitoring board and the PCB with \emph{INA226}, to measure current and power cycle the RCU2. A discovery we did here is that when the voltage did fall down 50-100 mV (which happens when we had a few latchups), we saw that the latches didn't come as regularly.
+% 
+% Another test were tried, where we reduced the 1.2 Voltage to 1.1 Voltage by changing a resistor on the RCU2. We saw that time between each latchup increased, and we didn't had any reduced functionality on the SF2, the program worked as good as it did before.
+% 
+% The SERDES test involves sending a known data sequence to the RCU2 with a \emph{Xilinx Virtex-7 FPGA VC709 Connectivity Kit}. The data received by the RCU2, is sent back to the xilinix connectivity kit, where the data is checked if it is the same as what was sent out.
+% 
+% On the timing, trigger and clock test, the timing,trigger and clock signal is sent in to the SF2, where the signal is decoded, giving us a 40 Mhz clock, and a data signal. The data signal contains the trigger signal. A known trigger signal is sent with different frequencies, and the signal is detected by the SF2, which counts the number of trigger received. There is also used hamming decoding here, which are able to detect and fix 1 bit error, and detect 2 bit errors. This events are also counted. 
+
+\subsection{Discussion of the results}
+We had two rather disturbing results through this test.
+
+When exposing the SF2-chip and checking the lock signal for the PLL we got , but this we already knew for our test at OCL. A more disturbing issue is when we moved the beam towards the optical receiver. When we did this, we got almost constantly errors. This means either that the optical receiver is very bad, or the MAX3748 chip, which we used as a limiting amplifier, aren't able to do its job, when the input signal is bad. Maybe ADN2814, would perform better in this aspect. Either way, a new solution or a fix has to be done to make up for this problem. 
+
+A issues that we uncounted here, and not so much in OCL, is latchup. We got regularly latchup during our run, which means that a shut down is required to set the board in normal operation again. A solution for this problem has already been set in emotion. By using \emph{INA210} to amplify a voltage over a shunt resistor on each power signal, and use \emph{TLV3011} to compare against a voltage limit. If the voltage limit is exceeded all regulators are turned off, setting the board off. The problem here is that when we actually have allot of radiation, and the probability of a latchup is high, that is when we are most interested in data. A solution here could maybe tolerate one or two latchup, or 
+
+The third issue is the clock and data recovery setup. We experienced some errors when exposing the SF2, but 
 
 \FloatBarrier
 \chapter{Conclusion}
