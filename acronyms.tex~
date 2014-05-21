@@ -28,8 +28,7 @@
 \acro{TTC}{Timing, Trigger and Control}
 \acro{TPC}{Time Projection Chamber}
 \acro{LVPECL}{Low Voltage Positive Emitter Coupled Logic}
-\acro{RAM}{Random access memory}
-\acro{SRAM}{static RAM}
+\acro{SRAM}{Static Random Access Memory}
 \acro{PM-tube}{PhotoMultiplier Tube}
 \acro{TID}{Total Ionizing Dose}
 \acro{JTAG}{Joint Test Action Group}
@@ -44,10 +43,11 @@
 \acro{CMOS}{Complementary Metal Oxide Semiconductor}
 \acro{DCS}{Control System board}
 \acro{SIU}{Source Interface Unit}
-\acro{PASA}{charge Sensitive Amplifier/Shaper}
+\acro{PASA}{charge Sens itive Amplifier/Shaper}
 \acro{ALTRO}{Alice Tpc ReadOut}
 \acro{DDL}{Detect Data Link}
 \acro{RadMon}{Radiation Monitor}
 \acro{TSL}{The Svedberg Laboratory}
 \acro{MSS}{Microcontroller SubSystem}
+\acro{WSR}{Windowed Shift Register}
 \end{acronym}
