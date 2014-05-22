@@ -20,7 +20,7 @@
 \BOOKMARK [2][-]{subsection.3.4.1}{Single Events Effects SEE}{section.3.4}% 20
 \BOOKMARK [2][-]{subsection.3.4.2}{Accumulative Effects}{section.3.4}% 21
 \BOOKMARK [2][-]{subsection.3.4.3}{The TPC radiation environment}{section.3.4}% 22
-\BOOKMARK [0][-]{chapter.4}{Preparations for Testing}{}% 23
+\BOOKMARK [0][-]{chapter.4}{Preparations for Radiation Testing}{}% 23
 \BOOKMARK [1][-]{section.4.1}{Test methodology}{chapter.4}% 24
 \BOOKMARK [1][-]{section.4.2}{The Tested Components}{chapter.4}% 25
 \BOOKMARK [2][-]{subsection.4.2.1}{TPS51200}{section.4.2}% 26
@@ -32,7 +32,7 @@
 \BOOKMARK [2][-]{subsection.4.2.7}{ADN2814 and MAX3748}{section.4.2}% 32
 \BOOKMARK [2][-]{subsection.4.2.8}{INA210}{section.4.2}% 33
 \BOOKMARK [2][-]{subsection.4.2.9}{TLV3011}{section.4.2}% 34
-\BOOKMARK [2][-]{subsection.4.2.10}{All the test boards}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.10}{All of the test boards}{section.4.2}% 35
 \BOOKMARK [1][-]{section.4.3}{Software}{chapter.4}% 36
 \BOOKMARK [1][-]{section.4.4}{SmartFusion2}{chapter.4}% 37
 \BOOKMARK [2][-]{subsection.4.4.1}{SRAM test}{section.4.4}% 38
@@ -68,6 +68,8 @@
 \BOOKMARK [2][-]{subsection.6.3.2}{Other test at TSL}{section.6.3}% 68
 \BOOKMARK [2][-]{subsection.6.3.3}{Discussion of the results}{section.6.3}% 69
 \BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 70
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Some Appendix}{}% 71
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Radiation Results}{}% 71
 \BOOKMARK [1][-]{section.a.A.1}{Beam setup data}{Appendix.a.A}% 72
-\BOOKMARK [1][-]{section.a.A.2}{Radiation results}{Appendix.a.A}% 73
+\BOOKMARK [1][-]{section.a.A.2}{Radiation Results from OCL}{Appendix.a.A}% 73
+\BOOKMARK [1][-]{section.a.A.3}{Radiation Results from TSL}{Appendix.a.A}% 74
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Current measurement board tutorial}{}% 75
