@@ -10,9 +10,9 @@
 \contentsline {subsubsection}{Why upgrade RCU}{8}{section*.34}
 \contentsline {subsubsection}{The new Readout Control Unit, the RCU2}{10}{section*.35}
 \contentsline {chapter}{\numberline {3}Radiation and Radiation effect on Semiconductor devices}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Interaction of Radiation With Matter}{11}{section.3.1}
+\contentsline {section}{\numberline {3.1}Interaction of Radiation with Matter}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}Charge particle and their Interaction with Matters}{12}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Stopping Power}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}Stopping Power}{13}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Specific Stopping Power}{13}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Linear Energy Transfer LET}{14}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Neutral particle and their Interaction with Matter}{15}{section.3.3}
@@ -89,7 +89,7 @@
 \contentsline {subsubsection}{Discussion of the result}{67}{section*.114}
 \contentsline {subsection}{\numberline {6.2.3}Test results SF2}{68}{subsection.6.2.3}
 \contentsline {subsubsection}{SRAM}{68}{section*.115}
-\contentsline {paragraph}{uncertainties}{70}{section*.118}
+\contentsline {paragraph}{Uncertainties}{70}{section*.118}
 \contentsline {subsubsection}{Logic element}{70}{section*.120}
 \contentsline {subsubsection}{PLL and Latchup}{71}{section*.122}
 \contentsline {subsubsection}{Discussion on the results}{73}{section*.125}
@@ -98,7 +98,7 @@
 \contentsline {subsubsection}{PLL and latchup}{75}{section*.126}
 \contentsline {subsubsection}{SRAM}{77}{section*.128}
 \contentsline {paragraph}{Cross section calculation}{78}{section*.131}
-\contentsline {paragraph}{uncertainties}{78}{section*.133}
+\contentsline {paragraph}{Uncertainties}{78}{section*.133}
 \contentsline {subsubsection}{Logic element}{79}{section*.135}
 \contentsline {subsubsection}{Programming limit test}{80}{section*.137}
 \contentsline {subsection}{\numberline {6.3.2}Other test at TSL}{80}{subsection.6.3.2}
