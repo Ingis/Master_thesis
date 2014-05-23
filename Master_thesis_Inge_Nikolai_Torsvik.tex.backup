@@ -348,7 +348,7 @@ If we have a particle with a given energy passing into a material, where $dE$ is
 Then $-\frac{dE}{dx}$ is the stopping power or also called the "rate" of energy loss for the particle.
 The stopping power depends on the type and energy of the radiation and on the properties of the material it passes.
 
-The classical expression that describe the stopping power is the $\emph{Bethe Bloch formula}$, and is written as you can see in equation \ref{stopping_power}.
+The classical expression that describe the stopping power is the \emph{Bethe Bloch formula}, and is written as you can see in equation \ref{stopping_power}.
 
 \begin{equation}
 S = - \frac{dE}{dx} = \frac{n_A Z_A Z^2 e^4}{4 \pi \epsilon_o m_e V^2}\Bigg[\ln\Big(\frac{2 m_e \upsilon^2}{\overline{I}}\Big)-\ln\Big(1-\frac{\upsilon^2}{c^2}\Big)-\frac{\upsilon^2}{c^2}\Bigg]
@@ -1566,7 +1566,7 @@ This board is quite temperature dependent, a small increase in temperature, can 
 \subsubsection{ADN2814}
 As mentioned in \ref{limiting_amp}, we needed a SF2 starter-kit and the modified MIC69302WU board with a 3.3 V output voltage to test and supply this \ac{IC}.
 
-The current didn't change before a dose of 200 kRad had been received, but we got a clock error at a dose of $\approx$ 11 kRad, and a data error after a dose of $\approx$ 8 kRad, see figure \ref{ADN2814_curr} and \ref{ADN2814_tot}.
+The current didn't change before a dose of 200 kRad had been received, but we got a clock error at a dose of $\sim$ 11 kRad, and a data error after a dose of $\sim$ 8 kRad, see figure \ref{ADN2814_curr} and \ref{ADN2814_tot}.
 
 \begin{figure}[!htbp]
   \centering
@@ -1697,7 +1697,7 @@ Every \acp{IC} which was tested worked after a dose of 6 kRad, which is three ti
 
 \subsection{Test results SF2}
 In this subsection the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts of SF2 which were tested will be presented for them self, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off and on some times during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup.
-We did a power cycle of the board, and the current went back to a normal level. The test result presented are divided into before and after the power cycle, hereafter called run1 and run2. The shift-register design made for testing of the logical element, see section \ref{logic_Element}, was only used in run2. After a dose of $\approx$ 8 kRad on run2, the current increased again. We tried another power cycle, but this time it was permanently. The total dose after radiation was $\approx$ 45 kRad.
+We did a power cycle of the board, and the current went back to a normal level. The test result presented are divided into before and after the power cycle, hereafter called run1 and run2. The shift-register design made for testing of the logical element, see section \ref{logic_Element}, was only used in run2. After a dose of $\sim$ 8 kRad on run2, the current increased again. We tried another power cycle, but this time it was permanently. The total dose after radiation was $\sim$ 45 kRad.
 
 \FloatBarrier
 \subsubsection{SRAM}
@@ -2084,7 +2084,7 @@ Then we can calculate the cross section per bit with uncertainty from the values
  Large SRAM1 & $2.01\cdot10^{-8}$ & $3.22 *10^{-14}$ & $3.35\cdot10^{-15}$ \\\hline
  Large SRAM2 & $1.76\cdot10^{-8}$ & $2.83 *10^{-14}$ & $2.94\cdot10^{-15}$ \\\hline
  micro SRAM1 & $8.28\cdot10^{-10}$ & $1.26 *10^{-14}$ & $1.32\cdot10^{-15}$ \\\hline
- micro SRAM2 & $8.28\cdot10^{-10}$ & $1.26 *10^{-14}$ & $1.31\cdot10^{-15}$ \\\hline
+ micro SRAM2 & $8.28\cdot10^{-10}$ & $1.26 *10^{-14}$ & $1.32\cdot10^{-15}$ \\\hline
  \end{tabular}
  \caption{Calculation of Cross section with uncertainty}
  \label{Cross_section_calc2}
@@ -2119,7 +2119,7 @@ In table \ref{Shift_register_data} you can see an overview of all SEU on the shi
  \centering
  \begin{tabular}
   {|l|l|l|l|l|}  \hline 
- Frequency & inverters in between & Fluence & Shift register upset & SEU/fluence (CS) \\\hline\hline
+ Frequency & inverters & Fluence & shift-register upset & SEU/fluence (CS) \\\hline\hline
  40 MHz & 4 & $1.40\cdot10^{11}$ & 51 & $3.65\cdot10^{-10}$  \\\hline
  80 MHz & 4 & $9.90\cdot10^{10}$ & 26 & $2.63\cdot10^{-10}$ \\\hline
  40 MHz & 0 & $6.16\cdot10^{10}$ & 19 & $5.19\cdot10^{-10}$ \\\hline
@@ -2134,18 +2134,33 @@ The results presented in table \ref{Shift_register_data} are quite unexpected. W
 Maybe the reason for this is that we had to low statistics. If we had run in the respectively frequencies for a longer time or with a higher flux, we would maybe see some other results.
 
 \subsubsection{Programming limit test}
-The idea behind the programming limit test was to see how far up in dose we could go before we couldn't program anymore. We were supposed to use the same test setup as used when testing the two other starter-kits, so we could have approximately the same current, and the ability to shut it down when needed. But when we were supposed to test this, things didn't seems to work, and we decided that we would just try and power cycle regularly. We tried to increase the dose of approximately 1 kRad for each time trying to program.
+The idea behind the programming limit test was to see how far up in dose we could go before we couldn't program anymore. We were supposed to use the same test setup as used when testing the two other starter-kits so that we would have approximately the same current, and the ability to shut it down when needed. But we didn't managed to get the current small PCB with INA226 to work. Therefore we decided that we would just power cycle regularly during our test and increase the dose of approximately 1 kRad for each time trying to program.
 
-We tried to program after a dose of 1.16 kRad, 2.45 kRad and 3.67 kRad. The two first times worked fine, but the last time it failed.
+We tried to program after a dose of 1.20 kRad, 2.54 kRad and 3.80 kRad. The two first times worked fine, but the last time it failed.
 
-\subsection{Other test at TSL}
-The other test at TSL includes SERDES, trigger and clock and data recovery and latchup detection under radiation of RCU2.
+\subsection{Other Test at TSL}
+The other test at TSL includes SERDES and clock and data recovery and latchup detection under radiation of RCU2.
 
-When exposing the SF2 chip, and using the clock form clock and data recovery into the PLLs, we saw PLL around the same cross section as for the test with the starter-kits, where we was using an internal crystal. But when we exposed the optical receiver, which receives the timing, trigger and clock signal, we saw PLL lock losses all the time, which is quite bad. This means that we have to find out whats the reason for this problem, is it the optical receiver or the limiting amplifier which fails. More tests have to be done on this area, and a new solution to fix this problem or at least reduce the problem has to be found.
+A breif introduction in how this were tested, and the setup will be explained:
 
-Another discovery done through these test, is that by reducing the voltage on the 1.2 V power source, we saw an increase in time between each latchup. Meaning that we could reduce number of latchups in our design, by only reducing the the 1.2 V to around 1.1 V, or maybe even lower.
+The SERDES test involves sending data through a optical transceiver with a speed of 2.215 Gbps back and forth from the RCU2 and a \emph{Xilinx Virtex-7 FPGA VC709 Connectivity Kit}.
+The test works in the way that a known pattern is sent from the Xilinix connectivity kit to the RCU2, and the RCU2 are set to echo back the received pattern to the Xilinx kit. The Xilinx FPGA checks if the data returned data pattern is equal the transmitted. If the pattern is not equal a counter will be incremented.
 
-The SERDES test gave us good result, didn't give us any bad result. We got our first error after ??seconds, which means that the current setup for the SERDES is good enough.
+The Clock and data recovery and trigger test were tested at the same time.
+To explain how the Clock and data recovery test worked, a little explanation on how the hardware setup is done is required.
+A optical Manchester decoded signal containing clock and data, is sent to the RCU2. On the RCU2 there is a optical receiver which receives the Manchester signal, but the received signal may vary, and is not so stable, therefore a limiting amplifier is used to make a more stable version of the signal. MAX3748 is used for that purpose (which is one of the components tested through this work). Then the stable signal coming from the limiting amplifier is sent in to the SF2 FPGA, where clock and trigger information is encoded, giving us a 40 MHz clock, and data signal. The clock signal is then sent into two different PLLs, and the PLL lock signal for both PLls is checked for a falling edge. The idea behind using two PLLs, is to distinguish between PLL error and error in the incoming signal. If both of the PLLs looses lock at the same time we can assume that we have an error with the incoming signal and if only one of the PLLs losses lock, then we have a PLL error.
+The received data signal contains a known trigger sequence, and a vhdl code is made to check for the trigger signal. Every time the trigger pattern is detected a counter is incremented. PLL lock data and trigger counter are sent to the MSS, where data is sent serial to a computer. On the computer a program was running taking in data from the serial port, and logging data every seconds.
+
+For the SERDES test we exposed both the SF2 and the optical transceiver which receives and sends data. 
+For both of the test we detected few errors, less than 10 errors with a fluence of $3.18\cdot10^{11}$ when exposing the SF2 chip, and less than 5 errors when exposing the optical transceiver with a fluence of $3.6\cdot10^{11}$. This means that the SERDES will most likely not be a problem for our design.
+
+For the Clock and data recovery test, we exposed both the SF2 and the optical receiver.
+When we exposed the SF2 we received PLL lock loss with around the same frequency as for the test with the Starter-kits, we got a cross section of $2.3\cdot10^{-10}\centi\meter²$ Almost all the PLL errors was defined as PLL lock loss due to bad PLLs. But when we started to expose the optical receiver, we detected PLL lock losses all the time, which is quite bad, we got a cross section of $6.9\cdot10^{-9}\centi\meter²$.
+This means that we have to find out whats the reason for this problem, is it the optical receiver or the limiting amplifier which fails. More tests have to be done on this area, and a new solution to fix this problem or at least reduce the problem has to be found.
+
+For the latchup test on the RCU2, we got a cross section for latchup to be $8.5\cdot10^{-10}\centi\meter²$. But we did a discovery while running the beam. When we received a few latchups, the 1.2 Voltage started to reduce a little, when this happened, we saw a tendency to have less latchups.
+We did a separated test on the RCU2, where we reduced the 1.2 Voltage to 1.1 V by changing a resistor on the board. The test showed us that we got a reduction to a cross section of $1.7\cdot10^{-10}\centi\meter²$, which is a reduction of \sim 5 from previous. 
+More test on this area should be performed, to see how far down in voltage we could go before things stopped working, and if the latchup problem could be reduced even more.
 
 % As for the SF2 test on the starter-kits, we got allot of latchup, these has to be countered by taking a power cycle on the board. The same setup for the starter-kits where used, with the monitoring board and the PCB with \emph{INA226}, to measure current and power cycle the RCU2. A discovery we did here is that when the voltage did fall down 50-100 mV (which happens when we had a few latchups), we saw that the latches didn't come as regularly.
 % 
@@ -2161,6 +2176,8 @@ We had two rather disturbing results through this test.
 When exposing the SF2-chip and checking the lock signal for the PLL we got a noticeable amount of PLL lock loss, but this we already knew for our test at OCL. A more disturbing issue is when we moved the beam towards the optical receiver we got almost constantly PLL lock loss error. This means either that the optical receiver is able to do its job under, or the MAX3748 chip, which we used as a limiting amplifier, aren't able to do its job, when the input signal is bad. Maybe ADN2814, would perform better in this aspect. Either way, a new solution or a fix has to be done to make up for this problem. 
 
 A issues that we uncounted here, and not so much in OCL, is latchup. We got regularly latchup during our run, which means that a shutdown is required to set the board in normal operation again. A solution for this problem has already been set in emotion. By using \emph{INA210} to amplify a voltage over a shunt resistor on each power signal, and use \emph{TLV3011} to compare against a voltage limit. If the voltage limit is exceeded, all regulators are turned off, setting the board off. The problem here is that when we actually have allot of radiation, and the probability of a latchup is high, that is when we are most interested in data.
+
+The SRAM test 
 
 \FloatBarrier
 \chapter{Conclusion}
