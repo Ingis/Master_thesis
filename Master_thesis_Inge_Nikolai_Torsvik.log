@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  22 MAY 2014 20:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.2)  23 MAY 2014 09:24
 entering extended mode
 **Master_thesis_Inge_Nikolai_Torsvik.tex
 ("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.tex"
@@ -1077,11 +1077,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
 
 [46 <C:/Users/Inge Nikolai/Master-thesis/figures/experiment_setup.pdf>]
 [47 <C:/Users/Inge Nikolai/Master-thesis/figures/experiment_area.jpg>] [48]
-Overfull \hbox (96.16493pt too wide) in paragraph at lines 1114--1118
-\OT1/cmr/m/n/12 third pe-riod, the fo-cus was mainly the [][] starer-kit, but $
-\OML/cmm/m/it/12 INA\OT1/cmr/m/n/12 210[]\OML/cmm/m/it/12 ; INA\OT1/cmr/m/n/12 
-210[]\OML/cmm/m/it/12 ; TLV\OT1/cmr/m/n/12 3011[]\OML/cmm/m/it/12 andTLV\OT1/cm
-r/m/n/12 3011[]$
+Overfull \hbox (100.73433pt too wide) in paragraph at lines 1114--1118
+\OT1/cmr/m/n/12 third pe-riod, the fo-cus was mainly the [][] starter-kit, but 
+$\OML/cmm/m/it/12 INA\OT1/cmr/m/n/12 210[]\OML/cmm/m/it/12 ; INA\OT1/cmr/m/n/12
+ 210[]\OML/cmm/m/it/12 ; TLV\OT1/cmr/m/n/12 3011[]\OML/cmm/m/it/12 andTLV\OT1/c
+mr/m/n/12 3011[]$
  []
 
 [49] <figures/Blue_hall.png, id=1159, 1025.8325pt x 653.44125pt>
@@ -1337,7 +1337,7 @@ File: figures/1v2_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_1.png used on input line 
-2230.
+2228.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
 <figures/3v3_current_dose_sf2_1.png, id=1550, 422.32782pt x 316.18124pt>
@@ -1345,14 +1345,14 @@ File: figures/3v3_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_1.png used on input line 
-2235.
+2233.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
 <figures/cycles_dose_sf2_1.png, id=1551, 422.32782pt x 316.18124pt>
 File: figures/cycles_dose_sf2_1.png Graphic file (type png)
 
 <use figures/cycles_dose_sf2_1.png>
-Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2245.
+Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2243.
 
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
@@ -1360,7 +1360,7 @@ Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2245.
 File: figures/cycles_dose_sf2_2.png Graphic file (type png)
 
 <use figures/cycles_dose_sf2_2.png>
-Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2250.
+Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2248.
 
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
@@ -1368,21 +1368,21 @@ Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2250.
 File: figures/flux_vs_time_1.png Graphic file (type png)
 
 <use figures/flux_vs_time_1.png>
-Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2258.
+Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2256.
 (pdftex.def)             Requested size: 426.79135pt x 319.53351pt.
 
 <figures/flux_vs_time_2.png, id=1554, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_2.png Graphic file (type png)
 
 <use figures/flux_vs_time_2.png>
-Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2265.
+Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2263.
 (pdftex.def)             Requested size: 426.79135pt x 319.53351pt.
 
 <figures/flux_all_3.png, id=1555, 422.32782pt x 316.18124pt>
 File: figures/flux_all_3.png Graphic file (type png)
 
 <use figures/flux_all_3.png>
-Package pdftex.def Info: figures/flux_all_3.png used on input line 2272.
+Package pdftex.def Info: figures/flux_all_3.png used on input line 2270.
 (pdftex.def)             Requested size: 426.79135pt x 319.53351pt.
 
 <figures/1v2_current_dose_sf2_2.png, id=1559, 422.32782pt x 316.18124pt>
@@ -1390,7 +1390,7 @@ File: figures/1v2_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_2.png used on input line 
-2286.
+2284.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
 
 <figures/3v3_current_dose_sf2_2.png, id=1560, 422.32782pt x 316.18124pt>
@@ -1398,7 +1398,7 @@ File: figures/3v3_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_2.png used on input line 
-2291.
+2289.
 (pdftex.def)             Requested size: 209.1301pt x 156.5705pt.
  [83
 
@@ -1420,19 +1420,19 @@ Appendix B.
 [90
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2307.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2305.
  [91]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2307.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2305.
 
 ("C:\Users\Inge Nikolai\Master-thesis\Master_thesis_Inge_Nikolai_Torsvik.aux"
 ("C:\Users\Inge Nikolai\Master-thesis\acronyms.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2307.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2307.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2305.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2305.
 
 Package rerunfilecheck Info: File `Master_thesis_Inge_Nikolai_Torsvik.out' has 
 not changed.
 (rerunfilecheck)             Checksum: 963985673267BAE8F11D76D660085200;5462.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2307.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2305.
  ) 
 Here is how much of TeX's memory you used:
  12268 strings out of 493921
@@ -1441,7 +1441,7 @@ Here is how much of TeX's memory you used:
  14838 multiletter control sequences out of 15000+200000
  13900 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 51i,12n,73p,1096b,627s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 51i,12n,73p,1093b,627s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
@@ -1462,7 +1462,7 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (100 pages, 34498843 b
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (100 pages, 34498694 b
 ytes).
 PDF statistics:
  1772 PDF objects out of 2073 (max. 8388607)

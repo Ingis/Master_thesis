@@ -909,12 +909,12 @@ More detail of the different test programs and boards used to test the SF2 is di
 
 \subsubsection{Microcontroller SubSystem and labVIEW}
 \label{MSS_and_labVIEW}
-To get the counter values and cycle counter data from registers in the FPGA to a computer, the \acf{MSS} was used. The \ac{MSS} uses APB bus to collect the counter values, the microcontroller are sending the counter values through UART, which is connected to a serial to USB converter and further to a USB-plug. By connectinga computer to the USB-plug, we get serial communication to the microcontroller. A C-code was written to the microcontroller, which in short sets up the UART communication and constantly sends \ac{SEU} counter and cycle counter values through UART and out to a computer, and checks for received data. The received data is used to determine the frequency, of the shift-register design, as described in section \ref{logic_Element}.
+To get the counter values and cycle counter data from registers in the FPGA to a computer, the \acf{MSS} was used. The \ac{MSS} uses APB bus to collect the counter values, the microcontroller are sending the counter values through UART, which is connected to a serial to USB converter and further to a USB-plug. By connecting a computer to the USB-plug, we get serial communication to the microcontroller. A C-code was written to the microcontroller, which in short sets up the UART communication and constantly sends \ac{SEU} counter and cycle counter values through UART and out to a computer, and checks for received data. The received data is used to determine the frequency, of the shift-register design, as described in section \ref{logic_Element}.
 A labVIEW program was written to communicate with the SF2. The labVIEW program is constantly checking for received data, and exhibit the newest received values for a user. Through this program you are also able to select some specific frequencies, by use of push-buttons in the program, by pushing a button a request to change frequency is sent to the microcontroller. When the microcontroller receives the request, it access the register controlling the \emph{Clock Conditioning Circuit}, and changes to the frequency.
 
 \subsubsection{Monitoring board}
 As said in section \ref{logic_Element} a second starter-kit, called monitoring board, was used to be able to monitor and control the \emph{Logical element test design}.
-On the monitoring board there is a linux system running. A VHDL code is built on the \ac{FPGA} which takes inn wsr data and wsr enable from the test board and sends out reset, shift enable and pattern. All of the output data is controlled and input data is monitored through APB bus to the linux system. The wsr enable signal tells us when a new data is sent from the test board, when this signal goes high, the wsr data signals is clocked in a register on the monitoring board. The wsr data is then compared with the correct value, and if an error has occurred, a counter will be incremented. The counter value is read in the Linux system. The monitoring board is also used to monitor the PLL lock signal.
+On the monitoring board there is a Linux system running. A VHDL code is built on the \ac{FPGA} which takes inn WSR data and WSR enable from the test board and sends out reset, shift enable and pattern. All of the output data is controlled and input data is monitored through APB bus to the Linux system. The WSR enable signal tells us when a new data is sent from the test board, when this signal goes high, the WSR data signals is clocked in a register on the monitoring board. The WSR data is then compared with the correct value, and if an error has occurred, a counter will be incremented. The counter value is read in the Linux system. The monitoring board is also used to monitor the PLL lock signal.
 
 \subsubsection{Current measurement board}
 \label{current_measurement_board}
@@ -973,7 +973,7 @@ The SRAM detector also has a edge detector, which are able to detect rising edge
 
 \subsection{Scintillator counter}
 A scintillator is a material that emits light when exposed to ionizing radiation \cite{rad_phys}.
-A scintillator can be used as a stand alone equipment, but then only to detect that there are radiation, by seeing that it lights up.
+A scintillator can be used as a standalone equipment, but then only to detect that there are radiation, by seeing that it lights up.
 To get a more accurate measurement, we will need a PhotoMultiplier Tube (PM-tube), which has the ability to concerts light pulses to current pulses by an electron avalanche process. The current pulses can be detected by a edge counter, which count every falling or rising edge of a signal.
 
 \newpage
@@ -1014,7 +1014,7 @@ To test the limit for each of the \acp{IC}, the \acp{IC} was irradiated until a 
 Oslo Cyclotron Laboratory is located at the Department of physics at the University of Oslo, and was opened in 1978. The cyclotron is of the type MC-35 and was made by Scanditronix AB from Sweden.
 This is the only accelerator in Norway for ionized particles used in basic research.
 The cyclotron can accelerate protons, deuteron, $^3He$ and $^4He$, 
-with energies and intensities as seen in the table \ref{design requirements} bellow.
+with energies and intensities as seen in the table \ref{design requirements} below.
 A drawing of the lab can be seen in figure \ref{OCL_fig}. 
 The laboratory is divided in tree; the control room, the inner experimental hall and the outer experimental hall.
 The cyclotron is placed in the inner hall, and a beam is sent through pipes to the outer hall.
@@ -1077,7 +1077,7 @@ Equipment & Explanation  \\ \hline \hline
 Scintillator & A plastic scintillator with photomultiplier. Was used to measure relative radiation. We had two of these, one that was placed right under \acf{DUT} and one that was placed 75cm away from \ac{DUT}. \\ \hline
 High voltage regulator & Voltage for the photomultiplier. 800V was used. \\ \hline
 The test boards &  TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831U, ADN2814, MAX3748, INA210, TLV3011 and SF2 starter-kit. \\ \hline 
-SRAM detector  & A PCB board with 4 \ac{SRAM} cells that was used to characterise the beam and to measure scintillator counts \\ \hline
+SRAM detector  & A PCB board with 4 \ac{SRAM} cells that was used to characterize the beam and to measure scintillator counts \\ \hline
 SF2 starter kit & A starter kit board with the \acf{SF2} \ac{SoC} \ac{FPGA}.  \\ \hline
 Computer  & A VNC server was set up on a computer inside the experimental hall, this made us able to control the experiment from the control room. The computer was running all the necessary software to control and monitor the experiment. \\ \hline
 USB DAQ  & Data acquisition board form National Instruments(NI). Used to establish analog and digital connection to the test boards and send data to the computer. \\ \hline
@@ -1114,7 +1114,7 @@ The \ac{SRAM} and test board programs were constantly saving data on the disk.
 We had beam time in three periods at OCL, that is $13.11.13-15.11.13, 28.11.13-29.11.13 and 08.04.14-11.04.14$.
 The boards that where tested the first period are: $TPS51200_1$, $MIC69302WU_1$, $SN74AVCB164245_1$, $SN74AVC2T245_1$, $QS3VH257_1$ and $SY89831U_1$, tested in that order.
 The second period we tested: $ADN2814$, $MAX3748$, $SY89831U_2$, $TPS51200_2$, $MIC69302WU_2$, $SN74AVCB164245_2$, $SN74AVC2T245_2$ and $QS3VH257_2$, in that order.
-And the third period, the focus was mainly the \ac{SF2} starer-kit, but $INA210_1, INA210_2, TLV3011_1 and TLV3011_2$ was also tested.
+And the third period, the focus was mainly the \ac{SF2} starter-kit, but $INA210_1, INA210_2, TLV3011_1 and TLV3011_2$ was also tested.
 
 \newpage
 
@@ -1123,7 +1123,7 @@ The main difference between \ac{OCL} and TSL, is that TSL are able to produce be
 
 \subsection{About TSL}
 TSL is an accelerator facility belonging to University of Uppsala in Sweden, \cite{website:TSL}.
-It is manly used for proton therapy on cancer patient by Uppsala University Hospital, but it is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be produced are everything from protons to highly charged xenon ions. There is several extraction points from the cyclotron, which is controlled from the \emph{control room}. The experiment area for electronics testing, is the the \emph{blue hall}, here there are two user areas, one for protons, and one for neutrons and heavier ions, see figure \ref{Blue_hall}.
+It is manly used for proton therapy on cancer patient by Uppsala University Hospital, but it is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be produced are everything from protons to highly charged xenon ions. There is several extraction points from the cyclotron, which is controlled from the \emph{control room}. The experiment area for electronics testing, is the \emph{blue hall}, here there are two user areas, one for protons, and one for neutrons and heavier ions, see figure \ref{Blue_hall}.
 
 \begin{figure}[!htbp]
   \centering
@@ -1134,7 +1134,7 @@ It is manly used for proton therapy on cancer patient by Uppsala University Hosp
 
 \subsection{Beam setup procedure}
 At TSL we didn't have to get a beam characterization as we did at \ac{OCL}. In the Blue hall there is a permanently setup with detectors and a well defined beam line. We only needed to place our test equipment in the blue hall, put the test board at a given extraction point, and start the test. The center of the beam was found by lasers places in looked positions around the hall, one for horizontal direction and one for vertical direction. The head of the laser was movable, so we could point the laser beams towards our test board. A computer which was remotely controlled through network connection was placed in the hall.
-This computer was used as a connection point to our test boards. We sat in a room called \emph{countingroom}, where we could turn the beam on and off as we desired. There were also a machine in the countingroom, which was connected to detectors in the blue hall telling us the fluence (number of protons per $\centi\meter²$ in total) and exposed time. The fluence can be used to calculate the flux and dose. The energy of the proton beam we got was 170 MeV.
+This computer was used as a connection point to our test boards. We sat in a room called \emph{counting room}, where we could turn the beam on and off as we desired. There were also a machine in the counting room, which was connected to detectors in the blue hall telling us the fluence (number of protons per $\centi\meter²$ in total) and exposed time. The fluence can be used to calculate the flux and dose. The energy of the proton beam we got was 170 MeV.
 
 \begin{figure}[!htbp]
   \centering
@@ -1148,7 +1148,7 @@ A week before we arrived at TSL, we got the first two prototypes of the RCU2. Th
 
 The focus of the visit to TSL was the SF2 SoC FPGA, but we also tested a optical receiver and a data link which are supposed to be used to send data out from the RCU2.
 We brought with us two RCU2s and a total of 7 starter-kits, where 3 of these were with a smaller package, M2S050-FG484, and the rest was engineering samples versions of M2S050-FG896, which is the one used on RCU2.
-For the test discussed in section \ref{SF2_section}, we only used the SF2 starter-kits to test, since the test only involves internal parts of the SF2 SoC FPGA. Two of the starter-kits with the smaller package was tested M2S050-FG484, and one with engineering sample M2S050ES-T-FG896. When the RCU2 cards was irradiation, things like SERDES (data link), trigger, clock and data recovery (CDR) and PLL was tested, which will not be discussed throughly in this work, but a short summary will be given. Current was measured on both the SF2 starter-kits and RCU2 boards when they were irradiated to check for latchups.
+For the test discussed in section \ref{SF2_section}, we only used the SF2 starter-kits to test, since the test only involves internal parts of the SF2 SoC FPGA. Two of the starter-kits with the smaller package was tested M2S050-FG484, and one with engineering sample M2S050ES-T-FG896. When the RCU2 cards was irradiation, things like SERDES (data link), trigger, clock and data recovery (CDR) and PLL was tested, which will not be discussed thoroughly in this work, but a short summary will be given. Current was measured on both the SF2 starter-kits and RCU2 boards when they were irradiated to check for latchups.
 
 
 \chapter{Calculations and Results from Radiation Tests}
@@ -1188,7 +1188,7 @@ The particle energy is normally expressed in electronvolt ($\electronvolt$) or M
 \subsection{Calculating dose using LET}
 \label{using_LET}
 % When using \ac{LET} to calculate the dose, we are looking at the total energy that is deposited in a \ac{IC}.
-As explained i section \ref{LET_section}, \ac{LET} is energy deposited in a material through ionization when a particle crosses the material.
+As explained in section \ref{LET_section}, \ac{LET} is energy deposited in a material through ionization when a particle crosses the material.
 % To calculate this energy, we need to know the thickness, density and area of the material, which particle that enters the material and its energy.
 \ac{LET} is equal the energy loss a particle suffer by crossing a material, which means that we can use the bethe bloch formula that is expressed in equation \ref{stopping_power}.
 By looking at total \ac{LET} for a \ac{IC}, we are able to calculate our way to the dose.
@@ -1388,7 +1388,7 @@ A example of two films from the beam exit and \ac{DUT} area can be seen in figur
 \end{figure}
 
 Now we had a feeling of where center is, compared to where the laser was pointing. The SRAM detector was placed with one of the SRAM chips at where the laser was pointing. This position was called position zero (x,y) = (0,0). From irradiated films, we knew approximately how much we had to move to be in center of the beam.
-In table $\ref{test_15.11}$ you can see the results from our calibration 15.11.2013. You can see that position x = -2,5 cm and y = -1 cm gives highest relation between SEU and scintillator counts. A total of 4 tests in that position was done and the average value gives us 0,0948. Beam setup data from all other days at \ac{OCL} can be found in appendix \ref{appendix}.
+In table $\ref{test_15.11}$ you can see the results from our calibration 15.11.2013. You can see that position x = -2,5 cm and y = -1 cm gives highest relation between SEU and scintillator counts. A total of 4 tests in that position was done and the average value gives us 0,0948. Beam setup data from all other days at \ac{OCL} can be found in appendix \ref{Beam_profile}.
 When we irradiated the different \acp{PCB}, we didn't have SEU data, but we had scintillator counts, the relation value was used to convert from scintillator counts to \ac{SEU}. We wanted to have the SEU value, because the cross section for a SEU on the SRAM detector is known.
 The cross section is the probability that an incoming particle will induce an SEU, and the value can be found in equation \ref{CS}. Knowing number of SEUs and cross section, we can find the total fluence of a irradiation test.
 
@@ -1622,7 +1622,7 @@ After a dose of over 400 kRad no error were detected on the data signal, and cur
 
 \subsubsection{Summary of the results}
 
-In table \ref{dose_15.11} and \ref{dose_28.11} you can see how long each \acp{IC} has been exposed too radiation, the dose they have been received and if an error occurred during the irradiation. A returning effect from radiation was that current consumption started increasing with the received dose, the exception was MIC69302WU which actually decreased and to then stabilized after a while, which I have really no good explanation for. Some of the test didn't go as expected, like $TPS51200_2$ and $SN74AVC2T245_1$, and that is why we tried to at least have two boards which was tested, so that if one of them didn't work, we would at least have one working test.
+In table \ref{dose_15.11} and \ref{dose_28.11} you can see how long each \acp{IC} has been exposed to radiation, the dose they have been received and if an error occurred during the irradiation. A returning effect from radiation was that current consumption started increasing with the received dose, the exception was MIC69302WU which actually decreased and to then stabilized after a while, which I have really no good explanation for. Some of the test didn't go as expected, like $TPS51200_2$ and $SN74AVC2T245_1$, and that is why we tried to at least have two boards which was tested, so that if one of them didn't work, we would at least have one working test.
 % The tests was controlled and monitored through a LabVIEW program. When testing ADN2814 and MAX3748 there was also needed a \ac{SF2} starter-kit to produce a Manchester coded signal, to be able to test these properly.
 % The point of these tests was to check if the \acp{IC} which where tested would survive in a radiated hard environment we will find in the \ac{TPC}. The total dose of 10 years in the ALICE detector is estimated to be around 1-2 kRad, see section \ref{how_to_test}. If a \ac{IC} survives more than 5 times value, we can be quite sure that it will survive the radiation it will receive at CERN.
 % This signal was sent out from the starter-kit and into the two \ac{IC} and the output from these \acp{IC} was sent back again and compare with the input signal. 
@@ -1684,7 +1684,7 @@ We had access to OCL in three periods; 13.11.13-15.11.13, 28.11.13-29.11.13 and 
 
 There are almost impossible to get the same beam two days at a row. Each day of testing is therefore different from each other. And that is also why we had to do calibration each day at start-up.
 
-The interesting thing when determining if a \ac{IC}is tolerant towards radiation is the absorbed dose. For run2 in the \ac{LHC}, which will last in three years, it has been estimated that the total dose in the TPC is 1-2 kRad. This is the absolute limit a \ac{IC} have to survive, and a safe margin on at least 3 times should be used. We also have to take into account that when radiating at OCL, we have been using proton beam of less than 30 MeV, in the TPC detector in ALICE, we can receive protons and neutrons in the energy level of higher than 1 GeV, which may cause other effects that we have seen in our test at OCL. It is therefore important to have a good margin on the dose.
+The interesting thing when determining if a \ac{IC} is tolerant towards radiation is the absorbed dose. For run2 in the \ac{LHC}, which will last in three years, it has been estimated that the total dose in the TPC is 1-2 kRad. This is the absolute limit a \ac{IC} have to survive, and a safe margin of at least 3 times should be used. We also have to take into account that when radiating at OCL, we have been using proton beam of less than 30 MeV, in the TPC detector in ALICE, we can receive protons and neutrons in the energy level of higher than 1 GeV, which may cause other effects that we have seen in our test at OCL. It is therefore important to have a good margin on the dose.
 
 
 % When testing two boards of the same type, and on of these fails 
@@ -2158,9 +2158,7 @@ We had two rather disturbing results through this test.
 
 When exposing the SF2-chip and checking the lock signal for the PLL we got , but this we already knew for our test at OCL. A more disturbing issue is when we moved the beam towards the optical receiver. When we did this, we got almost constantly errors. This means either that the optical receiver is very bad, or the MAX3748 chip, which we used as a limiting amplifier, aren't able to do its job, when the input signal is bad. Maybe ADN2814, would perform better in this aspect. Either way, a new solution or a fix has to be done to make up for this problem. 
 
-A issues that we uncounted here, and not so much in OCL, is latchup. We got regularly latchup during our run, which means that a shut down is required to set the board in normal operation again. A solution for this problem has already been set in emotion. By using \emph{INA210} to amplify a voltage over a shunt resistor on each power signal, and use \emph{TLV3011} to compare against a voltage limit. If the voltage limit is exceeded all regulators are turned off, setting the board off. The problem here is that when we actually have allot of radiation, and the probability of a latchup is high, that is when we are most interested in data. A solution here could maybe tolerate one or two latchup, or 
-
-The third issue is the clock and data recovery setup. We experienced some errors when exposing the SF2, but 
+A issues that we uncounted here, and not so much in OCL, is latchup. We got regularly latchup during our run, which means that a shut down is required to set the board in normal operation again. A solution for this problem has already been set in emotion. By using \emph{INA210} to amplify a voltage over a shunt resistor on each power signal, and use \emph{TLV3011} to compare against a voltage limit. If the voltage limit is exceeded, all regulators are turned off, setting the board off. The problem here is that when we actually have allot of radiation, and the probability of a latchup is high, that is when we are most interested in data.
 
 \FloatBarrier
 \chapter{Conclusion}
@@ -2171,7 +2169,7 @@ The third issue is the clock and data recovery setup. We experienced some errors
 
 \begin{appendices}
 \chapter{Radiation Results}
-\label{Radiation results}
+\label{radiation_results}
 
 \section{Beam setup data}
 \label{Beam_profile}
@@ -2222,6 +2220,37 @@ The third issue is the clock and data recovery setup. We experienced some errors
 
 \section{Radiation Results from OCL}
 \label{radiation_results_ocl}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/1v2_current_dose_sf2_1}
+  \caption{Current on the 1.2 V source over time for SF2 test1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/3v3_current_dose_sf2_1}
+  \caption{Current on the 3.3 V source over time for SF2 test1}
+  \end{subfigure}
+ \caption{}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/cycles_dose_sf2_1}
+  \caption{Cycle counter versus dose for SF2 test1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/cycles_dose_sf2_2}
+  \caption{Cycle counter versus dose for SF2 test2}
+  \end{subfigure}
+ \caption{}
+\end{figure}
+
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{figures/flux_vs_time_1}
@@ -2246,7 +2275,22 @@ The third issue is the clock and data recovery setup. We experienced some errors
 In figure $\ref{flux_all1}$, $\ref{flux_all2}$ and \ref{flux_all3} you can see graphs of flux vs time for the different test boards. The reason the graphs don't go as linear as one would expect, is that the beam sometimes stopped and had to restarted, and that we increased and decreased the intensities as we wanted.
 
 \section{Radiation Results from TSL}
-\label{radiation_results_ocl}
+\label{radiation_results_tsl}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/1v2_current_dose_sf2_2}
+  \caption{Current on the 1.2 V source over time for SF2 test1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/3v3_current_dose_sf2_2}
+  \caption{Current on the 3.3 V source over time for SF2 test2}
+  \end{subfigure}
+ \caption{}
+\end{figure}
 
 \chapter{Current measurement board tutorial}
 \label{tutorial_current}
