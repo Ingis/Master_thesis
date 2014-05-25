@@ -1,52 +1,53 @@
 \documentclass[12pt]{report}
-\usepackage[latin1]{inputenc}
-\usepackage[paper=a4paper,dvips,top=3cm,left=3cm,right=3cm, foot=1cm,bottom=3cm]{geometry}
-\usepackage{picinpar}
+\usepackage[utf8]{inputenc}
+\usepackage[paper=a4paper,pdftex,top=3cm,left=2.5cm,right=2.5cm,foot=1cm,bottom=3cm]{geometry}
 \usepackage{graphicx} %Graphics package for \includegraphics
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{wrapfig} %Enables wrapping of text around figures and tables
 \usepackage{subfig}
 \usepackage{enumerate}
-\usepackage{multirow}
+\usepackage{placeins}
 \usepackage{SIunits}%SI unit symbol package
 \usepackage{amsmath}
 \usepackage{array, calc}
-\usepackage{tabularx}
-\usepackage{setspace}
-\usepackage{verbatim} %Enables \begin{comment}...
 \usepackage{cite}
-\usepackage{float}
 \usepackage{mathtools}
-\usepackage{threeparttable}
-\usepackage{standalone}
-\usepackage{booktabs, dcolumn}
-\usepackage{placeins}
-\usepackage{fancyvrb}
+% \usepackage{picinpar}
+% \usepackage{multirow}
+% \usepackage{tabularx}
+% \usepackage{setspace}
+% \usepackage{verbatim} %Enables \begin{comment}...
+% \usepackage{float}
+% \usepackage{threeparttable}
+% \usepackage{standalone}
+% \usepackage{booktabs, dcolumn}
+% \usepackage{fancyvrb}
 \usepackage[printonlyused]{acronym}
 \usepackage[titletoc]{appendix}
 
-\numberwithin{figure}{section}
+\numberwithin{figure}{chapter}
 
 \tolerance = 5000 % LaTeX er normalt streng når det gjelder linjebrytingen.
 \hbadness = \tolerance % Vi vil være litt mildere, særlig fordi norsk har så
 \pretolerance = 2000 % mange lange sammensatte ord.
 
 
-\usepackage{afterpage}
-\newcommand\blankpage{%
-    \null
-    \thispagestyle{empty}%
-    \addtocounter{page}{-1}%
-    \newpage}
+% \usepackage{afterpage}
+% \newcommand\blankpage{%
+%     \null
+%     \thispagestyle{empty}%
+%     \addtocounter{page}{-1}%
+%     \newpage}
 
 
 %\newenvironment{packed_enum}{
 %\newenvironment{enumerate}{
 %\begin{enumerate}
-  \setlength{\itemsep}{10cm}
+%   \setlength{\itemsep}{10cm}
   \setlength{\parskip}{18pt}
-  \setlength{\parsep}{10pt}
+%   \setlength{\columnsep}{3cm} 
+%   \setlength{\parsep}{10pt}
 %}{\end{enumerate}}
 
 
@@ -79,7 +80,7 @@
   \centerline{\includegraphics[height=4cm,width=4cm]{figures/uglo}}
   \Large
   \textsl{Master Thesis} \\
-  \vspace{50mm}
+  \vspace{45mm}
   \large
   \textsl{Department of Physics and Technology} \\
   \textsl{University of Bergen} \\
@@ -95,67 +96,68 @@
 \setcounter{page}{1}
 \pagenumbering{Roman}
 
-\section*{Abstract}
-In Geneva in Switzerland we can find the largest particles accelerator ever built called \ac{LHC}. The LHC is placed 100 meter below ground level in a 27 km long tunnel where we can find four experiment areas, one of these experiment is ALICE. ALICE is built to study a matter known as Quark-gluons plasma, which will be generated under collisions of heavy ions. LHC is currently shutdown for maintenance and preparation for even higher energies. This period called Long Shutdown 1 (LS1), started January 2013 and will last until the end of 2014.
+\chapter*{Acknowledgements}
+
+
+\chapter*{Abstract}
+In Geneva in Switzerland we can find the largest particle accelerator ever built called \ac{LHC}. The LHC is placed 100 meter below ground level in a 27 km long tunnel where four experiment areas are located, one of these experiment is \ac{ALICE}. \ac{ALICE} is built to study a matter known as Quark-gluons plasma, which will be generated under collisions of heavy ions. LHC is currently shutdown for maintenance and preparation for even higher energies. This period called Long Shutdown 1 (LS1), started January 2013 and will last until the end of 2014.
 
 ALICE comprises of several sub-detectors, one of these are \ac{TPC}, which is the main tracking device of ALICE. For LS1 it has been decided that a upgrade should be performed on the \ac{RCU}, which controls the readout in the TPC. The new RCU, named RCU2, will increase the present readout rate by a factor of up to 2.6, and will be more immune to radiation induced errors.
 
-For the RCU2 design we introduces new components, where some of these hasn't been tested for radiation tolerance. The work presented through this thesis comprises of irradiation tests of these components, and the preparation process before radiation tests.
+For the RCU2 design we introduces new components, where some of these hasn't been tested for radiation tolerance. The work presented through this thesis comprises of irradiation tests of these components. The tested components consist of power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator, Current Shunt Monitor and the RCU2's main FPGA, the Microsemi \ac{SF2}. The tests performed consist mostly of test for accumulative effects, but test for \ac{SEE} will also be performed for some of the components.
 
-\newpage
-\section*{Contents}
+The main focus has been on the SF2 SoC FPGA, where test of \acl{SEE} like \ac{SEU}, \ac{SET} and \ac{SEL} has been executed on SRAM, logic element and PLL.
+
+The irradiation tests has been executed at \ac{OCL} in Oslo Norway, with a proton beam of 25 and 28 MeV and at \ac{TSL} in Uppsala Sweden, with a proton beam of 170 MeV.
+
 \tableofcontents
-\newpage
 
-\FloatBarrier
-\include{acronyms}
-\FloatBarrier
 
-\newpage
-\setcounter{page}{1}
-\pagenumbering{arabic}
 
 \chapter{Introduction}
+\setcounter{page}{1}
+\pagenumbering{arabic}
 At CERN (European Council for Nuclear Research) in Switzerland there are being conducted experiment on fundamental structure of the universe. This is done by accelerating particles up to an energy level of 4 $\tera \electronvolt$ per proton, and then collide with other particles on the same energy level. The largest accelerator is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a 27 $\kilo \meter$ long tunnel.
-Particles are accelerated in both direction in the LHC. When the particles has reached high enough energy, particles from opposite directions are made to crash at 4 experiment areas, one of these is called ALICE (A Large Ion Collider Experiment).
-\ac{ALICE} is built to study a matter known as Quark-gluons plasma \cite{ALICE}, which will be generated under collisions of heavy ions.
-ALICE consists of several sub-detectors with different functionality. \ac{TPC} is one of these, and is the main tracking detector placed closes to the beam-line, see section \ref{ALICE_experiment}. Under a collision high particles will be generated, and will also pose a risk to the electronics used.
+Particles are accelerated in both direction in the LHC. When the particles has reached high enough energy, particles from opposite directions are made to collide at 4 experiment areas, one of these is called ALICE (A Large Ion Collider Experiment).
+\ac{ALICE} is built to study a matter known as Quark-gluons plasma , which will be generated under collisions of heavy ions \cite{ALICE}.
+ALICE consists of several sub-detectors with different functionality. \ac{TPC} is one of these, and is the main tracking detector placed closes to the beam-line, see \autoref{ALICE_experiment}. Under a collision, high energy particles will be generated, which will also pose a risk to the electronics used.
 It is therefore of highest importance to test everything that are planned to be used in the experiment for radiation.
  
-One of the main boards used in the \ac{TPC} detector is the \acf{RCU}. Now there has been decided that a new \ac{RCU} shall be made, namely the RCU2.
-Because of the radiation level in the LHC, every active component used in the design of the RCU2 has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{TPC} detector.
+One of the main boards used in the \ac{TPC} detector is the \acf{RCU}. It has been decided that a new \ac{RCU} shall be made, named RCU2.
+Because of the radiation level in the LHC, every component used in the design of the RCU2 has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{TPC} detector.
 
 \section{How to Test}
 \label{how_to_test}
 The radiation tests done through this work is mainly test for accumulative effects.
-Accumulative effects are effects caused by the total radiation of a component, and are measured by the functionality and power consumption of the component, see section \ref{accumulative_sec} for more information.
+Accumulative effects are effects caused by the total radiation of a component, and are measured by the functionality and power consumption of the component, see \autoref{accumulative_sec} for more information.
 
-Previous research has been done on the radiation level in ALICE \cite{Safarik} and \cite{georgios}, and are used to decide if the tested components can be used or not.
+Test for \acf{SEE} like \acf{SEU}, \acf{SET} and \acf{SEL} on a Microsemi \ac{SF2} \ac{SoC} \ac{FPGA} have also been performed.
 
-Test for \acp{SEE} like \acf{SEU}, \acf{SET} and \acf{SEL} on a Microsemi \ac{SF2} \ac{SoC} \ac{FPGA} have also been performed.
+Research has been done on the radiation level in the \ac{ALICE} \ac{TPC}\cite{Safarik} and \cite{georgios}, and are used to decide if the tested components can be used or not.
 
 \section{About This Work}
-I started working on the RCU2-project in the autumn of 2013. Already before I started working, the design and the schematic layout for the RCU2 was basically finished. In the design process components that was already tested or are proven to be radiation hard was used when possible, but such components weren't always available. So my work in the project has been to do irradiation tests on components for the RCU2 design which didn't have any record of being radiation tested before.
+I started working on the RCU2-project in the autumn of 2013. Already before I started working, the design and the schematic layout for the RCU2 was basically finished. In the design process components that already were tested or are proven to be radiation hard were used when possible, but such components weren't always available. So my work in the project has been to do irradiation tests on components for the RCU2 design which didn't have any record of being irradiation tested.
 
-The \acp{IC} which I have tested consist of: SoC FPGA, power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator and Current Shunt Monitor.
-In order to investigate the radiation tolerance of these circuits, I had to first acquire good knowledge of radiation induced effect that may occur in such devices. I also needed to study these components to be able to find a reasonable test methodology. Further, I had to familiarize myself with CAD tools such as \emph{expedition PCB} and \emph{DXdesigner} and programming and developing environments like Libero and labVIEW in order to develop a sufficient hardware and software based test setup for the components.
+The components which I have tested are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, TLV3011 and SF2-M2S050-FG896, these area power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator, Current Shunt Monitor and  \ac{SoC} \ac{FPGA}.
+In order to investigate the radiation tolerance of these circuits I had to first acquire good knowledge of radiation induced effect that may occur in such devices. I also needed to study the components to be able to find a reasonable test methodology. Further, I had to familiarize myself with CAD tools such as \emph{expedition PCB} and \emph{DXdesigner} and programming and developing environments like Libero and labVIEW in order to develop a sufficient hardware and software based test setup for the components.
 
-The RCU2's main FPGA the Microsemi SF2, has been the main focus through this work. That is because this component will be hard to replace, and a functional failure on this one, may set the whole RCU2 out of function. The radiation effects that were tested on for SF2 are, SRAM blocks for SEU, logic elements for SEU and SET, and in general SEL. These effects can be read about in section \ref{SEE_section}.
+The RCU2's main FPGA the Microsemi \ac{SF2}, has been the main focus through this work. That is because this component will be hard to replace, and a functional failure on this one, may set the whole RCU2 out of function. The radiation effects that were tested on for \ac{SF2} are SRAM blocks for SEU, logic elements for SEU and SET, and in general SEL. These effects can be read about in \autoref{SEE_section}.
 
-The irradiation test was executed in four periods, three times at \ac{OCL} with a proton beam of 28 MeV and 25 MeV where all components have been tested, and one time at \ac{TSL} with a proton beam of 170 MeV, where only the SF2 SoC FPGA was tested. A \ac{SF2} starter-kit was used when designing test for this \ac{IC}, and test code was written in VHDL and C. To be able to detect SEL the current on the FPGA had to be measured. Therefore a current measurement board was made for that task.
+The irradiation tests were executed in four periods, three times at \ac{OCL} with a proton beam of 28 MeV and 25 MeV, and one time at \ac{TSL} with a proton beam of 170 MeV. 
+% A \ac{SF2} starter-kit was used when designing test for this \ac{IC}, and test code was written in VHDL and C. To be able to detect SEL the current on the FPGA had to be measured. Therefore a current measurement board was made for that task.
 
-To summarize, this work has been consisting of practical work like making \acp{PCB}, writing test code in VHDL, making labVIEW programs and making test codes in C. It has also consisting on getting the necessary knowledge of the components tested, learning to program in VHDL and C, as well as learning to use the tools and programs for the different tasks.
+To summarize, this work has been consisting of practical work like making \acp{PCB}, writing test code in VHDL, making labVIEW programs and making test codes in C. It has also consisted on getting the necessary knowledge of the components tested, learning to program in VHDL and C, as well as learning to use the tools and programs for the different tasks. And of course setting up test setup, and irradiate the components.
 
 \newpage
 
 \chapter{ALICE Experiment}
 \label{ALICE_experiment}
 Since 1954 physicists at \ac{CERN} have studied the nucleus and its structure to find the fundamental structure of the universe.
-\ac{CERN} is the world largest research center for nuclear and particle physics, and has a total of 21 member states.
+\acs{CERN} is the world largest research center for nuclear and particle physics, and has a total of 21 member states.
 One of the biggest attractions at \ac{CERN} is the \acf{LHC}, which is a circular particle accelerator placed in a 27 km long tunnel around 100 meters beneath ground level.
-This is the last accelerator in a chain of up to 7 (depending on which particle to accelerate), see picture \ref{CERN_accelerators}, where the particles gradually accelerate to higher and higher energies, up to their maximum energy of 4 TeV and speed close to the speed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide inside 4 different experiment areas, where one of these is called \acf{ALICE}, see figure \ref{ALICE_layout}.
+This is the last accelerator in a chain of up to 7 (depending on which particle to accelerate), see \autoref{CERN_accelerators}, where the particles gradually accelerate to higher and higher energies, up to their maximum energy of 4 TeV and speed close to the speed of light. When particles has reached this energy level accelerated particles from opposite direction are made to collide inside 4 different experiment areas, where one of these is called \acf{ALICE}, see \autoref{ALICE_layout}.
 
-The \ac{ALICE} detector is a heavy ion detector. Its main purpose is to study a state of matter called quark-gluon plasma which will be generated when heavy ions collides.
+The \acs{ALICE} detector is a heavy ion detector. Its main purpose is to study a state of matter called quark-gluon plasma which will be generated when heavy ions collides.
 Under the collisions a temperature 100 000 times higher than the temperature of the sun is generated.
 There is then high enough energy to split the protons and neutrons, and achieve a plasma of unbound quarks and gluons, and that is called quark-gluon plasma.
 
@@ -166,7 +168,7 @@ No quark has ever been observed in isolation: the quarks, as well as the gluons,
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.65\textwidth]{figures/CERN_accelerators}
+  \includegraphics[width=0.60\textwidth]{figures/CERN_accelerators}
   \caption{CERN accelerators \cite{website:CERN_accelerators}}
   \label{CERN_accelerators}
 \end{figure}
@@ -181,12 +183,12 @@ No quark has ever been observed in isolation: the quarks, as well as the gluons,
 \FloatBarrier
 
 \section{The Time Projection Chamber TPC}
-The ALICE detector comprises several sub-detectors, where one of these is the \acf{TPC}. The \ac{TPC} is the main tracking detector of \ac{ALICE}.
+The ALICE detector comprises of several sub-detectors, where one of these is the \acf{TPC}. The \ac{TPC} is the main tracking detector of \ac{ALICE}.
 The functions of \ac{TPC} are tracking particles, measure the charged particles momentum and identification of particles.
-A drawing of the \ac{TPC} can be seen in figure \ref{TPC_layout}.
+A drawing of the \ac{TPC} can be seen in \autoref{TPC_layout}.
 The \ac{TPC} detector has a cylindrical shape, with an inner radius of 85 cm and outer radius of 250 cm, and has an overall length of 510 cm.
 The detector is made up of a large cylindrical field cage, filled with 88 $m^3$ of 90\% Ne gas and 10\% $CO^2$ gas.
-A high voltage electrode is placed in the center of the detector, dividing the \ac{TPC} into two drift regions, and making an electric field between electrode and the two end plates.
+A high voltage electrode is placed in the center of the detector, dividing the \ac{TPC} into two drift regions, and making an electric field between the electrode and the two end plates.
 When a charged particle is generated inside the detector, the gas inside the cage will be ionized. The free electrons and the ions will then drift in the electric field between the high voltage electrode and the two end plates.
 At the end-plates we find the Readout Chamber which is divided into 18 trapezoidal sectors, where each sector is again divided into the inner and outer chamber.
 In the readout chamber, there are a total of 560 000 readout pads.
@@ -198,19 +200,25 @@ In the readout chamber, there are a total of 560 000 readout pads.
   \label{TPC_layout}
 \end{figure}
 
+\newpage
+
+\begin{wrapfigure}{r}{0.5\textwidth} 
+\vspace{-40pt}
+  \begin{center}
+  \includegraphics[width=0.5\textwidth]{figures/TPC_Sections}
+  \caption{A TPC sector, showing distribution of FECs \cite{roed_doctor}}
+  \label{TPC_Sections}
+  \end{center}
+  \vspace{-80pt}
+\end{wrapfigure} 
+
 \section{The TPC Front End electronics FEE}
 Each of the 36 sections (2 x 18) are also divided into 6 readout partitions, that is 2 in the inner chamber and 4 in the outer chamber. 
-There are a total of 216 \ac{RCU} connected to a total of 4356 \ac{FEC} which is connected to all of the 560 000 readout pads, and all together this sums up the \acf{FEE}, see figure \ref{TPC_Sections}. In short, the task of the \ac{FEE} is to read out the charge received at the readout pads, process it and send useful data to a computer.
+There are a total of 216 \ac{RCU} connected to a total of 4356 \ac{FEC} which is connected to all of the 560 000 readout pads, and all together this sums up the \acf{FEE}, see \autoref{TPC_Sections}. In short, the task of the \ac{FEE} is to read out the charge received at the readout pads, process it and send useful data to a computer.
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=0.5\textwidth]{figures/TPC_Sections}
-  \caption{A TPC sector. Showing how FEC is placed \cite{roed_doctor}}
-  \label{TPC_Sections}
-\end{figure}
-
+\FloatBarrier
 \subsection{Front End Card FEC}
-A current signal given by one of the pads, is sent into a \acf{FEC} which consist of three basic functional units, see block diagram in figure \ref{FEC_blockdiagram}.
+A current signal given by one of the pads, is sent into a \acf{FEC} which consist of three basic functional units, see block diagram in \autoref{FEC_blockdiagram}.
 The first unit is a charge sensitive amplifier/shaper called PASA, the second unit is a 10-bit 10 MHz low-power \ac{ADC} and the last unit is a digital circuit that performs the baseline subtraction, tail cancellation, zero-suppression\footnotemark, formatting and buffering.
 The \ac{ADC} and the digital unit together constitute the so called ALTRO chip. There are 16 PASA chips and 16 ALTRO chips on the \ac{FEC},
 the PASA chip is connected to 16 readout pads each, which gives a total of 128 readout pads for each \ac{FEC}.
@@ -233,41 +241,54 @@ the PASA chip is connected to 16 readout pads each, which gives a total of 128 r
 \footnotetext{Zero Compressions means that signal below a given threshold will be filtered away.}
 \FloatBarrier
 \subsection{Readout Control Unit RCU}
-One \acf{RCU} is connected to one row of \acp{FEC} (up to 25 pieces), through a backplane\footnotemark, see figure \ref{TPC_Sections}.
+One \acf{RCU} is connected to one row of \acp{FEC} (up to 25 pieces), through a backplane\footnotemark, see \autoref{TPC_Sections}.
 The \ac{RCU} task is to control the entire \acf{FEE} all the way from the readout pads through the \acp{FEC}, and out to a \acf{DAQ} System.
 The \ac{RCU} consist of three separated boards which are the Motherboard board, the \acf{DCS} board and the \acf{SIU} board.
 Most of the \ac{RCU} functions are controlled by the Xilinx Virtex-II Pro \ac{FPGA}.
 This \ac{FPGA} are controlling the readout process of the \ac{TPC} detector.
 It is also responsible for moving data from the \acp{FEC} to the \acf{SIU} board,
-where data is transmitted via an optical link to the Data Acquisition system,
-where data is stored and is made accessible for analysis.
+where data is transmitted via an optical link to the Data Acquisition system.
+In the Data Acquisition system data is stored and is accessible for analysis.
 
-The Xilinx Virtex-II Pro is a \ac{SRAM} based \ac{FPGA}. \ac{SRAM} cells are vulnerable for \acfp{SEU}, see section \ref{SEU_Section}.
+\begin{wrapfigure}{r}{0.6\textwidth} 
+\vspace{-20pt}
+  \begin{center}
+  \includegraphics[width=0.6\textwidth]{figures/RCU}
+  \caption{The Readout Control Unit top side and bottom side \cite{roed_doctor}}
+  \label{RCU}
+  \end{center}
+  \vspace{-30pt}
+\end{wrapfigure} 
+
+The Xilinx Virtex-II Pro is a \ac{SRAM} based \ac{FPGA}. \ac{SRAM} cells are vulnerable for \acfp{SEU}, see \autoref{SEU_Section}.
 Therefore a flash based \ac{FPGA}, Actel ProASIC is used to monitor the SRAM memory and reprogram/reconfigure if an error occurs.
 
 The \ac{DCS} board is basically an embedded computer running Linux.
 This board is connected through an Ethernet link to a computer on the outside of the ALICE detector.
 Through it, we are even able to upgrade and reprogram the \acp{FPGA} of the \ac{RCU}.
 So even though the hardware is inaccessible after it has been mounted in the \ac{TPC},
-the \acp{SIU} board gives some kind of flexibility.
+the \ac{SIU} boards gives some kind of flexibility.
 In addition, it has an optical interface, receiving the clock and trigger information from the Timing, Trigger and Control system, also called TTC.
 
 
 \footnotetext{A backplane is a PCB board, that connects Front End Cards to a Readout Control Unit.
 This is used instead of cables to get a more stability, and to keep things in place.}
 
+In \autoref{FEE_overview} you can see a full overview of the \ac{RCU} and its connections.
+
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/RCU}
-  \caption{The Readout Control Unit top side and bottom side \cite{roed_doctor}}
-  \label{RCU}
+  \includegraphics[width=0.8\textwidth]{figures/FEE_overview}
+  \caption[FEE overview]{The architecture and readout path of the TPC electronics for one readout partition \cite{roed_doctor}.}
+  \label{FEE_overview}
 \end{figure}
+
 
 \subsection{RCU2}
 \subsubsection{Why Upgrade RCU} 
 LHC is currently shutdown for maintenance and preparation for even higher energies.
 This period, called Long Shutdown 1 (LS1), lasts until end of 2014.
-The present \ac{TPC} readout electronics will be a limiting factor with the foreseen readout rate for the next run period (run2).
+The present \ac{TPC} readout electronics will be a limiting factor with the foreseen readout rate for the next run period (run2) \cite{RCU2}.
 The bus between \ac{RCU} and FECs is not able to read all data for high occupancy events, like Pb-Pb collisions.  
 In addition stability issues related to \ac{SEU} on the \ac{SRAM} based \ac{FPGA} have been observed with the present setup.
 9 \% of the run time had to be stopped because of errors in the \ac{TPC} readout electronics.
@@ -276,16 +297,16 @@ In addition stability issues related to \ac{SEU} on the \ac{SRAM} based \ac{FPGA
 The main challenge with making the RCU2 was to develop a solution that gives the needed performance improvement,
 and at the same time was feasible within the limited time-frame.
 Therefore some of the old infrastructure has to be reused, like cables for Ethernet, Trigger and power and the cooling envelops.
+RCU2 will increase the present readout rate by a factor of up to 2.6, and will be more immune to radiation induced errors.
 
 The main difference between the RCU2 and \ac{RCU}1 is that the main \ac{FPGA}, the Xilinx Virtex-II Pro,
 has been replaced by a Microsemi \acf{SF2} \acf{SoC} \ac{FPGA} M2S050-FG896. This is a flash-based\footnote{Flash-based FPGA means that configuration registers is saved in flash memory cells. Compared to SRAM-based FPGA where configuration is saved in SRAM cells, flash-based FPGA is much more tolerant against radiation.}
 FPGA which has \ac{SEU} immune configuration memory, as well as several other radiation tolerance measures implemented \cite{website:SF2_datasheet}.
 It also comes with a Microcontroller Subsystem which is based on a hardcore ARM Cortex-M3 microcontroller.
-On Microcontroller Subsystem we are able to build a Linux system, which replace the functionality of the \acf{DCS}-card.
+On the Microcontroller Subsystem we are able to build a Linux system, which replace the functionality of the \ac{DCS}-card.
 The ProASIC was also not need as a  reconfiguration FPGA anymore, but will still be used as a radiation monitor,
 this part of the RCU2 is now called RadMon, and consists of a ProASIC and SRAM chips.
-Another issue encountered in the design was that the TTCrx chip that was used for handling the clock and trigger signal on RCU1 was out of stuck and obsolete.
-This is being replaced by an optical receiver and a limiting amplifier. The limiting amplifier has been tested in this thesis, see section \ref{limiting_amp}.
+The TTCrx chip that was used for handling the clock and trigger signal on RCU1 was out of stuck and obsolete, and will be replaced by an optical receiver and a limiting amplifier. The limiting amplifier has been tested in the work presented in this thesis, see \autoref{limiting_amp}.
 
 One of the limits with the old setup was that the bus between \ac{RCU} and FECs was to slow.
 This was fixed by dividing the readout into 4 sections instead of 2, which effectively doubled the readout speed.
@@ -296,8 +317,8 @@ Therefore all of the backplanes had to be redesigned and replaced.
 
 
 \chapter{Radiation and Radiation effect on Semiconductor Devices}
-Radiation and radiation effects are a known challenge when designing electronics which are going to be used at CERN.
-There is therefore of highest importance to know about these effect, how they affect the electronics, how much damage they can cause and how we can protect and prevent the radiation effect to do damage.
+Radiation and radiation induced effects are a known challenge when designing electronics which are going to be used in the LHC.
+There is therefore of highest importance to know about these effect, how they affect the electronics, how much damage they can cause and how we can protect and prevent the radiation effects to do damage.
 
 This chapter is based on references \cite{rad_phys}, \cite{CMOS}, \cite{knoll}, \cite{Baumann} and \cite{balashov} if not otherwise stated.
 
@@ -353,7 +374,7 @@ If we have a particle with a given energy passing into a material, where $dE$ is
 Then $-\frac{dE}{dx}$ is the stopping power or also called the "rate" of energy loss for the particle.
 The stopping power depends on the type and energy of the radiation and on the properties of the material it passes.
 
-The classical expression that describe the stopping power is the \emph{Bethe Bloch formula}, and is written as you can see in equation \ref{stopping_power}.
+The classical expression that describe the stopping power is the \emph{Bethe Bloch formula}, and is written as you can see in \autoref{stopping_power}.
 
 \begin{equation}
 S = - \frac{dE}{dx} = \frac{n_A Z_A Z^2 e^4}{4 \pi \epsilon_o m_e V^2}\Bigg[\ln\Big(\frac{2 m_e \upsilon^2}{\overline{I}}\Big)-\ln\Big(1-\frac{\upsilon^2}{c^2}\Big)-\frac{\upsilon^2}{c^2}\Bigg]
@@ -375,34 +396,35 @@ $\overline{I}$ & Effective material ionization potential \\
 \label{bethe_bloch}
 \end{table}
 
-\subsection{Specific Stopping Power}
-Another way of looking at stopping power is by looking at energy loss as function of mass per area \ref{sstopping_power}.
-Here $\xi$ = $\rho$x and $\rho$ is the density of the material. The extension for specific stopping power is normally given as $[\frac{\mega\electronvolt\centi\meter^2}{\gram}]$
-
-\begin{equation}
-S = - \frac{dE}{d\xi} = - \frac{1}{\rho} \frac{dE}{dx} 
-% = - \frac{n_A Z_A Z^2 e^4}{4 \pi \epsilon_0^2 m_e \upsilon^2}\Bigg[\ln\Big(\frac{2 m_e \upsilon^2}{\overline{I}}\Big)-\ln\Big(1-\frac{\upsilon^2}{c^2}\Big)-\frac{\upsilon^2}{c^2}\Bigg]
-\label{sstopping_power}
-\end{equation}
+% \subsection{Specific Stopping Power}
+% Another way of looking at stopping power is by looking at energy loss as function of mass per area $-\frac{dE}{d\xi}$.
+% Here $\xi$ = $\rho$x and $\rho$ is the density of the material. The unit for specific stopping power is given as $[\frac{\mega\electronvolt\centi\meter^2}{\gram}]$
+% 
+% \begin{equation}
+% S = - \frac{dE}{d\xi} = - \frac{1}{\rho} \frac{dE}{dx} 
+% % = - \frac{n_A Z_A Z^2 e^4}{4 \pi \epsilon_0^2 m_e \upsilon^2}\Bigg[\ln\Big(\frac{2 m_e \upsilon^2}{\overline{I}}\Big)-\ln\Big(1-\frac{\upsilon^2}{c^2}\Big)-\frac{\upsilon^2}{c^2}\Bigg]
+% \label{sstopping_power}
+% \end{equation}
 
 From this formula we see that if we are considering two different particles with the same velocity, the only factor that changes is $Z^2$.
-Therefore heavier particles will experience larger energy loss in a material then lighter ones.
-In figure \ref{energy_loss} we can see specific energy loss for different particles in air.
+Therefore heavier particles will experience larger energy loss in a material compared to lighter ones.
+In \autoref{energy_loss} we can see energy loss for different particles in air.
 We can see that the value of $\frac{dE}{dx}$ for different types of particles approaches a near-constant broad minimum value at energies above several hundred $\mega\electronvolt$, where their velocity approaches the velocity of light.
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{figures/energy_loss}
-  \caption{Variation of the specific energy loss in air versus energy of the charge particles shown}
+  \caption[Energy loss in air]{Variation of the specific energy loss in air versus energy for different particles \cite{rad_phys}}
   \label{energy_loss}
 \end{figure}
 \FloatBarrier
+
 At low particles energies, where charge exchange between the particles and absorber becomes important, the Bethe Bloch formula begins to fail.
 That is because the positively charged particles will then tend to pick up electrons from the absorber, which effectively reduce its charge and consequently linear energy loss, and will at the end become a neutral atom.
 
 \subsection{Linear Energy Transfer LET}
 \label{LET_section}
-\acf{LET} is closely related to stopping power of a particle, but instead of focusing on energy loss of the particle, \ac{LET} focuses on the energy that is deposited in a local volume.
+\acf{LET} is closely related to stopping power of a particle, but instead of focusing on energy loss of the particle, \ac{LET} focuses on the energy that is deposited to a material in a local volume.
 For low energies, \ac{LET} is often said to be equal to the stopping power, even though the particle energy that turn into photons may escape the local area.
 For higher energies, small particles like ionized electrons can escape the local volume. The local volume is defined by the user,
 and can be everything from part of a molecule to a whole organ.
@@ -416,7 +438,7 @@ L_\Delta= \bigg(- \frac{dE}{dx}\bigg)_\Delta
 where $\Delta$ is the upper energy limit for the secondary electrons included in the calculations.
 If $\Delta$ is set to $\infty$, all secondary electrons are included in the calculations, making \ac{LET} the same as stopping power.
 
-\section{Neutral particle and their Interaction with Matter}
+\section{Neutral particle and their Interaction with Matters}
 \subsection{Neutrons}
 Neutrons are subatomic structures that are present in most atomic nuclei.
 Neutrons carry no charge and can therefore not interact with matter by means of the Coulomb force,
@@ -445,21 +467,22 @@ We normally divide radiation effects in two groups that is $\emph{Singel Events 
 
 \subsection{Single Events Effects SEE}
 \label{SEE_section}
-Single Event Effects are due to the energy deposited by one single particle in the electronic device.
-Therefore, they can happen in a moment, and their probability is expressed in terms of cross-section \cite{website:Faccio}.
-These effects have been an increasing problem as the manufacture process are getting smaller and smaller, making circuits more weak for radiation.
+\acf{SEE} happens due to the energy deposited by one single particle in a electronic device.
+Therefore, they can happen in a moment, and their probability is expressed in terms of cross-section\footnotemark \cite{website:Faccio}.
+These effects have been an increasing problem as the manufacture process are getting smaller and smaller, and thereof making circuits more weak for radiation.
 In the next sections we will look into three \ac{SEE}, which is \acf{SEL}, \acf{SET} and \acf{SEU}.
 
+\footnotetext{Cross section the probability that an incoming particle will induce an error in the form of a bit flip or a \ac{SEU}}
 \subsubsection{Single Event Latchup SEL} 
 A \acf{SEL} is phenomena where a low resistance path between power and ground is formed, normally resulting in burned traces, which means reduced performance or destruction of the chip.
-Therefore it is of highest importance to know about this effect, to know how to counter or to protect from latches in design phase. 
-In a \ac{CMOS} process a \ac{SEL} can occur when an ionized particle penetrate the silicon in a transistor causing a charge to turn ON the parasitic bipolar transistors formed by the substrate, well, and the diffusion.
+Therefore it is of highest importance to know about this effect, and know how to counter or to protect from latches in design phase. 
+In a CMOS processes a \ac{SEL} can occur when an ionized particle penetrate the silicon in a transistor causing a charge to turn ON the parasitic bipolar transistors formed by the substrate, well, and the diffusion.
 This will result in a low resistance path between power and ground, and a high current will flow.
 If a \ac{SEL} has occurred, power to the chip needs to be turned off immediately, before the high current flowing from power to ground will burn interconnections and permanently set the chip out of function. 
 
-How a latchup may occur can be understood by looking at a \ac{CMOS} inverter, see figure \ref{CMOS_inverter}.
-From figure \ref{CMOS_inverter}(a) you can see a resistor formed in the well and substrate, and a parasitic bipolar npn-transistor and pnp-transistor formed inside the inverter.
-An equivalent circuit can be seen in figure \ref{CMOS_inverter}(b).
+How a latchup may occur can be understood by looking at a \ac{CMOS} inverter, see \autoref{CMOS_inverter}.
+From \autoref{CMOS_inverter}(a) you can see a resistor formed in the well and substrate, and a parasitic bipolar npn-transistor and pnp-transistor formed inside the inverter.
+An equivalent circuit can be seen in \autoref{CMOS_inverter}(b).
 Originally both of the bipolar transistors are turned off, and no current flows through the transistors.
 A latchup can be triggered if an ionizing particle flows into the substrate creating a transient current that can set $V_sub$ high, causing npn-transistor to turn ON.
 If the npn-transistor turns ON, then current will flow through $R_well$ causing $V_well$ to go low and setting pnp-transistor ON.
@@ -468,7 +491,7 @@ When the pnp-transistor turns ON current will flow through $R_sub$, causing $V_s
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{figures/CMOS_inverter}
-  \caption{(a) A CMOS inverter with parasitic bipolar transistors (b) A model of the parasitic circuit}
+  \caption[CMOS inverter]{(a) A CMOS inverter with parasitic bipolar transistors (b) A model of the parasitic circuit \cite{CMOS}}
   \label{CMOS_inverter}
 \end{figure}
 
@@ -498,14 +521,14 @@ Then the SRAM cell has changed value from '0' to '1', and we have a \ac{SEU}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/SRAM_Cell}
-  \caption{Six transistor SRAM Cell}
+  \caption{Six transistor SRAM Cell \cite{CMOS}}
   \label{SRAM_Cell}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{figures/charge_generation}
-  \caption{(a) Electron hole pairs generated (b) Carrier are drawn towards the depletion region causing a current jump (c) Additional charge is collected on a more long time scale (hundreds of nanoseconds) \cite{Baumann}}
+  \caption[Principle of Charge Generation]{(a) Electron hole pairs generated (b) Carrier are drawn towards the depletion region causing a current jump (c) Additional charge is collected on a more long time scale (hundreds of nanoseconds) \cite{Baumann}}
   \label{charge_generation}
 \end{figure}
 
@@ -543,7 +566,7 @@ An effect of the total ionized dose in a CMOS circuits, could be increase in cur
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{figures/TID_in_MOS}
-  \caption{Layout of a MOS transistor. (A) Shows normal operation and (B) shows the transistor after irradiation.}
+  \caption[MOS transistor under radiation]{Layout of a MOS transistor. (A) Shows normal operation and (B) shows the transistor after irradiation. \cite{roed_doctor}}
   \label{TID_in_MOS}
 \end{figure}
 
@@ -782,27 +805,27 @@ To test this board, we used an analog input changing back and forth every other 
 
 \FloatBarrier
 
-\subsection{All of the Test Boards}
+\subsection{The Test Boards}
 In figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you find pictures of all of the different PCB boards.
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/PCB_board1}
-  \caption{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
+  \caption[PCB Boards 1]{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
   \label{PCB_board1}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/PCB_board2}
-  \caption{Picture of PCB boards, from left we have, SN74AVC2T245, QS3VH257 and SY89831U}
+  \caption[PCB Boards 2]{Picture of PCB boards, from left we have, SN74AVC2T245, QS3VH257 and SY89831U}
   \label{PCB_board2}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.75\textwidth]{figures/PCB_board3}
-  \caption{Picture of PCB boards, from left we have, ADN2814, MAX3748 and back-side of QS3VH257, you can see the mark at the top indicating the center of the \ac{IC}}
+  \caption[PCB Boards 3]{Picture of PCB boards, from left we have, ADN2814, MAX3748 and back-side of QS3VH257, you can see the mark at the top indicating the center of the \ac{IC}}
   \label{PCB_board3}
 \end{figure}
 
@@ -998,7 +1021,7 @@ This was used when doing the beam profile as discussed in chapter \ref{beam_setu
   \includegraphics[width=\linewidth]{figures/XY_back}
   \caption{SN74AVC2T245 board2}
   \end{subfigure}
- \caption{X-Y-positioning system upfront and behind, with SRAM-board mounted}
+ \caption[X-Y-Positioning System]{X-Y-positioning system upfront and behind. The SRAM detector mounted}
  \label{xy-table}
 \end{figure}
 \newpage
@@ -1387,7 +1410,7 @@ An example of two films from the beam exit and \ac{DUT} area can be seen in figu
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{figures/Radiation_film}
-  \caption{Example of radiation films after radiation, DUT area (top) and bream exit (button). The laser beam position is marked with a dot.}
+  \caption[Radiation Film]{Example of radiation films after radiation, DUT area (top) and bream exit (button). The laser beam position is marked with a dot.}
   \label{Radiation_film}
 \end{figure}
 
@@ -2209,8 +2232,11 @@ A more disturbing issue happened when we moved the beam towards the optical rece
 The work presented in this thesis was done to 
 
 
-\FloatBarrier
 
+
+
+
+\FloatBarrier
 \begin{appendices}
 \chapter{Radiation Results}
 \label{radiation_results}
@@ -2262,6 +2288,8 @@ The work presented in this thesis was done to
       \caption{Calibration tests 15.11.2013}
 \end{table}%
 
+\FloatBarrier
+
 \section{Radiation Results from OCL}
 \label{radiation_results_ocl}
 
@@ -2277,7 +2305,7 @@ The work presented in this thesis was done to
   \includegraphics[width=\linewidth]{figures/3v3_current_dose_sf2_1}
   \caption{Current on the 3.3 V source over time for SF2 test1}
   \end{subfigure}
- \caption{}
+ \caption{SF2 - Cycles vs dose}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -2292,31 +2320,26 @@ The work presented in this thesis was done to
   \includegraphics[width=\linewidth]{figures/cycles_dose_sf2_2}
   \caption{Cycle counter versus dose for SF2 test2}
   \end{subfigure}
- \caption{}
+ \caption{SF2 - cycles vs dose}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{figures/flux_vs_time_1}
-  \caption{flux for each component radiated 15.11.2013}
+  \caption{flux for components radiated 15.11.2013}
   \label{flux_all1}
 \end{figure}
 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{figures/flux_vs_time_2}
-  \caption{flux for each component radiated 28.11.2013}
+  \caption{flux for components radiated 28.11.2013}
   \label{flux_all2}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/flux_all_3}
-  \caption{flux for each component radiated 09.04.2014}
-  \label{flux_all3}
-\end{figure}
+In Figure \ref{flux_all1} and \ref{flux_all2} you can see graphs of flux vs time for the different test boards tested at OCL. The reason the graphs don't go as linear as one would expect, is that the beam sometimes stopped and had to restarted, and that we increased and decreased the intensities as we saw fitting.
 
-In figure $\ref{flux_all1}$, $\ref{flux_all2}$ and \ref{flux_all3} you can see graphs of flux vs time for the different test boards. The reason the graphs don't go as linear as one would expect, is that the beam sometimes stopped and had to restarted, and that we increased and decreased the intensities as we wanted.
+\FloatBarrier
 
 \section{Radiation Results from TSL}
 \label{radiation_results_tsl}
@@ -2333,15 +2356,27 @@ In figure $\ref{flux_all1}$, $\ref{flux_all2}$ and \ref{flux_all3} you can see g
   \includegraphics[width=\linewidth]{figures/3v3_current_dose_sf2_2}
   \caption{Current on the 3.3 V source over time for SF2 test2}
   \end{subfigure}
- \caption{}
+ \caption{SF2 - Current vs dose}
 \end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figures/flux_all_3}
+  \caption{flux for components radiated 09.04.2014}
+  \label{flux_all3}
+\end{figure}
+
 
 \chapter{Current measurement board tutorial}
 \label{tutorial_current}
 
 \end{appendices}
 
-\FloatBarrier
+\include{acronyms}
+
+\listoffigures
+
+\listoftables
 
 \newpage
 \bibliography{Master_Inge_bibtex}

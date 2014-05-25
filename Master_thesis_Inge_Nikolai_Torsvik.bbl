@@ -9,6 +9,12 @@ K.~Aamodt, A.~A. Quintana, R.~Achenbach, S.~Acounis, D.~Adamova, C.~Adler, and
 K.~Safarik, ``Overview of recent alice results,'' {\em Nuclear Physics A},
   vol.~904, pp.~27C--34C, May 2013.
 
+\bibitem{georgios}
+G.~K. Tsiledakis, {\em Scale Dependence of Mean Transverse Momentum
+  Fluctuations at Top SPS Energy measured by the CERES experiment and studies
+  of gas properties for the ALICE experiment. PhD thesis}.
+\newblock Darmstadt: Technische Universitat Darmstadt, 2006.
+
 \bibitem{website:CERN_accelerators}
 CERN, ``Cern accelerators.''
 \newblock \url{http://cds.cern.ch/record/42384}.
@@ -21,6 +27,16 @@ F.~Faccio, ``Alice information site.''
 K.~Roeed, {\em Single Event Upsets in SRAM FPGA based readout electronics for
   the Time Projection Chamber in the ALICE experiment}.
 \newblock PhD thesis, University of Bergen, Norway, 2009.
+
+\bibitem{RCU2}
+J.~Alme, T.~Alt, L.~Bratrud, P.~Christiansen, F.~Costa, E.~David, T.~Gunji,
+  T.~Kiss, R.~Langoy, J.~Lien, C.~Lippmann, A.~Oskarsson, A.~U. Rehman,
+  K.~Roed, D.~Rohrich, A.~Tarantola, C.~Torgersen, I.~N. Torsvik, K.~Ullaland,
+  A.~Velure, S.~Yang, C.~Zhao, H.~Appelshaeuser, L.~Osterman, and A.~T.
+  Collaboration, ``Rcu2-the alice tpc readout electronics consolidation for
+  run2,'' {\em JOURNAL OF INSTRUMENTATION}, vol.~8, DEC 2013.
+\newblock Topical Workshop on Electronics for Particle Physics, Perugia, ITALY,
+  SEP 23-27, 2013.
 
 \bibitem{website:SF2_datasheet}
 microsemi, ``Smartfusion2 product brief,'' 2014.
@@ -61,12 +77,6 @@ F.~M. T.R~Oldham, ``Total ionizing dose effects in mos oxides and devices,''
 \bibitem{GranlundOlsson}
 T.~Granlund and N.~Olsson, ``A comparative study between proton and neutron
   induced seu in srams,'' 2006.
-
-\bibitem{georgios}
-G.~K. Tsiledakis, {\em Scale Dependence of Mean Transverse Momentum
-  Fluctuations at Top SPS Energy measured by the CERES experiment and studies
-  of gas properties for the ALICE experiment. PhD thesis}.
-\newblock Darmstadt: Technische Universitat Darmstadt, 2006.
 
 \bibitem{bjorn_master}
 B.~H. Straume, ``Straalingstester og utvikling av bestraalingsposedyre for
