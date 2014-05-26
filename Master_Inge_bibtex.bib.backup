@@ -172,6 +172,13 @@
  year      =  "2006"
 }
 
+@article{radiation_alice,
+ author    = "A. Morsch and B. Pastircák",
+ title     = "Radiation in ALICE detectors and electronic racks",
+ IEEE 	   = "ALICE-INT-2002-28",
+ year      =  "2004"
+}
+
 @article{Baumann, 
 author = "Baumann, R.C.", 
 journal = "Device and Materials Reliability, IEEE Transactions on", 
@@ -186,7 +193,7 @@ doi = "10.1109/TDMR.2005.853449",
 ISSN = "1530-4388"
 }
 
-@article{Baumann, 
+@article{Safarik, 
 author = "Safarik, Karel", 
 journal = "Nuclear Physics A", 
 title = "Overview of Recent ALICE Results", 

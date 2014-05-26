@@ -5,37 +5,38 @@ A level-1 auxiliary file: acronyms.aux
 The style file: ieeetr.bst
 Database file #1: Master_Inge_bibtex.bib
 Warning--empty journal in GranlundOlsson
+Warning--empty journal in radiation_alice
 Warning--empty journal in Berg
-You've used 24 entries,
+You've used 27 entries,
             1876 wiz_defined-function locations,
-            609 strings with 7062 characters,
-and the built_in function-call counts, 3978 in all, are:
-= -- 358
-> -- 192
+            620 strings with 7562 characters,
+and the built_in function-call counts, 4394 in all, are:
+= -- 395
+> -- 208
 < -- 0
-+ -- 79
-- -- 55
-* -- 244
-:= -- 643
-add.period$ -- 36
-call.type$ -- 24
-change.case$ -- 20
++ -- 86
+- -- 59
+* -- 265
+:= -- 705
+add.period$ -- 41
+call.type$ -- 27
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 176
-empty$ -- 424
-format.name$ -- 55
-if$ -- 944
+cite$ -- 30
+duplicate$ -- 193
+empty$ -- 477
+format.name$ -- 59
+if$ -- 1046
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 17
-newline$ -- 90
-num.names$ -- 24
-pop$ -- 111
+int.to.str$ -- 27
+missing$ -- 18
+newline$ -- 101
+num.names$ -- 27
+pop$ -- 131
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 75
+skip$ -- 83
 stack$ -- 0
 substring$ -- 56
 swap$ -- 27
@@ -43,8 +44,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 28
-width$ -- 26
-write$ -- 221
-(There were 2 warnings)
+warning$ -- 3
+while$ -- 31
+width$ -- 29
+write$ -- 246
+(There were 3 warnings)

@@ -78,6 +78,10 @@ F.~M. T.R~Oldham, ``Total ionizing dose effects in mos oxides and devices,''
 T.~Granlund and N.~Olsson, ``A comparative study between proton and neutron
   induced seu in srams,'' 2006.
 
+\bibitem{radiation_alice}
+A.~Morsch and B.~Pastirak, ``Radiation in alice detectors and electronic
+  racks,'' 2004.
+
 \bibitem{bjorn_master}
 B.~H. Straume, ``Straalingstester og utvikling av bestraalingsposedyre for
   alice tpc-elektronikken,'' Master's thesis, University of Bergen, Norway,
@@ -100,6 +104,16 @@ N.~I. Corporation, ``User guide and specifications ni usb-6008/6009,'' April
 T.~Instruments, ``Tps51200 - sink/source ddr termination regulator,'' February
   2008.
 \newblock \url{http://www.ti.com/lit/ds/slus812/slus812.pdf}.
+
+\bibitem{website:SN74AVCB164245}
+T.~Instruments, ``Sn74avcb164245 - 16-bit dual-supply bus transceiver with
+  configurable voltage translation and 3-state outputs,'' June 2005.
+\newblock \url{http://www.ti.com/lit/ds/symlink/sn74avcb164245.pdf}.
+
+\bibitem{website:SN74AVC2T245}
+T.~Instruments, ``Sn74avc2t245 - dual-bit dual-supply bus transceiver with
+  configurable voltage translation and 3-state outputs,'' May 2012.
+\newblock \url{http://www.ti.com/lit/ds/sces692a/sces692a.pdf}.
 
 \bibitem{Berg}
 M.~Berg, ``Field programmable gate array (fpga) single event effect (see)
