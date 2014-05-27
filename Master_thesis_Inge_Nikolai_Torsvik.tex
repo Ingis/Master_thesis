@@ -102,11 +102,11 @@
 
 
 \chapter*{Abstract}
-At CERN in Switzerland we can find the largest particle accelerator ever built called \ac{LHC}. The LHC is placed 100 meter below ground level in a 27 km long tunnel where four experiment areas are located, one of these experiment is \ac{ALICE}. \ac{ALICE} is built to study a matter known as Quark-gluons plasma, which will be generated under collisions of heavy ions. LHC is currently shutdown for maintenance and preparation for even higher energies. This period called Long Shutdown 1 (LS1), started January 2013 and will last until the end of 2014.
+At CERN in Switzerland the largest particle accelerator ever built called \ac{LHC} is located. The LHC is placed 100 meter below ground level in a 27 km long tunnel where four experiment areas are located, one of these experiment is \ac{ALICE}. \ac{ALICE} is built to study a matter known as Quark-gluons plasma, which will be generated under collisions of heavy ions. LHC is currently shutdown for maintenance and preparation for even higher energies. This period called Long Shutdown 1 (LS1), started January 2013 and will last until the end of 2014.
 
 ALICE comprises of several sub-detectors, one of these are \ac{TPC}, which is the main tracking device of ALICE. For LS1 it has been decided that a upgrade should be performed on the \ac{RCU}, which controls the readout in the TPC. The new RCU, named RCU2, will increase the present readout rate by a factor of up to 2.6, and will be more immune to radiation induced errors.
 
-For the RCU2 design we introduces new components, where some of these hasn't been tested for radiation tolerance. The work presented through this thesis comprises of irradiation tests of these components. The tested components consist of power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator, Current Shunt Monitor and the RCU2's main FPGA, the Microsemi \ac{SF2}. The tests performed consist mostly of test for accumulative effects, but test for \ac{SEE} will also be performed for some of the components.
+For the RCU2 design new components are introduces, where some of these hasn't been tested for radiation tolerance. The work presented through this thesis comprises of irradiation tests of these components. The tested components consist of power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator, Current Shunt Monitor and the RCU2's main FPGA, the Microsemi \ac{SF2}. The tests performed consist mostly of test for accumulative effects, but test for \ac{SEE} will also be performed for some of the components.
 
 The main focus has been on the SF2 SoC FPGA, where test of \acl{SEE} like \ac{SEU}, \ac{SET} and \ac{SEL} has been executed on SRAM, logic element and PLL.
 
@@ -194,7 +194,7 @@ The \ac{TPC} detector has a cylindrical shape, with an inner radius of 85 cm and
 The detector is made up of a large cylindrical field cage, filled with 88 $m^3$ of 90\% Ne gas and 10\% $CO^2$ gas.
 A high voltage electrode is placed in the center of the detector, dividing the \ac{TPC} into two drift regions, and making an electric field between the electrode and the two end plates.
 When a charged particle is generated inside the detector, the gas inside the cage will be ionized. The free electrons and the ions will then drift in the electric field between the high voltage electrode and the two end plates.
-At the end-plates we find the Readout Chamber which is divided into 18 trapezoidal sectors, where each sector is again divided into the inner and outer chamber.
+At the end-plates the Readout Chamber is located, which is divided into 18 trapezoidal sectors, where each sector is again divided into the inner and outer chamber.
 In the readout chamber, there are a total of 560 000 readout pads.
 
 \begin{figure}[!htbp]
@@ -271,7 +271,7 @@ Therefore a flash based \ac{FPGA}, Actel ProASIC is used to monitor the SRAM mem
 
 The \ac{DCS} board is basically an embedded computer running Linux.
 This board is connected through an Ethernet link to a computer on the outside of the ALICE detector.
-Through it, we are even able to upgrade and reprogram the \acp{FPGA} of the \ac{RCU}.
+Through this it is possible to upgrade and reprogram the \acp{FPGA} of the \ac{RCU}.
 So even though the hardware is inaccessible after it has been mounted in the \ac{TPC},
 the \ac{SIU} boards gives some kind of flexibility.
 In addition, it has an optical interface, receiving the clock and trigger information from the Timing, Trigger and Control system, also called TTC.
@@ -309,7 +309,7 @@ The main difference between the RCU2 and \ac{RCU}1 is that the main \ac{FPGA}, t
 has been replaced by a Microsemi \acf{SF2} \acf{SoC} \ac{FPGA} M2S050-FG896. This is a flash-based\footnote{Flash-based FPGA means that configuration registers is saved in flash memory cells. Compared to SRAM-based FPGA where configuration is saved in SRAM cells, flash-based FPGA is much more tolerant against radiation.}
 FPGA which has \ac{SEU} immune configuration memory, as well as several other radiation tolerance measures implemented \cite{website:SF2_datasheet}.
 It also comes with a Microcontroller Subsystem which is based on a hardcore ARM Cortex-M3 microcontroller.
-On the Microcontroller Subsystem we are able to build a Linux system, which replaces the functionality of the \ac{DCS}-card.
+On the Microcontroller Subsystem a Linux system can be built, which replaces the functionality of the \ac{DCS}-card.
 The ProASIC was also not needed as a  reconfiguration FPGA anymore, but will still be used as a radiation monitor.
 This part of the RCU2 is now called RadMon, and consists of a ProASIC and SRAM chips.
 The TTCrx chip that was used for handling the clock and trigger signal on RCU1 was out of stock and obsolete, and will be replaced by an optical receiver and a limiting amplifier. The limiting amplifier has been tested in the work presented in this thesis, see \autoref{limiting_amp}.
@@ -324,7 +324,7 @@ Therefore all of the backplanes had to be redesigned and replaced.
 
 \chapter{Radiation and Radiation effect on Semiconductor Devices}
 Radiation and radiation induced effects are known challenges when designing electronics which is going to be used in the LHC.
-It is therefore of highest importance to know about these effects, how they affect the electronics, how much damage they can cause and how we can protect and prevent the radiation effects to do damage.
+It is therefore of highest importance to know about these effects, how they affect the electronics, how much damage they can cause and how to protect and prevent the radiation effects to do damage.
 
 This chapter is based on references \cite{rad_phys}, \cite{CMOS}, \cite{knoll}, \cite{Baumann} and \cite{balashov} if not otherwise stated.
 
@@ -338,7 +338,7 @@ Particles which interact with a material will deposit some or all of its energy 
 How much energy is deposited, and which of these a particle will interact with, depends on the energy, mass, the charge of the particle and what material it interacts with.
 One of the main differences between charged particle and neutral particle is that charged particles will be affected by the Coulomb force,
 which is the attraction or repulsion of particles or objects due to their electric charge.
-In the next sections we will look more closely into how a charged particle and neutral particle interact with matters.
+In the following sections we will look more closely into how a charged particle and neutral particle interact with matters.
 %It is common to distinguish between Ionizing and non-ionizing radiation.
 %Ionizing radiation consist of particles with high enough energies so that they can detach electrons from an atom or molecule and ionize them.
 %Non-ionizing radiation is than obviously radiation of particles with energies to low to ionize a atom or molecule.
@@ -376,7 +376,7 @@ For example, for heavy charge particles (protons or heavier ions), inelastic col
 A common expression for these processes is called "stopping power".
 
 \subsection{Stopping Power}
-If we have a particle with a given energy passing into a material, where $dE$ is the mean energy that the particle loses by traveling through a path segment, $dx$ of the material.
+If a particle with a given energy passing into a material, where $dE$ is the mean energy that the particle loses by traveling through a path segment, $dx$ of the material.
 Then $-\frac{dE}{dx}$ is the stopping power or also called the "rate" of energy loss for the particle.
 The stopping power depends on the type and energy of the radiation and on the properties of the material it passes.
 
@@ -412,7 +412,7 @@ $\overline{I}$ & Effective material ionization potential \\
 % \label{sstopping_power}
 % \end{equation}
 
-From this formula we see that if we are considering two different particles with the same velocity, the only factor that changes is $Z^2$.
+From this formula, if considering two different particles with the same velocity, the only factor that changes is $Z^2$.
 Therefore heavier particles will experience larger energy loss in a material compared to lighter ones.
 \autoref{energy_loss} shows energy loss for different particles in air.
 The value of $\frac{dE}{dx}$ for different types of particles approaches a near-constant broad minimum value at energies above several hundred $\mega\electronvolt$, where their velocity approaches the velocity of light.
@@ -463,7 +463,7 @@ There are three main processes where a photon may react with matters, they are: 
 Semiconductor devices planned to be used in a radiation environment are likely to be effected by the radiation in some way.
 If not taken properly into account, the radiation effects may damage or even destroy the electronics.
 Therefore it is of highest importance to know how irradiation can affect the semiconductor devices.
-We normally divide radiation effects into two groups; $\emph{Singel Events effects}$ and $\emph{Accumulative Effects}$.
+Normally radiation effects are divided into two groups; $\emph{Singel Events effects}$ and $\emph{Accumulative Effects}$.
 
 \subsection{Single Events Effects SEE}
 \label{SEE_section}
@@ -477,7 +477,7 @@ We normally divide radiation effects into two groups; $\emph{Singel Events effec
 
 These effects can happen in any moment, and their probability is expressed in terms of cross-section\footnotemark \cite{website:Faccio}.
 These effects have been an increasing problem as the manufacture processes are getting smaller and smaller, and thereof making circuits more weak for radiation.
-In the following sections we will look into three \ac{SEE}, which are \acf{SEL}, \acf{SET} and \acf{SEU}.
+In the following sections the three most known \ac{SEE} will be looked into. These are \acf{SEL}, \acf{SET} and \acf{SEU}.
 
 \footnotetext{Cross section the probability that an incoming particle will induce an error in the form of a bit flip or a \ac{SEU}}
 \subsubsection{Single Event Latchup SEL} 
@@ -512,7 +512,7 @@ Since \acp{SET} are close to impossible to detect, SET is measured in terms of S
 \acf{SEU} is change of state in a logical element, caused by radiation. This phenomenon can often be seen in memory cells or registers, where data is stored.
 A \ac{SEU} is a "Soft error", which means that it is a non-destructive type of error. By resetting or overwriting after an \ac{SEU} has occurred, the error will disappear.
 
-For better understanding of \ac{SEU} we can look at a six transistor SRAM cell, see \autoref{SRAM_Cell}. If we start with Q = '0' and Q\_b = '1', which means that there is a value '0' written to the cell.
+For better understanding of \ac{SEU} a six transistor SRAM cell will be explored, see \autoref{SRAM_Cell}. If starting with Q = '0' and Q\_b = '1', which means that there is a value '0' written to the cell.
 Then a high energetic neutron strikes into the drain of transistor D\_2 and hits a silicon atom, which causes shattering of the atom into charged fragments (ions) that travel through the substrate.
 These ions leave a trail of electron-hole pairs, see \autoref{charge_generation}(a).
 When the resultant ionization track traverses or comes close to the depletion region,
@@ -540,8 +540,8 @@ If this voltage drop is high enough, transistor P1 will be opened, and transisto
 Accumulative effects are energy deposition caused by radiation for the whole lifespan of a circuit \cite{website:Faccio}, \cite{Oldham}.
 Accumulative effects are measured by the functionality of a device, and power consumption. 
 Some circuits are weak for accumulative effects, and will stop working only after a small dose of radiation,
-but other devices may not even have any effect after a severe dose of radiation. When a chip stops working, we say that it has reached its tolerance level.
-When we talk about accumulative effects we normally divide into two groups; displacement damage, which is a non-ionizing effect
+but other devices may not even have any effect after a severe dose of radiation. When a chip stops working, it has reached its tolerance level.
+Talking about accumulative effects it is normal to divide into two groups; displacement damage, which is a non-ionizing effect
 and \ac{TID}, which is an ionizing effect.
 
 
@@ -562,7 +562,7 @@ Electrons, with high mobility, can easily leave the oxide, but holes have lower 
 The trapped holes cause a negative threshold voltage shift in the MOS transistor, and if enough holes are trapped, it can result in a transistor which is permanently ON.
 This phenomenon can be seen in \autoref{TID_in_MOS}.
 
-One effect of the total ionized dose in CMOS circuits is increase in current, which could be caused by threshold change in transistors. We can look at an example with an inverter. An inverter consist of only a PMOS and a NMOS, if threshold decreases, time where both transistors are on will increase, leading to increase of current. Another reason for current increase is current leakage between drain and source because of trapped holes.
+One effect of the total ionized dose in CMOS circuits is increase in current, which could be caused by threshold change in transistors. An example with an inverter can be looked at. An inverter consist of only a PMOS and a NMOS, if threshold decreases, time where both transistors are on will increase, leading to increase of current. Another reason for current increase is current leakage between drain and source because of trapped holes.
 
 \begin{figure}[!htbp]
   \centering
@@ -580,10 +580,10 @@ Displacement damage is not measured in any unit, but it is expressed in terms of
 Radiation in the \ac{LHC} is dominated by high energetic neutrons and protons, mostly neutrons with an estimated fluence of $(0,6-1,1)\times 10^{11}$ $neutrons/cm^2$ \cite{georgios}.
 Therefore it would be preferable to test our electronics with a neutron beam, but since there are few labs that can produce a neutron beam compared to proton beam most of the electronics are only tested at \ac{OCL} with a proton beam.
 There has been conducted experiments that compares SEU induced by neutrons and protons \cite{GranlundOlsson}, and the results shows that it is possible to use a proton beam instead of neutron beam with small deviations.
-By comparing a proton beam with a neutron beam of 21 MeV we see that there are 10-25\% less \ac{SEU} cross section for a proton beam compared to a neutron beam.
-If we increase the energy to 88 MeV then we get close to none deviations. 
+By comparing a proton beam with a neutron beam of 21 MeV there are 10-25\% less \ac{SEU} cross section for a proton beam compared to a neutron beam.
+If the energy is increased to 88 MeV there is close to no deviation. 
 
-Several calculations has been done on the present radiation level in ALICE \cite{georgios} and \cite{radiation_alice}. From these calculations it is expected a high energy hadron fluence rate ($>20MeV$) of 0.8 kHz/cm2, and that is for the worst case location of the TPC electronics, and for an interaction rate of 8 kHz. Scaling this fluence rate to an interaction rate of 30 kHz, the expected value for Run2 becomes 3 kHz/cm2 , which is a significant rate. For run1 a total dose and 1 MeV neutron-equivalent netron fluence was estimated to be 1.6 kRad and $4.5\cdot10^{10} \centi\meter^-{2}$ respectively, and this for a total operation of 10 ALICE years. If we assume a similar running program of p-p, p-Pb and Pb-Pb interactions, and then scaling for a 3 year running period of Run2 including an increased interaction rate of 30 kHz for Pb-Pb, we could expect a similar dose of around 1-2 $\kilo$Rad and a fluence in the order of $10^{10}$ for run2.
+Several calculations has been done on the present radiation level in ALICE \cite{georgios} and \cite{radiation_alice}. From these calculations it is expected a high energy hadron fluence rate ($>20MeV$) of 0.8 kHz/cm2, and that is for the worst case location of the TPC electronics, and for an interaction rate of 8 kHz. Scaling this fluence rate to an interaction rate of 30 kHz, the expected value for Run2 becomes 3 kHz/cm2 , which is a significant rate. For run1 a total dose and 1 MeV neutron-equivalent fluence was estimated to be 1.6 kRad and $4.5\cdot10^{10} \centi\meter^-{2}$ respectively, and this for a total operation of 10 ALICE years. If assuming a similar run program of p-p, p-Pb and Pb-Pb interactions, and then scaling for a 3 year running period of Run2 including an increased interaction rate of 30 kHz for Pb-Pb, a similar dose of around 1-2 $\kilo$Rad and a fluence in the order of $10^{10}$ could be expected for run2.
 
 %Section about what our electronics will receive at CERN
 
@@ -591,40 +591,40 @@ Several calculations has been done on the present radiation level in ALICE \cite
 \newpage
 
 \chapter{Preparations for Radiation Testing}
-Testing components is a process that has been done many times before, in conjunction with design of electronics that are going to be installed in the \ac{LHC}. This chapter will go through all the components that are tested, and give a short description of the software and equipment used.
+Testing components is a process that has been done many times before in conjunction with design of electronics that are going to be installed in the \ac{LHC}. This chapter will go through all the components that are tested, and give a short description of the software and equipment used.
 Much of the work presented in this thesis is based on experience from previous thesis \cite{bjorn_master} \cite{roed_doctor} \cite{roed_master} \cite{arild_master}.
 
 \section{Test Methodology}
 The components that were tested through this thesis are: TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210, TLV3011 and SF2 M2S050-FG896. What each of these are, and how these were tested will be discussed in the following sections.
 
-For each of the different components, except the \ac{SF2}, a simple \acf{PCB} was made as a platform to be able to send input data and measure the output data.
-One or two connectors were placed on the \ac{PCB} and connected to USB-DAQ (Data Acquisition) devices from National Instruments. These gave us the possibility to control the inputs of each component and monitor the outputs.
-A small resistor was placed in series with the power input. By measuring voltage drop over this resistor we could calculate the current using \emph{Ohms law} (I = U/R).
+For each of the different components, except the \ac{SF2}, a simple \acf{PCB} was used as a platform to be able to send input data and measure the output data.
+One or two connectors were placed on the \ac{PCB} and connected to USB-DAQ (Data Acquisition) devices from National Instruments. These gave us the possibility to control the inputs of each component and measure the outputs.
+A small resistor was placed in series with the power input. By measuring voltage drop over this resistor the current could be calculate using \emph{Ohms law} (I = U/R).
 
-We wanted to have at least two \acp{PCB} for each of the components that were going to be tested to have more test data on each component, and as a precaution if we should have problems with one of these.
-
-There may be some difference between two boards made with the same component. That is because the first board that was made may have some fix on the \ac{PCB} level to make it work. When the second board was made, errors were fixed in the design before a new board was made.
-The second version was tested first, in case we didn't have time to test both of the versions.
-Later in this thesis the first board tested are marked with $_1$ and the second board tested were marked with $_2$.
-For two of the components (ADN2814 and MAX3748) there were only made one PCB version of, since we didn't have any spare component at that time to make a new \ac{PCB}.
-All of the \acp{PCB} had a mark on the back indicating the center of the component, which was used to pinpoint the center during a test.
+Two \acp{PCB} for each of the components that were going to be tested were preferable, to have more test data on each component, and as a precaution if a problem should occur with one of these.
+% There may be some difference between two boards made with the same component. That is because the first version may have some modification on the \ac{PCB} level to make it work. When the second version was design, errors were fixed before a new board was made.
+% The second version was tested first, in case we didn't have time to test both of the boards.
+% Later in this thesis the first board tested are marked with $_1$ and the second board tested was marked with $_2$.
+This were done for all of the components except ADN2814 and MAX3748, where only one PCB was made.
+% That was because spare components wasn't available at that time to make new \acp{PCB}, and there wasn't enough time to order new components and build a second PCB before the radiation test.
+All of the \acp{PCB} had a mark on the back side indicating the center of the component, which was used to pinpoint the center during a test.
 
 To supply and measure everything on the test boards, \acf{DAQ} devices from National Instruments were used.
-The \ac{DAQ} devices we used are called USB-6009, USB-6008 and USB-6501. USB-6009 was used as the main one, and the other were used when needed more digital or analog inputs or outputs.
+The \ac{DAQ} devices used are called USB-6009, USB-6008 and USB-6501. USB-6009 was used as the main one, and the others were used when more digital or analog inputs or outputs where needed.
 USB-6009 has 8 single-ended analog input (AI) channels, 2 analog output (AO) channels and 12 digital input/output (DIO) channels, and also a 2.5 V reference and 5.0 V output.
-The analog outputs have a limit of 5 $\milli\ampere$, but some of the components that were tested required more power. In these cases the 5 V output, which are able to deliver current up to 200 $\milli\ampere$, and a voltage regulator to 3.3 V were used, see section \ref{MIC_explanation}.
+The analog outputs have a limit of 5 $\milli\ampere$, but some of the components that were tested required more power. In these cases the 5 V output, which is able to deliver current up to 200 $\milli\ampere$, and a voltage regulator to 3.3 V were used, see section \ref{MIC_explanation}.
 More information on the DAQs can be seen in the reference \cite{website:DAQ}.
 
 \section{The Tested Components}
 \subsection{TPS51200}
 \label{TPS_explanation}
-This is an adjustable power regulator from Texas Instruments. It is special designed for DDR RAM, it can be used for DDR, DDR2, DDR3 and DDR4 applications.
-On the RCU2 this is going to be used to supply a DDR3 RAM with 0.75 V.
+TPS51200 is an adjustable power regulator from Texas Instruments. It is specially designed for DDR RAM, it can be used for DDR, DDR2, DDR3 and DDR4 applications.
+On the RCU2, this is going to be used to supply a DDR3 RAM with 0.75 V.
 
-In \autoref{TPS51200_sch} you can see the schematic layout of the \ac{PCB} for TPS51200.
+\autoref{TPS51200_sch} shows the schematic layout of the \ac{PCB} for TPS51200.
 The PCB was designed after a recommended setup for DDR3 application from the datasheet \cite{website:TPS51200}.
 
-For our test setup we used a input voltage of 3.3 V, and voltage over resistor R1, see \autoref{TPS51200_sch} was measured and used to calculate current consumption. Output voltage was also monitored.
+Under radiation test an input voltage of 3.3 V was used to supply the component, and voltage over resistor R1, see \autoref{TPS51200_sch} was measured and used to calculate current consumption. Output voltage was also monitored.
 
 \begin{figure}[!htbp]
   \centering
@@ -636,21 +636,21 @@ For our test setup we used a input voltage of 3.3 V, and voltage over resistor R
 
 \subsection{MIC69302WU}
 \label{MIC_explanation}
-This is an ultra-low dropout\footnote{Low dropout means that voltage on the output can be close up to the input. For MIC69302WU low dropout means that $V_{IN}$ - $V_{OUT}$ can be as low as 500 $\milli\volt$} adjustable power regulator from Micrel Incorporation. It is in a family of high current, low voltage regulators, and can deliver a current of up to 3 A.
-On the RCU2 this is going to be used to regulate a 3.3 V power signal down to 1.2 V. The 1.2 V is mainly used to power the SF2 SoC FPGA.
+MIC69302WU is an ultra-low dropout\footnote{Low dropout means that voltage on the output can be close up to the input. For MIC69302WU low dropout means that $V_{IN}$ - $V_{OUT}$ can be as low as 500 $\milli\volt$} adjustable power regulator from Micrel Incorporation. It is a high current, low voltage regulator, and can deliver a current of up to 3 A.
+On the RCU2 this is going to be used to regulate a 3.3 V power signal down to 1.2 V, which is used to power the SF2 SoC FPGA.
 
-With adjustable regulator it means that by changing R1 and R2, see \autoref{MIC_sch} you can adjust the output voltage, see \autoref{Vout}.
+The regulator is adjustable in the way that by replacing R1 and R2, see \autoref{MIC_sch}, the output voltage can be adjusted, see \autoref{Vout}.
 
 \begin{equation}
 Vout = 0.5 \times (\frac{R1}{R2}+1)
 \label{Vout}
 \end{equation}
 
-For the test setup of the two test boards we used an input voltage of 3.3 V, and voltage over resistor R3, see \autoref{MIC_sch}, was measured and used to calculate current consumption. We used 10 k$\ohm$ for both R1 and R2 which gave us an output voltage of 1 V, which was measured under test.
+Under radiation test, an input voltage of 3.3 V was used to supply the component, and voltage over resistor R3, see \autoref{MIC_sch}, was measured and used to calculate current consumption. 10 k$\ohm$ was used for both R1 and R2, which gave an output voltage of 1 V, which was measured under test.
 
-A third \ac{PCB} was made with this component. This was used to supply 3.3 V to the components which requires more than 5 mA, which is the maximum the analog outputs the USB-\ac{DAQ} device can deliver.
-A version was design with resistor values of R3 = 20 $\ohm$, R1 = 5.6k $\ohm$ and R2 = 1k $\ohm$, which gave us 3.3 V output.
-This \ac{PCB} was used to supply SY89831U, ADN2814 and MAX3748 during test.
+A third \ac{PCB} was made with this component. This version was designed with resistor values of R3 = 20 $\ohm$, R1 = 5.6 k$\ohm$ and R2 = 1 k$\ohm$, which gave us a 3.3 V output.
+The analog 5 V signal from the USB-DAQ with current limit of 200 mA was used to supply this PCB, which gives an output voltage of 3.3 V with current limits of 250-300 mA. 
+It was used to to supply SY89831U, ADN2814 and MAX3748 during test, since they required more power than what the analog outputs from the USB-DAQ can deliver
 
 \begin{figure}[!htbp]
   \centering
@@ -661,15 +661,15 @@ This \ac{PCB} was used to supply SY89831U, ADN2814 and MAX3748 during test.
 \FloatBarrier
 
 \subsection{SN74AVCB164245}
-This is a 16-bit noninverting bus transceiver, with configurable voltage. Used for level shifting on digital signals.
-An application example could be to convert a 16-bit digital signal of 2.5 V to a 16-bit digital signal of 3.3 V.
-Direction of the signal is decided by 1DIR and 2DIR, see \autoref{SN74AVCB164245_sch} and \cite{website:SN74AVCB164245}.
-The input and output high value can be set to anything between 1.4 and 3.6 V, and the low value is set to GND (0 V).
-On the RCU2 this is going to be used as a level shifter for a 1.5 V signal to 3.3 V signal.
+SN74AVCB164245 is a 16-bit noninverting bus transceiver, with configurable input and output voltage. It is used for level shifting of digital signals.
+% An application example could be to convert a 16-bit digital signal of 2.5 V to a 16-bit digital signal of 3.3 V.
+The input and output high values can be set to anything between 1.4 and 3.6 V, and the low value is set to GND (0 V).
+The direction of the signals are decided by 1DIR and 2DIR, see \autoref{SN74AVCB164245_sch} and \cite{website:SN74AVCB164245}.
+On the RCU2 this is going to be used for level shifting of a 16-bit digital signal of 1.5 V to 3.3 V.
 
-Since we have so many input signals, we wanted to make sure that the component didn't used unmeasured current through the inputs of the chip. Therefore we added a pMOS transistor that was connected as seen in \autoref{SN74AVCB164245_sch} and a pull up resistor. When the IN signal is low the PMOS transistor will be open, pulling the input signals to ground. When IN is high, the PMOS transistor is closed, which means that the the input signals will be pulled up to 3.3 V from the supply signal. 
+Since this component have so many input signals a small amount of current may go in to the input signals. Therefore to make sure that the component didn't use unmeasured current through the inputs of the chip, a pMOS transistor that was connected as seen in \autoref{SN74AVCB164245_sch}, and a pull up resistor was added to the design. When the IN signal is low the PMOS transistor will be open, pulling the input signals to ground. When IN is high, the PMOS transistor is closed, which means that the the input signals will be pulled up to 3.3 V from the supply signal. 
 
-Under radiation testing of SN74AVCB164245, we used the same 3.3 V signal to supply both VCCA and VCCB, see \autoref{SN74AVCB164245_sch}, which means that we don't have any level shifting from the inputs to the outputs, but that isn't necessary for test purposes. The voltage over resistor R1, see figure \autoref{SN74AVCB164245_sch}, was measured and used to calculate current consumption, and the outputs were measured digitally by USB-6008. The input signal IN was switching back and forth from on to off every 4 seconds.
+Under radiation test of SN74AVCB164245, the same 3.3 V signal was used to supply both VCCA and VCCB, see \autoref{SN74AVCB164245_sch}, which means that there is no level shifting from the inputs to the outputs, but that isn't necessary for test purposes. The voltage over resistor R1, see figure \autoref{SN74AVCB164245_sch}, was measured and used to calculate current consumption, and the outputs were measured digitally by USB-6008. The input signal IN was switching back and forth from on to off every 4 seconds.
 % The first version of this board didn't work. The output didn't change according to the input. We found out that this was because there were no load on the outputs.
 % So a output resistor was added to each of the outputs to make a load, and then it worked. 	
 
@@ -682,13 +682,13 @@ Under radiation testing of SN74AVCB164245, we used the same 3.3 V signal to supp
 \FloatBarrier
 
 \subsection{SN74AVC2T245}
-This is a dual-bit noninverting bus transceiver, with configurable voltage. It has the same function as SN74AVCB164245, but this only have two inputs an outputs.
-The input and output high value can be set to anything between 1.4 and 3.6 V, the low value is set to GND (0 V).
-Direction of the signal is decided by DIR1 and DIR2, see \autoref{SN74AVC2T245_sch} and \cite{website:SN74AVC2T245}.
-On the RCU2 board, this is planned to be used to level shift a 2.5 V \ac{SPI} signal to 3.3 V.
+SN74AVC2T245 is a dual-bit noninverting bus transceiver, with configurable voltage. It has the same function as SN74AVCB164245, but it only have two inputs and outputs.
+The input and output high values can be set to anything between 1.4 and 3.6 V, and the low value is set to GND (0 V).
+The direction of the signals are decided by DIR1 and DIR2, see \autoref{SN74AVC2T245_sch} and \cite{website:SN74AVC2T245}.
+On the RCU2 board, this is planned to be used for level shifting of a 2.5 V \ac{SPI} signal to 3.3 V.
 
-Under radiation testing of SN74AVCB164245 a 3.3 V supply was used for both VCCA and VCCB, see \autoref{SN74AVC2T245_sch}.
-Under test, voltage over resistor R1, see \autoref{SN74AVC2T245_sch} was measured and used to calculate current consumption, and the output signals were measured digitally by USB-6008.
+Under radiation test of SN74AVCB164245 a 3.3 V supply voltage was used for both VCCA and VCCB, see \autoref{SN74AVC2T245_sch}.
+The voltage over resistor R1, was measured and used to calculate current consumption, and the output signals were measured digitally by USB-6008.
 The input signal IN was switching back and forth from on to off every 4 seconds.
 % The first version made was missing output load, and wouldn't work. By adding a resistor as load, it started working.
 
@@ -701,11 +701,11 @@ The input signal IN was switching back and forth from on to off every 4 seconds.
 \FloatBarrier
 
 \subsection{QS3VH257}
-This component consist of four 2 to 1 multiplexer/demultiplexer. It has high bandwidth, up to 500 MHz, low ON resistance and high OFF resistance.
+This component consist of four 2 to 1 multiplexers/demultiplexers. It has high bandwidth, up to 500 MHz, low ON resistance and high OFF resistance.
 % On the RCU2 this is going to be used to switch between two \acf{JTAG} connection.
 
 Under radiation test, the supply voltage was set to 3.3 V. Voltage over resistor R1, see \autoref{SN74AVC2T245_sch}, was measured and used to calculate current consumption.
-For the Select input an analog output signal was used, switching back and forth from on and off every 4 seconds. The input and output signals were set and measured by USB-6008.
+For the Select input an analog output signal was used, switching back and forth from 0 V and 3.3 V every 4 seconds. The input and output signals were set and measured by USB-6008.
 
 \begin{figure}[!htbp]
   \centering
@@ -716,16 +716,13 @@ For the Select input an analog output signal was used, switching back and forth 
 \FloatBarrier
 
 \subsection{SY89831U}
-This is a high speed, 2$\giga\hertz$ differential LVPECL\footnote{LVPECL is a differential signaling system, and are mainly used in high speed and clock distribution circuits, the input/output voltages have a small swing (0.8 V), the input impedance is high and the output resistance is low; as a result, the transistors change states quickly, gate delays are low, and the fan-out capability is high.} (Low Voltage Positive Emitter Coupled Logic) 1 to 4 fan-out buffer optimized for ultra-low skew applications.
+SY89831U is a high speed, 2$\giga\hertz$ differential LVPECL\footnote{LVPECL (Low Voltage Positive Emitter Coupled Logic) is a differential signaling system, and are mainly used in high speed and clock distribution circuits. The input/output voltages have a small swing (0.8 V), the input impedance is high and the output resistance is low. As a result, the transistors change states quickly, gate delays are low, and the fan-out capability is high.} 1 to 4 fan-out buffer optimized for ultra-low skew applications.
 % Used on the RCU2 to produce 4 clock signal out of 1.
 
-The input signal to this component is differential. The USB-DAQ device we were using doesn't have a differential output signal, so here we had to use a little fix to make it work.
-We used two single-ended output signals that were set to the opposite of the other, and every 100 $\milli\second$ the values switched, so that when IN+ was 3.3 V IN- was 0 V, and when IN+ was 0 V IN- was 3.3 V.
-The outputs were measured by the analog inputs of USB-6501.
+The input signal to this component is differential. The USB-DAQ devices which are being used doesn't have a differential output signal. Therefore two single-ended outputs were used to make a differential signal. The two single-ended output were set to be opposite of the other, switching back and forth from 0 V to 3.3 V every 4 seconds, which results in a differential signal. 
 
-This component requires a large current typically around 60 $\milli\ampere$, and we could therefore not use the analog outputs.
-Therefore we used the modified \ac{PCB} version of the MIC69302WU that will supply us with a 3.3 V signal up to a current of 200 $\milli\ampere$.
-Current consumption was measured over the input resistor of the MIC69302WU \ac{PCB}.
+For the radiation test the modified \ac{PCB} version of the MIC69302WU, see \autoref{MIC_explanation}, was used to supply this component, since it requires a current higher then the analog output from the USB-DAQ can deliver, typically around 60 $\milli\ampere$.
+Current consumption was measured over the input resistor of the MIC69302WU \ac{PCB} and the outputs were measured by the analog inputs of USB-6501.
 
 \begin{figure}[!htbp]
   \centering
@@ -737,25 +734,25 @@ Current consumption was measured over the input resistor of the MIC69302WU \ac{P
 
 \subsection{ADN2814 and MAX3748}
 \label{limiting_amp}
-These two components are used for the same purpose, the one of these that performs best will be chosen to be used on the RCU2.
+These two components are used for the same purpose, and the one of these that performs best will be chosen to be used on the RCU2.
 ADN2814 is a clock and data recovery component with integrated limiting amplifier. It works in rates of 10 Mb/s to 675 Mb/s, and gives output data in \acf{LVDS}\footnotemark[3] format.
 MAX3748 is a limiting amplifier. It works in rate of 155 Mb/s to 4.25 Gb/s, and gives the output data in \acf{CML}\footnotemark[3] format.
 
 \footnotetext[3]{LVDS and CML are both differential signaling systems used mainly in high speed and clock distribution circuits. The output swing on such signals are typical 0.5-0.8 V, which is why it are able to operate in high speed.}
 
 On the RCU2, these boards are supposed to be used to make a stable signal out of a not so stable signal coming from an optical receiver. The signal which is sent into the receiver is a Manchester-coded signal consisting of clock and data. The clock signal is going to be used as a global clock signal for all of the RCU2s, so that all of the RCU2s are synchronized.
-The data signal is a trigger signal which in short tells the RCU2 when it is going to do a measurement and when to send data out.
+The data signal is a trigger signal which in short tells the RCU2 when it is going to do a measurement and when to send data.
 
-There are a few differences between the two components. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock and data recovery function as ADN2814 has. For MAX3748, we will need to do the clock and data recovery function in the SF2 FPGA, using some of the FPGA logic. The clock and data recovery function in ADN2814, is actually clock recovery and data re-timing, that means that the output data is actually the same as input data, except that it is LVDS format. This means that we have to use FPGA logic to recover data, but since we have the clock signal, it is easier to decode and extract the data signal.
+There are a few differences between the two components. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock and data recovery function as ADN2814 has. For MAX3748, clock and data recovery has to be done the SF2 FPGA, using some of the FPGA logic. The clock and data recovery function in ADN2814 is actually clock recovery and data re-timing, that means that the output data is actually the same as input data, except that it is in LVDS format. This means that FPGA logic has to be used to recover data, but since the clock signal signal i available, it is easier to decode and extract the data signal.
 
-To be able to make a good test for these two, we used a SF2 starter-kit. The SF2 FPGA on the starter-kit was used to encode a clock and data signal into a differential Manchester signal that was transmitted to the component under test. The differential Manchester signal was sent to the test boards with wires, and a limited amplified version of the Manchester signal was sent back to the SF2, for ADN2814, we had a clock signal as well. The Manchester signal coming back had to be decoded back to clock and data, which was done in the SF2 FPGA. To be able to check if the returning data is equal the original, the original data signal had to be delayed in the FPGA, since sending data out through a component and back contribute to some delay. The original data was delayed by sending it through a few D-latches until the two data signals were equal. Then we could start comparing, this were done through a XOR-function, triggered by an 80 MHz clock. 
+To be able to make a good test for these two components, a SF2 starter-kit was used. The SF2 FPGA on the starter-kit was used to encode a clock and data signal into a differential Manchester signal that was transmitted to the component under test. The differential Manchester signal was sent to the test boards with wires, and a limited amplified version of the Manchester signal was sent back to the SF2. For ADN2814 a clock signal was also sent back. The Manchester signal coming back had to be decoded back to clock and data, which was done in the SF2 FPGA. To be able to check if the returning data was equal the original, the original data signal had to be delayed in the FPGA, since sending data through a component and back contribute to some delay. The original data was delayed by sending it through a few D-latches until the two data signals were equal. Then the two signals could be compared, this were done through a XOR-function, triggered by an 80 MHz clock signal.
 Every time the XOR function goes high, that is when the compared data is not equal, a counter will be incremented.
 
-The recovered clock from the ADN chip is 160 MHz, which is a fairly high frequency. To be able to compare two clocks of 160 MHz, we introduced a third clock signal of 160 MHz, with a phase shift of 90 $\degree$ from the two others. This clock signal was used to trigger a XOR-function checking the two clock signals, and if they are unequal a counter will be incremented. 
+The recovered clock from the ADN chip is 160 MHz, which is a fairly high frequency. To be able to compare two clock signals of 160 MHz, a third clock signal of 160 MHz, with a phase shift of 90 $\degree$ from the two others had to be introduced. This clock signal was used to trigger a XOR-function checking the two clock signals, and if they are unequal a counter will be incremented. 
 
-The error counter values were accessed by the internal microcontroller on the SF2 chip. From the microcontroller the counter values were constantly transmitted out through a UART-port, which is connected to the USB-plug on the kit. The USB-plug is connected to a computer where a LabVIEW program was running ready to receive data. The received data is exhibited for a viewer, and data is saved in a text file. The LabVIEW program also monitors the current consumption of the component. 
+The error counter values were accessed by the internal microcontroller on the SF2 chip. From the microcontroller the counter values were constantly transmitted serial to a computer where a LabVIEW program was running ready to receive data. The received data is exhibited for a viewer, and data is saved in a text file. The LabVIEW program also monitors the current consumption of the component. 
 
-Both of these components required allot of current to function correctly, so the modified MIC69302WU in combination with the 5 V on the USB-DAQ was used. This gave us a supply voltage of 3.3 V and a current limit of 200 mA.
+Both of these components required a lot of current to function correctly, so the modified MIC69302WU was also used her, see \autoref{MIC_explanation}
 
 The decoding process of the Manchester signal returned both clock and data, but since these are related, only data was checked.
 
@@ -782,9 +779,9 @@ The decoding process of the Manchester signal returned both clock and data, but 
 % \end{figure}
 
 \subsection{INA210}
-INA210 is a so called Current-Shunt Monitor, which is a component that is used to amplify a small current signal into higher voltage signal. This is done by sending the signal that you want to measure current of, over a small resistor, typical smaller than 1 Ohm. Then the voltage formed over this resistor will be amplified through the component. This component comes in a family of 5, with different amplifications, the one we are using has an amplification of 200.
+INA210 is a so called Current-Shunt Monitor, which is designed to monitor the current flow by measuring the voltage drop across a resistor (typical smaller then 1 $\ohm$, but could be as low as 0.01 $\ohm$) placed in the current path. The measured voltage drop is amplified by 200 through the circuit, and the amplified voltage is sent to the output.
 
-To be able to test this component we needed a signal to measure current over. We used one of the analog outputs from the USB-DAQ to produce a voltage of 3.3 V, and added a diode and a resistor on the PCB (The resistor and the diode are only there to use some current). A shut resistor R1 was added before the diode and resistor and connected to the differential input signal of the component. When the analog output signal was on, a small current will be generated over R1, producing a small voltage drop, which was amplified through the circuit.
+To be able to test this component a signal to measure current over is needed. This was generated by using one of the analog outputs from the USB-DAQ to produce a voltage of 3.3 V, and  a diode and a resistor was added on the PCB (The resistor and the diode are only there to use some current). A shut resistor R1 was added before the diode and the resistor and connected to the differential input signal of the component. When the analog output signal was on, a small current will be generated over R1, producing a small voltage drop, which was amplified through the circuit.
 
 For the radiation test we used a supply voltage of 3.3 V, and voltage over resistor R2, see \autoref{INA210_sch} was measured and used to calculate current consumption. Output voltage was also monitored.
 % If everything works as it should the output signal should stay stable at a voltage.
@@ -797,9 +794,9 @@ For the radiation test we used a supply voltage of 3.3 V, and voltage over resis
 \end{figure}
 
 \subsection{TLV3011}
-This is a comparator with a built in voltage reference of 1.242 V. It supports low supply voltage from 1.8 V to 5.5 V, and has an open-drain output with fast response time. A 10 kOhm pull-up resistor is needed on the output.
+TLV3011 is a comparator with a built-in voltage reference of 1.242 V. It supports low supply voltage from 1.8 V to 5.5 V, and has an open-drain output with fast response time. A 10 $\kilo\ohm$ pull-up resistor is needed on the output.
 
-For the radiation test, we used a supply voltage of 3.3 V and voltage over resistor R1, see \autoref{TLV3011_sch}, was measured and used to calculate current consumption. For the input signal to IN-, an analog input changing back and forth every other second from 2 V to 3 V was used. On the input of the PCB there is a voltage divide, see schematic in figure \ref{TLV3011_sch}, which means that the input to the component will go from 1.0 V to 1.5 V. The value used to compare with, is the internal voltage reference of 1.242 V, which means that if everything works, the output should go back and forth from high to low every other seconds.
+For the radiation test, we used a supply voltage of 3.3 V and voltage over resistor R1, see \autoref{TLV3011_sch}, was measured and used to calculate current consumption. For the input signal to IN-, an analog input changing back and forth from 2 V to 3 V every two second was used. On the input of the PCB there is a voltage divide, see schematic in figure \ref{TLV3011_sch}, which means that the input to the component will go from 1.0 V to 1.5 V. The value used to compare with, is the internal voltage reference of 1.242 V, which means that if everything works, the output should go back and forth from high to low every other seconds.
 
 \begin{figure}[!htbp]
   \centering
@@ -857,7 +854,7 @@ a microcontroller subsystem, which consist of a microcontroller, an ARM Cortex-M
 It is also said to have immune configuration memory, as well as several other radiation tolerance measures implemented.
 We are going to use the package M2S050-FG896, with a FPGA of 56 340 logic elements, 6 PLLs, 1314 kb SRAM, 8 SERDES\footnote{Serializer/Deserializer (SERDES) convert data between serial data and parallel interfaces in both direction} lanes, and 377 user I/O.
 
-The SF2 contains allot of functionality, and there is therefore important to make a good test methodology, to be able to check the reliability under radiation. The parts of the SF2 which has been tested through this work are the internal SRAM blocks, the logical element, PLL and \acf{SEL}. How these test works  will be discussed in the following subsections. Other functionality of the SF2 has also been tested, but these tests will not be discussed thoroughly through this thesis.
+The SF2 contains a lot of functionality, and there is therefore important to make a good test methodology, to be able to check the reliability under radiation. The parts of the SF2 which has been tested through this work are the internal SRAM blocks, the logical element, PLL and \acf{SEL}. How these test works  will be discussed in the following subsections. Other functionality of the SF2 has also been tested, but these tests will not be discussed thoroughly through this thesis.
 
 \subsection{SRAM test}
 \label{SRAM_section}
@@ -929,7 +926,7 @@ The PLLs on the SF2 has a lock signal which goes high if the PLL is in sync with
 To check if we have a reliable clock signal, the lock signal was sent to an I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
 
 \subsection{Configuration and Monitoring}
-To make the test process as easy as possible a SF2 starter-kit was used to implement the tests discussed in the sections above. The starter-kit has serial communication to USB, which makes it possible to easily communicate with the SF2 chip from a computer, six 24-pin headers connected to the SF2 FPGA, which makes it possible to send data in and collect data out from the SF2 chip, and allot of other supporting functions.
+To make the test process as easy as possible a SF2 starter-kit was used to implement the tests discussed in the sections above. The starter-kit has serial communication to USB, which makes it possible to easily communicate with the SF2 chip from a computer, six 24-pin headers connected to the SF2 FPGA, which makes it possible to send data in and collect data out from the SF2 chip, and a lot of other supporting functions.
 
 
 All the tests that are mentioned above are implemented into a single project, so that everything was tested at the same time. This reduced test time, and we didn't need to use so many starter-kits.
@@ -1727,7 +1724,7 @@ For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals wer
 Every components which was tested worked after a dose of 6 kRad, which is three times more than the expected dose we could expect in the ALICE TPC. That means that every component that has been tested is cleared to be used in the RCU2 design. The component which performed worst is ADN2814, which gave us an error after a dose of 8kRad, but then the test method wasn't necessarily the best. But since MAX3748, performed so much better, and could be used for the same purpose, this would preferable be used. 
 
 % In tables \ref{dose_15.11}, \ref{dose_28.11} and \ref{dose_10.04} 
-% When we were going to measure the intensity at the beam exit, we placed a Faraday cup in front of the beam, and connected it to a amperemeter on the control panel, but since the current is so small, the measuring instrument will be affected by air currents, and there are also allot of uncertainties in the instruments. Therefore we only used the Faraday cup and the amperemeter, to get a rough estimate of the actual intensity.
+% When we were going to measure the intensity at the beam exit, we placed a Faraday cup in front of the beam, and connected it to a amperemeter on the control panel, but since the current is so small, the measuring instrument will be affected by air currents, and there are also a lot of uncertainties in the instruments. Therefore we only used the Faraday cup and the amperemeter, to get a rough estimate of the actual intensity.
 \newpage
 
 \subsection{Test Results on SF2}
@@ -2020,7 +2017,7 @@ Normally when we see a decrease in voltage, we see an increase in current or opp
 By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off and on, since this is powered by the 3.3 V signal, the voltage and current goes back to what they were on startup. This was done through the monitoring board, where we had made a function which turns the regulators off and on again after 3 seconds. This function was used whenever we detected a latchup or a decrease in current/voltage. In total we had to restart the board because of latchup or decrease in current, 61 times on first test and 95 times on test2. 
 
 \subsubsection{SRAM}
-In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the results from the SRAM test after radiation of the two SF2 M2S050-FG484. In \ref{SRAM_starter-kit2} we can see regularly drops down to 0 in the counter values, that are loss of communication with the SF2, probably caused by voltage drop or latchup as discussed in the previous subsection, we have the same phenomena for the first test as well, only the values didn't drop to 0, this can be seen as short flatness on the counter curve. A re-power of the board made the counters start again. This means that we have periods where we didn't get to measure the counter values, when the FPGA gets power again, the counter values are overwritten through the startup sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, this gives us allot of uncertainties when calculating cross section.
+In figure \ref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} you can see the results from the SRAM test after radiation of the two SF2 M2S050-FG484. In \ref{SRAM_starter-kit2} we can see regularly drops down to 0 in the counter values, that are loss of communication with the SF2, probably caused by voltage drop or latchup as discussed in the previous subsection, we have the same phenomena for the first test as well, only the values didn't drop to 0, this can be seen as short flatness on the counter curve. A re-power of the board made the counters start again. This means that we have periods where we didn't get to measure the counter values, when the FPGA gets power again, the counter values are overwritten through the startup sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, this gives us a lot of uncertainties when calculating cross section.
 
 \begin{figure}[!htbp]
 \centering
@@ -2187,30 +2184,29 @@ The idea behind the programming limit test was to see how far up in dose we coul
 We tried to program after a dose of 1.20 kRad, 2.54 kRad and 3.80 kRad. The two first times worked fine, but the last time it failed.
 
 \subsection{Other Test at TSL}
-The other test at TSL includes SERDES and clock and data recovery and latchup detection under radiation of RCU2.
+The other test at TSL includes SERDES, clock and data recovery and latchup detection under radiation of RCU2.
 
-A brief introduction in how this were tested, and the setup will be explained:
+A brief introduction in how this was tested, and the setup used will be explained:
 
 The SERDES test involves sending data through a optical transceiver with a speed of 2.215 Gbps back and forth from the RCU2 and a \emph{Xilinx Virtex-7 FPGA VC709 Connectivity Kit}.
 The test works in the way that a known pattern is sent from the Xilinix connectivity kit to the RCU2, and the RCU2 are set to echo back the received pattern to the Xilinx kit. The Xilinx FPGA checks if the returned data pattern is equal the transmitted. If the pattern is not equal a counter will be incremented.
 
-The Clock and data recovery and trigger test were tested at the same time.
-To explain how the Clock and data recovery test worked, a little explanation on how the hardware setup is done is required.
-A optical Manchester decoded signal containing clock and data, is sent to the RCU2. On the RCU2 there is a optical receiver which receives the Manchester signal, but the received signal may vary, and is not so stable, therefore a limiting amplifier is used to make a more stable version of the signal. MAX3748 is used for that purpose (which is one of the components tested through this work). Then the stable signal coming from the limiting amplifier is sent in to the SF2 FPGA, where clock and trigger information is encoded, giving us a 40 MHz clock, and data signal. The clock signal is then sent into two different PLLs, and the PLL lock signal for both PLls is checked for a falling edge. The idea behind using two PLLs, is to distinguish between PLL error and error in the incoming signal. If both of the PLLs looses lock at the same time we can assume that we have an error with the incoming signal and if only one of the PLLs losses lock, then we have a PLL error.
-The received data signal contains a known trigger sequence, and a vhdl code is made to check for the trigger signal. Every time the trigger pattern is detected a counter is incremented. PLL lock data and trigger counter are sent to the microcontroller subsystem, where data is sent serial to a computer. On the computer a program was running taking in data from the serial port, and logging data every seconds.
+To explain how the Clock and data recovery test worked, a little explanation on how the hardware is set up is required.
+A optical Manchester decoded signal containing clock and data, is sent to the RCU2. On the RCU2 there is a optical receiver which receives the Manchester signal, but the received signal may vary, and is not so stable. Therefore a limiting amplifier is used to make a more stable version of the signal. MAX3748 is used for that purpose (which is one of the components tested through this work). Then the stable signal coming from the limiting amplifier is sent in to the SF2 FPGA, where clock and data is encoded, giving us a 40 MHz clock, and data signal. The clock signal is then sent into two different PLLs, and the PLL lock signal for both PLls is checked for a falling edge. The idea behind using two PLLs, is to distinguish between PLL error and error in the incoming signal. If both of the PLLs looses lock at the same time we can assume that we have an error with the incoming signal and if only one of the PLLs losses lock, then we have a PLL error.
+The received data signal contains a known trigger sequence, and a VHDL code is made to check for the trigger signal. Every time the trigger pattern is detected a counter is incremented. PLL lock data and trigger counter are sent to the microcontroller subsystem, where data is sent serial to a computer. On the computer a program was running taking in data from the serial port, and logging data every seconds.
 
 For the SERDES test we exposed both the SF2 and the optical transceiver, which receives and sends data. 
 For both of the test we detected few errors, less than 10 errors with a fluence of $3.18\cdot10^{11}$ when exposing the SF2 chip, and less than 5 errors when exposing the optical transceiver with a fluence of $3.6\cdot10^{11}$. This means that the SERDES will most likely not be a problem for our design.
 
 For the Clock and data recovery test, we exposed both the SF2 and the optical receiver.
-When we exposed the SF2 we received PLL lock loss with around the same frequency as for the test with the Starter-kits, we got a cross section of $2.3\cdot10^{-10}\centi\meter²$ Almost all the PLL errors was defined as PLL lock loss due to bad PLLs. But when we started to expose the optical receiver, we detected PLL lock losses all the time, which is quite bad, we got a cross section of $6.9\cdot10^{-9}\centi\meter²$.
+When we exposed the SF2 we received PLL lock loss with around the same frequency as for the test with the Starter-kits, we got a cross section of $2.3\cdot10^{-10}\centi\meter²$. Almost all the PLL errors was defined as PLL lock loss due to bad PLLs. But when we started to expose the optical receiver, we detected PLL lock losses on both of the PLLs  all the time, we got a cross section of $6.9\cdot10^{-9}\centi\meter²$, which is very high.
 This means that we have to find out whats the reason for this problem. Is it the optical receiver or the limiting amplifier which fails. More tests have to be done on this area, and a new solution to fix this problem or at least reduce the problem has to be found.
 
-For the latchup test on the RCU2, we got a cross section for latchup to be $8.5\cdot10^{-10}\centi\meter²$. But we did a discovery a thing while running the beam. After we received a few latchups, the 1.2 Voltage started to reduce a little, when this happened, we saw a tendency to have less latchups.
-We did a separated test on the RCU2, where we reduced the 1.2 Voltage to 1.1 V by changing a resistor on the board. The test showed us that we got a reduction on cross section to $1.7\cdot10^{-10}\centi\meter²$, which is a reduction of $\sim$5 from before. 
+For the latchup test on the RCU2, we got a cross section for latchup to be $8.5\cdot10^{-10}\centi\meter²$. But we did a discovery while running the beam. After we received a few latchups, the 1.2 Voltage started to reduce a little, when this happened, we saw a tendency to have less latchups.
+We did a separated test on the RCU2 where we reduced the 1.2 Voltage to 1.1 V by changing a resistor on the board. The test showed us that we got a reduction on cross section to $1.7\cdot10^{-10}\centi\meter²$, which is a reduction of $\sim$5 from before. 
 More test on this area should be performed, to see how far down in voltage we could go before things stopped working, and if the latchup problem could be reduced even more.
 
-% As for the SF2 test on the starter-kits, we got allot of latchup, these has to be countered by taking a power cycle on the board. The same setup for the starter-kits where used, with the monitoring board and the PCB with \emph{INA226}, to measure current and power cycle the RCU2. A discovery we did here is that when the voltage did fall down 50-100 mV (which happens when we had a few latchups), we saw that the latches didn't come as regularly.
+% As for the SF2 test on the starter-kits, we got a lot of latchup, these has to be countered by taking a power cycle on the board. The same setup for the starter-kits where used, with the monitoring board and the PCB with \emph{INA226}, to measure current and power cycle the RCU2. A discovery we did here is that when the voltage did fall down 50-100 mV (which happens when we had a few latchups), we saw that the latches didn't come as regularly.
 % 
 % Another test were tried, where we reduced the 1.2 Voltage to 1.1 Voltage by changing a resistor on the RCU2. We saw that time between each latchup increased, and we didn't had any reduced functionality on the SF2, the program worked as good as it did before.
 % 
@@ -2220,11 +2216,11 @@ More test on this area should be performed, to see how far down in voltage we co
 
 \subsection{Discussion of the Results}
 
-A issues that we uncounted in the tests at TSL, and not so much in OCL, is latchup. We got regularly latchup during our runs, which means that a shutdown is required to set the board back in normal operation again. The latchups weren't destructive, a power cycle of the board put everything to normal and current level back to what it was before latchup. But it is still a problem, a latchup can cause a stop in process, and a repower of the RCU2 is required to go back to normal operation. A solution for this problem has already been set in emotion. By using \emph{INA210} to amplify a voltage over a shunt resistor for each of the power signals, and use \emph{TLV3011} to compare against a voltage limit. If the voltage limit is exceeded, all regulators are turned off, setting the board off. The problem here is that when we have allot of radiation and the probability of a latchup is high, that is when we are most interested in data.
+A issues that we uncounted in the tests at TSL, and not so much in OCL, is latchup. We got regularly latchup during our runs, which means that a shutdown is required to set the board back in normal operation again. The latchups weren't destructive, a power cycle of the board put everything to normal and current level back to what it was before latchup. But it is still a problem, a latchup can cause a stop in process, and a repower of the RCU2 is required to go back to normal operation. A solution for this problem has already been set in emotion. By using \emph{INA210} to amplify a voltage over a shunt resistor for each of the power signals, and use \emph{TLV3011} to compare against a voltage limit. If the voltage limit is exceeded, all regulators are turned off, setting the board off. The problem here is that when we have a lot of radiation and the probability of a latchup is high, that is when we are most interested in data.
 
 We also discovered a way to reduce latchups. By changing the 1.2 source voltage to 1.1 V, we effectively reduced number of latchup by $\sim$5, and this can maybe be brought even lower by reducing the voltage even further. More test on this aspect should be performed.
 
-The SRAM test on the two starter-kits did go fine, we had allot of downtime due to errors, but the cross section calculations for both of our test were quite close to each other, supporting our results. We got a cross section of $(3.03 ± 0.45) *10^{-14}\centi\meter²$ on the large SRAM, and $(1.26 ± 0.19) *10^{-14}\centi\meter²$ for the micro SRAM. Compared to the results from OCL, which gave us cross sections of $(4.18 ± 0.73)\cdot10^{-14}\centi\meter²$ for the large SRAM, and $(9.62 ± 1.32)\cdot10^-{15}\centi\meter²$ for the micro SRAM, the results doesn't seems so bad.
+The SRAM test on the two starter-kits did go fine, we had a lot of downtime due to errors, but the cross section calculations for both of our test were quite close to each other, supporting our results. We got a cross section of $(3.03 ± 0.45) *10^{-14}\centi\meter²$ on the large SRAM, and $(1.26 ± 0.19) *10^{-14}\centi\meter²$ for the micro SRAM. Compared to the results from OCL, which gave us cross sections of $(4.18 ± 0.73)\cdot10^{-14}\centi\meter²$ for the large SRAM, and $(9.62 ± 1.32)\cdot10^-{15}\centi\meter²$ for the micro SRAM, the results doesn't seems so bad.
 
 We would think that we would have higher cross section at OCL than in TSL, because energy deposited per proton is higher for a 25 MeV proton beam than with a 170 MeV proton beam, this can be seen from figure \ref{energy_loss} (It shows different particles in air, but the principle is the same for silicon). The cross section for large SRAM supports this, but the micro SRAM doesn't. But then again, we had really low statistics on the micro SRAM, making the calculations not so trustworthy. Another test should be performed on the micro SRAM with higher intensity or over a longer period to check if the cross section is correct.
 
@@ -2232,7 +2228,7 @@ The Logic element design didn't go the way we thought it would go. The purpose o
 
 For all of the test with PLL, we got a cross section for PLL lock loss in the area of $2-3\cdot10^{-10}\centi\meter²$ when the SF2-chip was exposed. This is a fairly high cross section, and we don't know for how long a typical PLL lock signal stays low, if its only one clock cycle or if its up to seconds. If it is only a clock cycle we are talking about, we could probably accept this, but if it stays down for up too seconds, then we should do some measures to either reduce or counter this problem. When a PLL lock loss happened, we didn't detect any other problems in the process running on the SF2, this probably means that the clock signal only stays low for a short time period, which means that this probably could be acceptable.
 
-A more disturbing issue happened when we moved the beam towards the optical receiver. Then we got allot more PLL lock loss, we got a cross section of $6.09\cdot10{-9} cm²$, which is around 25 times more then when exposing the SF2. This means that either the optical receiver is not able to do its job under such radiation level, and introduces allot of noise, or the limiting amplifier MAX3748 is not able to remove noise from the incoming signal. Nevertheless this is a major problem, and a new solution or a major change is required to fix this.
+A more disturbing issue happened when we moved the beam towards the optical receiver. Then we got a lot more PLL lock loss, we got a cross section of $6.09\cdot10{-9} cm²$, which is around 25 times more then when exposing the SF2. This means that either the optical receiver is not able to do its job under such radiation level, and introduces a lot of noise, or the limiting amplifier MAX3748 is not able to remove noise from the incoming signal. Nevertheless this is a major problem, and a new solution or a major change is required to fix this.
 
 \FloatBarrier
 \chapter{Conclusion and Outlook}

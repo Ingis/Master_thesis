@@ -1,21 +1,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces CERN accelerators \cite {website:CERN_accelerators}\relax }}{4}{figure.caption.19}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Layout of the ALICE experiment \cite {website:aliceinfo}\relax }}{4}{figure.caption.20}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Layout of the TPC \cite {website:aliceinfo}\relax }}{5}{figure.caption.21}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A TPC sector, showing distribution of FECs \cite {roed_doctor}\relax }}{6}{figure.caption.22}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Block diagram of the Front End Card \cite {website:aliceinfo}\relax }}{6}{figure.caption.26}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces The Readout Control Unit top side and bottom side \cite {roed_doctor}\relax }}{7}{figure.caption.30}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces FEE overview}}{8}{figure.caption.32}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces CERN accelerators \cite {website:CERN_accelerators}\relax }}{5}{figure.caption.19}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Layout of the ALICE experiment \cite {website:aliceinfo}\relax }}{5}{figure.caption.20}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Layout of the TPC \cite {website:aliceinfo}\relax }}{6}{figure.caption.21}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A TPC sector, showing distribution of FECs \cite {roed_doctor}\relax }}{7}{figure.caption.22}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Block diagram of the Front End Card \cite {website:aliceinfo}\relax }}{7}{figure.caption.26}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces The Readout Control Unit top side and bottom side \cite {roed_doctor}\relax }}{8}{figure.caption.30}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces FEE overview}}{9}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Energy loss in air}}{12}{figure.caption.34}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces CMOS inverter}}{15}{figure.caption.36}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Six transistor SRAM Cell \cite {CMOS}\relax }}{16}{figure.caption.37}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Energy loss in air}}{13}{figure.caption.34}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces CMOS inverter}}{16}{figure.caption.36}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Six transistor SRAM Cell \cite {CMOS}\relax }}{17}{figure.caption.37}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Principle of Charge Generation}}{17}{figure.caption.38}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces MOS transistor under radiation}}{18}{figure.caption.40}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces MOS transistor under radiation}}{19}{figure.caption.40}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Schematic for the TPS51200 test board\relax }}{22}{figure.caption.41}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic for the MIC69302WU test board\relax }}{23}{figure.caption.42}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Schematic for the TPS51200 test board\relax }}{21}{figure.caption.41}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic for the MIC69302WU test board\relax }}{22}{figure.caption.42}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Schematic for the SN74AVCB164245 test board\relax }}{24}{figure.caption.43}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Schematic for the SN74AVC2T245 test board\relax }}{25}{figure.caption.45}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Schematic for the QS3VH257 test board\relax }}{26}{figure.caption.46}
