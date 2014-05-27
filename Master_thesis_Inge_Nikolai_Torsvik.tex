@@ -850,20 +850,20 @@ In figure \ref{LabVIEW} you can see an example of a LabVIEW program used for SN7
 \section{SmartFusion2}
 \label{SF2_section}
 \acf{SF2} \ac{SoC} \ac{FPGA} integrates a flash-based \ac{FPGA} and
-a microcontroller subsystem consist of a microcontroller, an ARM Cortex-M3 processor, PLLs, bus communication through APB and AHB bus, communication protocols like Ethernet, UART, SPI and $I^2C$, and much more.
+a microcontroller subsystem consisting of a microcontroller, an ARM Cortex-M3 processor, PLLs, bus communication through APB and AHB bus, communication protocols like Ethernet, UART, SPI and $I^2C$, and much more.
 It is also said to have immune configuration memory, as well as several other radiation tolerance measures implemented.
-The package used for the RCU2 design is M2S050-FG896. This package consist of 56 340 logic elements, 6 PLLs, 1314 kb SRAM, 8 SERDES\footnote{Serializer/Deserializer (SERDES) convert data between serial data and parallel interfaces in both direction} lanes, and 377 user I/O.
+The package used for the RCU2 design is M2S050-FG896. This package consist of 56 340 logic elements, 6 PLLs, 1314 kb SRAM memory, 8 SERDES\footnote{Serializer/Deserializer (SERDES) convert data between serial data and parallel interfaces in both direction} lanes, and 377 user I/O.
 
 The SF2 contains a lot of functionalities, and it is therefore important to make a good test methodology to be able to check the reliability under radiation. The parts of the SF2 that have been tested through this work are the internal SRAM blocks, the logical element, PLL and \acf{SEL}. How these test works  will be discussed in the following subsections. Other functionalities of the SF2 have also been tested, but these tests will not be discussed thoroughly through this thesis.
 
 \subsection{SRAM test}
 \label{SRAM_section}
 SRAM cells are as discussed in section \ref{SEU_Section}, sensitive to radiation.
-It is important to know how well these work in high radiation areas, to know how reliable these are when used.
+It is important to know how well the SRAM function in high radiation areas, so we would know how reliable these are when used.
 The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM blocks with a size of 1024 x 18 bits.
 Both micro SRAM blocks and large SRAM blocks are so called two ports SRAM, which means that we can access two addresses at the same time.
 
-To test the SF2 SRAM memory a VHDL code was made, which in short writes a known pattern to all addresses and constantly checks if the values changes, if they do a counter will be incremented for every upset detected.
+To test the SF2 SRAM memory a VHDL code was made, which in short writes a known pattern to all addresses and constantly checks if the values changes. If they do a counter will be incremented for every upset detected.
 The test process is made in a 3-state state machine, which can be seen in block diagram in figure \ref{SRAM_flow_chart}.
 The first state is a reset state, where all values are set to its nominal value.
 That means all counters are set to '0', write address is set to '0', read address set to '1', and write data is set to ``1010...1010''.
@@ -871,7 +871,7 @@ Read address is always set to be one higher then the write address.
 
 The second state is an initial state where all addresses are written to. Write data is inverted every address increment, so the written data is switched between 1010...1010 and 0101...0101 every other address. When the last bit is written to, the first bit is read. 
 
-The last state is a state where all of the addresses are written, read and compared through an endless loop. The data written to an address is always opposite of the previous value on that address, that is to prevent having stuck bits. The state machine will stay in this state until a reset is pushed or power is shutdown.
+The last state is a state where all of the addresses are written, read and compared through an endless loop. The data written to an address is always inverted of the previous value on that address. This is to prevent stuck bits. The state machine will stay in this state until a reset is pushed or power is shut down.
 
 % We have two kinds of SRAM memory on the SF2, that is large SRAM and micro SRAM, but the test methodology is the same for both of these. There are approximately 10 times more bits in the large SRAM compared to micro SRAM. 
 
@@ -882,27 +882,27 @@ The last state is a state where all of the addresses are written, read and compa
   \label{SRAM_flow_chart}
 \end{figure}
 
-The \ac{SEU} counter value for the micro SRAM and the Large SRAM, as well as number of cycles through all addresses is saved in registers and sent to the microcontroller subsystem. These register is saved with Triple Module Redundancy (TMR), which means that the values are saved in three registers, and the majority of these is used.
+The \ac{SEU} counter values for the micro SRAM and the Large SRAM, as well as the number of cycles through all addresses are saved in registers and sent to the microcontroller subsystem. These registers are saved with Triple Module Redundancy (TMR), which means that the values are saved in three registers, and the majority of these is used.
 How the data is monitored and checked is discussed in section \ref{MSS_and_LabVIEW}.
 
 \FloatBarrier
 
 \subsection{Test of the Logical Element}
 \label{logic_Element}
-A logical element consist of a 4 input Look-Up Table\footnotemark[4] and a separate flip-flop which can be used independently from the Look-Up Table.
+A logical element consists of a 4 input Look-Up Table\footnotemark[4] and a separated flip-flop which can be used independently from the Look-Up Table.
 That means that we have 56 340 flip-flops and 56 340 Look-Up Tables available for our design.
 When a logical element is exposed to radiation, a \acf{SET} can occur all over the chip.
-If this happens in the logical element or in the interconnections between logical element, the transient current will normally just be there for a small amount of time, and then it will flat out, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or a node that may lead to a change of value at the input, and the input is then clocked out to the output, we would have an unwanted bit change or a so called \acf{SEU}.
+If this happens in the logical element or in the interconnections between logical element, the transient current will normally only appear for a small amount of time, and then it will flat out, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or a node that may lead to a change of value at the input, and the input is then clocked out to the output, we would have an unwanted bit change or a so called \acf{SEU}.
 \footnotetext[4]{An n-bit Look-Up Table can encode any n-bit Boolean function by modeling such functions as truth tables}
 
 % Where combinatoric logic circuits are circuits where the outputs are a function only independent on the present inputs, typical combinatoric functions are $AND, OR, XOR$ etc \cite{CMOS}.
 % Sequential logic is a type of logic where the output depends not only on the present value of its input signal but also on the past history of its inputs. This type of logic is again divided into asynchronous and synchronous logic. Asynchronous sequential logic the state of the output can change at any time in response to changing inputs. In synchronous logic the state of the output changes only at discrete times in response to a clock signal
 
-The way we tested the logical element is based on \cite{Berg}, which has done a study on how to test \acp{FPGA} in a good manner.
+The way the logical elements are tested is based on \cite{Berg}, which has studied how to test \acp{FPGA} in a good manner.
 A good overview of the design can be seen in figure \ref{Shift_register_design}.
-The idea is to make a long serial chain of flip-flops, otherwise referred to as a shift-register, where a transient can be picked up and make a \ac{SEU}.
+The idea is to make a long serial chain of flip-flops, also known as a shift-register, where a transient can be picked up and make a \ac{SEU}.
 By adding an even number of inverters in between each flip-flop we increase the area where a transient can occur, without changing the logic.
-A known pattern is added to the input of the shift-register, this can be changed depending on how advanced you want to be, but typical pattern could be even other '1' and '0'.
+A known pattern is added to the input of the shift-register. This can be changed depending on how advanced you want to be, but a typical pattern could be every other '1' and '0'.
 To be able to operate at high speed, we are using something called \ac{WSR}, which takes out the last n-bit of the shift register, and sends it out in parallel, with a frequency n times lower than the original frequency. To check the outputs for errors, the \ac{WSR} bits will be sent through the I/O-pins to another SF2 starter kit, hereafter referred to as the monitoring board, where data is checked for errors.
 To be able to synchronize the two boards, a reset signal and shift enable signal will be sent from the monitoring board to the test board,
 and a \ac{WSR} enable signal will be sent from the test board to the monitoring board.
@@ -910,8 +910,8 @@ and a \ac{WSR} enable signal will be sent from the test board to the monitoring 
 We made generic of all the variables like number of flip-flop in the shift-register chain, number of inverters in between each flip-flop, number of bits taken out in the \ac{WSR} output and how many shift-register we want to use. Typical value used is respectively 2000, 4, 4 and 4.
 
 We wanted to be able to change the clock frequency without reprogramming the \ac{FPGA}, to see how the frequency affects the number of upset detected.
-Clock Conditioning Circuit (CCC) which consist of a PLL, multiplexers and divider circuit, are used to configure clock signals on the \ac{SF2}.
-The CCC can be configured through a register, so the frequency can be changed without reprogramming the \ac{FPGA}.
+Clock Conditioning Circuit (CCC) which consist of a PLL, multiplexers and divider circuit, is used to configure clock signals on the \ac{SF2}.
+The CCC can be configured through a register, so that the frequency can be changed without reprogramming the \ac{FPGA}.
 
 \begin{figure}[!htbp]
   \centering
@@ -921,41 +921,44 @@ The CCC can be configured through a register, so the frequency can be changed wi
 \end{figure}
 
 \subsection{Single Event Latchup and PLL}
-A \acf{SEL} is a short circuit between power and ground. If that happens on any spot on the chip, an increase in the supply current can be detected. The way to check for \ac{SET}, is by constantly checking for increase in current consumption on the chip. Normally the high current will produce so much heat that tracks in the chip will be destroy, if not countered by shutting power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shutdown the board if a latch is detected. See section \ref{current_measurement_board} for more information on that board.
+A \acf{SEL} is a short circuit between power and ground. If this occurs on any spot on the chip, an increase in the supply current can be detected. The way to check for \ac{SET} is by constantly checking for increase in current consumption on the chip. Normally the high current will produce so much heat that tracks in the chip will be destroyed, if not countered by shutting the power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See section \ref{current_measurement_board} for more information on that board.
  
 The PLLs on the SF2 has a lock signal which goes high if the PLL is in sync with the input.
-To check if we have a reliable clock signal, the lock signal was sent to an I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
+To check if we had a clock, the lock signal was sent to an I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
 
 \subsection{Configuration and Monitoring}
-To make the test process as easy as possible a SF2 starter-kit was used to implement the tests discussed in the sections above. The starter-kit has serial communication to USB, which makes it possible to easily communicate with the SF2 chip from a computer, six 24-pin headers connected to the SF2 FPGA, which makes it possible to send data in and collect data out from the SF2 chip, and a lot of other supporting functions.
+To make the test process as easy as possible, a SF2 starter-kit was used to implement the tests discussed in the sections above. The starter-kit has serial communication to USB, which makes it possible to easily communicate with the SF2 chip from a computer, six 24-pin headers connected to the SF2 FPGA, which makes it possible to send data in and collect data out from the SF2 chip, and a lot of other supporting functions.
 
 
-All the tests that are mentioned above are implemented into a single project, so that everything was tested at the same time. This reduced test time, and we didn't need to use so many starter-kits.
+All the tests that are mentioned above are implemented into a single project, so that everything was tested at the same time. This reduced the test time, and we didn't need to use as many starter-kits.
 
-The test setup consist of communicating with a computer through serial port, a current measurement board, connected with wires to measure current, and another starter-kit (monitoring board) was connected to the GPIO pins to be able to control and check the Logical element design.
+The test setup consists of communicating with a computer through serial port, a current measurement board, connected with wires to measure current, and another starter-kit (monitoring board) was connected to the GPIO pins to be able to control and check the Logical element design.
 % So during a radiation test, we had two LabVIEW programs running, one for measuring \ac{SEU} and cycles, as well as configure frequency, and another for constantly measuring current.
-More detail of the different test programs and boards used to test the SF2 is discussed in the following sections.
+More details on the different test programs and boards used to test the SF2 are discussed in the following sections.
 
 \subsubsection{Microcontroller SubSystem and LabVIEW}
 \label{MSS_and_LabVIEW}
-To get the counter values and cycle counter data from registers in the FPGA to a computer, the microcontroller subsystem was used. The microcontroller subsystem uses APB bus to collect the counter values, the microcontroller are sending the counter values through UART, which is connected to a serial to USB converter and further to a USB-plug. By connecting a computer to the USB-plug, we get serial communication to the microcontroller. A C-code was written to the microcontroller, which in short sets up the UART communication and constantly sends \ac{SEU} counter and cycle counter values through UART and out to a computer, and checks for received data. The received data is used to determine the frequency, of the shift-register design, as described in section \ref{logic_Element}.
-A LabVIEW program was written to communicate with the SF2. The LabVIEW program is constantly checking for received data, and exhibits the newest received values for a user. Through this program you are also able to select some specific frequencies, by use of push-buttons in the program, by pushing a button a request to change frequency is sent to the microcontroller. When the microcontroller receives the request, it access the register controlling the \emph{Clock Conditioning Circuit}, and changes to the frequency.
+To get the SEU and cycle counter values from the registers in the FPGA to a computer, the microcontroller subsystem was used. The microcontroller subsystem uses APB bus to collect the counter values, and the microcontroller is sending the counter values through UART, which is connected to a serial to USB converter and further to a USB-plug. By connecting a computer to the USB-plug, we get serial communication to the microcontroller. A C-code was written to the microcontroller, which in short sets up the UART communication and constantly sends \ac{SEU} counter and cycle counter values through UART and out to a computer, and checks for received data. The received data is used to determine the frequency of the shift-register design, as described in section \ref{logic_Element}.
+A LabVIEW program was written to communicate with the SF2. The LabVIEW program is constantly checking for received data, and exhibits the newest received values for a user. Through this program you are also able to select some specific frequencies, by use of push-buttons in the program, by pushing a button a request to change frequency is sent to the microcontroller. When the microcontroller receives the request, it accesses the registers controlling the \emph{Clock Conditioning Circuit}, and changes to the frequency.
 
 \subsubsection{Monitoring Board}
-As said in section \ref{logic_Element} a second starter-kit, called monitoring board, was used to be able to monitor and control the \emph{Logical element test design}.
-On the monitoring board there is a Linux system running. A VHDL code is built on the \ac{FPGA} which takes inn WSR data and WSR enable from the test board and sends out reset, shift enable and pattern. All of the output data is controlled and input data is monitored through APB bus to the Linux system. The WSR enable signal tells us when a new data is sent from the test board, when this signal goes high, the WSR data signals is clocked in a register on the monitoring board. The WSR data is then compared with the correct value, and if an error has occurred, a counter will be incremented. The counter value is read in the Linux system. The monitoring board is also used to monitor the PLL lock signal.
+As mentioned in \autoref{logic_Element}, a second starter-kit, called monitoring board, was used to monitor and control the \emph{Logical element test design}.
+On the monitoring board there is a Linux system running, where the whole test is controlled from.
+The monitoring boards main tasks is to monitor the lock signal(s) and the output of the shift-register test, as described in \autoref{logic_Element}. It is also able to select which pattern to be used in the shift-register test, and start and stop the test with a reset and an enable signal going into the starter-kit under test. The measured values from the starter-kit is checked for errors, and if any errors detected a counter will be incremented for every bit which is not correct. There is also a lock of loss counter, counting every falling edge of the lock loss signal. Both of these counters is exhibited to the user under a test, and counter data with time stamp is saved in a text file.
+
+% Under a radiation test, a program is running on the linux system, which controls the test of the SF2 test board.  VHDL code is built on the \ac{FPGA} which takes in WSR data and WSR enable from the test board and sends out reset, shift enable and pattern. All of the output data is controlled and input data is monitored through APB bus to the Linux system. The WSR enable signal tells us when a new data is sent from the test board, when this signal goes high, the WSR data signals is clocked in a register on the monitoring board. The WSR data is then compared with the correct value, and if an error has occurred, a counter will be incremented. The counter value is read in the Linux system. The monitoring board is also used to monitor the PLL lock signal.
 
 \subsubsection{Current Measurement Board}
 \label{current_measurement_board}
 To measure the current into the SmartFusion2 starter-kit, a \ac{PCB} was made with a microcontroller, serial to USB converter (FTDI chip), some debugging LEDs, power switch, and all the necessary electronics to make all this work together. The microcontroller used is a Texas Instruments MSP430AFE253. That is a 16-bit microcontroller with internal 24-bit \ac{ADC}.
 It has an internal frequency of up to 12 MHz, and support high frequency crystal up to 16 MHz.
-Two types of serial communication interface are available, that is USART and SPI.
+Two types of serial communication interface are available; USART and SPI.
 Since the microcontroller only has a 16-bit architecture, only 16-bit of the \ac{ADC} is accessible at a time. The microcontroller has 3 differential \ac{ADC} inputs, which means three different currents can be measured. A current is measured by adding a small resistor of known value in series of the signal you want to measure current of, and by measuring voltage over the resistor you can calculate the current, by using ohms law ($I = \frac{U}{R}$)
 
-To measure current for the SF2 starter-kit a small resistor of 0.1 Ohm was placed in series with the 1.2 V supply voltage, and a 0.16 Ohm resistor for the 3.3 V supply voltage. The voltage over these resistors were measured with the \ac{ADC}, and the \ac{ADC} data was sent over USART port to the serial to USB converter, and further to a computer. On the computer a LabVIEW program was set up to receive data through the serial port, and when data is received, the \ac{ADC} value and the known resistor values are used to calculate the current. The current value is constantly saved and exposed for a viewer.
+To measure current for the SF2 starter-kit a small resistor of 0.1 Ohm was placed in series with the 1.2 V supply voltage, and a 0.16 Ohm resistor for the 3.3 V supply voltage. The voltage over these resistors were measured with the \ac{ADC}, and the \ac{ADC} data was sent over USART port to the ``serial to USB converter'', and further to a computer. On the computer a LabVIEW program was set up to receive data through the serial port, and when data was received, the \ac{ADC} value and the known resistor values were used to calculate the current. The current value was constantly saved and exhibited in the labVIEW program during a test.
 
-The 3.3 V regulator on the SF2 starter-kit has an enable signal, where a pull-up resistor to 5 V is placed, one of the outputs on the microcontroller is connected to this pin.
-If the current on one of the supply voltages goes over a certain threshold, the bit on the microcontroller is set to go low, resulting in turning the 3.3 V regulator on the SF2-starter kit off. The 3.3 V is used to power all other regulators, so by turning this regulator off, the whole starter-kit turns off.
+The 3.3 V regulator on the SF2 starter-kit has an enable signal, where a pull-up resistor to 5 V is placed. One of the outputs on the microcontroller is connected to this pin.
+If the current on one of the supply voltages goes over a certain threshold, the bit on the microcontroller is set to go low, resulting in turning the 3.3 V regulator on the SF2-starter kit off. The 3.3 V is used to power all other regulators, therefore by turning this regulator off, the whole starter-kit turns off.
 
 Schematic, PCB layout and instructions on how to use this board can be found in appendix %\ref{Current_measurment board}.
 
@@ -966,14 +969,14 @@ Under a radiation test, some equipment is needed. In the following sections some
 
 \subsection{SRAM Radiation Detector}
 The SRAM radiation detector boards are made by Arild Velure, as part of his master thesis \cite{arild_master}.
-It is a SRAM-based radiation detector. Allot of tests has been done on this board, and a cross section (the probability that an incoming particle will induce an SEU) is found empirical to be $\unit{1.14\e{-6}}{\centi\square\meter}$. By checking SRAM chips for \ac{SEU}, we can calculate the fluence\footnote{Fluence is the total number of particles that intersect a unit area in a specific time interval of interest, and has units of $particle/\centi\square\meter$ (number of particles per meter squared)} of the beam.
+It is a SRAM-based radiation detector. A lot of tests have been performed on this board, and a cross section (the probability that an incoming particle will induce an SEU) is found empirical to be $\unit{1.14\e{-6}}{\centi\square\meter}$. By checking SRAM chips for \ac{SEU}, we can calculate the fluence\footnote{Fluence is the total number of particles that intersect a unit area in a specific time interval of interest, and has units of $particle/\centi\square\meter$ (number of particles per meter squared)} of the beam.
 
 The SRAM radiation detector is a \ac{PCB} with a flash-based \ac{FPGA}, four 16 Mbit Cypress SRAM chips, connectors and supporting electronics.
 % The \ac{FPGA} is designed witU h RS485 two-way communication which makes it possible to edit firmware, send commands and get data out.
 The board can be connected to a computer through an Opal Kelly XEM3001 board, which converts RS485 signal from the \ac{FPGA} to USB.
 A LabVIEW program has been built specially for this board. From this program we are able to reset data, do some basic settings, and monitor data. The program also constantly saves data onto the disk. The board also has an optical input for scintillator counts, so we could use this board as a scintillator counter as well.
 
-In figure \ref{labview_SRAM} you can see how the LabVIEW program looked like. From here we can monitor SEU on all the 4 \ac{SRAM} chips, see scintillator counts, reset counters, see time from start as well as other things. \ac{SRAM}1-10 as you can see on the left side, is different \ac{SRAM}-board, the board we used was SRAM6.
+In \autoref{labview_SRAM} you can see a snapshot of the LabVIEW program. From here we can monitor SEU on all the 4 \ac{SRAM} chips, see scintillator counts, reset counters, see time from start, as well as other things. \ac{SRAM}1-10, as you can see on the left side, is different \ac{SRAM}-boards, the SRAM-board we used was SRAM6.
 
 \begin{figure}[!htbp]
   \centering
@@ -983,9 +986,9 @@ In figure \ref{labview_SRAM} you can see how the LabVIEW program looked like. Fr
 \end{figure}
 
 The approach for detecting a Single Event Upset (SEU) on the \ac{SRAM} is rather straight
-forward, as can be seen in the flow diagram of figure \ref{flowchart}.
+forward, as can be seen in the flow diagram of \autoref{flowchart}.
 There is an initial startup phase where a known pattern is written to all the addresses in the \ac{SRAM}.
-When the startup phase is done, the value from the first address is read and compared
+When the startup phase is completed , the value from the first address is read and compared
 with the correct value, and if one or more of the bits are not equal a \ac{SEU} has occurred, and a counter will be incremented for each bit at the address which has suffered an upset.
 After the read, a new value is then written back to the address and the system moves on to the next address. A checkerboard pattern of alternating ones and zeroes, is used when writing to the \ac{SRAM}. To check for stuck bits, the bit pattern is inverted for every cycle through all addresses. 
 
@@ -996,21 +999,21 @@ After the read, a new value is then written back to the address and the system m
   \label{flowchart}
 \end{figure}
 
-The SRAM radiation detector also has an edge detector, which are able to detect rising edges of a signal. This is used as a scintillator counter.
+The SRAM radiation detector also has an edge detector, which is able to detect rising edges of a signal. This is used as a scintillator counter.
 
 \FloatBarrier
 
 \subsection{Scintillator}
 A scintillator is a material that emits light when exposed to ionizing radiation \cite{rad_phys}.
-A scintillator can be used as a standalone equipment, but then only to detect that there are radiation, by seeing that it lights up.
-To get a more accurate measurement, we will need a PhotoMultiplier Tube (PM-tube), which has the ability to concerts light pulses to current pulses by an electron avalanche process. The current pulses can be detected by an edge counter, which count every falling or rising edge of a signal.
+A scintillator can be used as a standalone equipment, but then only to detect that there is radiation, by seeing that it lights up.
+To get a more accurate measurement, we will need a PhotoMultiplier Tube (PM-tube), which has the ability to concert light pulses to current pulses by an electron avalanche process. The current pulses can be detected by an edge counter, which count every falling or rising edge of a signal.
 
-The Scintillator with its PM-tube will be used to measure relative radiation. There are a close to linear relation between scintillator counts and SEUs on the SRAM radiation detector. When we do the beam setup before radiation, as discussed in \ref{beam_setup}, we will find this relation. Under radiation of test boards, we use this relation to calculate or way back to SEUs, so that we can calculate the fluence.
+The Scintillator with its PM-tube will be used to measure relative radiation. There are a close to linear relation between scintillator counts and SEUs on the SRAM radiation detector. When we do the beam setup before radiation, as discussed in \autoref{beam_setup}, we will find this relation. Under radiation of test boards, we use this relation to calculate or way back to SEUs, so that we can calculate the fluence for a given test.
 
 \FloatBarrier
 
 \subsection{X-Y-positioning System}
-The X-Y-positioning system is a displacement system where PCBs can be mounted and be moved up, down and sideways in a small area controlled by a computer. Communication is done through a serial port and a LabVIEW program is used to control the system.
+The X-Y-positioning system is a displacement system where PCBs can be mounted and be moved up, down and sideways in a small area controlled by a computer. Communication is made through a serial port, and a LabVIEW program is used to control the system.
 
 This was used when doing the beam profile as discussed in chapter \ref{beam_setup}. In figure \ref{xy-table} you can see a picture of the front and back of the X-Y-positioning system with the SRAM radiation detector mounted.
 
