@@ -74,3 +74,8 @@ legend('TPS51200','MIC69302WU','SN74AVCB164245','SN74AVCB2T245','QS3VH257', 'SY8
 xlabel('Time[s]')
 ylabel('Flux')
 title('Flux for the different test boards')
+figure(14)
+plot(newdose6, Q2_sy(1:7671,1), '-')
+xlabel('Dose[kRad]')
+ylabel('Output Q0[V]')
+title('SY89831U')

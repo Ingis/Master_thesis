@@ -97,3 +97,8 @@ legend('ADN2814', 'MAX3748','MIC69302WU','SN74AVCB164245','SN74AVCB2T245','QS3VH
 xlabel('Time[s]')
 ylabel('Flux')
 title('Flux for the different test boards')
+figure(21)
+plot(newdose7, q0_sy2(1:2384,1), '-')
+xlabel('Dose[kRad]')
+ylabel('Output Q0[V]')
+title('SY89831U')
