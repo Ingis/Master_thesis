@@ -1,11 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.25)  27 MAY 2014 21:47
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.2.11)  28 MAY 2014 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Master_thesis_Inge_Nikolai_Torsvik.tex
 (./Master_thesis_Inge_Nikolai_Torsvik.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
+hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
+ czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
+n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
+reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
+ sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
+n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
+speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
+lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
+celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, lo
+aded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -301,29 +311,27 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@width=\dimen112
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen113
 \captionmargin@=\dimen114
 \captionwidth=\dimen115
-\caption@tempdima=\dimen116
-\caption@indent=\dimen117
-\caption@parindent=\dimen118
-\caption@hangindent=\dimen119
+\caption@indent=\dimen116
+\caption@parindent=\dimen117
+\caption@hangindent=\dimen118
 )
 \c@ContinuedFloat=\count92
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 \c@subfigure=\count93
 \c@subtable=\count94
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen120
-\WF@size=\dimen121
+\wrapoverhang=\dimen119
+\WF@size=\dimen120
 \c@WF@wrappedlines=\count95
 \WF@box=\box26
 \WF@everypar=\toks18
@@ -333,7 +341,7 @@ Package: wrapfig 2003/01/31  v 3.6
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@KVtest=\count96
 \sf@farskip=\skip43
-\sf@captopadj=\dimen122
+\sf@captopadj=\dimen121
 \sf@capskip=\skip44
 \sf@nearskip=\skip45
 \sf@top=\skip46
@@ -434,36 +442,36 @@ Package: amstext 2000/06/29 v2.01
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks20
-\ex@=\dimen123
+\ex@=\dimen122
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/SIunits/SIunits.cfg))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen124
+\pmbraise@=\dimen123
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count97
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count98
 \leftroot@=\count99
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count100
 \DOTSCASE@=\count101
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box27
 \strutbox@=\box28
-\big@size=\dimen125
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\big@size=\dimen124
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count102
 \c@MaxMatrixCols=\count103
 \dotsspace@=\muskip10
@@ -474,23 +482,23 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \column@=\count107
 \maxfields@=\count108
 \andhelp@=\toks22
-\eqnshift@=\dimen126
-\alignsep@=\dimen127
-\tagshift@=\dimen128
-\tagwidth@=\dimen129
-\totwidth@=\dimen130
-\lineht@=\dimen131
+\eqnshift@=\dimen125
+\alignsep@=\dimen126
+\tagshift@=\dimen127
+\tagwidth@=\dimen128
+\totwidth@=\dimen129
+\lineht@=\dimen130
 \@envbody=\toks23
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen132
-\extrarowheight=\dimen133
+\col@sep=\dimen131
+\extrarowheight=\dimen132
 \NC@list=\toks25
 \extratabsurround=\skip52
 \backup@length=\skip53
@@ -499,8 +507,8 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count109
 \calc@Bcount=\count110
-\calc@Adimen=\dimen134
-\calc@Bdimen=\dimen135
+\calc@Adimen=\dimen133
+\calc@Bdimen=\dimen134
 \calc@Askip=\skip54
 \calc@Bskip=\skip55
 LaTeX Info: Redefining \setlength on input line 76.
@@ -514,50 +522,40 @@ LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
-Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count112
-\l_MT_multwidth_dim=\dimen136
+\l_MT_multwidth_dim=\dimen135
 \origjot=\skip57
-\l_MT_shortvdotswithinadjustabove_dim=\dimen137
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen138
-\l_MT_above_intertext_sep=\dimen139
-\l_MT_below_intertext_sep=\dimen140
-\l_MT_above_shortintertext_sep=\dimen141
-\l_MT_below_shortintertext_sep=\dimen142
+\l_MT_shortvdotswithinadjustabove_dim=\dimen136
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen137
+\l_MT_above_intertext_dim=\dimen138
+\l_MT_below_intertext_dim=\dimen139
+\l_MT_above_shortintertext_dim=\dimen140
+\l_MT_below_shortintertext_dim=\dimen141
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
-Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
+Package: acronym 2010/09/08 v1.36 Support for acronyms (Tobias Oetiker)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
 Package: suffix 2006/07/15 1.5 Variant command support
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\@xs@message=\write3
-\integerpart=\count113
-\decimalpart=\count114
-)
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count115
-\c@@ppsavesec=\count116
-\c@@ppsaveapp=\count117
+\c@@pps=\count113
+\c@@ppsavesec=\count114
+\c@@ppsaveapp=\count115
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
@@ -602,64 +600,60 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen143
-\Hy@linkcounter=\count118
-\Hy@pagecounter=\count119
+\@linkdim=\dimen142
+\Hy@linkcounter=\count116
+\Hy@pagecounter=\count117
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count120
+\Hy@SavedSpaceFactor=\count118
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count121
+Package hyperref Info: Bookmarks ON on input line 4300.
+\c@Hy@tempcnt=\count119
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen144
-\Fld@menulength=\count122
-\Field@Width=\dimen145
-\Fld@charsize=\dimen146
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count123
-\c@Item=\count124
-\c@Hfootnote=\count125
+LaTeX Info: Redefining \url on input line 4653.
+\Fld@menulength=\count120
+\Field@Width=\dimen143
+\Fld@charsize=\dimen144
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
+\Hy@abspage=\count121
+\c@Item=\count122
+\c@Hfootnote=\count123
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count126
-\c@bookmark@seq@number=\count127
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
+\Fld@listcount=\count124
+\c@bookmark@seq@number=\count125
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -668,7 +662,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip58
 )
-(./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
+(./Master_thesis_Inge_Nikolai_Torsvik.aux
+
+LaTeX Warning: Label `test_14.11' multiply defined.
+
+(./acronyms.aux))
 \openout1 = `Master_thesis_Inge_Nikolai_Torsvik.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -685,8 +683,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
 LaTeX Font Info:    ... okay on input line 65.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 65.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 65.
@@ -728,16 +725,16 @@ LaTeX Font Info:    ... okay on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
-\scratchdimen=\dimen147
+\scratchcounter=\count126
+\scratchdimen=\dimen145
 \scratchbox=\box29
-\nofMPsegments=\count129
-\nofMParguments=\count130
+\nofMPsegments=\count127
+\nofMParguments=\count128
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count131
-\MPscratchDim=\dimen148
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen146
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
 \everyMPtoPDFconversion=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -774,12 +771,12 @@ and I'll forget about whatever was undefined.
 \AtBeginShipoutBox=\box30
 Package hyperref Info: Link coloring OFF on input line 65.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count134
+\c@section@level=\count132
 )
 LaTeX Info: Redefining \ref on input line 65.
 LaTeX Info: Redefining \pageref on input line 65.
@@ -787,11 +784,11 @@ LaTeX Info: Redefining \nameref on input line 65.
 
 (./Master_thesis_Inge_Nikolai_Torsvik.out)
 (./Master_thesis_Inge_Nikolai_Torsvik.out)
-\@outlinefile=\write4
-\openout4 = `Master_thesis_Inge_Nikolai_Torsvik.out'.
+\@outlinefile=\write3
+\openout3 = `Master_thesis_Inge_Nikolai_Torsvik.out'.
 
 
-<figures/uglo.png, id=301, 71.14981pt x 71.14981pt>
+<figures/uglo.png, id=293, 71.14981pt x 71.14981pt>
 File: figures/uglo.png Graphic file (type png)
  <use figures/uglo.png>
 Package pdftex.def Info: figures/uglo.png used on input line 82.
@@ -831,8 +828,8 @@ although it is yet undefined on input line 113.
 ] (./Master_thesis_Inge_Nikolai_Torsvik.toc [4
 
 ] [5] [6])
-\tf@toc=\write5
-\openout5 = `Master_thesis_Inge_Nikolai_Torsvik.toc'.
+\tf@toc=\write4
+\openout4 = `Master_thesis_Inge_Nikolai_Torsvik.toc'.
 
  [7]
 Chapter 1.
@@ -857,14 +854,14 @@ Package acronym Info: Label `acro:PCB' newly defined as it shall be overridden
 although it is yet undefined on input line 153.
 [2] [3]
 Chapter 2.
-<figures/CERN_accelerators.jpg, id=517, 511.9125pt x 677.02937pt>
+<figures/CERN_accelerators.jpg, id=507, 511.9125pt x 677.02937pt>
 File: figures/CERN_accelerators.jpg Graphic file (type jpg)
 
 <use figures/CERN_accelerators.jpg>
 Package pdftex.def Info: figures/CERN_accelerators.jpg used on input line 175.
 (pdftex.def)             Requested size: 273.14923pt x 361.25154pt.
 
-<figures/ALICE_layout.jpg, id=520, 772.8875pt x 407.5225pt>
+<figures/ALICE_layout.jpg, id=510, 772.8875pt x 407.5225pt>
 File: figures/ALICE_layout.jpg Graphic file (type jpg)
 
 <use figures/ALICE_layout.jpg>
@@ -873,14 +870,14 @@ Package pdftex.def Info: figures/ALICE_layout.jpg used on input line 182.
  [4
 
 ] [5 <./figures/CERN_accelerators.jpg> <./figures/ALICE_layout.jpg>]
-<figures/TPC_layout.png, id=543, 847.66687pt x 378.66469pt>
+<figures/TPC_layout.png, id=533, 847.66687pt x 378.66469pt>
 File: figures/TPC_layout.png Graphic file (type png)
 
 <use figures/TPC_layout.png>
 Package pdftex.def Info: figures/TPC_layout.png used on input line 202.
 (pdftex.def)             Requested size: 455.24411pt x 203.36073pt.
  [6 <./figures/TPC_layout.png>]
-<figures/TPC_Sections.png, id=554, 758.835pt x 615.0478pt>
+<figures/TPC_Sections.png, id=544, 758.835pt x 615.0478pt>
 File: figures/TPC_Sections.png Graphic file (type png)
 
 <use figures/TPC_Sections.png>
@@ -897,7 +894,7 @@ Package acronym Info: Label `acro:FEE' newly defined as it shall be overridden
 although it is yet undefined on input line 221.
 Package acronym Info: Label `acro:ADC' newly defined as it shall be overridden
 although it is yet undefined on input line 228.
-<figures/FEC_blockdiagram.png, id=569, 773.13844pt x 375.65344pt>
+<figures/FEC_blockdiagram.png, id=559, 773.13844pt x 375.65344pt>
 File: figures/FEC_blockdiagram.png Graphic file (type png)
 
 <use figures/FEC_blockdiagram.png>
@@ -910,7 +907,7 @@ Package acronym Info: Label `acro:DCS' newly defined as it shall be overridden
 although it is yet undefined on input line 252.
 Package acronym Info: Label `acro:SIU' newly defined as it shall be overridden
 although it is yet undefined on input line 252.
- <figures/RCU.png, id=603, 478.78876pt x 583.42969pt>
+ <figures/RCU.png, id=593, 478.78876pt x 583.42969pt>
 File: figures/RCU.png Graphic file (type png)
 
 <use figures/RCU.png>
@@ -919,7 +916,7 @@ Package pdftex.def Info: figures/RCU.png used on input line 262.
 Package acronym Info: Label `acro:SRAM' newly defined as it shall be overridden
 
 although it is yet undefined on input line 269.
- <figures/FEE_overview.png, id=619, 1019.81pt x 521.95pt>
+ <figures/FEE_overview.png, id=609, 1019.81pt x 521.95pt>
 File: figures/FEE_overview.png Graphic file (type png)
 
 <use figures/FEE_overview.png>
@@ -938,7 +935,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 352.
  [12]
-<figures/energy_loss.png, id=697, 516.42938pt x 573.64313pt>
+<figures/energy_loss.png, id=687, 516.42938pt x 573.64313pt>
 File: figures/energy_loss.png Graphic file (type png)
 
 <use figures/energy_loss.png>
@@ -947,21 +944,21 @@ Package pdftex.def Info: figures/energy_loss.png used on input line 422.
 Package acronym Info: Label `acro:LET' newly defined as it shall be overridden
 although it is yet undefined on input line 433.
  [13 <./figures/energy_loss.png>] [14] [15]
-<figures/CMOS_inverter.png, id=742, 931.22906pt x 328.22626pt>
+<figures/CMOS_inverter.png, id=731, 931.22906pt x 328.22626pt>
 File: figures/CMOS_inverter.png Graphic file (type png)
 
 <use figures/CMOS_inverter.png>
 Package pdftex.def Info: figures/CMOS_inverter.png used on input line 497.
 (pdftex.def)             Requested size: 455.24411pt x 160.45663pt.
  [16 <./figures/CMOS_inverter.png>]
-<figures/SRAM_Cell.png, id=762, 264.99pt x 166.37157pt>
+<figures/SRAM_Cell.png, id=751, 264.99pt x 166.37157pt>
 File: figures/SRAM_Cell.png Graphic file (type png)
 
 <use figures/SRAM_Cell.png>
 Package pdftex.def Info: figures/SRAM_Cell.png used on input line 524.
 (pdftex.def)             Requested size: 341.43307pt x 214.38155pt.
 
-<figures/charge_generation.png, id=765, 1017.8025pt x 392.96812pt>
+<figures/charge_generation.png, id=754, 1017.8025pt x 392.96812pt>
 File: figures/charge_generation.png Graphic file (type png)
 
 <use figures/charge_generation.png>
@@ -970,7 +967,7 @@ Package pdftex.def Info: figures/charge_generation.png used on input line 531.
 Package acronym Info: Label `acro:TID' newly defined as it shall be overridden
 although it is yet undefined on input line 545.
  [17 <./figures/SRAM_Cell.png> <./figures/charge_generation.png>]
-<figures/TID_in_MOS.png, id=780, 798.73407pt x 366.61969pt>
+<figures/TID_in_MOS.png, id=769, 798.73407pt x 366.61969pt>
 File: figures/TID_in_MOS.png Graphic file (type png)
 
 <use figures/TID_in_MOS.png>
@@ -980,21 +977,21 @@ Package pdftex.def Info: figures/TID_in_MOS.png used on input line 569.
 Chapter 4.
 [20
 
-] <figures/TPS51200_sch.png, id=834, 855.94781pt x 310.15875pt>
+] <figures/TPS51200_sch.png, id=823, 855.94781pt x 310.15875pt>
 File: figures/TPS51200_sch.png Graphic file (type png)
 
 <use figures/TPS51200_sch.png>
 Package pdftex.def Info: figures/TPS51200_sch.png used on input line 631.
 (pdftex.def)             Requested size: 455.24411pt x 164.96072pt.
  [21 <./figures/TPS51200_sch.png>]
-<figures/MIC_sch.png, id=847, 791.20593pt x 289.08pt>
+<figures/MIC_sch.png, id=836, 791.20593pt x 289.08pt>
 File: figures/MIC_sch.png Graphic file (type png)
 
 <use figures/MIC_sch.png>
 Package pdftex.def Info: figures/MIC_sch.png used on input line 657.
 (pdftex.def)             Requested size: 455.24411pt x 166.32997pt.
  [22 <./figures/MIC_sch.png>]
-<figures/SN74AVCB164245_sch.png, id=863, 604.50844pt x 533.74406pt>
+<figures/SN74AVCB164245_sch.png, id=851, 604.50844pt x 533.74406pt>
 File: figures/SN74AVCB164245_sch.png Graphic file (type png)
 
 <use figures/SN74AVCB164245_sch.png>
@@ -1004,21 +1001,21 @@ Package pdftex.def Info: figures/SN74AVCB164245_sch.png used on input line 678.
  [23] [24 <./figures/SN74AVCB164245_sch.png>]
 Package acronym Info: Label `acro:SPI' newly defined as it shall be overridden
 although it is yet undefined on input line 688.
- <figures/SN74AVC2T245_sch.png, id=879, 694.84593pt x 509.65407pt>
+ <figures/SN74AVC2T245_sch.png, id=868, 694.84593pt x 509.65407pt>
 File: figures/SN74AVC2T245_sch.png Graphic file (type png)
 
 <use figures/SN74AVC2T245_sch.png>
 Package pdftex.def Info: figures/SN74AVC2T245_sch.png used on input line 697.
 (pdftex.def)             Requested size: 455.24411pt x 333.9075pt.
  [25 <./figures/SN74AVC2T245_sch.png>]
-<figures/QS3VH257_sch.png, id=889, 737.00343pt x 437.38406pt>
+<figures/QS3VH257_sch.png, id=878, 737.00343pt x 437.38406pt>
 File: figures/QS3VH257_sch.png Graphic file (type png)
 
 <use figures/QS3VH257_sch.png>
 Package pdftex.def Info: figures/QS3VH257_sch.png used on input line 712.
 (pdftex.def)             Requested size: 455.24411pt x 270.16754pt.
  [26 <./figures/QS3VH257_sch.png>]
-<figures/SY89831U_sch.png, id=900, 730.22812pt x 564.60938pt>
+<figures/SY89831U_sch.png, id=889, 730.22812pt x 564.60938pt>
 File: figures/SY89831U_sch.png Graphic file (type png)
 
 <use figures/SY89831U_sch.png>
@@ -1030,49 +1027,49 @@ although it is yet undefined on input line 738.
 Package acronym Info: Label `acro:CML' newly defined as it shall be overridden
 although it is yet undefined on input line 739.
  [27 <./figures/SY89831U_sch.png>]
-<figures/MAX3748_sch.png, id=913, 712.16063pt x 304.88907pt>
+<figures/MAX3748_sch.png, id=902, 712.16063pt x 304.88907pt>
 File: figures/MAX3748_sch.png Graphic file (type png)
 
 <use figures/MAX3748_sch.png>
 Package pdftex.def Info: figures/MAX3748_sch.png used on input line 761.
 (pdftex.def)             Requested size: 364.19667pt x 155.91937pt.
  [28]
-<figures/ADN2814_sch.png, id=918, 743.02594pt x 356.83313pt>
+<figures/ADN2814_sch.png, id=907, 743.02594pt x 356.83313pt>
 File: figures/ADN2814_sch.png Graphic file (type png)
 
 <use figures/ADN2814_sch.png>
 Package pdftex.def Info: figures/ADN2814_sch.png used on input line 768.
 (pdftex.def)             Requested size: 364.19667pt x 174.9042pt.
  [29 <./figures/MAX3748_sch.png> <./figures/ADN2814_sch.png>] <figures/INA210_s
-ch.png, id=926, 1002.74625pt x 466.74374pt>
+ch.png, id=915, 1002.74625pt x 466.74374pt>
 File: figures/INA210_sch.png Graphic file (type png)
 
 <use figures/INA210_sch.png>
 Package pdftex.def Info: figures/INA210_sch.png used on input line 791.
 (pdftex.def)             Requested size: 455.24411pt x 211.89868pt.
 
-<figures/TLV3011_sch.png, id=929, 1168.365pt x 446.41782pt>
+<figures/TLV3011_sch.png, id=918, 1168.365pt x 446.41782pt>
 File: figures/TLV3011_sch.png Graphic file (type png)
 
 <use figures/TLV3011_sch.png>
 Package pdftex.def Info: figures/TLV3011_sch.png used on input line 803.
 (pdftex.def)             Requested size: 455.24411pt x 173.94557pt.
  [30 <./figures/INA210_sch.png>]
-<figures/PCB_board1.png, id=940, 592.46344pt x 407.27156pt>
+<figures/PCB_board1.png, id=929, 592.46344pt x 407.27156pt>
 File: figures/PCB_board1.png Graphic file (type png)
 
 <use figures/PCB_board1.png>
 Package pdftex.def Info: figures/PCB_board1.png used on input line 815.
 (pdftex.def)             Requested size: 341.43307pt x 234.71376pt.
 
-<figures/PCB_board2.png, id=941, 715.92468pt x 407.27156pt>
+<figures/PCB_board2.png, id=930, 715.92468pt x 407.27156pt>
 File: figures/PCB_board2.png Graphic file (type png)
 
 <use figures/PCB_board2.png>
 Package pdftex.def Info: figures/PCB_board2.png used on input line 822.
 (pdftex.def)             Requested size: 341.43307pt x 194.2328pt.
 
-<figures/PCB_board3.png, id=942, 926.71219pt x 520.94624pt>
+<figures/PCB_board3.png, id=931, 926.71219pt x 520.94624pt>
 File: figures/PCB_board3.png Graphic file (type png)
 
 <use figures/PCB_board3.png>
@@ -1080,14 +1077,14 @@ Package pdftex.def Info: figures/PCB_board3.png used on input line 829.
 (pdftex.def)             Requested size: 341.43307pt x 191.9363pt.
  [31 <./figures/TLV3011_sch.png> <./figures/PCB_board1.png>] [32 <./figures/PCB
 _board2.png> <./figures/PCB_board3.png>]
-<figures/labVIEW.jpg, id=956, 800.9925pt x 446.41782pt>
+<figures/labVIEW.jpg, id=945, 800.9925pt x 446.41782pt>
 File: figures/labVIEW.jpg Graphic file (type jpg)
 
 <use figures/labVIEW.jpg>
 Package pdftex.def Info: figures/labVIEW.jpg used on input line 845.
 (pdftex.def)             Requested size: 455.24411pt x 253.72511pt.
  [33 <./figures/labVIEW.jpg>]
-<figures/SRAM_flow_chart.png, id=971, 290.64584pt x 249.21104pt>
+<figures/SRAM_flow_chart.png, id=960, 290.64584pt x 249.21104pt>
 File: figures/SRAM_flow_chart.png Graphic file (type png)
 
 <use figures/SRAM_flow_chart.png>
@@ -1097,7 +1094,7 @@ Package pdftex.def Info: figures/SRAM_flow_chart.png used on input line 880.
 Package acronym Info: Label `acro:WSR' newly defined as it shall be overridden
 although it is yet undefined on input line 906.
  [35 <./figures/SRAM_flow_chart.png>]
-<figures/Shift_register_design.png, id=1002, 1446.40375pt x 571.13374pt>
+<figures/Shift_register_design.png, id=991, 1446.40375pt x 571.13374pt>
 File: figures/Shift_register_design.png Graphic file (type png)
 
 <use figures/Shift_register_design.png>
@@ -1105,28 +1102,28 @@ Package pdftex.def Info: figures/Shift_register_design.png used on input line 9
 18.
 (pdftex.def)             Requested size: 455.24411pt x 179.75993pt.
  [36 <./figures/Shift_register_design.png>] [37] [38] <figures/SRAM_labview.png
-, id=1043, 986.18437pt x 610.53094pt>
+, id=1032, 986.18437pt x 610.53094pt>
 File: figures/SRAM_labview.png Graphic file (type png)
 
 <use figures/SRAM_labview.png>
 Package pdftex.def Info: figures/SRAM_labview.png used on input line 983.
 (pdftex.def)             Requested size: 455.24411pt x 281.83513pt.
 
-<figures/SRAM_flowchart.png, id=1051, 256.70906pt x 567.62062pt>
+<figures/SRAM_flowchart.png, id=1040, 256.70906pt x 567.62062pt>
 File: figures/SRAM_flowchart.png Graphic file (type png)
 
 <use figures/SRAM_flowchart.png>
 Package pdftex.def Info: figures/SRAM_flowchart.png used on input line 997.
 (pdftex.def)             Requested size: 113.81017pt x 227.62451pt.
  [39] [40 <./figures/SRAM_labview.png> <./figures/SRAM_flowchart.png>] <figures
-/XY_front.jpg, id=1067, 3661.68pt x 2746.26pt>
+/XY_front.jpg, id=1056, 3661.68pt x 2746.26pt>
 File: figures/XY_front.jpg Graphic file (type jpg)
 
 <use figures/XY_front.jpg>
 Package pdftex.def Info: figures/XY_front.jpg used on input line 1024.
 (pdftex.def)             Requested size: 223.07211pt x 167.28276pt.
 
-<figures/XY_back.jpg, id=1068, 3661.68pt x 2746.26pt>
+<figures/XY_back.jpg, id=1057, 3661.68pt x 2746.26pt>
 File: figures/XY_back.jpg Graphic file (type jpg)
 
 <use figures/XY_back.jpg>
@@ -1134,42 +1131,56 @@ Package pdftex.def Info: figures/XY_back.jpg used on input line 1029.
 (pdftex.def)             Requested size: 223.07211pt x 167.28276pt.
  [41 <./figures/XY_front.jpg> <./figures/XY_back.jpg>]
 Chapter 5.
-[42
-
-] <figures/OCL.png, id=1091, 638.385pt x 536.0025pt>
+<figures/OCL.png, id=1070, 638.385pt x 536.0025pt>
 File: figures/OCL.png Graphic file (type png)
  <use figures/OCL.png>
-Package pdftex.def Info: figures/OCL.png used on input line 1063.
+Package pdftex.def Info: figures/OCL.png used on input line 1061.
 (pdftex.def)             Requested size: 227.61696pt x 199.1684pt.
 
-<figures/experiment_setup.jpg, id=1092, 395.22656pt x 207.02344pt>
+[42
+
+] <figures/experiment_setup.jpg, id=1078, 395.22656pt x 207.02344pt>
 File: figures/experiment_setup.jpg Graphic file (type jpg)
 
 <use figures/experiment_setup.jpg>
-Package pdftex.def Info: figures/experiment_setup.jpg used on input line 1091.
+Package pdftex.def Info: figures/experiment_setup.jpg used on input line 1087.
 (pdftex.def)             Requested size: 227.62206pt x 119.23024pt.
 
-<figures/experiment_area.jpg, id=1093, 3661.68pt x 2746.26pt>
+<figures/experiment_area.jpg, id=1079, 3661.68pt x 2746.26pt>
 File: figures/experiment_area.jpg Graphic file (type jpg)
 
 <use figures/experiment_area.jpg>
-Package pdftex.def Info: figures/experiment_area.jpg used on input line 1100.
+Package pdftex.def Info: figures/experiment_area.jpg used on input line 1094.
 (pdftex.def)             Requested size: 455.24411pt x 341.39595pt.
- [43 <./figures/OCL.png>] [44 <./figures/experiment_setup.jpg> <./figures/exper
+ [43 <./figures/OCL.png> <./figures/experiment_setup.jpg>] [44 <./figures/exper
 iment_area.jpg>]
 Package acronym Info: Label `acro:DUT' newly defined as it shall be overridden
-although it is yet undefined on input line 1111.
+although it is yet undefined on input line 1105.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
 []|\OT1/cmr/m/n/12 TPS51200, MIC69302WU, SN74AVCB164245,
  []
 
-[45] [46] <figures/Blue_hall.png, id=1135, 1025.8325pt x 653.44125pt>
+[45]
+Underfull \hbox (badness 8113) in paragraph at lines 1146--1146
+[]|$\OML/cmm/m/it/12 ADN\OT1/cmr/m/n/12 2814$, $\OML/cmm/m/it/12 MAX\OT1/cmr/m/
+n/12 3748$, $\OML/cmm/m/it/12 SY\OT1/cmr/m/n/12 89831\OML/cmm/m/it/12 U[]$\OT1/
+cmr/m/n/12 , $\OML/cmm/m/it/12 TPS\OT1/cmr/m/n/12 51200[]$,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1146
+\OML/cmm/m/it/12 MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[]$\OT1/cmr/m/n/12 
+, $\OML/cmm/m/it/12 SN\OT1/cmr/m/n/12 74\OML/cmm/m/it/12 AVCB\OT1/cmr/m/n/12 16
+4245[]$,
+ []
+
+[46] <figures/Blue_hall.png, id=1122, 1025.8325pt x 653.44125pt>
 File: figures/Blue_hall.png Graphic file (type png)
 
 <use figures/Blue_hall.png>
-Package pdftex.def Info: figures/Blue_hall.png used on input line 1165.
-(pdftex.def)             Requested size: 227.62206pt x 144.9839pt.
+Package pdftex.def Info: figures/Blue_hall.png used on input line 1164.
+(pdftex.def)             Requested size: 318.66948pt x 202.98346pt.
 
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -1179,24 +1190,24 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1172 ...ce (number of protons per $\centi\meter²
+l.1171 ...ce (number of protons per $\centi\meter²
                                                   $ in total) and exposed ti...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 [47 <./figures/Blue_hall.png>]
-<figures/TSL_setup.png, id=1144, 2601.72pt x 1943.26pt>
+<figures/TSL_setup.png, id=1131, 2601.72pt x 1943.26pt>
 File: figures/TSL_setup.png Graphic file (type png)
 
 <use figures/TSL_setup.png>
-Package pdftex.def Info: figures/TSL_setup.png used on input line 1176.
-(pdftex.def)             Requested size: 227.62206pt x 169.99332pt.
- [48 <./figures/TSL_setup.png>]
+Package pdftex.def Info: figures/TSL_setup.png used on input line 1175.
+(pdftex.def)             Requested size: 318.66948pt x 238.01437pt.
+ [48 <./figures/TSL_setup.png>] [49]
 Chapter 6.
-[49
+[50
 
-] [50]
+] [51]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -1205,186 +1216,255 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1272 ...given time, expressed in [$\frac{n}{cm²}
-                                                  $]. The total energy is then:
+l.1271 ...given time, expressed in [$\frac{n}{cm²}
+                                                  $], where n is number of p...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[51] [52] [53] [54]
-<figures/Radiation_film.png, id=1256, 411.03563pt x 619.56468pt>
-File: figures/Radiation_film.png Graphic file (type png)
+[52] [53]
 
-<use figures/Radiation_film.png>
-Package pdftex.def Info: figures/Radiation_film.png used on input line 1420.
-(pdftex.def)             Requested size: 227.62206pt x 343.09671pt.
- [55] [56 <./figures/Radiation_film.png>]
-[57]
-<figures/current_volt_vs_dose_tps.png, id=1283, 422.32782pt x 316.18124pt>
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1362   Cross section 			& $1.14E-6 cm²
+                                        $\\\hline
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+[54]
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1396 ...for example Bethe Bloch theory, Beth $Z²
+                                                  $, Barkas $Z^3$ and a lot ...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+[55] <figures/radiation_film2.png, id=1247, 463.7325pt x 654.16396pt>
+File: figures/radiation_film2.png Graphic file (type png)
+
+<use figures/radiation_film2.png>
+Package pdftex.def Info: figures/radiation_film2.png used on input line 1417.
+(pdftex.def)             Requested size: 227.62206pt x 321.10211pt.
+ [56] [57 <./figures/radiation_film2.png>]
+<figures/current_volt_vs_dose_tps.png, id=1270, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_tps.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_tps.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_tps.png used on input lin
-e 1474.
+e 1471.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
-
-<figures/current_volt_vs_dose_mic1.png, id=1287, 422.32782pt x 316.18124pt>
+ [58 <./figures/current_volt_vs_dose_tps.png (PNG copy)>]
+<figures/current_volt_vs_dose_mic1.png, id=1279, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_mic1.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_mic1.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_mic1.png used on input li
-ne 1491.
+ne 1488.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_volt_vs_dose_mic2.png, id=1288, 422.32782pt x 316.18124pt>
+<figures/current_volt_vs_dose_mic2.png, id=1280, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_mic2.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_mic2.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_mic2.png used on input li
-ne 1497.
+ne 1494.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [58 <./figures/current_volt_vs_dose_tps.png (PNG copy)>]
-<figures/current_vs_dose_4245_1.png, id=1299, 422.32782pt x 316.18124pt>
+
+<figures/current_vs_dose_4245_1.png, id=1282, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_4245_1.png Graphic file (type png)
 
 <use figures/current_vs_dose_4245_1.png>
 Package pdftex.def Info: figures/current_vs_dose_4245_1.png used on input line 
-1515.
+1512.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_4245_2.png, id=1300, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_4245_2.png, id=1283, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_4245_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_4245_2.png>
 Package pdftex.def Info: figures/current_vs_dose_4245_2.png used on input line 
-1521.
+1518.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
  [59 <./figures/current_volt_vs_dose_mic1.png (PNG copy)> <./figures/current_vo
-lt_vs_dose_mic2.png (PNG copy)> <./figures/current_vs_dose_4245_1.png (PNG copy
-)> <./figures/current_vs_dose_4245_2.png (PNG copy)>]
-<figures/current_vs_dose_t245_1.png, id=1308, 422.32782pt x 316.18124pt>
+lt_vs_dose_mic2.png (PNG copy)>]
+<figures/current_vs_dose_t245_1.png, id=1296, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_t245_1.png Graphic file (type png)
 
 <use figures/current_vs_dose_t245_1.png>
 Package pdftex.def Info: figures/current_vs_dose_t245_1.png used on input line 
-1539.
+1536.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_t245_2.png, id=1309, 422.32782pt x 316.18124pt>
+<figures/output_vs_dose_t245.png, id=1297, 691.83469pt x 514.17094pt>
+File: figures/output_vs_dose_t245.png Graphic file (type png)
+
+<use figures/output_vs_dose_t245.png>
+Package pdftex.def Info: figures/output_vs_dose_t245.png used on input line 154
+2.
+(pdftex.def)             Requested size: 223.07211pt x 165.7855pt.
+
+<figures/current_vs_dose_t245_2.png, id=1298, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_t245_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_t245_2.png>
 Package pdftex.def Info: figures/current_vs_dose_t245_2.png used on input line 
-1545.
-(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
-
-<figures/current_vs_dose_q1.png, id=1312, 422.32782pt x 316.18124pt>
+1551.
+(pdftex.def)             Requested size: 227.62206pt x 170.4169pt.
+ [60 <./figures/current_vs_dose_4245_1.png (PNG copy)> <./figures/current_vs_do
+se_4245_2.png (PNG copy)> <./figures/current_vs_dose_t245_1.png (PNG copy)> <./
+figures/output_vs_dose_t245.png (PNG copy)>] <figures/current_vs_dose_q1.png, i
+d=1308, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_q1.png Graphic file (type png)
 
 <use figures/current_vs_dose_q1.png>
-Package pdftex.def Info: figures/current_vs_dose_q1.png used on input line 1562
+Package pdftex.def Info: figures/current_vs_dose_q1.png used on input line 1566
 .
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_q2.png, id=1313, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_q2.png, id=1309, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_q2.png Graphic file (type png)
 
 <use figures/current_vs_dose_q2.png>
-Package pdftex.def Info: figures/current_vs_dose_q2.png used on input line 1568
+Package pdftex.def Info: figures/current_vs_dose_q2.png used on input line 1572
 .
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [60 <./figures/current_vs_dose_t245_1.png (PNG copy)> <./figures/current_vs_do
-se_t245_2.png (PNG copy)> <./figures/current_vs_dose_q1.png (PNG copy)> <./figu
-res/current_vs_dose_q2.png (PNG copy)>]
-<figures/current_vs_dose_sy1.png, id=1326, 422.32782pt x 316.18124pt>
+ [61 <./figures/current_vs_dose_t245_2.png (PNG copy)> <./figures/current_vs_do
+se_q1.png (PNG copy)> <./figures/current_vs_dose_q2.png (PNG copy)>]
+<figures/current_vs_dose_sy1.png, id=1320, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_sy1.png Graphic file (type png)
 
 <use figures/current_vs_dose_sy1.png>
-Package pdftex.def Info: figures/current_vs_dose_sy1.png used on input line 158
-7.
+Package pdftex.def Info: figures/current_vs_dose_sy1.png used on input line 159
+3.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_sy2.png, id=1327, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_sy2.png, id=1321, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_sy2.png Graphic file (type png)
 
 <use figures/current_vs_dose_sy2.png>
 Package pdftex.def Info: figures/current_vs_dose_sy2.png used on input line 159
-3.
-(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
-
-<figures/current_vs_dose_adn.png, id=1331, 422.32782pt x 316.18124pt>
-File: figures/current_vs_dose_adn.png Graphic file (type png)
-
-<use figures/current_vs_dose_adn.png>
-Package pdftex.def Info: figures/current_vs_dose_adn.png used on input line 160
 9.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/dataerror_vs_dose_adn.png, id=1332, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_adn.png, id=1325, 422.32782pt x 316.18124pt>
+File: figures/current_vs_dose_adn.png Graphic file (type png)
+
+<use figures/current_vs_dose_adn.png>
+Package pdftex.def Info: figures/current_vs_dose_adn.png used on input line 161
+6.
+(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
+
+<figures/dataerror_vs_dose_adn.png, id=1326, 422.32782pt x 316.18124pt>
 File: figures/dataerror_vs_dose_adn.png Graphic file (type png)
 
 <use figures/dataerror_vs_dose_adn.png>
 Package pdftex.def Info: figures/dataerror_vs_dose_adn.png used on input line 1
-618.
+625.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/clockerror_vs_dose_adn.png, id=1333, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_dose_adn.png, id=1327, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_dose_adn.png Graphic file (type png)
 
 <use figures/clockerror_vs_dose_adn.png>
 Package pdftex.def Info: figures/clockerror_vs_dose_adn.png used on input line 
-1624.
+1631.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [61 <./figures/current_vs_dose_sy1.png (PNG copy)> <./figures/current_vs_dose_
-sy2.png (PNG copy)>] [62 <./figures/current_vs_dose_adn.png (PNG copy)> <./figu
-res/dataerror_vs_dose_adn.png (PNG copy)> <./figures/clockerror_vs_dose_adn.png
- (PNG copy)>]
-<figures/current_vs_dose_max.png, id=1347, 422.32782pt x 316.18124pt>
+ [62 <./figures/current_vs_dose_sy1.png (PNG copy)> <./figures/current_vs_dose_
+sy2.png (PNG copy)> <./figures/current_vs_dose_adn.png (PNG copy)>]
+<figures/current_vs_dose_max.png, id=1335, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_max.png Graphic file (type png)
 
 <use figures/current_vs_dose_max.png>
-Package pdftex.def Info: figures/current_vs_dose_max.png used on input line 164
-3.
+Package pdftex.def Info: figures/current_vs_dose_max.png used on input line 165
+0.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/clockerror_vs_dose_max.png, id=1348, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_dose_max.png, id=1336, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_dose_max.png Graphic file (type png)
 
 <use figures/clockerror_vs_dose_max.png>
 Package pdftex.def Info: figures/clockerror_vs_dose_max.png used on input line 
-1649.
+1656.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [63 <./figures/current_vs_dose_max.png (PNG copy)> <./figures/clockerror_vs_do
-se_max.png (PNG copy)>] [64] [65]
-<figures/lsram_dose_sf2_1.png, id=1377, 422.32782pt x 316.18124pt>
+
+<figures/current_vs_dose_ina1.png, id=1337, 422.32782pt x 316.18124pt>
+File: figures/current_vs_dose_ina1.png Graphic file (type png)
+
+<use figures/current_vs_dose_ina1.png>
+Package pdftex.def Info: figures/current_vs_dose_ina1.png used on input line 16
+72.
+(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
+
+<figures/current_vs_dose_ina2.png, id=1338, 422.32782pt x 316.18124pt>
+File: figures/current_vs_dose_ina2.png Graphic file (type png)
+
+<use figures/current_vs_dose_ina2.png>
+Package pdftex.def Info: figures/current_vs_dose_ina2.png used on input line 16
+78.
+(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
+
+<figures/current_vs_dose_tlv1.png, id=1339, 596.98032pt x 398.23781pt>
+File: figures/current_vs_dose_tlv1.png Graphic file (type png)
+
+<use figures/current_vs_dose_tlv1.png>
+Package pdftex.def Info: figures/current_vs_dose_tlv1.png used on input line 16
+92.
+(pdftex.def)             Requested size: 223.07211pt x 148.81013pt.
+
+<figures/current_vs_dose_tlv2.png, id=1340, 422.32782pt x 316.18124pt>
+File: figures/current_vs_dose_tlv2.png Graphic file (type png)
+
+<use figures/current_vs_dose_tlv2.png>
+Package pdftex.def Info: figures/current_vs_dose_tlv2.png used on input line 16
+98.
+(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
+ [63 <./figures/dataerror_vs_dose_adn.png (PNG copy)> <./figures/clockerror_vs_
+dose_adn.png (PNG copy)> <./figures/current_vs_dose_max.png (PNG copy)> <./figu
+res/clockerror_vs_dose_max.png (PNG copy)>] [64 <./figures/current_vs_dose_ina1
+.png (PNG copy)> <./figures/current_vs_dose_ina2.png (PNG copy)> <./figures/cur
+rent_vs_dose_tlv1.png (PNG copy)> <./figures/current_vs_dose_tlv2.png (PNG copy
+)>] [65] [66] [67]
+<figures/lsram_dose_sf2_1.png, id=1382, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_1.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_1.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_1.png used on input line 1746.
+Package pdftex.def Info: figures/lsram_dose_sf2_1.png used on input line 1797.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_dose_sf2_1.png, id=1378, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_1.png, id=1383, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_1.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_1.png>
-Package pdftex.def Info: figures/usram_dose_sf2_1.png used on input line 1752.
+Package pdftex.def Info: figures/usram_dose_sf2_1.png used on input line 1803.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/lsram_dose_sf2_2.png, id=1379, 422.32782pt x 316.18124pt>
+<figures/lsram_dose_sf2_2.png, id=1384, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_2.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_2.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_2.png used on input line 1764.
+Package pdftex.def Info: figures/lsram_dose_sf2_2.png used on input line 1815.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_dose_sf2_2.png, id=1380, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_2.png, id=1385, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_2.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_2.png>
-Package pdftex.def Info: figures/usram_dose_sf2_2.png used on input line 1770.
+Package pdftex.def Info: figures/usram_dose_sf2_2.png used on input line 1821.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [66 <./figures/lsram_dose_sf2_1.png (PNG copy)> <./figures/usram_dose_sf2_1.pn
-g (PNG copy)>] [67 <./figures/lsram_dose_sf2_2.png (PNG copy)> <./figures/usram
+ [68 <./figures/lsram_dose_sf2_1.png (PNG copy)> <./figures/usram_dose_sf2_1.pn
+g (PNG copy)>] [69 <./figures/lsram_dose_sf2_2.png (PNG copy)> <./figures/usram
 _dose_sf2_2.png (PNG copy)>]
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -1394,7 +1474,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1804  \sigma_{CS} = \sqrt{\sigma_{ratio}²
+l.1855  \sigma_{CS} = \sqrt{\sigma_{ratio}²
                                            +\sigma_{lin}²+(\frac{1}{N_{SEU}}...
 
 You need to provide a definition with \DeclareInputText 
@@ -1408,7 +1488,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1804 ...S} = \sqrt{\sigma_{ratio}²+\sigma_{lin}²
+l.1855 ...S} = \sqrt{\sigma_{ratio}²+\sigma_{lin}²
                                                   +(\frac{1}{N_{SEU}})²+\sig...
 
 You need to provide a definition with \DeclareInputText 
@@ -1422,7 +1502,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1804 ...tio}²+\sigma_{lin}²+(\frac{1}{N_{SEU}})²
+l.1855 ...tio}²+\sigma_{lin}²+(\frac{1}{N_{SEU}})²
                                                   +\sigma_{err}²+\sigma_{pos}²}
 
 You need to provide a definition with \DeclareInputText 
@@ -1436,7 +1516,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1804 ...lin}²+(\frac{1}{N_{SEU}})²+\sigma_{err}²
+l.1855 ...lin}²+(\frac{1}{N_{SEU}})²+\sigma_{err}²
                                                   +\sigma_{pos}²}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1449,7 +1529,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1804 ...}{N_{SEU}})²+\sigma_{err}²+\sigma_{pos}²
+l.1855 ...}{N_{SEU}})²+\sigma_{err}²+\sigma_{pos}²
                                                   }
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1462,7 +1542,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1812  device & CS [$cm²
+l.1863  device & CS [$cm²
                          $] & CS per bit [$cm²/bit$] & $\sigma_{CS} [cm²/bit...
 
 You need to provide a definition with \DeclareInputText 
@@ -1476,7 +1556,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1812  device & CS [$cm²$] & CS per bit [$cm²
+l.1863  device & CS [$cm²$] & CS per bit [$cm²
                                               /bit$] & $\sigma_{CS} [cm²/bit...
 
 You need to provide a definition with \DeclareInputText 
@@ -1490,12 +1570,12 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1812 ... per bit [$cm²/bit$] & $\sigma_{CS} [cm²
+l.1863 ... per bit [$cm²/bit$] & $\sigma_{CS} [cm²
                                                   /bit]$ \\\hline\hline
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[68] [69] [70]
+[70] [71] [72]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -1504,7 +1584,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1927  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})²
+l.1978  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})²
                                                 +\sigma_{ratio}²+\sigma_{lin...
 
 You need to provide a definition with \DeclareInputText 
@@ -1518,7 +1598,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1927 ...qrt{(\frac{1}{N_{err}})²+\sigma_{ratio}²
+l.1978 ...qrt{(\frac{1}{N_{err}})²+\sigma_{ratio}²
                                                   +\sigma_{lin}²+\sigma_{pos}²}
 
 You need to provide a definition with \DeclareInputText 
@@ -1532,7 +1612,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1927 ...N_{err}})²+\sigma_{ratio}²+\sigma_{lin}²
+l.1978 ...N_{err}})²+\sigma_{ratio}²+\sigma_{lin}²
                                                   +\sigma_{pos}²}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1545,7 +1625,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1927 ...gma_{ratio}²+\sigma_{lin}²+\sigma_{pos}²
+l.1978 ...gma_{ratio}²+\sigma_{lin}²+\sigma_{pos}²
                                                   }
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1558,7 +1638,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1933  CS  = 8.46*10^{-11} ±
+l.1984  CS  = 8.46*10^{-11} ±
                               1.26\cdot 10^{-11}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1571,7 +1651,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1939 ...M and micro SRAM are respectively $4.18±
+l.1990 ...M and micro SRAM are respectively $4.18±
                                                   0.73\cdot10^{-14}$ and $(9...
 
 You need to provide a definition with \DeclareInputText 
@@ -1585,13 +1665,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1939 ...ely $4.18±0.73\cdot10^{-14}$ and $(9.62±
+l.1990 ...ely $4.18±0.73\cdot10^{-14}$ and $(9.62±
                                                   1.32)\cdot10^-{15}$, which...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[71] [72] [73]
+[73] [74] [75]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -1600,7 +1680,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2004  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})²
+l.2055  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})²
                                                 +\sigma_{pow}²+\sigma_{pos}²...
 
 You need to provide a definition with \DeclareInputText 
@@ -1614,7 +1694,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2004 ...\sqrt{(\frac{1}{N_{err}})²+\sigma_{pow}²
+l.2055 ...\sqrt{(\frac{1}{N_{err}})²+\sigma_{pow}²
                                                   +\sigma_{pos}²+\sigma_{flu}²}
 
 You need to provide a definition with \DeclareInputText 
@@ -1628,7 +1708,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2004 ...}{N_{err}})²+\sigma_{pow}²+\sigma_{pos}²
+l.2055 ...}{N_{err}})²+\sigma_{pow}²+\sigma_{pos}²
                                                   +\sigma_{flu}²}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1641,7 +1721,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2004 ...sigma_{pow}²+\sigma_{pos}²+\sigma_{flu}²
+l.2055 ...sigma_{pow}²+\sigma_{pos}²+\sigma_{flu}²
                                                   }
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1654,7 +1734,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2010  CS  = 2.45 *10^{-10} ±
+l.2061  CS  = 2.45 *10^{-10} ±
                                1.41\cdot 10^{-11}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1667,40 +1747,40 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2014  CS = 2.33 *10^{-10} ±
+l.2065  CS = 2.33 *10^{-10} ±
                               1.34\cdot 10^{-11}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[74] <figures/lsram_dose_sf2_3.png, id=1462, 422.32782pt x 316.18124pt>
+[76] <figures/lsram_dose_sf2_3.png, id=1466, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_3.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_3.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_3.png used on input line 2030.
+Package pdftex.def Info: figures/lsram_dose_sf2_3.png used on input line 2081.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_dose_sf2_3.png, id=1463, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_3.png, id=1467, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_3.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_3.png>
-Package pdftex.def Info: figures/usram_dose_sf2_3.png used on input line 2036.
+Package pdftex.def Info: figures/usram_dose_sf2_3.png used on input line 2087.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/lsram_dose_sf2_4.png, id=1464, 422.32782pt x 316.18124pt>
+<figures/lsram_dose_sf2_4.png, id=1468, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_4.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_4.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_4.png used on input line 2048.
+Package pdftex.def Info: figures/lsram_dose_sf2_4.png used on input line 2099.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_dose_sf2_4.png, id=1465, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_4.png, id=1469, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_4.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_4.png>
-Package pdftex.def Info: figures/usram_dose_sf2_4.png used on input line 2054.
+Package pdftex.def Info: figures/usram_dose_sf2_4.png used on input line 2105.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [75 <./figures/lsram_dose_sf2_3.png (PNG copy)> <./figures/usram_dose_sf2_3.pn
-g (PNG copy)>] [76 <./figures/lsram_dose_sf2_4.png (PNG copy)> <./figures/usram
+ [77 <./figures/lsram_dose_sf2_3.png (PNG copy)> <./figures/usram_dose_sf2_3.pn
+g (PNG copy)>] [78 <./figures/lsram_dose_sf2_4.png (PNG copy)> <./figures/usram
 _dose_sf2_4.png (PNG copy)>]
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -1710,7 +1790,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2095  \sigma_{CS} = \sqrt{(\frac{1}{N_{SEU}})²
+l.2146  \sigma_{CS} = \sqrt{(\frac{1}{N_{SEU}})²
                                                 +\sigma_{data}²+\sigma_{pos}...
 
 You need to provide a definition with \DeclareInputText 
@@ -1724,7 +1804,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2095 ...sqrt{(\frac{1}{N_{SEU}})²+\sigma_{data}²
+l.2146 ...sqrt{(\frac{1}{N_{SEU}})²+\sigma_{data}²
                                                   +\sigma_{pos}²+\sigma_{flu}²}
 
 You need to provide a definition with \DeclareInputText 
@@ -1738,7 +1818,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2095 ...{N_{SEU}})²+\sigma_{data}²+\sigma_{pos}²
+l.2146 ...{N_{SEU}})²+\sigma_{data}²+\sigma_{pos}²
                                                   +\sigma_{flu}²}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1751,7 +1831,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2095 ...igma_{data}²+\sigma_{pos}²+\sigma_{flu}²
+l.2146 ...igma_{data}²+\sigma_{pos}²+\sigma_{flu}²
                                                   }
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1764,7 +1844,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2123  device & CS [$cm²
+l.2174  device & CS [$cm²
                          $] & CS per bit [$cm²/bit$] & $\sigma_{CS} [cm²/bit...
 
 You need to provide a definition with \DeclareInputText 
@@ -1778,7 +1858,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2123  device & CS [$cm²$] & CS per bit [$cm²
+l.2174  device & CS [$cm²$] & CS per bit [$cm²
                                               /bit$] & $\sigma_{CS} [cm²/bit...
 
 You need to provide a definition with \DeclareInputText 
@@ -1792,7 +1872,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2123 ... per bit [$cm²/bit$] & $\sigma_{CS} [cm²
+l.2174 ... per bit [$cm²/bit$] & $\sigma_{CS} [cm²
                                                   /bit]$ \\\hline\hline
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1805,7 +1885,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2136 CS_{LSRAM} =  = (3.03 ±
+l.2187 CS_{LSRAM} =  = (3.03 ±
                                0.45) *10^{-14}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1818,12 +1898,12 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2140 CS_{LSRAM} =  = (1.26 ±
+l.2191 CS_{LSRAM} =  = (1.26 ±
                                0.18) *10^{-14}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[77] [78]
+[79] [80]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -1832,7 +1912,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2206 ...ection of $2.3\cdot10^{-10}\centi\meter²
+l.2257 ...ection of $2.3\cdot10^{-10}\centi\meter²
                                                   $. Almost all the PLL erro...
 
 You need to provide a definition with \DeclareInputText 
@@ -1846,7 +1926,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2206 ...section of $6.9\cdot10^{-9}\centi\meter²
+l.2257 ...section of $6.9\cdot10^{-9}\centi\meter²
                                                   $, which is very high.
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1859,7 +1939,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2209 ...hup to be $8.5\cdot10^{-10}\centi\meter²
+l.2260 ...hup to be $8.5\cdot10^{-10}\centi\meter²
                                                   $. But we did a discovery ...
 
 You need to provide a definition with \DeclareInputText 
@@ -1873,13 +1953,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2210 ...ection to $1.7\cdot10^{-10}\centi\meter²
+l.2261 ...ection to $1.7\cdot10^{-10}\centi\meter²
                                                   $, which is a reduction of...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[79]
+[81]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -1888,7 +1968,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2227 ...ults. We got a cross section of $(3.03 ±
+l.2278 ...ults. We got a cross section of $(3.03 ±
                                                    0.45) *10^{-14}\centi\met...
 
 You need to provide a definition with \DeclareInputText 
@@ -1902,7 +1982,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2227 ...of $(3.03 ± 0.45) *10^{-14}\centi\meter²
+l.2278 ...of $(3.03 ± 0.45) *10^{-14}\centi\meter²
                                                   $ on the large SRAM, and $...
 
 You need to provide a definition with \DeclareInputText 
@@ -1916,7 +1996,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2227 ...\meter²$ on the large SRAM, and $(1.26 ±
+l.2278 ...\meter²$ on the large SRAM, and $(1.26 ±
                                                    0.19) *10^{-14}\centi\met...
 
 You need to provide a definition with \DeclareInputText 
@@ -1930,7 +2010,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2227 ...nd $(1.26 ± 0.19) *10^{-14}\centi\meter²
+l.2278 ...nd $(1.26 ± 0.19) *10^{-14}\centi\meter²
                                                   $ for the micro SRAM. Comp...
 
 You need to provide a definition with \DeclareInputText 
@@ -1944,7 +2024,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2227 ...which gave us cross sections of $(4.18 ±
+l.2278 ...which gave us cross sections of $(4.18 ±
                                                    0.73)\cdot10^{-14}\centi\...
 
 You need to provide a definition with \DeclareInputText 
@@ -1958,7 +2038,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2227 ...$(4.18 ± 0.73)\cdot10^{-14}\centi\meter²
+l.2278 ...$(4.18 ± 0.73)\cdot10^{-14}\centi\meter²
                                                   $ for the large SRAM, and ...
 
 You need to provide a definition with \DeclareInputText 
@@ -1972,7 +2052,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2227 ...meter²$ for the large SRAM, and $(9.62 ±
+l.2278 ...meter²$ for the large SRAM, and $(9.62 ±
                                                    1.32)\cdot10^-{15}\centi\...
 
 You need to provide a definition with \DeclareInputText 
@@ -1986,7 +2066,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2227 ...$(9.62 ± 1.32)\cdot10^-{15}\centi\meter²
+l.2278 ...$(9.62 ± 1.32)\cdot10^-{15}\centi\meter²
                                                   $ for the micro SRAM, the ...
 
 You need to provide a definition with \DeclareInputText 
@@ -2000,13 +2080,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2233 ...e area of $2-3\cdot10^{-10}\centi\meter²
+l.2284 ...e area of $2-3\cdot10^{-10}\centi\meter²
                                                   $ when the SF2-chip was ex...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[80]
+[82]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -2015,142 +2095,146 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2235 ... a cross section of $6.09\cdot10{-9} cm²
+l.2286 ... a cross section of $6.09\cdot10{-9} cm²
                                                   $, which is around 25 time...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[81]
+[83]
 Chapter 7.
-[82
+[84
 
 ]
 Appendix A.
-[83
+[85
 
-] [84]
-<figures/1v2_current_dose_sf2_1.png, id=1533, 422.32782pt x 316.18124pt>
+] [86]
+<figures/1v2_current_dose_sf2_1.png, id=1536, 422.32782pt x 316.18124pt>
 File: figures/1v2_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_1.png used on input line 
-2307.
+2358.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/3v3_current_dose_sf2_1.png, id=1534, 422.32782pt x 316.18124pt>
+<figures/3v3_current_dose_sf2_1.png, id=1537, 422.32782pt x 316.18124pt>
 File: figures/3v3_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_1.png used on input line 
-2312.
+2363.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/cycles_dose_sf2_1.png, id=1535, 422.32782pt x 316.18124pt>
+<figures/cycles_dose_sf2_1.png, id=1538, 422.32782pt x 316.18124pt>
 File: figures/cycles_dose_sf2_1.png Graphic file (type png)
 
 <use figures/cycles_dose_sf2_1.png>
-Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2322.
+Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2373.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/cycles_dose_sf2_2.png, id=1536, 422.32782pt x 316.18124pt>
+<figures/cycles_dose_sf2_2.png, id=1539, 422.32782pt x 316.18124pt>
 File: figures/cycles_dose_sf2_2.png Graphic file (type png)
 
 <use figures/cycles_dose_sf2_2.png>
-Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2327.
+Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2378.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/flux_vs_time_1.png, id=1537, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_1.png, id=1540, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_1.png Graphic file (type png)
 
 <use figures/flux_vs_time_1.png>
-Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2335.
+Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2386.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
 
-<figures/flux_vs_time_2.png, id=1538, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_2.png, id=1541, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_2.png Graphic file (type png)
 
 <use figures/flux_vs_time_2.png>
-Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2342.
+Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2393.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
- [85 <./figures/1v2_current_dose_sf2_1.png (PNG copy)> <./figures/3v3_current_d
+ [87 <./figures/1v2_current_dose_sf2_1.png (PNG copy)> <./figures/3v3_current_d
 ose_sf2_1.png (PNG copy)> <./figures/cycles_dose_sf2_1.png (PNG copy)> <./figur
-es/cycles_dose_sf2_2.png (PNG copy)>] [86 <./figures/flux_vs_time_1.png (PNG co
-py)>] [87 <./figures/flux_vs_time_2.png (PNG copy)>] <figures/1v2_current_dose_
-sf2_2.png, id=1556, 422.32782pt x 316.18124pt>
+es/cycles_dose_sf2_2.png (PNG copy)>] [88 <./figures/flux_vs_time_1.png (PNG co
+py)>] [89 <./figures/flux_vs_time_2.png (PNG copy)>] <figures/1v2_current_dose_
+sf2_2.png, id=1559, 422.32782pt x 316.18124pt>
 File: figures/1v2_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_2.png used on input line 
-2358.
+2409.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/3v3_current_dose_sf2_2.png, id=1557, 422.32782pt x 316.18124pt>
+<figures/3v3_current_dose_sf2_2.png, id=1560, 422.32782pt x 316.18124pt>
 File: figures/3v3_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_2.png used on input line 
-2363.
+2414.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/flux_all_3.png, id=1558, 422.32782pt x 316.18124pt>
+<figures/flux_all_3.png, id=1561, 422.32782pt x 316.18124pt>
 File: figures/flux_all_3.png Graphic file (type png)
 
 <use figures/flux_all_3.png>
-Package pdftex.def Info: figures/flux_all_3.png used on input line 2371.
+Package pdftex.def Info: figures/flux_all_3.png used on input line 2422.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
- [88 <./figures/1v2_current_dose_sf2_2.png (PNG copy)> <./figures/3v3_current_d
+ [90 <./figures/1v2_current_dose_sf2_2.png (PNG copy)> <./figures/3v3_current_d
 ose_sf2_2.png (PNG copy)> <./figures/flux_all_3.png (PNG copy)>]
 Appendix B.
-[89
+[91
 
 ]
 \openout2 = `acronyms.aux'.
 
- (./acronyms.tex [90
+ (./acronyms.tex [92
 
 
-]) [91] (./Master_thesis_Inge_Nikolai_Torsvik.lof
-[92
+]) [93] (./Master_thesis_Inge_Nikolai_Torsvik.lof
+[94
 
 
-] [93])
-\tf@lof=\write6
-\openout6 = `Master_thesis_Inge_Nikolai_Torsvik.lof'.
+] [95] [96])
+\tf@lof=\write5
+\openout5 = `Master_thesis_Inge_Nikolai_Torsvik.lof'.
 
- [94] (./Master_thesis_Inge_Nikolai_Torsvik.lot [95
-
-])
-\tf@lot=\write7
-\openout7 = `Master_thesis_Inge_Nikolai_Torsvik.lot'.
-
- [96]
-(./Master_thesis_Inge_Nikolai_Torsvik.bbl [97
+ [97] (./Master_thesis_Inge_Nikolai_Torsvik.lot [98
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2391.
- [98]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2391.
+\tf@lot=\write6
+\openout6 = `Master_thesis_Inge_Nikolai_Torsvik.lot'.
+
+ [99]
+(./Master_thesis_Inge_Nikolai_Torsvik.bbl [100
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2442.
+ [101]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2442.
 
 (./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2391.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2391.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2442.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2442.
 
 Package rerunfilecheck Info: File `Master_thesis_Inge_Nikolai_Torsvik.out' has 
 not changed.
-(rerunfilecheck)             Checksum: 0C5FB33A7208EF6502E1515DA7DB13C6;5323.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2391.
+(rerunfilecheck)             Checksum: A57313202D7890B44C1AB621B5CDF367;5393.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2442.
  ) 
 Here is how much of TeX's memory you used:
- 10985 strings out of 495028
- 164971 string characters out of 6181497
- 258688 words of memory out of 5000000
- 13535 multiletter control sequences out of 15000+600000
- 13900 words of font info for 49 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 36i,12n,38p,1021b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 10615 strings out of 493493
+ 159466 string characters out of 3143797
+ 255782 words of memory out of 3000000
+ 13261 multiletter control sequences out of 15000+200000
+ 13900 words of font info for 49 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 36i,12n,38p,1149b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
@@ -2170,11 +2254,11 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (105 pages, 34518864 b
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (108 pages, 40407958 b
 ytes).
 PDF statistics:
- 1871 PDF objects out of 2073 (max. 8388607)
- 1638 compressed objects within 17 object streams
- 430 named destinations out of 1000 (max. 500000)
- 953 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1888 PDF objects out of 2073 (max. 8388607)
+ 1647 compressed objects within 17 object streams
+ 433 named destinations out of 1000 (max. 500000)
+ 962 words of extra memory for PDF output out of 10000 (max. 10000000)
 

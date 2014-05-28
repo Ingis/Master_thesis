@@ -125,6 +125,22 @@
       note = "\url{http://www.micrel.com/_PDF/mic69300.pdf}"
 }
 
+@misc{website:SN74AVCB164245,
+      author = "Texas Instruments",
+      title = "SN74AVCB164245 - 16-BIT DUAL-SUPPLY BUS TRANSCEIVER WITH CONFIGURABLE VOLTAGE TRANSLATION AND 3-STATE OUTPUTS",
+      Month = "June",
+      year = "2005",
+      note = "\url{http://www.ti.com/lit/ds/symlink/sn74avcb164245.pdf}"
+}
+
+@misc{website:SN74AVC2T245,
+      author = "Texas Instruments",
+      title = "SN74AVC2T245 - DUAL-BIT DUAL-SUPPLY BUS TRANSCEIVER WITH CONFIGURABLE VOLTAGE TRANSLATION AND 3-STATE OUTPUTS ",
+      Month = "May",
+      year = "2012",
+      note = "\url{http://www.ti.com/lit/ds/sces692a/sces692a.pdf}"
+}
+
 @misc{website:NASA,
       author = "NASA",
       title = "Single Event Effect Criticality Analysis",

@@ -34,32 +34,35 @@
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Flowchart for SEU detection\relax }}{40}{figure.caption.62}
 \contentsline {figure}{\numberline {4.19}{\ignorespaces X-Y-Positioning System}}{41}{figure.caption.63}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Out-lay of the OCL\relax }}{43}{figure.caption.64}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Experimental setup seen from above\relax }}{44}{figure.caption.66}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Layout of the beam area at OCL\relax }}{43}{figure.caption.64}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Experimental setup seen from above\relax }}{43}{figure.caption.66}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Picture of the experimental area\relax }}{44}{figure.caption.67}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Layout of the Blue hall\relax }}{47}{figure.caption.70}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Setup in the blue hall. Here the RCU2 is mounted, ready for test\relax }}{48}{figure.caption.71}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Layout of the Blue hall\relax }}{47}{figure.caption.71}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Setup in the blue hall. The RCU2 is mounted, ready to be exposed for radiation\relax }}{48}{figure.caption.72}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Radiation Film}}{56}{figure.caption.74}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces TPS51200 - Current/Voltage vs Dose\relax }}{58}{figure.caption.76}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces MIC69302WU - Current/Voltage vs Dose\relax }}{59}{figure.caption.77}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces SN74AVC2T245 - Current vs Dose\relax }}{59}{figure.caption.78}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces SN74AVC2T245 - Current vs Dose\relax }}{60}{figure.caption.79}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces QS3VH257 - Current vs Dose\relax }}{60}{figure.caption.80}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces SY89831 - Current vs Dose\relax }}{61}{figure.caption.81}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces ADN2814 - Current vs Dose\relax }}{62}{figure.caption.82}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces ADN2814 - Relative errors vs Dose\relax }}{62}{figure.caption.83}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces MAX3748\relax }}{63}{figure.caption.84}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces LSRAM and micro SRAM test results before shutdown\relax }}{66}{figure.caption.88}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{67}{figure.caption.89}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{75}{figure.caption.96}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{76}{figure.caption.97}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Radiation Film}}{57}{figure.caption.75}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces TPS51200 - Current/Voltage vs Dose\relax }}{58}{figure.caption.77}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces MIC69302WU - Current/Voltage vs Dose\relax }}{59}{figure.caption.78}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces SN74AVC2T245 - Current vs Dose\relax }}{60}{figure.caption.79}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Test board1 of SN74AVC2T245\relax }}{60}{figure.caption.80}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Current vs dose for SN74AVC2T245 test board2\relax }}{61}{figure.caption.81}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces QS3VH257 - Current vs Dose\relax }}{61}{figure.caption.82}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces SY89831 - Current vs Dose\relax }}{62}{figure.caption.83}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces ADN2814 - Current vs Dose\relax }}{62}{figure.caption.84}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces ADN2814 - Relative errors vs Dose\relax }}{63}{figure.caption.85}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces MAX3748\relax }}{63}{figure.caption.86}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces INA210 - Current vs Dose\relax }}{64}{figure.caption.87}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces TLV3011 - Current as function of dose\relax }}{64}{figure.caption.88}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces LSRAM and micro SRAM test results before shutdown\relax }}{68}{figure.caption.92}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{69}{figure.caption.93}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{77}{figure.caption.100}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{78}{figure.caption.101}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces SF2 - Cycles vs dose\relax }}{85}{figure.caption.105}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces SF2 - cycles vs dose\relax }}{85}{figure.caption.106}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces flux for components radiated 15.11.2013\relax }}{86}{figure.caption.107}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces flux for components radiated 28.11.2013\relax }}{87}{figure.caption.108}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces SF2 - Current vs dose\relax }}{88}{figure.caption.109}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces flux for components radiated 09.04.2014\relax }}{88}{figure.caption.110}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces SF2 - Cycles vs dose\relax }}{87}{figure.caption.109}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces SF2 - cycles vs dose\relax }}{87}{figure.caption.110}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces flux for components radiated 15.11.2013\relax }}{88}{figure.caption.111}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces flux for components radiated 28.11.2013\relax }}{89}{figure.caption.112}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces SF2 - Current vs dose\relax }}{90}{figure.caption.113}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces flux for components radiated 09.04.2014\relax }}{90}{figure.caption.114}
 \addvspace {10\p@ }

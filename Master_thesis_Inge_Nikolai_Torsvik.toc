@@ -29,15 +29,15 @@
 \contentsline {chapter}{\numberline {4}Preparations for Radiation Testing}{20}{chapter.4}
 \contentsline {section}{\numberline {4.1}Test Methodology}{20}{section.4.1}
 \contentsline {section}{\numberline {4.2}The Tested Components}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}TPS51200}{21}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}MIC69302WU}{22}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}SN74AVCB164245}{23}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}SN74AVC2T245}{25}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}QS3VH257}{26}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}SY89831U}{26}{subsection.4.2.6}
-\contentsline {subsection}{\numberline {4.2.7}ADN2814 and MAX3748}{27}{subsection.4.2.7}
-\contentsline {subsection}{\numberline {4.2.8}INA210}{29}{subsection.4.2.8}
-\contentsline {subsection}{\numberline {4.2.9}TLV3011}{30}{subsection.4.2.9}
+\contentsline {subsection}{\numberline {4.2.1}TPS51200 - Power Regulator}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}MIC69302WU - Power Regulator}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}SN74AVCB164245 - Bus Transceiver}{23}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}SN74AVC2T245 - Bus Transceiver}{25}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}QS3VH257 - Multiplexer/Demultiplexer}{26}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}SY89831U - 1 to 4 fan-out Buffer}{26}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}ADN2814 and MAX3748 - Limiting Amplifiers}{27}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.8}INA210 - Current Shunt Monitor}{29}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.9}TLV3011 - Comparator}{30}{subsection.4.2.9}
 \contentsline {subsection}{\numberline {4.2.10}The Test Boards}{31}{subsection.4.2.10}
 \contentsline {section}{\numberline {4.3}Software}{33}{section.4.3}
 \contentsline {section}{\numberline {4.4}SmartFusion2}{33}{section.4.4}
@@ -53,58 +53,53 @@
 \contentsline {subsection}{\numberline {4.5.2}Scintillator}{41}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}X-Y-positioning System}{41}{subsection.4.5.3}
 \contentsline {chapter}{\numberline {5}Irradiation Test Setup}{42}{chapter.5}
-\contentsline {subsubsection}{\numberline {5.0.3.1}Purpose of Tests}{42}{subsubsection.5.0.3.1}
 \contentsline {section}{\numberline {5.1}Irradiation on \ac {OCL}}{42}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}About OCL}{42}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Experiment Setup and Equipment}{43}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Preparation and characterization of the beam}{45}{subsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.3.1}Beam Setup}{45}{subsubsection.5.1.3.1}
-\contentsline {subsection}{\numberline {5.1.4}What was Tested at OCL}{46}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.1}Experiment Setup and Equipment}{43}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Preparation and characterization of the beam}{45}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}What was Tested at OCL}{46}{subsection.5.1.3}
 \contentsline {section}{\numberline {5.2}Irradiation at \acf {TSL}}{47}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}About TSL}{47}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Beam Setup Procedure}{47}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}What were Tested at \ac {TSL}}{48}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Calculations and Results from Radiation Tests}{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}Calculation of Dose}{49}{section.6.1}
+\contentsline {subsection}{\numberline {5.2.1}Beam Setup Procedure}{47}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}What were Tested at \ac {TSL}}{48}{subsection.5.2.2}
+\contentsline {chapter}{\numberline {6}Calculations and Results from Radiation Tests}{50}{chapter.6}
+\contentsline {section}{\numberline {6.1}Calculation of Dose}{50}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Definitions}{50}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Calculating Dose Using LET}{50}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Calculating Dose Using FLUKA Simulations}{52}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Comparison of LET and FLUKA}{53}{subsection.6.1.4}
-\contentsline {subsubsection}{\numberline {6.1.4.1}Calculations Using LET}{54}{subsubsection.6.1.4.1}
-\contentsline {subsubsection}{\numberline {6.1.4.2}Calculations Using FLUKA Simulations}{54}{subsubsection.6.1.4.2}
-\contentsline {subsubsection}{\numberline {6.1.4.3}Discussion}{54}{subsubsection.6.1.4.3}
-\contentsline {section}{\numberline {6.2}Results from OCL}{55}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Calibration process}{55}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Test Results of the PCBs}{57}{subsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.2.1}TPS51200}{57}{subsubsection.6.2.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2.2}MIC69302WU}{58}{subsubsection.6.2.2.2}
-\contentsline {subsubsection}{\numberline {6.2.2.3}SN74AVCB164245}{59}{subsubsection.6.2.2.3}
-\contentsline {subsubsection}{\numberline {6.2.2.4}SN74AVC2T245}{59}{subsubsection.6.2.2.4}
-\contentsline {subsubsection}{\numberline {6.2.2.5}QS3VH257}{60}{subsubsection.6.2.2.5}
-\contentsline {subsubsection}{\numberline {6.2.2.6}SY89831}{61}{subsubsection.6.2.2.6}
-\contentsline {subsubsection}{\numberline {6.2.2.7}ADN2814}{61}{subsubsection.6.2.2.7}
-\contentsline {subsubsection}{\numberline {6.2.2.8}MAX3748}{63}{subsubsection.6.2.2.8}
-\contentsline {subsubsection}{\numberline {6.2.2.9}Summary of the Results}{63}{subsubsection.6.2.2.9}
-\contentsline {subsubsection}{\numberline {6.2.2.10}Discussion of the Result}{64}{subsubsection.6.2.2.10}
-\contentsline {subsection}{\numberline {6.2.3}Test Results on SF2}{66}{subsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.3.1}SRAM}{66}{subsubsection.6.2.3.1}
-\contentsline {paragraph}{Uncertainties}{67}{section*.90}
-\contentsline {subsubsection}{\numberline {6.2.3.2}Logic Element}{68}{subsubsection.6.2.3.2}
-\contentsline {subsubsection}{\numberline {6.2.3.3}PLL and Latchup}{69}{subsubsection.6.2.3.3}
-\contentsline {subsubsection}{\numberline {6.2.3.4}Discussion on the Results}{71}{subsubsection.6.2.3.4}
-\contentsline {section}{\numberline {6.3}Results from TSL}{72}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}SF2 Radiation Test}{72}{subsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.1.1}PLL and Latchup}{73}{subsubsection.6.3.1.1}
-\contentsline {subsubsection}{\numberline {6.3.1.2}SRAM}{75}{subsubsection.6.3.1.2}
-\contentsline {paragraph}{Cross Section Calculation}{75}{section*.98}
-\contentsline {paragraph}{Uncertainties}{76}{section*.100}
-\contentsline {subsubsection}{\numberline {6.3.1.3}Logic Element}{77}{subsubsection.6.3.1.3}
-\contentsline {subsubsection}{\numberline {6.3.1.4}Programming Limit Test}{78}{subsubsection.6.3.1.4}
-\contentsline {subsection}{\numberline {6.3.2}Other Test at TSL}{78}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Discussion of the Results}{80}{subsection.6.3.3}
-\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{82}{chapter.7}
-\contentsline {chapter}{Appendix \numberline {A}Radiation Results}{83}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Beam setup data}{83}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Radiation Results from OCL}{85}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Radiation Results from TSL}{88}{section.a.A.3}
-\contentsline {chapter}{Appendix \numberline {B}Current measurement board tutorial}{89}{Appendix.a.B}
+\contentsline {subsection}{\numberline {6.1.2}Calculating Dose Using LET}{51}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Calculating Dose Using FLUKA Simulations}{53}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Comparison of LET and FLUKA calculations}{54}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Results from OCL}{56}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Calibration process}{56}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Test Results of the PCBs}{58}{subsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2.1}TPS51200 - Voltage Regulator}{58}{subsubsection.6.2.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2.2}MIC69302WU - Voltage Regulator}{59}{subsubsection.6.2.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2.3}SN74AVCB164245 - Bus Transceiver}{59}{subsubsection.6.2.2.3}
+\contentsline {subsubsection}{\numberline {6.2.2.4}SN74AVC2T245 - Bus Transceiver}{60}{subsubsection.6.2.2.4}
+\contentsline {subsubsection}{\numberline {6.2.2.5}QS3VH257 - multiplexer/demultiplexer}{61}{subsubsection.6.2.2.5}
+\contentsline {subsubsection}{\numberline {6.2.2.6}SY89831 - 1 to 4 fan-out Buffer}{61}{subsubsection.6.2.2.6}
+\contentsline {subsubsection}{\numberline {6.2.2.7}ADN2814 - Limiting Amplifier}{62}{subsubsection.6.2.2.7}
+\contentsline {subsubsection}{\numberline {6.2.2.8}MAX3748 - Limiting Amplifier}{63}{subsubsection.6.2.2.8}
+\contentsline {subsubsection}{\numberline {6.2.2.9}INA210 - Current Shunt Monitor}{65}{subsubsection.6.2.2.9}
+\contentsline {subsubsection}{\numberline {6.2.2.10}TLV3011 - Comparator}{65}{subsubsection.6.2.2.10}
+\contentsline {subsubsection}{\numberline {6.2.2.11}Summary of the Results}{65}{subsubsection.6.2.2.11}
+\contentsline {subsubsection}{\numberline {6.2.2.12}Discussion of the Result}{66}{subsubsection.6.2.2.12}
+\contentsline {subsection}{\numberline {6.2.3}Test Results on SF2}{68}{subsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.3.1}SRAM}{68}{subsubsection.6.2.3.1}
+\contentsline {paragraph}{Uncertainties}{69}{section*.94}
+\contentsline {subsubsection}{\numberline {6.2.3.2}Logic Element}{70}{subsubsection.6.2.3.2}
+\contentsline {subsubsection}{\numberline {6.2.3.3}PLL and Latchup}{71}{subsubsection.6.2.3.3}
+\contentsline {subsubsection}{\numberline {6.2.3.4}Discussion on the Results}{73}{subsubsection.6.2.3.4}
+\contentsline {section}{\numberline {6.3}Results from TSL}{74}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}SF2 Radiation Test}{74}{subsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.1.1}PLL and Latchup}{75}{subsubsection.6.3.1.1}
+\contentsline {subsubsection}{\numberline {6.3.1.2}SRAM}{77}{subsubsection.6.3.1.2}
+\contentsline {paragraph}{Cross Section Calculation}{77}{section*.102}
+\contentsline {paragraph}{Uncertainties}{78}{section*.104}
+\contentsline {subsubsection}{\numberline {6.3.1.3}Logic Element}{79}{subsubsection.6.3.1.3}
+\contentsline {subsubsection}{\numberline {6.3.1.4}Programming Limit Test}{80}{subsubsection.6.3.1.4}
+\contentsline {subsection}{\numberline {6.3.2}Other Test at TSL}{80}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Discussion of the Results}{82}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{84}{chapter.7}
+\contentsline {chapter}{Appendix \numberline {A}Radiation Results}{85}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Beam setup data}{85}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Radiation Results from OCL}{87}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Radiation Results from TSL}{90}{section.a.A.3}
+\contentsline {chapter}{Appendix \numberline {B}Current measurement board tutorial}{91}{Appendix.a.B}

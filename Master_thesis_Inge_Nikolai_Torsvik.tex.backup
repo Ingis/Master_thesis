@@ -479,7 +479,7 @@ These effects can happen in any moment, and their probability is expressed in te
 These effects have been an increasing problem as the manufacture processes are getting smaller and smaller, and thereof making circuits more weak for radiation.
 In the following sections the three most known \ac{SEE} will be looked into. These are \acf{SEL}, \acf{SET} and \acf{SEU}.
 
-\footnotetext{Cross section the probability that an incoming particle will induce an error in the form of a bit flip or a \ac{SEU}}
+\footnotetext{Cross section is the probability that an incoming particle will induce a single event effect, and is expressed in $\centi\meter^2$}
 \subsubsection{Single Event Latchup SEL} 
 A \acf{SEL} is a phenomenon where a low resistance path between power and ground is formed, causing large current to flow. Normally latches will cause burned interconnections, which means reduced performance or destruction of the chip. \ac{SEL} can be discovered by measuring current of a chip, and can be seen as large jumps in current. The only way to counter a latchup is by turning power off, and that is before the high current will burn interconnections and permanently set the chip out of function.
 
@@ -616,7 +616,7 @@ The analog outputs have a limit of 5 $\milli\ampere$, but some of the components
 More information on the DAQs can be seen in the reference \cite{website:DAQ}.
 
 \section{The Tested Components}
-\subsection{TPS51200}
+\subsection{TPS51200 - Power Regulator}
 \label{TPS_explanation}
 TPS51200 is an adjustable power regulator from Texas Instruments. It is specially designed for DDR RAM, it can be used for DDR, DDR2, DDR3 and DDR4 applications.
 On the RCU2, this is going to be used to supply a DDR3 RAM with 0.75 V.
@@ -634,7 +634,7 @@ Under radiation test an input voltage of 3.3 V was used to supply the component,
 \end{figure}
 \FloatBarrier
 
-\subsection{MIC69302WU}
+\subsection{MIC69302WU - Power Regulator}
 \label{MIC_explanation}
 MIC69302WU is an ultra-low dropout\footnote{Low dropout means that voltage on the output can be close up to the input. For MIC69302WU low dropout means that $V_{IN}$ - $V_{OUT}$ can be as low as 500 $\milli\volt$} adjustable power regulator from Micrel Incorporation. It is a high current, low voltage regulator, and can deliver a current of up to 3 A.
 On the RCU2 this is going to be used to regulate a 3.3 V power signal down to 1.2 V, which is used to power the SF2 SoC FPGA.
@@ -660,7 +660,7 @@ It was used to to supply SY89831U, ADN2814 and MAX3748 during test, since they r
 \end{figure}
 \FloatBarrier
 
-\subsection{SN74AVCB164245}
+\subsection{SN74AVCB164245 - Bus Transceiver}
 SN74AVCB164245 is a 16-bit noninverting bus transceiver, with configurable input and output voltage. It is used for level shifting of digital signals.
 % An application example could be to convert a 16-bit digital signal of 2.5 V to a 16-bit digital signal of 3.3 V.
 The input and output high values can be set to anything between 1.4 and 3.6 V, and the low value is set to GND (0 V).
@@ -669,7 +669,7 @@ On the RCU2 this is going to be used for level shifting of a 16-bit digital sign
 
 Since this component have so many input signals a small amount of current may go in to the input signals. Therefore to make sure that the component didn't use unmeasured current through the inputs of the chip, a pMOS transistor that was connected as seen in \autoref{SN74AVCB164245_sch}, and a pull up resistor was added to the design. When the IN signal is low the PMOS transistor will be open, pulling the input signals to ground. When IN is high, the PMOS transistor is closed, which means that the the input signals will be pulled up to 3.3 V from the supply signal. 
 
-Under radiation test of SN74AVCB164245, the same 3.3 V signal was used to supply both VCCA and VCCB, see \autoref{SN74AVCB164245_sch}, which means that there is no level shifting from the inputs to the outputs, but that isn't necessary for test purposes. The voltage over resistor R1, see figure \autoref{SN74AVCB164245_sch}, was measured and used to calculate current consumption, and the outputs were measured digitally by USB-6008. The input signal IN was switching back and forth from on to off every 4 seconds.
+Under radiation test of SN74AVCB164245, the same 3.3 V signal was used to supply both VCCA and VCCB, see \autoref{SN74AVCB164245_sch}, which means that there is no level shifting from the inputs to the outputs, but that isn't necessary for test purposes. The voltage over resistor R1, see figure \autoref{SN74AVCB164245_sch}, was measured and used to calculate current consumption, and the outputs were measured digitally by USB-6501. The input signal IN was switching back and forth from on to off every 4 seconds.
 % The first version of this board didn't work. The output didn't change according to the input. We found out that this was because there were no load on the outputs.
 % So a output resistor was added to each of the outputs to make a load, and then it worked. 	
 
@@ -681,14 +681,14 @@ Under radiation test of SN74AVCB164245, the same 3.3 V signal was used to supply
 \end{figure}
 \FloatBarrier
 
-\subsection{SN74AVC2T245}
+\subsection{SN74AVC2T245 - Bus Transceiver}
 SN74AVC2T245 is a dual-bit noninverting bus transceiver, with configurable voltage. It has the same function as SN74AVCB164245, but it only have two inputs and outputs.
 The input and output high values can be set to anything between 1.4 and 3.6 V, and the low value is set to GND (0 V).
 The direction of the signals are decided by DIR1 and DIR2, see \autoref{SN74AVC2T245_sch} and \cite{website:SN74AVC2T245}.
 On the RCU2 board, this is planned to be used for level shifting of a 2.5 V \ac{SPI} signal to 3.3 V.
 
 Under radiation test of SN74AVCB164245 a 3.3 V supply voltage was used for both VCCA and VCCB, see \autoref{SN74AVC2T245_sch}.
-The voltage over resistor R1, was measured and used to calculate current consumption, and the output signals were measured digitally by USB-6008.
+The voltage over resistor R1, was measured and used to calculate current consumption, and the output signals were measured digitally by USB-6501.
 The input signal IN was switching back and forth from on to off every 4 seconds.
 % The first version made was missing output load, and wouldn't work. By adding a resistor as load, it started working.
 
@@ -700,12 +700,12 @@ The input signal IN was switching back and forth from on to off every 4 seconds.
 \end{figure}
 \FloatBarrier
 
-\subsection{QS3VH257}
+\subsection{QS3VH257 - Multiplexer/Demultiplexer}
 This component consist of four 2 to 1 multiplexers/demultiplexers. It has high bandwidth, up to 500 MHz, low ON resistance and high OFF resistance.
 % On the RCU2 this is going to be used to switch between two \acf{JTAG} connection.
 
 Under radiation test, the supply voltage was set to 3.3 V. Voltage over resistor R1, see \autoref{SN74AVC2T245_sch}, was measured and used to calculate current consumption.
-For the Select input an analog output signal was used, switching back and forth from 0 V and 3.3 V every 4 seconds. The input and output signals were set and measured by USB-6008.
+For the Select input an analog output signal was used, switching back and forth from 0 V and 3.3 V every 4 seconds. The input and output signals were set and measured by USB-6501.
 
 \begin{figure}[!htbp]
   \centering
@@ -715,14 +715,14 @@ For the Select input an analog output signal was used, switching back and forth 
 \end{figure}
 \FloatBarrier
 
-\subsection{SY89831U}
+\subsection{SY89831U - 1 to 4 fan-out Buffer}
 SY89831U is a high speed, 2$\giga\hertz$ differential LVPECL\footnote{LVPECL (Low Voltage Positive Emitter Coupled Logic) is a differential signaling system, and are mainly used in high speed and clock distribution circuits. The input/output voltages have a small swing (0.8 V), the input impedance is high and the output resistance is low. As a result, the transistors change states quickly, gate delays are low, and the fan-out capability is high.} 1 to 4 fan-out buffer optimized for ultra-low skew applications.
 % Used on the RCU2 to produce 4 clock signal out of 1.
 
 The input signal to this component is differential. The USB-DAQ devices which are being used doesn't have a differential output signal. Therefore two single-ended outputs were used to make a differential signal. The two single-ended output were set to be opposite of the other, switching back and forth from 0 V to 3.3 V every 4 seconds, which results in a differential signal. 
 
 For the radiation test the modified \ac{PCB} version of the MIC69302WU, see \autoref{MIC_explanation}, was used to supply this component, since it requires a current higher then the analog output from the USB-DAQ can deliver, typically around 60 $\milli\ampere$.
-Current consumption was measured over the input resistor of the MIC69302WU \ac{PCB} and the outputs were measured by the analog inputs of USB-6501.
+Current consumption was measured over the input resistor of the MIC69302WU \ac{PCB} and the outputs were measured by the analog inputs of USB-6008.
 
 \begin{figure}[!htbp]
   \centering
@@ -732,7 +732,7 @@ Current consumption was measured over the input resistor of the MIC69302WU \ac{P
 \end{figure}
 \FloatBarrier
 
-\subsection{ADN2814 and MAX3748}
+\subsection{ADN2814 and MAX3748 - Limiting Amplifiers}
 \label{limiting_amp}
 These two components are used for the same purpose, and the one of these that performs best will be chosen to be used on the RCU2.
 ADN2814 is a clock and data recovery component with integrated limiting amplifier. It works in rates of 10 Mb/s to 675 Mb/s, and gives output data in \acf{LVDS}\footnotemark[3] format.
@@ -863,8 +863,8 @@ It is important to know how well the SRAM function in high radiation areas, so w
 The SRAM blocks on the SF2 are divided up into 72 micro SRAM blocks with a size of 64 x 18 bits, and 69 Large SRAM blocks with a size of 1024 x 18 bits.
 Both micro SRAM blocks and large SRAM blocks are so called two ports SRAM, which means that we can access two addresses at the same time.
 
-To test the SF2 SRAM memory a VHDL code was made, which in short writes a known pattern to all addresses and constantly checks if the values changes. If they do a counter will be incremented for every upset detected.
-The test process is made in a 3-state state machine, which can be seen in block diagram in figure \ref{SRAM_flow_chart}.
+To test the SF2 SRAM memory a test code is written in the SF2 FPGA. In short the code writes a known pattern to all addresses and constantly checks if the values changes. If they do a counter will be incremented for every upset detected.
+The test process is performed in a state machine with 3 states, see block diagram in \autoref{SRAM_flow_chart}.
 The first state is a reset state, where all values are set to its nominal value.
 That means all counters are set to '0', write address is set to '0', read address set to '1', and write data is set to ``1010...1010''.
 Read address is always set to be one higher then the write address.
@@ -999,21 +999,21 @@ After the read, a new value is then written back to the address and the system m
   \label{flowchart}
 \end{figure}
 
-The SRAM radiation detector also has an edge detector, which are able to detect rising edges of a signal. This is used as a scintillator counter.
+The SRAM radiation detector also has an edge detector, which is able to detect rising edges of a signal. This is used as a scintillator counter.
 
 \FloatBarrier
 
 \subsection{Scintillator}
 A scintillator is a material that emits light when exposed to ionizing radiation \cite{rad_phys}.
-A scintillator can be used as a standalone equipment, but then only to detect that there are radiation, by seeing that it lights up.
-To get a more accurate measurement, we will need a PhotoMultiplier Tube (PM-tube), which has the ability to concerts light pulses to current pulses by an electron avalanche process. The current pulses can be detected by an edge counter, which count every falling or rising edge of a signal.
+A scintillator can be used as a standalone equipment, but then only to detect that there is radiation, by seeing that it lights up.
+To get a more accurate measurement, we will need a PhotoMultiplier Tube (PM-tube), which has the ability to concert light pulses to current pulses by an electron avalanche process. The current pulses can be detected by an edge counter, which count every falling or rising edge of a signal.
 
-The Scintillator with its PM-tube will be used to measure relative radiation. There are a close to linear relation between scintillator counts and SEUs on the SRAM radiation detector. When we do the beam setup before radiation, as discussed in \ref{beam_setup}, we will find this relation. Under radiation of test boards, we use this relation to calculate or way back to SEUs, so that we can calculate the fluence.
+The Scintillator with its PM-tube will be used to measure relative radiation. There are a close to linear relation between scintillator counts and SEUs on the SRAM radiation detector. When we do the beam setup before radiation, as discussed in \autoref{beam_setup}, we will find this relation. Under radiation of test boards, we use this relation to calculate or way back to SEUs, so that we can calculate the fluence for a given test.
 
 \FloatBarrier
 
 \subsection{X-Y-positioning System}
-The X-Y-positioning system is a displacement system where PCBs can be mounted and be moved up, down and sideways in a small area controlled by a computer. Communication is done through a serial port and a LabVIEW program is used to control the system.
+The X-Y-positioning system is a displacement system where PCBs can be mounted and be moved up, down and sideways in a small area controlled by a computer. Communication is made through a serial port, and a LabVIEW program is used to control the system.
 
 This was used when doing the beam profile as discussed in chapter \ref{beam_setup}. In figure \ref{xy-table} you can see a picture of the front and back of the X-Y-positioning system with the SRAM radiation detector mounted.
 
@@ -1036,32 +1036,30 @@ This was used when doing the beam profile as discussed in chapter \ref{beam_setu
 
 
 \chapter{Irradiation Test Setup}
-Irradiation tests for the RCU2 electronics which was discussed in the previous chapter, was executed at two facilities, these are \acf{OCL} and \acf{TSL}.
-This chapter will give a brief introduction to the two facilities, and explain how the preparation process was for each of the two facilities.
+Irradiation tests for the RCU2 electronics  were executed at two facilities: \acf{OCL} and \acf{TSL}.
+This chapter will give a brief introduction to the two facilities, and explain the preparation process for each of the two them.
 
-\subsubsection{Purpose of Tests}
-The purpose of testing the RCU2 electronics for radiation is to see if the tested component are able to survive in a radiation hard environment as we will find in the \ac{TPC}, see section \ref{how_to_test}.
-To test the limit for each of the components, the components was irradiated until an error was detected, current consumption drastically increased or the component received a much higher dose than was required without any error.
+The purpose of testing the RCU2 electronics for radiation is to see if the tested components are able to survive in a radiation hard environment as we will find in the \ac{TPC}, see section \ref{how_to_test}.
+To test the limit for each of the components, the components was irradiated until an error was detected, current consumption drastically increased or the components received a much higher dose than were required without any error.
 
 \section{Irradiation on \ac{OCL}}
-\subsection{About OCL}
 Oslo Cyclotron Laboratory is located at the Department of physics at the University of Oslo, and was opened in 1978. The cyclotron is of the type MC-35 and was made by Scanditronix AB from Sweden.
 This is the only accelerator in Norway for ionized particles used in basic research.
 The cyclotron can accelerate protons, deuteron, $^3He$ and $^4He$, 
 with energies and intensities as seen in the table \ref{design requirements} below.
 A drawing of the lab can be seen in figure \ref{OCL_fig}. 
-The laboratory is divided in tree; the control room, the inner experimental hall and the outer experimental hall.
+The laboratory is divided in three; the control room, the inner experimental hall and the outer experimental hall.
 The cyclotron is placed in the inner hall, and a beam is sent through pipes to the outer hall.
 Inside the cyclotron and the pipes there is vacuum, so that the particle should not suffer energy loss from collision with air molecules.
-With magnet you are able to regulate the beam to your desired pipe exit.
+With magnets it is possible to regulate the beam to your desired pipe exit.
 There are also several cups put on the pipeline which makes it possible to block the beam.
-These can be used to stop the beam during an experiment, so you are able to go into the experimental area and do changes on your setup.
+These can be used to stop the beam during an experiment, so that it is possible to go into the experimental area and do changes on your setup.
 When the cyclotron is running and the beam is on, you are not allowed to enter the inner experimental area.
  
 \begin{figure}[!htbp]
 \centering
 \centerline{\includegraphics[height=7cm,width=8cm]{figures/OCL}}
-\caption{Out-lay of the OCL}
+\caption{Layout of the beam area at OCL}
 \label{OCL_fig}
 \end{figure}
 
@@ -1082,9 +1080,7 @@ $^4He$  & 8-35 & 50 \\ \hline
 \subsection{Experiment Setup and Equipment}
 
 The experiment setup was placed in the outer experimental hall in experimental area 2. The experimental setup as well as the equipment used can be found in the figure and table below.
-The equipment was kept in close to the same height around 140-150cm. Beam exit was in a height of 141.5cm.
-
-  \vspace{5mm}
+The equipment was kept in a height of 140-150cm. Beam exit was in a height of 141.5cm.
   
 \begin{figure}[!htbp]
 \centering
@@ -1092,8 +1088,6 @@ The equipment was kept in close to the same height around 140-150cm. Beam exit w
   \caption{Experimental setup seen from above}
   \label{experiment_setup}
 \end{figure}%
-
-  \vspace{5mm}   
   
 \begin{figure}[!htbp]
   \centering
@@ -1108,7 +1102,7 @@ The equipment was kept in close to the same height around 140-150cm. Beam exit w
  \centering
 \begin{tabular}{|l|p{10cm}|}\hline
 Equipment & Explanation  \\ \hline \hline
-Scintillator & A plastic scintillator with photomultiplier. Was used to measure relative radiation. We had two of these, one that was placed right under \acf{DUT} and one that was placed 75cm away from \ac{DUT}. \\ \hline
+Scintillator & A plastic scintillator with photomultiplier. Was used to measure relative radiation. We had two of these, one that was placed directly under \acf{DUT} and one that was placed 75cm away from \ac{DUT}. \\ \hline
 High voltage regulator & Voltage for the photomultiplier. 800V was used. \\ \hline
 The test boards &  TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831U, ADN2814, MAX3748, INA210, TLV3011 and SF2 starter-kit. \\ \hline 
 SRAM radiation detector  & A PCB board with 4 \ac{SRAM} cells that was used to characterize the beam and to measure scintillator counts \\ \hline
@@ -1118,89 +1112,94 @@ USB DAQ  & Data acquisition board form National Instruments (NI). Used to establ
 Radiation film  & A film that reacts when irradiated. Used to identify the beam. \\ \hline
 leveled laser  & Was used to pinpoint the center of the beam.\\ \hline
 Mirror & Used to reflect the laser beam to the backside of the test boards.\\ \hline
-XY-positioning system  & Connected to the computer so we can change the position of the test boards from a computer \\ \hline
+XY-positioning system  & Connected to the computer so that we could change the position of the test boards from a computer \\ \hline
 \end{tabular}
 \caption{Equipment used in the experiment}
 \label{equipment}
 \end{table}
 
 \subsection{Preparation and characterization of the beam}
-Before we could start testing of the \ac{PCB}, the cyclotron had to be made ready for a proton beam and the magnet controlling the direction had to be put in the right position to get the beam out in experiment area 2.
-
-
-
-\subsubsection{Beam Setup}
-  \label{beam_setup}
-When the beam was ready and we could start with our tests, we had to start with the characterization of the beam, to see that it hits around the area that we expect.
+\label{beam_setup}
+The first thing to do before we could start our radiation test is to characterize the beam, to see that it hit around the area that we expected.
 This was done by using radiation films that turns black when exposed to radiation. 
-One of these was placed right in front of the beam exit and one in front of \acf{DUT} area. This was done to see how the beam spread out, and to get a feeling of where the beam center was.
-Afterwards a more precise calibration was done by the use of the SRAM radiation detector and the scintillator. 
-By measuring the relation between scintillator counts on the scintillator which was in a locked position and SEU on the \ac{SRAM} that was connected to the XY-position system (which made the \ac{SRAM} freely to move), we were able to find a more precise position of the beam center by seeing which position gave us the highest number of SEUs compared to scintillator counts.
-When the beam center is found and everything works as it should, the laser was placed in a position so that the laser beam points to where we had found center of the beam to be. After that we could replace the \ac{SRAM} board with the PCB that we were going to test. This had to be done every day at startup, before we could start the actual tests.
+One of these was placed directly in front of the beam exit and one in front of \acf{DUT} area. This was done to see how the beam spread out, and to get a indication of where the beam center was.
+Afterwards a more precise calibration was performed by the use of the SRAM radiation detector and the scintillator. 
+By measuring the relation between scintillator counts on the scintillator which was in a locked position and SEU on the \ac{SRAM} that was connected to the XY-position system (which made the \ac{SRAM} freely to move), we were able to find a more precise position of the beam center by observing which position gave us the highest number of SEUs compared to scintillator counts.
+When the beam center was found and everything worked as it should, the laser was placed in a position so that the laser beam pointed to where we had found center of the beam to be. Thereafter we could replace the \ac{SRAM} board with the PCB that we were going to test. This had to be done every day at startup, before we could start the actual tests.
 
-We were able to control the intensity (Current) of the beam freely from the control room inside the limitation of the beam (for protons that is up to 100 $\micro\ampere$), but we kept us in the area between 100 $\pico\ampere$ to a few $\nano\ampere$. This way the radiation dose to the test boards can be controlled. The beam intensity could be measured by putting a Faraday Cup (FC)in front of the beam, which was connected to a high accuracy multimeter. The FC had to be removed when tests were running, since it will block the beam.
+We were able to control the intensity (Current) of the beam freely from the control room inside the limitation of the beam (for protons that is up to 100 $\micro\ampere$), but we kept us in the area between 100 $\pico\ampere$ to a few $\nano\ampere$. This way the radiation dose to the test boards could be controlled. The beam intensity could be measured by putting a Faraday Cup (FC)in front of the beam, which was connected to a high accuracy multimeter. The FC had to be removed when tests were running, since it would block the beam.
 
 We were running up to 3 LabVIEW programs through the experiment, one for controlling the XY-position system,
 one for the \ac{SRAM} board (to measure SEU and scintillator counts when calibrating and to get scintillator counts during the tests) and one program for each of the test boards.
 The \ac{SRAM} and test board programs were constantly saving data on the disk.
 
 \subsection{What was Tested at OCL}
-We had beam time in three periods at OCL, which is $13.11.13-15.11.13$, $28.11.13-29.11.13$ and $08.04.14-11.04.14$.
-The boards that where tested the first period are: $TPS51200_1$, $MIC69302WU_1$, $SN74AVCB164245_1$, $SN74AVC2T245_1$, $QS3VH257_1$ and $SY89831U_1$, tested in that order.
-The second period we tested: $ADN2814$, $MAX3748$, $SY89831U_2$, $TPS51200_2$, $MIC69302WU_2$, $SN74AVCB164245_2$, $SN74AVC2T245_2$ and $QS3VH257_2$, in that order.
-And the third period, the focus was mainly the \ac{SF2} starter-kit, but $INA210_1, INA210_2, TLV3011_1 and TLV3011_2$ was also tested.
+We had beam time in three periods at OCL; $13.11.13-15.11.13$, $28.11.13-29.11.13$ and $08.04.14-11.04.14$. What were tested in the respectively periods, can be seen in \autoref{test_ocl}.
+% The boards that were tested in the first period are: $TPS51200_1$, $MIC69302WU_1$, $SN74AVCB164245_1$, $SN74AVC2T245_1$, $QS3VH257_1$ and $SY89831U_1$, tested in that order.
+% In the second period we tested: $ADN2814$, $MAX3748$, $SY89831U_2$, $TPS51200_2$, $MIC69302WU_2$, $SN74AVCB164245_2$, $SN74AVC2T245_2$ and $QS3VH257_2$, in that order.
+% And in the third period, the focus was mainly on the \ac{SF2} starter-kit, but $INA210_1$, $INA210_2$, $TLV3011_1$ and $TLV3011_2$ were also tested.
+\begin{table}
+ \centering
+ \begin{tabular}{|l|p{10cm}|} \hline
+ Test period & Tested boards \\ \hline \hline
+ $13.11.13-15.11.13$ & $TPS51200_1$, $MIC69302WU_1$, $SN74AVCB164245_1$, $SN74AVC2T245_1$, $QS3VH257_1$ and $SY89831U_1$ \\ \hline
+ $28.11.13-29.11.13$ & $ADN2814$, $MAX3748$, $SY89831U_2$, $TPS51200_2$, $MIC69302WU_2$, $SN74AVCB164245_2$, $SN74AVC2T245_2$ and $QS3VH257_2$ \\ \hline
+ $08.04.14-11.04.14$ & $INA210_1$, $INA210_2$, $TLV3011_1$, $TLV3011_2$ and SF2 M2S050ES-T-FG896\\ \hline
+ \end{tabular}
+ \caption{Overview of the tested components at OCL}
+ \label{test_ocl}
+\end{table}
 
 \newpage
 
-\section{Irradiation at \acf{TSL}}
-The main difference between \ac{OCL} and TSL is that TSL are able to produce beam of much higher energies. TSL is a much more professional facility, in the way that there are more people working there ready to help, and we don't need any calibration before we can start radiation test. We can simply show up and expose what we want to expose, and data like fluence and exposed time, are given to use, making it easy for us to calculate the dose and flux. 
+\section{Irradiation at \acf{TSL}}|
+The main difference between \ac{OCL} and TSL is that TSL is able to produce a beam of much higher energies. TSL is a much more professional facility, meaning that there are more people working there available for assistance, and there is no need for any calibration before starting a radiation test. We can simply show up and expose what we want to expose, and data, like fluence and exposed time, are given to use, making it easy for us to calculate the dose and flux. 
 
-\subsection{About TSL}
 TSL is an accelerator facility belonging to University of Uppsala in Sweden, \cite{website:TSL}.
-It is manly used for proton therapy on cancer patient by Uppsala University Hospital, but it is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be produced are everything from protons to highly charged xenon ions.
-There are several extraction points from the cyclotron, which is controlled from the \emph{control room}. The beam can be lead out into the \emph{blue hall}, which is the experiment area used for electronics testing. Here there are two user areas, one for protons, and one for neutrons and heavier ions, see figure \ref{Blue_hall}.
+It is mainly used for proton therapy on cancer patients by Uppsala University Hospital, but it is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be produced are everything from protons to highly charged xenon ions.
+There are several extraction points from the cyclotron, which are controlled from the \emph{control room}. The beam can be lead out into the \emph{blue hall}, which is the experiment area used for electronics testing. The Blue hall has two user areas; one for protons, and one for neutrons and heavier ions, see \autoref{Blue_hall}.
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.5\textwidth, angle =-2.5]{figures/Blue_hall}
+  \includegraphics[width=0.7\textwidth, angle =-2.5]{figures/Blue_hall}
   \caption{Layout of the Blue hall}
   \label{Blue_hall}
 \end{figure}
 
 \subsection{Beam Setup Procedure}
-At TSL we didn't have to get a beam characterization as we did at \ac{OCL}. In the Blue hall there is a permanently setup with detectors and a well-defined beam line. We only needed to set up our test equipment, put the test board at a given extraction point, and start the test. The center of the beam was found by lasers places in looked positions around the hall, one for horizontal direction and one for vertical direction. The head of the laser was movable, so we could point the laser beams towards our test board. A computer which was remotely controlled through network connection was placed in the hall.
-This computer was used as a connection point to our test boards. We sat in a room called \emph{counting room}, where we could turn the beam on and off as we desired. There were also a machine in the counting room, which was connected to detectors in the blue hall telling us the fluence (number of protons per $\centi\meter²$ in total) and exposed time. The fluence can be used to calculate the flux and dose. The energy of the proton beam we got was 170 MeV.
+At TSL we didn't have to get a beam characterization as we did at \ac{OCL}. In the Blue hall there is a permanently setup with detectors and a well-defined beam line. We only needed to set up our test equipment, put the test board at a given extraction point, and start the test. The center of the beam was found by lasers placed in locked positions around the hall, one for horizontal direction and one for vertical direction. The head of the laser was movable, so we could point the laser beams towards our test board. A computer which was remotely controlled through network connection was placed in the hall.
+This computer was used as a connection point to our test boards. We sat in a room called \emph{counting room}, where we could turn the beam on and off as we desired. There was also a machine in the counting room that was connected to detectors in the blue hall, telling us the fluence (number of protons per $\centi\meter²$ in total) and exposed time. The fluence can be used to calculate the flux and dose. The energy of the proton beam we got was 170 MeV.
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/TSL_setup}
-  \caption{Setup in the blue hall. Here the RCU2 is mounted, ready for test}
+  \includegraphics[width=0.7\textwidth]{figures/TSL_setup}
+  \caption{Setup in the blue hall. The RCU2 is mounted, ready to be exposed for radiation}
   \label{TSL_setup}
 \end{figure}
 
 \subsection{What were Tested at \ac{TSL}}
-A week before we arrived at TSL, we got the first two prototypes of the RCU2. That means that we had a limited time to make test code for all of the different parts of the board. 
+A week before we arrived at TSL, we got the first two prototypes of the RCU2. That means that we had limited time to make tests for all of the different parts of the board. 
 
-The focus of the visit to TSL was the SF2 SoC FPGA, but we also tested an optical receiver and an optical data link, which respectively are being used for TTC (timing, trigger and control) and to send data out from the RCU2.
-We brought with us two RCU2s and a total of 7 starter-kits, where 3 of these were with a smaller package, M2S050-FG484, and the rest was engineering samples versions of M2S050-FG896, which is the one used on RCU2.
-For the test discussed in section \ref{SF2_section}, we only used the SF2 starter-kits to test, since the test only involves internal parts of the SF2 SoC FPGA. Two of the starter-kits with the smaller package (M2S050-FG484) were tested, and one with engineering sample (M2S050ES-T-FG896). When the RCU2 cards was irradiation, things like SERDES (data link), trigger, clock and data recovery (CDR) and PLL was tested, which will not be discussed thoroughly in this work, but a short summary will be given. Current was measured on both the SF2 starter-kits and RCU2 boards when they were irradiated to check for latchup.
+The focus of the visit to TSL was the SF2 SoC FPGA, but we also tested an optical receiver and an optical data link, which respectively are being used for TTC (timing, trigger and control) and to send data from the RCU2.
+We brought with us two RCU2s and a total of 7 starter-kits, where 3 of these had a smaller package of SF2, M2S050-FG484, and the rest were engineering samples versions of M2S050-FG896, which is the one used on RCU2.
+For the tests as discussed in \autoref{SF2_section}, we only used the SF2 starter-kits, since the test only involves internal parts of the SF2 SoC FPGA. Two of the starter-kits with the smaller package (M2S050-FG484) were tested, and one with engineering sample (M2S050ES-T-FG896). When the RCU2 cards were exposed to radiation, things like detector data link (DDL), trigger, clock and data recovery (CDR) and PLL were tested, which will not be discussed thoroughly in this work, but a short summary will be given. Current was measured on the SF2 starter-kits and the RCU2 boards when they were irradiated to check for latchup.
 
 
 \chapter{Calculations and Results from Radiation Tests}
-\emph{This chapter will explain how the collected data after irradiation test at \ac{OCL} were used to calculate flux and dose, and results from irradiation tests at \ac{OCL} and \ac{TSL} will be presented.}
+\emph{This chapter will explain how the collected data after radiation tests were used to calculate flux and dose, and results from radiation tests at \ac{OCL} and \ac{TSL} will be presented and discussed.}
 
 After an irradiation test at \ac{OCL}, the collected data consist of the exposed time, scintillator counts, current consumption and output data of the \ac{DUT}.
-From the calibration before radiation test, we got the relation between scintillator counts and \ac{SEU} on the SRAM radiation detector. From earlier tests with the SRAM radiation detector the cross section for an incoming proton to induce a \ac{SEU} is known. These data is used to calculate our way to the received dose for each of the different component. The next section will explain the calculation process.
+From the calibration before radiation test, we got the relation between scintillator counts and \ac{SEU} on the SRAM radiation detector. From earlier tests with the SRAM radiation detector the cross section for an incoming proton to induce a \ac{SEU} is known. These data are used to calculate the received dose for each of the different components. The next section will explain the calculation process.
 
 % \ac{TSL} is a facility which sells beam time for a living. So all data after a radiation was given to us, and we didn't need to do any beam monitoring ourself. We only needed to mount the test board that we wanted to test in test spot, and all data like fluence and dose where received from the facility. At \ac{OCL} however, we had to do the hole monitor process and calculate everything ourself, and required therefore much more time before and after radiation. The next sections will explain the calculation process after radiation at \ac{OCL}.
 
 \section{Calculation of Dose}
-Two ways to calculate dose will be discussed in this section, which are manually using energy loss and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this section.
+Two ways to calculate the dose will be discussed in this section; manually using energy loss and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this section.
 
 \subsection{Definitions}
 \label{difinitions}
 Absorbed radiation dose has the unit of energy/mass and the SI-unit is gray (Gy), which is 1 Joule of energy absorbed in a kilogram of matter [J/Kg], see equation \ref{Joule_kg}.
-Another unit which is often used when it comes to radiation of electronics is Rad, which is short for "Radiation absorbed dose".
+Another unit which is often used when it comes to radiation of electronics is Rad, short for "Radiation absorbed dose".
 The relation between Rad and Gy can be seen in equation \ref{Gy_to_Rad}.
 
 \begin{equation}
@@ -1223,15 +1222,15 @@ The particle energy is normally expressed in electronvolt ($\electronvolt$) or M
 \subsection{Calculating Dose Using LET}
 \label{using_LET}
 % When using \ac{LET} to calculate the dose, we are looking at the total energy that is deposited in a component.
-As explained in section \ref{LET_section}, \ac{LET} is energy deposited in a material through ionization when a particle crosses the material.
+As explained in \autoref{LET_section}, \ac{LET} is energy deposited in a material through ionization when a particle crosses the material.
 % To calculate this energy, we need to know the thickness, density and area of the material, which particle that enters the material and its energy.
 \ac{LET} is equal the energy loss a particle suffer by crossing a material, which means that we can use the Bethe Bloch formula that is expressed in equation \ref{stopping_power}.
-By looking at total \ac{LET} for an component, we are able to calculate our way to the dose.
+By looking at total \ac{LET} for an component while knowing the fluence, the dose can be  calculated, see \autoref{Dose_rad}.
 The energy loss of a particle is highly energy dependent, but for short distances it can be assumed to be constant without getting too much error.
 
-Two energies was used when exposing components at \ac{OCL}, The first time we had a proton beam with an energy of 28 MeV, the two other times we had a beam of 25 MeV.
-\ac{DUT} was placed 130 cm from beam exit, which means that the protons will suffer some energy loss in the air between beam-exit and \ac{DUT}. To make the work easier for us, an energy loss calculator program \cite{website:energyloss_calculator} was used to calculate the \emph{energy loss} for a 28 $\mega\electronvolt$ and a 25 $\mega\electronvolt$ proton beam in air, we get respectively $17.52 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.2 \frac{\mega\electronvolt\centi\meter^2}{\gram}$.
-By multiplying with the density of air which is $\rho_{air}=0.001275 \frac{\gram}{\centi\meter^3}$, we get $22.3 \frac{\kilo\electronvolt}{\centi\meter}$ and $24.5 \frac{\kilo\electronvolt}{\centi\meter}$. This means that the energy of the protons when they collide into \ac{DUT} is:
+Two energies were used when exposing components at \ac{OCL}, The first time a proton beam with an energy of 28 MeV, and the two other times a beam of 25 MeV.
+\ac{DUT} was placed 130 cm away from beam exit, which means that the protons will suffer some energy loss in the air between beam-exit and \ac{DUT}. To make the work easier for us, an energy loss calculator program \cite{website:energyloss_calculator} was used to calculate the \emph{energy loss} for a 28 $\mega\electronvolt$ and a 25 $\mega\electronvolt$ proton beam in air, we get respectively $17.52 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.2 \frac{\mega\electronvolt\centi\meter^2}{\gram}$.
+By multiplying with the density of air which is $\rho_{air}=1.275\frac{\milli\gram}{\centi\meter^3}$, we get $22.3 \frac{\kilo\electronvolt}{\centi\meter}$ and $24.5 \frac{\kilo\electronvolt}{\centi\meter}$. This means that the energy of the protons when they collide into \ac{DUT} is:
 
 \begin{equation}
 E_{proton1} = 28 - (130 \centi\meter \times 22.3 \frac{\kilo\electronvolt}{\centi\meter}) \approx 25 \mega\electronvolt
@@ -1243,7 +1242,7 @@ E_{proton2} = 25 - (130 \centi\meter \times 24.5 \frac{\kilo\electronvolt}{\cent
 \label{Proton_energy2&3}
 \end{equation}
 
-By using the same energy loss calculator we get that the energy loss in silicon (which an component mostly consist of), are:
+By using the same energy loss calculator we get the energy loss in silicon (which is the main component in integrated circuit), to be:
 
 \begin{equation}
 -\frac{dE}{dx} (25 MeV) =  17.1 \frac{\mega\electronvolt\centi\meter^2}{\gram}
@@ -1269,7 +1268,7 @@ where $\Delta x$ is the length segment a proton particle penetrates into the mat
 \label{silicon_density}
 \end{equation}
 
-To get the total energy deposited in the component, we have to multiply the energy of a single proton with the fluence and the area of the component. Fluence is the total flux over a given time, expressed in [$\frac{n}{cm²}$]. The total energy is then:
+To get the total energy deposited in the component, we have to multiply the energy of a single proton with the fluence and the area of the component. Fluence is the total flux over a given time, expressed in [$\frac{n}{cm²}$], where n is number of protons. The total energy is then:
 
 % Flux = \Phi
 \begin{equation}
@@ -1280,7 +1279,7 @@ To get the total energy deposited in the component, we have to multiply the ener
 Now we know the total energy depleted by a proton beam in an component, and can start calculating the dose. Dose is energy per mass, as said in section \ref{difinitions}. That means that the absorbed dose in silicon can be expressed as,
 
 \begin{equation}
-Dose(Si) = \frac{-\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A}{m_{Si}}
+Dose(Si) = \frac{-\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A_{Si}}{m_{Si}}
 \label{Dose(si)}
 \end{equation}
 
@@ -1289,7 +1288,7 @@ where $m_{Si}$ is the mass of silicon.
 $m_{Si}$ can be expressed in terms of silicon density, see equation \ref{silicon_density}, multiplied with the volume ($V_{Si}$), which is Area ($A_{Si}$) times thickness ($d_{Si}$). Assuming that the protons enters the silicon in a straight line, the path segment $\Delta x$ is equal the thickness, which then gives us,
 
 \begin{equation}
-Dose(Si) = \frac{ -\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A}{\rho_{Si} \cdot A_{Si} \cdot d_{Si}} = -\frac{dE}{dx} \cdot fluence = [\frac{MeV}{g}]
+Dose(Si) = \frac{ -\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A_{Si}}{\rho_{Si} \cdot A_{Si} \cdot d_{Si}} = -\frac{dE}{dx} \cdot fluence = [\frac{MeV}{g}]
 \label{Dose_silicon}
 \end{equation}
 
@@ -1301,7 +1300,7 @@ Dose(Si) = 1.602 \cdot 10^{-8} \cdot -\frac{dE}{dx} \cdot fluence
 \end{equation}
 
 \subsection{Calculating Dose Using FLUKA Simulations}
-The program FLUKA can be used to simulate particles with a user given energy in whatever material you want. We simulated a proton beam with energy of 28 MeV and 25 MeV in air, and set our \ac{DUT}-position 130 $\centi\meter$ away from beam exit. The results can be seen in table \ref{FLUKA_simulations}.
+The program FLUKA can be used to simulate particles with a user given energy in a material. We simulated a proton beam with energy of 28 MeV and 25 MeV in air, and set our \ac{DUT}-position 130 $\centi\meter$ away from beam exit. The results can be seen in table \ref{FLUKA_simulations}.
 
 % Table generated by Excel2LaTeX from sheet 'FLUKA'
 \begin{table}[!htbp]
@@ -1310,16 +1309,16 @@ The program FLUKA can be used to simulate particles with a user given energy in 
     Energy at beam exit & 28 MeV & 25 MeV  \\\hline\hline
     Dose/primary particle at DUT[Gy] & 4.08E-10 & 2.94E-10 \\\hline
     Primary particles at Beam exit & 1 & 1 \\\hline
-    Primary particles at DUT & 0.1331 & 8.57E-2 \\\hline
+    Primary particles at DUT & 0.1331 & 0.0857 \\\hline
     Beam intensity reduction at DUT & 7.51 & 11.67\\\hline
     \end{tabular}%
       \caption{FLUKA simulation with 28MeV proton beam}
   \label{FLUKA_simulations}%
 \end{table}%
 
-As said in the introduction to this chapter, the known values after a radiation test are, exposed time, scintillator counts, current consumption, output data of the \ac{DUT} and cross section from the SRAM radiation detector.
+As said in the introduction to this chapter, the known values after a radiation test are exposed time, scintillator counts, current consumption, output data of the \ac{DUT} and cross section from the SRAM radiation detector.
 
-The procedure to calculate the dose is first to find the proton fluence. This is found by first converting from scintillator counts to SEU, by multiplying with the converting factor, as found in the beam setup, and then divide on the cross section, which is known for the SRAM radiation detector. Fluence can then be found as seen in equation \ref{FluenceDUT} and the flux as in equation \ref{flux}.
+The procedure to calculate the dose is first to find the total fluence. This is found by first converting from scintillator counts to SEU, by multiplying with the converting factor, as found in the beam setup, and then divide on the cross section, which is known for the SRAM radiation detector. Fluence can then be found as seen in equation \ref{FluenceDUT} and the flux as in equation \ref{flux}.
 
 \begin{equation}
 FluenceDUT = \frac{SEU}{CS}
@@ -1331,7 +1330,7 @@ Flux = \frac{Fluence}{time}
 \label{flux}
 \end{equation}
 
-Now we can take use of the FLUKA simulation results. The simulation results tells us how many protons will hit \ac{DUT} when one proton will be sent out from beam exit, and what dose this will give the \ac{DUT}. By using the calculated Fluence for DUT, found by equation \ref{FluenceDUT}, we can find the fluence at beam exit by dividing on \emph{primary particles at \ac{DUT}} from the simulation results, see equation \ref{FluenceBE}.
+Now we can take use of the FLUKA simulation results. The simulation results tells us how many protons will collide into \ac{DUT} for each proton coming out from beam exit, and what dose this will contribute to at \ac{DUT}. By using the calculated Fluence for DUT, found by equation \ref{FluenceDUT}, we can find the fluence at beam exit by dividing on \emph{primary particles at \ac{DUT}} from the simulation results, see equation \ref{FluenceBE}.
 Then we can use \emph{dose per primary particle at DUT} from the result and multiply with the Fluence at beam exit, which gives us the dose in gray for the \ac{DUT}, see equation \ref{DoseDUT}. By multiplying with 100 we get the dose in Rad.
 
 \begin{equation}
@@ -1344,47 +1343,43 @@ DoseDUT = FluenceBE \cdot \frac{Dose}{primaryparticleDUT} = [Gy]
 \label{DoseDUT}
 \end{equation}
 
-\subsection{Comparison of LET and FLUKA}
-To compare LET calculations with FLUKA simulation we need an example.
-If we look at the test result for radiation of MAX3748:
-
-\begin{table}[!htbp]
-  \centering
-    \begin{tabular}{|l|l|} \hline
-    time 			& 2472 \\\hline
-    proton energy Beam exit  	& 25 MeV \\\hline
-    scintillator counts 	& 2698510 \\\hline
-    scintillator counts to SEU SRAM & 0.473 \\\hline   
-    Cross section 		& 1.14E-6 \\\hline
-    \end{tabular}%
-      \caption{Results after radiation of MAX3748}
-  \label{MAX3748_results}%
-\end{table}%
-
-Both of the methods to calculate dose requires the fluence. The fluence is given by scintillator counts, conversion value from scintillator counts to SEU on SRAM, and cross section, see equation \ref{FluenceDUT}. For MAX3748 the fluence is
+\subsection{Comparison of LET and FLUKA calculations}
+To compare LET calculations with FLUKA simulation we need an example to look at, for example the test of MAX3748, the test results can be found in \autoref{MAX3748_results}.
+Both of the methods to calculate dose requires the fluence. The fluence is given by SEU on SRAM, and cross section, see \autoref{FluenceDUT}, and SEU on SRAM are given by the conversion factor found in beam setup and scintillator counts. For MAX3748 the fluence is,
 
 \begin{equation}
-Fluence_{MAX3748} = \frac{2698510 \cdot 0.473}{1.14\cdot10^{-6}} = 1.12\cdot10^{12}
+Fluence_{MAX3748} = \frac{2698510 \cdot 0.473}{1.14\cdot10^{-6}} = 1.12\cdot10^{12}\frac{n}{\centi\meter^2}
 \label{FluenceMAX3748}
 \end{equation}
 
-\subsubsection{Calculations Using LET}
-To calculate the dose using LET, just follow the steps as given in section \ref{using_LET}.
-We start by calculating the energy when entering the integrated circuit 130 cm away from beam exit. This is found in equation \ref{Proton_energy1} to be 22 $\mega\electronvolt$.
+\begin{table}[!htbp]
+  \centering
+  \begin{tabular}{|l|l|} \hline
+  time 				& 2472 s \\\hline
+  proton energy Beam exit  		& 25 MeV \\\hline
+  scintillator counts 		& 2698510 \\\hline
+  scintillator counts to SEU SRAM 	& 0.473 \\\hline   
+  Cross section 			& $1.14E-6 cm²$\\\hline
+  \end{tabular}
+  \caption{Results after radiation of MAX3748}
+  \label{MAX3748_results}
+\end{table}
+
+To calculate the dose using LET, just follow the steps as given in \autoref{using_LET}.
+We start by calculating the energy when entering the component 130 cm away from beam exit. This is found in equation \ref{Proton_energy1} to be 22 $\mega\electronvolt$.
 LET or energy loss for a 22 $\mega\electronvolt$ proton particle in silicon, is calculated in equation \ref{Proton_energy2&3} to be 17.1 $\mega\electronvolt$.
 
-Fluence is found in equation \ref{FluenceMAX3748}. By using equation \ref{Dose_rad} we get the total dose in Rad to be:
+Fluence is found in equation \ref{FluenceMAX3748}. By using \autoref{Dose_rad} we get the total dose in Rad to be:
 
 \begin{equation}
 Dose(Si)= 1.602 \cdot 10^{-8} \cdot 17.1 \cdot 1.12\cdot10^{12} = 306.8 kRad
 \label{Dose_rad_MAX3748}
 \end{equation}
 
-\subsubsection{Calculations Using FLUKA Simulations}
-Calculating using FLUKA simulation is an easy process. First calculate fluence at Beam exit, from equation \ref{FluenceBE}. And use that value to calculate the dose as seen in equation \ref{DoseDUT}.
+Calculating using FLUKA simulation is an easy process. First calculate fluence at Beam exit, from equation \ref{FluenceBE}. And use that value to calculate the dose as seen in  \autoref{DoseDUT}.
 
 \begin{equation}
-FluenceBE = \frac{1.29\cdot10^{12}}{0.0857} = 1.51\cdot10^{13}
+FluenceBE = \frac{1.29\cdot10^{12}}{0.0857} = 1.51\cdot10^{13}\frac{n}{\centi\meter^2}
 \label{FluenceBE_MAX}
 \end{equation}
 
@@ -1393,81 +1388,83 @@ DoseDUT = 1.51\cdot10^{13} \cdot 2.94\cdot10^{-10} = 4425.4 Gy = 383.8 kRad
 \label{DoseMAX3748}
 \end{equation}
 
-\subsubsection{Discussion}
-We can see that the FLUKA results give approximately 20 \% higher dose than by using LET. On smaller dose this deviation will be much smaller.
-For example for ADN2814, the calculated does using LET is 85.6 kRad and simulation results gives us 107.1 kRad.
+We can see that the FLUKA results give approximately 20 \% higher dose than by using LET. Why we have this difference will be discussed.
 
-When calculating LET for a given component we calculated with constant energy drop through the air before colliding with the component and through the component. In reality energy loss will increase as the energy decreases, this means that the calculated dose is a little smaller than the actual dose.
+When calculating LET for a given component we calculated with constant energy drop through the air before colliding with the component and through the component. In reality energy loss will increase as the energy decreases, this means that the calculated dose is a little lower than the actual dose.
 
-When it comes to FLUKA simulation, we don't really have control of what is calculated and which values are used. But the program is used for advance simulations for people at CERN and all over the world, and is an acknowledged program.
+FLUKA simulation are being used for advance simulations for people at CERN and all over the world, and is an acknowledged program.
+It is based on Monte Carlo simulations, and several models are used for the calculations, for example Bethe Bloch theory, Beth $Z²$, Barkas $Z^3$ and a lot more \cite{website:FLUKA}. Having many models tested up against each other, tells us that the calculated values are quite reliable.
 
-Which of these calculations gives us the most reliable calculation, can be discussed. There are small errors from approximation using LET.
-But then again, since we know about these approximations, we know that the energy should be a little higher than the calculated value. And can be sure that the calculated dose is at least not higher than the actual dose.
-From the FLUKA simulations we don't really know how the program calculates, it may be very accurate or it could do approximations as well.
+When using LET to calculate the dose, we get a small error from approximations and assumptions. But since we know about these, we also know that the energy should be a little higher than the calculated value, and can be sure that the calculated dose is at least not higher than the actual dose.
+The FLUKA simulations are using advance models for the calculations, which makes the results very accurate.
 
-There may also be other sources of errors, like that the proton beam given at the lab (it may differ from 25 MeV which it is said to be), and the conversion factor found in the beam setup. Nevertheless, the dose calculations doesn't need to be totally accurate, we only need to know the dose level, and then both of the methods are good enough. The dose values used further in this work are from FLUKA simulation, which is because this method was easiest to use, and the it gives us probably the most accurate calculations.
+Other than the calculation method,there may also be other sources of errors, like that the energy level of the proton beam (it may differ from 25 MeV which it is said to be), and the conversion factor found in the beam setup. And when we have other factors which may not be as accurate, the dose calculations doesn't need to be hundred present accurate.
+For our calculated data we are mostly interested in the dose level, and doesn't care so much about the accuracy, as long as it is in a reasonable range.
+That means that both of the methods are good enough.
+
+At OCL, FLUKA simulation was used to calculate the dose, and at TSL, LET was used to calculate the dose.
 
 \section{Results from OCL}
 \subsection{Calibration process}
 As explained in chapter $\ref{beam_setup}$, we had to start by finding the center of the beam.
 The laser was first placed in a position pointing on what thought to be center. 
-Then we placed a film in front of the beam exit and \ac{DUT} area.
-By seeing how the film looked like after irradiated, we got a feeling of where the center was.
+Then we placed a radiation film in front of the beam exit and at \ac{DUT} area.
+By observing how the radiation films were after irradiated, we got a indication of where the center of the beam was.
 An example of two films from the beam exit and \ac{DUT} area can be seen in figure \ref{Radiation_film}.
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/Radiation_film}
-  \caption[Radiation Film]{Example of radiation films after radiation, DUT area (top) and bream exit (button). The laser beam position is marked with a dot.}
+  \includegraphics[width=0.5\textwidth]{figures/radiation_film2}
+  \caption[Radiation Film]{Example of radiation films after radiation, DUT area (top) and bream exit (bottom). The laser beam position is marked with a black dot.}
   \label{Radiation_film}
 \end{figure}
 
-Now we had a feeling of where center is, compared to where the laser was pointing. The SRAM radiation detector was placed with one of the SRAM chips at where the laser was pointing. This position was called position zero (x,y) = (0,0). From irradiated films, we knew approximately how much we had to move to be in center of the beam.
-In table $\ref{test_15.11}$ you can see the results from our calibration 15.11.2013. You can see that position x = -2.5 cm and y = -1 cm gives highest relation between SEU and scintillator counts. A total of 4 tests in that position were done and the average value gives us 0.0948. Beam setup data from all other days at \ac{OCL} can be found in appendix \ref{Beam_profile}.
-When we irradiated the different \acp{PCB}, we didn't have SEU data, but we had scintillator counts, the relation value was used to convert from scintillator counts to \ac{SEU}. We wanted to have the SEU value, because the cross section for a SEU on the SRAM radiation detector is known.
-The cross section is the probability that an incoming particle will induce an SEU, and the value can be found in equation \ref{CS}. Knowing number of SEUs and cross section, we can find the total fluence of an irradiation test.
+Now we knew approximately where center is, compared to where the laser was pointing. The SRAM radiation detector was mounted in the XY-positioning system and placed so that the laser was pointing at one of the SRAM chips. This position was defined as position zero (x,y) = (0,0), and from the radiation films we knew approximately how much we had to move to be in the center of the beam.
+In \autoref{test_14.11} you can see the results from our calibration 14.11.2013. Position x = -1.5 cm and y = 0 cm gives highest relation between SEU and scintillator counts. Two tests was executed in that position and the average value gives us 1.0948. Beam setup data from all other days at \ac{OCL} can be found in appendix \ref{Beam_profile}.
 
-% Table generated by Excel2LaTeX from sheet 'Sheet1'
-\begin{table}[!htbp]
-  \centering
-    \begin{tabular}{|r|r|r|r|r|r|}\hline
-    Calibration test nr.: & x     & y     & Scint rel & SEU(\ac{SRAM}) & SEU(\ac{SRAM})/sc \\ \hline \hline
-    1     & -0,8  & -1    & 27798 & 1463  & 5,26E-02 \\ \hline
-    2     & -1,3  & -1    & 17721 & 1239  & 6,99E-02 \\ \hline
-    3     & -1,8  & -1    & 12904 & 1203  & 9,32E-02 \\ \hline
-    4     & -2,3  & -1    & 13361 & 1276  & 9,55E-02 \\ \hline
-    5     & -2,8  & -1    & 12786 & 1238  & 9,68E-02 \\ \hline
-    6     & -3,3  & -1    & 12342 & 1156  & 9,37E-02 \\ \hline
-    7     & -2,5  & -1    & 11696 & 1223  & 1,05E-01 \\ \hline
-    8     & -2,5  & -1,5  & 11027 & 1075  & 9,75E-02 \\ \hline
-    9     & -2,5  & -2    & 11835 & 1063  & 8,98E-02 \\ \hline
-    10    & -2,5  & -0,5  & 15593 & 1540  & 9,88E-02 \\ \hline
-    11    & -2,5  & 0     & 12620 & 1034  & 8,19E-02 \\ \hline
-    12    & -2,5  & -1    & 65280 & 5999  & 9,19E-02 \\ \hline
-    13    & -2,5  & -1    & 52752 & 4803  & 9,10E-02 \\ \hline
-    14    & -2,5  & -1    & 57229 & 5250  & 9,17E-02 \\ \hline
-    \end{tabular}%
-      \caption{Calibration tests 15.11.2013}
-  \label{test_15.11}%
-\end{table}%
+When we irradiated the different \acp{PCB}, we only measured scintillator counts, as a indication of the beam intensity. When we were finished exposing a component, the relation value was used to convert from scintillator counts to \acp{SEU}. Then fluence could be calculated since the cross section for a proton inducing a SEU on the SRAM is known. Cross section for the SRAM radiation detector is given in \autoref{CS}.
 
 \begin{equation}
-CS = 1,14e-6
+CS = 1.14e-6
 \label{CS}
 \end{equation}
 
+\begin{table}
+  \centering
+    \begin{tabular}{|l|l|l|l|l|l|} \hline
+    Calibration test nr.: & x     & y     & Scint rel & SEU(\ac{SRAM}) & SEU(\ac{SRAM})/sc \\ \hline \hline
+    1     & 0     & 0     & 23813 & 1971  & 8.28E-02 \\ \hline
+    2     & 0     & -0.5  & 37930 & 3867  & 1.02E-01 \\ \hline
+    3     & 0     & -1    & 27527 & 2817  & 1.02E-01 \\ \hline
+    4     & 0     & -1.5  & 34413 & 3360  & 9.76E-02 \\ \hline
+    5     & 0     & -2    & 32713 & 2763  & 8.45E-02 \\ \hline
+    6     & 0.5   & 0     & 38753 & 2709  & 6.99E-02 \\ \hline
+    7     & -0.5  & 0     & 23420 & 2483  & 1.06E-01 \\ \hline
+    8     & -1    & 0     & 20611 & 2232  & 1.08E-01 \\ \hline	
+    9     & -1.5  & 0     & 21014 & 2410  & 1.15E-01 \\ \hline
+    10    & -1.5  & 0     & 20676 & 2260  & 1.09E-01 \\ \hline
+    11    & -2    & 0     & 35787 & 3776  & 1.06E-01 \\ \hline
+    12    & -2.5  & 0     & 27847 & 2512  & 9.02E-02 \\ \hline
+    \end{tabular}%
+      \caption{Calibration tests 14.11.2013}
+      \label{test_14.11}
+\end{table}%
+
+
 \subsection{Test Results of the PCBs}
-In this section the result from irradiation test at \ac{OCL} will be presented and discussed.
-Test of all the PCBs will be presented first, followed by a presentation of the SF2 test. The result is presented after type, meaning that two PCBs containing the same component will be presented together. The purpose of these tests has been to check for radiation tolerance. The focus has therefore been to check the output data/voltage and current compared with the received dose. 
+In this section the results from the radiation tests at \ac{OCL} will be presented and discussed.
+Test of all the PCBs will be presented first, followed by a discussion. The result is presented after type, meaning that two PCBs containing the same component will be presented together. The purpose of these tests has been to check for radiation tolerance. The focus has therefore been to check the output data/voltage and current compared with the received dose. 
 % Flux versus time for the different tests can be seen in the summery of this section \ref{flux_all1},\ref{flux_all2} and \ref{flux_all3}
 
 An overview of the test can be found at the end of this section, with the total exposed time, the total irradiated dose and error status.
 
-\subsubsection{TPS51200}
+\subsubsection{TPS51200 - Voltage Regulator}
 This was the first component that was tested for radiation, we started therefore out with a very low intensity to be sure that everything worked as it should.
 The intensity was increased for the later tests. Two PCBs of this type was supposed to be tested, but only one of these worked when we were at OCL.
 
-In figure \ref{TPS51200_1} you can see the input current and output voltage versus the received dose in kRad. The total exposed dose for this board is 42.8 kRad, and it still worked as it should, with only small increase in current. Normally we would irradiate until we would see some more irradiation effects, but since no errors occurred until 40 kRad, it was no point in exposing anymore.
+In \autoref{TPS51200_1} you can see the input current and output voltage versus the received dose in kRad. The total exposed dose for this board is 42.8 kRad, and it still worked as it should, with only small increase in current. We see also a small increase in voltage and decrease in current already after 5 kRad, whats causing this effect could be reduced resistance in the component caused by the radiation. The reduction/increase is nevertheless quite small, and would not harm, if it should happen in a real design.
+% The green graph, representing voltage should had higher resolution in the saved data, so we could see more clearly the effects of radiation, nevertheless it the deviations are quite small. 
+% Normally we would irradiate until we would see some more irradiation effects, but since no errors occurred until 40 kRad, it was no point in exposing anymore.
 
 \begin{figure}[!htbp]
 \centering
@@ -1478,11 +1475,11 @@ In figure \ref{TPS51200_1} you can see the input current and output voltage vers
 
 \FloatBarrier
 
-\subsubsection{MIC69302WU}
+\subsubsection{MIC69302WU - Voltage Regulator}
 During the test of the first board we increased the intensity of the beam quite drastically at the end of the irradiation, which can be seen from the flux graph, in figure \ref{flux_all1}.
 
-This component had an unexpected reaction to irradiation. You can see from both of the graphs that the current is decreasing and voltage is increasing, normally we would expect the opposite, or at least that the current would increase, see section \ref{TID}.
-As seen from the graph in figure \ref{MIC69302WU_both} it starts quite early to decrease in current, but it also stabilize after a while. The output voltage is mostly stable, there were an increase of ~2\% on both of the tests, and that with a dose of 150 and 350 kRad.
+For this component we also see the effect with a increase in voltage and decrease in current (see \autoref{MIC69302WU_both}). The reason for this is presumed to be the same as for the test with TPS51200 that the resistance in the component is decreasing. For both of our test we also sees some glitching on both the current and voltage. Maybe this is caused by changed threshold in a internal transistor resulting in current leakage, and a feedback loop is trying to compensate, resulting in a small period of unstable current and voltage. The current decreased to about the half for the first test and to about three quarters on the second test, but that was with a dose of 160 kRad and 380 kRad respectively, which is way more than the radiation level in the TPC. The output voltage is mostly stable, there were an increase of $\sim2\%$ on both of the tests, and that with a dose of 160 and 380 kRad. A noticeable effect is that it seems that for both of out tests the current and voltage stabilize after a while, and that with an acceptable decrease in current and increase in voltage.
+% You can see from both of the graphs that the current is decreasing and voltage is increasing, normally we would expect the opposite, or at least that the current would increase, see section \ref{TID}.
 
 \begin{figure}[!htbp]
 \centering
@@ -1505,8 +1502,8 @@ As seen from the graph in figure \ref{MIC69302WU_both} it starts quite early to 
 \FloatBarrier
 
 \subsubsection{SN74AVCB164245}
-For both of the test no errors were detected on the output data. Current versus dose can be seen in the graphs in figure \ref{SN74AVCB164245_1} and \ref{SN74AVCB164245_2}. The second board was exposed to a much higher dose, therefore we can see much more increase on the current for this board. The reason for the ``jumps`` in current is because the output is constantly changing from on to off, with a gap of 4 seconds.
-Not any effects are detected before a radiation dose of approximately 40 kRad.
+For both of the test no errors were detected on the output data. Current as a function of dose for the two test boards can be seen in \autoref{SN74AVCB164245_both}. The second board was exposed to a much higher dose, therefore we can see much more increase in current. The reason for the constantly increase and decrease in current is because the output is constantly changing from on to off, with a gap of 4 seconds. The current level for these two boards are also slightly different, that is because, different load were used for the two test board. 
+No effects are detected before a radiation dose of approximately 40 kRad.
 
 \begin{figure}[!htbp]
 \centering
@@ -1523,13 +1520,13 @@ Not any effects are detected before a radiation dose of approximately 40 kRad.
   \label{SN74AVCB164245_2}
   \end{subfigure}
  \caption{SN74AVC2T245 - Current vs Dose}
+ \label{SN74AVCB164245_both}
 \end{figure}
 
 \FloatBarrier
 
 \subsubsection{SN74AVC2T245}
-On the first radiation test of this board something didn't worked as it should. After 740 s and a dose of 98 Rad the chips output was stuck at '1'. The reason for this is unknown. I fear that the component was defected before we started the radiation test, since it gives a totally different current characteristic than test board nr. 2.
-The input was switching from high to low every 4 second explaining the constantly change in current. If we look at the test results from board 2, the current goes unchanged up to 40 kRad, and no errors were detected at all.
+On the first radiation test of this board we got an error on the output data, after 740 s and a dose of 3.97 kRad both of the outputs were stuck at '1', this can be seen in \autoref{SN74AVC2T245_out}. We can also see a different characteristic on the current vs dose graphs for test board 1 and 2, see \autoref{SN74AVC2T245_1} and \autoref{SN74AVC2T245_2}. They should in principle be alike, so maybe the first component got defected in the soldering process to the PCB. The input was switching from high to low every 4 second explaining the constantly change in current. If we look at the test results from board 2, the current goes unchanged up to a dose of 40 kRad, and no errors were detected.
 %her må eg sjekke board1 etter eg har fått den tilbake, og se om den faktisk fungere. Kan hende at denne har vært ødelagt før vi begynte.
 
 \begin{figure}[!htbp]
@@ -1537,23 +1534,30 @@ The input was switching from high to low every 4 second explaining the constantl
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/current_vs_dose_t245_1}
-  \caption{SN74AVC2T245 board1}
+  \caption{SN74AVC2T245 Current vs dose}
   \label{SN74AVC2T245_1}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/current_vs_dose_t245_2}
-  \caption{SN74AVC2T245 board2}
-  \label{SN74AVC2T245_2}
+  \includegraphics[width=\linewidth]{figures/output_vs_dose_t245}
+  \caption{SN74AVC2T245 Digital output data vs Dose}
+  \label{SN74AVC2T245_out}
   \end{subfigure}
- \caption{SN74AVC2T245 - Current vs Dose}
+ \caption{Test board1 of SN74AVC2T245}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \includegraphics[width=0.5\linewidth]{figures/current_vs_dose_t245_2}
+  \caption{Current vs dose for SN74AVC2T245 test board2}
+  \label{SN74AVC2T245_2}
 \end{figure}
 
 \FloatBarrier
 
 \subsubsection{QS3VH257}
-For both of the boards no errors on the output data were detected through the whole irradiation test. The current graphs can be seen in figure \ref{QS3VH257_1} and \ref{QS3VH257_2}.
-We see a small increase in current before 30 kRad, after that it starting increasing in a more rapid speed.
+For both of the boards no errors on the output data were detected through the whole irradiation test. The current graphs for the two test boards can be seen in  \autoref{QS3VH257_both}
+A small increase in current before 30 kRad can be detected on bord 1, but after that both of the boards starting increase in a more rapid speed. For the second test, the current increased to almost 9 times the starting current, but that was after a dose of 110 kRad.
 
 \begin{figure}[!htbp]
 \centering
@@ -1570,14 +1574,14 @@ We see a small increase in current before 30 kRad, after that it starting increa
   \label{QS3VH257_2}
   \end{subfigure}
  \caption{QS3VH257 - Current vs Dose}
+ \label{QS3VH257_both}
 \end{figure}
 
 \FloatBarrier
 
 \subsubsection{SY89831}
-For test of these boards we required to use the modified MIC69302WU as described in section \ref{MIC_explanation}, because of the high current consumption.
-No errors were detected on the output data through both of the tests, the current characterization can be seen in \ref{SY89831_1} and \ref{SY89831_2}.
-This board is quite temperature dependent, a small increase in temperature, can increase or decrease current by hundreds of $\micro\ampere$. The small increase in current we can see on both of the boards may also be temperature difference. It is nevertheless very small.
+No errors were detected on the output data through both of the tests, the current vs dose graphs can be seen in \ref{SY89831_1} and \ref{SY89831_2}.
+This board is quite temperature dependent, a small increase in temperature, can increase or decrease current by hundreds of $\micro\ampere$. A small increase in current we can detected on both of the boards may also be temperature difference. It is nevertheless very small.
 
 
 \begin{figure}[!htbp]
@@ -2277,7 +2281,7 @@ The work presented in this thesis was done to
   \centering
     \begin{tabular}{|l|l|l|l|l|l|}\hline
     Calibration test nr.: & x     & y     & Scint rel & SEU(\ac{SRAM}) & SEU(\ac{SRAM})/ sc \\ \hline \hline
-    1     & -0.8  & -1    & 27798 & 1463  & 5.26E-02 \\ \hline
+    1     & -0.8  & -1    & 17798 & 1463  & 5.26E-02 \\ \hline
     2     & -1.3  & -1    & 17721 & 1239  & 6.99E-02 \\ \hline
     3     & -1.8  & -1    & 12904 & 1203  & 9.32E-02 \\ \hline
     4     & -2.3  & -1    & 13361 & 1276  & 9.55E-02 \\ \hline
