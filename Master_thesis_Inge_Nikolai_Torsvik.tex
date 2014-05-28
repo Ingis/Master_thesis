@@ -1556,8 +1556,10 @@ On the first radiation test of this board we got an error on the output data, af
 \FloatBarrier
 
 \subsubsection{QS3VH257 - Multiplexer/Demultiplexer}
-For both of the boards no errors on the output data were detected through the whole irradiation test. The current graphs for the two test boards can be seen in  \autoref{QS3VH257_both}
-A small increase in current can be detected before a dose of 30 kRad on bord 1. After that both of the test boards started to increase in a more rapid speed. For the second test, the current increased to almost 9 times the starting current, but that was after a dose of 110 kRad.
+For both of the boards no errors on the output data were detected through the whole irradiation test. Current as a function of dose for the two test boards can be seen in \autoref{QS3VH257_both}
+We can see a small increase in current for board 1 only after a dose of 10 kRad. The small increase last until around 30 kRad, where the current starting to increase in a more rapid speed. For test board 2 we can't see any effect before 40 kRad, but then the current is increasing quite fast. The current increased to almost 9 times the starting current after it had received a dose of 110 kRad.
+
+The small increase in current that we saw before a dose of 30 kRad on the test of the first board, is to small to have any damaging effect in a design, and we didn't detect any errors for the output signal for both of the tests.  
 
 \begin{figure}[!htbp]
 \centering
@@ -1581,8 +1583,11 @@ A small increase in current can be detected before a dose of 30 kRad on bord 1. 
 
 \subsubsection{SY89831 - 1 to 4 fan-out Buffer}
 No errors were detected on the output data through both of the tests. Current vs dose graphs can be seen in \autoref{SY89831_both} for both of the two test boards.
-Also here a difference in current characteristic can be seen. The two test boards should be exactly alike, so the differences is probably caused by internal differences in the component, maybe caused by rough treatment during soldering. The current level is in the same magnitude, and we can only detect a small increase in current for both of the tests.
+Also here a difference in current characteristic can be seen. The two test boards should be exactly alike, so the differences is probably caused by internal differences in the component, maybe caused by rough treatment during soldering. The current level is nevertheless the same magnitude, and both of them are working .
 
+% We can only detect a small increase in current for both of the tests, which suggest that this component is quite robust towards radiation. 
+
+A total of 90 and 160 kRad was exposed to the two test boards, without detecting any error and with small increase in current.
 % This board is quite temperature dependent, a small increase in temperature, can increase or decrease current by hundreds of $\micro\ampere$. A small increase in current we can detected on both of the boards may also be temperature difference. It is nevertheless very small.
 
 
@@ -1607,9 +1612,9 @@ Also here a difference in current characteristic can be seen. The two test board
 \FloatBarrier
 
 \subsubsection{ADN2814 - Limiting Amplifier}
-As mentioned in \ref{limiting_amp}, we needed a SF2 starter-kit and the modified MIC69302WU board with a 3.3 V output voltage to test and supply this component.
+For the test of ADN2814, we didn't detect any current change before a dose of 200 kRad, see \autoref{ADN2814_curr}. But unfortunately we got some output errors. After a dose of $\sim$11 kRad we got a clock error, and after a dose of $\sim$8 kRad we got a data error, see \autoref{ADN2814_tot}.
 
-The current didn't change before a dose of 200 kRad had been received, but we got a clock error at a dose of $\sim$11 kRad, and a data error after a dose of $\sim$8 kRad, see figure \ref{ADN2814_curr} and \ref{ADN2814_tot}.
+The current graph, as seen in \autoref{ADN2814_curr} is varying quite a lot in current, typically variation in the beginning is 130 to 136 mA. This may be caused by large variation in the input signal, and producing of two differential output signals with very high frequency (160 Mhz for the clock, and a little less for the data). More capacitors on the supply voltage could probably help to reduce this variations.
 
 \begin{figure}[!htbp]
   \centering
@@ -1639,9 +1644,9 @@ The current didn't change before a dose of 200 kRad had been received, but we go
 \FloatBarrier
 
 \subsubsection{MAX3748 - Limiting Amplifier}
-Also here the solution using SF2 and the modified MIC69302WU board was used to test and supply this component.
+The test board for MAX3748 was exposed to a dose of over 400 kRad. We see also here a large variation in current consumption, see \autoref{MAX3748_curr}. I presume that the reason is in the same manner as for the ADN2814 test board. That the large variations on the input signal, causing current consumption to vary depending on the state of the input signal.
 
-After a dose of over 400 kRad no error were detected on the data signal, and current consumption was stable through the whole irradiation process.
+Through this test we detected no errors on the output data, and the current consumption seems rather stable through the whole irradiation process, if not taken the large variation into account. More capacitors on the supply voltage could also be a solution here to help reduce this variations. 
 
 \begin{figure}[!htbp]
 \centering
@@ -1649,7 +1654,7 @@ After a dose of over 400 kRad no error were detected on the data signal, and cur
   \centering
   \includegraphics[width=\linewidth]{figures/current_vs_dose_max}
   \caption{Current vs Dose}
-  \label{MAX3748}
+  \label{MAX3748_curr}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
@@ -1663,7 +1668,7 @@ After a dose of over 400 kRad no error were detected on the data signal, and cur
 \FloatBarrier
 
 \subsubsection{INA210 - Current Shunt Monitor}
-
+For both of the test boards we detected no errors
 
 \begin{figure}[!htbp]
 \centering
@@ -1675,13 +1680,14 @@ After a dose of over 400 kRad no error were detected on the data signal, and cur
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/current_vs_dose_ina2}
+  \includegraphics[width=\linewidth]{figures/volt_vs_dose_ina1}
   \caption{INA210 test board 2}
   \label{INA210_2}
   \end{subfigure}
  \caption{INA210 - Current vs Dose}
  \label{INA210_both}
 \end{figure}
+
 \FloatBarrier
 
 \subsubsection{TLV3011 - Comparator}
@@ -1691,17 +1697,35 @@ After a dose of over 400 kRad no error were detected on the data signal, and cur
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/current_vs_dose_tlv1}
-  \caption{TLV3011 test board 1}
+  \caption{TLV3011 - Current as function of dose for test board 1}
   \label{TLV3011_1}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/current_vs_dose_tlv2}
-  \caption{TLV3011 test board 2}
+  \caption{TLV3011 - Output voltage as function of dose for test board 2}
   \label{TLV3011_2}
   \end{subfigure}
- \caption{TLV3011 - Current as function of dose}
+ \caption{TLV3011 - Test board 1}
  \label{TLV3011_both}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/current_vs_dose_tlv1}
+  \caption{TLV3011 - Current as function of dose for test board 2}
+  \label{TLV3011_3}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/current_vs_dose_tlv2}
+  \caption{TLV3011 - Output voltage as function of dose for test board 2}
+  \label{TLV3011_4}
+  \end{subfigure}
+ \caption{TLV3011 - Test board 2}
+ \label{TLV3011_both2}
 \end{figure}
 
 \FloatBarrier
@@ -2320,7 +2344,6 @@ The work presented in this thesis was done to
     12    & -2.5  & 0     & 27847 & 2512  & 9.02E-02 \\ \hline
     \end{tabular}%
       \caption{Calibration tests 14.11.2013}
-      \label{test_14.11}
 \end{table}%
 
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
