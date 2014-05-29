@@ -181,6 +181,12 @@
       note = "\url{http://aliceinfo.cern.ch/}"
 }
 
+@misc{website:FLUKA,
+      author = "FLUKA Team",
+      title = "A quick look at FLUKA's physics, structure and capabilities",
+      note = "\url{http://www.fluka.org/fluka.php?id=man_onl&sub=3}"
+}
+
 @article{GranlundOlsson,
  author    = "Thomas Granlund and Nils Olsson",
  title     = "A Comparative Study Between Proton and Neutron Induced SEU in SRAMs",

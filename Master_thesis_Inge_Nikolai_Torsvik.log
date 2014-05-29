@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.2.11)  29 MAY 2014 14:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.2.11)  29 MAY 2014 20:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1099,28 +1099,28 @@ Package pdftex.def Info: figures/Shift_register_design.png used on input line 9
 19.
 (pdftex.def)             Requested size: 455.24411pt x 179.75993pt.
  [36 <./figures/Shift_register_design.png>] [37] [38] <figures/SRAM_labview.png
-, id=1032, 986.18437pt x 610.53094pt>
+, id=1033, 986.18437pt x 610.53094pt>
 File: figures/SRAM_labview.png Graphic file (type png)
 
 <use figures/SRAM_labview.png>
 Package pdftex.def Info: figures/SRAM_labview.png used on input line 984.
 (pdftex.def)             Requested size: 455.24411pt x 281.83513pt.
 
-<figures/SRAM_flowchart.png, id=1040, 256.70906pt x 567.62062pt>
+<figures/SRAM_flowchart.png, id=1041, 256.70906pt x 567.62062pt>
 File: figures/SRAM_flowchart.png Graphic file (type png)
 
 <use figures/SRAM_flowchart.png>
 Package pdftex.def Info: figures/SRAM_flowchart.png used on input line 998.
 (pdftex.def)             Requested size: 113.81017pt x 227.62451pt.
  [39] [40 <./figures/SRAM_labview.png> <./figures/SRAM_flowchart.png>] <figures
-/XY_front.jpg, id=1056, 3661.68pt x 2746.26pt>
+/XY_front.jpg, id=1058, 3661.68pt x 2746.26pt>
 File: figures/XY_front.jpg Graphic file (type jpg)
 
 <use figures/XY_front.jpg>
 Package pdftex.def Info: figures/XY_front.jpg used on input line 1025.
 (pdftex.def)             Requested size: 223.07211pt x 167.28276pt.
 
-<figures/XY_back.jpg, id=1057, 3661.68pt x 2746.26pt>
+<figures/XY_back.jpg, id=1059, 3661.68pt x 2746.26pt>
 File: figures/XY_back.jpg Graphic file (type jpg)
 
 <use figures/XY_back.jpg>
@@ -1128,7 +1128,7 @@ Package pdftex.def Info: figures/XY_back.jpg used on input line 1030.
 (pdftex.def)             Requested size: 223.07211pt x 167.28276pt.
  [41 <./figures/XY_front.jpg> <./figures/XY_back.jpg>]
 Chapter 5.
-<figures/OCL.png, id=1070, 638.385pt x 536.0025pt>
+<figures/OCL.png, id=1072, 638.385pt x 536.0025pt>
 File: figures/OCL.png Graphic file (type png)
  <use figures/OCL.png>
 Package pdftex.def Info: figures/OCL.png used on input line 1062.
@@ -1136,14 +1136,14 @@ Package pdftex.def Info: figures/OCL.png used on input line 1062.
 
 [42
 
-] <figures/experiment_setup.jpg, id=1078, 395.22656pt x 207.02344pt>
+] <figures/experiment_setup.jpg, id=1080, 395.22656pt x 207.02344pt>
 File: figures/experiment_setup.jpg Graphic file (type jpg)
 
 <use figures/experiment_setup.jpg>
 Package pdftex.def Info: figures/experiment_setup.jpg used on input line 1088.
 (pdftex.def)             Requested size: 227.62206pt x 119.23024pt.
 
-<figures/experiment_area.jpg, id=1079, 3661.68pt x 2746.26pt>
+<figures/experiment_area.jpg, id=1081, 3661.68pt x 2746.26pt>
 File: figures/experiment_area.jpg Graphic file (type jpg)
 
 <use figures/experiment_area.jpg>
@@ -1172,14 +1172,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
 4245[]$,
  []
 
-[46] <figures/Blue_hall.png, id=1122, 1025.8325pt x 653.44125pt>
+[46] <figures/Blue_hall.png, id=1124, 1025.8325pt x 653.44125pt>
 File: figures/Blue_hall.png Graphic file (type png)
 
 <use figures/Blue_hall.png>
 Package pdftex.def Info: figures/Blue_hall.png used on input line 1165.
 (pdftex.def)             Requested size: 318.66948pt x 202.98346pt.
  [47 <./figures/Blue_hall.png>]
-<figures/TSL_setup.png, id=1131, 2601.72pt x 1943.26pt>
+<figures/TSL_setup.png, id=1133, 2601.72pt x 1943.26pt>
 File: figures/TSL_setup.png Graphic file (type png)
 
 <use figures/TSL_setup.png>
@@ -1190,234 +1190,240 @@ Chapter 6.
 [50
 
 ] [51] [52] [53] [54] [55]
-<figures/radiation_film2.png, id=1247, 463.7325pt x 654.16396pt>
+<figures/radiation_film2.png, id=1248, 463.7325pt x 654.16396pt>
 File: figures/radiation_film2.png Graphic file (type png)
 
 <use figures/radiation_film2.png>
-Package pdftex.def Info: figures/radiation_film2.png used on input line 1418.
+Package pdftex.def Info: figures/radiation_film2.png used on input line 1421.
 (pdftex.def)             Requested size: 227.62206pt x 321.10211pt.
+
+<figures/position_xy.png, id=1258, 422.32782pt x 316.18124pt>
+File: figures/position_xy.png Graphic file (type png)
+
+<use figures/position_xy.png>
+Package pdftex.def Info: figures/position_xy.png used on input line 1460.
+(pdftex.def)             Requested size: 273.14923pt x 204.50221pt.
  [56] [57 <./figures/radiation_film2.png>]
-<figures/current_volt_vs_dose_tps.png, id=1269, 422.32782pt x 316.18124pt>
+<figures/current_volt_vs_dose_tps.png, id=1273, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_tps.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_tps.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_tps.png used on input lin
-e 1472.
+e 1483.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [58 <./figures/current_volt_vs_dose_tps.png (PNG copy)>]
-<figures/current_volt_vs_dose_mic1.png, id=1278, 422.32782pt x 316.18124pt>
+ [58 <./figures/position_xy.png (PNG copy)>]
+<figures/current_volt_vs_dose_mic1.png, id=1282, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_mic1.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_mic1.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_mic1.png used on input li
-ne 1490.
+ne 1501.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_volt_vs_dose_mic2.png, id=1279, 422.32782pt x 316.18124pt>
+<figures/current_volt_vs_dose_mic2.png, id=1283, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_mic2.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_mic2.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_mic2.png used on input li
-ne 1496.
+ne 1507.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
-
-<figures/current_vs_dose_4245_1.png, id=1281, 422.32782pt x 316.18124pt>
+ [59 <./figures/current_volt_vs_dose_tps.png (PNG copy)>]
+<figures/current_vs_dose_4245_1.png, id=1292, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_4245_1.png Graphic file (type png)
 
 <use figures/current_vs_dose_4245_1.png>
 Package pdftex.def Info: figures/current_vs_dose_4245_1.png used on input line 
-1514.
+1525.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_4245_2.png, id=1282, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_4245_2.png, id=1293, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_4245_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_4245_2.png>
 Package pdftex.def Info: figures/current_vs_dose_4245_2.png used on input line 
-1520.
+1531.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [59 <./figures/current_volt_vs_dose_mic1.png (PNG copy)> <./figures/current_vo
-lt_vs_dose_mic2.png (PNG copy)>]
-<figures/current_vs_dose_t245_1.png, id=1295, 422.32782pt x 316.18124pt>
+ [60 <./figures/current_volt_vs_dose_mic1.png (PNG copy)> <./figures/current_vo
+lt_vs_dose_mic2.png (PNG copy)> <./figures/current_vs_dose_4245_1.png (PNG copy
+)> <./figures/current_vs_dose_4245_2.png (PNG copy)>]
+<figures/current_vs_dose_t245_1.png, id=1304, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_t245_1.png Graphic file (type png)
 
 <use figures/current_vs_dose_t245_1.png>
 Package pdftex.def Info: figures/current_vs_dose_t245_1.png used on input line 
-1538.
+1549.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/output_vs_dose_t245.png, id=1296, 691.83469pt x 514.17094pt>
+<figures/output_vs_dose_t245.png, id=1305, 392.21532pt x 273.27094pt>
 File: figures/output_vs_dose_t245.png Graphic file (type png)
 
 <use figures/output_vs_dose_t245.png>
-Package pdftex.def Info: figures/output_vs_dose_t245.png used on input line 154
-4.
-(pdftex.def)             Requested size: 223.07211pt x 165.7855pt.
+Package pdftex.def Info: figures/output_vs_dose_t245.png used on input line 155
+5.
+(pdftex.def)             Requested size: 223.07211pt x 155.42412pt.
 
-<figures/current_vs_dose_t245_2.png, id=1297, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_t245_2.png, id=1306, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_t245_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_t245_2.png>
 Package pdftex.def Info: figures/current_vs_dose_t245_2.png used on input line 
-1553.
+1564.
 (pdftex.def)             Requested size: 227.62206pt x 170.4169pt.
- [60 <./figures/current_vs_dose_4245_1.png (PNG copy)> <./figures/current_vs_do
-se_4245_2.png (PNG copy)> <./figures/current_vs_dose_t245_1.png (PNG copy)> <./
-figures/output_vs_dose_t245.png (PNG copy)>] <figures/current_vs_dose_q1.png, i
-d=1307, 422.32782pt x 316.18124pt>
+ [61 <./figures/current_vs_dose_t245_1.png (PNG copy)> <./figures/output_vs_dos
+e_t245.png (PNG copy)> <./figures/current_vs_dose_t245_2.png (PNG copy)>]
+<figures/current_vs_dose_q1.png, id=1317, 398.99063pt x 298.86656pt>
 File: figures/current_vs_dose_q1.png Graphic file (type png)
 
 <use figures/current_vs_dose_q1.png>
-Package pdftex.def Info: figures/current_vs_dose_q1.png used on input line 1570
+Package pdftex.def Info: figures/current_vs_dose_q1.png used on input line 1581
 .
-(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
+(pdftex.def)             Requested size: 223.07211pt x 167.09506pt.
 
-<figures/current_vs_dose_q2.png, id=1308, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_q2.png, id=1318, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_q2.png Graphic file (type png)
 
 <use figures/current_vs_dose_q2.png>
-Package pdftex.def Info: figures/current_vs_dose_q2.png used on input line 1576
+Package pdftex.def Info: figures/current_vs_dose_q2.png used on input line 1587
 .
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [61 <./figures/current_vs_dose_t245_2.png (PNG copy)> <./figures/current_vs_do
-se_q1.png (PNG copy)> <./figures/current_vs_dose_q2.png (PNG copy)>]
-<figures/current_vs_dose_sy1.png, id=1316, 422.32782pt x 316.18124pt>
+
+<figures/current_vs_dose_sy1.png, id=1320, 389.20406pt x 282.30469pt>
 File: figures/current_vs_dose_sy1.png Graphic file (type png)
 
 <use figures/current_vs_dose_sy1.png>
-Package pdftex.def Info: figures/current_vs_dose_sy1.png used on input line 160
-0.
-(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
+Package pdftex.def Info: figures/current_vs_dose_sy1.png used on input line 161
+1.
+(pdftex.def)             Requested size: 223.07211pt x 161.807pt.
 
-<figures/current_vs_dose_sy2.png, id=1317, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_sy2.png, id=1321, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_sy2.png Graphic file (type png)
 
 <use figures/current_vs_dose_sy2.png>
-Package pdftex.def Info: figures/current_vs_dose_sy2.png used on input line 160
-6.
+Package pdftex.def Info: figures/current_vs_dose_sy2.png used on input line 161
+7.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
-
-<figures/current_vs_dose_adn.png, id=1321, 422.32782pt x 316.18124pt>
+ [62 <./figures/current_vs_dose_q1.png (PNG copy)> <./figures/current_vs_dose_q
+2.png (PNG copy)>]
+<figures/current_vs_dose_adn.png, id=1332, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_adn.png Graphic file (type png)
 
 <use figures/current_vs_dose_adn.png>
-Package pdftex.def Info: figures/current_vs_dose_adn.png used on input line 162
-3.
+Package pdftex.def Info: figures/current_vs_dose_adn.png used on input line 163
+4.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/dataerror_vs_dose_adn.png, id=1322, 422.32782pt x 316.18124pt>
+<figures/dataerror_vs_dose_adn.png, id=1333, 422.32782pt x 316.18124pt>
 File: figures/dataerror_vs_dose_adn.png Graphic file (type png)
 
 <use figures/dataerror_vs_dose_adn.png>
 Package pdftex.def Info: figures/dataerror_vs_dose_adn.png used on input line 1
-632.
+643.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/clockerror_vs_dose_adn.png, id=1323, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_dose_adn.png, id=1334, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_dose_adn.png Graphic file (type png)
 
 <use figures/clockerror_vs_dose_adn.png>
 Package pdftex.def Info: figures/clockerror_vs_dose_adn.png used on input line 
-1638.
+1649.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [62 <./figures/current_vs_dose_sy1.png (PNG copy)> <./figures/current_vs_dose_
-sy2.png (PNG copy)>] [63 <./figures/current_vs_dose_adn.png (PNG copy)> <./figu
-res/dataerror_vs_dose_adn.png (PNG copy)> <./figures/clockerror_vs_dose_adn.png
- (PNG copy)>]
-<figures/current_vs_dose_max.png, id=1339, 422.32782pt x 316.18124pt>
+ [63 <./figures/current_vs_dose_sy1.png (PNG copy)> <./figures/current_vs_dose_
+sy2.png (PNG copy)> <./figures/current_vs_dose_adn.png (PNG copy)>]
+<figures/current_vs_dose_max.png, id=1343, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_max.png Graphic file (type png)
 
 <use figures/current_vs_dose_max.png>
-Package pdftex.def Info: figures/current_vs_dose_max.png used on input line 165
-7.
+Package pdftex.def Info: figures/current_vs_dose_max.png used on input line 166
+8.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/clockerror_vs_dose_max.png, id=1340, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_dose_max.png, id=1344, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_dose_max.png Graphic file (type png)
 
 <use figures/clockerror_vs_dose_max.png>
 Package pdftex.def Info: figures/clockerror_vs_dose_max.png used on input line 
-1663.
+1674.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [64 <./figures/current_vs_dose_max.png (PNG copy)> <./figures/clockerror_vs_do
-se_max.png (PNG copy)>]
-<figures/curr_volt_vs_dose_ina1.png, id=1350, 422.32782pt x 316.18124pt>
+ [64 <./figures/dataerror_vs_dose_adn.png (PNG copy)> <./figures/clockerror_vs_
+dose_adn.png (PNG copy)> <./figures/current_vs_dose_max.png (PNG copy)> <./figu
+res/clockerror_vs_dose_max.png (PNG copy)>] <figures/curr_volt_vs_dose_ina1.png
+, id=1352, 422.32782pt x 316.18124pt>
 File: figures/curr_volt_vs_dose_ina1.png Graphic file (type png)
 
 <use figures/curr_volt_vs_dose_ina1.png>
 Package pdftex.def Info: figures/curr_volt_vs_dose_ina1.png used on input line 
-1683.
+1694.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/curr_volt_vs_dose_ina2.png, id=1351, 422.32782pt x 316.18124pt>
+<figures/curr_volt_vs_dose_ina2.png, id=1353, 422.32782pt x 316.18124pt>
 File: figures/curr_volt_vs_dose_ina2.png Graphic file (type png)
 
 <use figures/curr_volt_vs_dose_ina2.png>
 Package pdftex.def Info: figures/curr_volt_vs_dose_ina2.png used on input line 
-1689.
+1700.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
-
-<figures/current_vs_dose_tlv1.png, id=1357, 596.98032pt x 398.23781pt>
+ [65 <./figures/curr_volt_vs_dose_ina1.png (PNG copy)> <./figures/curr_volt_vs_
+dose_ina2.png (PNG copy)>]
+<figures/current_vs_dose_tlv1.png, id=1368, 596.98032pt x 398.23781pt>
 File: figures/current_vs_dose_tlv1.png Graphic file (type png)
 
 <use figures/current_vs_dose_tlv1.png>
 Package pdftex.def Info: figures/current_vs_dose_tlv1.png used on input line 17
-10.
+21.
 (pdftex.def)             Requested size: 223.07211pt x 148.81013pt.
 
-<figures/volt_vs_dose_tlv1.png, id=1358, 422.32782pt x 316.18124pt>
+<figures/volt_vs_dose_tlv1.png, id=1369, 422.32782pt x 316.18124pt>
 File: figures/volt_vs_dose_tlv1.png Graphic file (type png)
 
 <use figures/volt_vs_dose_tlv1.png>
-Package pdftex.def Info: figures/volt_vs_dose_tlv1.png used on input line 1716.
+Package pdftex.def Info: figures/volt_vs_dose_tlv1.png used on input line 1727.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_tlv2.png, id=1359, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_tlv2.png, id=1370, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_tlv2.png Graphic file (type png)
 
 <use figures/current_vs_dose_tlv2.png>
 Package pdftex.def Info: figures/current_vs_dose_tlv2.png used on input line 17
-28.
+39.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/volt_vs_dose_tlv2.png, id=1360, 422.32782pt x 316.18124pt>
+<figures/volt_vs_dose_tlv2.png, id=1371, 422.32782pt x 316.18124pt>
 File: figures/volt_vs_dose_tlv2.png Graphic file (type png)
 
 <use figures/volt_vs_dose_tlv2.png>
-Package pdftex.def Info: figures/volt_vs_dose_tlv2.png used on input line 1734.
+Package pdftex.def Info: figures/volt_vs_dose_tlv2.png used on input line 1745.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [65 <./figures/curr_volt_vs_dose_ina1.png (PNG copy)> <./figures/curr_volt_vs_
-dose_ina2.png (PNG copy)>] [66 <./figures/current_vs_dose_tlv1.png (PNG copy)> 
-<./figures/volt_vs_dose_tlv1.png (PNG copy)> <./figures/current_vs_dose_tlv2.pn
-g (PNG copy)> <./figures/volt_vs_dose_tlv2.png (PNG copy)>] [67] [68] [69]
-<figures/lsram_dose_sf2_1.png, id=1409, 422.32782pt x 316.18124pt>
+ [66 <./figures/current_vs_dose_tlv1.png (PNG copy)> <./figures/volt_vs_dose_tl
+v1.png (PNG copy)> <./figures/current_vs_dose_tlv2.png (PNG copy)> <./figures/v
+olt_vs_dose_tlv2.png (PNG copy)>] [67]
+[68] [69] <figures/lsram_dose_sf2_1.png, id=1413, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_1.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_1.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_1.png used on input line 1839.
+Package pdftex.def Info: figures/lsram_dose_sf2_1.png used on input line 1850.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_dose_sf2_1.png, id=1410, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_1.png, id=1414, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_1.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_1.png>
-Package pdftex.def Info: figures/usram_dose_sf2_1.png used on input line 1845.
+Package pdftex.def Info: figures/usram_dose_sf2_1.png used on input line 1856.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/lsram_dose_sf2_2.png, id=1411, 422.32782pt x 316.18124pt>
+<figures/lsram_dose_sf2_2.png, id=1415, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_2.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_2.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_2.png used on input line 1857.
+Package pdftex.def Info: figures/lsram_dose_sf2_2.png used on input line 1868.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_dose_sf2_2.png, id=1412, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_2.png, id=1416, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_2.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_2.png>
-Package pdftex.def Info: figures/usram_dose_sf2_2.png used on input line 1863.
+Package pdftex.def Info: figures/usram_dose_sf2_2.png used on input line 1874.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
  [70 <./figures/lsram_dose_sf2_1.png (PNG copy)> <./figures/usram_dose_sf2_1.pn
 g (PNG copy)>] [71 <./figures/lsram_dose_sf2_2.png (PNG copy)> <./figures/usram
@@ -1431,8 +1437,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2032  CS  = 8.46*10^{-11} ±
-                              1.26\cdot 10^{-11}
+l.2043  CS  = 8.46\cdot10^{-11} ±
+                                  1.26\cdot 10^{-11}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -1444,8 +1450,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2038 ...M and micro SRAM are respectively $4.18±
-                                                  0.73\cdot10^{-14}$ and $(9...
+l.2049 ... run 1 and 2 are respectively are $3.68±
+                                                  0.64\cdot10^{-14}$ and $3....
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1458,8 +1464,36 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2038 ...ely $4.18±0.73\cdot10^{-14}$ and $(9.62±
-                                                  1.32)\cdot10^-{15}$, which...
+l.2049 ... are $3.68±0.64\cdot10^{-14}$ and $3.37±
+                                                  0.59\cdot10^{-14}$, and cr...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2049 ...for run 1 and 2 respectively  are $1.03±
+                                                  0.18\cdot10^{-14}$ and $(1...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2049 ...are $1.03±0.18\cdot10^{-14}$ and $(1.51±
+                                                  2.71)\cdot10^-{14}$. The c...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1473,8 +1507,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2109  CS  = 2.45 *10^{-10} ±
-                               1.41\cdot 10^{-11}
+l.2120  CS  = 2.45 \dot10^{-10} ±
+                                  1.41\cdot 10^{-11}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -1486,41 +1520,41 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2113  CS = 2.33 *10^{-10} ±
-                              1.34\cdot 10^{-11}
+l.2124  CS = 2.33 \dot10^{-10} ±
+                                 1.34\cdot 10^{-11}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[78] <figures/lsram_dose_sf2_3.png, id=1497, 422.32782pt x 316.18124pt>
+[78] <figures/lsram_dose_sf2_3.png, id=1501, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_3.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_3.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_3.png used on input line 2129.
+Package pdftex.def Info: figures/lsram_dose_sf2_3.png used on input line 2140.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_dose_sf2_3.png, id=1498, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_3.png, id=1502, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_3.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_3.png>
-Package pdftex.def Info: figures/usram_dose_sf2_3.png used on input line 2135.
+Package pdftex.def Info: figures/usram_dose_sf2_3.png used on input line 2146.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/lsram_dose_sf2_4.png, id=1499, 422.32782pt x 316.18124pt>
+<figures/lsram_dose_sf2_4.png, id=1503, 422.32782pt x 316.18124pt>
 File: figures/lsram_dose_sf2_4.png Graphic file (type png)
 
 <use figures/lsram_dose_sf2_4.png>
-Package pdftex.def Info: figures/lsram_dose_sf2_4.png used on input line 2147.
+Package pdftex.def Info: figures/lsram_dose_sf2_4.png used on input line 2158.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_dose_sf2_4.png, id=1500, 422.32782pt x 316.18124pt>
+<figures/usram_dose_sf2_4.png, id=1504, 422.32782pt x 316.18124pt>
 File: figures/usram_dose_sf2_4.png Graphic file (type png)
 
 <use figures/usram_dose_sf2_4.png>
-Package pdftex.def Info: figures/usram_dose_sf2_4.png used on input line 2153.
+Package pdftex.def Info: figures/usram_dose_sf2_4.png used on input line 2164.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
  [79] [80 <./figures/lsram_dose_sf2_3.png (PNG copy)> <./figures/usram_dose_sf2
 _3.png (PNG copy)> <./figures/lsram_dose_sf2_4.png (PNG copy)> <./figures/usram
-_dose_sf2_4.png (PNG copy)>]
+_dose_sf2_4.png (PNG copy)>] [81]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -1529,8 +1563,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2235 CS_{LSRAM} =  = (3.03 ±
-                               0.45) *10^{-14}
+l.2246 CS_{LSRAM} =  = (3.03 ±
+                               0.45) \dot10^{-14}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -1542,12 +1576,12 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2239 CS_{LSRAM} =  = (1.26 ±
-                               0.18) *10^{-14}
+l.2250 CS_{LSRAM} =  = (1.26 ±
+                               0.18) \dot10^{-14}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[81] [82] [83] [84]
+[82] [83] [84]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -1556,22 +1590,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2326 ...ults. We got a cross section of $(3.03 ±
-                                                   0.45) *10^{-14}\centi\met...
-
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2326 ...meter^2$ on the large SRAM, and $(1.26 ±
-                                                   0.19) *10^{-14}\centi\met...
+l.2337 ...ults. We got a cross section of $(3.03 ±
+                                                   0.45) \dot10^{-14}\centi\...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1584,7 +1604,21 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2326 ...which gave us cross sections of $(4.18 ±
+l.2337 ...meter^2$ on the large SRAM, and $(1.26 ±
+                                                   0.19) \dot10^{-14}\centi\...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2337 ...which gave us cross sections of $(4.18 ±
                                                    0.73)\cdot10^{-14}\centi\...
 
 You need to provide a definition with \DeclareInputText 
@@ -1598,7 +1632,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2326 ...eter^2$ for the large SRAM, and $(9.62 ±
+l.2337 ...eter^2$ for the large SRAM, and $(9.62 ±
                                                    1.32)\cdot10^-{15}\centi\...
 
 You need to provide a definition with \DeclareInputText 
@@ -1613,73 +1647,73 @@ Appendix A.
 [87
 
 ] [88]
-<figures/1v2_current_dose_sf2_1.png, id=1567, 422.32782pt x 316.18124pt>
+<figures/1v2_current_dose_sf2_1.png, id=1572, 422.32782pt x 316.18124pt>
 File: figures/1v2_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_1.png used on input line 
-2405.
+2416.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/3v3_current_dose_sf2_1.png, id=1568, 422.32782pt x 316.18124pt>
+<figures/3v3_current_dose_sf2_1.png, id=1573, 422.32782pt x 316.18124pt>
 File: figures/3v3_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_1.png used on input line 
-2410.
+2421.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/cycles_dose_sf2_1.png, id=1569, 422.32782pt x 316.18124pt>
+<figures/cycles_dose_sf2_1.png, id=1574, 422.32782pt x 316.18124pt>
 File: figures/cycles_dose_sf2_1.png Graphic file (type png)
 
 <use figures/cycles_dose_sf2_1.png>
-Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2421.
+Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2432.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/cycles_dose_sf2_2.png, id=1570, 422.32782pt x 316.18124pt>
+<figures/cycles_dose_sf2_2.png, id=1575, 422.32782pt x 316.18124pt>
 File: figures/cycles_dose_sf2_2.png Graphic file (type png)
 
 <use figures/cycles_dose_sf2_2.png>
-Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2426.
+Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2437.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/flux_vs_time_1.png, id=1571, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_1.png, id=1576, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_1.png Graphic file (type png)
 
 <use figures/flux_vs_time_1.png>
-Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2435.
+Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2446.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
 
-<figures/flux_vs_time_2.png, id=1572, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_2.png, id=1577, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_2.png Graphic file (type png)
 
 <use figures/flux_vs_time_2.png>
-Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2442.
+Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2453.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
 
-<figures/flux_all_3.png, id=1573, 422.32782pt x 316.18124pt>
+<figures/flux_all_3.png, id=1578, 422.32782pt x 316.18124pt>
 File: figures/flux_all_3.png Graphic file (type png)
 
 <use figures/flux_all_3.png>
-Package pdftex.def Info: figures/flux_all_3.png used on input line 2449.
+Package pdftex.def Info: figures/flux_all_3.png used on input line 2460.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
 
-<figures/current_vs_time_tlv1.png, id=1574, 596.98032pt x 398.23781pt>
+<figures/current_vs_time_tlv1.png, id=1579, 596.98032pt x 398.23781pt>
 File: figures/current_vs_time_tlv1.png Graphic file (type png)
 
 <use figures/current_vs_time_tlv1.png>
 Package pdftex.def Info: figures/current_vs_time_tlv1.png used on input line 24
-59.
+70.
 (pdftex.def)             Requested size: 223.07211pt x 148.81013pt.
 
-<figures/current_vs_time_tlv2.png, id=1575, 422.32782pt x 316.18124pt>
+<figures/current_vs_time_tlv2.png, id=1580, 422.32782pt x 316.18124pt>
 File: figures/current_vs_time_tlv2.png Graphic file (type png)
 
 <use figures/current_vs_time_tlv2.png>
 Package pdftex.def Info: figures/current_vs_time_tlv2.png used on input line 24
-64.
+75.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
  [89 <./figures/1v2_current_dose_sf2_1.png (PNG copy)> <./figures/3v3_current_d
 ose_sf2_1.png (PNG copy)> <./figures/cycles_dose_sf2_1.png (PNG copy)> <./figur
@@ -1687,20 +1721,20 @@ es/cycles_dose_sf2_2.png (PNG copy)>]
 [90 <./figures/flux_vs_time_1.png (PNG copy)>] [91 <./figures/flux_vs_time_2.pn
 g (PNG copy)>] [92 <./figures/flux_all_3.png (PNG copy)> <./figures/current_vs_
 time_tlv1.png (PNG copy)> <./figures/current_vs_time_tlv2.png (PNG copy)>]
-<figures/1v2_current_dose_sf2_2.png, id=1597, 422.32782pt x 316.18124pt>
+<figures/1v2_current_dose_sf2_2.png, id=1601, 422.32782pt x 316.18124pt>
 File: figures/1v2_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_2.png used on input line 
-2482.
+2493.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/3v3_current_dose_sf2_2.png, id=1598, 422.32782pt x 316.18124pt>
+<figures/3v3_current_dose_sf2_2.png, id=1602, 422.32782pt x 316.18124pt>
 File: figures/3v3_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_2.png used on input line 
-2487.
+2498.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
  [93 <./figures/1v2_current_dose_sf2_2.png (PNG copy)> <./figures/3v3_current_d
 ose_sf2_2.png (PNG copy)>]
@@ -1731,27 +1765,27 @@ Appendix B.
 (./Master_thesis_Inge_Nikolai_Torsvik.bbl [103
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2509.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2520.
  [104]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2509.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2520.
 
 (./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2509.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2509.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2520.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2520.
 
 Package rerunfilecheck Info: File `Master_thesis_Inge_Nikolai_Torsvik.out' has 
 not changed.
 (rerunfilecheck)             Checksum: A57313202D7890B44C1AB621B5CDF367;5393.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2509.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2520.
  ) 
 Here is how much of TeX's memory you used:
- 10658 strings out of 493493
- 160466 string characters out of 3143797
- 256583 words of memory out of 3000000
- 13295 multiletter control sequences out of 15000+200000
+ 10666 strings out of 493493
+ 160646 string characters out of 3143797
+ 256653 words of memory out of 3000000
+ 13301 multiletter control sequences out of 15000+200000
  13900 words of font info for 49 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,12n,38p,1080b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,38p,1079b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
@@ -1771,11 +1805,11 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (111 pages, 40434954 b
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (111 pages, 40438530 b
 ytes).
 PDF statistics:
- 1926 PDF objects out of 2073 (max. 8388607)
- 1678 compressed objects within 17 object streams
- 438 named destinations out of 1000 (max. 500000)
- 982 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1932 PDF objects out of 2073 (max. 8388607)
+ 1683 compressed objects within 17 object streams
+ 439 named destinations out of 1000 (max. 500000)
+ 987 words of extra memory for PDF output out of 10000 (max. 10000000)
 
