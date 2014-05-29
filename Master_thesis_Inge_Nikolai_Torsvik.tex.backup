@@ -1923,17 +1923,17 @@ The get a more precise calculation of cross section for the micro SRAM, we shoul
 % A maybe more interesting term to look at, is cross section per bit. We used a total of $16384*38 = 622592$ bit on the large SRAM and $2048*32 = 65536$ bit on the micro SRAM. This gives us,
 % 
 % \begin{equation}
-%  CS_{LSRAM} = \frac{2.6*10^{-8}}{622592} = 4.18 *10^{-14}
+%  CS_{LSRAM} = \frac{2.6\dot10^{-8}}{622592} = 4.18 \dot10^{-14}
 % \end{equation}
 % 
 % \begin{equation}
-%  CS_{uSRAM} = \frac{6.31*10^{-10}}{65536} = 9.62 *10^-{15}
+%  CS_{uSRAM} = \frac{6.31\dot10^{-10}}{65536} = 9.62 \dot10^-{15}
 % \end{equation}
 
 % Cross section for run1 was also calculated for reference. 
 % 
 % \begin{equation}
-%  CS_{tot} = \frac{2453}{1.11*10^{-11}}=0,000000022 = 2.2*10-8
+%  CS_{tot} = \frac{2453}{1.11\dot10^{-11}}=0,000000022 = 2.2\dot10-8
 % \end{equation}
 \FloatBarrier
 \subsubsection{Logic Element}
@@ -1961,9 +1961,9 @@ $\Delta$\textsuperscript{*} & 620 & 7.81  \\ \hline
 
 \FloatBarrier
 \subsubsection{PLL and Latchup}
-The current was measured through the whole irradiation of the SF2, graphs of current as function of dose can be found in appendix \ref{radiation_results_ocl}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1 and the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be shut down and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 we got another latchup increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
+The current was measured while irradiating the SF2, graphs of current as function of dose can be found in appendix \ref{radiation_results_ocl}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1 where the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be turned off and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 we got another latchup increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
 
-In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. The PLL that was monitored was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 losses per PLL over a dose of 45 kRad. A noticeable thing is that the first lock loss already occurred after a dose of 0.7 kRad. We also have a period between 5.0 and 18.7 where we didn't detect any PLL lock loss at all, which is rather strange.
+In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. The PLL which was monitored was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 losses per PLL over a dose of 45 kRad. A noticeable thing is that the first lock loss already occurred after a dose of 0.7 kRad. We also have a period between 5.0 and 18.7 where we didn't detect any PLL lock loss at all, which is rather strange.
 
 \begin{table}[!htbp]
  \centering
@@ -2007,10 +2007,10 @@ PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
 \label{PLL_error2}
 \end{table}
 
-The cross section for PLL lock loss can be found, even though we have little data to make a good statistics. The total fluence for the whole test $1.36\cdot10^{11}$, which gives us a cross section per PLL to be,
+The cross section for PLL lock-losses can be found, even though we have little data to make a good statistics. The total fluence for the whole test $1.36\cdot10^{11}$, which gives us a cross section per PLL to be,
 
 \begin{equation}
-face CS = \frac{\frac{PLL loss}{2}}{Fluence} = \frac{11.5}{1.36\cdot10^{11}} = 8.46 *10^{-11}
+face CS = \frac{\frac{PLL loss}{2}}{Fluence} = \frac{11.5}{1.36\cdot10^{11}} = 8.46 \dot10^{-11}
 \end{equation}
 
 We will also have some uncertainty in the measurement. These are:
@@ -2026,16 +2026,20 @@ We will also have some uncertainty in the measurement. These are:
  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})^2+\sigma_{ratio}^2+\sigma_{lin}^2+\sigma_{pos}^2}
 \end{equation}
 
-this gives the cross section for a PLL lock loss with uncertainty to be:
+this gives the cross section for a PLL lock-loss with uncertainty to be:
 
 \begin{equation}
- CS  = 8.46*10^{-11} ± 1.26\cdot 10^{-11}
+ CS  = 8.46\cdot10^{-11} ± 1.26\cdot 10^{-11}
 \end{equation}
 
 \FloatBarrier
+$3.68\cdot10^{-14}$ & $6.42\cdot10^{-15}$ \\\hline
+ $micro SRAM_{run1}$ & $6.73\cdot10^{-10}$ & $1.03\cdot10^{-14}$ & $1.80\cdot10^{-15}$ \\\hline
+ $Large SRAM_{run2}$ & $2.10\cdot10^{-8}$  & $3.37\cdot10^{-14}$ & $5.88\cdot10^{-15}$ \\\hline
+ $micro SRAM_{run2}$ & $9.88\cdot10^{-10}$ & $1.51\cdot10^{-14}$ & $2.71\cdot10^{-15}$
 
 \subsubsection{Discussion on the Results}
-The SRAM test gave us around the expected numbers of SEUs, but we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM and micro SRAM are respectively $4.18±0.73\cdot10^{-14}$ and $(9.62±1.32)\cdot10^-{15}$, which is around the same magnitude as other SRAMs which has been tested \cite{arild_master} and \cite{roed_doctor}, which supports the results.
+The SRAM test gave us around the expected numbers of SEUs, but we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM for run 1 and 2 are respectively are $3.68±0.64\cdot10^{-14}$ and $3.37±0.59\cdot10^{-14}$, and cross section for micro SRAM for run 1 and 2 respectively  are $1.03±0.18\cdot10^{-14}$ and $(1.51±2.71)\cdot10^-{14}$. The calculated values for both large SRAM and micro SRAM from run1 and run2 are very close to eachother, this support the  which is around the same magnitude as other SRAMs which has been tested \cite{arild_master} and \cite{roed_doctor}, which supports the results.
 
 But since we got some problems with the microcontroller subsystem, we have some potential improvements for our test. We discovered that the microcontroller subsystem wasn't so reliable, and the data extracted should have been done without going through the microcontroller subsystem. This could be done by making a serial communication code in VHDL, and using GPIO pins as transmitting and receiving lines. If another test shall be done on the SF2 SRAM memory, this could been an option.
 
@@ -2083,11 +2087,11 @@ The first PLL loss occurred after a dose of 0,043 kRad for the first test and af
 We can find a cross section for PLL lock loss. The total fluence for the two tests is $2.39\cdot10^{11}$ and $2.93\cdot10^{11}$, which gives us a cross section per PLL to be 
 
 \begin{equation}
- CS = \frac{\frac{PLL loss}{3}}{Fluence} = \frac{58,67}{2.39\cdot10^{11}} = 2.45 *10^{-10}
+ CS = \frac{\frac{PLL loss}{3}}{Fluence} = \frac{58,67}{2.39\cdot10^{11}} = 2.45 \dot10^{-10}
 \end{equation}
 
 \begin{equation}
- CS = \frac{\frac{PLL loss}{3}}{Fluence} = \frac{205}{68,33\cdot10^{11}} = 2.33 *10^{-10}
+ CS = \frac{\frac{PLL loss}{3}}{Fluence} = \frac{205}{68,33\cdot10^{11}} = 2.33 \dot10^{-10}
 \end{equation}
 
 We will also have some uncertainty in the measurement. These are:
@@ -2106,11 +2110,11 @@ We will also have some uncertainty in the measurement. These are:
 this gives the cross section with uncertainty to be:
 
 \begin{equation}
- CS  = 2.45 *10^{-10} ± 1.41\cdot 10^{-11}
+ CS  = 2.45 \dot10^{-10} ± 1.41\cdot 10^{-11}
 \end{equation}
 
 \begin{equation}
- CS = 2.33 *10^{-10} ± 1.34\cdot 10^{-11}
+ CS = 2.33 \dot10^{-10} ± 1.34\cdot 10^{-11}
 \end{equation}
 
 We discovered on the first test, that the 0.1 $\ohm$ and 0.16 $\ohm$ resistors which were used, respectively on the 1.2 V and 3.3 V power source, were too high, since the maximum voltage the ADC could measure are 81.92 $\milli\volt$. When a latchup occurred the ADC was maxed, meaning we only knew that the voltage is above 81.9 V (current above 819 $\milli\ampere$, but not how much above. Therefore both of these resistors where replaced with a resistor of 0.025 $\ohm$ on the second starter-kit test.
@@ -2220,10 +2224,10 @@ Then we can calculate the cross section per bit with uncertainty from the values
  \centering
  \begin{tabular}{|l|l|l|l|}  \hline 
  device & CS [$cm^2$] & CS per bit [$cm^2/bit$] & $\sigma_{CS} [cm^2/bit]$ \\\hline\hline
- Large SRAM1 & $2.01\cdot10^{-8}$ & $3.22 *10^{-14}$ & $3.35\cdot10^{-15}$ \\\hline
- Large SRAM2 & $1.76\cdot10^{-8}$ & $2.83 *10^{-14}$ & $2.94\cdot10^{-15}$ \\\hline
- micro SRAM1 & $8.28\cdot10^{-10}$ & $1.26 *10^{-14}$ & $1.32\cdot10^{-15}$ \\\hline
- micro SRAM2 & $8.28\cdot10^{-10}$ & $1.26 *10^{-14}$ & $1.31\cdot10^{-15}$ \\\hline
+ Large SRAM1 & $2.01\cdot10^{-8}$ & $3.22 \dot10^{-14}$ & $3.35\cdot10^{-15}$ \\\hline
+ Large SRAM2 & $1.76\cdot10^{-8}$ & $2.83 \dot10^{-14}$ & $2.94\cdot10^{-15}$ \\\hline
+ micro SRAM1 & $8.28\cdot10^{-10}$ & $1.26 \dot10^{-14}$ & $1.32\cdot10^{-15}$ \\\hline
+ micro SRAM2 & $8.28\cdot10^{-10}$ & $1.26 \dot10^{-14}$ & $1.31\cdot10^{-15}$ \\\hline
  \end{tabular}
  \caption{Calculation of Cross section with uncertainty}
  \label{Cross_section_calc2}
@@ -2232,27 +2236,27 @@ Then we can calculate the cross section per bit with uncertainty from the values
 This gives us a average a cross section of the large SRAM and micro SRAM to be:
 
 \begin{equation}
-CS_{LSRAM} =  = (3.03 ± 0.45) *10^{-14}
+CS_{LSRAM} =  = (3.03 ± 0.45) \dot10^{-14}
 \end{equation}
 
 \begin{equation}
-CS_{LSRAM} =  = (1.26 ± 0.18) *10^{-14}
+CS_{LSRAM} =  = (1.26 ± 0.18) \dot10^{-14}
 \end{equation}
 
 % \begin{equation}
-%   CS_{LSRAM1} = \frac{2.01\cdot10^{-8}}{622592} = 3.22 *10^{-14}
+%   CS_{LSRAM1} = \frac{2.01\cdot10^{-8}}{622592} = 3.22 \dot10^{-14}
 % \end{equation}
 % 
 % \begin{equation}
-%   CS_{LSRAM2} = \frac{1.76\cdot10^{-8}}{622592} = 2.83 *10^{-14}
+%   CS_{LSRAM2} = \frac{1.76\cdot10^{-8}}{622592} = 2.83 \dot10^{-14}
 % \end{equation}
 % 
 % \begin{equation}
-%  CS_{uSRAM1} = \frac{8.28\cdot10^{-10}}{65536} = 1.26 *10^{-14}
+%  CS_{uSRAM1} = \frac{8.28\cdot10^{-10}}{65536} = 1.26 \dot10^{-14}
 % \end{equation}
 % 
 % \begin{equation}
-%  CS_{uSRAM2} = \frac{8.28\cdot10^{-10}}{65536} = 1.26 *10^{-14}
+%  CS_{uSRAM2} = \frac{8.28\cdot10^{-10}}{65536} = 1.26 \dot10^{-14}
 % \end{equation}
 
 
@@ -2323,7 +2327,7 @@ A issues that we uncounted in the tests at TSL, and not so much in OCL, is latch
 
 We also discovered a way to reduce latchups. By changing the 1.2 source voltage to 1.1 V, we effectively reduced number of latchup by $\sim$5, and this can maybe be brought even lower by reducing the voltage even further. More test on this aspect should be performed.
 
-The SRAM test on the two starter-kits did go fine, we had a lot of downtime due to errors, but the cross section calculations for both of our test were quite close to each other, supporting our results. We got a cross section of $(3.03 ± 0.45) *10^{-14}\centi\meter^2$ on the large SRAM, and $(1.26 ± 0.19) *10^{-14}\centi\meter^2$ for the micro SRAM. Compared to the results from OCL, which gave us cross sections of $(4.18 ± 0.73)\cdot10^{-14}\centi\meter^2$ for the large SRAM, and $(9.62 ± 1.32)\cdot10^-{15}\centi\meter^2$ for the micro SRAM, the results doesn't seems so bad.
+The SRAM test on the two starter-kits did go fine, we had a lot of downtime due to errors, but the cross section calculations for both of our test were quite close to each other, supporting our results. We got a cross section of $(3.03 ± 0.45) \dot10^{-14}\centi\meter^2$ on the large SRAM, and $(1.26 ± 0.19) \dot10^{-14}\centi\meter^2$ for the micro SRAM. Compared to the results from OCL, which gave us cross sections of $(4.18 ± 0.73)\cdot10^{-14}\centi\meter^2$ for the large SRAM, and $(9.62 ± 1.32)\cdot10^-{15}\centi\meter^2$ for the micro SRAM, the results doesn't seems so bad.
 
 We would think that we would have higher cross section at OCL than in TSL, because energy deposited per proton is higher for a 25 MeV proton beam than with a 170 MeV proton beam, this can be seen from figure \ref{energy_loss} (It shows different particles in air, but the principle is the same for silicon). The cross section for large SRAM supports this, but the micro SRAM doesn't. But then again, we had really low statistics on the micro SRAM, making the calculations not so trustworthy. Another test should be performed on the micro SRAM with higher intensity or over a longer period to check if the cross section is correct.
 

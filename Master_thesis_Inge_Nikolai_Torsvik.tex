@@ -1426,7 +1426,7 @@ In \autoref{test_14.11} you can see the results from our calibration 14.11.2013.
 When we irradiated the different \acp{PCB}, we only measured scintillator counts, as a indication of the beam intensity. When we were finished exposing a component, the relation value was used to convert from scintillator counts to \acp{SEU}. Then fluence could be calculated since the cross section for a proton inducing a SEU on the SRAM is known. Cross section for the SRAM radiation detector is given in \autoref{CS}.
 
 \begin{equation}
-CS = 1.14e-6
+CS = 1.14e{-6}
 \label{CS}
 \end{equation}
 
@@ -1961,9 +1961,9 @@ $\Delta$\textsuperscript{*} & 620 & 7.81  \\ \hline
 
 \FloatBarrier
 \subsubsection{PLL and Latchup}
-The current was measured through the whole irradiation of the SF2, graphs of current as function of dose can be found in appendix \ref{radiation_results_ocl}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1 and the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be shut down and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 we got another latchup increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
+The current was measured while irradiating the SF2, graphs of current as function of dose can be found in appendix \ref{radiation_results_ocl}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1 where the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be turned off and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 we got another latchup increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
 
-In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. The PLL that was monitored was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 losses per PLL over a dose of 45 kRad. A noticeable thing is that the first lock loss already occurred after a dose of 0.7 kRad. We also have a period between 5.0 and 18.7 where we didn't detect any PLL lock loss at all, which is rather strange.
+In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. The PLL which was monitored was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 losses per PLL over a dose of 45 kRad. A noticeable thing is that the first lock loss already occurred after a dose of 0.7 kRad. We also have a period between 5.0 and 18.7 where we didn't detect any PLL lock loss at all, which is rather strange.
 
 \begin{table}[!htbp]
  \centering
@@ -2026,16 +2026,20 @@ We will also have some uncertainty in the measurement. These are:
  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})^2+\sigma_{ratio}^2+\sigma_{lin}^2+\sigma_{pos}^2}
 \end{equation}
 
-this gives the cross section for a PLL lock loss with uncertainty to be:
+this gives the cross section for a PLL lock-loss with uncertainty to be:
 
 \begin{equation}
  CS  = 8.46\cdot10^{-11} ± 1.26\cdot 10^{-11}
 \end{equation}
 
 \FloatBarrier
+$3.68\cdot10^{-14}$ & $6.42\cdot10^{-15}$ \\\hline
+ $micro SRAM_{run1}$ & $6.73\cdot10^{-10}$ & $1.03\cdot10^{-14}$ & $1.80\cdot10^{-15}$ \\\hline
+ $Large SRAM_{run2}$ & $2.10\cdot10^{-8}$  & $3.37\cdot10^{-14}$ & $5.88\cdot10^{-15}$ \\\hline
+ $micro SRAM_{run2}$ & $9.88\cdot10^{-10}$ & $1.51\cdot10^{-14}$ & $2.71\cdot10^{-15}$
 
 \subsubsection{Discussion on the Results}
-The SRAM test gave us around the expected numbers of SEUs, but we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM and micro SRAM are respectively $4.18±0.73\cdot10^{-14}$ and $(9.62±1.32)\cdot10^-{15}$, which is around the same magnitude as other SRAMs which has been tested \cite{arild_master} and \cite{roed_doctor}, which supports the results.
+The SRAM test gave us around the expected numbers of SEUs, but we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM for run 1 and 2 are respectively are $3.68±0.64\cdot10^{-14}$ and $3.37±0.59\cdot10^{-14}$, and cross section for micro SRAM for run 1 and 2 respectively  are $1.03±0.18\cdot10^{-14}$ and $(1.51±2.71)\cdot10^-{14}$. The calculated values for both large SRAM and micro SRAM from run1 and run2 are very close to eachother, this support the  which is around the same magnitude as other SRAMs which has been tested \cite{arild_master} and \cite{roed_doctor}, which supports the results.
 
 But since we got some problems with the microcontroller subsystem, we have some potential improvements for our test. We discovered that the microcontroller subsystem wasn't so reliable, and the data extracted should have been done without going through the microcontroller subsystem. This could be done by making a serial communication code in VHDL, and using GPIO pins as transmitting and receiving lines. If another test shall be done on the SF2 SRAM memory, this could been an option.
 
