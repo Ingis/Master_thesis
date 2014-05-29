@@ -48,21 +48,23 @@
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Current vs dose for SN74AVC2T245 test board2\relax }}{61}{figure.caption.81}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces QS3VH257 - Current vs Dose\relax }}{61}{figure.caption.82}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces SY89831 - Current vs Dose\relax }}{62}{figure.caption.83}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces ADN2814 - Current vs Dose\relax }}{62}{figure.caption.84}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces ADN2814 - Current vs Dose\relax }}{63}{figure.caption.84}
 \contentsline {figure}{\numberline {6.10}{\ignorespaces ADN2814 - Relative errors vs Dose\relax }}{63}{figure.caption.85}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces MAX3748\relax }}{63}{figure.caption.86}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces INA210 - Current vs Dose\relax }}{64}{figure.caption.87}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces TLV3011 - Current as function of dose\relax }}{64}{figure.caption.88}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces LSRAM and micro SRAM test results before shutdown\relax }}{68}{figure.caption.92}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{69}{figure.caption.93}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{77}{figure.caption.100}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{78}{figure.caption.101}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces MAX3748\relax }}{64}{figure.caption.86}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces INA210 - Current and output voltage vs Dose\relax }}{65}{figure.caption.87}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces TLV3011 - Test board 1\relax }}{66}{figure.caption.88}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces TLV3011 - Test board 2\relax }}{66}{figure.caption.89}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces LSRAM and micro SRAM test results before shutdown\relax }}{70}{figure.caption.93}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{71}{figure.caption.94}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{80}{figure.caption.101}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{80}{figure.caption.102}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces SF2 - Cycles vs dose\relax }}{87}{figure.caption.109}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces SF2 - cycles vs dose\relax }}{87}{figure.caption.110}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces flux for components radiated 15.11.2013\relax }}{88}{figure.caption.111}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces flux for components radiated 28.11.2013\relax }}{89}{figure.caption.112}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces SF2 - Current vs dose\relax }}{90}{figure.caption.113}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces flux for components radiated 09.04.2014\relax }}{90}{figure.caption.114}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces SF2 - Cycles vs dose\relax }}{89}{figure.caption.110}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces SF2 - cycles vs dose\relax }}{89}{figure.caption.111}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces flux for components radiated 15.11.2013\relax }}{90}{figure.caption.112}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces flux for components radiated 28.11.2013\relax }}{91}{figure.caption.113}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces flux for components radiated 09.04.2014\relax }}{92}{figure.caption.114}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces TLV3011 - Current as function of dose\relax }}{92}{figure.caption.115}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces SF2 - Current vs dose\relax }}{93}{figure.caption.116}
 \addvspace {10\p@ }
