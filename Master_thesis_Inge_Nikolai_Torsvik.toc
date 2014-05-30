@@ -73,7 +73,7 @@
 \contentsline {subsubsection}{\numberline {6.2.2.2}MIC69302WU - Voltage Regulator}{59}{subsubsection.6.2.2.2}
 \contentsline {subsubsection}{\numberline {6.2.2.3}SN74AVCB164245 - Bus Transceiver}{60}{subsubsection.6.2.2.3}
 \contentsline {subsubsection}{\numberline {6.2.2.4}SN74AVC2T245 - Bus Transceiver}{61}{subsubsection.6.2.2.4}
-\contentsline {subsubsection}{\numberline {6.2.2.5}QS3VH257 - Multiplexer/Demultiplexer}{61}{subsubsection.6.2.2.5}
+\contentsline {subsubsection}{\numberline {6.2.2.5}QS3VH257 - Multiplexer/Demultiplexer}{62}{subsubsection.6.2.2.5}
 \contentsline {subsubsection}{\numberline {6.2.2.6}SY89831 - 1 to 4 fan-out Buffer}{62}{subsubsection.6.2.2.6}
 \contentsline {subsubsection}{\numberline {6.2.2.7}ADN2814 - Limiting Amplifier}{63}{subsubsection.6.2.2.7}
 \contentsline {subsubsection}{\numberline {6.2.2.8}MAX3748 - Limiting Amplifier}{64}{subsubsection.6.2.2.8}

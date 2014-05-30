@@ -1468,13 +1468,17 @@ In this section the results from the radiation tests at \ac{OCL} will be present
 Test of all the PCBs will be presented first, followed by a discussion. The result is presented after type, meaning that two PCBs containing the same component will be presented together. The purpose of these tests has been to check for radiation tolerance. The focus has therefore been to check the output data/voltage and current compared with the received dose. 
 % Flux versus time for the different tests can be seen in the summery of this section \ref{flux_all1},\ref{flux_all2} and \ref{flux_all3}
 
-An overview of the test can be found at the end of this section, with the total exposed time, the total irradiated dose and error status.
+An overview of the test can be found at the end of this section, with the total exposed time, the total irradiated dose and error status. For information regarding flux for the different tests, see Appendix \ref{radiation_results_ocl} and \autoref{flux_all1}, \ref{flux_all2} and \ref{flux_all3}
 
 \subsubsection{TPS51200 - Voltage Regulator}
 This was the first component that was tested for radiation, we started therefore out with a very low intensity to be sure that everything worked as it should.
 The intensity was increased for the later tests. Two PCBs of this type was supposed to be tested, but only one of these worked when we were at OCL.
 
-In \autoref{TPS51200_1} you can see the input current and output voltage versus the received dose in kRad. The total exposed dose for this board is 42.8 kRad, and it still worked as it should, with only small increase in current. We see also a small increase in voltage and decrease in current already after 5 kRad, whats causing this effect could be reduced resistance in the component caused by the radiation. The reduction/increase is nevertheless quite small, and would not harm, if it should happen in a real design.
+In \autoref{TPS51200_1} you can see the input current and output voltage versus the received dose in kRad. The total exposed time and dose for this board was respectively 34 min and 42.8 kRad, and it still worked as it should with only small increase in current and decrease in voltage. 
+
+A small increase in voltage and decrease in current can be seen already after 5 kRad, what is causing this effect could be increased resistance in the component caused by the radiation. The reduction/increase is nevertheless quite small, and would not harm if it should happen in a real design.
+
+After 25 kRad, the current started to increase and voltage decreased, this is a more expected effect to radiation, which was discussed in \autoref{TID}. The cause may be threshold decrease or current leakage in the internal transistors. The total exposed time was 34 min.
 % The green graph, representing voltage should had higher resolution in the saved data, so we could see more clearly the effects of radiation, nevertheless it the deviations are quite small. 
 % Normally we would irradiate until we would see some more irradiation effects, but since no errors occurred until 40 kRad, it was no point in exposing anymore.
 
@@ -1490,8 +1494,8 @@ In \autoref{TPS51200_1} you can see the input current and output voltage versus 
 \subsubsection{MIC69302WU - Voltage Regulator}
 During the test of the first board we increased the intensity of the beam quite drastically at the end of the irradiation, which can be seen from the flux graph, in figure \ref{flux_all1}.
 
-For this component we also see the effect with a increase in voltage and decrease in current (see \autoref{MIC69302WU_both}). The reason for this is presumed to be the same as for the test with TPS51200 that the resistance in the component is decreasing. For both of our test we also sees some glitching on both the current and voltage. Maybe this is caused by changed threshold in a internal transistor resulting in current leakage, and a feedback loop is trying to compensate, resulting in a small period of unstable current and voltage. The current decreased to about the half for the first test and to about three quarters on the second test, but that was with a dose of 160 kRad and 380 kRad respectively, which is way more than the radiation level in the TPC. The output voltage is mostly stable, there were an increase of $\sim2\%$ on both of the tests, and that with a dose of 160 and 380 kRad. A noticeable effect is that it seems that for both of out tests the current and voltage stabilize after a while, and 
-that with an acceptable decrease in current and increase in voltage.
+For this component we also see the effect with a increase in voltage and decrease in current (see \autoref{MIC69302WU_both}). The reason for this is presumed to be the same as for the test with TPS51200 that the resistance in the component is increasing. For both of our test we also sees some glitching on both the current and voltage. Maybe this is caused by changed threshold in a internal transistor resulting in current leakage, and a feedback loop is trying to compensate, resulting in a small period of unstable current and voltage. 
+The current decreased to about the half for the first test and to about three quarters on the second test, but that was with a dose of 160 kRad and 380 kRad respectively, which is way more than the radiation level in the TPC. The output voltage is mostly stable, there was an increase of approximately 2\% on both of the tests, which is tolerable. 
 % You can see from both of the graphs that the current is decreasing and voltage is increasing, normally we would expect the opposite, or at least that the current would increase, see section \ref{TID}.
 
 \begin{figure}[!htbp]
@@ -1515,7 +1519,7 @@ that with an acceptable decrease in current and increase in voltage.
 \FloatBarrier
 
 \subsubsection{SN74AVCB164245 - Bus Transceiver}
-For both of the test no errors were detected on the output data. Current as a function of dose for the two test boards can be seen in \autoref{SN74AVCB164245_both}. The second board was exposed to a much higher dose, therefore we can see much more increase in current. The reason for the constantly increase and decrease in current is because the output is constantly changing from on to off, with a gap of 4 seconds. The current level for these two boards are also slightly different, that is because, different load were used for the two test board. 
+For both of the test no errors were detected on the output data. Current as a function of dose for the two test boards can be seen in \autoref{SN74AVCB164245_both}. The current characteristic for the two test boards seems equal. The only difference is that the second board was exposed to a much higher dose, therefore we can see much more increase in current. The reason for the regularly increase and decrease in current is because the output is constantly changing back and forth from on to off, with a gap of 4 seconds. 
 No effects are detected before a radiation dose of approximately 40 kRad.
 
 \begin{figure}[!htbp]
@@ -1539,7 +1543,9 @@ No effects are detected before a radiation dose of approximately 40 kRad.
 \FloatBarrier
 
 \subsubsection{SN74AVC2T245 - Bus Transceiver}
-On the first radiation test of this board we got an error on the output data, after 740 s and a dose of 3.97 kRad both of the outputs were stuck at '1', this can be seen in \autoref{SN74AVC2T245_out}. We can also see a different characteristic on the current vs dose graphs for test board 1 and 2, see \autoref{SN74AVC2T245_1} and \ref{SN74AVC2T245_2}. They should in principle be alike, so maybe the first component got defected in the soldering process to the PCB. The input was switching from high to low every 4 second explaining the constantly change in current. If we look at the test results from board 2, the current goes unchanged up to a dose of 40 kRad, and no errors were detected.
+On the first radiation test of this board we got an error on the output data, after 740 s and a dose of 3.97 kRad both of the outputs were stuck at '1', this can be seen in \autoref{SN74AVC2T245_out}. We can also see a different characteristic on the current vs dose graphs for test board 1 and 2, see \autoref{SN74AVC2T245_1} and \ref{SN74AVC2T245_2}. They should in principle be alike, so maybe the first component got defected in the process of soldering the component to the PCB. The input was switching from high to low every 4 second explaining the constantly change in current. If we look at the test results from board 2, the current goes unchanged up to a dose of 40 kRad, and no errors were detected.
+
+We can also see a decrease in current after a dose of around 180 kRad
 %her må eg sjekke board1 etter eg har fått den tilbake, og se om den faktisk fungere. Kan hende at denne har vært ødelagt før vi begynte.
 
 \begin{figure}[!htbp]
@@ -1569,10 +1575,8 @@ On the first radiation test of this board we got an error on the output data, af
 \FloatBarrier
 
 \subsubsection{QS3VH257 - Multiplexer/Demultiplexer}
-For both of the boards no errors on the output data were detected through the whole irradiation test. Current as a function of dose for the two test boards can be seen in \autoref{QS3VH257_both}
-We can see a small increase in current for board 1 only after a dose of 10 kRad. The small increase last until around 30 kRad, where the current starting to increase in a more rapid speed. For test board 2 we can't see any effect before 40 kRad, but then the current is increasing quite fast. The current increased to almost 9 times the starting current after it had received a dose of 110 kRad.
+For both of the boards no errors on the output data were detected through the whole irradiation test. Current as a function of dose for the two test boards can be seen in \autoref{QS3VH257_both}. The behavior to radiation seems quite alike, the only the difference is that the second test board was exposed to a much higher dose and therefore we can see a much more increase in current. After a dose of approximately 40 kRad, the current starts increasing. For board 2 the current increased to almost 9 times the starting current after it had received a dose of 110 kRad.
 
-The small increase in current that we saw before a dose of 30 kRad on the test of the first board, is to small to have any damaging effect in a design, and we didn't detect any errors for the output signal for both of the tests.  
 
 \begin{figure}[!htbp]
 \centering
@@ -1596,7 +1600,7 @@ The small increase in current that we saw before a dose of 30 kRad on the test o
 
 \subsubsection{SY89831 - 1 to 4 fan-out Buffer}
 No errors were detected on the output data through both of the tests. Current vs dose graphs can be seen in \autoref{SY89831_both} for both of the two test boards.
-Also here a difference in current characteristic can be seen. The two test boards should be exactly alike, so the differences is probably caused by internal differences in the component, maybe caused by rough treatment during soldering. The current level is nevertheless the same magnitude, and both of them are working .
+Also here a difference in current characteristic can be seen. The two test boards should be exactly alike, so the differences is probably caused by internal differences in the component, maybe caused by rough treatment during soldering. The current level is nevertheless the same magnitude, and both of them are working.
 
 % We can only detect a small increase in current for both of the tests, which suggest that this component is quite robust towards radiation. 
 
