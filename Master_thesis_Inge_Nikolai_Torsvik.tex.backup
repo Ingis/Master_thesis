@@ -1187,20 +1187,20 @@ For the tests as discussed in \autoref{SF2_section}, we only used the SF2 starte
 
 
 \chapter{Calculations and Results from Radiation Tests}
-\emph{This chapter will explain how the collected data after radiation tests were used to calculate flux and dose, and results from radiation tests at \ac{OCL} and \ac{TSL} will be presented and discussed.}
+\emph{This chapter will explain how the collected data from radiation tests were used to calculate flux and dose, and results from radiation tests at \ac{OCL} and \ac{TSL} will be presented and discussed.}
 
-After an irradiation test at \ac{OCL}, the collected data consist of the exposed time, scintillator counts, current consumption and output data of the \ac{DUT}.
-From the calibration before radiation test, we got the relation between scintillator counts and \ac{SEU} on the SRAM radiation detector. From earlier tests with the SRAM radiation detector the cross section for an incoming proton to induce a \ac{SEU} is known. These data are used to calculate the received dose for each of the different components. The next section will explain the calculation process.
+After an irradiation test at \ac{OCL}, the collected data consists of the exposed time, scintillator counts, current consumption and output data of the \ac{DUT}.
+From the calibration before radiation test, we found the relation between scintillator counts and \ac{SEU} on the SRAM radiation detector. From earlier tests with the SRAM radiation detector the cross section for an incoming proton to induce a \ac{SEU} is known. These data are used to calculate the received dose for each components. The next section will explain the calculation process.
 
 % \ac{TSL} is a facility which sells beam time for a living. So all data after a radiation was given to us, and we didn't need to do any beam monitoring ourself. We only needed to mount the test board that we wanted to test in test spot, and all data like fluence and dose where received from the facility. At \ac{OCL} however, we had to do the hole monitor process and calculate everything ourself, and required therefore much more time before and after radiation. The next sections will explain the calculation process after radiation at \ac{OCL}.
 
 \section{Calculation of Dose}
-Two ways to calculate the dose will be discussed in this section; manually using energy loss and \ac{LET}, see section \ref{radiation_phys}, and using simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this section.
+Two ways to calculate the dose will be discussed in this section; manually using energy loss and \ac{LET}, see section \ref{radiation_phys}, and simulation data from a program named FLUKA. Which of these gives us the most reliable result will be discussed at the end of this section.
 
 \subsection{Definitions}
 \label{difinitions}
 Absorbed radiation dose has the unit of energy/mass and the SI-unit is gray (Gy), which is 1 Joule of energy absorbed in a kilogram of matter [J/Kg], see equation \ref{Joule_kg}.
-Another unit which is often used when it comes to radiation of electronics is Rad, short for "Radiation absorbed dose".
+Another unit often used when it comes to radiation of electronics is Rad, short for "Radiation absorbed dose".
 The relation between Rad and Gy can be seen in equation \ref{Gy_to_Rad}.
 
 \begin{equation}
@@ -1225,13 +1225,13 @@ The particle energy is normally expressed in electronvolt ($\electronvolt$) or M
 % When using \ac{LET} to calculate the dose, we are looking at the total energy that is deposited in a component.
 As explained in \autoref{LET_section}, \ac{LET} is energy deposited in a material through ionization when a particle crosses the material.
 % To calculate this energy, we need to know the thickness, density and area of the material, which particle that enters the material and its energy.
-\ac{LET} is equal the energy loss a particle suffer by crossing a material, which means that we can use the Bethe Bloch formula that is expressed in equation \ref{stopping_power}.
+\ac{LET} is equal to the energy loss a particle suffer by crossing a material, which means that we can use the Bethe Bloch formula that is expressed in equation \ref{stopping_power}.
 By looking at total \ac{LET} for an component while knowing the fluence, the dose can be  calculated, see \autoref{Dose_rad}.
-The energy loss of a particle is highly energy dependent, but for short distances it can be assumed to be constant without getting too much error.
+The energy loss of a particle is highly energy dependent, but for short distances it can be assumed to be constant without getting any noticeable error.
 
-Two energies were used when exposing components at \ac{OCL}, The first time a proton beam with an energy of 28 MeV, and the two other times a beam of 25 MeV.
-\ac{DUT} was placed 130 cm away from beam exit, which means that the protons will suffer some energy loss in the air between beam-exit and \ac{DUT}. To make the work easier for us, an energy loss calculator program \cite{website:energyloss_calculator} was used to calculate the \emph{energy loss} for a 28 $\mega\electronvolt$ and a 25 $\mega\electronvolt$ proton beam in air, we get respectively $17.52 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.2 \frac{\mega\electronvolt\centi\meter^2}{\gram}$.
-By multiplying with the density of air which is $\rho_{air}=1.275\frac{\milli\gram}{\centi\meter^3}$, we get $22.3 \frac{\kilo\electronvolt}{\centi\meter}$ and $24.5 \frac{\kilo\electronvolt}{\centi\meter}$. This means that the energy of the protons when they collide into \ac{DUT} is:
+Two energies were used when exposing components at \ac{OCL}. The first time a proton beam with an energy of 28 MeV, and the two other times a beam of 25 MeV.
+\ac{DUT} was placed 130 cm away from beam exit, which means that the protons would suffer some energy loss in the air between beam-exit and \ac{DUT}. To make the work easier for us, an energy loss calculator program \cite{website:energyloss_calculator} was used to calculate the \emph{energy loss} for a 28 $\mega\electronvolt$ and a 25 $\mega\electronvolt$ proton beam in air, we got respectively $17.52 \frac{\mega\electronvolt\centi\meter^2}{\gram}$ and $19.2 \frac{\mega\electronvolt\centi\meter^2}{\gram}$.
+By multiplying with the density of air which is $\rho_{air}=1.275\frac{\milli\gram}{\centi\meter^3}$, we got $22.3 \frac{\kilo\electronvolt}{\centi\meter}$ and $24.5 \frac{\kilo\electronvolt}{\centi\meter}$. This means that the energy of the protons when they collide into \ac{DUT} is:
 
 \begin{equation}
 E_{proton1} = 28 - (130 \centi\meter \times 22.3 \frac{\kilo\electronvolt}{\centi\meter}) \approx 25 \mega\electronvolt
@@ -1243,7 +1243,7 @@ E_{proton2} = 25 - (130 \centi\meter \times 24.5 \frac{\kilo\electronvolt}{\cent
 \label{Proton_energy2&3}
 \end{equation}
 
-By using the same energy loss calculator we get the energy loss in silicon (which is the main component in integrated circuit), to be:
+By using the same energy loss calculator we find find that the energy loss in silicon (which is the main component in integrated circuit), to be:
 
 \begin{equation}
 -\frac{dE}{dx} (25 MeV) =  17.1 \frac{\mega\electronvolt\centi\meter^2}{\gram}
@@ -1255,7 +1255,7 @@ By using the same energy loss calculator we get the energy loss in silicon (whic
 \label{energy_loss_22}
 \end{equation}
 
-If we look at a single proton entering a silicon material, the energy deposited by that single proton can be expressed as,
+Looking into a single proton entering a silicon material, the energy deposited by that single proton can be expressed as;
 
 \begin{equation}
 \Delta E_{proton} = -\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si}
@@ -1269,7 +1269,7 @@ where $\Delta x$ is the length segment a proton particle penetrates into the mat
 \label{silicon_density}
 \end{equation}
 
-To get the total energy deposited in the component, we have to multiply the energy of a single proton with the fluence and the area of the component. Fluence is the total flux over a given time, expressed in [$\frac{n}{cm^2}$], where n is number of protons. The total energy is then:
+To determine the total energy deposited in the component, we have to multiply the energy of a single proton with the fluence and the area of the component. Fluence is the total flux over a given time, expressed in [$\frac{n}{cm^2}$], where n is number of protons. The total energy is then:
 
 % Flux = \Phi
 \begin{equation}
@@ -1277,7 +1277,7 @@ To get the total energy deposited in the component, we have to multiply the ener
 \label{total_energy_loss}
 \end{equation}
 
-Now we know the total energy depleted by a proton beam in an component, and can start calculating the dose. Dose is energy per mass, as said in section \ref{difinitions}. That means that the absorbed dose in silicon can be expressed as,
+Now we know the total energy depleted by a proton beam in an component, and can start calculating the dose. Dose is energy per mass, as explained in section \ref{difinitions}. Meaning that the absorbed dose in silicon can be expressed as,
 
 \begin{equation}
 Dose(Si) = \frac{-\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A_{Si}}{m_{Si}}
@@ -1286,14 +1286,14 @@ Dose(Si) = \frac{-\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot 
 
 where $m_{Si}$ is the mass of silicon.
 
-$m_{Si}$ can be expressed in terms of silicon density, see equation \ref{silicon_density}, multiplied with the volume ($V_{Si}$), which is Area ($A_{Si}$) times thickness ($d_{Si}$). Assuming that the protons enters the silicon in a straight line, the path segment $\Delta x$ is equal the thickness, which then gives us,
+$m_{Si}$ can be expressed in terms of silicon density, see equation \ref{silicon_density}, multiplied with the volume ($V_{Si}$), which is Area ($A_{Si}$) times thickness ($d_{Si}$). Assuming that the protons enter the silicon in a straight line, the path segment $\Delta x$ is equal the thickness, which then gives us:
 
 \begin{equation}
 Dose(Si) = \frac{ -\frac{dE}{dx} \cdot \Delta x \cdot \rho_{Si} \cdot \Phi \cdot A_{Si}}{\rho_{Si} \cdot A_{Si} \cdot d_{Si}} = -\frac{dE}{dx} \cdot fluence = [\frac{MeV}{g}]
 \label{Dose_silicon}
 \end{equation}
 
-To get the dose in Rad instead of $\frac{MeV}{g}$, we have to multiply with the converting factor given in equation \ref{MeV_to_joule} and divide on the factor given in equation \ref{Gy_to_Rad}, this gives us:
+To determine the dose in Rad instead of $\frac{MeV}{g}$, we multiply with the converting factor given in equation \ref{MeV_to_joule} and divide by the factor given in equation \ref{Gy_to_Rad}. This gives us:
 
 \begin{equation}
 Dose(Si) = 1.602 \cdot 10^{-8} \cdot -\frac{dE}{dx} \cdot fluence
@@ -1319,9 +1319,9 @@ We simulated a proton beam with energy of 28 MeV and 25 MeV in air, and set our 
   \label{FLUKA_simulations}%
 \end{table}%
 
-As said in the introduction to this chapter, the known values after a radiation test are exposed time, scintillator counts, current consumption, output data of the \ac{DUT} and cross section from the SRAM radiation detector.
+As mentioned in the introduction to this chapter, the known values after a radiation test are exposed time, scintillator counts, current consumption, output data of the \ac{DUT} and cross section from the SRAM radiation detector.
 
-The procedure to calculate the dose is first to find the total fluence. This is found by first converting from scintillator counts to SEU, by multiplying with the converting factor, as found in the beam setup, and then divide on the cross section, which is known for the SRAM radiation detector. Fluence can then be found as seen in equation \ref{FluenceDUT} and the flux as in equation \ref{flux}.
+The procedure to calculate the dose starts with finding the total fluence. This is found by first converting from scintillator counts to SEU, by multiplying with the converting factor as found in the beam setup. And then divide on the cross section, which is known for the SRAM radiation detectorm, see \autoref{SRAM_section}. Fluence can then be found as seen in equation \ref{FluenceDUT} and the flux as in equation \ref{flux}.
 
 \begin{equation}
 FluenceDUT = \frac{SEU}{CS}
@@ -1333,8 +1333,8 @@ Flux = \frac{Fluence}{time}
 \label{flux}
 \end{equation}
 
-Now we can take use of the FLUKA simulation results. The simulation results tells us how many protons will collide into \ac{DUT} for each proton coming out from beam exit, and what dose this will contribute to at \ac{DUT}. By using the calculated Fluence for DUT, found by equation \ref{FluenceDUT}, we can find the fluence at beam exit by dividing on \emph{primary particles at \ac{DUT}} from the simulation results, see equation \ref{FluenceBE}.
-Then we can use \emph{dose per primary particle at DUT} from the result and multiply with the Fluence at beam exit, which gives us the dose in gray for the \ac{DUT}, see equation \ref{DoseDUT}. By multiplying with 100 we get the dose in Rad.
+The FLUKA simulation results tells us how many protons will collide into \ac{DUT} for each proton coming out from beam exit, and what dose this will contribute to at \ac{DUT}. By using the calculated Fluence for DUT, found by equation \ref{FluenceDUT}, we can find the fluence at beam exit by dividing on \emph{primary particles at \ac{DUT}} from the simulation results, see equation \ref{FluenceBE}.
+Then we can use \emph{dose per primary particle at DUT} from the result and multiply with the Fluence at beam exit, which gives us the dose in gray for the \ac{DUT}, see equation \ref{DoseDUT}. By multiplying by 100 we get the dose in Rad.
 
 \begin{equation}
 FluenceBE = \frac{fluenceDUT}{primaryparticlesDUT}
@@ -1347,8 +1347,8 @@ DoseDUT = FluenceBE \cdot \frac{Dose}{primaryparticleDUT} = [Gy]
 \end{equation}
 
 \subsection{Comparison of LET and FLUKA calculations}
-To compare LET calculations with FLUKA simulation we need an example to look at, for example the test of MAX3748, the test results can be found in \autoref{MAX3748_results}.
-Both of the methods to calculate dose requires the fluence. The fluence is given by SEU on SRAM, and cross section, see \autoref{FluenceDUT}, and SEU on SRAM are given by the conversion factor found in beam setup and scintillator counts. For MAX3748 the fluence is,
+The results from radiation of MAX3748 can be used to compare LET calculation with FLUKA, the test results can be found in \autoref{MAX3748_results}.
+Both methods to calculate dose require the fluence. The fluence is given by SEU on SRAM, and cross section, see \autoref{FluenceDUT}, and SEU on SRAM are given by the conversion factor found in beam setup and scintillator counts. For MAX3748 the fluence is:
 
 \begin{equation}
 Fluence_{MAX3748} = \frac{2698510 \cdot 0.473}{1.14\cdot10^{-6}} = 1.12\cdot10^{12}\frac{n}{\centi\meter^2}
@@ -1368,18 +1368,18 @@ Fluence_{MAX3748} = \frac{2698510 \cdot 0.473}{1.14\cdot10^{-6}} = 1.12\cdot10^{
   \label{MAX3748_results}
 \end{table}
 
-To calculate the dose using LET, just follow the steps as given in \autoref{using_LET}.
-We start by calculating the energy when entering the component 130 cm away from beam exit. This is found in equation \ref{Proton_energy1} to be 22 $\mega\electronvolt$.
-LET or energy loss for a 22 $\mega\electronvolt$ proton particle in silicon, is calculated in equation \ref{Proton_energy2&3} to be 17.1 $\mega\electronvolt$.
+To calculate the dose using LET, we follow the steps given in \autoref{using_LET}.
+Starting by calculating the energy when entering the component 130 cm away from beam exit. This is found in equation \ref{Proton_energy1} to be 22 $\mega\electronvolt$.
+LET, or energy loss, for a 22 $\mega\electronvolt$ proton particle in silicon, is calculated in equation \ref{Proton_energy2&3} to be 17.1 $\mega\electronvolt$.
 
-Fluence is found in equation \ref{FluenceMAX3748}. By using \autoref{Dose_rad} we get the total dose in Rad to be:
+Fluence is found in equation \ref{FluenceMAX3748}. By using \autoref{Dose_rad} we find the total dose in Rad to be:
 
 \begin{equation}
 Dose(Si)= 1.602 \cdot 10^{-8} \cdot 17.1 \cdot 1.12\cdot10^{12} = 306.8 kRad
 \label{Dose_rad_MAX3748}
 \end{equation}
 
-Calculating using FLUKA simulation is an easy process. First calculate fluence at Beam exit, from equation \ref{FluenceBE}. And use that value to calculate the dose as seen in  \autoref{DoseDUT}.
+Calculation using FLUKA simulation is an easy process, starting by calculating the fluence at Beam exit, from equation \ref{FluenceBE}, and then using that value to calculate the dose as seen in  \autoref{DoseDUT}.
 
 \begin{equation}
 FluenceBE = \frac{1.29\cdot10^{12}}{0.0857} = 1.51\cdot10^{13}\frac{n}{\centi\meter^2}
@@ -1393,15 +1393,15 @@ DoseDUT = 1.51\cdot10^{13} \cdot 2.94\cdot10^{-10} = 4425.4 Gy = 383.8 kRad
 
 We can see that the FLUKA results give approximately 20 \% higher dose than by using LET. Why we have this difference will be discussed.
 
-When calculating LET for a given component we calculated with constant energy drop through the air before colliding with the component and through the component. In reality energy loss will increase as the energy decreases, this means that the calculated dose is a little lower than the actual dose.
+When calculating LET for a given component we calculated with constant energy drop through the air before colliding with the component and through the component. In reality energy loss will increase as the energy decreases. This means that the calculated dose is a little lower than the actual dose.
 
 % FLUKA simulation are being used for advance simulations for people at CERN and all over the world, and is an acknowledged program.
 % It is based on Monte Carlo simulations, and several models are used for the calculations, for example Bethe Bloch theory, Beth $Z^2$, Barkas $Z^3$ and a lot more \cite{website:FLUKA}. Having many models tested up against each other, tells us that the calculated values are quite reliable.
 
 When using LET to calculate the dose, we get a small error from approximations and assumptions. But since we know about these, we also know that the energy should be a little higher than the calculated value, and can be sure that the calculated dose is at least not higher than the actual dose.
-he FLUKA simulations are using advance models for the calculations, which makes the results very accurate.
+The FLUKA simulations are using advance models for the calculations, which makes the results very accurate.
 
-Other than the calculation method,there may also be other sources of errors, like that the energy level of the proton beam (it may differ from 25 MeV which it is said to be), and the conversion factor found in the beam setup. We are manly interested in to get a total dose which is more than the total dose it will receive in the ALICE TPC, and the accuracy isn't that important as long as it is over this level with a safety margin. 
+Other than the calculation method, there may also be other sources of errors, like that the energy level of the proton beam (it may differ from 28/25 MeV which it is said to be), the conversion factor found in the beam setup and unlinearity between scintillator counts and SEU on SRAM. Which means that if the calculation method is precise, we will still get errors due to other error sources. We are nevertheless manly interested in getting a total dose which is more than the total dose it will receive in the ALICE TPC, and the accuracy isn't that important as long as it is over this level with a safety margin.
 % And when we have other factors which may not be as accurate, the dose calculations doesn't need to be hundred present accurate.
 % For our calculated data we are mostly interested in the dose level, and doesn't care so much about the accuracy, as long as it is in a reasonable range.
 That means that both of the methods are good enough.
@@ -1411,9 +1411,9 @@ At OCL, FLUKA simulation was used to calculate the dose, and at TSL, LET was use
 \section{Results from OCL}
 \subsection{Calibration process}
 As explained in chapter $\ref{beam_setup}$, we had to start by finding the center of the beam.
-The laser was first placed in a position pointing on what thought to be center. 
+The laser was first placed in a position pointing at what was thought to be center. 
 Then we placed a radiation film in front of the beam exit and at \ac{DUT} area.
-By observing how the radiation films were after irradiated, we got a indication of where the center of the beam was.
+By observing how the radiation films were after irradiation, we got a indication of where the center of the beam was.
 An example of two films from the beam exit and \ac{DUT} area can be seen in figure \ref{Radiation_film}.
 
 \begin{figure}[!htbp]
@@ -1423,14 +1423,14 @@ An example of two films from the beam exit and \ac{DUT} area can be seen in figu
   \label{Radiation_film}
 \end{figure}
 
-Now we knew approximately where center is, compared to where the laser was pointing. The SRAM radiation detector was mounted in the XY-positioning system and placed so that the laser was pointing at one of the SRAM chips. This position was defined as position zero (x,y) = (0,0), and from the radiation films we knew approximately how much we had to move to be in the center of the beam.
-In \autoref{test_14.11} you can see the results from our calibration 14.11.2013. Position x = -1.5 cm and y = 0 cm gives highest relation between SEU and scintillator counts. Two tests was executed in that position and the average value gives us 1.0948. A graph showing us relation between SEU on SRAM and scintillator counts for the different x and y position can be seen in \autoref{calibration data}, this shows us something about the thickness of the beam as well.
+Now we had an indication of where center was compared to where the laser was pointing. The SRAM radiation detector was mounted in the XY-positioning system and placed so that the laser was pointing at one of the SRAM chips. This position was defined as position zero (x,y) = (0,0), and from the radiation films we knew approximately how much the SRAM radiation detector had to be moved in order to be in the center of the beam.
+In \autoref{test_14.11} you ind the results from calibration 14.11.2013. Position x = -1.5 cm and y = 0 cm gives highest relation between SEU and scintillator counts, and the laser was moved so that it points to this position. Two tests was performed in that position and the average value gives us 1.0948. A graph showing us relation between SEU on SRAM and scintillator counts for the different x and y position can be seen in \autoref{calibration data}. The graph tells us also something about the thickness of the beam at DUT position.
 Beam setup data from all other days at \ac{OCL} can be found in appendix \ref{Beam_profile}.
 
-When we irradiated the different \acp{PCB}, we only measured scintillator counts, as a indication of the beam intensity. When we were finished exposing a component, the relation value was used to convert from scintillator counts to \acp{SEU}. Then fluence could be calculated since the cross section for a proton inducing a SEU on the SRAM is known. Cross section for the SRAM radiation detector can be found from \cite{arild_master} and is given in \autoref{CS}.
+When we irradiated the different \acp{PCB}, we only measured scintillator counts, as a indication of the beam intensity. When we were finished exposing a component, the relation value was used to convert from scintillator counts to \acp{SEU}. Then fluence could then be calculated since the cross section for a proton inducing a SEU on the SRAM is known. Cross section for the SRAM radiation detector can be found from \cite{arild_master} and is given in \autoref{CS}.
 
 \begin{equation}
-CS = 1.14e{-6} \frac{cm^2}{device} 
+CS = 1.14\cdot10^{-6} \frac{cm^2}{device} 
 \label{CS}
 \end{equation}
 
@@ -1464,18 +1464,21 @@ CS = 1.14e{-6} \frac{cm^2}{device}
 
 
 \subsection{Test Results of the PCBs}
-In this section the results from the radiation tests at \ac{OCL} will be presented and discussed.
-Test of all the PCBs will be presented first, followed by a discussion. The result is presented after type, meaning that two PCBs containing the same component will be presented together. The purpose of these tests has been to check for radiation tolerance. The focus has therefore been to check the output data/voltage and current compared with the received dose. 
+In this section the the radiation tests results from \ac{OCL} will be presented and discussed.
+Tests of all the PCBs will be presented, followed by a discussion at the end. The results are presented after type, meaning that two PCBs containing the same component will be presented together. The purpose of these tests have been to check for radiation tolerance. The focus has therefore been to check for long therm effects like current consumption and output voltage as function of the accumulated dose. For the the components that output errors were counted (single event effects), we have plotted output errors as function of fluence.
 % Flux versus time for the different tests can be seen in the summery of this section \ref{flux_all1},\ref{flux_all2} and \ref{flux_all3}
 
-An overview of the test can be found at the end of this section, with the total exposed time, the total irradiated dose and error status. For information regarding flux for the different tests, see Appendix \ref{radiation_results_ocl} and \autoref{flux_all1}, \ref{flux_all2} and \ref{flux_all3}
+An overview of the tests can be found at the end of this section, with the total exposed time, the total accumulated dose and error status. For information regarding flux for the different tests, see Appendix \ref{radiation_results_ocl} \autoref{flux_all1}, \ref{flux_all2} and \ref{flux_all3}
 
 \subsubsection{TPS51200 - Voltage Regulator}
-This was the first component that was tested for radiation, we started therefore out with a very low intensity to be sure that everything worked as it should.
-The intensity was increased for the later tests. Two PCBs of this type was supposed to be tested, but only one of these worked when we were at OCL.
+TPS51200 was the first component that was tested for radiation. We started therefore with a very low intensity on the beam to be sure that everything worked as it should.
+The intensity was increased in the following tests. Two PCBs of this type were supposed to be tested, but only one of these worked when we were at OCL.
 
-In \autoref{TPS51200_1} you can see the input current and output voltage versus the received dose in kRad. The component was exposed in 34 min and with a total dose was 42.8 kRad. The component still worked as it should, with only small increase in current. We see also a small increase in voltage and decrease in current already after 5 kRad, whats causing this effect could be increased resistance in the component caused by the radiation. The reduction/increase is nevertheless quite small, and would not harm, if it should happen in a real design.
-After 25 kRad, the current starting to increase and voltage decrease, this is a more expected effect, which was discussed in \autoref{TID}, this may be caused by threshold decrease or current leakage in the internal transistors.
+\autoref{TPS51200_1} shows the input current and output voltage versus the received dose in kRad. The total exposed time and dose for this board were respectively 34 min and 42.8 kRad, and it still worked with only small increase in current and decrease in voltage. 
+
+A small increase in voltage and decrease in current can be seen already after 5 kRad, what is reason for this effect could be increased resistance in the component caused by radiation. The reduction/increase is nevertheless quite small, and would not harm if it should happen in a real design.
+
+After 25 kRad, the current started to increase and voltage decreased, this is a more expected effect to radiation, which was discussed in \autoref{TID}. The cause may be threshold decrease or current leakage in the internal transistors.
 % The green graph, representing voltage should had higher resolution in the saved data, so we could see more clearly the effects of radiation, nevertheless it the deviations are quite small. 
 % Normally we would irradiate until we would see some more irradiation effects, but since no errors occurred until 40 kRad, it was no point in exposing anymore.
 
@@ -1489,10 +1492,13 @@ After 25 kRad, the current starting to increase and voltage decrease, this is a 
 \FloatBarrier
 
 \subsubsection{MIC69302WU - Voltage Regulator}
-During the test of the first board we increased the intensity of the beam quite drastically at the end of the irradiation, which can be seen from the flux graph, in figure \ref{flux_all1}.
+For this component we also had the effect with a increase in voltage and decrease in current (see \autoref{MIC69302WU_both}). The reason for this is presumed to be the same as for the test with TPS51200 that the resistance in the component is increasing.
 
-For this component we also see the effect with a increase in voltage and decrease in current (see \autoref{MIC69302WU_both}). The reason for this is presumed to be the same as for the test with TPS51200 that the resistance in the component is increasing. For both of our test we also sees some glitching on both the current and voltage. Maybe this is caused by changed threshold in a internal transistor resulting in current leakage, and a feedback loop is trying to compensate, resulting in a small period of unstable current and voltage. 
-The current decreased to about the half for the first test and to about three quarters on the second test, but that was with a dose of 160 kRad and 380 kRad respectively, which is way more than the radiation level in the TPC. The output voltage is mostly stable, there was an increase of approximately 2\% on both of the tests, which is tolerable. 
+For both of our test we also detect some glitching on both the current and voltage. Maybe this is caused by change of threshold in internal transistors resulting in current leakage, and a feedback loop is trying to compensate, resulting in a small period of unstable current and voltage. 
+
+The current decreased to about the half for the first test and to about three quarters on the second test, but that were with a dose of 160 kRad and 380 kRad respectively, which is way more than the radiation level in the TPC. The output voltage is stable, there were an increase of approximately 2\% on both of the tests, which is tolerable.
+
+% During the test of the first board we increased the intensity of the beam quite drastically at the end of the irradiation, which can be seen from the flux graph, in \autoref{flux_all1}.
 % You can see from both of the graphs that the current is decreasing and voltage is increasing, normally we would expect the opposite, or at least that the current would increase, see section \ref{TID}.
 
 \begin{figure}[!htbp]
@@ -1516,8 +1522,8 @@ The current decreased to about the half for the first test and to about three qu
 \FloatBarrier
 
 \subsubsection{SN74AVCB164245 - Bus Transceiver}
-For both of the test no errors were detected on the output data. Current as a function of dose for the two test boards can be seen in \autoref{SN74AVCB164245_both}. The current characteristic for the two test boards seems equal. The only difference is that the second board was exposed to a much higher dose, therefore we can see much more increase in current. The reason for the regularly increase and decrease in current is because the output is constantly changing back and forth from on to off, with a gap of 4 seconds. 
-No effects are detected before a radiation dose of approximately 40 kRad.
+For the radiation test of the two test boards for SN74AVCB164245 we detected no errors on the output data. Current as a function of dose for the two test boards can be seen in \autoref{SN74AVCB164245_both}. The current characteristic for the two test boards seems alike. The only difference is that the second board was exposed to a much higher dose, therefore we can see a much more increase in current. The reason for the regularly increase and decrease in current is that the output is constantly changing back and forth from on to off, with a gap of 4 seconds. 
+No radiation effects are detected before a dose of approximately 40 kRad, where the current starting slowly to increase.
 
 \begin{figure}[!htbp]
 \centering
@@ -1540,9 +1546,11 @@ No effects are detected before a radiation dose of approximately 40 kRad.
 \FloatBarrier
 
 \subsubsection{SN74AVC2T245 - Bus Transceiver}
-On the first radiation test of this board we got an error on the output data, after 740 s and a dose of 3.97 kRad both of the outputs were stuck at '1', this can be seen in \autoref{SN74AVC2T245_out}. We can also see a different characteristic on the current vs dose graphs for test board 1 and 2, see \autoref{SN74AVC2T245_1} and \ref{SN74AVC2T245_2}. They should in principle be alike, so maybe the first component got defected in the process of soldering the component to the PCB. The input was switching from high to low every 4 second explaining the constantly change in current. If we look at the test results from board 2, the current goes unchanged up to a dose of 40 kRad, and no errors were detected.
+On the radiation of the first of the two test boards we got an error on the output data. After about 740 s and a dose of approximately 4 kRad the outputs got stuck at '1', this can be seen in \autoref{SN74AVC2T245_out}. We also see a different characteristic on the current as function of dose graphs for test board 1 and 2, see \autoref{SN74AVC2T245_1} and \ref{SN74AVC2T245_2}. The input data is changing every 4 seconds, which means that we should have a constantly change in current consumption, as we see in \autoref{SN74AVC2T245_2}. This suggest that the test on the first board didn't go as it should from the start. This could be due to damage during the soldering process to the PCB.
 
-We can also see a decrease in current after a dose of around 180 kRad
+The test result from board 2, shows that the current goes unchanged up to a dose of 40 kRad, and no errors were detected.
+
+If the radiation results for board 2 is compared to the tests results of SN74AVCB164245, which is basically the same chip only with more input and output signals. We find more or less equal current characteristic, which supports the test results.
 %her må eg sjekke board1 etter eg har fått den tilbake, og se om den faktisk fungere. Kan hende at denne har vært ødelagt før vi begynte.
 
 \begin{figure}[!htbp]
@@ -1596,12 +1604,12 @@ For both of the boards no errors on the output data were detected through the wh
 \FloatBarrier
 
 \subsubsection{SY89831 - 1 to 4 fan-out Buffer}
-No errors were detected on the output data through both of the tests. Current vs dose graphs can be seen in \autoref{SY89831_both} for both of the two test boards.
-Also here a difference in current characteristic can be seen. The two test boards should be exactly alike, so the differences is probably caused by internal differences in the component, maybe caused by rough treatment during soldering. The current level is nevertheless the same magnitude, and both of them are working.
+No errors were detected on the output data through both of the tests. Graphs of current as function of dose for the two test boards can be seen in \autoref{SY89831_both}.
+Also here a difference in current characteristic can be seen. The two test boards should be exactly alike, so the differences is probably caused by internal differences in the component, maybe caused by rough treatment during soldering. The current level is in the same magnitude, and the output data is without errors for both the test.
 
 % We can only detect a small increase in current for both of the tests, which suggest that this component is quite robust towards radiation. 
 
-A total of 90 and 160 kRad was exposed to the two test boards, without detecting any error and with small increase in current.
+A total of 90 and 160 kRad was exposed to the two test boards without detecting any error and with only small increase in current for test board 2.
 % This board is quite temperature dependent, a small increase in temperature, can increase or decrease current by hundreds of $\micro\ampere$. A small increase in current we can detected on both of the boards may also be temperature difference. It is nevertheless very small.
 
 
@@ -1626,7 +1634,9 @@ A total of 90 and 160 kRad was exposed to the two test boards, without detecting
 \FloatBarrier
 
 \subsubsection{ADN2814 - Limiting Amplifier}
-For the test of ADN2814, we didn't detect any current change before a dose of 200 kRad, see \autoref{ADN2814_curr}. But unfortunately we got some output errors. After a dose of $\sim$11 kRad we got a clock error, and after a dose of $\sim$8 kRad we got a data error, see \autoref{ADN2814_tot}.
+For the test of ADN2814, we didn't detect any current change before a dose of 270 kRad, see \autoref{ADN2814_curr}. But unfortunately we got allot of output errors, see \autoref{ADN2814_tot}. The first errors happened after a dose of 11 kRad for the clock signal , and after a dose of 8 kRad for the data signal, and after that the errors starting coming more regularly.
+
+If we look at the clock and data output as function of time, which can be found in appendix \ref{radiation_results_ocl} figure \ref{adn_error_time}, we see that after the beam stops after 3600 seconds, the errors stopped increasing, this means that the errors on clock and data are directly effected by the radiation.
 
 The current graph, as seen in \autoref{ADN2814_curr} is varying quite a lot in current, typically variation in the beginning is 130 to 136 mA. This may be caused by large variation in the input signal, and producing of two differential output signals with very high frequency (160 Mhz for the clock, and a little less for the data). More capacitors on the supply voltage could probably help to reduce this variations.
 
@@ -1663,30 +1673,20 @@ The test board for MAX3748 was exposed to a dose of over 400 kRad. We can also d
 Through this test we detected no errors on the output data, and the current consumption seems rather stable through the whole irradiation process, if not taken the large variation into account.
 
 \begin{figure}[!htbp]
-\centering
-  \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/current_vs_dose_max}
-  \caption{Current vs Dose}
+  \includegraphics[width=0.5\linewidth]{figures/current_vs_dose_max}
+  \caption{MAX3748 - Current vs Dose}
   \label{MAX3748_curr}
-  \end{subfigure}
-  \begin{subfigure}{.49\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{figures/clockerror_vs_dose_max}
-  \caption{Errors vs Dose}
-  \label{MAX3748_error}
-  \end{subfigure}
- \caption{MAX3748}
 \end{figure}
 
 \FloatBarrier
 
 \subsubsection{INA210 - Current Shunt Monitor}
-In \autoref{INA210_both} we find graphs of current and voltage as function of dose for the two test boards. We can see that we have different reaction for the two boards, on the first board the output voltage increase and on the second board the output voltage decreased. This is quite strange, since the two boards should be exactly alike. Maybe the diode on one of the test got effected by the radiation, increasing or decreasing current on one of these, or it may also just be process variation. 
+In \autoref{INA210_both} we find graphs of current and voltage as function of dose for the two test boards. We can see that we have different reaction to radiation for the two boards, on the first board the output voltage increase and on the second board the output voltage decreased. This is quite strange, since the two boards should be exactly alike. Maybe the diode located on the input to the component got effected by the radiation on one of the two test boards, increasing or decreasing current, or it may also just be process variation. The current characteristic as function of dose are quite alike, the only difference is that on the second test board the current starts to increase a little earlier. 
 
-For test board 1 the current and voltage start to rise around 13 kRad. For the second test board we see a small increase in current already after 10 kRad, but the voltage stay stable until a dose of 80 kRad.
+For test board 1 the current and voltage starts to rise after a dose of approximately 80 kRad. For the second test board we see a small increase in current already after 20 kRad, but the voltage stays stable until a dose of 100 kRad.
 
-The increase we see from start to the peak on test board 1 contribute to a current increase of 2.85 $\milli\ampere$ ($\frac{0.352-0.295}{200} / 0.1 = 2.85 \milli\ampere)$. Compared to the starting current of 14.75 $\milli\ampere$ this contributes to a increase of 19.32 \%. Whats causing this effect could be offset variation on the output voltage, changing of the internal amplification or a increase in current on the measured input signal. If its only a offset on the output, the small increase will probably not matter when we have a larger current to measure, but if its the internal amplification which are changing, we could have a big problem when the current on the input will be larger.
+The increase we see from start to the peak on test board 1 contribute to a current increase of 2.85 $\milli\ampere$ ($\frac{0.352-0.295}{200} / 0.1 = 2.85 \milli\ampere)$. Compared to the starting current of 14.75 $\milli\ampere$ this contributes to a increase of 19 \%. Whats causing this effect could be offset variation on the output voltage, changing of the internal amplification or a increase in current on the measured input signal. If its only a offset on the output, the small increase will probably not matter when we have a larger current to measure, but if its the internal amplification which are changing, we could have a big problem when the current on the input will be larger.
 
 \begin{figure}[!htbp]
 \centering
@@ -1711,9 +1711,9 @@ The increase we see from start to the peak on test board 1 contribute to a curre
 \subsubsection{TLV3011 - Comparator}
 The result after radiation of the two test board for TLV3011 can be seen in the graphs in \autoref{TLV3011_both} and \ref{TLV3011_both2}. The graphs goes up and down because the input signal is changing every 4 seconds.
 
-For the first test we didn't detect any error before a dose of 70 kRad. Then the output voltage high value changed from 3.2 V to 2.3 V, and we saw a major increase in current. In the area before 20 kRad, the output voltage seems to stay high for a longer time. That is not the case, the reason for this effect is a sudden increase in flux (see \autoref{flux_all3}), a graph of current as a function of time can be seen in \autoref{radiation_results_ocl} \autoref{TLV3011_time}.
+For the first test we didn't detect any error before a dose of 85 kRad. Then the output voltage high value changed from 3.2 V to 2.3 V, and we saw a major increase in current. In the area right before 20 kRad, the output voltage seems to stay high for a longer time. That is not the case, the reason for this effect is a sudden increase in intensity of the beam (see \autoref{flux_all3}). A graphs of current and voltage as function of time can be seen in appendix \ref{radiation_results_ocl} \autoref{TLV3011_time}, showing that the current and voltage stays stable.
 
-For the first test we didn't detect any error before a dose of 70 kRad. Then the output starting to get stuck at high value. This could be caused by changes of the internal reference voltage, the sensitivity of the input signal or a stuck at error at the output. We also detect a small increase in current of about 0.15 $\milli\ampere$.
+For the second test we didn't detect any error before a dose of 95 kRad. Then the output starting to get stuck at high value. This could be caused by changing of the internal reference voltage, a offset on the inputs or a stuck at error at the output. We also detect a small increase in current of about 0.15 $\milli\ampere$.
 
 \begin{figure}[!htbp]
 \centering
@@ -1787,8 +1787,7 @@ $SY89831_1$ & 1251 & 94 & No \\ \hline
  \centering
 \begin{tabular}{|l|l|l|l|}\hline
 Device & Exposed time[s] & Dose[kRad] & Error \\ \hline \hline
-$ADN2814\_run1$ & 1273 & 20 & Yes \\ \hline
-$ADN2814\_run2$ & 2286 & 325 & Yes \\ \hline
+$ADN2814$ & 3600 & 345 & Yes \\ \hline
 $MAX3748$ & 2384 & 442 & No \\ \hline
 $TPS51200_2$ & -\textsuperscript{*} & -* & -* \\ \hline
 $MIC69302WU_2$ & 1385 & 384 & No \\ \hline
@@ -1822,9 +1821,9 @@ $TLV3011_2$ & 1074 & 138 & Yes \\ \hline
 \subsubsection{Discussion of the Result}
 We had access to OCL in three periods; 13.11.13-15.11.13, 28.11.13-29.11.13 and 08.04.14-11.04.14, but most of the testing was done 15.11.13, 28.11.13 and 11.04.14. The other days was used to get familiar with the instruments and equipment that was being used, to prepare the setup and setting up the beam.
 
-There are almost impossible to get the same beam two days at a row. Each day of testing is therefore different from each other. And that is also why we had to do calibration each day at start-up.
+Due to variations in the cyclotron setup and beam tuning from day to day, beam calibration had to be done each day at start-up.
 
-The interesting thing when determining if an component is tolerant towards radiation is the absorbed dose. For run2 in the \ac{LHC}, which will last in three years, it has been estimated that the total dose in the TPC is 1-2 kRad, see \autoref{TPC_environment}. This is the absolute limit an component has to survive, and a safe margin of at least 3 times should be used. We also have to take into account that when radiating at OCL, we have been using proton beam of less than 30 MeV, in the TPC detector in ALICE, we can receive protons and neutrons in the energy level of above 1 GeV, which may cause other effects that what we have seen in our test at OCL. It is therefore important to have a good margin on the dose.
+The interesting thing when determining if an component is tolerant towards radiation is the absorbed dose. For run2 in the \ac{LHC}, which will last in three years, it has been estimated that the total dose in the TPC is 1-2 kRad, see \autoref{TPC_environment}. This is the absolute limit an component has to survive, and a safe margin of at least 3 times should be used. We also have to take into account that when radiating at OCL, we have been using proton beam of less than 30 MeV, in the TPC detector in ALICE, we can receive protons and neutrons in the energy level of above 1 GeV, which may cause other effects then what we have seen in our test at OCL. It is therefore important to have a good margin on the dose.
 
 % When testing two boards of the same type, and on of these fails 
 For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals were only measured digitally by a USB-DAQ, which means that we really don't know if the voltage level shifted because of the received dose. The USB-DAQ  used has an input low level from -0.3 V to 0.8 V and the input high level from 2.0 to 5.8, which means that we could actually have a large swing on the output without being detected.
@@ -2410,6 +2409,23 @@ The work presented in this thesis was done to
 \section{Radiation Results from OCL}
 \label{radiation_results_ocl}
 
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/dataerror_vs_time_adn}
+  \caption{ADN2814 test1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/clockerror_vs_time_adn}
+  \caption{ADN2814 test2}
+  \end{subfigure}
+ \caption{ADN2814 - Errors on data and clock vs Time}
+ \label{adn_error_time}
+\end{figure}
+
 \begin{figure}[!htbp]
 \centering
   \begin{subfigure}{.49\textwidth}
@@ -2469,14 +2485,14 @@ The work presented in this thesis was done to
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/current_vs_time_tlv1}
-  \caption{TLV3011 test board 2}
+  \caption{TLV3011 test board 1}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/current_vs_time_tlv2}
-  \caption{TLV3011 test board 2}
+  \includegraphics[width=\linewidth]{figures/volt_vs_time_tlv1}
+  \caption{TLV3011 test board 1}
   \end{subfigure}
- \caption{TLV3011 - Current as function of dose}
+ \caption{TLV3011 - Current and voltage as function of dose}
  \label{TLV3011_time}
 \end{figure}
 
