@@ -892,8 +892,9 @@ How the data is monitored and checked is discussed in section \ref{MSS_and_LabVI
 \label{logic_Element}
 A logical element consists of a 4 input Look-Up Table\footnotemark[4] and a separated flip-flop which can be used independently from the Look-Up Table.
 That means that we have 56 340 flip-flops and 56 340 Look-Up Tables available for our design.
-When a logical element is exposed to radiation, a \acf{SET} can occur all over the chip.
-If this happens in the logical element or in the interconnections between logical element, the transient current will normally only appear for a small amount of time, and then it will flat out, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or a node that may lead to a change of value at the input, and the input is then clocked out to the output, we would have an unwanted bit change or a so called \acf{SEU}.
+Flip-flops stores data and \acf{SEU} can therefore occur if exposed to radiation.
+Look-Up Tables doesn't save data and will therefore not suffer any SEU, but a \acf{SET} can occur.
+If a SET occurs in the logical element or in interconnections in the chip, the transient current will normally only appear for a small amount of time before it falls back to normal, causing no error or bit flip in the chip. But if this transient current hits a sensitive node as the input to a flip-flop, or a node that may lead to a change of value on a flip-flop input, and the changed input is then clocked out to the output, we would have an unwanted bit change or a \ac{SEU} caused by SET.
 \footnotetext[4]{An n-bit Look-Up Table can encode any n-bit Boolean function by modeling such functions as truth tables}
 
 % Where combinatoric logic circuits are circuits where the outputs are a function only independent on the present inputs, typical combinatoric functions are $AND, OR, XOR$ etc \cite{CMOS}.
@@ -910,9 +911,11 @@ and a \ac{WSR} enable signal will be sent from the test board to the monitoring 
 
 We made generic of all the variables like number of flip-flop in the shift-register chain, number of inverters in between each flip-flop, number of bits taken out in the \ac{WSR} output and how many shift-register we want to use. Typical value used is respectively 2000, 4, 4 and 4.
 
-We wanted to be able to change the clock frequency without reprogramming the \ac{FPGA}, to see how the frequency affects the number of upset detected.
+In this kind of design we can have \acp{SEU} in the registers and we can have \acp{SET} that are causing \acp{SEU}. Number of detected SET is dependent on the frequency, but SEU in the register are not. To be able to distinguish between these two types of errors, we will run the test with different clock frequency, so that we will hopefully detect more SEU with higher frequency. By seeing how much increase we have with increasing frequency, we should be able to say something about how many \ac{SET} induced \ac{SEU} we have compared to \ac{SEU} in the register.
+
 Clock Conditioning Circuit (CCC) which consist of a PLL, multiplexers and divider circuit, is used to configure clock signals on the \ac{SF2}.
-The CCC can be configured through a register, so that the frequency can be changed without reprogramming the \ac{FPGA}.
+The CCC can be accessed and configured through a register, so that the frequency can be changed without needing to reprogram the SF2.
+For the test of the logic element the CCC register was accessed from the microcontroller subsystem through APB bus, so that we were able to configure the clock frequency for the shift-register design without reprogramming the chip.
 
 \begin{figure}[!htbp]
   \centering
@@ -922,10 +925,9 @@ The CCC can be configured through a register, so that the frequency can be chang
 \end{figure}
 
 \subsection{Single Event Latchup and PLL}
-A \acf{SEL} is a short circuit between power and ground. If this occurs on any spot on the chip, an increase in the supply current can be detected. The way to check for \ac{SET} is by constantly checking for increase in current consumption on the chip. Normally the high current will produce so much heat that tracks in the chip will be destroyed, if not countered by shutting the power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See section \ref{current_measurement_board} for more information on that board.
+A \acf{SEL} is a short circuit between power and ground. If this occurs on any spot on the chip, an increase in the supply current can be detected. The way to check for \ac{SET} is by constantly checking for increase in current consumption on the chip. Normally the high current will produce so much heat that interconnections in the chip will be destroyed, if not countered by shutting the power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See section \ref{current_measurement_board} for more information on that board.
  
-The PLLs on the SF2 has a lock signal which goes high if the PLL is in sync with the input.
-To check if we had a clock, the lock signal was sent to an I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
+To check the PLLs on the SF2 we used the PLLs lock signal. The lock signal goes high if the PLL is in sync with the input, and will therefore give us an indication if the PLL is working as it should. A lock signal was checked by sending the lock signal to an I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
 
 \subsection{Configuration and Monitoring}
 To make the test process as easy as possible, a SF2 starter-kit was used to implement the tests discussed in the sections above. The starter-kit has serial communication to USB, which makes it possible to easily communicate with the SF2 chip from a computer, six 24-pin headers connected to the SF2 FPGA, which makes it possible to send data in and collect data out from the SF2 chip, and a lot of other supporting functions.
@@ -1523,7 +1525,7 @@ The current decreased to about the half for the first test and to about three qu
 
 \subsubsection{SN74AVCB164245 - Bus Transceiver}
 For the radiation test of the two test boards for SN74AVCB164245 we detected no errors on the output data. Current as a function of dose for the two test boards can be seen in \autoref{SN74AVCB164245_both}. The current characteristic for the two test boards seems alike. The only difference is that the second board was exposed to a much higher dose, therefore we can see a much more increase in current. The reason for the regularly increase and decrease in current is that the output is constantly changing back and forth from on to off, with a gap of 4 seconds. 
-No radiation effects are detected before a dose of approximately 40 kRad, where the current starting slowly to increase.
+No radiation effects are detected until a dose of approximately 40 kRad, where the current starting slowly to increase.
 
 \begin{figure}[!htbp]
 \centering
@@ -1580,8 +1582,9 @@ If the radiation results for board 2 is compared to the tests results of SN74AVC
 \FloatBarrier
 
 \subsubsection{QS3VH257 - Multiplexer/Demultiplexer}
-For both of the boards no errors on the output data were detected through the whole irradiation test. Current as a function of dose for the two test boards can be seen in \autoref{QS3VH257_both}. The behavior to radiation seems quite alike, the only the difference is that the second test board was exposed to a much higher dose and therefore we can see a much more increase in current. After a dose of approximately 40 kRad, the current starts increasing. For board 2 the current increased to almost 9 times the starting current after it had received a dose of 110 kRad.
+For both of the test boards for QS3VH257, no errors were detected on the output data through the entire irradiation test. Current as a function of dose for the two test boards can be seen in \autoref{QS3VH257_both}. The behavior to radiation seems quite alike, the only the difference is that the second test board was exposed to a much higher dose and therefore we can see a much higher increase in current. 
 
+For both of the test boards, the current starts increasing after a dose of approximately 40 kRad. For board 2 the current increased to almost 9 times the starting current after it had received a dose of 110 kRad, but until a dose of 40 kRad we didn't detect any effects to radiation on the two test boards.
 
 \begin{figure}[!htbp]
 \centering
@@ -1604,8 +1607,8 @@ For both of the boards no errors on the output data were detected through the wh
 \FloatBarrier
 
 \subsubsection{SY89831 - 1 to 4 fan-out Buffer}
-No errors were detected on the output data through both of the tests. Graphs of current as function of dose for the two test boards can be seen in \autoref{SY89831_both}.
-Also here a difference in current characteristic can be seen. The two test boards should be exactly alike, so the differences is probably caused by internal differences in the component, maybe caused by rough treatment during soldering. The current level is in the same magnitude, and the output data is without errors for both the test.
+No errors were detected on the output data through both of the radiation tests for SY89831. Graphs of current as function of dose for the two test boards can be seen in \autoref{SY89831_both}.
+Also here a difference in current characteristic can be seen. The two test boards should be equal, so the difference is probably caused by internal differences in the component, maybe caused by rough treatment during soldering. The current level is in the same magnitude, and we got no errors on the output data for both the test.
 
 % We can only detect a small increase in current for both of the tests, which suggest that this component is quite robust towards radiation. 
 
@@ -1634,11 +1637,25 @@ A total of 90 and 160 kRad was exposed to the two test boards without detecting 
 \FloatBarrier
 
 \subsubsection{ADN2814 - Limiting Amplifier}
-For the test of ADN2814, we didn't detect any current change before a dose of 270 kRad, see \autoref{ADN2814_curr}. But unfortunately we got allot of output errors, see \autoref{ADN2814_tot}. The first errors happened after a dose of 11 kRad for the clock signal , and after a dose of 8 kRad for the data signal, and after that the errors starting coming more regularly.
+For the test of ADN2814, we didn't detect any current change until a dose of 270 kRad, see \autoref{ADN2814_curr}, but unfortunately we got allot of output errors, see \autoref{ADN2814_tot}. The first errors occurred after a dose of 11 kRad for the clock signal, and after a dose of 8 kRad for the data signal. After these errors the errors starting coming more regularly. 
 
 If we look at the clock and data output as function of time, which can be found in appendix \ref{radiation_results_ocl} figure \ref{adn_error_time}, we see that after the beam stops after 3600 seconds, the errors stopped increasing, this means that the errors on clock and data are directly effected by the radiation.
 
-The current graph, as seen in \autoref{ADN2814_curr} is varying quite a lot in current, typically variation in the beginning is 130 to 136 mA. This may be caused by large variation in the input signal, and producing of two differential output signals with very high frequency (160 Mhz for the clock, and a little less for the data). More capacitors on the supply voltage could probably help to reduce this variations.
+% which means that a cross section can be found. The total number of errors for the clock signal was 4096 and for the data signal was 126. The total fluence for that period was $1.01\cdot10^{12} \frac{n}{\centi\meter^2}$. The cross section are then:
+% 
+% \begin{equation}
+% CS_{clock} = \frac{errors}{Fluence}=\frac{4096}{1.01\cdot10^{12} \frac{n}{\centi\meter^2}}= 4.05\cdot10^{-9}
+% \end{equation}
+% 
+% \begin{equation}
+% CS_{data} = \frac{errors}{Fluence}=\frac{126}{1.01\cdot10^{12} \frac{n}{\centi\meter^2}}= 1.25\cdot10^{-10}
+% \end{equation}
+
+The errors tells us that either the signal is incorrect or the timing is incorrect. For the RCU2 design it is critically that that the timing is correct for both the clock and data. The clock signal is the main clock signal on the RCU2 design, and everything that is timing dependent are depended on this clock signal. The data signal is used to decide when to do measurement and when to send the acquired data out from the RCU2. It is therefore quite important that the timing is correct. If the clock or data is incorrect, then we may lose useful data in that period, which is not good at all.
+
+Since the detected errors is unacceptable for our design, the interesting part when looking at the result is how long it worked without error.
+
+The current graph, as seen in \autoref{ADN2814_curr} is varying quite a lot in current, typically variation in the beginning is 130 to 136 mA. This may be caused by large variation in the input signal, and production of two differential output signals with very high frequency (160 Mhz for the clock, and a little less for the data). More capacitors on the supply voltage could probably help to reduce this variations.
 
 \begin{figure}[!htbp]
   \centering
@@ -1670,7 +1687,7 @@ The current graph, as seen in \autoref{ADN2814_curr} is varying quite a lot in c
 \subsubsection{MAX3748 - Limiting Amplifier}
 The test board for MAX3748 was exposed to a dose of over 400 kRad. We can also detect a large variation in current consumption, see \autoref{MAX3748_curr}. I presume that the reason is in the same manner as for the ADN2814 test board. That the large variations on the input signal, causing current consumption to vary depending on the state of the input signal. More capacitors on the supply voltage could also be a solution here to help reduce this variations. 
 
-Through this test we detected no errors on the output data, and the current consumption seems rather stable through the whole irradiation process, if not taken the large variation into account.
+Through this test we detected no errors on the output data, and the current consumption seems rather stable through the entire irradiation process, if not taken the large variation into account.
 
 \begin{figure}[!htbp]
   \centering
@@ -1682,11 +1699,11 @@ Through this test we detected no errors on the output data, and the current cons
 \FloatBarrier
 
 \subsubsection{INA210 - Current Shunt Monitor}
-In \autoref{INA210_both} we find graphs of current and voltage as function of dose for the two test boards. We can see that we have different reaction to radiation for the two boards, on the first board the output voltage increase and on the second board the output voltage decreased. This is quite strange, since the two boards should be exactly alike. Maybe the diode located on the input to the component got effected by the radiation on one of the two test boards, increasing or decreasing current, or it may also just be process variation. The current characteristic as function of dose are quite alike, the only difference is that on the second test board the current starts to increase a little earlier. 
+In \autoref{INA210_both} we find graphs of current and voltage as function of dose for the two test boards for INA210. A different reaction to radiation can be seen for the two boards. On the first board the output voltage increase and on the second board the output voltage decreased. This is quite strange, since the two boards should be exactly alike. Maybe the diode located on the input to the component got effected by the radiation on one of the two test boards, increasing or decreasing current the measured current. It may also just be process variation. The current characteristic as function of dose are quite alike, the only difference is that on the second test board the current starts to increase a little earlier. 
 
 For test board 1 the current and voltage starts to rise after a dose of approximately 80 kRad. For the second test board we see a small increase in current already after 20 kRad, but the voltage stays stable until a dose of 100 kRad.
 
-The increase we see from start to the peak on test board 1 contribute to a current increase of 2.85 $\milli\ampere$ ($\frac{0.352-0.295}{200} / 0.1 = 2.85 \milli\ampere)$. Compared to the starting current of 14.75 $\milli\ampere$ this contributes to a increase of 19 \%. Whats causing this effect could be offset variation on the output voltage, changing of the internal amplification or a increase in current on the measured input signal. If its only a offset on the output, the small increase will probably not matter when we have a larger current to measure, but if its the internal amplification which are changing, we could have a big problem when the current on the input will be larger.
+The increase we see on the output voltage from start to the peak on test board 1 contribute to a input current increase of 2.85 $\milli\ampere$ ($\frac{0.352-0.295}{200} / 0.1 = 2.85 \milli\ampere)$. Compared to the starting input current of 14.75 $\milli\ampere$ this contributes to a increase of 19 \%. Whats causing this effect could be offset variation on the output voltage, change in the internal amplification or a increase in current on the measured input signal. If its only a offset on the output, the small increase will probably not matter when we have a larger current to measure, but if its the internal amplification which are changing, this could be a problem when the current on the input is larger.
 
 \begin{figure}[!htbp]
 \centering
@@ -1711,9 +1728,11 @@ The increase we see from start to the peak on test board 1 contribute to a curre
 \subsubsection{TLV3011 - Comparator}
 The result after radiation of the two test board for TLV3011 can be seen in the graphs in \autoref{TLV3011_both} and \ref{TLV3011_both2}. The graphs goes up and down because the input signal is changing every 4 seconds.
 
-For the first test we didn't detect any error before a dose of 85 kRad. Then the output voltage high value changed from 3.2 V to 2.3 V, and we saw a major increase in current. In the area right before 20 kRad, the output voltage seems to stay high for a longer time. That is not the case, the reason for this effect is a sudden increase in intensity of the beam (see \autoref{flux_all3}). A graphs of current and voltage as function of time can be seen in appendix \ref{radiation_results_ocl} \autoref{TLV3011_time}, showing that the current and voltage stays stable.
+The first test board was exposed to total dose of 110kRad, after a dose of approximately 85 kRad the output voltage high value changed from 3.2 V to 2.3 V, and we saw a major increase in current. The period until 85 kRad we detected only a small increase in current and small decrease in output voltage, but the changes was so small that it wouldn't matter if it should happen in a PCB design.
 
-For the second test we didn't detect any error before a dose of 95 kRad. Then the output starting to get stuck at high value. This could be caused by changing of the internal reference voltage, a offset on the inputs or a stuck at error at the output. We also detect a small increase in current of about 0.15 $\milli\ampere$.
+In the area right before 20 kRad, the output voltage seems to stay high for a longer time. That is not the case, the reason for this effect is a sudden increase in intensity of the beam (see \autoref{flux_all3}). A graphs of current and voltage as function of time can be seen in appendix \ref{radiation_results_ocl} \autoref{TLV3011_time}, showing that the current and voltage stays stable.
+
+The second test board was exposed to a dose of 138 kRad, The output voltage was stable until a dose of 95 kRad, but then the output voltage got stuck at high value. This could be caused by a change of the internal reference voltage, a offset on the input signal or a stuck at error at the output. Through the entire radiation test, we detect only a small increase in current of about 0.15 $\milli\ampere$.
 
 \begin{figure}[!htbp]
 \centering
@@ -1755,10 +1774,10 @@ For the second test we didn't detect any error before a dose of 95 kRad. Then th
 
 \subsubsection{Summary of the Results}
 
-In \autoref{dose_15.11}, \ref{dose_28.11} and \ref{dose_10.04} you can see how long each components has been exposed to radiation, the dose they have received and if an error occurred during the irradiation. A returning effect from irradiation was that current consumption started increasing with the received dose, the exception was TPS51200 and MIC69302WU which both had a small decrease in current as the output voltage increased. This was probably caused by increase of the internal resistance for the components.
+In \autoref{dose_15.11}, \ref{dose_28.11} and \ref{dose_10.04} shows how long each components has been exposed to radiation, the dose and fluence they have received and if error(s) occurred during the irradiation. A returning effect from irradiation was that the current consumption started to increase in line with the increased received dose. The exception was TPS51200 and MIC69302WU which both had a small decrease in current as the output voltage increased. This was probably caused by increase of the internal resistance for the components caused by the radiation.
 
-We has some problems with some of the components tested, this may be due to rough treatment when soldering. Some of the components didn't have any leads, which means that the whole component had to be heated to be able to solder the pads beneath them, since the heat can go up to several hundred degrees, it may cause some damage on the chip.
-That is part of the reason why we tried to at least have two boards which was tested, so that if one of them didn't work, we would at least have one working test.
+We has some problems with some of the components tested, this may be due to rough treatment when soldering. Some of the components didn't have any leads, which means that the entire component had to be heated to be able to solder the pads beneath them, since the heat can go up to several hundred degrees, it may cause some damage on the chip.
+That is part of the reason why we tried to at least have two boards which was tested, to ensure at least one successful test. 
 
 A challenge when we exposed the test boards, is that the proton beam didn't seem to be as stable, this can be seen from the flux graphs in \autoref{flux_all1}, \ref{flux_all2} and \ref{flux_all3}.
 
@@ -1795,7 +1814,7 @@ $SN74AVCB164245_2$ & 526  & 201 & No \\ \hline
 $SN74AVC2T245_2$ & 478  & 162 & No \\ \hline
 $QS3VH257_2$ & 264  & 110 & No \\ \hline
 $SY89831U_2$ & 921  & 166 & No \\ \hline
-\multicolumn{4}{l}{\textsuperscript{*}\footnotesize{The board wouldn't work at test time}}
+\multicolumn{4}{l}{\textsuperscript{*}\footnotesize{The board didn't work at test time}}
 \end{tabular}
 \caption{Tests at OCL 27-28.nov 2013}
 \label{dose_28.11}
@@ -1819,45 +1838,47 @@ $TLV3011_2$ & 1074 & 138 & Yes \\ \hline
 
 \newpage
 \subsubsection{Discussion of the Result}
-We had access to OCL in three periods; 13.11.13-15.11.13, 28.11.13-29.11.13 and 08.04.14-11.04.14, but most of the testing was done 15.11.13, 28.11.13 and 11.04.14. The other days was used to get familiar with the instruments and equipment that was being used, to prepare the setup and setting up the beam.
+We had access to OCL in three periods; 13.11.13-15.11.13, 28.11.13-29.11.13 and 08.04.14-11.04.14, but most of the testing was performed 15.11.13, 28.11.13 and 11.04.14. The remaining days were used to become familiar with the instruments and equipment that was being used, to prepare the setup and setting up the beam.
 
 Due to variations in the cyclotron setup and beam tuning from day to day, beam calibration had to be done each day at start-up.
 
-The interesting thing when determining if an component is tolerant towards radiation is the absorbed dose. For run2 in the \ac{LHC}, which will last in three years, it has been estimated that the total dose in the TPC is 1-2 kRad, see \autoref{TPC_environment}. This is the absolute limit an component has to survive, and a safe margin of at least 3 times should be used. We also have to take into account that when radiating at OCL, we have been using proton beam of less than 30 MeV, in the TPC detector in ALICE, we can receive protons and neutrons in the energy level of above 1 GeV, which may cause other effects then what we have seen in our test at OCL. It is therefore important to have a good margin on the dose.
+The interesting aspect when determining if an component is tolerant against radiation is the absorbed dose of radiation. For run2 in the \ac{LHC}, which will last for three years, it has been estimated that the total dose in the TPC is 1-2 kRad, see \autoref{TPC_environment}. This means that 1-2 kRad is the absolute limit an component has to survive, and a safe margin of at least 3 times should be used. We also have to take into account that when radiating at OCL, we have been using proton beam of less than 30 MeV. In the TPC detector in ALICE, we can receive protons and neutrons in the energy level of above 1 GeV, which may cause other effects then what we have seen in our test at OCL. It is therefore important to have a good margin on the dose.
 
 % When testing two boards of the same type, and on of these fails 
-For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals were only measured digitally by a USB-DAQ, which means that we really don't know if the voltage level shifted because of the received dose. The USB-DAQ  used has an input low level from -0.3 V to 0.8 V and the input high level from 2.0 to 5.8, which means that we could actually have a large swing on the output without being detected.
-But then again, changes on the output can normally be referred back to current consumption, as we can see on TPS51200, MIC69302WU and INA210. For all of the test with digital measured output, we didn't see any increase in current before a dose of 30-40 kRad, and therefore we can assume that the output signal were good at least until then.
+For the test of SN74AVCB164245, SN74AVC2T245 and QS3VH257 the output signals were only measured digitally by using a USB-DAQ, which means that we don't know if we had a shift in voltage level caused by the received dose. The USB-DAQ  used has an input low level from -0.3 V to 0.8 V and the input high level from 2.0 to 5.8, which means that we could actually have a large swing on the output without it being detected.
+Anyhow, changes on the output can normally be referred back to current consumption, as we can see on TPS51200, MIC69302WU and INA210. For all of the tests where we used digital measured output, we didn't see any increase in current until a dose of approximately 40 kRad, and therefore we can assume that the output signals were reliable at least until then.
 
-Every components which was tested worked after a dose of 6 kRad, which is three times more than the expected dose we could expect in the ALICE TPC. That means that every component that has been tested is cleared to be used in the RCU2 design. The component which performed worst is ADN2814, which gave us an error after a dose of 8 kRad, but then the test method wasn't necessarily the best. But since MAX3748, performed so much better, and could be used for the same purpose, this would preferable be used. 
+Every components that was tested worked after receiving a dose of 6 kRad, which is three times more than the expected dose in ALICE TPC. That means that every component that has been tested is cleared to be used in the RCU2 design. The component which performed worst is ADN2814, which gave us an error after a dose of 8 kRad, but since MAX3748, performed much better, and could be used for the same purpose, this would preferably be used.
 
 % In tables \ref{dose_15.11}, \ref{dose_28.11} and \ref{dose_10.04} 
 % When we were going to measure the intensity at the beam exit, we placed a Faraday cup in front of the beam, and connected it to a amperemeter on the control panel, but since the current is so small, the measuring instrument will be affected by air currents, and there are also a lot of uncertainties in the instruments. Therefore we only used the Faraday cup and the amperemeter, to get a rough estimate of the actual intensity.
 \newpage
 
 \subsection{Test Results on SF2}
-In this section the results from radiation test on the SF2 M2S050ES chip will be presented. The different parts of SF2 tested will be presented separately, and we will have a discussion on the total result at the end. Only one starter kit was tested, but the beam was turned off and during the test. After a dose of approximately 37 kRad we got a very high increase in current, probably caused by a latchup.
-We did a power cycle of the board, and the current went back to a normal level. The test result presented are divided into before and after the power cycle, hereafter called run1 and run2. The shift-register design made for testing of the logical element, see section \ref{logic_Element}, was only used in run2. After a dose of approximately 8 kRad on run2, the current increased again. We tried another power cycle, but this time it was permanently. The total dose after radiation was approximately 45 kRad.
+In this section the results from the radiation test on the SF2 M2S050ES will be presented. The different parts of the SF2 that were tested will be presented separately, and will be discussed at the end. Only one starter kit was tested, but the beam was turned off and on a few times during the test. After a dose of approximately 37 kRad we saw a very high increase in current, probably caused by a latchup.
+We did a power cycle of the board, and the current went back to a normal level. The test results presented are divided into before and after the power cycle, hereafter called run1 and run2. The shift-register design made for testing the logical element, see section \ref{logic_Element}, was only used in run2. After a dose of approximately 8 kRad on run2, the current increased again. We tried another power cycle, but this time it was permanently. The total dose after radiation was approximately 45 kRad.
 
 \FloatBarrier
 \subsubsection{SRAM}
-The purpose of the SRAM test is to see how reliable the SRAM memory is, and to find a cross section for upset in the memory. In figure \ref{SRAM_test1} and \ref{SRAM_test2} you can see \acp{SEU} on large SRAM and micro SRAM as function of dose. During the test, we had some problems with the microcontroller subsystem, which stopped working in periods. The microcontroller subsystem was running in debug mode, which made it possible to restart the microcontroller subsystem as we wanted. If the microcontroller subsystem stopped working, a restart brought the communication back to normal, but then we had a short period of lost data. This can be seen as drops in the \acp{SEU} and cycles counter, and small fall in current, see \autoref{SRAM_test1}, \ref{sf2_current} and \ref{sf2_cycles}.
+The purpose of the SRAM test is to see how reliable the SRAM memory is, and to find a cross section for \ac{SEU} in the memory. \autoref{SRAM_test1} and \ref{SRAM_test2} shows \acp{SEU} on large SRAM and micro SRAM with fluence as function of time for the radiation tests of the two starter-kits.
+
+During the test, we had some problems with the microcontroller subsystem, which stopped working in periods, caused by the received radiation. The microcontroller subsystem was running in debug mode, which made it possible to restart the microcontroller subsystem when needed. When the microcontroller subsystem stopped working, a restart brought the communication back to normal. This can be seen as drops down to 0 in the \ac{SEU} counter and small fall in current, see \autoref{SRAM_test1} and \ref{sf2_current}.
 
 \begin{figure}[!htbp]
 \centering
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/lsram_dose_sf2_1}
+  \includegraphics[width=\linewidth]{figures/lsram_fluence_vs_time_sf2_1}
   \caption{SEU on Large SRAM versus Dose in kRad}
   \label{LSRAM_test1}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/usram_dose_sf2_1}
+  \includegraphics[width=\linewidth]{figures/usram_fluence_vs_time_sf2_1}
   \caption{SEU on micro SRAM versus Dose in kRad}
   \label{USRAM_test1}
   \end{subfigure}
- \caption{LSRAM and micro SRAM test results before shutdown}
+ \caption{Large SRAM and micro SRAM test results before shutdown}
   \label{SRAM_test1}
 \end{figure}
 
@@ -1865,13 +1886,13 @@ The purpose of the SRAM test is to see how reliable the SRAM memory is, and to f
 \centering
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/lsram_dose_sf2_2}
+  \includegraphics[width=\linewidth]{figures/lsram_fluence_vs_time_sf2_2}
   \caption{SEU on Large SRAM versus Dose in kRad}
   \label{LSRAM_test2}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/usram_dose_sf2_2}
+  \includegraphics[width=\linewidth]{figures/usram_fluence_vs_time_sf2_2}
   \caption{SEU on micro SRAM versus Dose in kRad}
   \label{USRAM_test2}
   \end{subfigure}
@@ -1879,28 +1900,30 @@ The purpose of the SRAM test is to see how reliable the SRAM memory is, and to f
  \label{SRAM_test2}
 \end{figure}
 
-For run 1 slightly after a dose of 35 kRad, we see a gap where we had no increase in upset on neither the large SRAM nor the micro SRAM. The flux is stable and the cycle counter is not changing as well (see appendix \ref{radiation_results}). This suggests that something is not working in the FPGA, and most likely something with the clock signal, maybe because of PLL lock loss. We got two PLLs errors in that period supporting that theory, see \ref{PLL_error1}
+For run 1 after around 4400 s, we see a gap where we had no increase in \ac{SEU} on neither the large SRAM or the micro SRAM, see \autoref{SRAM_test1}. The flux is stable and the cycle counter is not changing either (see appendix \ref{radiation_results}). This suggests that something is not working in the FPGA, and most likely something with the clock signal, possibly because of PLL lock loss. We got two PLL errors in that period supporting this theory, see \autoref{PLL_error1}
 
-We can see that for run1, the SEUs on the large SRAM is increasing quite linear. The SEUs on the micro SRAM got a more stepwise increase in SEUs, but the increase isn't to far from linear. There are much fewer memory bits in the micro SRAM compared to the large SRAM, in total there are approximately 9.5 times more bits in the large SRAM compared to the micro SRAM, respectively 622592 and 65536.
+For both run1 and run2, see \autoref{SRAM_test1} and \ref{SRAM_test2}, the SEU counters for the large SRAM and micro SRAM are increasing in line with the fluence. This means that we have a linear increase between the SEU counters and fluence, and cross section can be calculated.
 
-On run2, see \autoref{SRAM_test2}, we had even more problems with the microcontroller subsystem. This can be seen as large periods with no increase in counter values and then suddenly a jump when the microcontroller subsystem start working again. The FPGA is working independently of the microcontroller system, and we should therefore not have any errors, duo to this problem. We can see a almost linear increase for both the large SRAM and the micro SRAM for run2, if not taken the periods without contact with the microcontroller subsystem into account.
+There are much fewer memory bits in the micro SRAM compared to the large SRAM, in total there are approximately 9.5 times more bits in the large SRAM compared to the micro SRAM, respectively 622592 and 65536. That is why the SEU counter on micro SRAM isn't increasing as fast as for the large SRAM.
 
-To calculate the cross section, we should check over a period which is as linear and with as few errors as possible. The problem with the microcontroller subsystem didn't effect the SEU detection in the FPGA as we can see clearly from \autoref{SRAM_test2}. Therefore to calculate cross section for run1 we calculated in the period from 0 kRad to 36 kRad where we clearly got some kind of error. The fluence at 36 kRad is $1.04\cdot10^{11}\frac{n}{\centi\meter^2}$, and the total upsets for that period are 2386 and 70, respectively for the large SRAM and the micro SRAM. For run2, we will calculate over the period from 0 kRad until we lost connection after a dose of 8.5 kRad. The fluence in that period is $2.43\cdot{-10}\frac{n}{\centi\meter^2}$, and the large SRAM SEU counter and micro SRAM SEU counter are respectively 511 and 24. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us,
+During run2, see \autoref{SRAM_test2}, the problem with the microcontroller subsystem increased. This can be seen as large periods with no increase in counter values and then suddenly a jumps when we got contact with the microcontroller subsystem again. The FPGA is working independently of the microcontroller system, and we should therefore not have any errors duo to this problem.
+
+To calculate the cross section, we should analyze over a period with as few errors as possible. The problem with the microcontroller subsystem didn't effect the SEU detection in the FPGA as we can see clearly from \autoref{SRAM_test2}. Therefore to calculate cross section for run1 we calculated in the period from 0 to 4400 seconds where we clearly got some kind of error. The fluence after 4400 seconds is $1.04\cdot10^{11}\frac{n}{\centi\meter^2}$, and the total SEUs for that period are 2386 and 70, respectively for the large SRAM and the micro SRAM. For run2, we will calculate over the period from 0 seconds until we lost connection after 650 seconds. The fluence in that period is $2.43\cdot{10}\frac{n}{\centi\meter^2}$, and the large SRAM SEU counter and micro SRAM SEU counter are respectively 511 and 24. The equation to calculate the cross section can be taken from equation \ref{FluenceDUT}, giving us:
 
 \begin{equation}
-CS = \frac{SEUs}{FluenceDUT}
+CS = \frac{SEUs}{FluenceDUT} \frac{cm^2}{device}
 \end{equation}
 
 % After the shutdown we gets errors with a more rapid speed, and it is therefore harder to take use of the collected data.
 \FloatBarrier
 \paragraph{Uncertainties}$\newline$
-A number of uncertainties are present in the measurement, and we need therefore to take these into the calculations.
+A number of uncertainties are present in the measurement, and we therefore need to include them in the calculations.
 
 \begin{itemize}
-  \item The uncertainty resulting from finding the ratio between the number of scintillator counts and the number of SEUs ($\sigma{ratio}$) in the calibration process of the SRAM radiation detector was commonly about 10 \%.
-  \item The uncertainty introduced due to the nonlinear response ($\sigma{lin}$) of the scintillator to the intensity of the beam was estimated to 10 \% 
+  \item The uncertainty resulting from finding the ratio between the number of scintillator counts and the number of SEUs in the the SRAM radiation detector ($\sigma{ratio}$)  was commonly about 10 \%.
+  \item The uncertainty introduced due to the nonlinear response ($\sigma{lin}$) of the scintillator to the intensity of the beam was estimated to be 10 \% 
   \item Since the number of SEUs detected are random in time and linearly dependent on the amount of incoming particles, the uncertainty can be given by Poisson distribution and is $\frac{1}{\sqrt{N_{SEU}}}$  \hfill
-  \item Uncertainties from errors ($\sigma{err}$) occurred during the run, is estimated to be about 10 \%.
+  \item Uncertainties from errors ($\sigma{err}$) occurred during the run, is estimated to be 10 \%.
   \item From the uncertainty of the position of the device at the extraction point we estimate 2 \% ($\sigma_{pos}$).
 \end{itemize}
   
@@ -1910,16 +1933,16 @@ This gives us an uncertainty on the cross section of:
  \sigma_{CS} = \sqrt{\sigma_{ratio}^2+\sigma_{lin}^2+(\frac{1}{N_{SEU}})^2+\sigma_{err}^2+\sigma_{pos}^2}
 \end{equation}
 
-The calculated values for cross section per bit with uncertainty can be found in the table \ref{Cross_section_calc1}.
+The calculated values for cross section per bit with uncertainty can be found in \autoref{Cross_section_calc1}.
 
 \begin{table}
  \centering
- \begin{tabular}{|l|l|l|l|}  \hline 
- device & CS [$cm^2$] & CS per bit [$cm^2/bit$] & $\sigma_{CS} [cm^2/bit]$ \\\hline\hline
- $Large SRAM_{run1}$ & $2.29\cdot10^{-8}$  & $3.68\cdot10^{-14}$ & $6.42\cdot10^{-15}$ \\\hline
- $micro SRAM_{run1}$ & $6.73\cdot10^{-10}$ & $1.03\cdot10^{-14}$ & $1.80\cdot10^{-15}$ \\\hline
- $Large SRAM_{run2}$ & $2.10\cdot10^{-8}$  & $3.37\cdot10^{-14}$ & $5.88\cdot10^{-15}$ \\\hline
- $micro SRAM_{run2}$ & $9.88\cdot10^{-10}$ & $1.51\cdot10^{-14}$ & $2.71\cdot10^{-15}$ \\\hline
+ \begin{tabular}{|l|l|l|l|l|}  \hline 
+ Device & $N_{SEU}$ &CS [$\frac{cm^2}{device}$] & CS per bit [$cm^2/bit$] & $\sigma_{CS} [cm^2/bit]$ \\\hline\hline
+ $Large SRAM_{run1}$ & 2386	& $2.29\cdot10^{-8}$  & $3.68\cdot10^{-14}$ & $6.42\cdot10^{-15}$ \\\hline
+ $micro SRAM_{run1}$ & 70	& $6.73\cdot10^{-10}$ & $1.03\cdot10^{-14}$ & $1.80\cdot10^{-15}$ \\\hline
+ $Large SRAM_{run2}$ & 511	& $2.10\cdot10^{-8}$  & $3.37\cdot10^{-14}$ & $5.88\cdot10^{-15}$ \\\hline
+ $micro SRAM_{run2}$ & 24	& $9.88\cdot10^{-10}$ & $1.51\cdot10^{-14}$ & $2.71\cdot10^{-15}$ \\\hline
  \end{tabular}
  \caption{Calculation of cross section with uncertainty}
  \label{Cross_section_calc1}
@@ -1948,90 +1971,97 @@ The get a more precise calculation of cross section for the micro SRAM, we shoul
 % \end{equation}
 \FloatBarrier
 \subsubsection{Logic Element}
-For run1 we didn't manage to use the shift register design, because of some errors in the test code. This was solved before run2.
+For run1 we didn't manage to use the shift register design, due to some errors in the test code. This was solved before run2.
 
-In the shift register design in run2 we had 4 shift register chains with shift register length of 2000, with 4 inverters in between each register and 4 windowed shift register. The frequency used was 40 MHz. In table \ref{SR_table}, you find the results from run2.
+For the shift register design in run2 we had 4 shift register chains with a shift register length of 2000 registers, with 4 inverters in between each register and 4 windowed shift register for each chain. The clock frequency used was 40 MHz. \autoref{SR_table} and \autoref{SR_graph} shows the results from run2.
 
-We detected 5 shift register errors in total over a dose of 8 kRad and the first shift register error occurred after a dose of 2.95 kRad. That was something like we would expected, but one of the point with this test, were to see if we could distinguish between upset and transient on the tracks by changing on the frequency. Now we only run on a 40 MHz, meaning we can't say anything if the error we see is an upset in the registers, or transient on the track. We got at least a feeling on how often we would see an error on the shift register with the settings used. 
+We detected 5 shift register errors in total over a total fluence of $2.28\cdot10^{10}$, see \autoref{SR_table}, this gives a cross section of $2.19\cdot10^{-10} \frac{cm^2}{device}$, and cross section per register of $2.74\cdot10^{-14}\frac{cm^2}{register}$. If compared to the cross section for SRAM memory, see \autoref{Cross_section_calc1}, we got a little higher cross section than the micro SRAM and little lower then that large SRAM. Since the cross section for shift register error is calculated from only 5 errors, the calculated cross section may suffering from coincidence, and may not be as precise.
+
+One of the point with this test was to see if we could distinguish between SEU in the registers and \acp{SEU} caused by SET, by changing the frequency as discussed in \autoref{logic_Element}. This time we only run with a 40 MHz clock, meaning we can't say anything if the error we see is an upset in the registers, or a transient causing a upset. At least we got a indication of how often we would see an error in the shift register with a 40 Mhz clock and the settings we used for the test.
 
 \begin{table}
 \centering
 \begin{tabular}{|l|l|l|}\hline
-SEU in the shift registers & Exposed time[s] & Dose[kRad] \\ \hline \hline
-1 & 320 & 2.95  \\ \hline
-2 & 357 &  3.53\\ \hline
-3 & 358 & 3.54 \\ \hline
-4 & 417 & 4.46  \\ \hline
-5 & 620 & 7.81  \\ \hline
-$\Delta$\textsuperscript{*} & 620 & 7.81  \\ \hline
-\multicolumn{3}{l}{\textsuperscript{*}\footnotesize{Lots of shift register errors followed after this}}
+SEUs in the shift registers & Exposed time[s] & Fluence[$n/\centi\meter^2$] \\ \hline \hline
+5 & 620 & $2.28\cdot10^{10}$  \\ \hline
 \end{tabular}
 \caption{Shift register errors in run2}
 \label{SR_table}
 \end{table}
 
+
+\begin{figure}[!htbp]
+ \centering
+   \includegraphics[width=0.6\linewidth]{figures/LEerror_fluence_sf2_2}
+   \caption{SEUs in the Shift register as function of fluence}
+   \label{SR_graph}
+\end{figure}
+
+
 \FloatBarrier
 \subsubsection{PLL and Latchup}
-The current was measured while irradiating the SF2, graphs of current as function of dose can be found in appendix \ref{radiation_results_ocl}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1 where the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be turned off and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 we got another latchup increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
+The current was measured while irradiating the SF2, graphs of current as function of dose can be found in appendix \ref{radiation_results_ocl}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1 where the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be turned off and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 another latchup occurred increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
 
-In table \ref{PLL_error1} and \ref{PLL_error2} you can see the result from the PLL test. The PLL which was monitored was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal. We got a total of 23 PLL lock loss, giving us 11.5 losses per PLL over a dose of 45 kRad. A noticeable thing is that the first lock loss already occurred after a dose of 0.7 kRad. We also have a period between 5.0 and 18.7 where we didn't detect any PLL lock loss at all, which is rather strange.
+In \autoref{PLL_error1} and \autoref{PLL_lock_loss} you can see the results from the PLL test for run1 and run2. The lock signal that was monitoring, was from a PLL that was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal.
+
+We have a large period in between a fluence of $1.47\cdot10^{10} \frac{n}{cm^2}$ and $5.45\cdot10^{10} \frac{n}{cm^2}$, where we didn't detect any PLL lock-loss, which is rather strange, and is assumed to be an error with the measurement. When calculating the cross section we will therefore calculate before and after this period, where the PLL lock-loss increases more linear with the fluence, see \autoref{PLL_lock1}.
 
 \begin{table}[!htbp]
  \centering
-\begin{tabular}{|l|l|l|}\hline
-PLL lock loss & Exposed time[s] & Dose[kRad] \\ \hline \hline
-1 & 88 & 0.7  \\ \hline
-2 & 166 & 1.3 \\ \hline
-3 & 304 & 2.3 \\ \hline
-4 & 473 & 3.6  \\ \hline
-5 & 523 & 4.0  \\ \hline
-6 & 663 & 5.0 \\ \hline
-7 & 2363 & 18.7 \\ \hline
-8 & 2440 & 19.3  \\ \hline
-9 & 2720 & 21.5  \\ \hline
-10 & 2938 & 23.1 \\ \hline
-11 & 2938 & 23.1 \\ \hline
-12 & 3306 & 26.0  \\ \hline
-13 & 3600 & 28.4  \\ \hline
-14 & 3633 & 28.6 \\ \hline
-15 & 4125 & 32.6 \\ \hline
-16 & 4575 & 36.1  \\ \hline
-17 & 4546 & 36.1  \\ \hline
-18 & 4624 & 36.5 \\ \hline
+\begin{tabular}{|l|l|l|l|}\hline
+Test & PLL lock loss & Exposed time[s] & Fluence[$\frac{n}{\centi\meter^2}$] \\ \hline \hline
+Run1 & 18 & 4624 & $1.06\cdot10^{11}$  \\ \hline
+Run2 & 5 & 589 & $2.12\cdot10^{10}$  \\ \hline
 \end{tabular}
 \caption{Time and dose for the PLL errors run1}
 \label{PLL_error1}
 \end{table}
 
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/PLLerrors_vs_fluence_sf2_1}
+  \caption{PLL lock loss for run1}
+  \label{PLL_lock1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/PLLerrors_vs_fluence_sf2_2}
+  \caption{PLL lock loss for run2}
+  \label{PLL_lock2}
+  \end{subfigure}
+ \caption{PLL lock loss as function of fluence}
+ \label{PLL_lock_loss}
+\end{figure}
 
-\begin{table}[!htbp]
- \centering
-\begin{tabular}{|l|l|l|}\hline
-PLL errors & Exposed time[s] & Dose[kRad] \\ \hline \hline
-1 & 301 & 2.68  \\ \hline
-2 & 372 &  3.76\\ \hline
-3 & 541 & 5.50 \\ \hline
-4 & 576 & 7.08  \\ \hline
-5 & 589 & 7.28  \\ \hline
-\end{tabular}
-\caption{Time and dose for the PLL errors run2}
-\label{PLL_error2}
-\end{table}
-
-The cross section for PLL lock-losses can be found, even though we have little data to make a good statistics. The total fluence for the whole test $1.36\cdot10^{11}$, which gives us a cross section per PLL to be,
+% The cross section for PLL lock-losses can be found. Since we have so few cases of PLL lock-loss, we will calculate the cross section over both of the runs together. Then the total number of PLL lock-loss will be 23 and the total fluence $1.36\cdot10^{11} \frac{n}{cm^2}$.
 
 \begin{equation}
-face CS = \frac{\frac{PLL loss}{2}}{Fluence} = \frac{11.5}{1.36\cdot10^{11}} = 8.46 \dot10^{-11}
+CS = \frac{\frac{PLL loss}{2}}{Fluence} = \frac{11.5}{1.36\cdot10^{11}} = 8.46\cdot10^{-11}\frac{cm^2}{PLL}
 \end{equation}
 
-We will also have some uncertainty in the measurement. These are:
+\paragraph{Uncertainties}$\newline$
+We will also have some uncertainties in the measurement. These are:
 
 \begin{itemize}
   \item Since the number of errors detected are random in time and linearly dependent on the amount of incoming particles, the uncertainty can be given by Poisson distribution and is $\frac{1}{\sqrt{N_{err}}}$  \hfill
-  \item The uncertainty resulting from finding the ratio between the number of scintillator counts and the number of SEUs ($\sigma{ratio}$) in the calibration process of the SRAM radiation detector was commonly about 10 \%.
+  \item The uncertainty resulting from finding the ratio between the number of scintillator counts and the number of SEUs in the SRAM radiation detector in the calibration process of the beam was commonly about 10 \%.
   \item The uncertainty introduced due to the nonlinear response ($\sigma{lin}$) of the scintillator to the intensity of the beam was estimated to 10 \%
   \item From the uncertainty of the position of the device at the extraction point we estimate 2 \% ($\sigma_{pos}$).
 \end{itemize}
+
+\begin{table}[!htbp]
+ \centering
+\begin{tabular}{|l|l|l|l|l|}\hline
+Test & PLL lock loss per PLL & Fluence[$\frac{n}{\centi\meter^2}$] & CS & $\sigma_{CS}$\\ \hline \hline
+Run1_period1 & 3 & 4624 & $1.06\cdot10^{11}$  \\ \hline
+Run1_period2 & 6 & 589 & $2.12\cdot10^{10}$  \\ \hline
+Run2 & 2.5 & 589 & $2.12\cdot10^{10}$  \\ \hline
+\end{tabular}
+\caption{Time and dose for the PLL errors run1}
+\label{PLL_error1}
+\end{table}
 
 \begin{equation}
  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})^2+\sigma_{ratio}^2+\sigma_{lin}^2+\sigma_{pos}^2}
@@ -2040,7 +2070,7 @@ We will also have some uncertainty in the measurement. These are:
 this gives the cross section for a PLL lock-loss with uncertainty to be:
 
 \begin{equation}
- CS  = 8.46\cdot10^{-11} ± 1.26\cdot 10^{-11}
+ CS  = 8.46\cdot10^{-11} \pm 1.26\cdot 10^{-11}
 \end{equation}
 
 \FloatBarrier
