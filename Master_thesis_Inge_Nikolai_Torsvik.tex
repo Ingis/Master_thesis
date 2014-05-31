@@ -2002,9 +2002,9 @@ SEUs in the shift registers & Exposed time[s] & Fluence[$n/\centi\meter^2$] \\ \
 \subsubsection{PLL and Latchup}
 The current was measured while irradiating the SF2, graphs of current as function of dose can be found in appendix \ref{radiation_results_ocl}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1 where the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be turned off and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 another latchup occurred increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
 
-In \autoref{PLL_error1} and \autoref{PLL_lock_loss} you can see the results from the PLL test for run1 and run2. The lock signal that was monitoring, was from a PLL that was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal.
+In \autoref{PLL_error1} and \autoref{PLL_lock_loss} you can see the results from the PLL test for run1 and run2. The monitored lock signal came from a PLL that was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal. This means that the counted number of PLL lock-loss have to be divided on two to get number of PLL lock-loss per PLL.
 
-We have a large period in between a fluence of $1.47\cdot10^{10} \frac{n}{cm^2}$ and $5.45\cdot10^{10} \frac{n}{cm^2}$, where we didn't detect any PLL lock-loss, which is rather strange, and is assumed to be an error with the measurement. When calculating the cross section we will therefore calculate before and after this period, where the PLL lock-loss increases more linear with the fluence, see \autoref{PLL_lock1}.
+We have a large period in between a fluence of $1.47\cdot10^{10} \frac{n}{cm^2}$ and $5.45\cdot10^{10} \frac{n}{cm^2}$, where we didn't detect any PLL lock-loss, which is rather strange. When calculating the cross section we will therefore calculate before and after this period, where the PLL lock-loss increases more linear with the increasing fluence, see \autoref{PLL_lock1}.
 
 \begin{table}[!htbp]
  \centering
@@ -2056,7 +2056,7 @@ We will also have some uncertainties in the measurement. These are:
  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})^2+\sigma_{ratio}^2+\sigma_{lin}^2+\sigma_{pos}^2}
 \end{equation}
 
-this gives the cross section for a PLL lock-loss with uncertainty to be:
+The calculated cross section for a PLL lock-loss with uncertainties are as given i \autoref{PLL_cross_section}.
 
 \begin{table}[!htbp]
  \centering
