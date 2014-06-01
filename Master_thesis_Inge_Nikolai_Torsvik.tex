@@ -2081,13 +2081,14 @@ The SRAM test gave us around the expected numbers of SEUs, but we had some probl
 
 But since we got problems with the microcontroller subsystem, we have some potential improvements for our test. We discovered that the microcontroller subsystem wasn't so reliable when exposed to radiation. That means that data extracted should have been done without going through the microcontroller subsystem. This could be done by making a serial communication code in VHDL, and using GPIO pins as transmitting and receiving lines. If another test shall be done on the SF2 SRAM memory, this could been an option.
 
-We had also quite many PLL errors which could be a problem when the RCU2s will be mounted in the TPC. If the assumption that when the PLL loses its lock, the clock also falls low, is correct, we would have a period where we don't have any data collection every time the lock signal falls down.
-
-To know how often we will see this problem, we have to compare the calculated cross section with the expected flux in the TPC. The expected flux in the TPC is $3 \frac{KHz}{cm^2}$ or $3\cdot10^3 \frac{1}{\centi\meter^2 \second}$, see \auotref{TPC_environment}. The average of the calculated cross section for PLL lock-loss is $1.46\pm0.31\cdot10^{-10}$
+We had also noticeable amount of PLL lock-losses which could be a problem when the RCU2s will be mounted in the TPC. If the assumption that when the PLL loses its lock, the clock also falls low, is correct, we would have a period where we don't have any data collection every time the lock signal falls down.
 
 We didn't detect any current increase before a dose of 37 kRad, which is a really good result, compared to the dose of 1-2 kRad that we can expect in the TPC.
 
-The shift register design didn't give us the result we wanted. We wanted to see if we would have higher cross section with higher frequencies, indicating that we are able to pick up more SET with higher frequency. But since we only got to test on one frequency, we couldn't distinguish between SET and SEU in the registers.
+For the shift register design we wanted to see if we would have higher cross section with higher frequencies, indicating that we are able to pick up more SET with higher frequency. But since we only tested on one frequency, we couldn't distinguish between SET and SEU in the registers. But we still got an indication of the radiation tolerance of the logic element.
+
+To know how often we will encounter the errors we have checked for, we have to compare the calculated cross section with the expected flux in the TPC. The expected flux in the TPC is $3 \frac{KHz}{cm^2}$ or $3\cdot10^3 \frac{1}{\centi\meter^2 \second}$, see \auotref{TPC_environment}.
+The average of the calculated cross section for PLL lock-loss is $1.46\pm0.31\cdot10^{-10}$
 
 All in all the first radiation test of the SF2 did go quite well. We had some PLL errors, but we had a feeling that this would be a problem, so it wasn't any surprise.
 
