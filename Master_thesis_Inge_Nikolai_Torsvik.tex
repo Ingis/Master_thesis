@@ -2077,13 +2077,15 @@ Run2 		& 2.5 	& $2.12\cdot10^{10}$ & $1.18\cdot10^{-10}$ & $5.01\cdot10^{-11}$ \
 \FloatBarrier
 
 \subsubsection{Discussion on the Results}
-The SRAM test gave us around the expected numbers of SEUs, but we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM for run 1 and 2 are respectively are $3.68±0.64\cdot10^{-14}$ and $3.37±0.59\cdot10^{-14}$, and cross section for micro SRAM for run 1 and 2 respectively  are $1.03±0.18\cdot10^{-14}$ and $(1.51±2.71)\cdot10^-{14}$. The calculated values for both large SRAM and micro SRAM from run1 and run2 are very close to eachother, this support the  which is around the same magnitude as other SRAMs which has been tested \cite{arild_master} and \cite{roed_doctor}, which supports the results.
+The SRAM test gave us around the expected numbers of SEUs, but we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM for run 1 and 2 are respectively are $3.68\pm0.64\cdot10^{-14}$ and $3.37\pm0.59\cdot10^{-14}$, and cross section for micro SRAM for run 1 and 2 respectively  are $1.03\pm0.18\cdot10^{-14}$ and $(1.51\pm0.27)\cdot10^-{14}$. The calculated values for both large SRAM and micro SRAM from run1 and run2 are very close to each other, which supports the result. Compared to other SRAM chips that have been tested \cite{arild_master} \cite{roed_doctor}, the calculated cross section is in the same magnitude. The average cross section for the large SRAM is 3.53\pm0.47\cdot10^{-14} and the average for micro SRAM is $1.27\pm0.16\cdot10^{-14}$.
 
-But since we got some problems with the microcontroller subsystem, we have some potential improvements for our test. We discovered that the microcontroller subsystem wasn't so reliable, and the data extracted should have been done without going through the microcontroller subsystem. This could be done by making a serial communication code in VHDL, and using GPIO pins as transmitting and receiving lines. If another test shall be done on the SF2 SRAM memory, this could been an option.
+But since we got problems with the microcontroller subsystem, we have some potential improvements for our test. We discovered that the microcontroller subsystem wasn't so reliable when exposed to radiation. That means that data extracted should have been done without going through the microcontroller subsystem. This could be done by making a serial communication code in VHDL, and using GPIO pins as transmitting and receiving lines. If another test shall be done on the SF2 SRAM memory, this could been an option.
 
-We had also quite many PLL errors which could be a rather big problem when the RCU2 will be mounted in the TPC. If the clock is not working, we would have a period where we don't have any data collection, and it is when there is most radiation we are most interested in the data.
+We had also quite many PLL errors which could be a problem when the RCU2s will be mounted in the TPC. If the assumption that when the PLL loses its lock, the clock also falls low, is correct, we would have a period where we don't have any data collection every time the lock signal falls down.
 
-We didn't detect any current increase before a dose of 37 kRad, which is a really good result.
+To know how often we will see this problem, we have to compare the calculated cross section with the expected flux in the TPC. The expected flux in the TPC is $3 \frac{KHz}{cm^2}$ or $3\cdot10^3 \frac{1}{\centi\meter^2 \second}$, see \auotref{TPC_environment}. The average of the calculated cross section for PLL lock-loss is $1.46\pm0.31\cdot10^{-10}$
+
+We didn't detect any current increase before a dose of 37 kRad, which is a really good result, compared to the dose of 1-2 kRad that we can expect in the TPC.
 
 The shift register design didn't give us the result we wanted. We wanted to see if we would have higher cross section with higher frequencies, indicating that we are able to pick up more SET with higher frequency. But since we only got to test on one frequency, we couldn't distinguish between SET and SEU in the registers.
 
@@ -2148,11 +2150,11 @@ We will also have some uncertainty in the measurement. These are:
 this gives the cross section with uncertainty to be:
 
 \begin{equation}
- CS  = 2.45 \dot10^{-10} ± 1.41\cdot 10^{-11}
+ CS  = 2.45 \dot10^{-10} \pm 1.41\cdot 10^{-11}
 \end{equation}
 
 \begin{equation}
- CS = 2.33 \dot10^{-10} ± 1.34\cdot 10^{-11}
+ CS = 2.33 \dot10^{-10} \pm 1.34\cdot 10^{-11}
 \end{equation}
 
 We discovered on the first test, that the 0.1 $\ohm$ and 0.16 $\ohm$ resistors which were used, respectively on the 1.2 V and 3.3 V power source, were too high, since the maximum voltage the ADC could measure are 81.92 $\milli\volt$. When a latchup occurred the ADC was maxed, meaning we only knew that the voltage is above 81.9 V (current above 819 $\milli\ampere$, but not how much above. Therefore both of these resistors where replaced with a resistor of 0.025 $\ohm$ on the second starter-kit test.
@@ -2274,11 +2276,11 @@ Then we can calculate the cross section per bit with uncertainty from the values
 This gives us a average a cross section of the large SRAM and micro SRAM to be:
 
 \begin{equation}
-CS_{LSRAM} =  = (3.03 ± 0.45) \dot10^{-14}
+CS_{LSRAM} =  = (3.03 \pm 0.45) \dot10^{-14}
 \end{equation}
 
 \begin{equation}
-CS_{LSRAM} =  = (1.26 ± 0.18) \dot10^{-14}
+CS_{LSRAM} =  = (1.26 \pm 0.18) \dot10^{-14}
 \end{equation}
 
 % \begin{equation}
@@ -2365,7 +2367,7 @@ A issues that we uncounted in the tests at TSL, and not so much in OCL, is latch
 
 We also discovered a way to reduce latchups. By changing the 1.2 source voltage to 1.1 V, we effectively reduced number of latchup by $\sim$5, and this can maybe be brought even lower by reducing the voltage even further. More test on this aspect should be performed.
 
-The SRAM test on the two starter-kits did go fine, we had a lot of downtime due to errors, but the cross section calculations for both of our test were quite close to each other, supporting our results. We got a cross section of $(3.03 ± 0.45) \dot10^{-14}\centi\meter^2$ on the large SRAM, and $(1.26 ± 0.19) \dot10^{-14}\centi\meter^2$ for the micro SRAM. Compared to the results from OCL, which gave us cross sections of $(4.18 ± 0.73)\cdot10^{-14}\centi\meter^2$ for the large SRAM, and $(9.62 ± 1.32)\cdot10^-{15}\centi\meter^2$ for the micro SRAM, the results doesn't seems so bad.
+The SRAM test on the two starter-kits did go fine, we had a lot of downtime due to errors, but the cross section calculations for both of our test were quite close to each other, supporting our results. We got a cross section of $(3.03 \pm 0.45) \dot10^{-14}\centi\meter^2$ on the large SRAM, and $(1.26 \pm 0.19) \dot10^{-14}\centi\meter^2$ for the micro SRAM. Compared to the results from OCL, which gave us cross sections of $(4.18 \pm 0.73)\cdot10^{-14}\centi\meter^2$ for the large SRAM, and $(9.62 \pm 1.32)\cdot10^-{15}\centi\meter^2$ for the micro SRAM, the results doesn't seems so bad.
 
 We would think that we would have higher cross section at OCL than in TSL, because energy deposited per proton is higher for a 25 MeV proton beam than with a 170 MeV proton beam, this can be seen from figure \ref{energy_loss} (It shows different particles in air, but the principle is the same for silicon). The cross section for large SRAM supports this, but the micro SRAM doesn't. But then again, we had really low statistics on the micro SRAM, making the calculations not so trustworthy. Another test should be performed on the micro SRAM with higher intensity or over a longer period to check if the cross section is correct.
 

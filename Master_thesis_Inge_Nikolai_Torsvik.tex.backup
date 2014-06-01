@@ -2002,9 +2002,9 @@ SEUs in the shift registers & Exposed time[s] & Fluence[$n/\centi\meter^2$] \\ \
 \subsubsection{PLL and Latchup}
 The current was measured while irradiating the SF2, graphs of current as function of dose can be found in appendix \ref{radiation_results_ocl}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1 where the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be turned off and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 another latchup occurred increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
 
-In \autoref{PLL_error1} and \autoref{PLL_lock_loss} you can see the results from the PLL test for run1 and run2. The lock signal that was monitoring, was from a PLL that was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal.
+In \autoref{PLL_error1} and \autoref{PLL_lock_loss} you can see the results from the PLL test for run1 and run2. The monitored lock signal came from a PLL that was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal. This means that the counted number of PLL lock-loss have to be divided on two to get number of PLL lock-loss per PLL.
 
-We have a large period in between a fluence of $1.47\cdot10^{10} \frac{n}{cm^2}$ and $5.45\cdot10^{10} \frac{n}{cm^2}$, where we didn't detect any PLL lock-loss, which is rather strange, and is assumed to be an error with the measurement. When calculating the cross section we will therefore calculate before and after this period, where the PLL lock-loss increases more linear with the fluence, see \autoref{PLL_lock1}.
+We have a large period in between a fluence of $1.47\cdot10^{10} \frac{n}{cm^2}$ and $5.45\cdot10^{10} \frac{n}{cm^2}$, where we didn't detect any PLL lock-loss, which is rather strange. When calculating the cross section we will therefore calculate before and after this period, where the PLL lock-loss increases more linear with the increasing fluence, see \autoref{PLL_lock1}.
 
 \begin{table}[!htbp]
  \centering
@@ -2051,38 +2051,41 @@ We will also have some uncertainties in the measurement. These are:
   \item From the uncertainty of the position of the device at the extraction point we estimate 2 \% ($\sigma_{pos}$).
 \end{itemize}
 
-\begin{table}[!htbp]
- \centering
-\begin{tabular}{|l|l|l|l|l|}\hline
-Test & PLL lock loss per PLL & Fluence[$\frac{n}{\centi\meter^2}$] & CS & $\sigma_{CS}$\\ \hline \hline
-Run1_period1 & 3 & 4624 & $1.06\cdot10^{11}$  \\ \hline
-Run1_period2 & 6 & 589 & $2.12\cdot10^{10}$  \\ \hline
-Run2 & 2.5 & 589 & $2.12\cdot10^{10}$  \\ \hline
-\end{tabular}
-\caption{Time and dose for the PLL errors run1}
-\label{PLL_error1}
-\end{table}
 
 \begin{equation}
  \sigma_{CS} = \sqrt{(\frac{1}{N_{err}})^2+\sigma_{ratio}^2+\sigma_{lin}^2+\sigma_{pos}^2}
 \end{equation}
 
-this gives the cross section for a PLL lock-loss with uncertainty to be:
+The calculated cross section for a PLL lock-loss with uncertainties are as given i \autoref{PLL_cross_section}.
 
-\begin{equation}
- CS  = 8.46\cdot10^{-11} \pm 1.26\cdot 10^{-11}
-\end{equation}
+\begin{table}[!htbp]
+ \centering
+\begin{tabular}{|l|l|l|l|l|}\hline
+Test & PLL lock loss per PLL & Fluence[$\frac{n}{\centi\meter^2}$] & CS [$\frac{cm^2}{PLL}$]& $\sigma_{CS}$ [$\frac{cm^2}{PLL}$] \\ \hline \hline
+Run1\_period1 	& 3 	& $1.47\cdot10^{10}$ & $2.04\cdot10^{-10}$ & $7.40\cdot10^{-11}$ \\ \hline
+Run1\_period2 	& 6 	& $5.19\cdot10^{10}$ & $1.16\cdot10^{-10}$ & $2.54\cdot10^{-11}$ \\ \hline
+Run2 		& 2.5 	& $2.12\cdot10^{10}$ & $1.18\cdot10^{-10}$ & $5.01\cdot10^{-11}$ \\ \hline
+\end{tabular}
+\caption{Time and dose for the PLL errors run1}
+\label{PLL_cross_section}
+\end{table}
+
+% \begin{equation}
+%  CS  = 8.46\cdot10^{-11} \pm 1.26\cdot 10^{-11}
+% \end{equation}
 
 \FloatBarrier
 
 \subsubsection{Discussion on the Results}
-The SRAM test gave us around the expected numbers of SEUs, but we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM for run 1 and 2 are respectively are $3.68±0.64\cdot10^{-14}$ and $3.37±0.59\cdot10^{-14}$, and cross section for micro SRAM for run 1 and 2 respectively  are $1.03±0.18\cdot10^{-14}$ and $(1.51±2.71)\cdot10^-{14}$. The calculated values for both large SRAM and micro SRAM from run1 and run2 are very close to eachother, this support the  which is around the same magnitude as other SRAMs which has been tested \cite{arild_master} and \cite{roed_doctor}, which supports the results.
+The SRAM test gave us around the expected numbers of SEUs, but we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM for run 1 and 2 are respectively are $3.68±0.64\cdot10^{-14}$ and $3.37±0.59\cdot10^{-14}$, and cross section for micro SRAM for run 1 and 2 respectively  are $1.03±0.18\cdot10^{-14}$ and $(1.51±0.27)\cdot10^-{14}$. The calculated values for both large SRAM and micro SRAM from run1 and run2 are very close to each other, which supports the result. Compared to other SRAM chips that have been tested \cite{arild_master} \cite{roed_doctor}, the calculated cross section is in the same magnitude.
 
-But since we got some problems with the microcontroller subsystem, we have some potential improvements for our test. We discovered that the microcontroller subsystem wasn't so reliable, and the data extracted should have been done without going through the microcontroller subsystem. This could be done by making a serial communication code in VHDL, and using GPIO pins as transmitting and receiving lines. If another test shall be done on the SF2 SRAM memory, this could been an option.
+But since we got problems with the microcontroller subsystem, we have some potential improvements for our test. We discovered that the microcontroller subsystem wasn't so reliable when exposed to radiation. That means that data extracted should have been done without going through the microcontroller subsystem. This could be done by making a serial communication code in VHDL, and using GPIO pins as transmitting and receiving lines. If another test shall be done on the SF2 SRAM memory, this could been an option.
 
-We had also quite many PLL errors which could be a rather big problem when the RCU2 will be mounted in the TPC. If the clock is not working, we would have a period where we don't have any data collection, and it is when there is most radiation we are most interested in the data.
+We had also quite many PLL errors which could be a problem when the RCU2s will be mounted in the TPC. If the assumption that when the PLL loses its lock, the clock also goes low, is correct, we would have a period where we don't have any data collection, everytime the lock signal goes down.
 
-We didn't detect any current increase before a dose of 37 kRad, which is a really good result.
+To know how often we will see this problem, we have to compare the calculated cross section with the expected flux in the TPC. The expected flux in the TPC is $3 \frac{KHz}{cm^2}$ or $3\cdot10^3 \frac{1}{\centi\meter^2 \second}$. The average of the calculted cross section for PLL lock-loss is $1.46\pm
+
+We didn't detect any current increase before a dose of 37 kRad, which is a really good result, compared to the dose of 1-2 kRad that we can expect in the TPC.
 
 The shift register design didn't give us the result we wanted. We wanted to see if we would have higher cross section with higher frequencies, indicating that we are able to pick up more SET with higher frequency. But since we only got to test on one frequency, we couldn't distinguish between SET and SEU in the registers.
 
