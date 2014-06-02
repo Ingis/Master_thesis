@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.2.11)  1 JUN 2014 17:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.2.11)  2 JUN 2014 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1496,171 +1496,189 @@ Underfull \hbox (badness 10000) in paragraph at lines 2233--2233
 []|\OT1/cmr/m/n/12 Fluence
  []
 
-[84] [85] [86] [87] [88] [89]
+[84] [85] <figures/DDL2_test.png, id=1594, 578.8827pt x 292.81395pt>
+File: figures/DDL2_test.png Graphic file (type png)
+
+<use figures/DDL2_test.png>
+Package pdftex.def Info: figures/DDL2_test.png used on input line 2362.
+(pdftex.def)             Requested size: 364.19667pt x 184.21907pt.
+ [86]
+<figures/TTC_test.png, id=1603, 743.77875pt x 283.7802pt>
+File: figures/TTC_test.png Graphic file (type png)
+
+<use figures/TTC_test.png>
+Package pdftex.def Info: figures/TTC_test.png used on input line 2377.
+(pdftex.def)             Requested size: 364.19667pt x 138.95824pt.
+ [87 <./figures/DDL2_test.png>] [88 <./figures/TTC_test.png>] [89]
+Overfull \hbox (99.10901pt too wide) in paragraph at lines 2422--2437
+ [][] 
+ []
+
+[90]
 Chapter 7.
-[90
+[91
 
 ]
 Appendix A.
-[91
+[92
 
-] [92]
-<figures/dataerror_vs_time_adn.png, id=1629, 422.32782pt x 316.18124pt>
+] [93]
+<figures/dataerror_vs_time_adn.png, id=1648, 422.32782pt x 316.18124pt>
 File: figures/dataerror_vs_time_adn.png Graphic file (type png)
 
 <use figures/dataerror_vs_time_adn.png>
 Package pdftex.def Info: figures/dataerror_vs_time_adn.png used on input line 2
-469.
+518.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/clockerror_vs_time_adn.png, id=1630, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_time_adn.png, id=1649, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_time_adn.png Graphic file (type png)
 
 <use figures/clockerror_vs_time_adn.png>
 Package pdftex.def Info: figures/clockerror_vs_time_adn.png used on input line 
-2474.
+2523.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/1v2_current_dose_sf2_1.png, id=1631, 422.32782pt x 316.18124pt>
+<figures/1v2_current_dose_sf2_1.png, id=1650, 422.32782pt x 316.18124pt>
 File: figures/1v2_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_1.png used on input line 
-2485.
+2534.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/3v3_current_dose_sf2_1.png, id=1632, 422.32782pt x 316.18124pt>
+<figures/3v3_current_dose_sf2_1.png, id=1651, 422.32782pt x 316.18124pt>
 File: figures/3v3_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_1.png used on input line 
-2490.
+2539.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/cycles_dose_sf2_1.png, id=1633, 422.32782pt x 316.18124pt>
+<figures/cycles_dose_sf2_1.png, id=1652, 422.32782pt x 316.18124pt>
 File: figures/cycles_dose_sf2_1.png Graphic file (type png)
 
 <use figures/cycles_dose_sf2_1.png>
-Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2501.
+Package pdftex.def Info: figures/cycles_dose_sf2_1.png used on input line 2550.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/cycles_dose_sf2_2.png, id=1634, 422.32782pt x 316.18124pt>
+<figures/cycles_dose_sf2_2.png, id=1653, 422.32782pt x 316.18124pt>
 File: figures/cycles_dose_sf2_2.png Graphic file (type png)
 
 <use figures/cycles_dose_sf2_2.png>
-Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2506.
+Package pdftex.def Info: figures/cycles_dose_sf2_2.png used on input line 2555.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/flux_vs_time_1.png, id=1635, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_1.png, id=1654, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_1.png Graphic file (type png)
 
 <use figures/flux_vs_time_1.png>
-Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2515.
+Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2564.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
 
-<figures/flux_vs_time_2.png, id=1636, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_2.png, id=1655, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_2.png Graphic file (type png)
 
 <use figures/flux_vs_time_2.png>
-Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2522.
+Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2571.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
 
-<figures/flux_all_3.png, id=1637, 422.32782pt x 316.18124pt>
+<figures/flux_all_3.png, id=1656, 422.32782pt x 316.18124pt>
 File: figures/flux_all_3.png Graphic file (type png)
 
 <use figures/flux_all_3.png>
-Package pdftex.def Info: figures/flux_all_3.png used on input line 2529.
+Package pdftex.def Info: figures/flux_all_3.png used on input line 2578.
 (pdftex.def)             Requested size: 455.24411pt x 340.83382pt.
 
-<figures/current_vs_time_tlv1.png, id=1638, 596.98032pt x 398.23781pt>
+<figures/current_vs_time_tlv1.png, id=1657, 596.98032pt x 398.23781pt>
 File: figures/current_vs_time_tlv1.png Graphic file (type png)
 
 <use figures/current_vs_time_tlv1.png>
 Package pdftex.def Info: figures/current_vs_time_tlv1.png used on input line 25
-39.
+88.
 (pdftex.def)             Requested size: 223.07211pt x 148.81013pt.
 
-<figures/volt_vs_time_tlv1.png, id=1639, 422.32782pt x 316.18124pt>
+<figures/volt_vs_time_tlv1.png, id=1658, 422.32782pt x 316.18124pt>
 File: figures/volt_vs_time_tlv1.png Graphic file (type png)
 
 <use figures/volt_vs_time_tlv1.png>
-Package pdftex.def Info: figures/volt_vs_time_tlv1.png used on input line 2544.
+Package pdftex.def Info: figures/volt_vs_time_tlv1.png used on input line 2593.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [93 <./figures/dataerror_vs_time_adn.png (PNG copy)> <./figures/clockerror_vs_
+ [94 <./figures/dataerror_vs_time_adn.png (PNG copy)> <./figures/clockerror_vs_
 time_adn.png (PNG copy)> <./figures/1v2_current_dose_sf2_1.png (PNG copy)> <./f
-igures/3v3_current_dose_sf2_1.png (PNG copy)>] [94 <./figures/cycles_dose_sf2_1
+igures/3v3_current_dose_sf2_1.png (PNG copy)>] [95 <./figures/cycles_dose_sf2_1
 .png (PNG copy)> <./figures/cycles_dose_sf2_2.png (PNG copy)> <./figures/flux_v
-s_time_1.png (PNG copy)>] [95 <./figures/flux_vs_time_2.png (PNG copy)>] [96 <.
+s_time_1.png (PNG copy)>] [96 <./figures/flux_vs_time_2.png (PNG copy)>] [97 <.
 /figures/flux_all_3.png (PNG copy)> <./figures/current_vs_time_tlv1.png (PNG co
 py)> <./figures/volt_vs_time_tlv1.png (PNG copy)>]
-<figures/1v2_current_dose_sf2_2.png, id=1661, 422.32782pt x 316.18124pt>
+<figures/1v2_current_dose_sf2_2.png, id=1680, 422.32782pt x 316.18124pt>
 File: figures/1v2_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_2.png used on input line 
-2562.
+2611.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/3v3_current_dose_sf2_2.png, id=1662, 422.32782pt x 316.18124pt>
+<figures/3v3_current_dose_sf2_2.png, id=1681, 422.32782pt x 316.18124pt>
 File: figures/3v3_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_2.png used on input line 
-2567.
+2616.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [97 <./figures/1v2_current_dose_sf2_2.png (PNG copy)> <./figures/3v3_current_d
+ [98 <./figures/1v2_current_dose_sf2_2.png (PNG copy)> <./figures/3v3_current_d
 ose_sf2_2.png (PNG copy)>]
 Appendix B.
-[98
+[99
 
 ]
 \openout2 = `acronyms.aux'.
 
- (./acronyms.tex [99
+ (./acronyms.tex [100
 
 
-]) [100] (./Master_thesis_Inge_Nikolai_Torsvik.lof
-[101
+]) [101] (./Master_thesis_Inge_Nikolai_Torsvik.lof
+[102
 
 
-] [102] [103])
+] [103] [104])
 \tf@lof=\write5
 \openout5 = `Master_thesis_Inge_Nikolai_Torsvik.lof'.
 
- [104] (./Master_thesis_Inge_Nikolai_Torsvik.lot [105
+ [105] (./Master_thesis_Inge_Nikolai_Torsvik.lot [106
 
 ])
 \tf@lot=\write6
 \openout6 = `Master_thesis_Inge_Nikolai_Torsvik.lot'.
 
 
-[106] (./Master_thesis_Inge_Nikolai_Torsvik.bbl [107
+[107] (./Master_thesis_Inge_Nikolai_Torsvik.bbl [108
 
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2589.
- [108]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2589.
+] [109])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2638.
+ [110]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2638.
 
 (./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2589.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2589.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2638.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2638.
 
 Package rerunfilecheck Info: File `Master_thesis_Inge_Nikolai_Torsvik.out' has 
 not changed.
 (rerunfilecheck)             Checksum: A57313202D7890B44C1AB621B5CDF367;5393.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2589.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2638.
  ) 
 Here is how much of TeX's memory you used:
- 10709 strings out of 493493
- 162112 string characters out of 3143797
- 257219 words of memory out of 3000000
- 13331 multiletter control sequences out of 15000+200000
+ 10735 strings out of 493493
+ 162588 string characters out of 3143797
+ 257450 words of memory out of 3000000
+ 13347 multiletter control sequences out of 15000+200000
  13900 words of font info for 49 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,11n,38p,1022b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,11n,38p,1035b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
@@ -1680,11 +1698,11 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (115 pages, 40477132 b
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (117 pages, 40953378 b
 ytes).
 PDF statistics:
- 1998 PDF objects out of 2073 (max. 8388607)
- 1740 compressed objects within 18 object streams
- 448 named destinations out of 1000 (max. 500000)
- 1007 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2027 PDF objects out of 2073 (max. 8388607)
+ 1765 compressed objects within 18 object streams
+ 456 named destinations out of 1000 (max. 500000)
+ 1017 words of extra memory for PDF output out of 10000 (max. 10000000)
 

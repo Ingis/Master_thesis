@@ -7,36 +7,36 @@ Database file #1: Master_Inge_bibtex.bib
 Warning--empty journal in GranlundOlsson
 Warning--empty journal in radiation_alice
 Warning--empty journal in Berg
-You've used 28 entries,
+You've used 29 entries,
             1876 wiz_defined-function locations,
-            625 strings with 7707 characters,
-and the built_in function-call counts, 4522 in all, are:
-= -- 408
-> -- 212
+            630 strings with 7870 characters,
+and the built_in function-call counts, 4650 in all, are:
+= -- 421
+> -- 216
 < -- 0
-+ -- 88
-- -- 60
-* -- 268
-:= -- 722
-add.period$ -- 42
-call.type$ -- 28
-change.case$ -- 24
++ -- 90
+- -- 61
+* -- 271
+:= -- 739
+add.period$ -- 43
+call.type$ -- 29
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 197
-empty$ -- 495
-format.name$ -- 60
-if$ -- 1080
+cite$ -- 32
+duplicate$ -- 201
+empty$ -- 513
+format.name$ -- 61
+if$ -- 1114
 int.to.chr$ -- 0
-int.to.str$ -- 28
+int.to.str$ -- 29
 missing$ -- 18
-newline$ -- 105
-num.names$ -- 28
-pop$ -- 139
+newline$ -- 109
+num.names$ -- 29
+pop$ -- 147
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 86
+skip$ -- 89
 stack$ -- 0
 substring$ -- 56
 swap$ -- 27
@@ -45,7 +45,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 32
-width$ -- 30
-write$ -- 254
+while$ -- 33
+width$ -- 31
+write$ -- 262
 (There were 3 warnings)
