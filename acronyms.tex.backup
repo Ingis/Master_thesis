@@ -1,4 +1,4 @@
-\section*{Acronyms}
+\chapter*{Acronyms}
 \begin{acronym}[acronyms]
 \acro{CERN}{European Council for Nuclear Research}
 \acro{ALICE}{A Large Ion Collider Experiment}
@@ -9,11 +9,11 @@
 \acro{RCU}[RCU]{Readout Control Unit}
 \acro{RCU2}[RCU2]{Readout Control Unit 2}
 \acro{LHC}{Large Hadron Collider}
-\acro{FEE}{Front End Electronic}
+\acro{FEE}{Front End Electronics}
 \acro{FEC}{Front End Card}
 \acro{RAM}[RAM]{Random Access Memory}
 \acro{FPGA}[FPGA]{Field Programmable Gate Array}
-\acro{SEE}{Single Even Effect}
+\acro{SEE}{Single Event Effects}
 \acro{SEU}{Single Event Upset}
 \acro{SET}{Single Event Transient}
 \acro{SEL}{Single Event Latchup}
@@ -28,7 +28,6 @@
 \acro{CML}{Current-Mode Logic}
 \acro{TTC}{Timing, Trigger and Control}
 \acro{TPC}{Time Projection Chamber}
-\acro{LVPECL}{Low Voltage Positive Emitter Coupled Logic}
 \acro{SRAM}{Static Random Access Memory}
 \acro{PM-tube}{PhotoMultiplier Tube}
 \acro{TID}{Total Ionizing Dose}
@@ -41,7 +40,6 @@
 \acro{ADC}{Analog to Digital Converter}
 \acro{LET}{Linear Energy Transfer}
 \acro{SoC}{System On a Chip}
-\acro{CMOS}{Complementary Metal Oxide Semiconductor}
 \acro{DCS}{Control System board}
 \acro{SIU}{Source Interface Unit}
 \acro{PASA}{charge Sens itive Amplifier/Shaper}
@@ -49,6 +47,5 @@
 \acro{DDL}{Detect Data Link}
 \acro{RadMon}{Radiation Monitor}
 \acro{TSL}{The Svedberg Laboratory}
-\acro{MSS}{Microcontroller SubSystem}
 \acro{WSR}{Windowed Shift Register}
 \end{acronym}
