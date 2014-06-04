@@ -136,4 +136,9 @@ X.~Inc., ``Chipscope pro ibert for virtex-7 gtx.''
 \newblock
   \url{http://www.xilinx.com/products/intellectual-property/chipscope_ibert_virtex7_gtx.htm}.
 
+\bibitem{website:MAX3748}
+M.~Integrated, ``Max3748 - compact 155mbps to 4.25gbps limiting amplifier,''
+  June 2013.
+\newblock \url{http://datasheets.maximintegrated.com/en/ds/MAX3748.pdf}.
+
 \end{thebibliography}
