@@ -807,25 +807,55 @@ For the radiation test, we used a supply voltage of 3.3 V and voltage over resis
 In figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you find pictures of all of the different PCB boards, which have been made through this work.
 
 \begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/PCB_board1}
   \caption[PCB Boards 1]{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
-  \label{PCB_board1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{figures/PCB_board1_5}
+  \caption[PCB Boards 1]{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
+  \end{subfigure}
+ \caption{PCB-boards}
+ \label{PCB_board1}
 \end{figure}
+\newpage
 
 \begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=0.75\textwidth]{figures/PCB_board2}
-  \caption[PCB Boards 2]{Picture of PCB boards, from left we have, SN74AVC2T245, QS3VH257 and SY89831U}
-  \label{PCB_board2}
+  \includegraphics[width=\textwidth]{figures/PCB_board2}
+  \caption[PCB Boards 1]{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{figures/PCB_board3}
+  \caption[PCB Boards 1]{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
+  \end{subfigure}
+ \caption{PCB-boards}
+ \label{PCB_board2}
 \end{figure}
+\newpage
 
 \begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=0.75\textwidth]{figures/PCB_board3}
-  \caption[PCB Boards 3]{Picture of PCB boards, from left we have, ADN2814, MAX3748 and back-side of QS3VH257. The mark at the top of QS3VH257 indicates the center of the component}
-  \label{PCB_board3}
+  \includegraphics[width=\textwidth]{figures/PCB_board4}
+  \caption[PCB Boards 1]{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.65\textwidth]{figures/backside_PCB}
+  \caption[PCB Boards 1]{Picture of PCB boards, from left we have, TPS51200, MIC69302WU and SN74AVCB164245}
+  \end{subfigure}
+ \caption{PCB-boards}
+ \label{PCB_board3}
 \end{figure}
+\newpage
 
 \FloatBarrier
 
@@ -2056,7 +2086,8 @@ For run1 we didn't manage to use the shift register design, due to some errors i
 
 For the shift register design in run2 we had 4 shift register chains with a shift register length of 2000 registers, with 4 inverters in between each register and 4 windowed shift register for each chain. The clock frequency used was 40 MHz. \autoref{SR_table} and \autoref{SR_graph} shows the results from run2.
 
-We detected 5 shift register errors in total over a total fluence of $2.28\cdot10^{10}$, see \autoref{SR_table}, this gives a cross section of $2.19\cdot10^{-10} \frac{cm^2}{device}$, and cross section per register of $2.74\cdot10^{-14}\frac{cm^2}{register}$. With the same uncertainties as for the PLL test, we get cross section with uncertainty to be, $2.74\pm0.67\cdot10^{-14}\frac{cm^2}{register}$. If compared to the cross section for SRAM memory, see \autoref{Cross_section_calc1}, we got a little higher cross section than the micro SRAM and little lower then that large SRAM. Since the cross section for shift register error is calculated only from 5 errors, the calculated cross section may suffering from coincidence, and may not be precise.
+We detected 5 shift register errors in total over a total fluence of $2.28\cdot10^{10}$, see \autoref{SR_table}, this gives a cross section of $2.19\cdot10^{-10} \frac{cm^2}{device}$, and cross section per register of $2.74\cdot10^{-14}\frac{cm^2}{register}$. With the same uncertainties as for the PLL test, we get cross section with uncertainty to be, $2.74\pm0.67\cdot10^{-14}\frac{cm^2}{register}$.
+If compared to the cross section for SRAM memory, see \autoref{Cross_section_calc1}, we got a little higher cross section than the micro SRAM and little lower then that large SRAM. Since the cross section for shift register error is calculated only from 5 errors, the calculated cross section may suffering from coincidence, and may not be precise.
 
 One of the point with this test was to see if we could distinguish between SEU in the registers and \acp{SEU} caused by SET, by changing the frequency as discussed in \autoref{logic_Element}. This time we only run with a 40 MHz clock, meaning we can't say anything if the error we see is an upset in the registers, or a transient causing a upset. At least we got a indication of how often we would see an error in the shift register with a 40 Mhz clock and the settings we used for the test.
 
@@ -2083,7 +2114,8 @@ SEUs in the shift registers & Exposed time[s] & Fluence[$n/\centi\meter^2$] \\ \
 
 
 \subsubsection{Discussion on the Results}
-The SRAM test gave us approximately the expected numbers of SEUs, however we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM for run 1 and 2 are respectively are $3.68\pm0.64\cdot10^{-14}\frac{cm^2}{bit}$ and $3.37\pm0.59\cdot10^{-14}\frac{cm^2}{bit}$, and cross section for micro SRAM for run 1 and 2 are respectively $1.03\pm0.18\cdot10^{-14}\frac{cm^2}{bit}$ and $1.51\pm0.27\cdot10^{-14}\frac{cm^2}{bit}$. The calculated values for both large SRAM and micro SRAM from run1 and run2 are very close to each other, which supports the result. Compared to other SRAM chips that have been tested \cite{arild_master} \cite{roed_doctor}, the calculated cross section is in the same magnitude.
+The SRAM test gave us approximately the expected numbers of SEUs, however we had some problems with the microcontroller subsystem during the test. The calculated cross section for large SRAM for run 1 and 2 are respectively are $3.68\pm0.64\cdot10^{-14}\frac{cm^2}{bit}$ and $3.37\pm0.59\cdot10^{-14}\frac{cm^2}{bit}$, and cross section for micro SRAM for run 1 and 2 are respectively
+$1.03\pm0.18\cdot10^{-14}\frac{cm^2}{bit}$ and $1.51\pm0.27\cdot10^{-14}\frac{cm^2}{bit}$. The calculated values for both large SRAM and micro SRAM from run1 and run2 are very close to each other, which supports the result. Compared to other SRAM chips that have been tested \cite{arild_master} \cite{roed_doctor}, the calculated cross section is in the same magnitude.
 The average cross section for the large SRAM is $3.53\pm0.47\cdot10^{-14} \frac{cm^2}{bit}$ and the average for micro SRAM is $1.27\pm0.16\cdot10^{-14}\frac{cm^2}{bit}$.
 
 Since we got problems with the microcontroller subsystem, we have some potential improvements for our test. We discovered that the microcontroller subsystem wasn't sufficiently reliable when exposed to radiation. That means that data extraction should preferable be performed without going through the microcontroller subsystem. This could have be done by making a serial communication code in VHDL, and using GPIO pins as transmitting and receiving lines. 
@@ -2199,7 +2231,8 @@ Normally when we see a decrease in voltage, we see an increase in current, or op
 By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off and on (since this is powered by the 3.3 V signal), the voltage and current goes back to start value. This was done through the monitoring board, where we had made a function which turns the regulators off and on again after 3 seconds. This function was used whenever we detected a latchup or a decrease in current/voltage. In total we had to restart the board because of latchup or decrease in current 61 times on the first test and 95 times on the second test, as seen in \autoref{PLL_loss}.
 
 \subsubsection{SRAM}
-\autoref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} shows the results from the SRAM test after radiation of the two starter-kits. We detects regularly drops down to 0 in the counter values. This is due to loss of communication with the microcontroller subsystem, and thereof the SF2, probably caused by voltage drop or latchup as discussed in the previous subsection. A re-power of the board made the counters start again. This means that we had short periods where we didn't got to measure counter values. When the FPGA was powered again, the counter values are overwritten through the startup sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, which gives us a lot of uncertainties when calculating cross section.
+\autoref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} shows the results from the SRAM test after radiation of the two starter-kits. We detects regularly drops down to 0 in the counter values. This is due to loss of communication with the microcontroller subsystem, and thereof the SF2, probably caused by voltage drop or latchup as discussed in the previous subsection.
+A re-power of the board made the counters start again. This means that we had short periods where we didn't got to measure counter values. When the FPGA was powered again, the counter values are overwritten through the startup sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, which gives us a lot of uncertainties when calculating cross section.
 
 \begin{figure}[!htbp]
 \centering
@@ -2238,7 +2271,8 @@ By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off an
 \end{figure}
 
 \paragraph{Cross Section Calculation} $\newline$
-we can see that we have almost linear increase in the SEUs counter compared to fluence for test1 and 2 of the starter kit, see \autoref{SRAM_starter-kit1} and \ref{SRAM_starter-kit1}. We have a small gap after a approximately 800 s for under test 1 and we have a small gap between 600 and 700 seconds for test 2. When calculating the cross section we  will calculate from after these two gaps. That means that the fluence for test 1 is $2.01\cdot10^{11}$ and number of SEU in that period is 3388 and 192 respectively for large SRAM and micro SRAM. The total fluence for test 2 is $1.61\cdot10^{11}$, and the number of SEU in that period is 3379 for large SRAM and 159 for micro SRAM. 
+we can see that we have almost linear increase in the SEUs counter compared to fluence for test1 and 2 of the starter kit, see \autoref{SRAM_starter-kit1} and \ref{SRAM_starter-kit1}. We have a small gap after a approximately 800 s for under test 1 and we have a small gap between 600 and 700 seconds for test 2. When calculating the cross section we will calculate from after these two gaps.
+That means that the fluence for test 1 is $2.01\cdot10^{11}$ and number of SEU in that period is 3388 and 192 respectively for large SRAM and micro SRAM. The total fluence for test 2 is $1.61\cdot10^{11}$, and the number of SEU in that period is 3379 for large SRAM and 159 for micro SRAM. 
 
 To get as genuine value of the cross section as possible, we have to find the total fluence of when the test was working. This means that the fluence received when the test was stopped due to latchup, current drops and power cycles, have to be subtracted. By checking the log-files we have estimated time with no data to be 287 second in in the period of interest for test1 and the 669 in in the period of interest for test2. The flux in that period is known (see flux graph in appendix \ref{radiation_results}), which means that we can calculate the total fluence for the time without data collection. See table \ref{SRAM_data} for the calculated values.
 
@@ -2454,7 +2488,8 @@ The result from \autoref{cross_section_results2} tells us that every 4 minutes f
 
 % The reason for this effect could also be discussed. What we know is that the lock signal should tell us if the input signal and output signal to the PLL is in sync. The cause of the a lock-lose, could be bad input signal, error in the PLL and bad sensing for the lock signal. It has previous been assumed that if the PLL lock-loss falls low, so those the clock signal, but this isn't necessarily the case. The clock signal may still come out of the PLL, even though the clock is not good. be sending out what it is able to produce.  are having problem getting lock on the clock signal, when the optical link is exposed to radiation.
 
-Whats happening to the clock signal when the lock signal falls down could also be discussed. we have previous assumed that when the lock signal falls down, so those the clock signal, but this is necessary the case. The lock signal should tell us if the input signal and output signal to the PLL is in sync, but it doesn't necessarily kills the output signal of the PLL when the lock signal falls low. If we have a lock-loss and the clock signal still goes through, it means that we would have a clock signal which are missing one or more clock pulses, are out of phase, or have a lot of noise. The effect of these cases is unknown, it may cause the entire RCU2 firmware to fall down, or it may not cause any harm at all. During the radiation tests we had had periods where we didn't got contact with the SF2 from time to time, if this was caused by PLL lock-loss or other effects like latchup is unknown. More test on this aspect should also be performed to be sure that it wont a problem when all of the RCU2's are mounted in the TPC.
+Whats happening to the clock signal when the lock signal falls down could also be discussed. we have previous assumed that when the lock signal falls down, so those the clock signal, but this is necessary the case. The lock signal should tell us if the input signal and output signal to the PLL is in sync, but it doesn't necessarily kills the output signal of the PLL when the lock signal falls low. If we have a lock-loss and the clock signal still goes through, it means that we would have a clock signal which are missing one or more clock pulses, are out of phase, or have a lot of noise. The effect of these cases is unknown, it may cause the entire RCU2 firmware to fall down, or it may not cause any harm at all. During the radiation tests we had had periods where we didn't got contact with the SF2 from time to time, if this was caused by PLL lock-loss or other effects like latchup is unknown. More test on this aspect should also be performed to be sure that it wont a problem when all of the RCU2's are mounted 
+in the TPC.
 
 % Effects like these means that measurement in the RCU2 may not happen when it is supposed to. 
 
@@ -2465,13 +2500,27 @@ We also see that we could expect a latchup every half an hour in the TPC, if the
 The MTBF results also shows that we would have a SEU in the large SRAM ever minutes if all of the RCU2 memory is used. This is quite expected since it is SRAM, which is known to be weak towards radiation, see \autoref{SRAM_section}.
 
 \FloatBarrier
-\chapter{Conclusion and Outlook}
-The work presented in this thesis was carried out in order to investigate the radiation tolerance for components used in the design of RCU2. The main focus has been on the RCU2's main FPGA, the SmartFusion2 SoC FPGA, which have been tested of \acl{SEE} like \acl{SEU}, \acl{SET} and \acl{SEL} has been executed on SRAM, logic element and PLL. The other components that have been tested are TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210 and TLV3011, but then the focus has been on accumulative effects.
+\chapter{Summary Conclusion and Outlook}
+
+\section{Summary}
+The work presented in this thesis was carried out in order to investigate the radiation tolerance for components used in the design of RCU2. The main focus has been on the RCU2's main FPGA, the SmartFusion2 SoC FPGA, which have been tested for \acl{SEE} like \acl{SEU}, \acl{SET} and \acl{SEL} on the internal SRAM cells, logic elements and PLLs. The other components that have been tested are TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831, ADN2814, MAX3748, INA210 and TLV3011, but then the focus has been on accumulative effects.
 
 % Which has been tested for single event upset in the internal SRAM memory, registers and PLLs, single event transient in the logic elements and interconnections, and single event latchup for the entire chip. 
  
 The RCU2's are going to be mounted in the ALICE TPC detector, where we can expect a fluence rate of 3 $\kilo\hertz/\centi\meter^2$ and a radiation dose of 1-2 kRad. The acquired results is compared up against these numbers, and used to determine if the tested components are cleared to be used on the RCU2.
 
+In the beginning of this work, time was spent on learning about radiation and radiation induced effects on semiconductor devices, so that sufficient knowledge was acquired to make a good test setup and procedure. A lot of time was also spent on getting to know the different components, so that we would know how to be able to test them in a good manner.
+
+For all of the tested components except SmartFusion2, a simple PCB was constructed as a platform to be able to send input data and measure output data from a component, this was done with USB-\acl{DAQ} devices from National instruments. For the test of SmartFusion2 SoC FPGA a SmartFusion2 starter-kits was used as a platform.
+
+% This knowledge was also used to determine what the detected effects we saw during the irradiation.
+
+There have been a preparation period where simple PCB has been made to work as a test
+
+
+There have been conducted radiation test four times during this work, three times at Oslo Cyclotron Laboratory with energies of 28 and 25 MeV and 1 time at The Svedberg Laboratory with an energy of 170 MeV. 
+
+\section{Conclusion}
 
 
 SRAM memory, Logic element, PLLs
