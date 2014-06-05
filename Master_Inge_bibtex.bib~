@@ -119,7 +119,7 @@
 
 @misc{website:MIC69302WU,
       author = "Micrel Incorporated",
-      title = "MIC69301/2/3 - Single Supply V_IN, Low V_IN, Low V_OUT, 3A LDO ",
+      title = "MIC69301\/2\/3 - Single Supply V\_IN, Low V\_IN, Low V\_OUT, 3A LDO ",
       Month = "March",
       year = "2011",
       note = "\url{http://www.micrel.com/_PDF/mic69300.pdf}"
