@@ -1647,12 +1647,14 @@ SY89831U is a limiting amplifier. For the radiation test the focus has been on p
 
 For the test of ADN2814, we didn't detect any current change until a dose of 270 kRad, see \autoref{ADN2814_curr}, but unfortunately we got allot of output errors, see \autoref{ADN2814_tot}. The first errors occurred after a dose of 11 kRad for the clock signal, and after a dose of 8 kRad for the data signal. After these errors the errors starting coming more regularly. 
 
+The results tells us that the component tolerates a accumulative dose until a certain point. When this point has been reached, we starting to get single event effects.
+
+The errors tells us that either the signal is incorrect or the timing is incorrect. For the RCU2 design it is critically that that the timing is correct for both the clock and data. The clock signal is the clock signal controlling the readout from the readout pads, which should be synchronized with all of the RCU2s. The data signal is used to decide when to do measurement and when to transmit the acquired data from the RCU2. It is therefore quite important that the timing is correct. If the clock or data is incorrect, then we may lose useful data in that period.
+
+% It can be discussed if the effect we see is a single event effect or accumulative effects. What we know is that we have a short period without errors before we start getting errors with an increasing rate. The short period without errors in the beginning indicates that the error we see is more accumulative effect, where the output data are getting worse and worse, maybe cause by increasing noise or skew or decrease in the voltage of the output signals.
+% The fact that we in periods can see a almost linear increase with the increasing dose, points towards that the error we see is a more like a single event effects. We have also a stop in counter values after the beam was turned off, this also suggest that what we see is single event effects.
+
 If we look at the clock and data output as function of time, which can be found in appendix \ref{radiation_results_ocl} figure \ref{adn_error_time}, we see that after the beam stops after 3600 seconds, the errors stopped increasing, this means that the errors on clock and data are directly effected by the radiation.
-
-The errors tells us that either the signal is incorrect or the timing is incorrect. For the RCU2 design it is critically that that the timing is correct for both the clock and data. The clock signal is the clock signal controlling the readout from the readout pads, which should be synchronized with all of the RCU2s. The data signal is used to decide when to do measurement and when to send the acquired data out from the RCU2. It is therefore quite important that the timing is correct. If the clock or data is incorrect, then we may lose useful data in that period.
-
-It can be discussed if the effect we see is a single event effect or accumulative effects. What we know is that we have a short period without errors before we start getting errors with an increasing rate. The short period without errors in the beginning indicates that the error we see is more accumulative effect, where the output data are getting worse and worse, maybe cause by increasing noise or skew or decrease in the voltage of the output signals.
-The fact that we in periods can see a almost linear increase with the increasing dose, points towards that the error we see is a more like a single event effects. We have also a stop in counter values after the beam was turned off, this also suggest that what we see is single event effects.
 
 If this chip is going to be used, more test should preferable be done, which have more focus on what is happening with the output signal. Maybe small samples of the clock and data signal should be taken as the radiated dose increases, so the output signal can be properly be examined. 
 
@@ -1684,18 +1686,35 @@ The current graph, as seen in \autoref{ADN2814_curr} is varying quite a lot in c
   \centering
   \includegraphics[width=\linewidth]{figures/dataerror_vs_dose_adn}
   \caption{ADN2814 test1}
-  \label{ADN2814_1e}
+  \label{ADN2814_1}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/clockerror_vs_dose_adn}
   \caption{ADN2814 test2}
-  \label{ADN2814_2e}
+  \label{ADN2814_2}
   \end{subfigure}
  \caption{ADN2814 - Relative errors vs Dose}
  \label{ADN2814_tot}
 \end{figure}
 
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/dataerror_vs_fluence_adn}
+  \caption{ADN2814 test1}
+  \label{ADN2814_1e}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/clockerror_vs_fluence_adn}
+  \caption{ADN2814 test2}
+  \label{ADN2814_2e}
+  \end{subfigure}
+ \caption{ADN2814 - Relative errors vs Fluence}
+ \label{ADN2814_tot2}
+\end{figure}
 \FloatBarrier
 
 \subsubsection{MAX3748 - Limiting Amplifier}
@@ -1803,7 +1822,7 @@ In \autoref{dose_15.11}, \ref{dose_28.11} and \ref{dose_10.04} shows how long ea
 We has some problems with some of the components tested, this could be due to rough treatment when soldering. Some of the components didn't have any leads, which means that the entire component had to be heated to be able to solder the pads beneath them, since the heat can go up to several hundred degrees, it may cause some damage on the chip.
 That is part of the reason why we tried to at least have two boards which was tested, to ensure at least one successful test. 
 
-A challenge when we exposed the test boards, is that the proton beam didn't seem to be as stable, this can be seen from the flux graphs in \autoref{flux_all1}, \ref{flux_all2} and \ref{flux_all3}.
+A challenge when we exposed the test boards, is that the proton beam didn't seem to be stable, this can be seen from the flux graphs in \autoref{flux_all1}, \ref{flux_all2} and \ref{flux_all3}.
 
 % The tests was controlled and monitored through a LabVIEW program. When testing ADN2814 and MAX3748 there was also needed a SmartFusion2 starter-kit to produce a Manchester coded signal, to be able to test these properly.
 % The point of these tests was to check if the components which were tested would survive in a radiated hard environment we will find in the \ac{TPC}. The total dose of 10 years in the ALICE detector is estimated to be around 1-2 kRad, see section \ref{how_to_test}. If a component survives more than 5 times value, we can be quite sure that it will survive the radiation it will receive at CERN.
@@ -1876,6 +1895,8 @@ Anyhow, changes on the output can normally be referred back to current consumpti
 
 Every components that was tested worked after receiving a dose of 6 kRad, which is three times more than the expected dose in ALICE TPC. That means that every component that has been tested is cleared to be used in the RCU2 design. The component which performed worst is ADN2814, which gave us an error after a dose of 8 kRad, but since MAX3748, performed much better, and could be used for the same purpose, this would preferably be used.
 
+In Appendix \ref{radiation_results_ocl} some graphs of current vs time, it can be seen that after the beam was turned off at the end of the radiation, the current starts decreasing. This is a annealing effect. This could mean that during stops in the ALICE experiment components may recover and are therefore be able to tolerate a even higher dose then what is found through this work.
+
 % A long time after the radiation, every component was tested, to see if they still worked, and if the current level had fallen down to the same level as before the radiation tests. The result shows that ever component which had been radiated, except SN74AVC2T245 board1 and TPS51200 board2, worked mai 2014, about half a year after the radiation to place. The current level wasn't so high as it ended under radiation, but hadn't dropped down to the starting current for 
 
 % In tables \ref{dose_15.11}, \ref{dose_28.11} and \ref{dose_10.04} 
@@ -1890,7 +1911,7 @@ We did a power cycle of the board, and the current went back to a normal level. 
 \subsubsection{SRAM}
 The purpose of the SRAM test is to see how reliable the SRAM memory is, and to find a cross section for \ac{SEU} in the memory. \autoref{SRAM_test1} and \ref{SRAM_test2} shows \acp{SEU} and fluence on large SRAM and micro SRAM as function of time for the radiation tests of the two starter-kits.
 
-During the test, we had some problems with the microcontroller subsystem, which stopped working in periods, caused by the received radiation. The microcontroller subsystem was running in debug mode, which made it possible to restart the microcontroller subsystem when needed. When the microcontroller subsystem stopped working, a restart brought the communication back to normal. This can be seen as drops down to 0 in the \ac{SEU} counter and small fall in current, see \autoref{SRAM_test1} and \ref{sf2_current}.
+During the test, we had some problems with the microcontroller subsystem, which stopped working in periods, caused by the received radiation. The microcontroller subsystem was running in debug mode, which made it possible to restart the microcontroller subsystem when needed. When the microcontroller subsystem stopped working, a restart brought the communication back to normal. This can be seen as drops down to 0 in the \ac{SEU} counter and small fall in current, see \autoref{SRAM_test1}, \ref{sf2_current_1} and \ref{sf2_current_2}.
 
 \begin{figure}[!htbp]
 \centering
@@ -2459,12 +2480,12 @@ For all of the test with PLL, we got a cross section for PLL lock-loss in the ar
 But when we exposed the optical receiver instead of the SmartFusion2,  we got a lot more PLL lock-loss. The calculated cross section was $6.9\cdot10^{-9} cm^2$, which is around 25 times more then when the SmartFusion2 was exposed. This means that either the optical receiver is not able to do its job under high radiation level, and introduces a lot of noise, or the limiting amplifier MAX3748 is not able to remove noise from the incoming signal.
 % If it is only a clock cycle we are talking about, we could probably accept this, but if it stays down for up too seconds, then we should do some measures to either reduce or counter this problem. When a PLL lock loss happened, we didn't detect any other problems in the process running on the SmartFusion2, this probably means that the clock signal only stays low for a short time period, which means that this probably could be acceptable.
 
-To know how often we can expect to encounter the different Single event effects errors when the RCU2s will be mounted in the TPC, we will calculate MTBF, as we did after the result in OCL. See \autoref{MTBF} for how MTBF is calculated. We also have to scale up for 216 RCU2s, 622592 large SRAM bits, 65536 micro SRAM bits and 1 PLL. The results can be found in \autoref{cross_section_results2}.
+To know how often we can expect to encounter the different Single event effects errors when the RCU2s will be mounted in the TPC, we will calculate MTBF, as we did after the result in OCL. See \autoref{MTBF} for how MTBF is calculated. We also have to scale up for 216 RCU2s, 56340 registers, 622592 large SRAM bits, 65536 micro SRAM bits and 1 PLL. The results can be found in \autoref{cross_section_results2}.
 
 \begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|p{4cm}|p{3cm}|}\hline
-Test & Average cross section [$cm^2$] & MTBF run2 216 RCU2 [hours] \\ \hline \hline
+Test of: & Average cross section [$cm^2$] & MTBF run2 216 RCU2 [hours] \\ \hline \hline
 large SRAM 	& $3.65\pm0.26\cdot10^{-14}$ & $\sim0.02$ \\ \hline%   1 min
 micro SRAM 	& $1.39\pm0.10\cdot10^{-14}$ & $\sim0.47$ \\ \hline%  31 min
 PLL starter kit test & $2.39\pm0.10\cdot10^{-10}$ & $\sim1.79$\\ \hline% 176 min
@@ -2472,17 +2493,18 @@ TTC PLL when SmartFusion2 irradiated & $2.3\cdot10^{-10}$ & $\sim1.86$ \\ \hline
 TTC PLL when optical receiver irradiated & $6.9\cdot10^{-9}$ & $\sim0.06$ \\ \hline% 4 min
 Latchup SmartFusion2 irratiated 1.2 V & $8.5\cdot10^{-10}$ & $\sim0.5$ \\ \hline% 4 min
 Latchup SmartFusion2 irratiated 1.1 V & $1.7\cdot10^{-10}$ & $\sim2.5$ \\ \hline% 4 min
-% SEU and SET in registers 40 MHZ 4 inverters& $3.65\pm0.22\cdot10^{-14}$  & 0.21 \\ \hline%  17 min
-% SEU and SET in registers 80 MHZ 4 inverters& $2.63\pm0.18\cdot10^{-14}$ & 0.29 \\ \hline%  17 minimum
-% SEU and SET in registers 40 MHZ 0 inverters& $5.19\pm0.40\cdot10^{-14}$ & 0.35 \\ \hline%  17 minimum
-% SEU and SET in registers 80 MHZ 0 inverters& $4.17\pm0.28\cdot10^{-14}$ & 0.18 \\ \hline%  17 minimum
-% SEU and SET in registers 160 MHZ 0 inverters& $1.19\pm0.08\cdot10^{-14}$ & 0.06 \\ \hline%  17 minimum
+SEU and SET in registers 40 MHZ 4 inv& $3.65\pm0.22\cdot10^{-14}$  & 0.21 \\ \hline%  17 min
+SEU and SET in registers 80 MHZ 4 inv& $2.63\pm0.18\cdot10^{-14}$ & 0.29 \\ \hline%  17 minimum
+SEU and SET in registers 40 MHZ 0 inv& $5.19\pm0.40\cdot10^{-14}$ & 0.15 \\ \hline%  17 minimum
+SEU and SET in registers 80 MHZ 0 inv& $4.17\pm0.28\cdot10^{-14}$ & 0.18 \\ \hline%  17 minimum
+SEU and SET in registers 160 MHZ 0 inv& $1.19\pm0.08\cdot10^{-14}$ & 0.64 \\ \hline%  17 minimum
 \end{tabular}
 \caption{Cross section and MTBF for run2, based on result from TSL}
 \label{cross_section_results2}
 \end{table}
 
-The result from \autoref{cross_section_results2} tells us that every 4 minutes for run2 in the TPC we will have a PLL error due to radiation on the optical receiver. This is quite often, and it could be a major problem if not countered or fixed in some way. This means either that the optical receiver are not able to convert the optical signal correctly under high radiation level, or the optical receiver is producing some noise due to radiation, which the limiting amplifier are not able to suppress. It is nevertheless quite often and a solution to reducing or remove this effect should be found. 
+The result from \autoref{cross_section_results2} tells us that every 4 minutes for run2 in the TPC we will have a PLL error due to radiation on the optical receiver. This is quite often, and it could be a major problem if not countered or fixed in some way. This means either that the optical receiver are not able to convert the optical signal correctly under high radiation level, or the optical receiver is producing some noise due to radiation, which the limiting amplifier are not able to suppress. It is nevertheless quite often and a solution to reducing or remove this effect should be found.
+For the test of the logic element, we didn't get a stable result, but if we look at the result with 40 Mhz, we will receive a error every 10 min approximately, but we can't know if this is just a SEU in the register or if its caused by SET. Registers are memory elements, are known to be weak towards radiation.
 
 % The reason for this effect could also be discussed. What we know is that the lock signal should tell us if the input signal and output signal to the PLL is in sync. The cause of the a lock-lose, could be bad input signal, error in the PLL and bad sensing for the lock signal. It has previous been assumed that if the PLL lock-loss falls low, so those the clock signal, but this isn't necessarily the case. The clock signal may still come out of the PLL, even though the clock is not good. be sending out what it is able to produce.  are having problem getting lock on the clock signal, when the optical link is exposed to radiation.
 
@@ -2508,36 +2530,38 @@ The work presented in this thesis was carried out in order to investigate the ra
 % the SmartFusion2 SoC FPGA, which have been tested for \acl{SEE} like \acl{SEU}, \acl{SET} and \acl{SEL} on the internal SRAM cells, logic elements and PLLs.
 % Which has been tested for single event upset in the internal SRAM memory, registers and PLLs, single event transient in the logic elements and interconnections, and single event latchup for the entire chip. 
 % For all of the components, a PCB was made as a platform to be able to send input data and measure output data, and USB-DAQ (Data Acquisition) devices from National Instruments were used to send input data and measure output data from the PCB. This setup gave us the possibility to control the inputs of each component and measure the outputs under radiation test. 
-The main focus through this thesis has been radiation test of the RCU2's main FPGA, the SmartFusion2 SoC FPGA, but ten other components have also been tested. These consist of: power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator and Current Shunt Monitor. For the radiation test of SmartFusion2, a SmartFusion2 starter-kit was used as a test platform, but for all of the other component a PCB was made to be able to test them.
+The main focus has been on the RCU2's main FPGA, the SmartFusion2 SoC FPGA, but ten other components consisting of; power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator and Current Shunt Monitor have also been tested. For the radiation test of SmartFusion2, a SmartFusion2 starter-kit was used as a test platform, but for all of the other component a PCB was made in order to be able to test.
 
-The components have been tested for accumulative effects, which is long term effects due to radiation. In these cases power consumption and output data/voltage of a given component was monitored under radiation. \acl{SEE} like \acl{SEU}, \acl{SET} and \acl{SEL} have also been tested for on SmartFusion2.
+All of the components have been tested for accumulative effects, which is long term effects due to radiation. In these cases power consumption and output data/voltage of a given component was monitored under radiation. \acl{SEE} like \acl{SEU}, \acl{SET} and \acl{SEL} have also been tested for on the SmartFusion2.
 
 % The main focus has been on the RCU2's main FPGA that has been tested for single event upset in the internal SRAM memory, registers and PLLs, single event transient in the logic elements and interconnections, and single event latchup for the entire chip. The other components that have been tested are TPS51200, MIC69302WU, SN74AVCB164245, SN74AVC2T245, QS3VH257, SY89831U, ADN2814, MAX3748, INA210 and TLV3011, but then the focus has been on accumulative effects.
 
 % This knowledge was also used to determine what the detected effects we saw during the irradiation.
-The radiation tests have been conducted in four periods, where three of them where in Oslo Cyclotron Laboratory with energies of $28\ MeV$ and $25\ MeV$ and one time at The Svedberg Laboratory with an energy of 170 MeV. All components were tested at OCL, and the SmartFusion2 was additionally tested at TSL to get a radiation test with higher energy. For the test in OCL, every component was exposed to a radiation dose of 40 to 400 kRad, but for the test in TSL the exposed radiation dose was much lower typically 15 - 20 kRad. 
+The radiation tests have been conducted in four periods, three times in \ac{OCL} with energies of $28\ MeV$ and $25\ MeV$ and one time at \ac{TSL} with an energy of 170 MeV. All components were tested at OCL, and the SmartFusion2 was additionally tested at TSL to get a radiation test with higher energy. For the test in OCL, every component was exposed to a radiation dose of 40 to 400 kRad, but for the test in TSL the exposed radiation dose was much lower typically 15 - 20 kRad.
 
 % In the beginning of this work, time was spent learning about radiation and radiation induced effects on semiconductor devices, so that sufficient knowledge was acquired to make a good test setup. A lot of time was also spent on getting to know the different components, so that we would know how to be able to test them in a good manner.
 
 
 \section{Conclusion}
-The focus through this work has been to test components used in the design of the new RCU2 for radiation tolerance. A total of 11 components have been tested, where the focus has mainly been on checking the functionality and power consumption under radiation, but test for \acl{SEE} has also been performed. Two facilities has been used for the radiation tests, that is \acf{OCL}, Norway, with energies of $28\ MeV$ and $25\ MeV$, and \acf{TSL}, Sweden, with an energy of 170 MeV. All of the components have been radiation tested at \acl{OCL}, but the SmartFusion2 was additionally tested at TSL to get a radiation test with higher energy. Every component has been tested for accumulative effects and a part of the SmartFusion2 SoC FPGA has also been tested for \acl{SEE} like \acl{SEU}, \acl{SEL} and \acl{SET}.
+The focus through this work has been to test components used in the design of RCU2 for radiation tolerance. A total of 11 components have been radiation tested. Two facilities have been used for the radiation tests; \acf{OCL}, Norway, with energies of $28\ MeV$ and $25\ MeV$, and \acf{TSL}, Sweden, with an energy of 170 MeV. All of the components have been tested at \acl{OCL}, but the SmartFusion2 was additionally tested at TSL to get a radiation test with higher energy. Every component has been tested for accumulative effects and a part of the SmartFusion2 SoC FPGA has also been tested for \acl{SEE} like \acl{SEU}, \acl{SEL} and \acl{SET}.
 
 It has been conducted research on the radiation level in the TPC detector, where the RCU2s are going to be mounted, and it has been estimated that for the next run period (run2), a radiation dose of $1-2\ kRad$ with a flux of $3\ \kilo\hertz/\centi\meter^2$, can be expected for the electronics located in the detector. The acquired radiation results is compared up against these numbers, and used to determine if the tested components are cleared to be used on the RCU2.
 
-For the test for accumulative dose that was performed at \ac{OCL}, the components was exposed to a radiation dose of $40-400\ kRad$. Every component was cleared to be used on the RCU2. The worst performance was from a limiting amplifier AND2814, where an output error was detected after a dose of $8\ kRad$. But another limiting amplifier, MAX3748, which can be used for the same purpose, was also tested and performed much better. No output errors and no current increase was detected for this one, and that was with a radiation dose of $350\ kRad$. 
-Disregarding the result from the limiting amplifier ADN2814, we didn't detect any output error during any of the other tests before a radiation dose of $85\ kRad$, which is more than 40 times higher than the TPC environment. For all of the tests, we didn't detect any current increase before a dose of $30-40\ kRad$, which is 20 times higher that what it will receive in the TPC. Therefore all the tested components have been cleared to be used on the RCU2.
+For the test for accumulative dose that was performed at \ac{OCL}, the components was exposed to a radiation dose of $40-400\ kRad$. The worst performance was from a limiting amplifier AND2814, where an output error was detected after a dose of $8\ kRad$. But another limiting amplifier, MAX3748, which can be used for the same purpose, was also tested and performed much better. No output errors and no current increase was detected for this one, and that was with a radiation dose of $350\ kRad$. 
+Disregarding the result from the limiting amplifier, ADN2814, we didn't detect any output error during any of the other tests before a radiation dose of $85\ kRad$, which is more than 40 times higher than the TPC environment. And for all of the tests, we didn't detect any noteworthy current increase before a dose of $30-40\ kRad$, which is 20 times higher that what it will receive in the TPC. Therefore all the tested components have been cleared to be used on the RCU2.
 
 For the radiation tests of the SmartFusion2 which were executed in OCL and TSL, the focus has been on \acl{SEE} in the SRAM, logic element and PLLs. 
-A cross section for SEU in the internal SRAM memory were found for a 25 MeV proton beam and in 170 MeV proton beam. The calculated cross sections were in the same magnitude as for other SRAM memories which have been tested, which supports the results.
-\acl{SEL} wasn't a big problem in OCL with a proton beam of $22\ MeV$, a dose of $37\ kRad$ was required before we detected any current increase. However in \ac{TSL} \acl{SEL} was a big problem, we got high cross section, which means that every half an hour a \acl{SEL} is estimated to occur in the TPC. But a solution reducing this effect has already been set in emotion by reducing the supply voltage to the SmartFusion2. A reduction of $0.1\ V$ on the $1.2\ V$ power source, reduced the cross section with a factor 5, and the possibility that even more reduction on the 1.2 power source can reduce this effect even more.
+A cross section for SEU in the internal SRAM memory were found for a 25 MeV proton beam and in 170 MeV proton beam. The calculated cross sections were in the same magnitude as for other SRAM memories, which supports the results.
+\acl{SEL} wasn't a big problem in OCL with a proton beam of $22\ MeV$, a dose of $37\ kRad$ was required before we detected any current increase. However in \ac{TSL}, \acl{SEL} was a big problem, we got high cross section, which means that every half an hour a \acl{SEL} is estimated to occur in the TPC. But a solution reducing this effect has already been set in emotion by reducing the supply voltage to the SmartFusion2. A reduction of $0.1\ V$ on the $1.2\ V$ power source, reduced the cross section with a factor 5, and there are a possibility that it can be reduced even more by reducing the 1.2 power source even further down.
 For the PLL test a rather high cross section was also calculated. It has been estimated that in the TPC, with all of the RCU2s mounted, more frequently than every second hour we will have a PLL lock-loss due to radiation of the SmartFusion2.
+For the test of the logic element we didn't have enough statistics to say something about the cross section for SET or SEU. A combined cross section was calculated, but that didn't tell if SET was a problem for the SmartFusion2.
 
+The test of the SmartFusion2 was in every way successful. We discovered that have some issues with SEL and PLL lock-loss, ways to reduce, fix or to be able to live with these errors should be looked more closely into. We found a cross section for SRAM memory, which was in an expected are for SRAM cell. The only test that didn't went as we had hoped was the logic element test. We wanted to see if SET could be a problem, but we couldn't distinguish between SEUs in the register and SET caused SEUs. But the results shows that there is a chance for errors in the FPGA, which means that error fixing code and redundancy should be used when possible in the firmware for the RCU2.
 
 \section{Outlook}
 During the radiation test of the internal SRAM, the microcontroller subsystem was used to send data from the FPGA, to a computer. The test shows that the mocrocontrller subsystem is weak for radiation, and stops working in periods due to radiation. For better readout from the SRAM test, the communication with computer, should be done without going through the microcontroller subsystem. This could be done by making serial communication in the FPGA, and sending it directly to I/O pins, which could be connected to a computer.
 
-More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss on the SmartFusion2. 
+A high cross section was calculated for SEL and PLL lock-loss. With the calculted cross section it is estimated that we will have a \ac{SEL} every half an hour, and PLL lock-loss more frequently than every second hour. \ac{SEL} have already found a way to reduce, but more studies should be done on this aspect, to see id it could be reduced even more. For the PLL lock-loss it is most likely not possible to reduce the error rate in the RCU2, therefore more effort should be done on use of redundancy or other ways to tolerate this error.
 % For the SRAM test a SEU cross section was found for in both OCL with a 25 MeV proton beam and in TSL with a 170 MeV proton beam. The calculated cross sections from OCL and TSL were in the same magnitude, and the result was also in the same magnitude as other SRAM which have previously been tested. 
 
 
@@ -2548,11 +2572,11 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 
 \section{Beam setup data}
 \label{Beam_profile}
-% Table generated by Excel2LaTeX from sheet 'Sheet1'
+
 \begin{table}
   \centering
     \begin{tabular}{|l|l|l|l|l|l|} \hline
-    Calibration test nr.: & x     & y     & Scint rel & SEU(\ac{SRAM}) & SEU(\ac{SRAM})/sc \\ \hline \hline
+    Calibration test nr.: & x [cm]& y [cm]& Scint count & SEU(\ac{SRAM}) & SEU/Scint count \\ \hline \hline
     1     & 0     & 0     & 23813 & 1971  & 8.28E-02 \\ \hline
     2     & 0     & -0.5  & 37930 & 3867  & 1.02E-01 \\ \hline
     3     & 0     & -1    & 27527 & 2817  & 1.02E-01 \\ \hline
@@ -2573,7 +2597,7 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 \begin{table}
   \centering
     \begin{tabular}{|l|l|l|l|l|l|}\hline
-    Calibration test nr.: & x     & y     & Scint rel & SEU(\ac{SRAM}) & SEU(\ac{SRAM})/ sc \\ \hline \hline
+    Calibration test nr.: & x [cm]& y [cm]& Scint count & SEU(\ac{SRAM}) & SEU/Scint count \\ \hline \hline
     1     & -0.8  & -1    & 17798 & 1463  & 5.26E-02 \\ \hline
     2     & -1.3  & -1    & 17721 & 1239  & 6.99E-02 \\ \hline
     3     & -1.8  & -1    & 12904 & 1203  & 9.32E-02 \\ \hline
@@ -2595,20 +2619,19 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
   \centering
-  \caption{Add caption}
-    \begin{tabular}{rrrrrr}
-    Calibration test nr. & x    & y    & Scint rel & sram3 & sram3/scint rel \\
-    1    & 0    & 0    & 7286,00 & 1284,00 & 1,76E-01 \\
-    2    & 0    & 0    & 6155,00 & 1081,00 & 1,76E-01 \\
-    3    & -0,5 & 0    & 6733,00 & 1172,00 & 1,74E-01 \\
-    4    & -1   & 0    & 7836,00 & 1172,00 & 1,50E-01 \\
-    5    & 0,5  & 0    & 6780,00 & 1221,00 & 1,80E-01 \\
-    6    & 1    & 0    & 7923,00 & 1260,00 & 1,59E-01 \\
-    7    & -0,5 & 0    & 7738,00 & 1366,00 & 1,77E-01 \\
-    8    & 0    & 0,5  & 6477,00 & 1067,00 & 1,65E-01 \\
-    9    & 0    & 1    & 8286,00 & 1125,00 & 1,36E-01 \\
-    10   & 0    & -0,5 & 5622,00 & 1054,00 & 1,87E-01 \\
-    11   & 0    & -1   & 6020,00 & 1094,00 & 1,82E-01 \\
+    \begin{tabular}{|l|l|l|l|l|l|}\hline
+    Calibration test nr.: & x [cm]& y [cm]& Scint count & SEU(\ac{SRAM}) & SEU/Scint count \\ \hline \hline
+    1    & 0    & 0    & 7286,00 & 1284,00 & 1,76E-01 \\ \hline
+    2    & 0    & 0    & 6155,00 & 1081,00 & 1,76E-01 \\ \hline
+    3    & -0,5 & 0    & 6733,00 & 1172,00 & 1,74E-01 \\ \hline
+    4    & -1   & 0    & 7836,00 & 1172,00 & 1,50E-01 \\ \hline
+    5    & 0,5  & 0    & 6780,00 & 1221,00 & 1,80E-01 \\ \hline
+    6    & 1    & 0    & 7923,00 & 1260,00 & 1,59E-01 \\ \hline
+    7    & -0,5 & 0    & 7738,00 & 1366,00 & 1,77E-01 \\ \hline
+    8    & 0    & 0,5  & 6477,00 & 1067,00 & 1,65E-01 \\ \hline
+    9    & 0    & 1    & 8286,00 & 1125,00 & 1,36E-01 \\ \hline
+    10   & 0    & -0,5 & 5622,00 & 1054,00 & 1,87E-01 \\ \hline
+    11   & 0    & -1   & 6020,00 & 1094,00 & 1,82E-01 \\ \hline
     \end{tabular}%
   \caption{Calibration tests 27.11.2013}
 \end{table}%
@@ -2617,25 +2640,24 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
   \centering
-  \caption{Add caption}
-    \begin{tabular}{rrrrrrr}
-    Calibration test nr. & x    & y    & Time & Scint rel & sram3 & sram3/scint rel \\
-    1    & 0    & 0    & 19   & 16445,00 & 7635,00 & 4,64E-01 \\
-    2    & 0    & 0    & 60   & 18374,00 & 8284,00 & 4,51E-01 \\
-    3    & 0    & 0    & 60   & 13711,00 & 6216,00 & 4,53E-01 \\
-    4    & 0    & 0    & 59   & 14774,00 & 6824,00 & 4,62E-01 \\
-    5    & -0,5 & 0    & 34   & 8257,00 & 3831,00 & 4,64E-01 \\
-    6    & -1   & 0    & 43   & 10772,00 & 4959,00 & 4,60E-01 \\
-    7    & -1,5 & 0    & 53   & 12778,00 & 5192,00 & 4,06E-01 \\
-    8    & 0,5  & 0    & 40   & 9383,00 & 3601,00 & 3,84E-01 \\
-    9    & 1    & 0    & 42   & 10965,00 & 3454,00 & 3,15E-01 \\
-    10   & 0    & 0    & 36   & 11062,00 & 5028,00 & 4,55E-01 \\
-    11   & 0    & 0,5  & 34   & 10466,00 & 4875,00 & 4,66E-01 \\
-    12   & 0    & 1    & 37   & 10859,00 & 5248,00 & 4,83E-01 \\
-    13   & 0    & 1,5  & 32   & 9973,00 & 4289,00 & 4,30E-01 \\
-    14   & 0    & 2    & 31   & 9824,00 & 3334,00 & 3,39E-01 \\
-    15   & 0    & -0,5 & 47   & 15289,00 & 6245,00 & 4,08E-01 \\
-    16   & -0,5 & 0,8  & 31   & 11501,00 & 5609,00 & 4,88E-01 \\
+    \begin{tabular}{|l|l|l|l|l|l|}\hline
+    Calibration test nr.: & x [cm]& y [cm]& Scint count & SEU(\ac{SRAM}) & SEU/Scint count \\ \hline \hline
+    1    & 0    & 0    & 16445,00 & 7635,00 & 4,64E-01 \\ \hline
+    2    & 0    & 0    & 18374,00 & 8284,00 & 4,51E-01 \\ \hline
+    3    & 0    & 0    & 13711,00 & 6216,00 & 4,53E-01 \\ \hline
+    4    & 0    & 0    & 14774,00 & 6824,00 & 4,62E-01 \\ \hline
+    5    & -0,5 & 0    & 8257,00 & 3831,00 & 4,64E-01 \\ \hline
+    6    & -1   & 0    & 10772,00 & 4959,00 & 4,60E-01 \\ \hline
+    7    & -1,5 & 0    & 12778,00 & 5192,00 & 4,06E-01 \\ \hline
+    8    & 0,5  & 0    & 9383,00 & 3601,00 & 3,84E-01 \\ \hline
+    9    & 1    & 0    & 10965,00 & 3454,00 & 3,15E-01 \\ \hline
+    10   & 0    & 0    & 11062,00 & 5028,00 & 4,55E-01 \\ \hline
+    11   & 0    & 0,5  & 10466,00 & 4875,00 & 4,66E-01 \\ \hline
+    12   & 0    & 1    & 10859,00 & 5248,00 & 4,83E-01 \\ \hline
+    13   & 0    & 1,5  & 9973,00 & 4289,00 & 4,30E-01 \\ \hline
+    14   & 0    & 2    & 9824,00 & 3334,00 & 3,39E-01 \\ \hline
+    15   & 0    & -0,5 & 15289,00 & 6245,00 & 4,08E-01 \\ \hline
+    16   & -0,5 & 0,8  & 11501,00 & 5609,00 & 4,88E-01 \\ \hline
     \end{tabular}%
   \caption{Calibration tests 28.11.2013}
 \end{table}%
@@ -2643,23 +2665,22 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
   \centering
-  \caption{Add caption}
-    \begin{tabular}{rrrrrr}
-    Calibration test nr. & x    & y    & Scint rel & sram3 & sram3/scint rel \\
-    1    & 1,5  & -1,5 & 4893,00 & 2525,00 & 5,16E-01 \\
-    2    & 1,5  & -1,5 & 6677,00 & 3304,00 & 4,95E-01 \\
-    3    & 1,5  & -2   & 7434,00 & 4051,00 & 5,45E-01 \\
-    4    & 1,5  & -2,5 & 6559,00 & 3514,00 & 5,36E-01 \\
-    5    & 1,5  & -3   & 7669,00 & 3434,00 & 4,48E-01 \\
-    6    & 1,5  & -1   & 7305,00 & 3478,00 & 4,76E-01 \\
-    7    & 1,5  & -0,5 & 8089,00 & 3104,00 & 3,84E-01 \\
-    8    & 1,5  & -2   & 7531,00 & 3984,00 & 5,29E-01 \\
-    9    & 1    & -2   & 7998,00 & 4093,00 & 5,12E-01 \\
-    10   & 0,5  & -2   & 6903,00 & 3047,00 & 4,41E-01 \\
-    11   & 2    & -2   & 10298,00 & 5697,00 & 5,53E-01 \\
-    12   & 2,5  & -2   & 7517,00 & 4063,00 & 5,41E-01 \\
-    13   & 3    & -2   & 7472,00 & 3547,00 & 4,75E-01 \\
-    14   & 2    & -2   & 7413,00 & 4084,00 & 5,51E-01 \\
+    \begin{tabular}{|l|l|l|l|l|l|}\hline
+    Calibration test nr.: & x [cm]& y [cm]& Scint count & SEU(\ac{SRAM}) & SEU/Scint count \\ \hline \hline
+    1    & 1,5  & -1,5 & 4893,00 & 2525,00 & 5,16E-01 \\ \hline
+    2    & 1,5  & -1,5 & 6677,00 & 3304,00 & 4,95E-01 \\ \hline
+    3    & 1,5  & -2   & 7434,00 & 4051,00 & 5,45E-01 \\ \hline
+    4    & 1,5  & -2,5 & 6559,00 & 3514,00 & 5,36E-01 \\ \hline
+    5    & 1,5  & -3   & 7669,00 & 3434,00 & 4,48E-01 \\ \hline
+    6    & 1,5  & -1   & 7305,00 & 3478,00 & 4,76E-01 \\ \hline
+    7    & 1,5  & -0,5 & 8089,00 & 3104,00 & 3,84E-01 \\ \hline
+    8    & 1,5  & -2   & 7531,00 & 3984,00 & 5,29E-01 \\ \hline
+    9    & 1    & -2   & 7998,00 & 4093,00 & 5,12E-01 \\ \hline
+    10   & 0,5  & -2   & 6903,00 & 3047,00 & 4,41E-01 \\ \hline
+    11   & 2    & -2   & 10298,00 & 5697,00 & 5,53E-01 \\ \hline
+    12   & 2,5  & -2   & 7517,00 & 4063,00 & 5,41E-01 \\ \hline
+    13   & 3    & -2   & 7472,00 & 3547,00 & 4,75E-01 \\ \hline
+    14   & 2    & -2   & 7413,00 & 4084,00 & 5,51E-01 \\ \hline
     \end{tabular}%
   \caption{Calibration tests 09.04.2014}
 \end{table}%
@@ -2667,28 +2688,27 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
   \centering
-  \caption{Add caption}
-    \begin{tabular}{rrrrrr}
-    Calibration test nr. & x    & y    & Scint rel & sram3 & sram3/scint rel \\
-    1    & 0    & 0    & 5805,00 & 1025,00 & 1,77E-01 \\
-    2    & -0,5 & 0    & 4017,00 & 1010,00 & 2,51E-01 \\
-    3    & -1   & 0    & 2416,00 & 741,00 & 3,07E-01 \\
-    4    & -1,5 & 0    & 2619,00 & 918,00 & 3,51E-01 \\
-    5    & -2   & 0    & 3905,00 & 1553,00 & 3,98E-01 \\
-    6    & -2,5 & 0    & 2171,00 & 848,00 & 3,91E-01 \\
-    7    & -3   & 0    & 2481,00 & 965,00 & 3,89E-01 \\
-    8    & -3,5 & 0    & 2729,00 & 1054,00 & 3,86E-01 \\
-    9    & -4   & 0    & 1967,00 & 646,00 & 3,28E-01 \\
-    10   & -2,5 & 0    & 2194,00 & 950,00 & 4,33E-01 \\
-    11   & -2   & 0    & 3477,00 & 1363,00 & 3,92E-01 \\
-    12   & -1,5 & 0    & 2618,00 & 929,00 & 3,55E-01 \\
-    13   & -3   & 0    & 2300,00 & 928,00 & 4,03E-01 \\
-    14   & -2,5 & -0,5 & 2066,00 & 766,00 & 3,71E-01 \\
-    15   & -2,5 & -1   & 2706,00 & 779,00 & 2,88E-01 \\
-    16   & -2,5 & 0,5  & 2550,00 & 1162,00 & 4,56E-01 \\
-    17   & -2,5 & 1    & 2514,00 & 1054,00 & 4,19E-01 \\
-    18   & -2,5 & 1,5  & 2044,00 & 737,00 & 3,61E-01 \\
-    19   & -2,5 & 0,5  & 2560,00 & 1067,00 & 4,17E-01 \\
+    \begin{tabular}{|l|l|l|l|l|l|}\hline
+    Calibration test nr.: & x [cm]& y [cm]& Scint count & SEU(\ac{SRAM}) & SEU/Scint count \\ \hline \hline
+    1    & 0    & 0    & 5805,00 & 1025,00 & 1,77E-01 \\ \hline
+    2    & -0,5 & 0    & 4017,00 & 1010,00 & 2,51E-01 \\ \hline
+    3    & -1   & 0    & 2416,00 & 741,00 & 3,07E-01 \\ \hline
+    4    & -1,5 & 0    & 2619,00 & 918,00 & 3,51E-01 \\ \hline
+    5    & -2   & 0    & 3905,00 & 1553,00 & 3,98E-01 \\ \hline
+    6    & -2,5 & 0    & 2171,00 & 848,00 & 3,91E-01 \\ \hline
+    7    & -3   & 0    & 2481,00 & 965,00 & 3,89E-01 \\ \hline
+    8    & -3,5 & 0    & 2729,00 & 1054,00 & 3,86E-01 \\ \hline
+    9    & -4   & 0    & 1967,00 & 646,00 & 3,28E-01 \\ \hline
+    10   & -2,5 & 0    & 2194,00 & 950,00 & 4,33E-01 \\ \hline
+    11   & -2   & 0    & 3477,00 & 1363,00 & 3,92E-01 \\ \hline
+    12   & -1,5 & 0    & 2618,00 & 929,00 & 3,55E-01 \\ \hline
+    13   & -3   & 0    & 2300,00 & 928,00 & 4,03E-01 \\ \hline
+    14   & -2,5 & -0,5 & 2066,00 & 766,00 & 3,71E-01 \\ \hline
+    15   & -2,5 & -1   & 2706,00 & 779,00 & 2,88E-01 \\ \hline
+    16   & -2,5 & 0,5  & 2550,00 & 1162,00 & 4,56E-01 \\ \hline
+    17   & -2,5 & 1    & 2514,00 & 1054,00 & 4,19E-01 \\ \hline
+    18   & -2,5 & 1,5  & 2044,00 & 737,00 & 3,61E-01 \\ \hline
+    19   & -2,5 & 0,5  & 2560,00 & 1067,00 & 4,17E-01 \\ \hline
     \end{tabular}%
   \caption{Calibration tests 09.04.2014}
 \end{table}%
@@ -2696,28 +2716,27 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
   \centering
-  \caption{Add caption}
-    \begin{tabular}{rrrrrr}
-    Calibration test nr. & x    & y    & Scint rel & sram3 & sram3/scint rel \\
-    1    & 0    & 0    & 5805,00 & 1025,00 & 1,77E-01 \\
-    2    & -0,5 & 0    & 4017,00 & 1010,00 & 2,51E-01 \\
-    3    & -1   & 0    & 2416,00 & 741,00 & 3,07E-01 \\
-    4    & -1,5 & 0    & 2619,00 & 918,00 & 3,51E-01 \\
-    5    & -2   & 0    & 3905,00 & 1553,00 & 3,98E-01 \\
-    6    & -2,5 & 0    & 2171,00 & 848,00 & 3,91E-01 \\
-    7    & -3   & 0    & 2481,00 & 965,00 & 3,89E-01 \\
-    8    & -3,5 & 0    & 2729,00 & 1054,00 & 3,86E-01 \\
-    9    & -4   & 0    & 1967,00 & 646,00 & 3,28E-01 \\
-    10   & -2,5 & 0    & 2194,00 & 950,00 & 4,33E-01 \\
-    11   & -2   & 0    & 3477,00 & 1363,00 & 3,92E-01 \\
-    12   & -1,5 & 0    & 2618,00 & 929,00 & 3,55E-01 \\
-    13   & -3   & 0    & 2300,00 & 928,00 & 4,03E-01 \\
-    14   & -2,5 & -0,5 & 2066,00 & 766,00 & 3,71E-01 \\
-    15   & -2,5 & -1   & 2706,00 & 779,00 & 2,88E-01 \\
-    16   & -2,5 & 0,5  & 2550,00 & 1162,00 & 4,56E-01 \\
-    17   & -2,5 & 1    & 2514,00 & 1054,00 & 4,19E-01 \\
-    18   & -2,5 & 1,5  & 2044,00 & 737,00 & 3,61E-01 \\
-    19   & -2,5 & 0,5  & 2560,00 & 1067,00 & 4,17E-01 \\
+    \begin{tabular}{|l|l|l|l|l|l|}\hline
+    Calibration test nr.: & x [cm]& y [cm]& Scint count & SEU(\ac{SRAM}) & SEU/Scint count \\ \hline \hline
+    1    & 0    & 0    & 5805,00 & 1025,00 & 1,77E-01 \\ \hline
+    2    & -0,5 & 0    & 4017,00 & 1010,00 & 2,51E-01 \\ \hline
+    3    & -1   & 0    & 2416,00 & 741,00 & 3,07E-01 \\ \hline
+    4    & -1,5 & 0    & 2619,00 & 918,00 & 3,51E-01 \\ \hline
+    5    & -2   & 0    & 3905,00 & 1553,00 & 3,98E-01 \\ \hline
+    6    & -2,5 & 0    & 2171,00 & 848,00 & 3,91E-01 \\ \hline
+    7    & -3   & 0    & 2481,00 & 965,00 & 3,89E-01 \\ \hline
+    8    & -3,5 & 0    & 2729,00 & 1054,00 & 3,86E-01 \\ \hline
+    9    & -4   & 0    & 1967,00 & 646,00 & 3,28E-01 \\ \hline
+    10   & -2,5 & 0    & 2194,00 & 950,00 & 4,33E-01 \\ \hline
+    11   & -2   & 0    & 3477,00 & 1363,00 & 3,92E-01 \\ \hline
+    12   & -1,5 & 0    & 2618,00 & 929,00 & 3,55E-01 \\ \hline
+    13   & -3   & 0    & 2300,00 & 928,00 & 4,03E-01 \\ \hline
+    14   & -2,5 & -0,5 & 2066,00 & 766,00 & 3,71E-01 \\ \hline
+    15   & -2,5 & -1   & 2706,00 & 779,00 & 2,88E-01 \\ \hline
+    16   & -2,5 & 0,5  & 2550,00 & 1162,00 & 4,56E-01 \\ \hline
+    17   & -2,5 & 1    & 2514,00 & 1054,00 & 4,19E-01 \\ \hline
+    18   & -2,5 & 1,5  & 2044,00 & 737,00 & 3,61E-01 \\ \hline
+    19   & -2,5 & 0,5  & 2560,00 & 1067,00 & 4,17E-01 \\ \hline
     \end{tabular}%
   \caption{Calibration tests 10.04.2014}
 \end{table}%
@@ -2726,25 +2745,24 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
   \centering
-  \caption{Add caption}
-    \begin{tabular}{rrrrrr}
-    Calibration test nr. & x    & y    & Scint rel & sram3 & sram3/scint rel \\
-    1    & 0,0  & 0,0  & 10415,00 & 4475,00 & 4,30E-01 \\
-    2    & 0,0  & 0,0  & 4033 & 1847,00 & 4,58E-01 \\
-    3    & -0,5 & 0,0  & 16002 & 7037,00 & 4,40E-01 \\
-    4    & -1,0 & 0,0  & 4707 & 1863,00 & 3,96E-01 \\
-    5    & -1,5 & 0,0  & 4107 & 1356,00 & 3,30E-01 \\
-    6    & 0,5  & 0,0  & 2478 & 1137,00 & 4,59E-01 \\
-    7    & 1,0  & 0,0  & 2114 & 825,00 & 3,90E-01 \\
-    8    & 1,5  & 0,0  & 2257 & 793,00 & 3,51E-01 \\
-    9    & 0,0  & 0,0  & 1719 & 753,00 & 4,38E-01 \\
-    10   & 0,0  & 0,5  & 2087 & 882,00 & 4,23E-01 \\
-    11   & 0,0  & 1,0  & 2978 & 1045,00 & 3,51E-01 \\
-    12   & 0,0  & 1,5  & 2695 & 806,00 & 2,99E-01 \\
-    13   & 0,0  & -0,5 & 2455 & 978,00 & 3,98E-01 \\
-    14   & 0,0  & -1,0 & 1980 & 765,00 & 3,86E-01 \\
-    15   & 0,0  & -1,5 & 2918 & 939,00 & 3,22E-01 \\
-    16   & 0,0  & 0,0  & 2579 & 1188,00 & 4,61E-01 \\
+    \begin{tabular}{|l|l|l|l|l|l|}\hline
+    Calibration test nr.: & x [cm]& y [cm]& Scint count & SEU(\ac{SRAM}) & SEU/Scint count \\ \hline \hline
+    1    & 0,0  & 0,0  & 10415,00 & 4475,00 & 4,30E-01 \\ \hline
+    2    & 0,0  & 0,0  & 4033 & 1847,00 & 4,58E-01 \\ \hline
+    3    & -0,5 & 0,0  & 16002 & 7037,00 & 4,40E-01 \\ \hline
+    4    & -1,0 & 0,0  & 4707 & 1863,00 & 3,96E-01 \\ \hline
+    5    & -1,5 & 0,0  & 4107 & 1356,00 & 3,30E-01 \\ \hline
+    6    & 0,5  & 0,0  & 2478 & 1137,00 & 4,59E-01 \\ \hline
+    7    & 1,0  & 0,0  & 2114 & 825,00 & 3,90E-01 \\ \hline
+    8    & 1,5  & 0,0  & 2257 & 793,00 & 3,51E-01 \\ \hline
+    9    & 0,0  & 0,0  & 1719 & 753,00 & 4,38E-01 \\ \hline
+    10   & 0,0  & 0,5  & 2087 & 882,00 & 4,23E-01 \\ \hline
+    11   & 0,0  & 1,0  & 2978 & 1045,00 & 3,51E-01 \\ \hline
+    12   & 0,0  & 1,5  & 2695 & 806,00 & 2,99E-01 \\ \hline
+    13   & 0,0  & -0,5 & 2455 & 978,00 & 3,98E-01 \\ \hline
+    14   & 0,0  & -1,0 & 1980 & 765,00 & 3,86E-01 \\ \hline
+    15   & 0,0  & -1,5 & 2918 & 939,00 & 3,22E-01 \\ \hline
+    16   & 0,0  & 0,0  & 2579 & 1188,00 & 4,61E-01 \\ \hline
     \end{tabular}%
   \caption{Calibration tests 11.04.2014}
 \end{table}%
@@ -2754,20 +2772,80 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
 \section{Radiation Results from OCL}
 \label{radiation_results_ocl}
 
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/current_volt_vs_time_mic1}
+  \caption{MIC69302WU test1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/current_volt_vs_time_mic2}
+  \caption{MIC69302WU test2}
+  \end{subfigure}
+ \caption{MIC69302WU - Current and voltage vs Time}
+\end{figure}
+
 
 \begin{figure}[!htbp]
 \centering
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/dataerror_vs_time_adn}
-  \caption{ADN2814 test1}
+  \includegraphics[width=\linewidth]{figures/current_vs_time_4245_2}
+  \caption{SN74AVCB164245 test2}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/clockerror_vs_time_adn}
-  \caption{ADN2814 test2}
+  \includegraphics[width=\linewidth]{figures/current_vs_dose_time_2}
+  \caption{SN74AVC2T245 test2}
   \end{subfigure}
- \caption{ADN2814 - Errors on data and clock vs Time}
+ \caption{SN74AVCB164245 and SN74AVC2T245 - Current vs Time}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/current_vs_time_4245_2}
+  \caption{SN74AVCB164245 test2}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/current_vs_dose_time_2}
+  \caption{SN74AVC2T245 test2}
+  \end{subfigure}
+ \caption{SN74AVCB164245 and SN74AVC2T245 - Current vs Time}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/curr_volt_vs_time_ina1}
+  \caption{INA210 test1}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/curr_volt_vs_time_ina2}
+  \caption{INA210 test2}
+  \end{subfigure}
+ \caption{INA210 - Current and voltage vs Time}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/current_vs_time_q1}
+  \caption{QS3VH257 test2}
+  \end{subfigure}
+  \begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{figures/current_vs_time_adn}
+  \caption{ADN2814}
+  \end{subfigure}
+ \caption{QS3VH257 and ADN2814 - Current vs Time}
  \label{adn_error_time}
 \end{figure}
 
@@ -2784,46 +2862,24 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
   \caption{Current on the 3.3 V source over time for SmartFusion2 test1}
   \end{subfigure}
  \caption{SmartFusion2 - Cycles vs dose}
- \label{sf2_current}
+ \label{sf2_current_1}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/cycles_dose_sf2_1}
+  \includegraphics[width=\linewidth]{figures/1v2_current_dose_sf2_2}
   \caption{Cycle counter versus dose for SmartFusion2 test1}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
-  \includegraphics[width=\linewidth]{figures/cycles_dose_sf2_2}
+  \includegraphics[width=\linewidth]{figures/3v3_current_dose_sf2_2}
   \caption{Cycle counter versus dose for SmartFusion2 test2}
   \end{subfigure}
  \caption{SmartFusion2 - cycles vs dose}
- \label{sf2_cycles}
+ \label{sf2_current_2}
 \end{figure}
-
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/flux_vs_time_1}
-  \caption{flux for components radiated 15.11.2013}
-  \label{flux_all1}
-\end{figure}
-
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/flux_vs_time_2}
-  \caption{flux for components radiated 28.11.2013}
-  \label{flux_all2}
-\end{figure}
-
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{figures/flux_all_3}
-  \caption{flux for components radiated 09.04.2014}
-  \label{flux_all3}
-\end{figure}
-
 
 \begin{figure}[!htbp]
 \centering
@@ -2840,6 +2896,30 @@ More studies should also be done on the reduction of \acl{SEL} and PLL lock-loss
  \caption{TLV3011 - Current and voltage as function of dose}
  \label{TLV3011_time}
 \end{figure}
+
+\FloatBarrier
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/flux_vs_time_1}
+  \caption{flux for components radiated 15.11.2013}
+  \label{flux_all1}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/flux_vs_time_2}
+  \caption{flux for components radiated 28.11.2013}
+  \label{flux_all2}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/flux_all_3}
+  \caption{flux for components radiated 09.04.2014}
+  \label{flux_all3}
+\end{figure}
+
 
 In Figure \ref{flux_all1}, \ref{flux_all2} \ref{flux_all3} you can see graphs of flux vs time for the different test boards tested at OCL. The reason the graphs don't go as linear as one would expect, is that the cyclotron wasn't as stable as one would expect, sometimes the beam stopped and had to restarted, and we sometimes we had sudden jumps in intensity. We also increased and decreased the intensities as we saw fitting, and that would also effect the graphs.
 
@@ -2869,44 +2949,33 @@ In Figure \ref{flux_all1}, \ref{flux_all2} \ref{flux_all3} you can see graphs of
 \label{tutorial_current}
 This tutorial will give you an introduction how to use the Current measurement board. The current measurement board is a PCB specially designed for measuring small current signal.
 
-
 \section{Introduction to Board}
 The board consists of the following components:  
 
 \begin{enumerate}
 \item  16-bit microcontroller (MSP430AFE2) manufactured by Texas Instruments  
-
 \item  FTDI chip - which converts serial UART to USB, 
-
 \item  Quad 2 to 1 multiplexer/demultiplexer
-
 \item  Two switches
-
 \item  Connectors for USB and JTAG
 \end{enumerate}
-
- 
 
 There are two switches on the board: one switch (Switch1) is used for controlling the select signal for the multiplexer, and the other (Switch2) is used to switch power source between JTAG and USB. Three outputs of the multiplexer are connected to GPIO pins on the microcontroller, the fourth output is not used. The three inputs which are in use can be switched between \textit{RTS\_bar}, \textit{CTS\_bar,} and \textit{POWER\_ENABLE\_bar} signal from the FTDI chip (see data sheet of FTDI for further study).  
 
 \begin{figure}
  \centering
-\includegraphics*[width=4.86in, height=3.44in, keepaspectratio=false]{image1}
+  \includegraphics*[width=\textwidth]{figures/current_measurement_board}
  \caption{Current measurement board layout}
 \end{figure}
 
- There are two 4-pin headers (J2 and J3), one 6-pin header (J1), and one 10-pin header (J4). The 4-pin header (J2) placed next to the FTDI chip, is used as a jumper which selects between 5 V and 3.3 V for the FTDI chip (if using external oscillator, FTDI chip required a 3.3 V power signal). The other 4-pin header (J3) is placed next to Switch2 and is used as a GPIO header, where 3 pins are connected to the multiplexer and the last pin is connected directly to the microcontroller. The 6-pin header (J1) is used for the ADC input and the 10-pin header (J4) is used for JTAG connection on the board.
-
- 
-
+There are two 4-pin headers (J2 and J3), one 6-pin header (J1), and one 10-pin header (J4). The 4-pin header (J2) placed next to the FTDI chip, is used as a jumper which selects between 5 V and 3.3 V for the FTDI chip (if using external oscillator, FTDI chip required a 3.3 V power signal). The other 4-pin header (J3) is placed next to Switch2 and is used as a GPIO header, where 3 pins are connected to the multiplexer and the last pin is connected directly to the microcontroller. The 6-pin header (J1) is used for the ADC input and the 10-pin header (J4) is used for JTAG connection on the board.
 
 \section{Microcontroller}
- The microcontroller operates at the frequency of 12 MHz (system clock) but it can also support high frequency crystal oscillator up to 16 Mhz. The microcontroller has an internal 24-bit ADC. Since the microcontroller has 16-bit architecture, only 16-bits of the ADC are accessible at a time, check "MSP430x2xx Family User's Guide" under section "SD24\_A" for more information on how to use all of the 24 bits . The microcontroller has 3 differential ADC inputs, which means three different currents can be measured at the same time. 
+The microcontroller operates at the frequency of 12 MHz (system clock) but it can also support high frequency crystal oscillator up to 16 Mhz. The microcontroller has an internal 24-bit ADC. Since the microcontroller has 16-bit architecture, only 16-bits of the ADC are accessible at a time, check "MSP430x2xx Family User's Guide" under section "SD24\_A" for more information on how to use all of the 24 bits . The microcontroller has 3 differential ADC inputs, which means three different currents can be measured at the same time. 
 
 
 \section{Communication to PC}
-
- There are two types of interfaces available for serial communication, which are USART and SPI. The current measurement board is made to be used with USART serial interface. The serial pins on the board are connected to the FTDI chip, which convert USART serial interface to USB interface. By connecting to the USB connector, we get two-way serial communication between computer and microcontroller. This makes it possible to send data out from the microcontroller as well as send data in to the microcontroller.
+There are two types of interfaces available for serial communication, which are USART and SPI. The current measurement board is made to be used with USART serial interface. The serial pins on the board are connected to the FTDI chip, which convert USART serial interface to USB interface. By connecting to the USB connector, we get two-way serial communication between computer and microcontroller. This makes it possible to send data out from the microcontroller as well as send data in to the microcontroller.
 
 \begin{figure}
  \centering
@@ -2914,36 +2983,32 @@ There are two switches on the board: one switch (Switch1) is used for controllin
  \caption{Connections to the board}
 \end{figure}
 
-
-
-
 \section{Software requirement and programing}
+To be able to program the microcontroller, the software Code Composer Studio (CCS) from Texas Instruments is needed together with JTAG-programmer. The free version of the software can be downloaded from: http://processors.wiki.ti.com/index.php/Download\_CCS. 
 
- To be able to program the microcontroller, the software Code Composer Studio (CCS) from Texas Instruments is needed together with JTAG-programmer. The free version of the software can be downloaded from: http://processors.wiki.ti.com/index.php/Download\_CCS. 
+JTAG-TINY-V2 programmer should be available at the university to be used as a JTAG programmer. The TJAG programmer may need driver to work correctly, go to the link: https://www.olimex.com/Products/MSP430/JTAG/MSP430-JTAG-TINY-V2/ to download drivers if not automatically installed.
 
- JTAG-TINY-V2 programmer should be available at the university to be used as a JTAG programmer. The TJAG programmer may need driver to work correctly, go to the link: https://www.olimex.com/Products/MSP430/JTAG/MSP430-JTAG-TINY-V2/ to download drivers if not automatically installed.
+The FTDI chip should already been set up correctly, but if you want to edit settings on the FTDI chip, go into this site, and download the program \textit{MProg} form: http://www.ftdichip.com/Support/Utilities.htm to change settings.
 
- The FTDI chip should already been set up correctly, but if you want to edit settings on the FTDI chip, go into this site, and download the program \textit{MProg} form: http://www.ftdichip.com/Support/Utilities.htm to change settings.
-
- To program the microcontroller, connect the cable between the 10-pin header (J4) and the JTAG-TINY-V2 programmer as shown in Figure 2. The green PWR light on the board should light up, if not, toggle the position of the Switch2, or connect a USB cable to the USB connector. Attached to this document you can find a C-code for reading data on the three differential ADC inputs, this can be opened and run in Code Composer Studio. A LABVIEW program can also be found among the attached files. Be sure to select correct serial port, when trying to run the LABVIEW program.
-
+To program the microcontroller, connect the cable between the 10-pin header (J4) and the JTAG-TINY-V2 programmer as shown in Figure 2. The green PWR light on the board should light up, if not, toggle the position of the Switch2, or connect a USB cable to the USB connector. 
 
 \section{How it works: Current measurement }
 
- A current is measured by adding a small resistor of known value in series of the signal you want to measure current of. By measuring voltage over that resistor you can calculate the current by using ohms law (I = U/R). The maximum voltage on each microcontroller pin is 3.3 V, which means the maximum voltage on the signal you want to measure, cannot be higher than 3.3 V. 
+A current is measured by adding a small resistor of known value in series of the signal you want to measure current of. By measuring voltage over that resistor you can calculate the current by using ohms law (I = U/R). The maximum voltage on each microcontroller pin is 3.3 V, which means the maximum voltage on the signal you want to measure, cannot be higher than 3.3 V. 
 
- When using the ADC, the analog signals which you measure, are being compared with a reference voltage of 1.2 V. The reference voltage sets the maximum voltage, and the analog signal measured are being compared with this value. For example if you have a 130 mV signal on the input, the digital converted value will be  0.13/1.2 * 65535 = 7100. If we have done a measurement and only know the ADC-value, we can find the analog input by divide the ADC-value by 65535 (which is the maximum value for 16-bit), and then multiply with reference voltage, of 1.2 V. The lowest voltage that can be measured by a 16-bit ADC with a 1.2 V reference is 1.2/65535 = 18 µV.
+When using the ADC, the analog signals which you measure, are being compared with a reference voltage of 1.2 V. The reference voltage sets the maximum voltage, and the analog signal measured are being compared with this value. For example if you have a 130 mV signal on the input, the digital converted value will be  0.13/1.2 * 65535 = 7100. If we have done a measurement and only know the ADC-value, we can find the analog input by divide the ADC-value by 65535 (which is the maximum value for 16-bit), and then multiply with reference voltage, of 1.2 V. The lowest voltage that can be measured by a 16-bit ADC with a 1.2 V reference is 1.2/65535 = 18 µV.
 
- When this board has been used before, it has been connected to a computer running a C-program in Code Composer Studio and a LABVIEW program communicating with the serial port. The C-program sends continuously ADC data-values out through the serial port to the LABVIEW program. In the labVIEW program the ADC values are converted to current values and are displayed for the viewer in LABVIEW. These values are also saved to disk as a text file.
+When this board has been used before, it has been connected to a computer running a C-program in Code Composer Studio and a LABVIEW program communicating with the serial port. The C-program sends continuously ADC data-values out through the serial port to the LABVIEW program. In the labVIEW program the ADC values are converted to current values and are displayed for the viewer in LABVIEW. These values are also saved to disk as a text file.
 
- \begin{figure}
+\begin{figure}
   \centering
    \includegraphics*[width=5.03in, height=3.08in, keepaspectratio=false]{image3}
   \caption{LabVIEW program front panel}
- \end{figure}
+\end{figure}
 
 \end{appendices}
 
+\setlength{\parskip}{2pt}
 \include{acronyms}
 
 \listoffigures
