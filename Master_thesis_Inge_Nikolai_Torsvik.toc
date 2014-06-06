@@ -102,8 +102,9 @@
 \contentsline {chapter}{\numberline {7}Summary Conclusion and Outlook}{91}{chapter.7}
 \contentsline {section}{\numberline {7.1}Summary}{91}{section.7.1}
 \contentsline {section}{\numberline {7.2}Conclusion}{92}{section.7.2}
-\contentsline {chapter}{Appendix \numberline {A}Radiation Results}{93}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Beam setup data}{93}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Radiation Results from OCL}{95}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Radiation Results from TSL}{99}{section.a.A.3}
-\contentsline {chapter}{Appendix \numberline {B}Current measurement board tutorial}{100}{Appendix.a.B}
+\contentsline {section}{\numberline {7.3}Outlook}{93}{section.7.3}
+\contentsline {chapter}{Appendix \numberline {A}Radiation Results}{94}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Beam setup data}{94}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Radiation Results from OCL}{96}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Radiation Results from TSL}{100}{section.a.A.3}
+\contentsline {chapter}{Appendix \numberline {B}Current measurement board tutorial}{101}{Appendix.a.B}
