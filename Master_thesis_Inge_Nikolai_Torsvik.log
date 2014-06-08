@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.2.11)  6 JUN 2014 17:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.2.11)  8 JUN 2014 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -785,7 +785,7 @@ LaTeX Info: Redefining \nameref on input line 65.
 \openout3 = `Master_thesis_Inge_Nikolai_Torsvik.out'.
 
 
-<figures/uglo.png, id=321, 71.14981pt x 71.14981pt>
+<figures/uglo.png, id=301, 71.14981pt x 71.14981pt>
 File: figures/uglo.png Graphic file (type png)
  <use figures/uglo.png>
 Package pdftex.def Info: figures/uglo.png used on input line 82.
@@ -794,30 +794,39 @@ Package pdftex.def Info: figures/uglo.png used on input line 82.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/uglo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 114--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--118
+
+ []
+
 [2
 
 ]
 Package acronym Info: Label `acro:LHC' newly defined as it shall be overridden
-although it is yet undefined on input line 105.
+although it is yet undefined on input line 121.
 Package acronym Info: Label `acro:ALICE' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 105.
+although it is yet undefined on input line 121.
 Package acronym Info: Label `acro:TPC' newly defined as it shall be overridden
-although it is yet undefined on input line 107.
+although it is yet undefined on input line 123.
 Package acronym Info: Label `acro:RCU' newly defined as it shall be overridden
-although it is yet undefined on input line 107.
+although it is yet undefined on input line 123.
 Package acronym Info: Label `acro:SEE' newly defined as it shall be overridden
-although it is yet undefined on input line 109.
+although it is yet undefined on input line 125.
 Package acronym Info: Label `acro:SEU' newly defined as it shall be overridden
-although it is yet undefined on input line 111.
+although it is yet undefined on input line 127.
 Package acronym Info: Label `acro:SET' newly defined as it shall be overridden
-although it is yet undefined on input line 111.
+although it is yet undefined on input line 127.
 Package acronym Info: Label `acro:SEL' newly defined as it shall be overridden
-although it is yet undefined on input line 111.
+although it is yet undefined on input line 127.
 Package acronym Info: Label `acro:OCL' newly defined as it shall be overridden
-although it is yet undefined on input line 113.
+although it is yet undefined on input line 129.
 Package acronym Info: Label `acro:TSL' newly defined as it shall be overridden
-although it is yet undefined on input line 113.
+although it is yet undefined on input line 129.
  [3
 
 ] (./Master_thesis_Inge_Nikolai_Torsvik.toc [4
@@ -832,905 +841,894 @@ Chapter 1.
 
 ]
 Package acronym Info: Label `acro:SoC' newly defined as it shall be overridden
-although it is yet undefined on input line 134.
+although it is yet undefined on input line 151.
 Package acronym Info: Label `acro:FPGA' newly defined as it shall be overridden
 
-although it is yet undefined on input line 134.
+although it is yet undefined on input line 151.
  [2]
 Chapter 2.
 Package acronym Info: Label `acro:CERN' newly defined as it shall be overridden
 
-although it is yet undefined on input line 157.
-<figures/CERN_accelerators.jpg, id=520, 511.9125pt x 677.02937pt>
+although it is yet undefined on input line 174.
+<figures/CERN_accelerators.jpg, id=495, 511.9125pt x 677.02937pt>
 File: figures/CERN_accelerators.jpg Graphic file (type jpg)
 
 <use figures/CERN_accelerators.jpg>
-Package pdftex.def Info: figures/CERN_accelerators.jpg used on input line 173.
+Package pdftex.def Info: figures/CERN_accelerators.jpg used on input line 190.
 (pdftex.def)             Requested size: 273.14923pt x 361.25154pt.
 
-<figures/ALICE_layout.jpg, id=523, 772.8875pt x 407.5225pt>
+<figures/ALICE_layout.jpg, id=498, 772.8875pt x 407.5225pt>
 File: figures/ALICE_layout.jpg Graphic file (type jpg)
 
 <use figures/ALICE_layout.jpg>
-Package pdftex.def Info: figures/ALICE_layout.jpg used on input line 180.
+Package pdftex.def Info: figures/ALICE_layout.jpg used on input line 197.
 (pdftex.def)             Requested size: 455.24411pt x 240.03821pt.
  [3
 
 ] [4 <./figures/CERN_accelerators.jpg> <./figures/ALICE_layout.jpg>]
-<figures/TPC_layout.png, id=548, 847.66687pt x 378.66469pt>
+<figures/TPC_layout.png, id=523, 847.66687pt x 378.66469pt>
 File: figures/TPC_layout.png Graphic file (type png)
 
 <use figures/TPC_layout.png>
-Package pdftex.def Info: figures/TPC_layout.png used on input line 200.
+Package pdftex.def Info: figures/TPC_layout.png used on input line 217.
 (pdftex.def)             Requested size: 455.24411pt x 203.36073pt.
  [5 <./figures/TPC_layout.png>]
-<figures/TPC_Sections.png, id=557, 758.835pt x 615.0478pt>
+<figures/TPC_Sections.png, id=532, 758.835pt x 615.0478pt>
 File: figures/TPC_Sections.png Graphic file (type png)
 
 <use figures/TPC_Sections.png>
-Package pdftex.def Info: figures/TPC_Sections.png used on input line 210.
+Package pdftex.def Info: figures/TPC_Sections.png used on input line 226.
 (pdftex.def)             Requested size: 227.62206pt x 184.48761pt.
-
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 21
-7.
-
 Package acronym Info: Label `acro:FEC' newly defined as it shall be overridden
-although it is yet undefined on input line 219.
+although it is yet undefined on input line 234.
 Package acronym Info: Label `acro:FEE' newly defined as it shall be overridden
-although it is yet undefined on input line 219.
+although it is yet undefined on input line 234.
 Package acronym Info: Label `acro:ADC' newly defined as it shall be overridden
-although it is yet undefined on input line 226.
-<figures/FEC_blockdiagram.png, id=571, 773.13844pt x 375.65344pt>
+although it is yet undefined on input line 241.
+
+<figures/FEC_blockdiagram.png, id=546, 773.13844pt x 375.65344pt>
 File: figures/FEC_blockdiagram.png Graphic file (type png)
 
 <use figures/FEC_blockdiagram.png>
-Package pdftex.def Info: figures/FEC_blockdiagram.png used on input line 233.
+Package pdftex.def Info: figures/FEC_blockdiagram.png used on input line 248.
 (pdftex.def)             Requested size: 455.24411pt x 221.19223pt.
- [6 <./figures/TPC_Sections.png> <./figures/FEC_blockdiagram.png>]
+ [6 <./figures/TPC_Sections.png>]
 Package acronym Info: Label `acro:DAQ' newly defined as it shall be overridden
-although it is yet undefined on input line 249.
+although it is yet undefined on input line 264.
 Package acronym Info: Label `acro:DCS' newly defined as it shall be overridden
-although it is yet undefined on input line 250.
+although it is yet undefined on input line 265.
 Package acronym Info: Label `acro:SIU' newly defined as it shall be overridden
-although it is yet undefined on input line 250.
- <figures/RCU.png, id=603, 478.78876pt x 583.42969pt>
-File: figures/RCU.png Graphic file (type png)
+although it is yet undefined on input line 265.
 
-<use figures/RCU.png>
-Package pdftex.def Info: figures/RCU.png used on input line 260.
+<figures/RCU.png, id=580, 478.78876pt x 583.42969pt>
+File: figures/RCU.png Graphic file (type png)
+ <use figures/RCU.png>
+Package pdftex.def Info: figures/RCU.png used on input line 275.
 (pdftex.def)             Requested size: 273.14923pt x 332.84325pt.
 Package acronym Info: Label `acro:SRAM' newly defined as it shall be overridden
 
-although it is yet undefined on input line 267.
- <figures/FEE_overview.png, id=619, 1019.81pt x 521.95pt>
+although it is yet undefined on input line 282.
+
+[7 <./figures/FEC_blockdiagram.png> <./figures/RCU.png>]
+<figures/FEE_overview.png, id=612, 1019.81pt x 521.95pt>
 File: figures/FEE_overview.png Graphic file (type png)
 
 <use figures/FEE_overview.png>
-Package pdftex.def Info: figures/FEE_overview.png used on input line 285.
+Package pdftex.def Info: figures/FEE_overview.png used on input line 300.
 (pdftex.def)             Requested size: 364.19667pt x 186.40456pt.
- [7 <./figures/RCU.png>] [8 <./figures/FEE_overview.png>] [9]
+ [8 <./figures/FEE_overview.png>] [9]
 Chapter 3.
 [10
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 350.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 365.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 350.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 365.
  [11]
-<figures/energy_loss.png, id=697, 516.42938pt x 573.64313pt>
+<figures/energy_loss.png, id=672, 516.42938pt x 573.64313pt>
 File: figures/energy_loss.png Graphic file (type png)
 
 <use figures/energy_loss.png>
-Package pdftex.def Info: figures/energy_loss.png used on input line 420.
+Package pdftex.def Info: figures/energy_loss.png used on input line 435.
 (pdftex.def)             Requested size: 227.62206pt x 252.8414pt.
 Package acronym Info: Label `acro:LET' newly defined as it shall be overridden
-although it is yet undefined on input line 431.
+although it is yet undefined on input line 446.
  [12 <./figures/energy_loss.png>] [13]
-<figures/CMOS_inverter.png, id=731, 931.22906pt x 328.22626pt>
+<figures/CMOS_inverter.png, id=706, 931.22906pt x 328.22626pt>
 File: figures/CMOS_inverter.png Graphic file (type png)
 
 <use figures/CMOS_inverter.png>
-Package pdftex.def Info: figures/CMOS_inverter.png used on input line 489.
+Package pdftex.def Info: figures/CMOS_inverter.png used on input line 504.
 (pdftex.def)             Requested size: 455.24411pt x 160.45663pt.
  [14] [15 <./figures/CMOS_inverter.png>]
-<figures/SRAM_Cell.png, id=760, 264.99pt x 166.37157pt>
+<figures/SRAM_Cell.png, id=735, 264.99pt x 166.37157pt>
 File: figures/SRAM_Cell.png Graphic file (type png)
 
 <use figures/SRAM_Cell.png>
-Package pdftex.def Info: figures/SRAM_Cell.png used on input line 517.
+Package pdftex.def Info: figures/SRAM_Cell.png used on input line 532.
 (pdftex.def)             Requested size: 341.43307pt x 214.38155pt.
 
-<figures/charge_generation.png, id=763, 1017.8025pt x 392.96812pt>
+<figures/charge_generation.png, id=738, 1017.8025pt x 392.96812pt>
 File: figures/charge_generation.png Graphic file (type png)
 
 <use figures/charge_generation.png>
-Package pdftex.def Info: figures/charge_generation.png used on input line 524.
+Package pdftex.def Info: figures/charge_generation.png used on input line 539.
 (pdftex.def)             Requested size: 455.24411pt x 175.7667pt.
 Package acronym Info: Label `acro:TID' newly defined as it shall be overridden
-although it is yet undefined on input line 538.
+although it is yet undefined on input line 553.
  [16 <./figures/SRAM_Cell.png> <./figures/charge_generation.png>]
-<figures/TID_in_MOS.png, id=778, 798.73407pt x 366.61969pt>
+<figures/TID_in_MOS.png, id=753, 798.73407pt x 366.61969pt>
 File: figures/TID_in_MOS.png Graphic file (type png)
 
 <use figures/TID_in_MOS.png>
-Package pdftex.def Info: figures/TID_in_MOS.png used on input line 562.
+Package pdftex.def Info: figures/TID_in_MOS.png used on input line 577.
 (pdftex.def)             Requested size: 227.62206pt x 104.4765pt.
  [17] [18 <./figures/TID_in_MOS.png>]
 Chapter 4.
 Package acronym Info: Label `acro:PCB' newly defined as it shall be overridden
-although it is yet undefined on input line 594.
+although it is yet undefined on input line 609.
 [19
 
-] <figures/TPS51200_sch.png, id=832, 855.94781pt x 310.15875pt>
+] <figures/TPS51200_sch.png, id=807, 855.94781pt x 310.15875pt>
 File: figures/TPS51200_sch.png Graphic file (type png)
 
 <use figures/TPS51200_sch.png>
-Package pdftex.def Info: figures/TPS51200_sch.png used on input line 623.
+Package pdftex.def Info: figures/TPS51200_sch.png used on input line 638.
 (pdftex.def)             Requested size: 455.24411pt x 164.96072pt.
  [20 <./figures/TPS51200_sch.png>]
-<figures/MIC_sch.png, id=845, 791.20593pt x 289.08pt>
+<figures/MIC_sch.png, id=820, 791.20593pt x 289.08pt>
 File: figures/MIC_sch.png Graphic file (type png)
 
 <use figures/MIC_sch.png>
-Package pdftex.def Info: figures/MIC_sch.png used on input line 646.
+Package pdftex.def Info: figures/MIC_sch.png used on input line 661.
 (pdftex.def)             Requested size: 455.24411pt x 166.32997pt.
  [21 <./figures/MIC_sch.png>]
-<figures/SN74AVCB164245_sch.png, id=859, 604.50844pt x 533.74406pt>
+<figures/SN74AVCB164245_sch.png, id=834, 604.50844pt x 533.74406pt>
 File: figures/SN74AVCB164245_sch.png Graphic file (type png)
 
 <use figures/SN74AVCB164245_sch.png>
-Package pdftex.def Info: figures/SN74AVCB164245_sch.png used on input line 667.
+Package pdftex.def Info: figures/SN74AVCB164245_sch.png used on input line 682.
 
-(pdftex.def)             Requested size: 455.24411pt x 401.9522pt.
- [22] [23 <./figures/SN74AVCB164245_sch.png>] <figures/SN74AVC2T245_sch.png, id
-=873, 694.84593pt x 509.65407pt>
+(pdftex.def)             Requested size: 318.66948pt x 281.36816pt.
+ [22 <./figures/SN74AVCB164245_sch.png>]
+<figures/SN74AVC2T245_sch.png, id=843, 694.84593pt x 509.65407pt>
 File: figures/SN74AVC2T245_sch.png Graphic file (type png)
 
 <use figures/SN74AVC2T245_sch.png>
-Package pdftex.def Info: figures/SN74AVC2T245_sch.png used on input line 686.
+Package pdftex.def Info: figures/SN74AVC2T245_sch.png used on input line 701.
 (pdftex.def)             Requested size: 455.24411pt x 333.9075pt.
- [24 <./figures/SN74AVC2T245_sch.png>]
-<figures/QS3VH257_sch.png, id=881, 737.00343pt x 437.38406pt>
+ [23 <./figures/SN74AVC2T245_sch.png>]
+<figures/QS3VH257_sch.png, id=851, 737.00343pt x 437.38406pt>
 File: figures/QS3VH257_sch.png Graphic file (type png)
 
 <use figures/QS3VH257_sch.png>
-Package pdftex.def Info: figures/QS3VH257_sch.png used on input line 701.
+Package pdftex.def Info: figures/QS3VH257_sch.png used on input line 716.
 (pdftex.def)             Requested size: 455.24411pt x 270.16754pt.
 
-<figures/SY89831U_sch.png, id=886, 730.22812pt x 564.60938pt>
+<figures/SY89831U_sch.png, id=856, 730.22812pt x 564.60938pt>
 File: figures/SY89831U_sch.png Graphic file (type png)
 
 <use figures/SY89831U_sch.png>
-Package pdftex.def Info: figures/SY89831U_sch.png used on input line 717.
+Package pdftex.def Info: figures/SY89831U_sch.png used on input line 732.
 (pdftex.def)             Requested size: 364.19667pt x 281.59753pt.
- [25 <./figures/QS3VH257_sch.png>]
+ [24 <./figures/QS3VH257_sch.png>]
 Package acronym Info: Label `acro:LVDS' newly defined as it shall be overridden
 
-although it is yet undefined on input line 726.
+although it is yet undefined on input line 741.
 Package acronym Info: Label `acro:CML' newly defined as it shall be overridden
-although it is yet undefined on input line 727.
- [26 <./figures/SY89831U_sch.png>]
-<figures/MAX3748_sch.png, id=906, 712.16063pt x 304.88907pt>
+although it is yet undefined on input line 742.
+ [25 <./figures/SY89831U_sch.png>]
+<figures/MAX3748_sch.png, id=877, 712.16063pt x 304.88907pt>
 File: figures/MAX3748_sch.png Graphic file (type png)
 
 <use figures/MAX3748_sch.png>
-Package pdftex.def Info: figures/MAX3748_sch.png used on input line 749.
-(pdftex.def)             Requested size: 364.19667pt x 155.91937pt.
+Package pdftex.def Info: figures/MAX3748_sch.png used on input line 764.
+(pdftex.def)             Requested size: 409.71692pt x 175.40755pt.
 
-<figures/ADN2814_sch.png, id=907, 743.02594pt x 356.83313pt>
+<figures/ADN2814_sch.png, id=878, 743.02594pt x 356.83313pt>
 File: figures/ADN2814_sch.png Graphic file (type png)
 
 <use figures/ADN2814_sch.png>
-Package pdftex.def Info: figures/ADN2814_sch.png used on input line 756.
-(pdftex.def)             Requested size: 364.19667pt x 174.9042pt.
- [27] [28 <./figures/MAX3748_sch.png> <./figures/ADN2814_sch.png>] <figures/INA
-210_sch.png, id=920, 1002.74625pt x 466.74374pt>
+Package pdftex.def Info: figures/ADN2814_sch.png used on input line 771.
+(pdftex.def)             Requested size: 409.71692pt x 196.76518pt.
+ [26] [27 <./figures/MAX3748_sch.png> <./figures/ADN2814_sch.png>] <figures/INA
+210_sch.png, id=891, 1002.74625pt x 466.74374pt>
 File: figures/INA210_sch.png Graphic file (type png)
 
 <use figures/INA210_sch.png>
-Package pdftex.def Info: figures/INA210_sch.png used on input line 779.
+Package pdftex.def Info: figures/INA210_sch.png used on input line 794.
 (pdftex.def)             Requested size: 455.24411pt x 211.89868pt.
- [29 <./figures/INA210_sch.png>]
-<figures/TLV3011_sch.png, id=928, 1168.365pt x 446.41782pt>
+ [28 <./figures/INA210_sch.png>]
+<figures/TLV3011_sch.png, id=899, 1168.365pt x 446.41782pt>
 File: figures/TLV3011_sch.png Graphic file (type png)
 
 <use figures/TLV3011_sch.png>
-Package pdftex.def Info: figures/TLV3011_sch.png used on input line 791.
+Package pdftex.def Info: figures/TLV3011_sch.png used on input line 806.
 (pdftex.def)             Requested size: 455.24411pt x 173.94557pt.
 
-<figures/PCB_board1.png, id=933, 344.78813pt x 407.27156pt>
+<figures/PCB_board1.png, id=904, 344.78813pt x 407.27156pt>
 File: figures/PCB_board1.png Graphic file (type png)
 
 <use figures/PCB_board1.png>
-Package pdftex.def Info: figures/PCB_board1.png used on input line 805.
+Package pdftex.def Info: figures/PCB_board1.png used on input line 820.
 (pdftex.def)             Requested size: 160.61218pt x 189.7211pt.
 
-<figures/PCB_board1_5.png, id=934, 462.97969pt x 407.27156pt>
+<figures/PCB_board1_5.png, id=905, 462.97969pt x 407.27156pt>
 File: figures/PCB_board1_5.png Graphic file (type png)
 
 <use figures/PCB_board1_5.png>
-Package pdftex.def Info: figures/PCB_board1_5.png used on input line 810.
+Package pdftex.def Info: figures/PCB_board1_5.png used on input line 825.
 (pdftex.def)             Requested size: 223.07211pt x 196.23386pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--811
+Underfull \hbox (badness 10000) in paragraph at lines 826--826
 []\OT1/cmr/m/n/10 (b) |From left, SN74AVCB164245 and
  []
 
-<figures/PCB_board2.png, id=935, 499.8675pt x 407.27156pt>
+<figures/PCB_board2.png, id=906, 499.8675pt x 407.27156pt>
 File: figures/PCB_board2.png Graphic file (type png)
 
 <use figures/PCB_board2.png>
-Package pdftex.def Info: figures/PCB_board2.png used on input line 822.
+Package pdftex.def Info: figures/PCB_board2.png used on input line 837.
 (pdftex.def)             Requested size: 223.07211pt x 181.74796pt.
 
-<figures/PCB_board3.png, id=936, 490.08093pt x 406.51875pt>
+<figures/PCB_board3.png, id=907, 490.08093pt x 406.51875pt>
 File: figures/PCB_board3.png Graphic file (type png)
 
 <use figures/PCB_board3.png>
-Package pdftex.def Info: figures/PCB_board3.png used on input line 827.
+Package pdftex.def Info: figures/PCB_board3.png used on input line 842.
 (pdftex.def)             Requested size: 223.07211pt x 185.03455pt.
 
-<figures/PCB_board4.png, id=937, 1053.9375pt x 1055.44313pt>
+<figures/PCB_board4.png, id=908, 1053.9375pt x 1055.44313pt>
 File: figures/PCB_board4.png Graphic file (type png)
 
 <use figures/PCB_board4.png>
-Package pdftex.def Info: figures/PCB_board4.png used on input line 838.
+Package pdftex.def Info: figures/PCB_board4.png used on input line 853.
 (pdftex.def)             Requested size: 223.07211pt x 223.38892pt.
 
-<figures/backside_PCB.png, id=938, 254.45062pt x 407.27156pt>
+<figures/backside_PCB.png, id=909, 254.45062pt x 407.27156pt>
 File: figures/backside_PCB.png Graphic file (type png)
 
 <use figures/backside_PCB.png>
-Package pdftex.def Info: figures/backside_PCB.png used on input line 843.
+Package pdftex.def Info: figures/backside_PCB.png used on input line 858.
 (pdftex.def)             Requested size: 138.30362pt x 221.37753pt.
- [30 <./figures/TLV3011_sch.png>] [31 <./figures/PCB_board1.png> <./figures/PCB
+ [29 <./figures/TLV3011_sch.png>] [30 <./figures/PCB_board1.png> <./figures/PCB
 _board1_5.png> <./figures/PCB_board2.png> <./figures/PCB_board3.png>] <figures/
-labVIEW.jpg, id=956, 800.9925pt x 446.41782pt>
+labVIEW.jpg, id=926, 800.9925pt x 446.41782pt>
 File: figures/labVIEW.jpg Graphic file (type jpg)
 
 <use figures/labVIEW.jpg>
-Package pdftex.def Info: figures/labVIEW.jpg used on input line 861.
+Package pdftex.def Info: figures/labVIEW.jpg used on input line 876.
 (pdftex.def)             Requested size: 455.24411pt x 253.72511pt.
- [32 <./figures/PCB_board4.png> <./figures/backside_PCB.png>] [33 <./figures/la
+ [31 <./figures/PCB_board4.png> <./figures/backside_PCB.png>] [32 <./figures/la
 bVIEW.jpg>]
-<figures/SRAM_flow_chart.png, id=976, 290.64584pt x 249.21104pt>
+<figures/SRAM_flow_chart.png, id=947, 290.64584pt x 249.21104pt>
 File: figures/SRAM_flow_chart.png Graphic file (type png)
 
 <use figures/SRAM_flow_chart.png>
-Package pdftex.def Info: figures/SRAM_flow_chart.png used on input line 895.
+Package pdftex.def Info: figures/SRAM_flow_chart.png used on input line 910.
 (pdftex.def)             Requested size: 227.62206pt x 195.17477pt.
- [34 <./figures/SRAM_flow_chart.png>]
+ [33 <./figures/SRAM_flow_chart.png>]
 Package acronym Info: Label `acro:WSR' newly defined as it shall be overridden
-although it is yet undefined on input line 922.
+although it is yet undefined on input line 937.
 
-<figures/Shift_register_design.png, id=1000, 1446.40375pt x 571.13374pt>
+<figures/Shift_register_design.png, id=971, 1446.40375pt x 571.13374pt>
 File: figures/Shift_register_design.png Graphic file (type png)
 
 <use figures/Shift_register_design.png>
 Package pdftex.def Info: figures/Shift_register_design.png used on input line 9
-36.
+51.
 (pdftex.def)             Requested size: 455.24411pt x 179.75993pt.
- [35] [36 <./figures/Shift_register_design.png>] [37] [38]
-<figures/SRAM_labview.png, id=1053, 986.18437pt x 610.53094pt>
+ [34] [35 <./figures/Shift_register_design.png>] [36] [37]
+<figures/SRAM_labview.png, id=1024, 986.18437pt x 610.53094pt>
 File: figures/SRAM_labview.png Graphic file (type png)
 
 <use figures/SRAM_labview.png>
-Package pdftex.def Info: figures/SRAM_labview.png used on input line 999.
+Package pdftex.def Info: figures/SRAM_labview.png used on input line 1014.
 (pdftex.def)             Requested size: 455.24411pt x 281.83513pt.
- [39 <./figures/SRAM_labview.png>]
-<figures/SRAM_flowchart.png, id=1068, 256.70906pt x 567.62062pt>
+ [38 <./figures/SRAM_labview.png>]
+<figures/SRAM_flowchart.png, id=1039, 256.70906pt x 567.62062pt>
 File: figures/SRAM_flowchart.png Graphic file (type png)
 
 <use figures/SRAM_flowchart.png>
-Package pdftex.def Info: figures/SRAM_flowchart.png used on input line 1013.
+Package pdftex.def Info: figures/SRAM_flowchart.png used on input line 1028.
 (pdftex.def)             Requested size: 113.81017pt x 227.62451pt.
- [40 <./figures/SRAM_flowchart.png>]
-<figures/XY_front.jpg, id=1078, 3661.68pt x 2746.26pt>
+ [39 <./figures/SRAM_flowchart.png>]
+<figures/XY_front.jpg, id=1049, 3661.68pt x 2746.26pt>
 File: figures/XY_front.jpg Graphic file (type jpg)
 
 <use figures/XY_front.jpg>
-Package pdftex.def Info: figures/XY_front.jpg used on input line 1040.
+Package pdftex.def Info: figures/XY_front.jpg used on input line 1055.
 (pdftex.def)             Requested size: 223.07211pt x 167.28276pt.
 
-<figures/XY_back.jpg, id=1079, 3661.68pt x 2746.26pt>
+<figures/XY_back.jpg, id=1050, 3661.68pt x 2746.26pt>
 File: figures/XY_back.jpg Graphic file (type jpg)
 
 <use figures/XY_back.jpg>
-Package pdftex.def Info: figures/XY_back.jpg used on input line 1045.
+Package pdftex.def Info: figures/XY_back.jpg used on input line 1060.
 (pdftex.def)             Requested size: 223.07211pt x 167.28276pt.
- [41 <./figures/XY_front.jpg> <./figures/XY_back.jpg>]
+ [40 <./figures/XY_front.jpg> <./figures/XY_back.jpg>]
 Chapter 5.
-<figures/OCL.png, id=1092, 638.385pt x 536.0025pt>
+<figures/OCL.png, id=1063, 638.385pt x 536.0025pt>
 File: figures/OCL.png Graphic file (type png)
  <use figures/OCL.png>
-Package pdftex.def Info: figures/OCL.png used on input line 1077.
+Package pdftex.def Info: figures/OCL.png used on input line 1092.
 (pdftex.def)             Requested size: 227.61696pt x 199.1684pt.
 
-[42
+[41
 
-] <figures/experiment_setup.jpg, id=1099, 395.22656pt x 207.02344pt>
+] <figures/experiment_setup.jpg, id=1070, 395.22656pt x 207.02344pt>
 File: figures/experiment_setup.jpg Graphic file (type jpg)
 
 <use figures/experiment_setup.jpg>
-Package pdftex.def Info: figures/experiment_setup.jpg used on input line 1103.
+Package pdftex.def Info: figures/experiment_setup.jpg used on input line 1118.
 (pdftex.def)             Requested size: 227.62206pt x 119.23024pt.
 
-<figures/experiment_area.jpg, id=1100, 3661.68pt x 2746.26pt>
+<figures/experiment_area.jpg, id=1071, 3661.68pt x 2746.26pt>
 File: figures/experiment_area.jpg Graphic file (type jpg)
 
 <use figures/experiment_area.jpg>
-Package pdftex.def Info: figures/experiment_area.jpg used on input line 1110.
+Package pdftex.def Info: figures/experiment_area.jpg used on input line 1125.
 (pdftex.def)             Requested size: 455.24411pt x 341.39595pt.
- [43 <./figures/OCL.png> <./figures/experiment_setup.jpg>] [44 <./figures/exper
+ [42 <./figures/OCL.png> <./figures/experiment_setup.jpg>] [43 <./figures/exper
 iment_area.jpg>]
 Package acronym Info: Label `acro:DUT' newly defined as it shall be overridden
-although it is yet undefined on input line 1121.
+although it is yet undefined on input line 1136.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1123--1123
+Underfull \hbox (badness 10000) in paragraph at lines 1138--1138
 []|\OT1/cmr/m/n/12 TPS51200, MIC69302WU, SN74AVCB164245,
  []
 
 
-Underfull \hbox (badness 5985) in paragraph at lines 1123--1123
+Underfull \hbox (badness 5985) in paragraph at lines 1138--1138
 \OT1/cmr/m/n/12 MAX3748, INA210, TLV3011 and Smart-Fu-sion2
  []
 
-[45]
-Underfull \hbox (badness 8113) in paragraph at lines 1162--1162
+[44]
+Underfull \hbox (badness 8113) in paragraph at lines 1177--1177
 []|$\OML/cmm/m/it/12 ADN\OT1/cmr/m/n/12 2814$, $\OML/cmm/m/it/12 MAX\OT1/cmr/m/
 n/12 3748$, $\OML/cmm/m/it/12 SY\OT1/cmr/m/n/12 89831\OML/cmm/m/it/12 U[]$\OT1/
 cmr/m/n/12 , $\OML/cmm/m/it/12 TPS\OT1/cmr/m/n/12 51200[]$,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1162
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1177
 \OML/cmm/m/it/12 MIC\OT1/cmr/m/n/12 69302\OML/cmm/m/it/12 WU[]$\OT1/cmr/m/n/12 
 , $\OML/cmm/m/it/12 SN\OT1/cmr/m/n/12 74\OML/cmm/m/it/12 AVCB\OT1/cmr/m/n/12 16
 4245[]$,
  []
 
-[46] <figures/Blue_hall.png, id=1141, 1025.8325pt x 653.44125pt>
+[45] <figures/Blue_hall.png, id=1112, 1025.8325pt x 653.44125pt>
 File: figures/Blue_hall.png Graphic file (type png)
 
 <use figures/Blue_hall.png>
-Package pdftex.def Info: figures/Blue_hall.png used on input line 1180.
+Package pdftex.def Info: figures/Blue_hall.png used on input line 1195.
 (pdftex.def)             Requested size: 318.66948pt x 202.98346pt.
- [47 <./figures/Blue_hall.png>]
-<figures/TSL_setup.png, id=1150, 2601.72pt x 1943.26pt>
+ [46 <./figures/Blue_hall.png>]
+<figures/TSL_setup.png, id=1121, 2601.72pt x 1943.26pt>
 File: figures/TSL_setup.png Graphic file (type png)
 
 <use figures/TSL_setup.png>
-Package pdftex.def Info: figures/TSL_setup.png used on input line 1191.
+Package pdftex.def Info: figures/TSL_setup.png used on input line 1206.
 (pdftex.def)             Requested size: 318.66948pt x 238.01437pt.
- [48 <./figures/TSL_setup.png>] [49]
+ [47 <./figures/TSL_setup.png>] [48]
 Chapter 6.
-[50
+[49
 
-] [51] [52] [53] [54] [55]
-<figures/radiation_film2.png, id=1266, 463.7325pt x 654.16396pt>
+] [50] [51] [52] [53] [54]
+<figures/radiation_film2.png, id=1236, 463.7325pt x 654.16396pt>
 File: figures/radiation_film2.png Graphic file (type png)
 
 <use figures/radiation_film2.png>
-Package pdftex.def Info: figures/radiation_film2.png used on input line 1439.
+Package pdftex.def Info: figures/radiation_film2.png used on input line 1454.
 (pdftex.def)             Requested size: 182.09486pt x 256.86972pt.
- [56]
-<figures/position_xy.png, id=1280, 422.32782pt x 316.18124pt>
+ [55]
+<figures/position_xy.png, id=1251, 422.32782pt x 316.18124pt>
 File: figures/position_xy.png Graphic file (type png)
 
 <use figures/position_xy.png>
-Package pdftex.def Info: figures/position_xy.png used on input line 1456.
+Package pdftex.def Info: figures/position_xy.png used on input line 1471.
 (pdftex.def)             Requested size: 273.14923pt x 204.50221pt.
- [57 <./figures/radiation_film2.png>]
-<figures/current_volt_vs_dose_tps.png, id=1293, 422.32782pt x 316.18124pt>
+ [56 <./figures/radiation_film2.png>]
+<figures/current_volt_vs_dose_tps.png, id=1264, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_tps.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_tps.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_tps.png used on input lin
-e 1485.
+e 1500.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [58 <./figures/position_xy.png (PNG copy)>]
-<figures/current_volt_vs_dose_mic1.png, id=1305, 422.32782pt x 316.18124pt>
+ [57 <./figures/position_xy.png (PNG copy)>]
+<figures/current_volt_vs_dose_mic1.png, id=1276, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_mic1.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_mic1.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_mic1.png used on input li
-ne 1508.
+ne 1523.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_volt_vs_dose_mic2.png, id=1306, 422.32782pt x 316.18124pt>
+<figures/current_volt_vs_dose_mic2.png, id=1277, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_dose_mic2.png Graphic file (type png)
 
 <use figures/current_volt_vs_dose_mic2.png>
 Package pdftex.def Info: figures/current_volt_vs_dose_mic2.png used on input li
-ne 1514.
+ne 1529.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [59 <./figures/current_volt_vs_dose_tps.png (PNG copy)>]
-<figures/current_vs_dose_4245_1.png, id=1315, 422.32782pt x 316.18124pt>
+ [58 <./figures/current_volt_vs_dose_tps.png (PNG copy)>]
+<figures/current_vs_dose_4245_1.png, id=1286, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_4245_1.png Graphic file (type png)
 
 <use figures/current_vs_dose_4245_1.png>
 Package pdftex.def Info: figures/current_vs_dose_4245_1.png used on input line 
-1534.
+1549.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_4245_2.png, id=1316, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_4245_2.png, id=1287, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_4245_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_4245_2.png>
 Package pdftex.def Info: figures/current_vs_dose_4245_2.png used on input line 
-1540.
+1555.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [60 <./figures/current_volt_vs_dose_mic1.png (PNG copy)> <./figures/current_vo
+ [59 <./figures/current_volt_vs_dose_mic1.png (PNG copy)> <./figures/current_vo
 lt_vs_dose_mic2.png (PNG copy)> <./figures/current_vs_dose_4245_1.png (PNG copy
 )> <./figures/current_vs_dose_4245_2.png (PNG copy)>]
-<figures/current_vs_dose_t245_1.png, id=1327, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_t245_1.png, id=1298, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_t245_1.png Graphic file (type png)
 
 <use figures/current_vs_dose_t245_1.png>
 Package pdftex.def Info: figures/current_vs_dose_t245_1.png used on input line 
-1564.
+1579.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/output_vs_dose_t245.png, id=1328, 392.21532pt x 273.27094pt>
+<figures/output_vs_dose_t245.png, id=1299, 392.21532pt x 273.27094pt>
 File: figures/output_vs_dose_t245.png Graphic file (type png)
 
 <use figures/output_vs_dose_t245.png>
-Package pdftex.def Info: figures/output_vs_dose_t245.png used on input line 157
-0.
+Package pdftex.def Info: figures/output_vs_dose_t245.png used on input line 158
+5.
 (pdftex.def)             Requested size: 223.07211pt x 155.42412pt.
 
-<figures/current_vs_dose_t245_2.png, id=1329, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_t245_2.png, id=1300, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_t245_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_t245_2.png>
 Package pdftex.def Info: figures/current_vs_dose_t245_2.png used on input line 
-1579.
+1594.
 (pdftex.def)             Requested size: 227.62206pt x 170.4169pt.
- [61 <./figures/current_vs_dose_t245_1.png (PNG copy)> <./figures/output_vs_dos
+ [60 <./figures/current_vs_dose_t245_1.png (PNG copy)> <./figures/output_vs_dos
 e_t245.png (PNG copy)>]
-<figures/current_vs_dose_q1.png, id=1340, 369.63094pt x 263.48438pt>
+<figures/current_vs_dose_q1.png, id=1309, 369.63094pt x 263.48438pt>
 File: figures/current_vs_dose_q1.png Graphic file (type png)
 
 <use figures/current_vs_dose_q1.png>
-Package pdftex.def Info: figures/current_vs_dose_q1.png used on input line 1597
+Package pdftex.def Info: figures/current_vs_dose_q1.png used on input line 1612
 .
 (pdftex.def)             Requested size: 223.07211pt x 159.01251pt.
 
-<figures/current_vs_dose_q2.png, id=1341, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_q2.png, id=1310, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_q2.png Graphic file (type png)
 
 <use figures/current_vs_dose_q2.png>
-Package pdftex.def Info: figures/current_vs_dose_q2.png used on input line 1603
+Package pdftex.def Info: figures/current_vs_dose_q2.png used on input line 1618
 .
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [62 <./figures/current_vs_dose_t245_2.png (PNG copy)>]
-<figures/current_vs_dose_sy1.png, id=1349, 389.20406pt x 282.30469pt>
+ [61 <./figures/current_vs_dose_t245_2.png (PNG copy)>]
+<figures/current_vs_dose_sy1.png, id=1319, 389.20406pt x 282.30469pt>
 File: figures/current_vs_dose_sy1.png Graphic file (type png)
 
 <use figures/current_vs_dose_sy1.png>
-Package pdftex.def Info: figures/current_vs_dose_sy1.png used on input line 162
-9.
+Package pdftex.def Info: figures/current_vs_dose_sy1.png used on input line 164
+4.
 (pdftex.def)             Requested size: 223.07211pt x 161.807pt.
 
-<figures/current_vs_dose_sy2.png, id=1350, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_sy2.png, id=1320, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_sy2.png Graphic file (type png)
 
 <use figures/current_vs_dose_sy2.png>
-Package pdftex.def Info: figures/current_vs_dose_sy2.png used on input line 163
-5.
+Package pdftex.def Info: figures/current_vs_dose_sy2.png used on input line 165
+0.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [63 <./figures/current_vs_dose_q1.png (PNG copy)> <./figures/current_vs_dose_q
+ [62 <./figures/current_vs_dose_q1.png (PNG copy)> <./figures/current_vs_dose_q
 2.png (PNG copy)> <./figures/current_vs_dose_sy1.png (PNG copy)> <./figures/cur
 rent_vs_dose_sy2.png (PNG copy)>]
-<figures/current_vs_dose_adn.png, id=1362, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_adn.png, id=1332, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_adn.png Graphic file (type png)
 
 <use figures/current_vs_dose_adn.png>
-Package pdftex.def Info: figures/current_vs_dose_adn.png used on input line 167
-5.
+Package pdftex.def Info: figures/current_vs_dose_adn.png used on input line 169
+0.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/dataerror_vs_dose_adn.png, id=1363, 422.32782pt x 316.18124pt>
+<figures/dataerror_vs_dose_adn.png, id=1333, 422.32782pt x 316.18124pt>
 File: figures/dataerror_vs_dose_adn.png Graphic file (type png)
 
 <use figures/dataerror_vs_dose_adn.png>
 Package pdftex.def Info: figures/dataerror_vs_dose_adn.png used on input line 1
-684.
+699.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/clockerror_vs_dose_adn.png, id=1364, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_dose_adn.png, id=1334, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_dose_adn.png Graphic file (type png)
 
 <use figures/clockerror_vs_dose_adn.png>
 Package pdftex.def Info: figures/clockerror_vs_dose_adn.png used on input line 
-1690.
+1705.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/dataerror_vs_fluence_adn.png, id=1365, 422.32782pt x 316.18124pt>
+<figures/dataerror_vs_fluence_adn.png, id=1335, 422.32782pt x 316.18124pt>
 File: figures/dataerror_vs_fluence_adn.png Graphic file (type png)
 
 <use figures/dataerror_vs_fluence_adn.png>
 Package pdftex.def Info: figures/dataerror_vs_fluence_adn.png used on input lin
-e 1702.
+e 1717.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/clockerror_vs_fluence_adn.png, id=1366, 422.32782pt x 316.18124pt>
+<figures/clockerror_vs_fluence_adn.png, id=1336, 422.32782pt x 316.18124pt>
 File: figures/clockerror_vs_fluence_adn.png Graphic file (type png)
 
 <use figures/clockerror_vs_fluence_adn.png>
 Package pdftex.def Info: figures/clockerror_vs_fluence_adn.png used on input li
-ne 1708.
+ne 1723.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [64] [65 <./figures/current_vs_dose_adn.png (PNG copy)> <./figures/dataerror_v
+ [63] [64 <./figures/current_vs_dose_adn.png (PNG copy)> <./figures/dataerror_v
 s_dose_adn.png (PNG copy)> <./figures/clockerror_vs_dose_adn.png (PNG copy)> <.
 /figures/dataerror_vs_fluence_adn.png (PNG copy)> <./figures/clockerror_vs_flue
 nce_adn.png (PNG copy)>]
-<figures/current_vs_dose_max.png, id=1381, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_max.png, id=1352, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_max.png Graphic file (type png)
 
 <use figures/current_vs_dose_max.png>
-Package pdftex.def Info: figures/current_vs_dose_max.png used on input line 172
-6.
+Package pdftex.def Info: figures/current_vs_dose_max.png used on input line 174
+1.
 (pdftex.def)             Requested size: 227.62206pt x 170.4169pt.
- [66 <./figures/current_vs_dose_max.png (PNG copy)>]
-<figures/curr_volt_vs_dose_ina1.png, id=1391, 422.32782pt x 316.18124pt>
+ [65 <./figures/current_vs_dose_max.png (PNG copy)>]
+<figures/curr_volt_vs_dose_ina1.png, id=1362, 422.32782pt x 316.18124pt>
 File: figures/curr_volt_vs_dose_ina1.png Graphic file (type png)
 
 <use figures/curr_volt_vs_dose_ina1.png>
 Package pdftex.def Info: figures/curr_volt_vs_dose_ina1.png used on input line 
-1750.
+1765.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/curr_volt_vs_dose_ina2.png, id=1392, 422.32782pt x 316.18124pt>
+<figures/curr_volt_vs_dose_ina2.png, id=1363, 422.32782pt x 316.18124pt>
 File: figures/curr_volt_vs_dose_ina2.png Graphic file (type png)
 
 <use figures/curr_volt_vs_dose_ina2.png>
 Package pdftex.def Info: figures/curr_volt_vs_dose_ina2.png used on input line 
-1756.
+1771.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [67 <./figures/curr_volt_vs_dose_ina1.png (PNG copy)> <./figures/curr_volt_vs_
+ [66 <./figures/curr_volt_vs_dose_ina1.png (PNG copy)> <./figures/curr_volt_vs_
 dose_ina2.png (PNG copy)>]
-<figures/current_vs_dose_tlv1.png, id=1406, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_tlv1.png, id=1376, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_tlv1.png Graphic file (type png)
 
 <use figures/current_vs_dose_tlv1.png>
 Package pdftex.def Info: figures/current_vs_dose_tlv1.png used on input line 17
-81.
+96.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/volt_vs_dose_tlv1.png, id=1407, 422.32782pt x 316.18124pt>
+<figures/volt_vs_dose_tlv1.png, id=1377, 422.32782pt x 316.18124pt>
 File: figures/volt_vs_dose_tlv1.png Graphic file (type png)
 
 <use figures/volt_vs_dose_tlv1.png>
-Package pdftex.def Info: figures/volt_vs_dose_tlv1.png used on input line 1787.
+Package pdftex.def Info: figures/volt_vs_dose_tlv1.png used on input line 1802.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_tlv2.png, id=1408, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_tlv2.png, id=1378, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_tlv2.png Graphic file (type png)
 
 <use figures/current_vs_dose_tlv2.png>
-Package pdftex.def Info: figures/current_vs_dose_tlv2.png used on input line 17
-99.
+Package pdftex.def Info: figures/current_vs_dose_tlv2.png used on input line 18
+14.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/volt_vs_dose_tlv2.png, id=1409, 422.32782pt x 316.18124pt>
+<figures/volt_vs_dose_tlv2.png, id=1379, 422.32782pt x 316.18124pt>
 File: figures/volt_vs_dose_tlv2.png Graphic file (type png)
 
 <use figures/volt_vs_dose_tlv2.png>
-Package pdftex.def Info: figures/volt_vs_dose_tlv2.png used on input line 1805.
+Package pdftex.def Info: figures/volt_vs_dose_tlv2.png used on input line 1820.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [68 <./figures/current_vs_dose_tlv1.png (PNG copy)> <./figures/volt_vs_dose_tl
-v1.png (PNG copy)>] [69 <./figures/current_vs_dose_tlv2.png (PNG copy)> <./figu
+ [67 <./figures/current_vs_dose_tlv1.png (PNG copy)> <./figures/volt_vs_dose_tl
+v1.png (PNG copy)>] [68 <./figures/current_vs_dose_tlv2.png (PNG copy)> <./figu
 res/volt_vs_dose_tlv2.png (PNG copy)>]
-[70] [71]
-<figures/lsram_fluence_vs_time_sf2_1.png, id=1450, 422.32782pt x 316.18124pt>
+[69] [70]
+<figures/lsram_fluence_vs_time_sf2_1.png, id=1421, 422.32782pt x 316.18124pt>
 File: figures/lsram_fluence_vs_time_sf2_1.png Graphic file (type png)
 
 <use figures/lsram_fluence_vs_time_sf2_1.png>
 Package pdftex.def Info: figures/lsram_fluence_vs_time_sf2_1.png used on input 
-line 1917.
+line 1932.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_fluence_vs_time_sf2_1.png, id=1451, 422.32782pt x 316.18124pt>
+<figures/usram_fluence_vs_time_sf2_1.png, id=1422, 422.32782pt x 316.18124pt>
 File: figures/usram_fluence_vs_time_sf2_1.png Graphic file (type png)
 
 <use figures/usram_fluence_vs_time_sf2_1.png>
 Package pdftex.def Info: figures/usram_fluence_vs_time_sf2_1.png used on input 
-line 1923.
+line 1938.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/lsram_fluence_vs_time_sf2_2.png, id=1452, 422.32782pt x 316.18124pt>
+<figures/lsram_fluence_vs_time_sf2_2.png, id=1423, 422.32782pt x 316.18124pt>
 File: figures/lsram_fluence_vs_time_sf2_2.png Graphic file (type png)
 
 <use figures/lsram_fluence_vs_time_sf2_2.png>
 Package pdftex.def Info: figures/lsram_fluence_vs_time_sf2_2.png used on input 
-line 1935.
+line 1950.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_fluence_vs_time_sf2_2.png, id=1453, 422.32782pt x 316.18124pt>
+<figures/usram_fluence_vs_time_sf2_2.png, id=1424, 422.32782pt x 316.18124pt>
 File: figures/usram_fluence_vs_time_sf2_2.png Graphic file (type png)
 
 <use figures/usram_fluence_vs_time_sf2_2.png>
 Package pdftex.def Info: figures/usram_fluence_vs_time_sf2_2.png used on input 
-line 1941.
+line 1956.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [72 <./figures/lsram_fluence_vs_time_sf2_1.png (PNG copy)> <./figures/usram_fl
-uence_vs_time_sf2_1.png (PNG copy)>] [73 <./figures/lsram_fluence_vs_time_sf2_2
-.png (PNG copy)> <./figures/usram_fluence_vs_time_sf2_2.png (PNG copy)>] [74]
-<figures/PLLerrors_vs_fluence_sf2_1.png, id=1493, 422.32782pt x 316.18124pt>
+ [71 <./figures/lsram_fluence_vs_time_sf2_1.png (PNG copy)> <./figures/usram_fl
+uence_vs_time_sf2_1.png (PNG copy)>] [72 <./figures/lsram_fluence_vs_time_sf2_2
+.png (PNG copy)> <./figures/usram_fluence_vs_time_sf2_2.png (PNG copy)>] [73]
+<figures/PLLerrors_vs_fluence_sf2_1.png, id=1463, 422.32782pt x 316.18124pt>
 File: figures/PLLerrors_vs_fluence_sf2_1.png Graphic file (type png)
 
 <use figures/PLLerrors_vs_fluence_sf2_1.png>
 Package pdftex.def Info: figures/PLLerrors_vs_fluence_sf2_1.png used on input l
-ine 2041.
+ine 2056.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/PLLerrors_vs_fluence_sf2_2.png, id=1494, 422.32782pt x 316.18124pt>
+<figures/PLLerrors_vs_fluence_sf2_2.png, id=1464, 422.32782pt x 316.18124pt>
 File: figures/PLLerrors_vs_fluence_sf2_2.png Graphic file (type png)
 
 <use figures/PLLerrors_vs_fluence_sf2_2.png>
 Package pdftex.def Info: figures/PLLerrors_vs_fluence_sf2_2.png used on input l
-ine 2047.
+ine 2062.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [75] [76 <./figures/PLLerrors_vs_fluence_sf2_1.png (PNG copy)> <./figures/PLLe
+ [74] [75 <./figures/PLLerrors_vs_fluence_sf2_1.png (PNG copy)> <./figures/PLLe
 rrors_vs_fluence_sf2_2.png (PNG copy)>] <figures/LEerror_fluence_sf2_2.png, id=
-1516, 422.32782pt x 316.18124pt>
+1487, 422.32782pt x 316.18124pt>
 File: figures/LEerror_fluence_sf2_2.png Graphic file (type png)
 
 <use figures/LEerror_fluence_sf2_2.png>
 Package pdftex.def Info: figures/LEerror_fluence_sf2_2.png used on input line 2
-119.
+134.
 (pdftex.def)             Requested size: 273.14923pt x 204.50221pt.
- [77] [78 <./figures/LEerror_fluence_sf2_2.png (PNG copy)>] [79] [80]
-<figures/lsram_fluence_vs_time_sf2_3.png, id=1554, 422.32782pt x 316.18124pt>
+ [76] [77 <./figures/LEerror_fluence_sf2_2.png (PNG copy)>] [78] [79]
+<figures/lsram_fluence_vs_time_sf2_3.png, id=1525, 422.32782pt x 316.18124pt>
 File: figures/lsram_fluence_vs_time_sf2_3.png Graphic file (type png)
 
 <use figures/lsram_fluence_vs_time_sf2_3.png>
 Package pdftex.def Info: figures/lsram_fluence_vs_time_sf2_3.png used on input 
-line 2196.
+line 2211.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_fluence_vs_time_sf2_3.png, id=1555, 422.32782pt x 316.18124pt>
+<figures/usram_fluence_vs_time_sf2_3.png, id=1526, 422.32782pt x 316.18124pt>
 File: figures/usram_fluence_vs_time_sf2_3.png Graphic file (type png)
 
 <use figures/usram_fluence_vs_time_sf2_3.png>
 Package pdftex.def Info: figures/usram_fluence_vs_time_sf2_3.png used on input 
-line 2202.
+line 2217.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/lsram_fluence_vs_time_sf2_4.png, id=1556, 422.32782pt x 316.18124pt>
+<figures/lsram_fluence_vs_time_sf2_4.png, id=1527, 422.32782pt x 316.18124pt>
 File: figures/lsram_fluence_vs_time_sf2_4.png Graphic file (type png)
 
 <use figures/lsram_fluence_vs_time_sf2_4.png>
 Package pdftex.def Info: figures/lsram_fluence_vs_time_sf2_4.png used on input 
-line 2214.
+line 2229.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/usram_fluence_vs_time_sf2_4.png, id=1557, 422.32782pt x 316.18124pt>
+<figures/usram_fluence_vs_time_sf2_4.png, id=1528, 422.32782pt x 316.18124pt>
 File: figures/usram_fluence_vs_time_sf2_4.png Graphic file (type png)
 
 <use figures/usram_fluence_vs_time_sf2_4.png>
 Package pdftex.def Info: figures/usram_fluence_vs_time_sf2_4.png used on input 
-line 2220.
+line 2235.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [81 <./figures/lsram_fluence_vs_time_sf2_3.png (PNG copy)> <./figures/usram_fl
+ [80 <./figures/lsram_fluence_vs_time_sf2_3.png (PNG copy)> <./figures/usram_fl
 uence_vs_time_sf2_3.png (PNG copy)> <./figures/lsram_fluence_vs_time_sf2_4.png 
 (PNG copy)> <./figures/usram_fluence_vs_time_sf2_4.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2252--2252
 []|\OT1/cmr/m/n/12 Fluence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2252--2252
 []|\OT1/cmr/m/n/12 Fluence
  []
 
-[82] [83] [84] [85] <figures/DDL2_test.png, id=1611, 578.8827pt x 292.81395pt>
+[81] [82] [83] [84] <figures/DDL2_test.png, id=1580, 578.8827pt x 292.81395pt>
 File: figures/DDL2_test.png Graphic file (type png)
 
 <use figures/DDL2_test.png>
-Package pdftex.def Info: figures/DDL2_test.png used on input line 2425.
+Package pdftex.def Info: figures/DDL2_test.png used on input line 2440.
 (pdftex.def)             Requested size: 364.19667pt x 184.21907pt.
- [86]
-<figures/TTC_test.png, id=1621, 743.77875pt x 283.7802pt>
+ [85]
+<figures/TTC_test.png, id=1592, 743.77875pt x 283.7802pt>
 File: figures/TTC_test.png Graphic file (type png)
 
 <use figures/TTC_test.png>
-Package pdftex.def Info: figures/TTC_test.png used on input line 2441.
+Package pdftex.def Info: figures/TTC_test.png used on input line 2456.
 (pdftex.def)             Requested size: 364.19667pt x 138.95824pt.
- [87 <./figures/DDL2_test.png>] [88 <./figures/TTC_test.png>] [89] [90] [91]
+ [86 <./figures/DDL2_test.png>] [87 <./figures/TTC_test.png>] [88] [89] [90]
 Chapter 7.
-[92
+[91
 
-] [93] [94]
+] [92] [93]
 Appendix A.
-[95
+[94
 
-] [96] [97] [98] [99]
-<figures/current_volt_vs_time_mic1.png, id=1712, 422.32782pt x 316.18124pt>
+] [95] [96] [97] [98]
+Appendix B.
+<figures/current_volt_vs_time_mic1.png, id=1683, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_time_mic1.png Graphic file (type png)
 
 <use figures/current_volt_vs_time_mic1.png>
 Package pdftex.def Info: figures/current_volt_vs_time_mic1.png used on input li
-ne 2776.
+ne 2786.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_volt_vs_time_mic2.png, id=1713, 422.32782pt x 316.18124pt>
+<figures/current_volt_vs_time_mic2.png, id=1684, 422.32782pt x 316.18124pt>
 File: figures/current_volt_vs_time_mic2.png Graphic file (type png)
 
 <use figures/current_volt_vs_time_mic2.png>
 Package pdftex.def Info: figures/current_volt_vs_time_mic2.png used on input li
-ne 2781.
+ne 2791.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_time_4245_2.png, id=1714, 422.32782pt x 316.18124pt>
+<figures/current_vs_time_4245_2.png, id=1685, 422.32782pt x 316.18124pt>
 File: figures/current_vs_time_4245_2.png Graphic file (type png)
 
 <use figures/current_vs_time_4245_2.png>
 Package pdftex.def Info: figures/current_vs_time_4245_2.png used on input line 
-2792.
+2802.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_dose_time_2.png, id=1715, 422.32782pt x 316.18124pt>
+<figures/current_vs_dose_time_2.png, id=1686, 422.32782pt x 316.18124pt>
 File: figures/current_vs_dose_time_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_time_2.png>
 Package pdftex.def Info: figures/current_vs_dose_time_2.png used on input line 
-2797.
-(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
-File: figures/current_vs_time_4245_2.png Graphic file (type png)
-
-<use figures/current_vs_time_4245_2.png>
-Package pdftex.def Info: figures/current_vs_time_4245_2.png used on input line 
 2807.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
+File: figures/current_vs_time_4245_2.png Graphic file (type png)
+
+<use figures/current_vs_time_4245_2.png>
+Package pdftex.def Info: figures/current_vs_time_4245_2.png used on input line 
+2817.
+(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 File: figures/current_vs_dose_time_2.png Graphic file (type png)
 
 <use figures/current_vs_dose_time_2.png>
 Package pdftex.def Info: figures/current_vs_dose_time_2.png used on input line 
-2812.
+2822.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/curr_volt_vs_time_ina1.png, id=1716, 422.32782pt x 316.18124pt>
+<figures/curr_volt_vs_time_ina1.png, id=1687, 422.32782pt x 316.18124pt>
 File: figures/curr_volt_vs_time_ina1.png Graphic file (type png)
 
 <use figures/curr_volt_vs_time_ina1.png>
 Package pdftex.def Info: figures/curr_volt_vs_time_ina1.png used on input line 
-2822.
+2832.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/curr_volt_vs_time_ina2.png, id=1717, 422.32782pt x 316.18124pt>
+<figures/curr_volt_vs_time_ina2.png, id=1688, 422.32782pt x 316.18124pt>
 File: figures/curr_volt_vs_time_ina2.png Graphic file (type png)
 
 <use figures/curr_volt_vs_time_ina2.png>
 Package pdftex.def Info: figures/curr_volt_vs_time_ina2.png used on input line 
-2827.
+2837.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_time_q1.png, id=1718, 422.32782pt x 316.18124pt>
+<figures/current_vs_time_q1.png, id=1689, 422.32782pt x 316.18124pt>
 File: figures/current_vs_time_q1.png Graphic file (type png)
 
 <use figures/current_vs_time_q1.png>
-Package pdftex.def Info: figures/current_vs_time_q1.png used on input line 2837
+Package pdftex.def Info: figures/current_vs_time_q1.png used on input line 2847
 .
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_time_adn.png, id=1719, 422.32782pt x 316.18124pt>
+<figures/current_vs_time_adn.png, id=1690, 422.32782pt x 316.18124pt>
 File: figures/current_vs_time_adn.png Graphic file (type png)
 
 <use figures/current_vs_time_adn.png>
-Package pdftex.def Info: figures/current_vs_time_adn.png used on input line 284
+Package pdftex.def Info: figures/current_vs_time_adn.png used on input line 285
 2.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/1v2_current_dose_sf2_1.png, id=1720, 422.32782pt x 316.18124pt>
+<figures/1v2_current_dose_sf2_1.png, id=1691, 422.32782pt x 316.18124pt>
 File: figures/1v2_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_1.png used on input line 
-2853.
+2863.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/3v3_current_dose_sf2_1.png, id=1721, 422.32782pt x 316.18124pt>
+<figures/3v3_current_dose_sf2_1.png, id=1692, 422.32782pt x 316.18124pt>
 File: figures/3v3_current_dose_sf2_1.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_1.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_1.png used on input line 
-2858.
+2868.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/1v2_current_dose_sf2_2.png, id=1722, 422.32782pt x 316.18124pt>
+<figures/1v2_current_dose_sf2_2.png, id=1693, 422.32782pt x 316.18124pt>
 File: figures/1v2_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/1v2_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/1v2_current_dose_sf2_2.png used on input line 
-2869.
+2879.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/3v3_current_dose_sf2_2.png, id=1723, 422.32782pt x 316.18124pt>
+<figures/3v3_current_dose_sf2_2.png, id=1694, 422.32782pt x 316.18124pt>
 File: figures/3v3_current_dose_sf2_2.png Graphic file (type png)
 
 <use figures/3v3_current_dose_sf2_2.png>
 Package pdftex.def Info: figures/3v3_current_dose_sf2_2.png used on input line 
-2874.
+2884.
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
 
-<figures/current_vs_time_tlv1.png, id=1724, 596.98032pt x 398.23781pt>
+<figures/current_vs_time_tlv1.png, id=1695, 596.98032pt x 398.23781pt>
 File: figures/current_vs_time_tlv1.png Graphic file (type png)
 
 <use figures/current_vs_time_tlv1.png>
 Package pdftex.def Info: figures/current_vs_time_tlv1.png used on input line 28
-85.
+95.
 (pdftex.def)             Requested size: 223.07211pt x 148.81013pt.
 
-<figures/volt_vs_time_tlv1.png, id=1725, 422.32782pt x 316.18124pt>
+<figures/volt_vs_time_tlv1.png, id=1696, 422.32782pt x 316.18124pt>
 File: figures/volt_vs_time_tlv1.png Graphic file (type png)
 
 <use figures/volt_vs_time_tlv1.png>
-Package pdftex.def Info: figures/volt_vs_time_tlv1.png used on input line 2890.
+Package pdftex.def Info: figures/volt_vs_time_tlv1.png used on input line 2900.
 
 (pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [100 <./figures/current_volt_vs_time_mic1.png (PNG copy)> <./figures/current_v
-olt_vs_time_mic2.png (PNG copy)> <./figures/current_vs_time_4245_2.png (PNG cop
-y)> <./figures/current_vs_dose_time_2.png (PNG copy)>] [101 <./figures/curr_vol
-t_vs_time_ina1.png (PNG copy)> <./figures/curr_volt_vs_time_ina2.png (PNG copy)
-> <./figures/current_vs_time_q1.png (PNG copy)> <./figures/current_vs_time_adn.
-png (PNG copy)>] [102 <./figures/1v2_current_dose_sf2_1.png (PNG copy)> <./figu
-res/3v3_current_dose_sf2_1.png (PNG copy)> <./figures/1v2_current_dose_sf2_2.pn
-g (PNG copy)> <./figures/3v3_current_dose_sf2_2.png (PNG copy)> <./figures/curr
-ent_vs_time_tlv1.png (PNG copy)> <./figures/volt_vs_time_tlv1.png (PNG copy)>]
-<figures/flux_vs_time_1.png, id=1742, 422.32782pt x 316.18124pt>
+ [99
+
+ <./figures/current_volt_vs_time_mic1.png (PNG copy)> <./figures/current_volt_v
+s_time_mic2.png (PNG copy)> <./figures/current_vs_time_4245_2.png (PNG copy)> <
+./figures/current_vs_dose_time_2.png (PNG copy)>] [100 <./figures/curr_volt_vs_
+time_ina1.png (PNG copy)> <./figures/curr_volt_vs_time_ina2.png (PNG copy)> <./
+figures/current_vs_time_q1.png (PNG copy)> <./figures/current_vs_time_adn.png (
+PNG copy)>] [101 <./figures/1v2_current_dose_sf2_1.png (PNG copy)> <./figures/3
+v3_current_dose_sf2_1.png (PNG copy)> <./figures/1v2_current_dose_sf2_2.png (PN
+G copy)> <./figures/3v3_current_dose_sf2_2.png (PNG copy)> <./figures/current_v
+s_time_tlv1.png (PNG copy)> <./figures/volt_vs_time_tlv1.png (PNG copy)>]
+<figures/flux_vs_time_1.png, id=1713, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_1.png Graphic file (type png)
 
 <use figures/flux_vs_time_1.png>
-Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2901.
+Package pdftex.def Info: figures/flux_vs_time_1.png used on input line 2911.
 (pdftex.def)             Requested size: 364.19667pt x 272.66801pt.
 
-<figures/flux_vs_time_2.png, id=1743, 422.32782pt x 316.18124pt>
+<figures/flux_vs_time_2.png, id=1714, 422.32782pt x 316.18124pt>
 File: figures/flux_vs_time_2.png Graphic file (type png)
 
 <use figures/flux_vs_time_2.png>
-Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2908.
+Package pdftex.def Info: figures/flux_vs_time_2.png used on input line 2918.
 (pdftex.def)             Requested size: 364.19667pt x 272.66801pt.
 
-<figures/flux_all_3.png, id=1744, 422.32782pt x 316.18124pt>
+<figures/flux_all_3.png, id=1715, 422.32782pt x 316.18124pt>
 File: figures/flux_all_3.png Graphic file (type png)
 
 <use figures/flux_all_3.png>
-Package pdftex.def Info: figures/flux_all_3.png used on input line 2915.
+Package pdftex.def Info: figures/flux_all_3.png used on input line 2925.
 (pdftex.def)             Requested size: 364.19667pt x 272.66801pt.
- [103 <./figures/flux_vs_time_1.png (PNG copy)> <./figures/flux_vs_time_2.png (
-PNG copy)>] [104 <./figures/flux_all_3.png (PNG copy)>]
-File: figures/1v2_current_dose_sf2_2.png Graphic file (type png)
- <use figures/1v2_current_dose_sf2_2.png>
-Package pdftex.def Info: figures/1v2_current_dose_sf2_2.png used on input line 
-2932.
-(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
-File: figures/3v3_current_dose_sf2_2.png Graphic file (type png)
-
-<use figures/3v3_current_dose_sf2_2.png>
-Package pdftex.def Info: figures/3v3_current_dose_sf2_2.png used on input line 
-2937.
-(pdftex.def)             Requested size: 223.07211pt x 167.01079pt.
- [105]
-Appendix B.
-<figures/current_measurement_board.png, id=1762, 865.73438pt x 468.24937pt>
+ [102 <./figures/flux_vs_time_1.png (PNG copy)> <./figures/flux_vs_time_2.png (
+PNG copy)>] [103 <./figures/flux_all_3.png (PNG copy)>]
+Appendix C.
+<figures/current_measurement_board.png, id=1729, 865.73438pt x 468.24937pt>
 File: figures/current_measurement_board.png Graphic file (type png)
 
 <use figures/current_measurement_board.png>
 Package pdftex.def Info: figures/current_measurement_board.png used on input li
-ne 2964.
+ne 2954.
 (pdftex.def)             Requested size: 455.24411pt x 246.22755pt.
- [106
+ [104
 
-] [107 <./figures/current_measurement_board.png>]
+] [105 <./figures/current_measurement_board.png>]
 Package epstopdf Info: Source file: <image2.eps>
 (epstopdf)                    date: 2014-06-06 12:28:32
 (epstopdf)                    size: 377718 bytes
@@ -1739,22 +1737,22 @@ Package epstopdf Info: Source file: <image2.eps>
 (epstopdf)                    size: 38278 bytes
 (epstopdf)             Command: <repstopdf --outfile=image2-eps-converted-to.pd
 f image2.eps>
-(epstopdf)             \includegraphics on input line 2979.
+(epstopdf)             \includegraphics on input line 2969.
 Package epstopdf Info: Output file is already uptodate.
 
-<image2-eps-converted-to.pdf, id=1779, 304.13625pt x 202.7575pt>
+<image2-eps-converted-to.pdf, id=1746, 304.13625pt x 202.7575pt>
 File: image2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use image2-eps-converted-to.pdf>
-Package pdftex.def Info: image2-eps-converted-to.pdf used on input line 2979.
+Package pdftex.def Info: image2-eps-converted-to.pdf used on input line 2969.
 (pdftex.def)             Requested size: 304.98938pt x 203.08495pt.
 
-Overfull \hbox (31.15306pt too wide) in paragraph at lines 2984--2985
+Overfull \hbox (31.15306pt too wide) in paragraph at lines 2974--2975
 \OT1/cmr/m/n/12 the soft-ware can be down-loaded from: http://processors.wiki.t
 i.com/index.php/Download[]CCS. 
  []
 
-[108 <./image2-eps-converted-to.pdf>]
+[106 <./image2-eps-converted-to.pdf>]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
@@ -1763,7 +1761,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2996 ...th a 1.2 V reference is 1.2/65535 = 18 µ
+l.2986 ...th a 1.2 V reference is 1.2/65535 = 18 µ
                                                   V.
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1776,60 +1774,60 @@ Package epstopdf Info: Source file: <image3.eps>
 (epstopdf)                    size: 41259 bytes
 (epstopdf)             Command: <repstopdf --outfile=image3-eps-converted-to.pd
 f image3.eps>
-(epstopdf)             \includegraphics on input line 3002.
+(epstopdf)             \includegraphics on input line 2992.
 Package epstopdf Info: Output file is already uptodate.
-<image3-eps-converted-to.pdf, id=1790, 363.3575pt x 222.8325pt>
+<image3-eps-converted-to.pdf, id=1757, 363.3575pt x 222.8325pt>
 File: image3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use image3-eps-converted-to.pdf>
-Package pdftex.def Info: image3-eps-converted-to.pdf used on input line 3002.
+Package pdftex.def Info: image3-eps-converted-to.pdf used on input line 2992.
 (pdftex.def)             Requested size: 363.52847pt x 222.59393pt.
- [109 <./image3-eps-converted-to.pdf>]
+ [107 <./image3-eps-converted-to.pdf>]
 \openout2 = `acronyms.aux'.
 
 
-(./acronyms.tex [110
+(./acronyms.tex [108
 
 
-]) [111] (./Master_thesis_Inge_Nikolai_Torsvik.lof [112
+]) [109] (./Master_thesis_Inge_Nikolai_Torsvik.lof [110
 
 
 ]
-[113])
+[111])
 \tf@lof=\write5
 \openout5 = `Master_thesis_Inge_Nikolai_Torsvik.lof'.
 
- [114] (./Master_thesis_Inge_Nikolai_Torsvik.lot)
+ [112] (./Master_thesis_Inge_Nikolai_Torsvik.lot)
 \tf@lot=\write6
 \openout6 = `Master_thesis_Inge_Nikolai_Torsvik.lot'.
 
- [115
+ [113
 
 ]
-(./Master_thesis_Inge_Nikolai_Torsvik.bbl [116
+(./Master_thesis_Inge_Nikolai_Torsvik.bbl [114
 
-] [117])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3018.
- [118]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3018.
+] [115])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3008.
+ [116]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3008.
 
 (./Master_thesis_Inge_Nikolai_Torsvik.aux (./acronyms.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3018.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3018.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3008.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3008.
 
 Package rerunfilecheck Info: File `Master_thesis_Inge_Nikolai_Torsvik.out' has 
 not changed.
-(rerunfilecheck)             Checksum: 970E61F0B3B26CD5AA83B805E0E683F6;5942.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3018.
+(rerunfilecheck)             Checksum: 6EF4FE83EFE5B6E87455BABD153C0FF7;5625.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3008.
  ) 
 Here is how much of TeX's memory you used:
- 10846 strings out of 493493
- 165260 string characters out of 3143797
- 291645 words of memory out of 3000000
- 13407 multiletter control sequences out of 15000+200000
+ 10831 strings out of 493493
+ 165020 string characters out of 3143797
+ 291536 words of memory out of 3000000
+ 13400 multiletter control sequences out of 15000+200000
  13900 words of font info for 49 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,11n,38p,1095b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,11n,38p,1095b,526s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
@@ -1849,11 +1847,11 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/euler/eurm10.pfb>
-Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (124 pages, 47305854 b
+Output written on Master_thesis_Inge_Nikolai_Torsvik.pdf (122 pages, 47349981 b
 ytes).
 PDF statistics:
- 2151 PDF objects out of 2487 (max. 8388607)
- 1860 compressed objects within 19 object streams
- 484 named destinations out of 1000 (max. 500000)
- 1151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2116 PDF objects out of 2487 (max. 8388607)
+ 1827 compressed objects within 19 object streams
+ 476 named destinations out of 1000 (max. 500000)
+ 1111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
