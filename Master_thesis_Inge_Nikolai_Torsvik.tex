@@ -111,20 +111,20 @@ Special thanks goes to Jon C. Wikne, Andrey Semchenkov and John M\"{u}ller for g
 
 I also give a special thanks to Ingrid Str\o msnes and Dag-Eirik Str\o msnes for proofreading of my thesis.
 
-I would also like to thank my adorable wife, Solveig Str\o msnes for being patient, for support and encouragement and to be there for me when I have needed it.
+I would also like to thank my adorable wife, Solveig Str\o msnes for being patient, for support and encouragement and to be there for me through the whole work.
 \newline\newline
 Bergen, June 2014 \newline\newline
 Inge Nikolai Torsvik
 
 \setlength{\parskip}{18pt}
 \chapter*{Abstract}
-At CERN in Switzerland we find the largest particle accelerator ever built, called \ac{LHC}. The LHC is located 100 meter below ground level in a 27 km long tunnel where four experiment are taken place, one of these experiment is \ac{ALICE}. The purpose of \ac{ALICE} is to study a matter known as Quark-gluons plasma, which will be generated under collisions of heavy ions. LHC is currently shut down for maintenance and preparation for even higher energies. This period called Long Shutdown 1 (LS1), started January 2013 and will last until the end of 2014.
+At CERN in Switzerland we find the largest particle accelerator ever built, called \ac{LHC}. LHC is located 100 meter below ground level in a 27 km long tunnel where four experiment are taken place, one of these experiment is \ac{ALICE}. The purpose of \ac{ALICE} is to study a matter known as Quark-gluons plasma, which will be generated under collisions of heavy ions. LHC is currently shut down for maintenance and preparation for even higher energies. This period called Long Shutdown 1 (LS1), started January 2013 and will last until the end of 2014.
 
 ALICE comprises of several sub-detectors, one of these are \ac{TPC}, which is the main tracking device of ALICE. For LS1 it has been decided that a upgrade should be performed on the \ac{RCU}, which controls the readout in the TPC. The new RCU, named RCU2, will increase the present readout rate by a factor of up to 2.6, and will be more immune to radiation induced errors.
 
 For the RCU2 design new components are introduces, where some of these hasn't been tested for radiation tolerance. The work presented through this thesis comprises of irradiation tests of these components. The tested components consist of power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator, Current Shunt Monitor and the RCU2's main FPGA, the Microsemi SmartFusion2. The tests performed consist mostly of test for accumulative effects, but test for \ac{SEE} will also be performed for some of the components.
 
-The main focus has been on the SmartFusion2 SoC FPGA, where test of \acl{SEE} like \ac{SEU}, \ac{SET} and \ac{SEL} has been executed on internal SRAM, logic element and PLL.
+The main focus has been on the SmartFusion2 SoC FPGA, where test of \acl{SEE} like \ac{SEU}, \ac{SET} and \ac{SEL} have been executed on internal SRAM, logic element and PLL.
 
 The irradiation tests has been executed at \ac{OCL} in Oslo Norway, with a proton beam of 25 and $28\ MeV$ and at \ac{TSL} in Uppsala Sweden, with a proton beam of 170 MeV.
 \setlength{\parskip}{1pt}
@@ -146,10 +146,10 @@ In this period it has been decided that an upgrade shall be performed on the TPC
 Because of the radiation level in the \ac{LHC}, every component used in the design of RCU2 has to be tested for radiation to be sure that it won't fail when it is installed in the \ac{TPC} detector.
 
 \section{About This Work}
-I started working on the RCU2-project in the autumn of 2013, and before that, the design and the schematic layout for the RCU2 was basically finished. In the design process components that already were tested or are proven to be radiation tolerant were used when possible, but such components weren't always available. Therefore my work in this project has been to do radiation tests on components for the RCU2 design, which didn't have any previously record of being tested for radiation.
+I started working on the RCU2-project in the autumn of 2013, and already before that, the design and the schematic layout for the RCU2 was basically finished. In the design process components that already were tested or are proven to be radiation tolerant were used when possible, but such components weren't always available. Therefore my work in this project has been to do radiation tests on components for the RCU2 design, which didn't have any previously record of being tested for radiation.
 
 The components consist of: power regulators, bus transceivers, limiting amplifier, multiplexer/demultiplexer, buffer, comparator, Current Shunt Monitor and  \ac{SoC} \ac{FPGA}.
-In order to investigate the radiation tolerance of these circuits I had to first acquire good knowledge of radiation induced effect that may occur in such devices. I also needed to study the components to be able to find a reasonable test methodology. Further, I had to familiarize myself with CAD tools such as \emph{expedition 5} and \emph{DXdesigner} and programming and developing environments like Libero and LabVIEW in order to develop the hardware and software based test setups for the components.
+In order to investigate the radiation tolerance of these circuits I had to first acquire good knowledge of radiation induced effect that may occur in such devices. I also needed to study the components to be able to find a reasonable test methodology. Further, I had to familiarize myself with CAD tools such as \emph{expeditionPCB} and \emph{DXdesigner} and programming and developing environments like Libero and LabVIEW in order to develop the hardware and software based test setups for the components.
 
 The RCU2's main FPGA, the Microsemi SmartFusion2, has been the main focus throughout this work. That is because it will be hard to replace, and a functional failure on this one may set the whole RCU2 out of function. The radiation effects that were tested on the SmartFusion2 are SRAM blocks for SEU, logic elements for SEU and SET, and in general SEL. These effects can be read about in \autoref{SEE_section}.
 
@@ -167,9 +167,9 @@ Research has previous been performed on the radiation level in the \ac{ALICE} \a
 
 \chapter{ALICE Experiment}
 \label{ALICE_experiment}
-Since 1954 physicists at \ac{CERN} have studied the nucleus and its structure to find the fundamental structure of the universe.
+Since 1954 physicists at CERN (European Council for Nuclear Research) have studied the nucleus and its structure to find the fundamental structure of the universe.
 \acs{CERN} is the world largest research center for nuclear and particle physics, and has a total of 21 member states.
-One of the biggest attractions at \ac{CERN} is the \acf{LHC}, which is a circular particle accelerator placed in a 27 km long tunnel around 100 meters beneath ground level.
+One of the biggest attractions at \acs{CERN} is the \acf{LHC}, which is a circular particle accelerator placed in a 27 km long tunnel around 100 meters beneath ground level.
 This is the last accelerator in a chain of up to 7 (depending on which particle to accelerate), see \autoref{CERN_accelerators}, where the particles gradually accelerate to higher and higher energies, up to their maximum energy of 4 TeV and speed close to the speed of light. When particles have reached this energy level accelerated particles from opposite directions are made to collide inside 4 different experiment areas, where one of these is called \acf{ALICE}, see \autoref{ALICE_layout}.
 
 The main purpose of ALICE is to study a state of matter called quark-gluon plasma which will be generated when heavy ions collides.
@@ -198,7 +198,7 @@ No quark has ever been observed in isolation: the quarks, as well as the gluons,
 \FloatBarrier
 
 \section{The Time Projection Chamber (TPC)}
-The ALICE detector comprises of several sub-detectors, where one of these is the \acf{TPC}. The \ac{TPC} is the main tracking detector of \ac{ALICE}.
+ALICE comprises of several sub-detectors, where one of these is the \acf{TPC}. The \ac{TPC} is the main tracking detector of \ac{ALICE}.
 The functions of \ac{TPC} are tracking particles, measure the charged particles momentum and identification of particles.
 A drawing of the \ac{TPC} can be seen in \autoref{TPC_layout}.
 The \ac{TPC} detector has a cylindrical shape, with an inner radius of 85 cm and outer radius of 250 cm, and has an overall length of 510 cm.
@@ -265,25 +265,22 @@ It is also responsible for moving data from the \acp{FEC} to the \acf{SIU} board
 where data is transmitted via an optical link to the Data Acquisition system.
 In the Data Acquisition system data is stored and is accessible for analysis.
 
-\begin{wrapfigure}{r}{0.6\textwidth} 
-\vspace{-20pt}
+\begin{figure}[!htbp]
   \begin{center}
-  \includegraphics[width=0.6\textwidth]{figures/RCU}
+  \includegraphics[width=0.8\textwidth]{figures/RCU}
   \caption{The Readout Control Unit top side and bottom side \cite{roed_doctor}}
   \label{RCU}
   \end{center}
-  \vspace{-30pt}
-\end{wrapfigure} 
+\end{figure}
 
-The Xilinx Virtex-II Pro is a \ac{SRAM} based \ac{FPGA}. \ac{SRAM} cells are vulnerable for \acfp{SEU}, see \autoref{SEU_Section}.
+The Xilinx Virtex-II Pro is a \ac{SRAM} based \ac{FPGA}. \ac{SRAM} cells are vulnerable for \acfp{SEU}, see subsection \ref{SEU_Section}.
 Therefore a flash based \ac{FPGA}, Actel ProASIC is used to monitor the SRAM memory and reprogram/reconfigure if an error occurs.
 
 The \ac{DCS} board is basically an embedded computer running Linux.
 This board is connected through an Ethernet link to a computer on the outside of the ALICE detector.
 Through this link it is possible to upgrade and reprogram the \acp{FPGA} on the \acp{RCU}.
 So even though the hardware is inaccessible after it has been mounted in the \ac{TPC},
-the \ac{SIU} boards gives some kind of flexibility.
-In addition, it has an optical interface, receiving the clock and trigger information from the Timing, Trigger and Control system, also called TTC.
+the \ac{SIU} boards gives some kind of flexibility. In addition, it has an optical interface, receiving the clock and trigger information from the Timing, Trigger and Control system, also called TTC.
 
 
 \footnotetext[2]{A backplane is a PCB board, that connects Front End Cards to a Readout Control Unit.
@@ -314,7 +311,7 @@ and at the same time was feasible within the limited time-frame.
 Therefore some of the old infrastructure has to be reused, like cables for Ethernet, trigger and power and the cooling envelops.
 RCU2 will increase the present readout rate by a factor of up to 2.6, and will be more immune to radiation induced errors.
 
-The main difference between the RCU2 and \ac{RCU}1 is that the main \ac{FPGA}, the Xilinx Virtex-II Pro,
+The main difference between the RCU2 and \ac{RCU} is that the main \ac{FPGA}, the Xilinx Virtex-II Pro,
 has been replaced by a Microsemi SmartFusion2 \acf{SoC} \ac{FPGA} M2S050-FG896. This is a flash-based\footnote{Flash-based FPGA means that configuration registers is saved in flash memory cells. Compared to SRAM-based FPGA where configuration is saved in SRAM cells, flash-based FPGA is much more tolerant against radiation.}
 FPGA which has \ac{SEU} immune configuration memory, as well as several other radiation tolerance measures implemented \cite{website:SF2_datasheet}.
 It also comes with a Microcontroller Subsystem which is based on a hardcore ARM Cortex-M3 microcontroller.
@@ -323,7 +320,7 @@ The ProASIC was also not needed as a  reconfiguration FPGA anymore, but will sti
 This part of the RCU2 is called RadMon, and consists of a ProASIC and SRAM chips.
 The TTCrx chip that was used for handling the clock and trigger signal on RCU1 was out of stock and obsolete, and will be replaced by an optical receiver and a limiting amplifier. The limiting amplifier has been tested in the work presented in this thesis, see \autoref{limiting_amp}.
 
-One of the limits with the old setup was that the bus between \ac{RCU} and FECs was to slow, especially after the upgrade in the \ac{LHC} for run2.
+One of the limits with the old setup was that the bus between \ac{RCU} and FECs was to slow, and especially after the upgrade for run2 in the \ac{LHC}.
 This was fixed by dividing the readout into 4 sections instead of 2, which effectively doubled the readout speed.
 Therefore all of the backplanes had to be redesigned and replaced.
 
@@ -381,7 +378,7 @@ When a particle collides with an atom there are several processes that can contr
 \end{itemize}
 
 Which of these processes that contributes most to the loss of energy depends on the initial energy, velocity, mass and charge of the incoming particle as well as the properties of the material it collides with.
-For example, for heavy charge particles (protons or heavier ions), inelastic collisions with the atomic electrons in a material will contribute to most to the energy loss of the particle, fro energies below a few MeV \cite{rad_phys}.
+For example, for heavy charge particles (protons or heavier ions), inelastic collisions with the atomic electrons in a material will contribute to most to the energy loss of the particle, for energies below a few MeV \cite{rad_phys}.
 A common expression for these processes is called "stopping power".
 
 \subsection{Stopping Power}
@@ -442,7 +439,7 @@ The value of $-\frac{dE}{dx}$ for different types of particles approaches a near
 \acf{LET} is closely related to stopping power of a particle, but instead of focusing on energy loss of a particle, \ac{LET} focuses on the energy that is deposited to a material in a local volume.
 For low energies, \ac{LET} is often said to be equal to the stopping power, even though the particle energy that turns into photons may escape the local area.
 For higher energies, small particles like ionized electrons can escape the local volume. The local volume is defined by the user,
-and can be everything from part of a molecule to a whole organ.
+and can be everything from part of a molecule to a entire organ.
 One alternate definition of LET can be seen in equation \ref{LET},
 
 \begin{equation}
@@ -588,7 +585,7 @@ There has been conducted experiments that compares SEU induced by neutrons and p
 By comparing a proton beam with a neutron beam of 21 MeV there are 10-25\% less \ac{SEU} cross section for a proton beam compared to a neutron beam.
 If the energy is increased to 88 MeV there is close to no deviation. 
 
-Several calculations has been done on the present radiation level in ALICE \cite{georgios} and \cite{radiation_alice}. From these calculations it is expected a high energy hadrons fluence rate ($>20MeV$) of $0.8 kHz/cm^2$, and that is for the worst case location of the TPC electronics, and for an interaction rate of 8 kHz. Scaling this fluence rate to an interaction rate of 30 kHz, which is the expected interaction rate of Run2, the expected fluence rate becomes $3 kHz/cm^2$. For run1 a total dose and 1 MeV neutron-equivalent fluence was estimated to be $1.6 kRad$ and $4.5\cdot10^{10} \centi\meter^{-2}$ respectively, and this for a total operation of 10 ALICE years. If assuming a similar run program of p-p, p-Pb and Pb-Pb interactions, and then scaling for a 3 year running period of Run2 including an increased interaction rate of 30 kHz for Pb-Pb, a similar dose of around 1-2 $\kilo$Rad and a fluence in the order of $10^{10}$ could be expected for run2.
+Several calculations has been done on the present radiation level in ALICE \cite{georgios} and \cite{radiation_alice}. From these calculations it is expected a high energy hadrons fluence rate ($>20MeV$) of $0.8\ \kilo\hertz/cm^2$, and that is for the worst case location of the TPC electronics, and for an interaction rate of $8\ \kilo\hertz$. Scaling this fluence rate to an interaction rate of $30\ \kilo\hertz$, which is the expected interaction rate of Run2, the expected fluence rate becomes $3\ \kilo\hertz/cm^2$. For run1 a total dose and 1 MeV neutron-equivalent fluence was estimated to be $1.6\ kRad$ and $4.5\ \cdot10^{10} \centi\meter^{-2}$ respectively, and this for a total operation of 10 ALICE years. If assuming a similar run program of p-p, p-Pb and Pb-Pb interactions, and then scaling for a 3 year running period of Run2 including an increased interaction rate of 30 kHz for Pb-Pb, a similar dose of around 1-2 $\kilo$Rad and a fluence in the order of $10^{10}$ could be expected for run2.
 
 %Section about what our electronics will receive at CERN
 
@@ -667,9 +664,9 @@ The input and output high values can be set to anything between 1.4 V and 3.6 V,
 The direction of the signals are decided by 1DIR and 2DIR, see \autoref{SN74AVCB164245_sch} and \cite{website:SN74AVCB164245}.
 On the RCU2 this is going to be used for level shifting of a 16-bit digital signal of 1.5 V to 3.3 V.
 
-Since this component have so many input signals a small amount of current may go in to the input signals. Therefore, to make sure that the component didn't drain unmeasured current through the inputs of the chip, a pMOS transistor and a pull up resistor was added to the design, as shown in \autoref{SN74AVCB164245_sch}. When the IN signal, is brought low the PMOS transistor will be open, pulling the input signals to ground. When IN is brought high, the PMOS transistor is closed, which means that the input signals will be pulled up to 3.3 V from the supply signal. 
+Since this component have so many input signals a small amount of current may go in to the input signals. Therefore, to make sure that the component didn't sink unmeasured current through the inputs of the chip, a pMOS transistor and a pull up resistor was added to the design, as shown in \autoref{SN74AVCB164245_sch}. When the IN signal, is brought low the PMOS transistor will be open, pulling the input signals to ground. When IN is brought high, the PMOS transistor is closed, which means that the input signals will be pulled up to 3.3 V from the supply signal. 
 
-Under radiation test of SN74AVCB164245, the same 3.3 V signal was used to supply both VCCA and VCCB, see \autoref{SN74AVCB164245_sch}, which means that there is no level shifting from the inputs to the outputs, but that isn't necessary for test purposes. The voltage over resistor R1, was measured and used to calculate current consumption, and the outputs were measured digitally by USB-6501. The input signal IN was switching back and forth from on to off every 4 seconds.
+Under radiation test of SN74AVCB164245, a 3.3 V signal was used to supply both VCCA and VCCB, see \autoref{SN74AVCB164245_sch}, which means that there is no level shifting from the inputs to the outputs, but that isn't necessary for test purposes. The voltage over resistor R1, was measured and used to calculate current consumption, and the outputs were measured digitally by USB-6501. The input signal IN was switching back and forth from on to off every 4 seconds.
 % The first version of this board didn't work. The output didn't change according to the input. We found out that this was because there were no load on the outputs.
 % So a output resistor was added to each of the outputs to make a load, and then it worked. 	
 
@@ -739,7 +736,7 @@ MAX3748 is a limiting amplifier. It works in rate of 155 Mb/s to 4.25 Gb/s, and 
 
 \footnotetext[3]{LVDS and CML are both differential signaling systems used mainly in high speed and clock distribution circuits. The output swing on such signals are typical 0.5-0.8 V, which results in high operation speed.}
 
-On the RCU2, these boards are supposed to be used to make a stable signal out of a not so stable signal coming from an optical receiver. The signal which is sent into the receiver is a Manchester-coded signal consisting of clock and data. The clock signal is going to be used to synchronize all the RCU2s.
+On the RCU2, these boards are supposed to be used to make a stable digital signal out of a not so stable signal coming from an optical receiver. The signal which is sent into the receiver is a Manchester-coded signal consisting of clock and data. The clock signal is going to be used to synchronize all the RCU2s.
 The data signal is containing trigger signals.
 
 There are a few differences between these two components. MAX3748 comes in a smaller package and uses less power and works in higher rates, but it doesn't have a clock and data recovery function as ADN2814 has. For MAX3748, clock and data recovery has to be done the SmartFusion2 FPGA, using FPGA logic. The clock and data recovery function in ADN2814 is actually clock recovery and data re-timing, that ensures that the output data is equal to the input data, except that it is converted to LVDS format. This means that FPGA logic has to be used to recover data, but since the clock signal is available, it is easier to decode and extract the data signal.
@@ -780,7 +777,7 @@ The decoding process of the Manchester signal returned both clock and data, but 
 \subsection{INA210 - Current Shunt Monitor}
 INA210 is a so called Current-Shunt Monitor, which is designed to monitor a current signal by measuring the voltage drop across a resistor (typical smaller then 1 $\ohm$, but could be as low as 0.01 $\ohm$) placed in the current path. The measured voltage drop is amplified by 200 through the circuit, and the amplified voltage is sent to the output.
 
-To be able to test this component a signal to measure current over is needed. This was generated by using one of the analog outputs from the USB-DAQ to produce a voltage of 3.3 V to the PCB, where a diode and a resistor was added only to use current. A shunt resistor, R1, was added in the current path before the diode and the resistor and connected to the differential input signal of the component, see \autoref{INA210_sch}. When the analog output signal was on, a small current will be generated over R1, producing a small voltage drop, which was amplified through the circuit.
+To be able to test this component a signal to measure current over is needed. This was generated by using one of the analog outputs from the USB-DAQ to produce a voltage of 3.3 V to the PCB, where a diode and a resistor was added only to sink current. A shunt resistor, R1, was added in the current path before the diode and the resistor and connected to the differential input signal of the component, see \autoref{INA210_sch}. When the analog output signal was on, a small current will be generated over R1, producing a small voltage drop, which was amplified through the circuit.
 
 For the radiation test we used a supply voltage of 3.3 V, and voltage over resistor R2, see \autoref{INA210_sch} was measured and used to calculate current consumption. Output voltage was also measured.
 % If everything works as it should the output signal should stay stable at a voltage.
@@ -807,19 +804,19 @@ For the radiation test, we used a supply voltage of 3.3 V and voltage over resis
 \FloatBarrier
 
 \subsection{The Test Boards}
-In Figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you find pictures of all of the different PCB boards that has been made. In Figure \ref{PCB_board3}(b) a example of a backside can be seen. The green connector is used to connect to the USB-6009 and the black connector is connected to USB-6008 under radiation test. A small dot shows the center of the component.
+In Figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you find pictures of all of the different PCB boards that have been made. In Figure \ref{PCB_board3}(b) a example of a backside can be seen. The green connector is used to connect to the USB-6009 and the black connector is connected to USB-6008 under radiation test. A small dot shows the center of the component.
 
 \begin{figure}[!htbp]
 \centering
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.72\textwidth]{figures/PCB_board1}
-  \caption[PCB Boards 1]{From left, TPS51200, MIC69302WU.}
+  \caption[PCB Boards 1]{From left we have, TPS51200 and MIC69302WU.}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\textwidth]{figures/PCB_board1_5}
-  \caption[PCB Boards 1]{From left, SN74AVCB164245 and SN74AVC2T245.}
+  \caption[PCB Boards 1]{From left we have, SN74AVCB164245 and SN74AVC2T245.}
   \end{subfigure}
  \caption{Pictures of PCB boards 1.}
  \label{PCB_board1}
@@ -831,7 +828,7 @@ In Figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you find pictu
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\textwidth]{figures/PCB_board2}
-  \caption[PCB Boards 1]{From left, QS3VH257 and SY89831.}
+  \caption[PCB Boards 1]{From left we have, QS3VH257 and SY89831.}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
@@ -861,7 +858,7 @@ In Figure \ref{PCB_board1}, \ref{PCB_board2} and \ref{PCB_board3} you find pictu
 \FloatBarrier
 
 \section{Software}
-For each of the different components mentioned in the section above, simple LabVIEW programs were made, specially designed to supply and monitor a specific component under radiation.
+For each of the different components mentioned in the section above, a simple LabVIEW program was made, specially designed to supply and monitor a specific component under radiation.
 In these programs, time from start, current consumption and the status of the output signal (or the output voltage for the regulators) can be measured and monitored.
 Data is continuously saved in a text file on the hard drive.
 
@@ -909,7 +906,7 @@ The last state is a state where all of the addresses are written to, read and co
 \end{figure}
 
 The \ac{SEU} counter values for the micro SRAM and the Large SRAM, as well as the number of cycles through all addresses are saved in registers and sent to the microcontroller subsystem. These registers are saved with Triple Module Redundancy (TMR), which means that the values are saved in three registers, and the majority of these is used.
-How the data is monitored and checked is discussed in section \ref{MSS_and_LabVIEW}.
+How the data is monitored and checked is discussed in subsection \ref{MSS_and_LabVIEW}.
 
 \FloatBarrier
 
@@ -950,12 +947,12 @@ For the test of the logic element the Clock Conditioning Circuit register was ac
 \end{figure}
 
 \subsection{Single Event Latchup and PLL}
-A \acf{SEL} is a short circuit between power and ground. If this occurs on any spot on the chip, an increase in the supply current can be detected. The way to check for \ac{SEL} is by constantly checking for increase in current consumption on the chip. Normally the high current will produce so much heat that interconnections in the chip will be destroyed, if not countered by shutting the power of immediately after the latch has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See section \ref{current_measurement_board} for more information on that board.
+A \acf{SEL} is a short circuit between power and ground. If this occurs on any spot on the chip, an increase in the supply current can be detected. The way to check for \ac{SEL} is by constantly checking for increase in current consumption on the chip. Normally the high current will produce so much heat that interconnections in the chip will be destroyed, if not countered by shutting the power off immediately after the latchup has occurred. That is why a separated \ac{PCB} was made to measure the current, and to be able to shut down the board if a latch is detected. See subsection \ref{current_measurement_board} for more information on that board.
  
 To test a PLL on the SmartFusion2 the PLL's lock signal was monitored. The lock signal goes high if the output clock signal is in sync with the input, and since the input signal is assumed to be stable since it comes from a crystal, we will therefore have a indication if the PLL is working by checking the lock signal. A lock signal was checked by sending the lock signal to an I/O pin and over to the monitoring board, where the lock signal was constantly checked for a falling edge.
 
 \subsection{Configuration and Monitoring}
-The SmartFusion2 M2S050-FG896 is a chip with 896 BGA pads distributed over a chip of 2.5 cm x 2.5 cm. This means that making a simple PCB is close to impossible. Therefore, to test this component, SmartFusion2 starter-kits were used. The starter-kit has serial communication to USB, which makes it possible to easily communicate with the SmartFusion2 chip from a computer. A numerous of GPIO pins are also available on the kit, which makes it possible to send data in and out from the SmartFusion2. 
+The SmartFusion2 M2S050-FG896 is a chip with 896 BGA pads distributed over a chip of 2.5 cm x 2.5 cm. This means that making a PCB is close to impossible without using advanced machines. Therefore, to test this component, SmartFusion2 starter-kits were used. The starter-kit has serial communication to USB, which makes it possible to communicate with the SmartFusion2 chip from a computer. A numerous of GPIO pins are also available on the kit, which makes it possible to send data in and out from the SmartFusion2. 
 
 All the tests that are mentioned above are implemented into a single project, so that everything was tested at the same time. This reduced the test time, and we didn't need to use more starter-kits than necessary.
 
@@ -965,21 +962,21 @@ More details on the different test programs and boards used to test the SmartFus
 
 \subsubsection{Microcontroller SubSystem and LabVIEW}
 \label{MSS_and_LabVIEW}
-To get the SEU and cycle counter values from the registers in the FPGA to a computer, the microcontroller subsystem was used. The microcontroller subsystem uses APB bus to collect the counter values, and the microcontroller is sending the counter values through serial communication to a computer. A C-code was written on the microcontroller, which in short sets up the serial communication and constantly sends \ac{SEU} counter and cycle counter values serial to a computer, and constantly checks for received data. The received data is used to determine the frequency of the shift-register design, as described in section \ref{logic_Element}.
-A LabVIEW program was written to communicate with the SmartFusion2. The LabVIEW program is constantly checking for received data, and exhibits the newest received values for the user. Through this program it is also possible to select some specific frequencies by use of push-buttons. By pushing one of the buttons a request to change frequency is sent to the microcontroller, and when the microcontroller receives the request, it accesses the registers controlling the \emph{Clock Conditioning Circuit}, and changes to the frequency.
+To get the SEU and cycle counter values from the registers in the FPGA to a computer, the microcontroller subsystem was used. The microcontroller subsystem uses APB bus to collect the counter values, and the microcontroller is sending the counter values through serial communication to a computer. A C-code was written on the microcontroller, which in short sets up the serial communication and constantly sends \ac{SEU} counter and cycle counter values serial to a computer, and constantly checks for received data. The received data is used to determine the frequency of the shift-register design, as described in subsection \ref{logic_Element}.
+A LabVIEW program was written to communicate with the SmartFusion2. The LabVIEW program is constantly checking for received data, and exhibits the newest received values for the user. Through this program it is also possible to select some specific frequencies by use of push-buttons. By pushing one of the buttons a request to change frequency is sent to the microcontroller, and when the microcontroller receives the request, it accesses the registers controlling the \emph{Clock Conditioning Circuit}, and changes the frequency.
 
 \subsubsection{Monitoring Board}
 \label{monitoring_board}
 As mentioned in \autoref{logic_Element}, a second starter-kit, called monitoring board, was used to monitor and control the \emph{Logical element test design}.
 On the monitoring board we were running a Linux system, where the whole test is controlled from.
-The monitoring boards main tasks is to monitor the lock signal(s) and the output of the shift-register test, as described in \autoref{logic_Element}. It is also able to select which pattern to be used in the shift-register test, and start and stop the test with a reset and an enable signal going into the starter-kit under test. The measured values from the starter-kit is checked for errors, and if any errors detected a counter will be incremented for every bit which is not correct. There is also a loss of lock counter, counting every falling edge of the lock signal. Both of these counters is exhibited to the user under a test, and counter data with time stamp is saved in a text file.
+The monitoring boards main tasks is to monitor the lock signal(s) and the output of the shift-register test, as described in \autoref{logic_Element}. It is also able to select which pattern to be used in the shift-register test, and start and stop the test with a reset and an enable signal going into the starter-kit under test. The measured values from the starter-kit is checked for errors, and if any errors are detected a counter will be incremented for every bit which is not correct. There is also a loss of lock counter, counting every falling edge of the lock signal. Both of these counters is exhibited to the user under a test, and counter data with time stamp is saved in a text file.
 
 % Under a radiation test, a program is running on the linux system, which controls the test of the SmartFusion2 test board.  VHDL code is built on the \ac{FPGA} which takes in WSR data and WSR enable from the test board and sends out reset, shift enable and pattern. All of the output data is controlled and input data is monitored through APB bus to the Linux system. The WSR enable signal tells us when a new data is sent from the test board, when this signal goes high, the WSR data signals is clocked in a register on the monitoring board. The WSR data is then compared with the correct value, and if an error has occurred, a counter will be incremented. The counter value is read in the Linux system. The monitoring board is also used to monitor the PLL lock signal.
 
 \subsubsection{Current Measurement Board}
 \label{current_measurement_board}
 To measure the current into the SmartFusion2 starter-kit, a \ac{PCB} was made with a microcontroller, serial to USB converter (FTDI chip), some debugging LEDs, power switch, and all the necessary electronics to make all this work together. The microcontroller used is a Texas Instruments MSP430AFE253. That is a 16-bit microcontroller with internal 24-bit \ac{ADC}.
-It has an internal frequency of up to 12 MHz, and support high frequency crystal up to 16 MHz.
+It has an internal frequency of up to 12 MHz, and supports high frequency crystal up to 16 MHz.
 Two types of serial communication interface are available; USART and SPI.
 Since the microcontroller only has a 16-bit architecture, only 16-bit of the \ac{ADC} is accessible at a time. The microcontroller has 3 differential \ac{ADC} inputs, which means three different currents can be measured. A current is measured by adding a small resistor of known value in series of the signal you want to measure current of, and by measuring voltage over the resistor you can calculate the current, by using ohms law ($I = \frac{U}{R}$)
 
@@ -988,7 +985,7 @@ To measure current for the SmartFusion2 starter-kit a small resistor of 0.1 Ohm 
 The 3.3 V regulator on the SmartFusion2 starter-kit has an enable signal, where a pull-up resistor to 5 V is placed. One of the outputs on the microcontroller is connected to this pin.
 If the current on one of the supply voltages goes over a certain threshold, the bit on the microcontroller is set to go low, resulting in turning the 3.3 V regulator on the SmartFusion2-starter kit off. The 3.3 V is used to power all other regulators on the kit, therefore by turning this regulator off, the entire starter-kit turns off.
 
-Schematic, PCB layout and instructions on how to use this board can be found in appendix %\ref{Current_measurment board}.
+Schematic, PCB layout and instructions on how to use this board can be found in appendix \ref{Current_measurment_board}.
 
 \FloatBarrier
 
@@ -1017,7 +1014,7 @@ The approach for detecting a Single Event Upset (SEU) on the \ac{SRAM} is rather
 forward, as can be seen in the flow diagram of \autoref{flowchart}.
 There is an initial startup phase where a known pattern is written to all the addresses in the \ac{SRAM}.
 When the startup phase is completed , the value from the first address is read and compared
-with the correct value, and if one or more of the bits are not equal a \ac{SEU} has occurred, and a counter will be incremented for each bit at the address which has suffered an upset.
+with the correct value, and if one or more of the bits are not equal a \ac{SEU} has occurred, and a counter will be incremented for each bit at that address which has suffered an upset.
 After the read, a new value is written back to the address and the system moves on to the next address. A checkerboard pattern of alternating ones and zeroes, is used when writing to the \ac{SRAM}. To check for stuck bits, the bit pattern is inverted for every cycle through all addresses. 
 
 \begin{figure}[!htbp]
@@ -1043,7 +1040,7 @@ The Scintillator with its PM-tube will be used to measure relative radiation. Th
 \subsection{X-Y-positioning System}
 The X-Y-positioning system is a displacement system where PCBs can be mounted and be moved up, down and sideways in a small area controlled by a computer. Communication is made through a serial port, and a LabVIEW program is used to control the system.
 
-This was used when doing the beam profile as discussed in chapter \ref{beam_setup}. In figure \ref{xy-table} you can see a picture of the front and back of the X-Y-positioning system with the SRAM radiation detector mounted.
+This was used when doing the beam profile as discussed in subsection \ref{beam_setup}. In figure \ref{xy-table} you can see a picture of the front and back of the X-Y-positioning system with the SRAM radiation detector mounted.
 
 \begin{figure}[!htbp]
 \centering
@@ -1067,7 +1064,7 @@ This was used when doing the beam profile as discussed in chapter \ref{beam_setu
 Irradiation tests for the RCU2 electronics  were performed at two facilities: \acf{OCL} and \acf{TSL}.
 This chapter will give a brief introduction to the two facilities, and explain the preparation process for each of the two.
 
-The purpose of testing the RCU2 electronics for radiation is to see if the tested components are able to survive in a radiation hard environment as we will find in the \ac{TPC}, see section \ref{TPC_environment}.
+The purpose of testing the RCU2 electronics for radiation is to see if the tested components are able to survive in a radiation hard environment as we will find in the \ac{TPC}, see subsection \ref{TPC_environment}.
 To test the limit for each of the components, the components was irradiated until an error was detected, current consumption drastically increased or the components received a much higher dose than were required without any error.
 
 \section{Irradiation on \ac{OCL}}
@@ -1086,8 +1083,8 @@ When the cyclotron is running and the beam is on, you are not allowed to enter t
  
 \begin{figure}[!htbp]
 \centering
-\centerline{\includegraphics[height=7cm,width=8cm]{figures/OCL}}
-\caption{Layout of the beam area at OCL}
+\centerline{\includegraphics[width=0.5\textwidth]{figures/OCL}}
+\caption{Layout of the beam area at OCL \cite{website:OCL}}
 \label{OCL_fig}
 \end{figure}
 
@@ -1107,19 +1104,19 @@ $^4He$  & 8-35 & 50 \\ \hline
 
 \subsection{Experiment Setup and Equipment}
 
-The experiment setup was placed in the outer experimental hall in experimental area 2. The experimental setup as well as the equipment used can be found in the figure and table below.
+The experiment setup was placed in the outer experimental hall in experimental area 2. The experimental setup as well as the equipment used can be found in the figures \ref{experiment_setup} and \ref{experiment_area}, and table \ref{equipment}.
 The equipment was kept in a height of 140-150cm. Beam exit was in a height of 141.5cm.
   
 \begin{figure}[!htbp]
 \centering
-  \centerline{\includegraphics[width=0.5\textwidth]{figures/experiment_setup}}
+  \centerline{\includegraphics[width=0.5\textwidth]{figures/experiment_setup.jpg}}
   \caption{Experimental setup seen from above}
   \label{experiment_setup}
 \end{figure}%
   
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{figures/experiment_area}
+  \includegraphics[width=0.7\textwidth]{figures/experiment_area}
   \caption{Picture of the experimental area}
   \label{experiment_area}
 \end{figure}
@@ -1146,20 +1143,24 @@ XY-positioning system  & Connected to the computer so that we could change the p
 \label{equipment}
 \end{table}
 
+\FloatBarrier
+
 \subsection{Preparation and characterization of the beam}
 \label{beam_setup}
-Before we could start with the radiation the radiation test, we had to start with characterization of the beam, and check that it hits around the area that we expected.
+Before we could start with the radiation test, we had to start with characterization of the beam, and check that it hits around the area that we expected.
 This was done by using radiation films that turns black when exposed to radiation. 
 One of these was placed directly in front of the beam exit and one in front of \acf{DUT} area. This was done to see how the beam spread out, and to get a indication of where the beam center was.
 Afterwards a more precise calibration was performed by the use of the SRAM radiation detector and the scintillator. 
 By measuring the relation between scintillator counts on the scintillator which was in a locked position and SEU on the \ac{SRAM} that was connected to the XY-position system (which made the \ac{SRAM} freely to move), we were able to find a more precise position of the beam center by observing which position gave us the highest number of SEUs compared to scintillator counts.
-When the beam center was found and everything worked as it should, the laser was placed in a position so that the laser beam pointed to where we had found center of the beam to be. Thereafter we could replace the \ac{SRAM} board with the PCB that we were going to test. This had to be done every day at startup, before we could start the actual tests.
+When the beam center was found, the laser was placed so that the laser beam pointed to where we had found center of the beam to be. Thereafter we could replace the \ac{SRAM} board with the PCB that we were going to test. This had to be done every day at startup, before we could start the actual tests.
 
-We were able to control the intensity (Current) of the beam freely from the control room inside the limitation of the beam (for protons that is up to 100 $\micro\ampere$), but we kept us in the area between 100 $\pico\ampere$ to a few $\nano\ampere$. This way the radiation dose to the test boards could be controlled. If desirable the beam intensity could be measured by putting a Faraday Cup (FC)in front of the beam, which was connected to a high accuracy multimeter. But the FC had to be removed when tests were running, since it would block the beam.
+We were able to control the intensity (Current) of the beam freely from the control room inside the limitation of the beam (for protons that is up to 100 $\micro\ampere$), but we kept us in the area between 100 $\pico\ampere$ to a few $\nano\ampere$. This way the radiation dose to the test boards could be controlled. If desirable the beam intensity could be measured by putting a Faraday Cup (FC) in front of the beam, which was connected to a high accuracy multimeter. But the FC had to be removed when tests were running, since it would block the beam.
 
 We were running up to 3 LabVIEW programs through the experiment, one for controlling the XY-position system,
-one for the \ac{SRAM} board (to measure SEU and scintillator counts when calibrating and to get scintillator counts during the tests) and one program for each of the test boards.
+one for the \ac{SRAM} board (to measure SEU and scintillator counts when calibrating and to get scintillator counts during the tests) and one for each of the test boards.
 The \ac{SRAM} and test board programs were constantly saving data on the disk.
+
+\FloatBarrier
 
 \subsection{What was Tested at OCL}
 We had beam time in three periods at OCL; $13.11.13-15.11.13$, $28.11.13-29.11.13$ and $08.04.14-11.04.14$. What were tested in the respectively periods, can be seen in \autoref{test_ocl}.
@@ -1178,10 +1179,11 @@ We had beam time in three periods at OCL; $13.11.13-15.11.13$, $28.11.13-29.11.1
  \label{test_ocl}
 \end{table}
 
+\FloatBarrier
 \newpage
 
 \section{Irradiation at \acf{TSL}}
-The main difference between \ac{OCL} and TSL is that TSL is able to produce a beam of much higher energies. TSL is a much more professional facility, meaning that there are more people working there available for assistance, and there is no need for any calibration before starting a radiation test. We can simply show up and expose what we want to expose, and data, like fluence and exposed time, are given to use, making it easy for us to calculate the dose and flux. 
+The main difference between \ac{OCL} and TSL is that TSL is able to produce a beam of much higher energies. TSL is a much more professional facility, meaning that there are more people working there available for assistance, and there is no need for any calibration before starting a radiation test. We can simply show up and expose what we wanted to expose, and data like fluence and exposed time are given to use, making it easy for us to calculate the dose and flux. 
 
 TSL is an accelerator facility belonging to University of Uppsala in Sweden, \cite{website:TSL}.
 It is mainly used for proton therapy on cancer patients by Uppsala University Hospital, but it is also used for medical research and radiation testing of electronics. The heart of the installation is a Gustav Werner cyclotron that delivers a beam of charged particles in energies up to 192 MeV. The particles that can be produced are everything from protons to highly charged xenon ions.
@@ -1208,7 +1210,7 @@ This computer was used as a connection point to our test boards. We sat in a roo
 \subsection{What were Tested at \ac{TSL}}
 A week before we arrived at TSL, we got the first two prototypes of the RCU2. That means that we had limited time to make tests for all of the different parts of the board. 
 
-The focus of the visit to TSL was the SmartFusion2 SoC FPGA, but we also tested an optical receiver and an optical transceiver, which respectively are being used for TTC (timing, trigger and control) and for Detector Data Link 2 (DDL2).
+The focus of the visit to TSL was the SmartFusion2 SoC FPGA, but we also tested an optical receiver and an optical transceiver, which respectively are being used for Timing, Trigger and Control (TTC) and for Detector Data Link 2 (DDL2).
 We brought with us two RCU2s and a total of 7 starter-kits, where 3 of these were with a smaller package of SmartFusion2 (M2S050-FG484), and the rest were engineering samples versions of M2S050-FG896, which is the one used on RCU2.
 For the tests as discussed in \autoref{SF2_section}, we only used the SmartFusion2 starter-kits, since the test only involves internal parts of the SmartFusion2 SoC FPGA. Two of the starter-kits with the smaller package (M2S050-FG484) were tested, and one with engineering sample (M2S050ES-T-FG896). When the RCU2 cards were exposed to radiation, things like detector data link2 (DDL2), TTC and PLL were tested, which will not be discussed thoroughly in this work, but a short summary will be given. Current was measured on the SmartFusion2 starter-kits and the RCU2 boards when they were irradiated to check for latchup.
 
@@ -2924,11 +2926,37 @@ In Figure \ref{flux_all1}, \ref{flux_all2} \ref{flux_all3} you can see graphs of
 
 \FloatBarrier
 
-\chapter{Current measurement board tutorial}
-\label{tutorial_current}
+\chapter{Current measurement board}
+\section{Schematic and layout}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[page=1, angle=270,width=\textwidth]{figures/Current_measurement_sch}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[page=2, angle=270,width=\textwidth]{figures/Current_measurement_sch}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[page=3, angle=270,width=\textwidth]{figures/Current_measurement_sch}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Current_measurement}
+  \caption{PCB layout of the current measurement board}
+\end{figure}
+
+\FloatBarrier
+
+\section{Current measurement board tutorial}
+\label{Current_measurment_board}
 This tutorial will give you an introduction how to use the Current measurement board. The current measurement board is a PCB specially designed for measuring small current signal.
 
-\section{Introduction to Board}
+\subsection{Introduction to Board}
 The board consists of the following components:  
 
 \begin{enumerate}
@@ -2949,11 +2977,11 @@ There are two switches on the board: one switch (Switch1) is used for controllin
 
 There are two 4-pin headers (J2 and J3), one 6-pin header (J1), and one 10-pin header (J4). The 4-pin header (J2) placed next to the FTDI chip, is used as a jumper which selects between 5 V and 3.3 V for the FTDI chip (if using external oscillator, FTDI chip required a 3.3 V power signal). The other 4-pin header (J3) is placed next to Switch2 and is used as a GPIO header, where 3 pins are connected to the multiplexer and the last pin is connected directly to the microcontroller. The 6-pin header (J1) is used for the ADC input and the 10-pin header (J4) is used for JTAG connection on the board.
 
-\section{Microcontroller}
+\subsection{Microcontroller}
 The microcontroller operates at the frequency of 12 MHz (system clock) but it can also support high frequency crystal oscillator up to 16 Mhz. The microcontroller has an internal 24-bit ADC. Since the microcontroller has 16-bit architecture, only 16-bits of the ADC are accessible at a time, check "MSP430x2xx Family User's Guide" under section "SD24\_A" for more information on how to use all of the 24 bits . The microcontroller has 3 differential ADC inputs, which means three different currents can be measured at the same time. 
 
 
-\section{Communication to PC}
+\subsection{Communication to PC}
 There are two types of interfaces available for serial communication, which are USART and SPI. The current measurement board is made to be used with USART serial interface. The serial pins on the board are connected to the FTDI chip, which convert USART serial interface to USB interface. By connecting to the USB connector, we get two-way serial communication between computer and microcontroller. This makes it possible to send data out from the microcontroller as well as send data in to the microcontroller.
 
 \begin{figure}
@@ -2962,7 +2990,7 @@ There are two types of interfaces available for serial communication, which are 
  \caption{Connections to the board}
 \end{figure}
 
-\section{Software requirement and programming}
+\subsection{Software requirement and programming}
 To be able to program the microcontroller, the software Code Composer Studio (CCS) from Texas Instruments is needed together with JTAG-programmer. The free version of the software can be downloaded from: http://processors.wiki.ti.com/index.php/Download\_CCS. 
 
 JTAG-TINY-V2 programmer should be available at the university to be used as a JTAG programmer. The TJAG programmer may need driver to work correctly, go to the link: https://www.olimex.com/Products/MSP430/JTAG/MSP430-JTAG-TINY-V2/ to download drivers if not automatically installed.
@@ -2971,7 +2999,7 @@ The FTDI chip should already been set up correctly, but if you want to edit sett
 
 To program the microcontroller, connect the cable between the 10-pin header (J4) and the JTAG-TINY-V2 programmer as shown in Figure 2. The green PWR light on the board should light up, if not, toggle the position of the Switch2, or connect a USB cable to the USB connector. 
 
-\section{How it works: Current measurement }
+\subsection{How it works: Current measurement }
 
 A current is measured by adding a small resistor of known value in series of the signal you want to measure current of. By measuring voltage over that resistor you can calculate the current by using ohms law (I = U/R). The maximum voltage on each microcontroller pin is 3.3 V, which means the maximum voltage on the signal you want to measure, cannot be higher than 3.3 V. 
 

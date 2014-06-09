@@ -1,84 +1,85 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces CERN accelerators \cite {website:CERN_accelerators}\relax }}{4}{figure.caption.17}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Layout of the ALICE experiment \cite {website:aliceinfo}\relax }}{4}{figure.caption.18}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Layout of the TPC \cite {website:aliceinfo}\relax }}{5}{figure.caption.19}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A TPC sector, showing distribution of FECs \cite {roed_doctor}\relax }}{6}{figure.caption.20}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Block diagram of the Front End Card \cite {website:aliceinfo}\relax }}{7}{figure.caption.24}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces The Readout Control Unit top side and bottom side \cite {roed_doctor}\relax }}{7}{figure.caption.28}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces FEE overview}}{8}{figure.caption.30}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces CERN accelerators \cite {website:CERN_accelerators}\relax }}{4}{figure.caption.16}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Layout of the ALICE experiment \cite {website:aliceinfo}\relax }}{4}{figure.caption.17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Layout of the TPC \cite {website:aliceinfo}\relax }}{5}{figure.caption.18}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A TPC sector, showing distribution of FECs \cite {roed_doctor}\relax }}{6}{figure.caption.19}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Block diagram of the Front End Card \cite {website:aliceinfo}\relax }}{7}{figure.caption.23}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces The Readout Control Unit top side and bottom side \cite {roed_doctor}\relax }}{8}{figure.caption.27}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces FEE overview}}{9}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Energy loss in air}}{12}{figure.caption.32}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces CMOS inverter}}{15}{figure.caption.34}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Six transistor SRAM Cell \cite {CMOS}\relax }}{16}{figure.caption.35}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Principle of Charge Generation}}{16}{figure.caption.36}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces MOS transistor under radiation}}{18}{figure.caption.38}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Energy loss in air}}{13}{figure.caption.31}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces CMOS inverter}}{16}{figure.caption.33}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Six transistor SRAM Cell \cite {CMOS}\relax }}{17}{figure.caption.34}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Principle of Charge Generation}}{17}{figure.caption.35}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces MOS transistor under radiation}}{19}{figure.caption.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Schematic for the TPS51200 test board\relax }}{20}{figure.caption.40}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic for the MIC69302WU test board\relax }}{21}{figure.caption.41}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Schematic for the SN74AVCB164245 test board\relax }}{22}{figure.caption.42}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Schematic for the SN74AVC2T245 test board\relax }}{23}{figure.caption.43}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Schematic for the QS3VH257 test board\relax }}{24}{figure.caption.44}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Schematic for the SY89831U test board\relax }}{25}{figure.caption.45}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Schematic for the MAX3748 test board\relax }}{27}{figure.caption.48}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Schematic for the ADN2814 test board\relax }}{27}{figure.caption.49}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Schematic for the INA210 test board\relax }}{28}{figure.caption.50}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Schematic for the TLV3011 test board\relax }}{29}{figure.caption.51}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Pictures of PCB boards 1.\relax }}{30}{figure.caption.52}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Pictures of PCB boards 2.\relax }}{30}{figure.caption.53}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Pictures of PCB boards 3.\relax }}{31}{figure.caption.54}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces LabVIEW program for SN74AVC2T245\relax }}{32}{figure.caption.55}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Flow chart for test procedure of SRAM\relax }}{33}{figure.caption.56}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Overview of the shift-register design for test of the logic element \cite {Berg}\relax }}{35}{figure.caption.58}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces LabVIEW program for the \ac {SRAM}\relax }}{38}{figure.caption.59}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Flowchart for SEU detection\relax }}{39}{figure.caption.60}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces X-Y-Positioning System}}{40}{figure.caption.61}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Schematic for the TPS51200 test board\relax }}{21}{figure.caption.39}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schematic for the MIC69302WU test board\relax }}{22}{figure.caption.40}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Schematic for the SN74AVCB164245 test board\relax }}{23}{figure.caption.41}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Schematic for the SN74AVC2T245 test board\relax }}{24}{figure.caption.42}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Schematic for the QS3VH257 test board\relax }}{25}{figure.caption.43}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Schematic for the SY89831U test board\relax }}{26}{figure.caption.44}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Schematic for the MAX3748 test board\relax }}{28}{figure.caption.47}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Schematic for the ADN2814 test board\relax }}{28}{figure.caption.48}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Schematic for the INA210 test board\relax }}{29}{figure.caption.49}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Schematic for the TLV3011 test board\relax }}{30}{figure.caption.50}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Pictures of PCB boards 1.\relax }}{31}{figure.caption.51}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Pictures of PCB boards 2.\relax }}{31}{figure.caption.52}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Pictures of PCB boards 3.\relax }}{32}{figure.caption.53}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces LabVIEW program for SN74AVC2T245\relax }}{33}{figure.caption.54}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Flow chart for test procedure of SRAM\relax }}{34}{figure.caption.55}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Overview of the shift-register design for test of the logic element \cite {Berg}\relax }}{36}{figure.caption.57}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces LabVIEW program for the \ac {SRAM}\relax }}{39}{figure.caption.58}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Flowchart for SEU detection\relax }}{40}{figure.caption.59}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces X-Y-Positioning System}}{41}{figure.caption.60}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Layout of the beam area at OCL\relax }}{42}{figure.caption.62}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Experimental setup seen from above\relax }}{43}{figure.caption.64}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Picture of the experimental area\relax }}{44}{figure.caption.65}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Layout of the Blue hall\relax }}{47}{figure.caption.69}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Setup in the blue hall. The RCU2 is mounted, ready to be exposed for radiation\relax }}{48}{figure.caption.70}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Layout of the beam area at OCL \cite {website:OCL}\relax }}{43}{figure.caption.61}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Experimental setup seen from above\relax }}{43}{figure.caption.63}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Picture of the experimental area\relax }}{44}{figure.caption.64}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Layout of the Blue hall\relax }}{47}{figure.caption.68}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Setup in the blue hall. The RCU2 is mounted, ready to be exposed for radiation\relax }}{47}{figure.caption.69}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Radiation Film}}{57}{figure.caption.73}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Calibration data from 14.11.2013\relax }}{58}{figure.caption.74}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces TPS51200 - Current/Voltage vs Dose\relax }}{59}{figure.caption.75}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces MIC69302WU - Current/Voltage vs Dose\relax }}{60}{figure.caption.76}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces SN74AVC2T245 - Current vs Dose\relax }}{60}{figure.caption.77}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces SN74AVC2T245 test board1\relax }}{61}{figure.caption.78}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Current vs dose for SN74AVC2T245 test board2\relax }}{62}{figure.caption.79}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces QS3VH257 - Current vs Dose\relax }}{63}{figure.caption.80}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces SY89831 - Current vs Dose\relax }}{64}{figure.caption.81}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces ADN2814 - Current vs Dose\relax }}{65}{figure.caption.82}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces ADN2814 - Relative errors vs Dose\relax }}{65}{figure.caption.83}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces ADN2814 - Relative errors vs Fluence\relax }}{66}{figure.caption.84}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces MAX3748 - Current vs Dose\relax }}{67}{figure.caption.85}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces INA210 - Current and output voltage vs Dose\relax }}{68}{figure.caption.86}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces TLV3011 - Test board 1\relax }}{69}{figure.caption.87}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces TLV3011 - Test board 2\relax }}{69}{figure.caption.88}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Large SRAM and micro SRAM test results from run1\relax }}{73}{figure.caption.92}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Large SRAM and micro SRAM test results from run2\relax }}{74}{figure.caption.93}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces PLL lock loss as function of fluence\relax }}{77}{figure.caption.97}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces SEUs in the Shift register as function of fluence\relax }}{78}{figure.caption.101}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{82}{figure.caption.103}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{82}{figure.caption.104}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces A sketch of the DDL2 test\relax }}{88}{figure.caption.111}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces An overview of the TTC test\relax }}{89}{figure.caption.112}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Radiation Film}}{56}{figure.caption.72}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Calibration data from 14.11.2013\relax }}{57}{figure.caption.73}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces TPS51200 - Current/Voltage vs Dose\relax }}{58}{figure.caption.74}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces MIC69302WU - Current/Voltage vs Dose\relax }}{59}{figure.caption.75}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces SN74AVC2T245 - Current vs Dose\relax }}{59}{figure.caption.76}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces SN74AVC2T245 test board1\relax }}{60}{figure.caption.77}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Current vs dose for SN74AVC2T245 test board2\relax }}{61}{figure.caption.78}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces QS3VH257 - Current vs Dose\relax }}{62}{figure.caption.79}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces SY89831 - Current vs Dose\relax }}{63}{figure.caption.80}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces ADN2814 - Current vs Dose\relax }}{64}{figure.caption.81}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces ADN2814 - Relative errors vs Dose\relax }}{64}{figure.caption.82}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces ADN2814 - Relative errors vs Fluence\relax }}{65}{figure.caption.83}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces MAX3748 - Current vs Dose\relax }}{66}{figure.caption.84}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces INA210 - Current and output voltage vs Dose\relax }}{67}{figure.caption.85}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces TLV3011 - Test board 1\relax }}{68}{figure.caption.86}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces TLV3011 - Test board 2\relax }}{68}{figure.caption.87}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Large SRAM and micro SRAM test results from run1\relax }}{72}{figure.caption.91}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Large SRAM and micro SRAM test results from run2\relax }}{73}{figure.caption.92}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces PLL lock loss as function of fluence\relax }}{76}{figure.caption.96}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces SEUs in the Shift register as function of fluence\relax }}{77}{figure.caption.100}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{81}{figure.caption.102}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{81}{figure.caption.103}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces A sketch of the DDL2 test\relax }}{87}{figure.caption.110}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces An overview of the TTC test\relax }}{88}{figure.caption.111}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces MIC69302WU - Current and voltage vs Time\relax }}{101}{figure.caption.122}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces SN74AVCB164245 and SN74AVC2T245 - Current vs Time\relax }}{101}{figure.caption.123}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces SN74AVCB164245 and SN74AVC2T245 - Current vs Time\relax }}{102}{figure.caption.124}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces INA210 - Current and voltage vs Time\relax }}{102}{figure.caption.125}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces QS3VH257 and ADN2814 - Current vs Time\relax }}{102}{figure.caption.126}
-\contentsline {figure}{\numberline {B.6}{\ignorespaces SmartFusion2 - Current vs dose\relax }}{103}{figure.caption.127}
-\contentsline {figure}{\numberline {B.7}{\ignorespaces SmartFusion2 - Current vs dose\relax }}{103}{figure.caption.128}
-\contentsline {figure}{\numberline {B.8}{\ignorespaces TLV3011 - Current and voltage as function of time\relax }}{103}{figure.caption.129}
-\contentsline {figure}{\numberline {B.9}{\ignorespaces flux for components radiated 15.11.2013\relax }}{104}{figure.caption.130}
-\contentsline {figure}{\numberline {B.10}{\ignorespaces flux for components radiated 28.11.2013\relax }}{104}{figure.caption.131}
-\contentsline {figure}{\numberline {B.11}{\ignorespaces flux for components radiated 09.04.2014\relax }}{105}{figure.caption.132}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces MIC69302WU - Current and voltage vs Time\relax }}{100}{figure.caption.121}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces SN74AVCB164245 and SN74AVC2T245 - Current vs Time\relax }}{100}{figure.caption.122}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces SN74AVCB164245 and SN74AVC2T245 - Current vs Time\relax }}{101}{figure.caption.123}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces INA210 - Current and voltage vs Time\relax }}{101}{figure.caption.124}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces QS3VH257 and ADN2814 - Current vs Time\relax }}{101}{figure.caption.125}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces SmartFusion2 - Current vs dose\relax }}{102}{figure.caption.126}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces SmartFusion2 - Current vs dose\relax }}{102}{figure.caption.127}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces TLV3011 - Current and voltage as function of time\relax }}{102}{figure.caption.128}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces flux for components radiated 15.11.2013\relax }}{103}{figure.caption.129}
+\contentsline {figure}{\numberline {B.10}{\ignorespaces flux for components radiated 28.11.2013\relax }}{103}{figure.caption.130}
+\contentsline {figure}{\numberline {B.11}{\ignorespaces flux for components radiated 09.04.2014\relax }}{104}{figure.caption.131}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Current measurement board layout\relax }}{107}{figure.caption.133}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Connections to the board\relax }}{108}{figure.caption.134}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces LabVIEW program front panel\relax }}{110}{figure.caption.135}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces PCB layout of the current measurement board\relax }}{109}{figure.caption.135}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Current measurement board layout\relax }}{110}{figure.caption.136}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Connections to the board\relax }}{111}{figure.caption.137}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces LabVIEW program front panel\relax }}{113}{figure.caption.138}

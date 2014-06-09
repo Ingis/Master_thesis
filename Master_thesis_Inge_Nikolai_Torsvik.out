@@ -65,9 +65,11 @@
 \BOOKMARK [0][-]{chapter.7}{Summary Conclusion and Outlook}{}% 65
 \BOOKMARK [0][-]{Appendix.a.A}{Appendix Beam setup data OCL}{}% 66
 \BOOKMARK [0][-]{Appendix.a.B}{Appendix Radiation Results OCL}{}% 67
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Current measurement board tutorial}{}% 68
-\BOOKMARK [1][-]{section.a.C.1}{Introduction to Board}{Appendix.a.C}% 69
-\BOOKMARK [1][-]{section.a.C.2}{Microcontroller}{Appendix.a.C}% 70
-\BOOKMARK [1][-]{section.a.C.3}{Communication to PC}{Appendix.a.C}% 71
-\BOOKMARK [1][-]{section.a.C.4}{Software requirement and programming}{Appendix.a.C}% 72
-\BOOKMARK [1][-]{section.a.C.5}{How it works: Current measurement }{Appendix.a.C}% 73
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Current measurement board}{}% 68
+\BOOKMARK [1][-]{section.a.C.1}{Schematic and layout}{Appendix.a.C}% 69
+\BOOKMARK [1][-]{section.a.C.2}{Current measurement board tutorial}{Appendix.a.C}% 70
+\BOOKMARK [2][-]{subsection.a.C.2.1}{Introduction to Board}{section.a.C.2}% 71
+\BOOKMARK [2][-]{subsection.a.C.2.2}{Microcontroller}{section.a.C.2}% 72
+\BOOKMARK [2][-]{subsection.a.C.2.3}{Communication to PC}{section.a.C.2}% 73
+\BOOKMARK [2][-]{subsection.a.C.2.4}{Software requirement and programming}{section.a.C.2}% 74
+\BOOKMARK [2][-]{subsection.a.C.2.5}{How it works: Current measurement }{section.a.C.2}% 75
