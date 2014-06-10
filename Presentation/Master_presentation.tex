@@ -1,0 +1,107 @@
+\documentclass[]{beamer}
+
+%
+% Use this to create handout pages
+%
+%\documentclass[handout]{beamer}
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{2 on 1}[a4paper, portrait, border shrink=0.5in]
+
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{babel}
+
+\mode<presentation>
+{
+  \usetheme{ift}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{items}[square]
+}
+
+\usefonttheme[onlymath]{serif}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+
+\beamertemplatenavigationsymbolsempty
+
+
+%\includeonlyframes{current}
+
+\title{Beamer Template UiB}
+\author{Mr. Smith}
+\date{\today}
+\institute{Institutt for Fysikk og Teknologi, Universitetet i Bergen}
+
+\begin{document}
+
+
+\setbeamertemplate{background}
+ {\includegraphics[width=1.0005\paperwidth,height=\paperheight]{frontpage_bg}}
+\setbeamertemplate{footline}[default]
+
+\begin{frame}
+  \titlepage
+  \vspace{5cm}
+\end{frame}
+
+%
+% Set the background for the rest of the slides.
+% Insert infoline at the end
+%
+\setbeamertemplate{background}
+ {\includegraphics[width=1.0005\paperwidth,height=\paperheight]{slide_bg}}
+\setbeamertemplate{footline}[ifttheme]
+
+%--------------------------------------------------------------------------------------------------
+% SECTION: First section
+%--------------------------------------------------------------------------------------------------
+\section{First section}
+
+%
+% Introduction
+%
+\begin{frame}
+	\frametitle{Introslide}
+
+	\begin{columns}
+		\column{.5\textwidth}
+			\begin{itemize}
+				\item<2-> SubItem
+			\end{itemize}
+		\column{.5\textwidth}
+	\end{columns}
+\end{frame}
+
+
+
+%--------------------------------------------------------------------------------------------------
+% SECTION: Another section
+%--------------------------------------------------------------------------------------------------
+\section{Anoter section}
+
+%
+% The Helium atom
+%
+\begin{frame}
+	\frametitle{More slides!}
+	\begin{columns}
+		\column{.5\textwidth}
+			\begin{itemize}
+				\item<1-> one
+				\item<2-> two
+					\begin{itemize}
+						\item<2-> sub-two
+					\end{itemize}
+				\item<3-> three
+				\item<4-> four
+			\end{itemize}
+				
+		\column{.5\textwidth}
+			\includegraphics[width=\columnwidth]{images/atom-newton}
+	\end{columns}
+\end{frame}
+
+
+\end{document}
