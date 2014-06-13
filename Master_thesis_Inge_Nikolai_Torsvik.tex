@@ -67,6 +67,8 @@
 
 %Forside
 \thispagestyle{empty}
+\setcounter{page}{1}
+\pagenumbering{Roman}
 \begin{center}        
   \vspace{5mm}        
   \huge
@@ -93,13 +95,14 @@
 
 \end{center}
 
-%\thispagestyle{empty}
+\newpage
+\thispagestyle{empty}
+\mbox{}
 
 
-\setcounter{page}{1}
-\pagenumbering{Roman}
 
 \chapter*{Acknowledgements}
+
 The work described in this thesis have been carried out within the Microelectronics research Group at the Department of Physics, University of Bergen between August 2013 and June 2014.
 
 I would like to thank my supervisor Kjetil Ullaland for his guidance and support throughout this process. You have helped me see things I didn't see and helped me keep focus through this work.
@@ -117,6 +120,10 @@ I would also like to thank my dear wife, Solveig Str\o msnes for being patient, 
 Bergen, June 2014 \newline\newline
 Inge Nikolai Torsvik
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
 \setlength{\parskip}{18pt}
 \chapter*{Abstract}
 At CERN in Switzerland we find the largest particle accelerator ever built, called \ac{LHC}. LHC is located 100 meter below ground level in a 27 km long tunnel where four experiment are taken place. One of these experiment is \ac{ALICE}. The purpose of \ac{ALICE} is to study a matter known as Quark-gluons plasma, which will be generated under collisions of heavy ions. LHC is currently shut down for maintenance and preparation for even higher energies. This period called Long Shutdown 1 (LS1), started January 2013 and will last until the end of 2014.
@@ -130,13 +137,23 @@ The main focus has been on the SmartFusion2 SoC FPGA, where test of \acl{SEE} li
 The irradiation tests has been executed at \ac{OCL} in Oslo Norway, with a proton beam of 25 and $28\ MeV$ and at \ac{TSL} in Uppsala Sweden, with a proton beam of 170 MeV.
 \setlength{\parskip}{1pt}
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
 \tableofcontents
 
 \setlength{\parskip}{18pt}
 \setlength\parindent{0pt}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
 \chapter{Introduction}
 \setcounter{page}{1}
 \pagenumbering{arabic}
+
 At CERN in Switzerland experiments are being conducted on fundamental structure of the universe. This is done by accelerating particles up to an energy level of 4 $\tera \electronvolt$ per proton, and then colliding them with other particles on the same energy level. The largest accelerator is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a $27\ \kilo\meter$ long tunnel 100 meter below ground level.
 Particles are accelerated in both directions in the LHC. When the particles have reached high enough energy, particles from the opposite directions are made to collide at 4 experiment areas, one of these is called \ac{ALICE}.
 \ac{ALICE} is built to study a matter known as Quark-gluons plasma , which will be generated under collisions of heavy ions \cite{ALICE}.
@@ -592,6 +609,8 @@ Several calculations have been done on the present radiation level in ALICE \cit
 
 \FloatBarrier
 \newpage
+% \thispagestyle{empty}
+\mbox{}
 
 \chapter{Preparations for Radiation Testing}
 Testing components is a process that has been done many times before in conjunction with design of electronics that are going to be installed in the \ac{LHC}. This chapter will go through all the components that are tested, and give a short description of the software and equipment used.
@@ -1215,6 +1234,10 @@ The focus of the visit to TSL was the SmartFusion2 SoC FPGA, but we also tested 
 We brought with us two RCU2s and a total of 7 starter-kits, where 3 of these were with a smaller package of SmartFusion2 (M2S050-FG484), and the rest were engineering samples versions of M2S050-FG896, which is the one used on RCU2.
 For the tests as discussed in \autoref{SF2_section}, we only used the SmartFusion2 starter-kits, since the test only involves internal parts of the SmartFusion2 SoC FPGA. Two of the starter-kits with the smaller package (M2S050-FG484) were tested, and one with engineering sample (M2S050ES-T-FG896). When the RCU2 cards were exposed to radiation, things like detector data link2 (DDL2), TTC and PLL were tested, which will not be discussed thoroughly in this work, but a short summary will be given. Current was measured on the SmartFusion2 starter-kits and the RCU2 boards when they were irradiated to check for latchup.
 
+
+\newpage
+% \thispagestyle{empty}
+\mbox{}
 
 \chapter{Calculations and Results from Radiation Tests}
 \emph{This chapter will explain how the collected data from radiation tests were used to calculate flux and dose, and results from radiation tests at \ac{OCL} and \ac{TSL} will be presented and discussed.}
@@ -2572,6 +2595,11 @@ A high cross section was calculated for SEL and PLL lock-loss. With the calculat
 
 
 \FloatBarrier
+\newpage
+% \thispagestyle{empty}
+\mbox{}
+
+
 \begin{appendices}
 \chapter{Beam setup data OCL}
 The graphs in this appendix shows the calibration data from all of the days at \ac{OCL}
@@ -2773,6 +2801,9 @@ The graphs in this appendix shows the calibration data from all of the days at \
 
 \FloatBarrier
 
+\newpage
+% \thispagestyle{empty}
+\mbox{}
 
 \chapter{Radiation Results OCL}
 \label{radiation_results}
@@ -2930,6 +2961,10 @@ In Figure \ref{flux_all1}, \ref{flux_all2} \ref{flux_all3} you can see graphs of
 
 \FloatBarrier
 
+\newpage
+% \thispagestyle{empty}
+\mbox{}
+
 \chapter{Current measurement board}
 \section{Schematic and layout}
 
@@ -3019,14 +3054,22 @@ When this board has been used before, it has been connected to a computer runnin
 
 \end{appendices}
 
+
 \setlength{\parskip}{2pt}
 \include{acronyms}
 
 \listoffigures
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
 \listoftables
 
 \newpage
+\thispagestyle{empty}
+\mbox{}
+
 \bibliography{Master_Inge_bibtex}
 \bibliographystyle{ieeetr}
 \end{document}

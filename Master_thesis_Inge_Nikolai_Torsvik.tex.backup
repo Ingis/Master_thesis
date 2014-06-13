@@ -93,13 +93,15 @@
 
 \end{center}
 
-%\thispagestyle{empty}
+\thispagestyle{empty}
+\mbox{}
 
 
-\setcounter{page}{1}
-\pagenumbering{Roman}
+
 
 \chapter*{Acknowledgements}
+\setcounter{page}{1}
+\pagenumbering{Roman}
 The work described in this thesis have been carried out within the Microelectronics research Group at the Department of Physics, University of Bergen between August 2013 and June 2014.
 
 I would like to thank my supervisor Kjetil Ullaland for his guidance and support throughout this process. You have helped me see things I didn't see and helped me keep focus through this work.
@@ -116,6 +118,8 @@ I would also like to thank my dear wife, Solveig Str\o msnes for being patient, 
 \newline\newline
 Bergen, June 2014 \newline\newline
 Inge Nikolai Torsvik
+
+\thispagestyle{empty}
 
 \setlength{\parskip}{18pt}
 \chapter*{Abstract}
@@ -134,6 +138,9 @@ The irradiation tests has been executed at \ac{OCL} in Oslo Norway, with a proto
 
 \setlength{\parskip}{18pt}
 \setlength\parindent{0pt}
+
+\mbox{}
+
 \chapter{Introduction}
 \setcounter{page}{1}
 \pagenumbering{arabic}
@@ -2396,6 +2403,8 @@ Normally when we see a decrease in voltage, we see an increase in current, or op
 
 By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off and on (since this is powered by the 3.3 V signal), the voltage and current goes back to start value. This was done through the monitoring board, where we had made a function which turns the regulators off and on again after 3 seconds. This function was used whenever we detected a latchup or a decrease in current/voltage. In total we had to restart the board because of latchup or decrease in current 61 times on the first test and 95 times on the second test, as seen in section \ref{PLL_loss}.
 
+Calculating cross section for SEL will not give us a correct calculation since we had so many drops in current during the two test of the starter-kits. However cross section for SEL was calculated when the RCU2 was irradiated, since we then didn't detected any drops in current, see subsection \ref{other_tests}.
+
 
 \subsubsection{Logic Element}
 For the two tests with the starter-kits we used a clock signal of 40, 80 and 160 MHz for the shift-register design. This means that we should see some difference in cross section for the different frequencies. We used 4 shift-register chains with a length of 2500 flip-flops, and with 4 windowed shift registers (WSR). On run1 we used 4 inverters in between each register, and on run2 we used none.
@@ -2425,6 +2434,7 @@ The idea behind the programming limit test was to see how high in radiation dose
 We tried to program after a dose of 1.20 kRad, 2.54 kRad and 3.80 kRad. The two first times it worked fine, but the last time the programming failed.
 
 \subsection{Other Test at TSL}
+\label{other_tests}
 The other test at TSL includes Detector data link 2 (DDL2) test, Timing Trigger and Control (TTC) test and SEL detection under radiation of RCU2.
 A brief introduction to how this was tested, and the setup used is explained below:
 
@@ -2560,11 +2570,11 @@ Cross sections for SEU in the internal SRAM memory were found for 25 MeV proton 
 For the PLL test a rather high cross section was calculated. It has been estimated that in the TPC, with all of the RCU2s mounted, we will have a PLL lock-loss due to radiation of the SmartFusion2 more frequently than every second hour.
 For the test of the logic element we didn't have enough statistics to say anything about the cross section for SET or SEU separately. A combined cross section was calculated, but that is not enough to determine if SET is a problem for the SmartFusion2.
 
-The test of the SmartFusion2 was in every way successful. We discovered that there are some issues with SEL and PLL lock-loss. Ways to reduce, fix or to be able to accept these errors should be looked into more closely. We found a cross section for SRAM memory, which was in an expected area for SRAM cell. We also wanted to see if SET could be a problem, but we couldn't distinguish between SEUs in the register and SET caused SEUs. But the results shows that there is a chance for errors in the FPGA, which means that error fixing code and redundancy should be used when possible in the firmware of the RCU2.
+The test of the SmartFusion2 was in every way successful. We discovered that there are some issues with SEL and PLL lock-loss. Ways to reduce, fix or to be able to accept these errors should be looked into more closely. We found a cross section for SRAM memory, in an expected area for SRAM cell. We also wanted to see if SET could be a problem, but we couldn't distinguish between SEUs in the register and SET caused SEUs. The results shows that there is a risk for errors in the FPGA, which means that error fixing code and redundancy should be used when possible in the firmware of the RCU2.
 
-During the radiation test of the internal SRAM, the microcontroller subsystem was used to send data from the FPGA to a computer. The tests shows that the microcontroller subsystem is sensitive for radiation and stops working in periods. For better readout from the SRAM test, the communication with the computer should be done without going through the microcontroller subsystem. This could be done by making serial communication in the FPGA, and sending it directly to I/O pins.
+During the radiation test of the internal SRAM, the microcontroller subsystem was used to send data from the FPGA to a computer. The tests show that the microcontroller subsystem is sensitive for radiation and stops working in periods. For better readout from the SRAM test, the communication with the computer should be done without going through the microcontroller subsystem. This could be done by making serial communication in the FPGA, and sending it directly to I/O pins.
 
-A high cross section was calculated for SEL and PLL lock-loss. With the calculated cross section it is estimated that we will have a \acp{SEL} every half an hour, and PLL lock-loss more frequently than every second hour. We have already found a way to reduce \acp{SEL}, but more studies should be done on this aspect, to see if it could be reduced even more. For PLL lock-losses it is most likely not possible to reduce the error rate in the RCU2. Therefore more effort should be done on use of redundancy or other ways to tolerate this error.
+A high cross section was calculated for SEL and PLL lock-loss. With the calculated cross section it is estimated that we will have a \acp{SEL} every half an hour, and PLL lock-loss more frequently than every second hour. We have already found a way to reduce \acp{SEL}, but more studies should be done on this aspect to see if it could be reduced even more. For PLL lock-losses it is most likely not possible to reduce the error rate in the RCU2. Therefore more effort should be put in on use of redundancy or other ways to tolerate this error.
 % For the SRAM test a SEU cross section was found for in both OCL with a 25 MeV proton beam and in TSL with a 170 MeV proton beam. The calculated cross sections from OCL and TSL were in the same magnitude, and the result was also in the same magnitude as other SRAM which have previously been tested. 
 
 
