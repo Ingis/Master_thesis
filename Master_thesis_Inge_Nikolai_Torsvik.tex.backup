@@ -67,6 +67,8 @@
 
 %Forside
 \thispagestyle{empty}
+\setcounter{page}{1}
+\pagenumbering{Roman}
 \begin{center}        
   \vspace{5mm}        
   \huge
@@ -93,15 +95,14 @@
 
 \end{center}
 
+\newpage
 \thispagestyle{empty}
 \mbox{}
 
 
 
-
 \chapter*{Acknowledgements}
-\setcounter{page}{1}
-\pagenumbering{Roman}
+
 The work described in this thesis have been carried out within the Microelectronics research Group at the Department of Physics, University of Bergen between August 2013 and June 2014.
 
 I would like to thank my supervisor Kjetil Ullaland for his guidance and support throughout this process. You have helped me see things I didn't see and helped me keep focus through this work.
@@ -119,7 +120,9 @@ I would also like to thank my dear wife, Solveig Str\o msnes for being patient, 
 Bergen, June 2014 \newline\newline
 Inge Nikolai Torsvik
 
+\newpage
 \thispagestyle{empty}
+\mbox{}
 
 \setlength{\parskip}{18pt}
 \chapter*{Abstract}
@@ -134,16 +137,23 @@ The main focus has been on the SmartFusion2 SoC FPGA, where test of \acl{SEE} li
 The irradiation tests has been executed at \ac{OCL} in Oslo Norway, with a proton beam of 25 and $28\ MeV$ and at \ac{TSL} in Uppsala Sweden, with a proton beam of 170 MeV.
 \setlength{\parskip}{1pt}
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
 \tableofcontents
 
 \setlength{\parskip}{18pt}
 \setlength\parindent{0pt}
 
+\newpage
+\thispagestyle{empty}
 \mbox{}
 
 \chapter{Introduction}
 \setcounter{page}{1}
 \pagenumbering{arabic}
+
 At CERN in Switzerland experiments are being conducted on fundamental structure of the universe. This is done by accelerating particles up to an energy level of 4 $\tera \electronvolt$ per proton, and then colliding them with other particles on the same energy level. The largest accelerator is called \acf{LHC}, and is the largest particle accelerator ever built, installed in a $27\ \kilo\meter$ long tunnel 100 meter below ground level.
 Particles are accelerated in both directions in the LHC. When the particles have reached high enough energy, particles from the opposite directions are made to collide at 4 experiment areas, one of these is called \ac{ALICE}.
 \ac{ALICE} is built to study a matter known as Quark-gluons plasma , which will be generated under collisions of heavy ions \cite{ALICE}.
@@ -599,6 +609,8 @@ Several calculations have been done on the present radiation level in ALICE \cit
 
 \FloatBarrier
 \newpage
+% \thispagestyle{empty}
+\mbox{}
 
 \chapter{Preparations for Radiation Testing}
 Testing components is a process that has been done many times before in conjunction with design of electronics that are going to be installed in the \ac{LHC}. This chapter will go through all the components that are tested, and give a short description of the software and equipment used.
@@ -935,7 +947,7 @@ A good overview of the design can be seen in figure \ref{Shift_register_design}.
 The idea is to make a long serial chain of flip-flops, also known as a shift-register, where a transient can be picked up and make a \ac{SEU}.
 By adding an even number of inverters in between each flip-flop we increase the area where a transient can occur, without changing the logic.
 A known pattern is added to the input of the shift-register. This can be changed depending on how advanced you want to be, but a typical pattern could be every other '1' and '0'.
-To be able to operate at high speed, we are using \ac{WSR}, which takes out the last n-bit of the shift register, and sends it out in parallel, with a frequency n times lower than the original frequency. To check the outputs for errors, the \ac{WSR} bits will be sent through the I/O-pins to another SmartFusion2 starter kit, hereafter referred to as the monitoring board, where data is checked for errors.
+To be able to operate at high speed, we are using \ac{WSR}, which takes out the last n-bit of the shift-register, and sends it out in parallel, with a frequency n times lower than the original frequency. To check the outputs for errors, the \ac{WSR} bits will be sent through the I/O-pins to another SmartFusion2 starter kit, hereafter referred to as the monitoring board, where data is checked for errors.
 To be able to synchronize the two boards, a reset signal and shift enable signal will be sent from the monitoring board to the test board,
 and a \ac{WSR} enable signal will be sent from the test board to the monitoring board.
 
@@ -1014,7 +1026,7 @@ A LabVIEW program has been built specially for this board. From this program we 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{figures/SRAM_labview}
-  \caption{LabVIEW program for the \ac{SRAM}}
+  \caption{LabVIEW program for the \ac{SRAM} radiation detector}
   \label{labview_SRAM}
 \end{figure}
 
@@ -1200,7 +1212,7 @@ There are several extraction points from the cyclotron, which are controlled fro
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.7\textwidth, angle =-2.5]{figures/Blue_hall}
-  \caption{Layout of the Blue hall}
+  \caption{Layout of the Blue hall at TSL}
   \label{Blue_hall}
 \end{figure}
 
@@ -1223,8 +1235,12 @@ We brought with us two RCU2s and a total of 7 starter-kits, where 3 of these wer
 For the tests as discussed in \autoref{SF2_section}, we only used the SmartFusion2 starter-kits, since the test only involves internal parts of the SmartFusion2 SoC FPGA. Two of the starter-kits with the smaller package (M2S050-FG484) were tested, and one with engineering sample (M2S050ES-T-FG896). When the RCU2 cards were exposed to radiation, things like detector data link2 (DDL2), TTC and PLL were tested, which will not be discussed thoroughly in this work, but a short summary will be given. Current was measured on the SmartFusion2 starter-kits and the RCU2 boards when they were irradiated to check for latchup.
 
 
+\newpage
+% \thispagestyle{empty}
+\mbox{}
+
 \chapter{Calculations and Results from Radiation Tests}
-\emph{This chapter will explain how the collected data from radiation tests were used to calculate flux and dose, and results from radiation tests at \ac{OCL} and \ac{TSL} will be presented and discussed.}
+This chapter will explain how the collected data from radiation tests were used to calculate flux and dose, and results from radiation tests at \ac{OCL} and \ac{TSL} will be presented and discussed.
 
 After an irradiation test at \ac{OCL}, the collected data consists of the exposed time, scintillator counts, current consumption and output data of the \ac{DUT}.
 From beam setup before the radiation test, we found the relation between scintillator counts and \ac{SEU} on the SRAM radiation detector. From earlier tests with the SRAM radiation detector the cross section for an incoming proton to induce a \ac{SEU} is known. These data are used to calculate the received dose for each components. The next section will explain the calculation process.
@@ -1352,7 +1368,7 @@ We simulated a proton beam with energy of $28\ MeV$ and $25\ MeV$ in air, and se
     Primary particles at DUT & 0.1331 & 0.0857 \\\hline
     Beam intensity reduction at DUT & 7.51 & 11.67\\\hline
     \end{tabular}%
-      \caption{FLUKA simulation with 28MeV proton beam}
+      \caption{FLUKA simulation for a 25 and 28 MeV proton beam}
   \label{FLUKA_simulations}%
 \end{table}%
 
@@ -1384,7 +1400,7 @@ DoseDUT = FluenceBE \cdot \frac{Dose}{primaryparticleDUT} = [Gy]
 \end{equation}
 
 \subsection{Comparison of LET and FLUKA Calculations}
-The results from radiation of MAX3748 can be used to compare LET calculation with FLUKA, the test results can be found in \autoref{MAX3748_results}.
+The results from irradiation of MAX3748 can be used to compare LET calculation with FLUKA, the test results can be found in \autoref{MAX3748_results}.
 Both methods to calculate dose require the fluence. The fluence is given by SEU on SRAM, and cross section, see \autoref{FluenceDUT}, and SEU on SRAM are given by the conversion factor found in beam setup and scintillator counts. For MAX3748 the fluence is:
 
 \begin{equation}
@@ -1401,7 +1417,7 @@ Fluence_{MAX3748} = \frac{2698510 \cdot 0.473}{1.14\cdot10^{-6}} = 1.12\cdot10^{
   scintillator counts to SEU SRAM 	& 0.473 \\\hline   
   Cross section 			& $1.14E-6 \frac{cm^2}{device}$\\\hline
   \end{tabular}
-  \caption{Results after radiation of MAX3748}
+  \caption{Results after irradiation of MAX3748}
   \label{MAX3748_results}
 \end{table}
 
@@ -1475,7 +1491,7 @@ CS = 1.14\cdot10^{-6} \frac{cm^2}{device}
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.6\textwidth]{figures/position_xy}
-  \caption{Calibration data from 14.11.2013}
+  \caption{Calibration data from 14.11.2013. For the y-graph, the XY-positioning system was in position x=0, and for the x-graph, the XY-positioning system was in position y=0.}
   \label{calibration data}
 \end{figure}
 
@@ -2036,7 +2052,7 @@ To get a more precise calculation of cross section for the micro SRAM, we should
 % \end{equation}
 \FloatBarrier
 \subsubsection{PLL and Latchup}
-The current was measured while irradiating the SmartFusion2. Graphs of current as function of dose can be found in appendix \ref{radiation_results}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1, where the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be turned off and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 another latchup occurred increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift register design was also running.
+The current was measured while irradiating the SmartFusion2. Graphs of current as function of dose can be found in appendix \ref{radiation_results}. Two SEL was detected during the radiation process. The first latchup occurred after a dose of approximately 37 kRad on run1, where the current went from around 270 $\milli\ampere$ to around 730 $\milli\ampere$. Power needed to be turned off and on again for the current level to go back to normal. After a dose of approximately 8 kRad in run2 another latchup occurred increasing the current from 400 $\milli\ampere$ to around 850 $\milli\ampere$. The nominal current for run2 was a little higher since the shift-register design was also running.
 
 In \autoref{PLL_error1} and \autoref{PLL_lock_loss} you can see the results from the PLL test for run1 and run2. The monitored lock signal came from a PLL that was driven by another PLL. Thus, assuming that if the first PLL loses its lock signal and thus clock, the second PLL will also lose its lock signal. This means that the counted number of PLL lock-loss have to be divided on two, to get number of PLL lock-loss per PLL.
 
@@ -2045,11 +2061,11 @@ We have a large period in between a fluence of $1.47\cdot10^{10} \frac{n}{cm^2}$
 \begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|l|l|l|}\hline
-Test & PLL lock loss & Exposed time[s] & Fluence[$\frac{n}{\centi\meter^2}$] \\ \hline \hline
+Test & PLL lock-loss & Exposed time[s] & Fluence[$\frac{n}{\centi\meter^2}$] \\ \hline \hline
 Run1 & 18 & 4624 & $1.06\cdot10^{11}$  \\ \hline
 Run2 & 5 & 589 & $2.12\cdot10^{10}$  \\ \hline
 \end{tabular}
-\caption{Time and dose for the PLL errors run1}
+\caption{PLL errors, time and fluence for run1 and run2}
 \label{PLL_error1}
 \end{table}
 
@@ -2058,16 +2074,16 @@ Run2 & 5 & 589 & $2.12\cdot10^{10}$  \\ \hline
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/PLLerrors_vs_fluence_sf2_1}
-  \caption{PLL lock loss for run1}
+  \caption{PLL lock-loss for run1}
   \label{PLL_lock1}
   \end{subfigure}
   \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=\linewidth]{figures/PLLerrors_vs_fluence_sf2_2}
-  \caption{PLL lock loss for run2}
+  \caption{PLL lock-loss for run2}
   \label{PLL_lock2}
   \end{subfigure}
- \caption{PLL lock loss as function of fluence}
+ \caption{PLL lock-loss as function of fluence}
  \label{PLL_lock_loss}
 \end{figure}
 
@@ -2093,12 +2109,12 @@ The calculated cross section for a PLL lock-loss with uncertainties are as given
 \begin{table}[!htbp]
  \centering
 \begin{tabular}{|l|l|l|l|l|}\hline
-Test & PLL lock loss per PLL & Fluence[$\frac{n}{\centi\meter^2}$] & CS [$\frac{cm^2}{PLL}$]& $\sigma_{CS}$ [$\frac{cm^2}{PLL}$] \\ \hline \hline
+Test & PLL lock-loss per PLL & Fluence[$\frac{n}{\centi\meter^2}$] & CS [$\frac{cm^2}{PLL}$]& $\sigma_{CS}$ [$\frac{cm^2}{PLL}$] \\ \hline \hline
 Run1\_period1 	& 3 	& $1.47\cdot10^{10}$ & $2.04\cdot10^{-10}$ & $7.40\cdot10^{-11}$ \\ \hline
 Run1\_period2 	& 6 	& $5.19\cdot10^{10}$ & $1.16\cdot10^{-10}$ & $2.54\cdot10^{-11}$ \\ \hline
 Run2 		& 2.5 	& $2.12\cdot10^{10}$ & $1.18\cdot10^{-10}$ & $5.01\cdot10^{-11}$ \\ \hline
 \end{tabular}
-\caption{Time and dose for the PLL errors run1}
+\caption{Cross section with uncertainties for run1 and run2}
 \label{PLL_cross_section}
 \end{table}
 
@@ -2109,22 +2125,22 @@ Run2 		& 2.5 	& $2.12\cdot10^{10}$ & $1.18\cdot10^{-10}$ & $5.01\cdot10^{-11}$ \
 \FloatBarrier
 
 \subsubsection{Logic Element}
-For run1 we didn't manage to use the shift register design, due to some errors in the test code. This was solved before run2.
+For run1 we didn't manage to use the shift-register design, due to some errors in the test code. This was solved before run2.
 
-For the shift register design in run2 we had 4 shift register chains with a shift register length of 2000 registers, with 4 inverters in between each register and 4 windowed shift register for each chain. The clock frequency used was 40 MHz. \autoref{SR_table} and \autoref{SR_graph} shows the results from run2.
+For the shift-register design in run2 we had 4 shift-register chains with a shift-register length of 2000 registers, with 4 inverters in between each register and 4 windowed shift-register for each chain. The clock frequency used was 40 MHz. \autoref{SR_table} and \autoref{SR_graph} shows the results from run2.
 
-We detected 5 shift register errors in total over a total fluence of $2.28\cdot10^{10}$, see \autoref{SR_table}. This gives a cross section of $2.19\cdot10^{-10} \frac{cm^2}{device}$, and cross section per register of $2.74\cdot10^{-14}\frac{cm^2}{register}$. With the same uncertainties as for the PLL test, we get cross section with uncertainty to be, $2.74\pm0.67\cdot10^{-14}\frac{cm^2}{register}$.
-Compared to the cross section for SRAM memory, see \autoref{Cross_section_calc1}, we got a little higher cross section than the micro SRAM and little lower then that large SRAM. Since the cross section for shift register error is calculated only from 5 errors, the calculated cross section may suffer from coincidence, and may not be precise.
+We detected 5 shift-register errors in total over a total fluence of $2.28\cdot10^{10}$, see \autoref{SR_table}. This gives a cross section of $2.19\cdot10^{-10} \frac{cm^2}{device}$, and cross section per register of $2.74\cdot10^{-14}\frac{cm^2}{register}$. With the same uncertainties as for the PLL test, we get cross section with uncertainty to be, $2.74\pm0.67\cdot10^{-14}\frac{cm^2}{register}$.
+Compared to the cross section for SRAM memory, see \autoref{Cross_section_calc1}, we got a little higher cross section than the micro SRAM and little lower then that large SRAM. Since the cross section for shift-register error is calculated only from 5 errors, the calculated cross section may suffer from coincidence, and may not be precise.
 
-One of the point with this test was to see if we could distinguish between SEU in the registers and \acp{SEU} caused by SET, by changing the frequency as discussed in \autoref{logic_Element}. This time we only run with a 40 MHz clock, meaning we can't be sure if the error we see is an SEU in the registers, or a SET causing an SEU. At least we got an indication of how often we would expect to see an error in the shift register with a 40 Mhz clock and the settings we used for the test.
+One of the point with this test was to see if we could distinguish between SEU in the registers and \acp{SEU} caused by SET, by changing the frequency as discussed in \autoref{logic_Element}. This time we only run with a 40 MHz clock, meaning we can't be sure if the error we see is an SEU in the registers, or a SET causing an SEU. At least we got an indication of how often we would expect to see an error in the shift-register with a 40 Mhz clock and the settings we used for the test.
 
 \begin{table}
 \centering
 \begin{tabular}{|l|l|l|}\hline
-SEUs in the shift registers & Exposed time[s] & Fluence[$n/\centi\meter^2$] \\ \hline \hline
+SEUs in the shift-registers & Exposed time[s] & Fluence[$n/\centi\meter^2$] \\ \hline \hline
 5 & 620 & $2.28\cdot10^{10}$  \\ \hline
 \end{tabular}
-\caption{Shift register errors in run2}
+\caption{shift-register errors on run2}
 \label{SR_table}
 \end{table}
 
@@ -2132,7 +2148,7 @@ SEUs in the shift registers & Exposed time[s] & Fluence[$n/\centi\meter^2$] \\ \
 \begin{figure}[!htbp]
  \centering
    \includegraphics[width=0.6\linewidth]{figures/LEerror_fluence_sf2_2}
-   \caption{SEUs in the Shift register as function of fluence}
+   \caption{SEUs in the shift-register as function of fluence}
    \label{SR_graph}
 \end{figure}
 
@@ -2156,7 +2172,7 @@ We also had a noticeable amount of PLL lock-losses which could be problematic wh
 
 We didn't detect any current increase before a dose of 37 kRad, which is a really good result compared to the dose of 1-2 kRad that we can expect in the TPC, see \autoref{TPC_environment}.
 
-For the shift register design we wanted to see if we would have higher cross section with higher frequencies, indicating that we are able to pick up more SET with higher frequency. Since we only tested with one frequency, we couldn't distinguish between SET and SEU in the registers, but we still got an indication of the radiation tolerance of the logic element. The calculated cross section for SEU in the shift-register design with a 40 Mhz clock signal, and 4 inverts in between each register is $2.74\pm0.67\cdot10^{-14}\frac{cm^2}{register}$.
+For the shift-register design we wanted to see if we would have higher cross section with higher frequencies, indicating that we are able to pick up more SET with higher frequency. Since we only tested with one frequency, we couldn't distinguish between SET and SEU in the registers, but we still got an indication of the radiation tolerance of the logic element. The calculated cross section for SEU in the shift-register design with a 40 Mhz clock signal, and 4 inverts in between each register is $2.74\pm0.67\cdot10^{-14}\frac{cm^2}{register}$.
 
 To know how often we can expect to encounter the \acl{SEE} which we have examined, when the RCU2s will be mounted in the TPC, we will look at Mean Time Between Failure (MTBF). Mean time between failure tells us the expected time between two errors, or from start to the first error, and the equation can be seen in \autoref{MTBF}.
 
@@ -2177,25 +2193,24 @@ micro SRAM 	& $1.27\pm0.16\cdot10^{-14}$ & 0.52 \\ \hline%  31 min
 PLL 		& $1.46\pm0.31\cdot10^{-10}$ & 2.94 \\ \hline% 176 min
 Registers 	& $2.74\pm0.67\cdot10^{-14}$ & 0.28 \\ \hline%  17 min
 \end{tabular}
-\caption{Cross section and MTBF for run2, based on result from TSL}
+\caption{Cross section and MTBF for run2 in LHC, based on the results from OCL}
 \label{cross_section_results}
 \end{table}
 
-From the results presented in \autoref{cross_section_results}, it can be seen how often we can expect an error for the different parts of the SmartFusion2 which have been tested, assuming we uses all registers, all of the SRAMs, and only one PLL in the RCU2 design. Memory cells like SRAM and registers are known to be week for radiation, see section \ref{SEU_Section}, so the given results wasn't any surprise. All of the SRAM memory and registers, will probably not be used, which means that the calculated MTBF will in reality not be that low.
+From the results presented in \autoref{cross_section_results}, it can be seen how often we can expect an error for the different parts of the SmartFusion2 which have been tested, assuming we use all registers, all of the SRAMs, and only one PLL in the RCU2 design. Memory cells like SRAM and registers are known to be specially exposed to SEU, see section \ref{SEU_Section}, so the given results was not any surprise. All of the SRAM memory and registers, will probably not be used, which means that the calculated MTBF will in reality not be that low.
 
-A PLL lock-loss will happen every third hour according to the acquired data, and that is with an assumption that only one PLL is used per RCU2. The effect of a PLL lock-loss, is still partially unknown, it may only result in one lost clock period, which probably won't harm to much, or it may fall down for seconds, which means that useful data can be lost. More test should be performed on this aspect when we have a more complete firmware running on the RCU2.
+A PLL lock-loss will happen every third hour according to the acquired data, and that is with an assumption that only one PLL is used per RCU2. The effect of a PLL lock-loss, is still partially unknown. It may only result in one lost clock period, which probably won't harm to much, or it may fall down for seconds, which means that useful data can be lost. More test should be performed on this aspect when we have a more complete firmware running on the RCU2.
 
-All in all the first radiation test of the SmartFusion2 went quite well.
 
 \FloatBarrier
 
 \section{Results from TSL}
 In this section the results from the irradiation tests at TSL will be presented. The focus has been to test the SmartFusion2 SoC FPGA, but other tests will briefly be presented and discussed.
 
-A total of two RCU2s and three SmartFusion2 starter-kits were irradiated. When we irradiated the RCU2, we tested detector data link 2 (DDL2), Timing, Trigger and Control (TTC) and SEL. When irradiated the SmartFusion2 starter-kits, the focus was on the test mentioned in section \ref{SF2_section}.
+A total of two RCU2s and three SmartFusion2 starter-kits were irradiated. When we irradiated the RCU2, we tested detector data link 2 (DDL2), Timing, Trigger and Control (TTC) and SEL. When we irradiated the SmartFusion2 starter-kits, the focus was on the test mentioned in section \ref{SF2_section}.
 
 \subsection{SmartFusion2 Radiation Test}
-Two starter-kits with SmartFusion2 M2S050-FG484, and one starter-kit with SmartFusion2 M2S050ES-FG896 (engineering sample) were tested. The SmartFusion2 M2S050-FG484 is the same SoC FPGA which are used on the RCU2, only with smaller package. Therefore we preferred testing on these instead of the engineering sample versions, which may have some early design errors. The parts of the SmartFusion2 that were tested on the starter-kits with the smaller package are SRAM, PLL, Logic element and latchup. When testing the M2S050ES-FG896, the focus was only to see for how long we could program the device with increasing dose of radiation.
+Two starter-kits with SmartFusion2 M2S050-FG484, and one starter-kit with SmartFusion2 M2S050ES-FG896 (engineering sample) were tested. The SmartFusion2 M2S050-FG484 is the same SoC FPGA which are used on the RCU2, only with smaller package. Therefore we preferred testing of these instead of the engineering sample versions, which may have some early design errors. The parts of the SmartFusion2 that were tested on the starter-kits with the smaller package are SRAM, PLL, Logic element and latchup. When testing the M2S050ES-FG896, the focus was only to see for how long we could program the device with increasing dose of radiation.
 
 Some improvements have been made to the test since the radiation at OCL. We have added two more PLL lock signals to measure, and we have found a more effective way to measure current.
 Instead of using the current measurement board as described in section \ref{current_measurement_board}, we used a small PCB with several INA226 chips, which is an ADC with $I^2C$ communication protocol. The SmartFusion2 also has $I^2C$ communication protocol, meaning we could use the monitoring board (see section \ref{monitoring_board}) to control and receive data from the ADC-chip.
@@ -2204,8 +2219,8 @@ By using this method we also got the voltage on each of the different power sour
 Also instead of running the Microcontroller subsystem in debug mode, as we did in OCL, we were running in release mode. This means that the microcontroller subsystem was running whenever we got power on the kit.
 
 \subsubsection{SRAM}
-\autoref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} shows the results from the SRAM test after radiation of the two starter-kits. We detects regularly drops down to 0 in the counter values. This is due to loss of communication with the microcontroller subsystem, and thereof the SmartFusion2, probably caused by voltage drop or latchup.
-A re-power of the board made the counters start again. This means that we had short periods where we didn't got to measure counter values. When the FPGA was powered again, the counter values are overwritten through the start-up sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, which gives us a lot of uncertainties when calculating cross section.
+\autoref{SRAM_starter-kit1} and \ref{SRAM_starter-kit2} shows the results from the SRAM test after radiation of the two starter-kits. We detected regularly drops down to 0 in the counter values. This is due to loss of communication with the microcontroller subsystem, and thereof the SmartFusion2, probably caused by voltage drop or latchup.
+A re-power of the board made the counters start again. This means that we had short periods where we didn't got to measure counter values. When the FPGA was powered again, the counter values were overwritten through the start-up sequence, as described in section \ref{SRAM_section}. The length of these non-measuring periods are varying from only a few seconds up to tens of seconds, which gives us a lot of uncertainties when calculating cross section.
 
 \begin{figure}[!htbp]
 \centering
@@ -2244,10 +2259,10 @@ A re-power of the board made the counters start again. This means that we had sh
 \end{figure}
 
 \paragraph{Cross Section Calculation} $\newline$
-we can see that we have almost linear increase in the SEUs counter compared to fluence for test1 and 2 of the starter kit, see \autoref{SRAM_starter-kit1} and \ref{SRAM_starter-kit1}. We have a small gap after approximately 800 s for under test 1 and we have a small gap between 600 and 700 seconds for test 2. When calculating the cross section we will calculate from after these two gaps.
+We can see that we have almost linear increase in the SEUs counter compared to fluence for test1 and 2 of the starter kit, see \autoref{SRAM_starter-kit1} and \ref{SRAM_starter-kit1}. We have a small gap after approximately 800 s for under test 1 and we have a small gap between 600 and 700 seconds for test 2. When calculating the cross section we will calculate from after these two gaps.
 That means that the fluence for test 1 is $2.01\cdot10^{11}\frac{n}{cm^2}$ and number of SEU in that period is 3388 and 192 respectively for large SRAM and micro SRAM. The total fluence for test 2 is $2.25\cdot10^{11}\frac{n}{cm^2}$, and the number of SEU in that period is 3379 for large SRAM and 159 for micro SRAM. 
 
-To get as genuine value of the cross section as possible, we have to find the total fluence of when the test was working. This means that the fluence received when the test was stopped due to latchup, current drops and power cycles, have to be subtracted. By checking the log-files we have estimated time with no data to be 287 second in the period of interest for test1 and the 669 in the period of interest for test2. The flux in that period is known (see flux graph in appendix \ref{radiation_results}), which means that we can calculate the total fluence for the time without data collection. See table \ref{SRAM_data} for the calculated values.
+To get as genuine value of the cross section as possible, we have to find the total fluence from when the test was working. This means that the fluence received when the test was stopped due to latchup, current drops and power cycles, have to be subtracted. By checking the log-files we have estimated time with no data to be 287 second in the period of interest for test1 and the 669 in the period of interest for test2. The flux in that period is known (see flux graph in appendix \ref{radiation_results}), which means that we can calculate the total fluence for the time without data collection. See table \ref{SRAM_data} for the calculated values.
 
 \begin{table}
  \centering
@@ -2348,7 +2363,7 @@ CS_{uSRAM} =  (1.39 \pm 0.10) \dot10^{-14} \frac{cm^2}{bit}
 
 \subsubsection{PLL and Latchup}
 \label{PLL_sf2}
-We monitored three PLL lock signal during the tests of the two starter-kits. We got a total of 176 PLL lock loss from the first test and 205 PLL lock-loss from the second test. Whenever we lost lock on PLL1 we also got a lock-loss on PLL2 since this PLL was using the clock from PLL1 as source. Therefore the PLL1 lock-loss count hasn't been taken into the total lock loss count. The distribution over the three PLL lock signals can be seen in table \ref{PLL_loss}.
+We monitored three PLL lock signal during the tests of the two starter-kits. We got a total of 176 PLL lock-loss from the first test and 205 PLL lock-loss from the second test. Whenever we lost lock on PLL1 we also got a lock-loss on PLL2 since this PLL was using the clock from PLL1 as source. Therefore the PLL1 lock-loss count hasn't been taken into the total lock-loss count. The distribution over the three PLL lock signals can be seen in table \ref{PLL_loss}.
 
 \begin{table}
  \centering
@@ -2396,10 +2411,10 @@ The cross section, with uncertainty taken into account, will then be:
  CS_{test2} = 2.33 \pm 0.13 \dot10^{-10} \frac{cm^2}{PLL}
 \end{equation}
 
-We discovered during the first test, that the 0.1 $\ohm$ and 0.16 $\ohm$ resistors which were used, respectively to measure current on the 1.2 V and 3.3 V power source, were too high, since the maximum voltage the ADC could measure is 81.92 $\milli\volt$. When a latchup occurred, the ADC was maxed, meaning we only knew that the voltage is above 81.9 mV (current above 819 $\milli\ampere$ and 509 $\milli\ampere$, respectively for 1.2 V and 3.3 V). Therefore both of these resistors were replaced with a resistor of 0.025 $\ohm$ on the second test with the starter-kits.
+During the first test we discovered that the 0.1 $\ohm$ and 0.16 $\ohm$ resistors which were used, respectively to measure current on the 1.2 V and 3.3 V power source, were too high, since the maximum voltage the ADC could measure is 81.92 $\milli\volt$. When a latchup occurred, the ADC was maxed, meaning we only knew that the voltage is above 81.9 mV (current above 819 $\milli\ampere$ and 509 $\milli\ampere$, respectively for 1.2 V and 3.3 V). Therefore both of these resistors were replaced with a resistor of 0.025 $\ohm$ on the second test with the starter-kits.
 
 Sometimes during our tests we got sudden fall in current. When this happens the measured voltage for the 1.2 V power source also drops, typically down to about 850 $\milli\volt$ (the 3.3 V power source is stable though). When this happens the communication through the serial port also fails, which is understandable since the power source has dropped 300 $\milli\volt$ below the specification for the component.
-Normally when we see a decrease in voltage, we see an increase in current, or opposite, but in this case they both drop. This suggest that the voltage drops first, causing processes in the SmartFusion2 to shut down, which results in decrease in current. What is causing this effect is unknown, but a theory could be that the DC-DC regulator, which controls the 1.2 V power source reacted to the irradiation. The regulator is located right next to the SmartFusion2 chip, and it could therefore be an exposed to a lot of radiation. Normally regulators have a gradually increase or decrease on the output voltage, as can be seen on both TPS51200 and MIC69302WU, but since this is a DC-DC regulator with programmable output voltage, we may have other effects.
+Normally when we see a decrease in voltage, we see an increase in current, or opposite, but in this case they both drop. This suggest that the voltage drops first, causing processes in the SmartFusion2 to shut down, which results in decrease in current. What is causing this effect is unknown, but a theory could be that the DC-DC regulator, which controls the 1.2 V power source reacted to the irradiation. The regulator is located close to the SmartFusion2 chip, and it could therefore be an exposed to a lot of radiation. Normally regulators have a gradually increase or decrease on the output voltage, as can be seen on both TPS51200 and MIC69302WU, but since this is a DC-DC regulator with programmable output voltage, we may have other effects.
 
 By turning off and on the 3.3 V regulator, resulting in turning the 1.2 V off and on (since this is powered by the 3.3 V signal), the voltage and current goes back to start value. This was done through the monitoring board, where we had made a function which turns the regulators off and on again after 3 seconds. This function was used whenever we detected a latchup or a decrease in current/voltage. In total we had to restart the board because of latchup or decrease in current 61 times on the first test and 95 times on the second test, as seen in section \ref{PLL_loss}.
 
@@ -2407,8 +2422,8 @@ Calculating cross section for SEL will not give us a correct calculation since w
 
 
 \subsubsection{Logic Element}
-For the two tests with the starter-kits we used a clock signal of 40, 80 and 160 MHz for the shift-register design. This means that we should see some difference in cross section for the different frequencies. We used 4 shift-register chains with a length of 2500 flip-flops, and with 4 windowed shift registers (WSR). On run1 we used 4 inverters in between each register, and on run2 we used none.
-Table \ref{Shift_register_data} shows an overview of SEU on the shift register for the different frequencies and the total fluence over that period. the cross section is also calculated with the same uncertainties as for PLL, see \autoref{PLL_sf2}. 
+For the two tests with the starter-kits we used a clock signal of 40, 80 and 160 MHz for the shift-register design. This means that we should see some difference in cross section for the different frequencies. We used 4 shift-register chains with a length of 2500 flip-flops, and with 4 windowed shift-registers (WSR). On run1 we used 4 inverters in between each register, and on run2 we used none.
+Table \ref{Shift_register_data} shows an overview of SEU on the shift-register for the different frequencies and the total fluence over that period. The cross section is also calculated with the same uncertainties as for PLL, see \autoref{PLL_sf2}. 
 
 \begin{table}
  \centering
@@ -2429,7 +2444,7 @@ The results presented in table \ref{Shift_register_data} are quite unexpected. W
 The reason for this may be that we had too low statistics. If we had run in the respectively frequencies for a longer time period or with a higher flux, we would maybe see different results.
 
 \subsubsection{Programming Limit Test}
-The idea behind the programming limit test was to see how high in radiation dose we could expose the SmartFusion2 and still be able to program. We were supposed to use the same test setup as used when testing the two starter-kits so that we would have approximately the same current, and the ability to shut it down when needed. But we didn't managed to get the small PCB with INA226 to work. we therefore decided to just power cycle the board regularly during our test and increase the dose of approximately 1 kRad for each time attempting to program.
+The idea behind the programming limit test was to see how high in radiation dose we could expose the SmartFusion2 and still be able to program. We were supposed to use the same test setup as used when testing the two starter-kits so that we would have approximately the same current, and the ability to shut it down when needed. But we didn't managed to get the small PCB with INA226 to work. we decided therefore to just power cycle the board regularly during our test and increase the dose of approximately 1 kRad for each time attempting to program.
 
 We tried to program after a dose of 1.20 kRad, 2.54 kRad and 3.80 kRad. The two first times it worked fine, but the last time the programming failed.
 
@@ -2456,7 +2471,7 @@ For both of the test we detected few errors, less than 10 errors with a fluence 
 To explain how the TTC test worked, a short explanation on the hardware setup is required.
 An optical Manchester decoded signal containing clock and data is sent to the RCU2. On the RCU2 there is an optical receiver which receives the Manchester signal. The optical receiver converts the signal to analog, and a limiting amplifier converts it further to digital. The limiting amplifier used is MAX3748 \cite{website:MAX3748} (which is one of the components tested through this work). Then the digital signal coming from the limiting amplifier is sent in to the SmartFusion2 FPGA, where clock and data is encoded, giving us a 40 MHz clock, and data signal.
 The clock signal is then sent into two different PLLs, and the PLL lock signal for both PLLs is checked for a falling edge. The idea behind using two PLLs, is to distinguish between PLL error and error in the incoming signal. If both of the PLLs lose lock at the same time we can assume that we have an error with the incoming signal and if only one of the PLLs loses lock, we have a PLL error.
-The received data signal contains a known trigger sequence, and a VHDL code is made to check for this trigger sequence. Every time the trigger pattern is detected a counter is incremented. PLL lock counter and trigger counter are sent to the microcontroller subsystem, where data is sent serial to a computer. On the computer a program is running receiving data from the serial port, and logging data every seconds. A overview of the setup can be seen in \autoref{TTC_test}
+The received data signal contains a known trigger sequence, and a VHDL code is made to check for this trigger sequence. Every time the trigger pattern is detected a counter is incremented. PLL lock counter and trigger counter are sent to the microcontroller subsystem, where data is sent serial to a computer. On the computer a program is running receiving data from the serial port, and logging data every second. A overview of the setup can be seen in \autoref{TTC_test}
 
 \begin{figure}[!htbp]
  \centering
@@ -2466,7 +2481,7 @@ The received data signal contains a known trigger sequence, and a VHDL code is m
 \end{figure}
 
 For the TTC test, we exposed both the SmartFusion2 and the optical receiver.
-When we exposed the SmartFusion2, we received PLL lock loss with about the same frequency as for the test with the Starter-kits, and the calculated cross section was $2.3\cdot10^{-10}\frac{\centi\meter^2}{PLL}$. Almost all the PLL errors was defined as PLL lock-loss due to bad PLLs. But when we started to expose the optical receiver, we detected PLL lock-loss on both of the PLLs all the time, indicating bad input signal, and got a cross section of $6.9\cdot10^{-9}\centi\meter^2$.
+When we exposed the SmartFusion2, we received PLL lock-loss with about the same frequency as for the test with the Starter-kits, and the calculated cross section was $2.3\cdot10^{-10}\frac{\centi\meter^2}{PLL}$. Almost all the PLL errors was defined as PLL lock-loss due to bad PLLs. But when we started to expose the optical receiver, we detected PLL lock-loss on both of the PLLs all the time, indicating bad input signal, and got a cross section of $6.9\cdot10^{-9}\centi\meter^2$.
 
 For the latchup-test on the RCU2, we determined the cross section for latchup to be $8.5\cdot10^{-10}\centi\meter^2$. We made a discovery while running the beam. After we received a few latchups, the 1.2 Voltage started to reduce a little, and when this happened, we saw a tendency of receiving less latchups.
 We did a separated test on the RCU2 where we reduced the 1.2 Voltage to 1.1 V by changing a resistor on the board. The test showed us that we got a reduction on cross section to $1.7\cdot10^{-10}\centi\meter^2$, which is a reduction of approximately 5. 
@@ -2486,9 +2501,9 @@ An issues that we encountered in the tests at TSL, but not so much in OCL, is la
 
 We also discovered a way to reduce latchups. By changing the 1.2 source voltage to 1.1 V, we effectively reduced number of latchup by approximately 5, and this can possibly be brought even lower by reducing the voltage even further. More test on this aspect should be performed.
 
-The SRAM test on the two starter-kits was successfully performed, we had a lot of downtime due to errors, but the calculated cross section for both of our test were quite close, which supports the results. The average cross section for large SRAM is $3.65 \pm 0.26 \cdot10^{-14}\centi\meter^2$, and for micro SRAM is $1.39 \pm 0.10 \cdot10^{-14}\centi\meter^2$. This can be compared with the results from OCL, where a cross sections of $3.53 \pm 0.47\cdot10^{-14}\centi\meter^2$ for the large SRAM, and $1.27 \pm 0.16\cdot10^-{14}\centi\meter^2$ for the micro SRAM were found. There is a noticeable difference in energy level from OCL to TSL, and we would therefore examine if we should expect a difference in the calculated cross sections.
+The SRAM test on the two starter-kits was successfully performed. We had a lot of downtime due to errors, but the calculated cross section for both of our test were quite close, which supports the results. The average cross section for large SRAM is $3.65 \pm 0.26 \cdot10^{-14}\centi\meter^2$, and for micro SRAM is $1.39 \pm 0.10 \cdot10^{-14}\centi\meter^2$. This can be compared to the results from OCL, where a cross sections of $3.53 \pm 0.47\cdot10^{-14}\centi\meter^2$ for the large SRAM, and $1.27 \pm 0.16\cdot10^-{14}\centi\meter^2$ for the micro SRAM were found. There is a noticeable difference in energy level from OCL to TSL, and we would therefore examine if we should expect a difference in the calculated cross sections.
 
-SEU occur due to ionizing particles charge generation close to sensitive nodes. A proton has in itself not enough ionizing capability to directly cause a SEU, but protons can have nuclear reactions with silicon or other material in a component, producing secondary radiation with higher ionization capability, which then can cause a SEU. Cross section for proton-silicon interaction has a peak value around 20 MeV \cite{roed_master}.
+SEU occur due to ionizing particles charge generation close to sensitive nodes. A proton does not have enough ionizing capability to directly cause a SEU, but protons can have nuclear reactions with silicon or other material in a component, producing secondary radiation with higher ionization capability, which then can cause a SEU. Cross section for proton-silicon interaction has a peak value around 20 MeV \cite{roed_master}.
 But a component consist of more than silicon, which have other cross sections for interaction with proton. We will also with higher energies have higher probability of having secondary radiations and the ionizing capability of the secondary radiation increases as well. It is therefore hard to say for which energy to expect highest cross section, since there are effects pointing in both direction. The results shows a little higher cross section for a 170 MeV beam compared to a $25\ MeV$ beam, but taken the uncertainties into account, we could say that they are equal.
 
 % We would think that we would have higher cross section at OCL than in TSL, because energy deposited per proton is higher for a $25\ MeV$ proton beam than with a 170 MeV proton beam, this can be seen from figure \ref{energy_loss} (It shows different particles in air, but the principle is the same for silicon). The cross section for large SRAM supports this, but the micro SRAM doesn't. But then again, we had really low statistics on the micro SRAM, making the calculations not so trustworthy. Another test should be performed on the micro SRAM with higher intensity or over a longer period to check if the cross section is correct.
@@ -2497,7 +2512,7 @@ For the test of the logic element, we wanted to see if SET could be a problem on
 
 For all of the tests with PLL, we calculated a cross section for PLL lock-loss in the area of $2-3\cdot10^{-10}\centi\meter^2$ when the SmartFusion2-chip was exposed. From the TTC test, we calculated a cross section of $2.3\cdot10^{-10}\frac{\centi\meter^2}{PLL}$ and when exposing the starter-kits we calculated a cross section of $2.39\pm0.10\cdot10^{-10}\frac{\centi\meter^2}{PLL}$.
 But when we exposed the optical receiver instead of the SmartFusion2,  we got a lot more PLL lock-loss. The calculated cross section was $6.9\cdot10^{-9} cm^2$, which is around 25 times more then when the SmartFusion2 was exposed. This means that either the optical receiver is not able to do its job under high radiation level, and introduces a lot of noise, or the limiting amplifier MAX3748 is very sensible to noise, and are therefore not able to functional correctly when the incoming signal is filled with noise.
-% If it is only a clock cycle we are talking about, we could probably accept this, but if it stays down for up too seconds, then we should do some measures to either reduce or counter this problem. When a PLL lock loss happened, we didn't detect any other problems in the process running on the SmartFusion2, this probably means that the clock signal only stays low for a short time period, which means that this probably could be acceptable.
+% If it is only a clock cycle we are talking about, we could probably accept this, but if it stays down for up too seconds, then we should do some measures to either reduce or counter this problem. When a PLL lock-loss happened, we didn't detect any other problems in the process running on the SmartFusion2, this probably means that the clock signal only stays low for a short time period, which means that this probably could be acceptable.
 
 To know how often we can expect to encounter the different Single event effects, when the RCU2s will be mounted in the TPC, we will calculate MTBF, as we did after the result in OCL. See \autoref{MTBF} for how MTBF is calculated. We also have to scale up for 216 RCU2s, 56340 registers, 622592 large SRAM bits, 65536 micro SRAM bits and 1 PLL. The results can be found in \autoref{cross_section_results2}.
 
@@ -2527,8 +2542,8 @@ For the test of the logic element, we didn't get any stable results, but if we l
 
 % The reason for this effect could also be discussed. What we know is that the lock signal should tell us if the input signal and output signal to the PLL is in sync. The cause of the a lock-lose, could be bad input signal, error in the PLL and bad sensing for the lock signal. It has previous been assumed that if the PLL lock-loss falls low, so those the clock signal, but this isn't necessarily the case. The clock signal may still come out of the PLL, even though the clock is not good. be sending out what it is able to produce.  are having problem getting lock on the clock signal, when the optical link is exposed to radiation.
 
-What is happening to the clock signal when the lock signal falls low could also be discussed. We have previous assumed that when the lock signal goes low, so those the clock signal, but this is not necessary the case. The lock signal tells us if the input signal and output signal to the PLL is in sync, but it does not necessarily kill the output signal of the PLL.
-If we have a lock-loss and the clock signal still goes through, it means that we would have a clock signal which are missing one or more clock pulses, is out of phase, or has a lot of noise. The effects of these cases are unknown, it may cause the entire RCU2 firmware to stop working, or it may not cause any harm at all. During the radiation tests we had had periods where we could not communicate with the SmartFusion2, if this was caused by PLL lock-loss or other effects like latchup is unknown. More test on this aspect should also be performed.
+What is happening to the clock signal when the lock signal falls low could also be discussed. We have previous assumed that when the lock signal goes low, so does the clock signal, but this is not necessarily the case. The lock signal tells us if the input signal and output signal to the PLL are in sync, but it does not necessarily kill the output signal of the PLL.
+If we have a lock-loss and the clock signal still goes through, it means that we would have a clock signal which is missing one or more clock pulses, is out of phase, or has a lot of noise. The effects of these cases are unknown, it may cause the entire RCU2 firmware to stop working, or it may not cause any harm at all. During the radiation tests we had periods where we could not communicate with the SmartFusion2. If this was caused by PLL lock-loss or other effects like latchup is unknown. More test on this aspect should also be performed.
 
 % Effects like these means that measurement in the RCU2 may not happen when it is supposed to. 
 
@@ -2579,6 +2594,11 @@ A high cross section was calculated for SEL and PLL lock-loss. With the calculat
 
 
 \FloatBarrier
+\newpage
+% \thispagestyle{empty}
+\mbox{}
+
+
 \begin{appendices}
 \chapter{Beam setup data OCL}
 The graphs in this appendix shows the calibration data from all of the days at \ac{OCL}
@@ -2780,6 +2800,9 @@ The graphs in this appendix shows the calibration data from all of the days at \
 
 \FloatBarrier
 
+\newpage
+% \thispagestyle{empty}
+\mbox{}
 
 \chapter{Radiation Results OCL}
 \label{radiation_results}
@@ -2937,6 +2960,10 @@ In Figure \ref{flux_all1}, \ref{flux_all2} \ref{flux_all3} you can see graphs of
 
 \FloatBarrier
 
+\newpage
+% \thispagestyle{empty}
+\mbox{}
+
 \chapter{Current measurement board}
 \section{Schematic and layout}
 
@@ -3026,14 +3053,22 @@ When this board has been used before, it has been connected to a computer runnin
 
 \end{appendices}
 
+
 \setlength{\parskip}{2pt}
 \include{acronyms}
 
 \listoffigures
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
 \listoftables
 
 \newpage
+\thispagestyle{empty}
+\mbox{}
+
 \bibliography{Master_Inge_bibtex}
 \bibliographystyle{ieeetr}
 \end{document}

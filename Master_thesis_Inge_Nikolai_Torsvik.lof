@@ -30,18 +30,18 @@
 \contentsline {figure}{\numberline {4.14}{\ignorespaces LabVIEW program for SN74AVC2T245\relax }}{34}{figure.caption.54}
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Flow chart for test procedure of SRAM\relax }}{35}{figure.caption.55}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Overview of the shift-register design for test of the logic element \cite {Berg}\relax }}{37}{figure.caption.57}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces LabVIEW program for the \ac {SRAM}\relax }}{40}{figure.caption.58}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces LabVIEW program for the \ac {SRAM} radiation detector\relax }}{40}{figure.caption.58}
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Flowchart for SEU detection\relax }}{41}{figure.caption.59}
 \contentsline {figure}{\numberline {4.19}{\ignorespaces X-Y-Positioning System}}{42}{figure.caption.60}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Layout of the beam area at OCL \cite {website:OCL}\relax }}{44}{figure.caption.61}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Experimental setup seen from above\relax }}{44}{figure.caption.63}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Picture of the experimental area\relax }}{45}{figure.caption.64}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Layout of the Blue hall\relax }}{48}{figure.caption.68}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Layout of the Blue hall at TSL\relax }}{48}{figure.caption.68}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Setup in the blue hall. The RCU2 is mounted, ready to be exposed for radiation\relax }}{48}{figure.caption.69}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Radiation Film}}{58}{figure.caption.72}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Calibration data from 14.11.2013\relax }}{59}{figure.caption.73}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Calibration data from 14.11.2013. For the y-graph, the XY-positioning system was in position x=0, and for the x-graph, the XY-positioning system was in position y=0.\relax }}{59}{figure.caption.73}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces TPS51200 - Current/Voltage vs Dose\relax }}{60}{figure.caption.74}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces MIC69302WU - Current/Voltage vs Dose\relax }}{61}{figure.caption.75}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces SN74AVC2T245 - Current vs Dose\relax }}{61}{figure.caption.76}
@@ -58,10 +58,10 @@
 \contentsline {figure}{\numberline {6.16}{\ignorespaces TLV3011 - Test board 2\relax }}{70}{figure.caption.87}
 \contentsline {figure}{\numberline {6.17}{\ignorespaces Large SRAM and micro SRAM test results from run1\relax }}{74}{figure.caption.91}
 \contentsline {figure}{\numberline {6.18}{\ignorespaces Large SRAM and micro SRAM test results from run2\relax }}{75}{figure.caption.92}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces PLL lock loss as function of fluence\relax }}{77}{figure.caption.96}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces SEUs in the Shift register as function of fluence\relax }}{79}{figure.caption.100}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{82}{figure.caption.102}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Large SRAM and micro SRAM test results after shutdown\relax }}{83}{figure.caption.103}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces PLL lock-loss as function of fluence\relax }}{77}{figure.caption.96}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces SEUs in the shift-register as function of fluence\relax }}{79}{figure.caption.100}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Large SRAM and micro SRAM test results test1\relax }}{82}{figure.caption.102}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Large SRAM and micro SRAM test results test2\relax }}{83}{figure.caption.103}
 \contentsline {figure}{\numberline {6.23}{\ignorespaces A sketch of the DDL2 test\relax }}{88}{figure.caption.110}
 \contentsline {figure}{\numberline {6.24}{\ignorespaces An overview of the TTC test\relax }}{89}{figure.caption.111}
 \addvspace {10\p@ }

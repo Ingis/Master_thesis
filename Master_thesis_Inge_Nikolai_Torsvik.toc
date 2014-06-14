@@ -89,7 +89,7 @@
 \contentsline {section}{\numberline {6.3}Results from TSL}{81}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}SmartFusion2 Radiation Test}{81}{subsection.6.3.1}
 \contentsline {subsubsection}{\numberline {6.3.1.1}SRAM}{82}{subsubsection.6.3.1.1}
-\contentsline {paragraph}{Cross Section Calculation}{83}{section*.104}
+\contentsline {paragraph}{Cross Section Calculation}{82}{section*.104}
 \contentsline {paragraph}{Uncertainties}{83}{section*.106}
 \contentsline {subsubsection}{\numberline {6.3.1.2}PLL and Latchup}{85}{subsubsection.6.3.1.2}
 \contentsline {subsubsection}{\numberline {6.3.1.3}Logic Element}{87}{subsubsection.6.3.1.3}
